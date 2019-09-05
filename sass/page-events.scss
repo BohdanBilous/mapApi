@@ -17,10 +17,16 @@
 
 .event-section-main {
     height: 667px;
+    border-radius: 25px 25px 0 0;
 
     .screen-content {
         .ttl {
             max-width: 370px;
         }
+    }
+
+    .now-flag {
+        top: 60px;
+        left: 0;
     }
 }

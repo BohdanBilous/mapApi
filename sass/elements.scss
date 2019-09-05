@@ -820,3 +820,15 @@
         }
     }
 }
+
+// Now Flag
+.now-flag {
+    position: absolute;
+    padding: 0 10px;
+    height: 19px;
+    line-height: 19px;
+    background-color: $colorGreen;
+    color: $colorBg;
+    border-radius: 4px;
+    font-size: 13px;
+}
