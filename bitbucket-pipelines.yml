@@ -1,0 +1,32 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+#image: node:9.9.0
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    master:
+      - step:
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - apt-get update
+            - apt-get install -y libpng16-dev rsync
+            - npm install
+            - npm install -g gulp-cli
+            - gulp deploy
+            - rsync -avzh ./dist/ ubuntu@18.217.219.87:/var/www/html/veermo
+    dev:
+      - step:
+          caches:
+            - node
+          script: # Modify the commands below to build your repository.
+            - apt-get update
+            - apt-get install -y libpng16-dev rsync
+            - npm install
+            - npm install -g gulp-cli
+            - gulp deploy
+            - rsync -avzh ./dist/ ubuntu@18.217.219.87:/var/www/html/veermo2

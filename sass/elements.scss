@@ -1,0 +1,822 @@
+/* =========================
+   Elements
+   ========================= */
+
+// Drop Down Element
+.drop-down-element {    
+    @extend .zIndex;
+    position: relative;
+    display: inline-block;
+    font-family: $fontMedium;
+
+    .drop-down-sel {
+        cursor: pointer;
+
+        span {
+            @extend .trans-color;
+            display: inline-block;
+            position: relative;
+            padding-right: 10px;
+
+            &::after {
+                @include arrow-down;
+            }
+        }
+    }
+
+    .drop-down {
+        position: absolute;
+        min-width: 96px;
+        padding: 15px;
+        visibility: hidden;
+        top: 25px;
+        left: 0;
+        background-color: #fff;
+        border-radius: 11px;
+    }
+
+    .drop-down-item {
+        display: block;
+        position: relative;
+        padding-left: 32px;
+        margin-bottom: 10px;
+
+        &:hover span {
+            color: $colorGreen;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .flag {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+        }
+
+        span {
+            line-height: 18px;
+        }
+    }
+
+    &:hover .drop-down-sel span {
+        text-decoration: underline;
+        color: $colorGreen;
+
+        &::after {
+            border-color: $colorGreen transparent transparent transparent;
+        }
+    }
+
+    &.open {
+        .drop-down-sel span {
+            color: $colorGreen;
+            text-decoration: underline;
+
+            &::after {
+                border-color: $colorGreen transparent transparent transparent;
+                transform: rotate(180deg) translateY(3px);
+            }
+        }
+
+        .drop-down {
+            animation: fadeIn-l 0.4s forwards;
+        }
+    }
+}
+
+// Links
+.link-main {
+    font-family: $fontMedium;
+
+    &:hover {
+        color: $colorGreen;
+    }
+}
+
+.link-l {
+    color: $colorTextL;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+        color: $colorGreen;
+    }
+}
+
+// Text Element
+.hint {
+    position: relative;
+    display: inline-block;
+    color: $colorTextL;
+    white-space: nowrap;
+
+    &.with-arrow, &.with-arrow-left {
+        padding-right: 13px;
+
+        &::after {
+            @include arrow-down;
+            top: 53%;
+        }
+    }
+
+    &.with-arrow-left {
+        padding: 0 0 0 13px;
+
+        &::after {
+            left: 0;
+            border-color: $colorTextL transparent transparent transparent;
+        }
+    }
+}
+
+.hint-from-top {
+    @extend .trans-opacity;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+        // opacity: 0.7;
+        color: $colorGreen !important;
+    }
+}
+
+// Button
+.btn {
+    position: relative;
+    display: inline-block;
+    border-radius: 7px;
+    height: 40px;
+    padding: 0 27px 0 14px;
+    line-height: 40px;
+    min-width: 170px;
+    overflow: hidden;
+    align-self: flex-start;
+
+    &.btn-mini {
+        min-width: 150px;
+    }
+
+    &::after, &:not(.btn-arrow-a)::before {
+        @extend .ps;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #e5e5e5;
+    }
+
+    &:not(.btn-arrow-a)::before {
+        background-color: $colorGreen;
+        transform: translateX(-101%);
+        transition: transform 0.25s $easing;
+        z-index: 1;
+    }
+
+    .no-touchevents &:not(.btn-arrow-a):hover {
+        &::before {
+            transform: translateX(0);
+        }
+
+        span {
+            color: $colorBg;
+        }
+
+        .arrow {
+            border-color: transparent transparent transparent $colorBg;
+            transition: transform 0.2s $easing, border-color 0.15s linear 0.1s;
+        }
+    }
+
+    .arrow {
+        @include tr-right(4px,4px,4px, $colorText2);
+        position: absolute;
+        z-index: 1;
+        right: 14px;
+        top: 16px;
+        transition: transform 0.3s $easing, border-color 0.15s linear 0s;
+    }
+
+    span {
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        color: $colorText2;
+        transition: color 0.15s;
+    }
+
+    &.btn-g {
+
+        &::after {
+            background: $colorGreen;
+        }
+
+        span {
+            color: $colorBg;
+        }
+
+        .arrow {
+            border-color: transparent transparent transparent $colorBg;
+        }
+    }
+
+    &.btn-blur {
+
+        &::after {
+            background: #E5E5E5;
+            filter: blur(30px);
+        }
+
+        .arrow {
+            border-color: transparent transparent transparent #fff;
+        }
+
+        span {
+            color: #fff;
+        }
+    }
+
+    &.btn-add {
+        text-align: left;
+        padding-right: 40px;
+
+        .no-touchevents &:hover {
+            .plus {
+                transition-delay: 0.1s;
+                background-color: #e5e5e5;
+
+                &::before, &::after {
+                    background-color: $colorText;
+                    transition-delay: 0.1s;
+                }
+            }
+        }
+
+        .plus {
+            @extend .ctrVert;
+            right: 10px;
+            position: absolute;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: $colorGreen;
+            z-index: 1;
+            transition: background-color 0.08s linear 0s;
+
+            &::before {
+                @extend .ctr;
+                @extend .ps;
+                width: 8px;
+                height: 1px;
+                background-color: #fff;
+                transition: background-color 0.1s;
+            }
+
+            &::after {
+                @extend .ctr;
+                @extend .ps;
+                width: 1px;
+                height: 8px;
+                background-color: #fff;
+                transition: background-color 0.1s;
+            }
+        }
+    }
+
+    &.btn-view-all {
+        .items {
+            @extend .ctrVert;
+            @extend .trans-color;
+            position: absolute;
+            right: 12px;
+            color: $colorGreen;
+            z-index: 1;
+            font-family: $fontMedium;
+
+            &::before {
+                content: "[";
+            }
+
+            &::after {
+                content: "]";
+            }
+        }
+
+        &:hover {
+            .items {
+                color: $colorBg;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .btn {
+        height: 50px;
+        line-height: 52px;
+
+        .arrow {
+            top: 21px;
+        }
+    }      
+}
+
+@include mobile {
+    .btn {
+        padding: 0 35px 0 22px;
+        width: 100%;
+        height: 62px;
+        line-height: 62px;
+
+        .arrow {
+            right: 19px;
+            top: 27px;
+        }
+
+        &.btn-add {
+            .plus {
+                width: 28px;
+                height: 28px;
+                right: 15px;
+            }
+        }
+    }       
+}
+
+// Slider Buttons
+.slider-buttons-c {
+    @extend .flex-sb;
+    position: relative;
+    width: 100px;
+}
+
+.button-prev, .button-next, .play {
+    display: inline-block;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border: 2px solid #d4d4d4;
+    transition: border-color 0.4s;
+    border-radius: 50%;
+    cursor: pointer;
+
+    .no-touchevents &:not(.play):hover {
+        border-color: $colorText2;
+    }
+
+    &::after {
+        @extend .ps;
+        @extend .ctr;
+    }
+
+    &.grey {
+        border: none;
+        background-color: #e5e5e5;
+        
+        &::after {
+
+        }
+    }
+}
+
+.button-next.white {
+    border: none;
+    background-color: #fff;
+
+    &::after {
+        @include tr-right(3px,3px,4px, $colorText2);
+    }
+}
+
+.button-next::after {
+    @include tr-right(4px,4px,4px, $colorText2);
+    left: 52%;
+}
+
+.button-prev::after {
+    @include tr-left(4px,4px,4px, $colorText2);
+    left: 47%;
+}
+
+.cursor-button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: $colorGreen;
+    transform: scale(0);
+    transition: transform 0.3s linear;
+    border-radius: 50%;
+
+    &.button-prev::after {
+        border-color: transparent #fff transparent transparent;
+    }
+
+    &.button-next::after {
+        border-color: transparent transparent transparent #fff;
+    }
+
+    span {
+        display: block;
+        position: relative;
+        top: 55px;
+        text-align: center;
+        opacity: 0;
+        color: $colorTextL;
+        transition: opacity 0.3s linear 0s;
+    }
+
+    &.show { // SHOW
+        transform: scale(1);
+
+        span {
+            opacity: 1;
+            transition-delay: 0.3s;
+        }
+    }
+}
+
+.play-button-wrap {
+    display: flex;
+    align-self: flex-start;
+
+    .play {
+        margin-right: 16px;
+    }
+}
+
+.play {
+    width: 32px;
+    height: 32px;
+    border-color:#bcbcba;
+    background-color: #adadab;
+
+    &::after {
+        @include tr-right(4px,4px,4px, #fff);
+    }
+
+    &.trans {
+        border: 2px solid rgba(255, 255, 255, 0.16);
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+.text-b {
+    height: 23px;
+    padding: 0 6px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 19px;
+    color: #fff;
+    font-size: 12px;
+    font-family: $fontMedium;
+    border: 2px solid #dad9d8;
+    align-self: center;
+
+    &.trans {
+        border: 2px solid rgba(255, 255, 255, 0.16);
+    }
+}
+
+// Swipe Hint
+.swipe-hint {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+    height: 23px;
+    background: url(../images/swipe-hint.svg);
+    background-size: 100% 100%;
+}
+
+// Count
+.count-item {
+    color: $colorText2;
+
+    .count-num {
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: -0.4px;
+        margin-bottom: 3px;
+    }
+}
+
+// Link
+.link {
+    font-size: 14px;
+    line-height: 20px;
+    color: $colorTextG;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.link-g {
+    color: $colorGreen;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// City
+.city {
+
+    .ttl-5 {
+        margin-bottom: 3px;
+    }
+
+    span {
+        display: block;
+        color: $colorGreen
+    }
+}
+
+// Quote Block
+.quote-block {
+    position: relative;
+    padding-top: 45px;
+
+    &::before {
+        content: "''";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 50px;
+        line-height: 1;
+        letter-spacing: -1.75px;
+        color: #cfcfcf;
+    }
+
+    p {
+        font-family: $fontMedium;
+    }
+}
+
+// Place Point
+.location {
+    display: inline-block;
+    display: flex;
+    align-self: self-start;
+    position: relative;    
+    min-width: 120px;
+    height: 30px;
+    border-radius: 7px;
+    padding: 0 12px;
+    background-color: #e5e5e5;
+
+    img {
+        @extend .ctrVert;
+        width: 10px;
+        height: 14px; 
+        margin-right: 10px;   
+    }
+
+
+    span {
+        display: inline-block;
+        line-height: 32px;
+        color: $colorText2;
+    }
+}
+
+// Numbers 
+.numbers-item {
+    .ttl-3 {
+        margin-bottom: 7px;
+    }
+
+    p {
+        font-family: $fontMedium;
+        color: #535353;
+    }
+}
+
+// Items
+.items {
+    color: $colorTextG;
+    font-size: 12px;
+    line-height: 14px;
+
+    &.brackets {
+        &::before {
+            content: "[";
+        }
+
+        &::after {
+            content: "]";
+        }
+    }
+}
+
+// Author
+.author-block {
+    display: flex;
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+        margin-right: 15px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .author-name {  
+        align-self: center;
+    }
+}
+
+// Tags
+.tags-list {
+    display: flex;
+
+    .tag {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        align-self: center;
+        height: 31px;
+        color: $colorGreen;
+        margin-right: 14px;
+        padding-left: 13px;
+        text-decoration: underline;
+        font-family: $fontMedium;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:first-child {
+            margin-right: 14px;
+        }
+
+        &:before {
+            @extend .ps;
+            top: 50%;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            margin-top: -4px;
+            background-color: $colorGreen;
+            transform: rotate(45deg);
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.tags-more {
+    display: flex;
+    width: 31px;
+    height: 31px;
+
+    &--btn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        border: 2px solid $colorBorder;
+        transition: border-color 0.3s;
+        cursor: pointer;
+
+        .open & {
+            animation: fadeOut-l 0.6s forwards;
+            z-index: -1;
+        }
+
+        &:hover {
+            border-color: $colorGreen;
+
+            i {
+                background-color: $colorGreen;
+            }
+        }
+
+        i {
+            @extend .ctrVert;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: $colorBorder;
+            transition: background-color 0.3s;
+
+            &:nth-child(2) {
+                margin: 0 2px;
+            }
+        }
+    }
+
+    &--drop {
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+
+        .tag:not(:nth-child(1)):not(:nth-child(2)) {
+            display: none;
+        }
+    }
+
+    &.open {
+        width: auto;
+
+        .tags-more--drop {
+            animation: fadeIn-l 0.6s forwards;
+        }
+    }
+}
+
+// Search
+.search-block {
+    position: relative;
+    height: 40px;
+    border-radius: 5px;
+    background-color: $colorPanel;
+
+    input[type="text"] {
+        width: 100%;
+        padding: 0 45px 0 10px;
+        background: none;
+        border: none;
+        line-height: 40px;
+        font-family: $fontMedium;
+        color: $colorTextG;
+
+        &:focus {
+            @include ph {
+                opacity: 0.5;
+            }
+        }
+
+        @include ph {
+            color: $colorTextG;
+        }
+    }
+    
+    .btn-search {
+        @extend .ctrVert;
+        position: absolute;
+        right: 18px;
+    }
+}
+
+.btn-search {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    
+    &::after {
+        @extend .ps;
+        left: 0;
+        top: 0;
+        width: 15px;
+        height: 15px;
+        background: url(../images/ico-search.svg) no-repeat 0 0;
+        background-size: 100% 100%;
+    }
+
+    
+}
+
+.no-touchevents .btn-search:hover::after {
+    background-image: url(../images/ico-search-h.svg);
+}
+
+// Filter Button
+.btn-filter {
+    width: 90px;
+    height: 60px;
+    border-left: 1px solid $colorBorder;
+    transition: opacity 0.4s;
+
+    i {
+        @extend .ctrHor;
+        display: block;
+        height: 2px;
+        background-color: $colorText;
+        transform-origin: left;
+
+        &:nth-child(1) {
+            width: 26px;
+        }
+
+        &:nth-child(2) {
+            width: 19px;
+            margin: 5px 0;
+        }
+
+        &:nth-child(3) {
+            width: 7px;
+        }
+    }
+}

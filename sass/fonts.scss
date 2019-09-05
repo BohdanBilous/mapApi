@@ -1,0 +1,125 @@
+/* =========================
+    Fonts
+   =========================*/
+
+body { -ms-overflow-style: scrollbar; font-family: $fontMain; color: $colorText; font-size: 14px; }
+body * { -webkit-font-smoothing: antialiased; text-shadow: 0 1px 0 rgba(0,0,0,0.01); }
+
+
+.text-main {
+    font-size: 20px;
+    letter-spacing: -0.4px;
+    line-height: 25px;
+    font-family: $fontMedium;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+.ttl-1, .ttl-2, .ttl-3, .ttl-4, .ttl-5 {
+    font-family: $fontMedium;
+}
+
+.ttl-1 {
+    font-size: 80px;
+    line-height: 74px;
+    letter-spacing: -2.8px;
+    margin-bottom: 42px;
+
+    @include mobile {
+        font-size: 35px;
+        line-height: 38px;
+        letter-spacing: -1.23px;
+        margin-bottom: 29px;
+    }
+}
+
+.ttl-2 {
+    font-size: 50px;
+    line-height: 48px;
+    letter-spacing: -1.75px;
+
+    @include mobile {
+        font-size: 30px;
+        line-height: 33px;
+        letter-spacing: -1px;
+    }
+}
+
+.ttl-3 {
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.ttl-4 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+}
+
+.ttl-5 {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.2px;
+}
+
+.ttl-top {
+    color: $colorText2;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+a {
+    @extend .trans-color;
+    color: $colorText;
+    text-decoration: none;
+}
+
+p {
+    line-height: 18px;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.color-2 {
+    color: $colorText2;
+}
+
+.tel {
+    font-family: $fontMedium;
+}
+
+.content-w {
+
+    .ttl-1, .ttl-2, .ttl-3, .ttl-4, .ttl-top, p, a {
+        color: #f5f5f5;
+    }
+
+    .ttl-top {
+        opacity: 0.8;
+    }
+}
+
+@font-face {
+    font-family: "CircularStd-Book";
+    src: url("fonts/CircularStd-Book.eot");
+    src: url("fonts/CircularStd-Book.eot?#iefix") format("embedded-opentype"),
+         url("fonts/CircularStd-Book.woff") format("woff"),
+         url("fonts/CircularStd-Book.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CircularStd-Medium";
+    src: url("fonts/CircularStd-Medium.eot");
+    src: url("fonts/CircularStd-Medium.eot?#iefix") format("embedded-opentype"),
+         url("fonts/CircularStd-Medium.woff") format("woff"),
+         url("fonts/CircularStd-Medium.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

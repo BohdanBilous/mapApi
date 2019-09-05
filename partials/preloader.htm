@@ -1,0 +1,75 @@
+<div id="loader">
+    <div class="text-wrap">
+        <img width="60" height="60" src="images/loader.gif" alt="">
+    </div>
+</div>
+<!-- Preloader script -->
+<script>
+    
+    // window.addEventListener("visibleloaded", function(event) {
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+    // window.addEventListener("load", function(event) {
+        console.log('== Document loaded ==');
+        
+        var preloader = document.getElementById("loader");
+        var delay = 300;
+        
+        if (sessionStorage.getItem("loaded")) delay = 0;
+
+        var hidePreloader = function() {
+            console.log('preloader animation ended');
+            
+            setTimeoutFunction("up", 100, function () {
+                firstLoad = false;
+                console.log('hide preloader');
+
+                setTimeout(function() {
+                    document.body.classList.add("loaded");
+                }, 100);
+                
+                // for low power mode on iOS:
+                const isiOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+                const html = document.body;
+
+                isiOS ? html.classList.add("iOS") : true;
+
+                html.classList.contains("iOS")
+                    ? preloader.querySelector(".text-wrap p").classList.add("low-power-msg")
+                    : true;
+
+                document.dispatchEvent(preloaderFinishedEvent);
+                
+                if (document.querySelector(".section-top") != null) {
+                    setTimeout(function() {
+                        document.querySelector(".section-top").classList.add("active");
+                    }, 100);
+                }
+
+                setTimeout(function() { preloader.style.display = "none" }, 500);
+
+                sessionStorage.setItem("loaded", true);
+            });
+
+            // document.addEventListener('DOMContentLoaded', function () {
+            //     // remove menu-fade-in class from mobile menu
+            //     const menuContainer = document.querySelector(".menu-soc.menu-fade-in");
+            //     console.log("CONTAINER MENU: ", menuContainer);
+            //     menuContainer.classList.remove('menu-fade-in');
+            // });
+        };
+
+        
+        setTimeoutFunction("finished", delay, hidePreloader);
+            
+
+        function setTimeoutFunction(className, duration, callback){
+            setTimeout(function(){
+                preloader.classList.add(className);
+                if (callback) {
+                    callback(); 
+                } 
+            }, duration);
+        }
+    });
+</script>

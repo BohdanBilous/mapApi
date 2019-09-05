@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+    @@include('./partials/scripts.htm')
+    <body>
+        @@include('./partials/preloader.htm')
+        @@include('./partials/header.htm', { "classes": "color-w" })
+        @@include('./partials/menu.htm')
+        
+        <main class="main">
+
+            <!-- Top Screen -->
+            <div class="screen screen-top screen-head">
+                <div class="screen-bg" style="background-image: url(images/news-bg.jpg)"></div>
+                <div class="screen-inner socket layout-row align-right">
+                    <div class="hint hint-from-top with-arrow-left">Discover News</div>
+                    <div class="button-btm-right">
+                        @@include('./partials/elements/button-link.htm', { 
+                            "text": "Learn More", 
+                            "href" : "events.html", 
+                            "classes": "btn-g btn-arrow-a" 
+                        })
+
+                        @@include('./partials/elements/button-link.htm', { 
+                            "text": "Details", 
+                            "href" : "events-open.html", 
+                            "classes": "btn-more btn-blur btn-arrow-a" 
+                        })
+                    </div>
+
+                    <div class="layout-col-r">
+                        <div class="screen-content">
+                            <div class="screen-content--ttl-s">
+                                <h1 class="ttl-1 ttl">MeshMinds 2.0: Artx Tech for Good.</h1>
+                            </div>
+                            <div class="screen-content--slog ttl-4">We are looking forward to meet you.</div>
+                            <div class="screen-content--type-s">Events</div>
+                            <div class="screen-content--date-s">
+                                <div class="place">Berlin, Germany</div>
+                                <div class="date">24.4 — 28.4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content content-media">
+
+                <!-- News Stream -->
+                <div class="media-stream--container socket">
+
+                    <!-- Left Column -->
+                    <div class="media-stream--col-l">
+                        <div class="media-stream--head-ttl top">
+                            <h1 class="ttl-1">News</h1>
+                        </div>
+    
+                        <div class="media-stream--categories-ttl checkpoint" id="business">
+                            <div class="items">35</div>
+                            <h4 class="ttl-4">Business and Manufacture</h4>
+                            @@include('./partials/elements/button-all.htm', { 
+                                "text": "View all", 
+                                "items" : "256",
+                                "href" : "#", 
+                                "classes": "" 
+                            })
+                        </div>
+
+                        <div class="media-stream--section">
+
+                            <div class="media-stream--cols">
+                                <article class="media-stream--article has-img">
+                                    <div class="media-panel">
+                                        <img class="media-img" src="images/news-1.jpg" alt="#">
+                                        <div class="author-block">
+                                            <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                            <div class="author-name ttl-5">George Boyd</div>
+                                        </div>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="date">17.05</div>
+                                        <h4 class="ttl ttl-4"><a href="news-open.html">How to increase revenue increase ? increase increase fsfdsf ipi  oid as lasdfdfsflk;lk fdsf dfsf Sustainability sd dfsf</a></h4>
+                    
+                                        <div class="tags-list">
+                                            <a href="page-tag.html" class="tag">Petainer News</a>
+                                            
+                                            <div class="tags-more">
+                                                <div class="tags-more--btn">
+                                                    <i></i><i></i><i></i>
+                                                </div>
+                                                <div class="tags-more--drop">
+                                                    <a href="page-tag.html" class="tag">Sustainability</a>
+                                                    <a href="page-tag.html" class="tag">Construction Art</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="news-open.html" class="button-next grey"></a>
+                                    </div>
+                                </article>
+
+                                <article class="media-stream--article has-img">
+                                    <div class="media-panel">
+                                        <img class="media-img" src="images/news-2.jpg" alt="#">
+                                        <div class="author-block">
+                                            <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                            <div class="author-name ttl-5">George Boyd</div>
+                                        </div>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="date">17.05</div>
+                                        <h4 class="ttl ttl-4"><a href="news-open.html">Petainer launches new <br> Hybrid kegs.</a></h4>
+
+                                        <div class="tags-list">
+                                            <a href="page-tag.html" class="tag">Petainer News</a>
+                                        </div>
+
+                                        <a href="news-open.html" class="button-next grey"></a>
+                                    </div>
+                                </article>
+
+                                <article class="media-stream--article has-video">
+                                    <div class="media-panel">
+                                        <img class="media-img" src="images/news-video-1.jpg" alt="#">
+                                        <div class="play-button-wrap">
+                                            <div class="play trans"></div>
+                                            <div class="text-b trans">2:21</div>
+                                        </div>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="date">17.05</div>
+                                        <h4 class="ttl ttl-4"><a href="news-open.html">How petainerKeg is <br> helping breweries.</a></h4>
+
+                                        <div class="tags-list">
+                                            <a href="page-tag.html" class="tag">Petainer News</a>
+                                            
+                                            <div class="tags-more">
+                                                <div class="tags-more--btn">
+                                                    <i></i><i></i><i></i>
+                                                </div>
+                                                <div class="tags-more--drop">
+                                                    <a href="page-tag.html" class="tag">Sustainability</a>
+                                                    <a href="page-tag.html" class="tag">Construction Art</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="news-open.html" class="button-next grey"></a>
+                                    </div>
+                                </article>
+
+                                <article class="media-stream--article has-not-img">
+                                    <div class="media-panel"></div>
+                                    <div class="media-content">
+                                        <div class="date">17.05</div>
+                                        <h4 class="ttl ttl-4"><a href="news-open.html">Petainer <br> launches new <br> Hybrid kegs and others.</a></h4>
+                                        <div class="author-block">
+                                            <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                            <div class="author-name ttl-5">George Boyd</div>
+                                        </div>
+                                        <div class="tags-list">
+                                            <a href="page-tag.html" class="tag">Sustainability</a>
+                                            <div class="tags-more">
+                                                <div class="tags-more--btn">
+                                                    <i></i><i></i><i></i>
+                                                </div>
+                                                <div class="tags-more--drop">
+                                                    <a href="page-tag.html" class="tag">Sustainability</a>
+                                                    <a href="page-tag.html" class="tag">Construction Art</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="media-stream--article has-not-img">
+                                    <div class="media-panel"></div>
+                                    <div class="media-content">
+                                        <div class="date">17.05</div>
+                                        <h4 class="ttl ttl-4"><a href="news-open.html">Petainer <br> launches new <br> Hybrid kegs.</a></h4>
+                                        <div class="author-block">
+                                            <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                            <div class="author-name ttl-5">George Boyd</div>
+                                        </div>
+                                        <div class="tags-list">
+                                            <a href="page-tag.html" class="tag">Sustainability</a>
+                                        </div>
+                                    </div>
+                                </article>
+        
+
+                                <article class="media-stream--article has-img">
+                                    <div class="media-panel">
+                                        <img class="media-img" src="images/news-3.png" alt="#">
+                                        <div class="author-block">
+                                            <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                            <div class="author-name ttl-5">George Boyd</div>
+                                        </div>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="date">17.05</div>
+                                        <h4 class="ttl ttl-4"><a href="news-open.html">How to increase revenue  increase so mutch?</a></h4>
+                    
+                                        <div class="tags-list">
+                                            <a href="page-tag.html" class="tag">Petainer News</a>
+                                            
+                                            <div class="tags-more">
+                                                <div class="tags-more--btn">
+                                                    <i></i><i></i><i></i>
+                                                </div>
+                                                <div class="tags-more--drop">
+                                                    <a href="page-tag.html" class="tag">Sustainability</a>
+                                                    <a href="page-tag.html" class="tag">Construction Art</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="news-open.html" class="button-next grey"></a>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="media-stream--cols subscribe">
+                                <article class="media-stream--article subscribe align-right">
+                                    <div class="media-panel">
+                                        <div class="subscribe-wrap">
+                                            <div class="ttl-section">
+                                                <h3 class="ttl-3">Subscribe:</h3>
+                                                <p>Sales, updates, news—stay in the know!</p>
+                                            </div>
+
+                                            <form class="email-form full" action="#" autocomplete="off">
+                                                <input type="email" placeholder="Email" required>
+                                                <button class="btn btn-g btn-arrow-a btn-change-text" data-text="Subscribe" type="submit" data-media="(max-width: 767px), and (max-width: 840px) and (orientation: landscape)" >
+                                                    <span>OK</span>
+                                                    <div class="arrow"></div>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="media-stream--categories-ttl checkpoint" id="sustainability">
+                            <div class="items">14</div>
+                            <h4 class="ttl-4">Sustainability & Innovation</h4>
+                            @@include('./partials/elements/button-all.htm', { 
+                                "text": "View all", 
+                                "items" : "14",
+                                "href" : "#", 
+                                "classes": "" 
+                            })
+                        </div>
+
+                        <div class="media-stream--section">
+                            <div class="media-stream--cols">
+                                <article class="media-stream--article has-img">
+                                    <div class="media-panel">
+                                        <img class="media-img" src="images/news-4.jpg" alt="#">
+                                        <div class="author-block">
+                                            <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                            <div class="author-name ttl-5">George Boyd</div>
+                                        </div>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="date">16.05</div>
+                                        <h4 class="ttl ttl-4"><a href="news-open.html">Petainer launches new <br> Hybrid kegs.</a></h4>
+                    
+                                        <div class="tags-list">
+                                            <a href="page-tag.html" class="tag">Sustainability</a>
+                                        </div>
+
+                                        <a href="news-open.html" class="button-next grey"></a>
+                                    </div>
+                                </article>
+
+                                <article class="media-stream--article has-video">
+                                    <div class="media-panel">
+                                        <img class="media-img" src="images/news-video-2.jpg" alt="#">
+                                        <div class="play-button-wrap">
+                                            <div class="play trans"></div>
+                                            <div class="text-b trans">2:21</div>
+                                        </div>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="date">16.05</div>
+                                        <h4 class="ttl ttl-4"><a href="news-open.html">How petainerKeg is helping breweries.</a></h4>
+
+                                        <div class="tags-list">
+                                            <a href="page-tag.html" class="tag">Petainer News</a>
+                                        </div>
+
+                                        <a href="news-open.html" class="button-next grey"></a>
+                                    </div>
+                                </article>
+
+                                <article class="media-stream--article has-video">
+                                    <div class="media-panel">
+                                        <img class="media-img" src="images/news-video-3.jpg" alt="#">
+                                        <div class="play-button-wrap">
+                                            <div class="play trans"></div>
+                                            <div class="text-b trans">2:21</div>
+                                        </div>
+                                    </div>
+                                    <div class="media-content">
+                                        <div class="date">16.05</div>
+                                        <h4 class="ttl ttl-4"><a href="news-open.html">Petainer launches new <br>Hybrid kegs.</a></h4>
+
+                                        <div class="tags-list">
+                                            <a href="page-tag.html" class="tag">Petainer News</a>
+                                        </div>
+
+                                        <a href="news-open.html" class="button-next grey"></a>
+                                    </div>
+                                </article>
+
+                                <article class="media-stream--article categories">
+                                    <div class="media-panel">
+                                        <div class="media-panel--categories-block">
+                                            <div class="media-panel--categories-head">
+                                                <div class="text-main">More Categories</div>
+                                                <div class="items">6</div>
+                                            </div>
+                                            <div class="media-panel--categories-scroll">
+                                                <div class="media-panel--categories-row">
+                                                    <h5 class="ttl-5">Beer</h5>
+                                                    <a class="link-g" href="page-tag.html">25</a>
+                                                </div>
+                                                <div class="media-panel--categories-row">
+                                                    <h5 class="ttl-5">Kegs</h5>
+                                                    <a class="link-g" href="page-tag.html">17</a>
+                                                </div>
+                                                <div class="media-panel--categories-row">
+                                                    <h5 class="ttl-5">Technology</h5>
+                                                    <a class="link-g" href="page-tag.html">117</a>
+                                                </div>
+                                                <div class="media-panel--categories-row">
+                                                    <h5 class="ttl-5">Soft Drinks</h5>
+                                                    <a class="link-g" href="page-tag.html">7</a>
+                                                </div>
+                                                <div class="media-panel--categories-row">
+                                                    <h5 class="ttl-5">Coffee</h5>
+                                                    <a class="link-g" href="page-tag.html">12</a>
+                                                </div>
+                                                <div class="media-panel--categories-row">
+                                                    <h5 class="ttl-5">Cider</h5>
+                                                    <a class="link-g" href="page-tag.html">18</a>
+                                                </div>
+                                                <div class="media-panel--categories-row">
+                                                    <h5 class="ttl-5">Wine</h5>
+                                                    <a class="link-g" href="page-tag.html">10</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="media-stream--head-ttl checkpoint" id="cases">
+                            <h1 class="ttl-1">Case Studies</h1>
+                        </div>
+
+                        <div class="media-stream--categories-ttl">
+                            <div class="items">6</div>
+                            <h4 class="ttl-4">Featured</h4>
+                            @@include('./partials/elements/button-all.htm', { 
+                                "text": "View all", 
+                                "items" : "15",
+                                "href" : "#", 
+                                "classes": "" 
+                            })
+                        </div>
+
+                        <div class="media-stream--section">
+                            <div class="case-item">
+                                <div class="media-panel">
+                                    <div class="case-item-text">
+                                        <div class="case-item-pos">Product Manager</div>
+                                        <div class="case-item-name ttl-2">Janet Flores</div>
+                                    </div>
+                                    <img class="media-img" src="images/case-1.jpg" alt="#">
+                                </div>
+
+                                <div class="customers-item">
+                                    <div class="customers-logo-wrap">
+                                        <img class="customers-logo" src="images/c-1.png">
+                                    </div>
+
+                                    <div class="city">
+                                        <div class="ttl-5">New York</div>
+                                        <span>(USA)</span>
+                                    </div>
+
+                                    <div class="customers-text">
+                                        <div class="ttl-5">Rooster Beers</div>
+                                        <p>Sales</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="case-item">
+                                <div class="media-panel">
+                                    <div class="case-item-text">
+                                        <div class="case-item-pos">Chief Marketing Officer</div>
+                                        <div class="case-item-name ttl-2">Kevin Warren</div>
+                                    </div>
+                                    <img class="media-img" src="images/case-2.jpg" alt="#">
+                                </div>
+
+                                <div class="customers-item">
+                                    <div class="customers-logo-wrap">
+                                        <img class="customers-logo" src="images/c-2.png">
+                                    </div>
+
+                                    <div class="city">
+                                        <div class="ttl-5">New York</div>
+                                        <span>(USA)</span>
+                                    </div>
+
+                                    <div class="customers-text">
+                                        <div class="ttl-5">Jacobs Monarch</div>
+                                        <p>Sales</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="media-stream--head-ttl checkpoint" id="events">
+                            <h1 class="ttl-1">Events</h1>
+                        </div>
+
+                        <div class="media-stream--categories-ttl">
+                            <div class="items">4</div>
+                            <h4 class="ttl-4">Most Recent</h4>
+                            @@include('./partials/elements/button-all.htm', { 
+                                "text": "View all", 
+                                "items" : "15",
+                                "href" : "#", 
+                                "classes": "" 
+                            })
+                        </div>
+
+                        <div class="media-stream--section">
+                            <div class="article-section event-section" style="background-image: url(images/events-1.jpg)">
+                                <div class="socket layout-row align-right">
+                                    <div class="layout-col-event">
+                                        <div class="content-w col">
+                                            <p class="text-main">
+                                                We are looking forward to meeting you.
+                                            </p>
+                
+                                            <div class="desc-row">
+                                                <h3 class="ttl-2">Interpack.</h3>
+                
+                                                <div class="place">Berlin, Germany</div>
+                                                <div class="date">24.4 — 28.4</div>
+                                            </div>
+                
+                                            @@include('./partials/elements/button-link.htm', { 
+                                                "text": "Details", 
+                                                "href" : "#", 
+                                                "classes": "btn-more btn-blur btn-arrow-a" 
+                                            })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="events-table">
+                            <div class="events-table-row layout-row">
+                                <div class="events-table-cell layout-col-l">
+                                    <div class="dates">29.1 — 31.1</div>
+                                </div>
+                                <div class="events-table-cell-m layout-col-r">
+                                    <div class="events-ttl-section">
+                                        <div class="ttl-top">Chicago (US)</div>
+                                        <div class="ttl-4"><a href="event-open.html">CiderCon</a></div>
+                                    </div>
+                                    
+                                    @@include('./partials/elements/button-add.htm', { 
+                                        "text": "Add to Calendar", 
+                                        "classes": "" 
+                                    })
+                                </div>
+                            </div>
+
+                            <div class="events-table-row layout-row">
+                                <div class="events-table-cell layout-col-l">
+                                    <div class="dates">5.2 — 8.2</div>
+                                </div>
+                                <div class="events-table-cell-m layout-col-r">
+                                    <div class="events-ttl-section">
+                                        <div class="ttl-top">Sacramento - CA (US)</div>
+                                        <div class="ttl-4"><a href="event-open.html">UWGS—Unified Wine & Grapes Symposium</a></div>
+                                    </div>
+                                    
+                                    @@include('./partials/elements/button-add.htm', { 
+                                        "text": "Add to Calendar", 
+                                        "classes": "" 
+                                    })
+                                </div>
+                            </div>
+
+                            <div class="events-table-row layout-row">
+                                <div class="events-table-cell layout-col-l">
+                                    <div class="dates">12.2 — 13.2</div>
+                                </div>
+                                <div class="events-table-cell-m layout-col-r">
+                                    <div class="events-ttl-section">
+                                        <div class="ttl-top">Portland (US)</div>
+                                        <div class="ttl-4"><a href="event-open.html">Oregon Wine Symposium</a></div>
+                                    </div>
+                                    
+                                    @@include('./partials/elements/button-add.htm', { 
+                                        "text": "Add to Calendar", 
+                                        "classes": "" 
+                                    })
+                                </div>
+                            </div>
+
+                            <div class="events-table-bottom layout-row align-right">
+                                <div class="layout-col-r">
+                                    @@include('./partials/elements/button-link.htm', { 
+                                        "text": "Learn More", 
+                                        "href": "events.html",
+                                        "classes": "btn-g btn-arrow-a" 
+                                    })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="media-stream--col-r">
+                        <aside class="filter-sidebar">
+                            <div class="filter-btns">
+                                <div class="btn-search"></div>
+                                <button class="btn-filter">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </button>
+                            </div>
+                            <h4 class="ttl-4">Filter</h4>
+                            <nav class="filter-nav">
+                                <ul>
+                                    <li data-hash="business" class="filter-item active">
+                                        <span>Business and Manufacture</span>
+                                        <div class="items brackets">256</div>
+                                    </li>   
+                                    <li data-hash="sustainability" class="filter-item">
+                                        <span>Sustainability & Innovation</span>
+                                    </li> 
+                                    <li data-hash="cases" class="filter-item">
+                                        <span>Cases</span>
+                                    </li>  
+                                    <li data-hash="events" class="filter-item">
+                                        <span>Events</span>
+                                    </li>  
+                                </ul>   
+                            </nav>
+                            <div class="search-block">
+                                <form action="#">
+                                    <input placeholder="Search a keyword" type="text">
+                                    <button class="btn-search" type="submit"></button>
+                                </form>
+                            </div>
+                        </aside>
+                    </div>
+                    
+                </div>
+
+                <!-- Footer -->
+                <footer class="footer footer-bg">
+                    <div class="info-row layout-row socket">
+                        <div class="layout-col-l">
+                            <h3 class="ttl-4">Becoming a customer</h3>
+                            @@include('./partials/elements/button-link.htm', { 
+                                "text": "Place an order", 
+                                "href" : "#", 
+                                "classes": "btn-g btn-arrow-a" 
+                            })
+                        </div>
+                        <div class="layout-col-r">
+                            <div class="layout-col-s-4">
+                                <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                            </div>
+                            <div class="layout-col-s-6">
+                                <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                                <div class="with-us">
+                                    <h3 class="ttl-4">Already with us</h3>
+                                    @@include('./partials/elements/button-link.htm', { 
+                                        "text": "Tools & Resources", 
+                                        "href" : "#", 
+                                        "classes": "" 
+                                    })
+                                </div>
+                                <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
+                            </div>
+                        </div>
+                    </div>
+                    @@include('./partials/footer-main.htm', {  "classes": "" })
+                </footer>
+            </div>
+
+            
+    
+        </main>
+    </body>
+
+    <script>
+        SystemJS.import('./js/app.js');
+        SystemJS.import('./js/news.js');
+    </script>
+</html>

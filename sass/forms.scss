@@ -1,0 +1,32 @@
+
+/* =========================
+   Forms
+   ========================= */
+
+body input:-webkit-autofill,
+body textarea:-webkit-autofill,
+body select:-webkit-autofill { 
+    -webkit-box-shadow: 0 0 0 30px #fff inset; 
+    -webkit-text-fill-color: #666 !important;
+    background: none !important;
+    border: none !important; 
+}
+
+.input-item {
+
+    input, textarea {
+
+        &:focus {
+
+        }
+        
+        @include ph {
+            color: #000;
+        }
+    }
+    
+    label {
+        display: block;
+    }
+}
+

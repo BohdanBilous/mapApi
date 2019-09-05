@@ -1,0 +1,371 @@
+
+/* =========================
+    Footer
+   ========================= */
+
+.footer {
+    .info-row {
+        padding-bottom: 42px;
+        padding-bottom: 67px;
+
+        @include tablet {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+.footer-main {
+    padding-top: 75px;
+
+    .logo {
+        
+    }
+}
+
+.footer-bg {
+    border-radius: 25px 25px 0 0;
+    background-color: $colorPanel;
+
+    .info-row {
+        padding-top: 38px;
+        padding-bottom: 42px;
+
+        .with-us .btn {
+            &::after {
+                background-color: $colorBg;
+            }
+        }
+    }
+}
+
+
+.footer-main-top {
+    height: 285px;
+}
+
+
+.sign-up-block {
+    .ttl-4 {
+        margin-bottom: 25px;
+    }
+}
+
+.email-form {
+    width: 320px;
+    position: relative;
+
+    @include macbook {
+        width: 300px;
+    }
+
+    input[type="email"] {
+        width: 100%;
+        padding-right: 45px;
+        height: 37px;
+        line-height: 37px;
+        background: none;
+        font-size: 12px;
+        color: $colorTextG;
+        border: none;
+        border-bottom: 1px solid $colorBorder;
+
+        @include ph {
+            color: $colorTextG;
+        }
+
+        &:focus {
+            @include ph {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .btn {
+        @media screen and (min-width: 768px) and (orientation: portrait),
+               screen and (min-width: 820px) and (orientation: landscape) {
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: auto;
+            padding: 0;
+            display: block;
+            width: 35px;
+            height: 28px;
+            background-color: $colorGreen;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #fff;
+            line-height: 28px;
+            text-align: center;
+
+            .arrow {
+                display: none;
+            }
+            
+            .no-touchevents &:hover {
+                
+            }
+        }
+    }
+
+    &.full {
+        width: 100%;
+
+        input[type="email"] {
+            padding-right: 80px;
+            font-size: 14px;
+        }
+
+        .btn {
+            width: 64px;
+        }
+
+        @include mobile {
+
+            input[type="email"] {
+                margin-bottom: 18px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.footer-menu {
+    @extend .flex-sb;
+    width: 330px;
+    padding-top: 6px;
+
+    li {
+        width: 50%;
+        margin-bottom: 16px;
+
+        a {
+            color: $colorTextG;
+
+            &:hover {
+                color: $colorGreen;
+            }
+        }
+    }
+}
+
+.footer-main-bottom {
+    height: 30px;
+
+    .social {
+        li {
+            margin-right: 40px;
+        }
+    }
+}
+
+.copyright {
+    color: $colorTextG;
+}
+
+@include mobile {
+    .email-form {
+        width: 100%;
+
+        input[type="email"] {
+            font-size: 14px;
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            position: relative;
+            width: 100%;
+            height: 62px;
+            text-align: left;
+        }
+    }
+}
+
+
+
+@include tablet {
+    .footer-main {
+        padding-top: 43px;
+
+        .layout-col-l {
+            width: 34%;
+        }
+
+        .layout-col-r {
+            width: 66%;
+
+            .layout-row {
+                display: block;
+            }
+        }
+
+        .layout-col-s-4, .layout-col-s-6 {
+            width: 100%;
+        }
+    }
+
+    .footer-main-top, .footer-main-bottom {
+        height: auto;
+    }
+
+    .sign-up-block {
+        margin-bottom: 95px;
+    }
+
+    .footer-menu {
+        width: 100%;
+        display: block;
+
+        li {
+            width: 100%;
+            margin-bottom: 45px;
+
+            a {
+                display: block;
+                padding-bottom: 6px;
+                color:$colorTextG;
+                font-size: 18px;
+                line-height: 20px;
+                letter-spacing: -0.36px;
+                border-bottom: 1px solid $colorBorder;
+            }
+        }
+    }
+
+    .footer-main-top {
+        padding-bottom: 85px;
+    }
+
+    .footer-main-bottom {
+        .layout-col-l {
+            display: none;
+        }
+
+        .layout-col-r {
+            width: 100%;
+        }
+        
+        .social {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                width: 30%;
+                margin: 0;
+                border-bottom: 1px solid $colorBorder;
+
+                a {
+                    position: relative;
+                    display: block;
+                    padding-bottom: 7px;
+                }
+
+                img {
+                    position: absolute;
+                    display: block;
+                    right: 0;
+                    top: -10px;
+                }
+            }
+        }
+
+        .terms {
+            display: none;
+        }
+
+        .layout-col-s-4 {
+            padding-bottom: 28px;
+        }
+
+        .layout-col-s-6 {
+            display: flex;
+            justify-content: center;
+            padding: 0 0 20px;
+        }
+    }
+}
+
+@include mobile {
+    .footer-main {
+        .layout-col-l, .layout-col-r {
+            width: 100%;
+        }
+
+        .layout-row {
+            display: block;
+        }
+    }
+
+    .footer-main-top {
+        .layout-col-l {
+            padding-bottom: 72px;
+        }
+    }
+
+    .footer-main {
+        li {
+            margin-bottom: 40px;
+            
+            a {
+                color: $colorText2;
+                font-family: $fontMedium;
+            }
+        }
+    }
+
+    .footer-main-bottom {
+        .layout-col-l {
+            display: block;
+            padding-bottom: 35px;
+        }
+
+        .terms {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: -0.36px;
+            margin-bottom: 32px;
+        }
+        
+        .social {
+            display: block;
+
+            li {
+                width: 100%;  
+                margin-bottom: 38px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                
+                a {
+                    span {
+                        font-size: 18px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+
+        .layout-col-s-4 {
+            padding-bottom: 85px;
+        }
+
+        .layout-col-s-6 {
+            flex-direction: column;
+
+            .terms {
+                order: 1;
+            }
+
+            .copyright {
+                order: 2;
+            }
+        }
+    }
+}
