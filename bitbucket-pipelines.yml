@@ -18,15 +18,5 @@ pipelines:
             - npm install
             - npm install -g gulp-cli
             - gulp deploy
-            - rsync -avzh ./dist/ ubuntu@18.217.219.87:/var/www/html/veermo
-    dev:
-      - step:
-          caches:
-            - node
-          script: # Modify the commands below to build your repository.
-            - apt-get update
-            - apt-get install -y libpng16-dev rsync
-            - npm install
-            - npm install -g gulp-cli
-            - gulp deploy
-            - rsync -avzh ./dist/ ubuntu@18.217.219.87:/var/www/html/veermo2
+            - rsync -avzh ./dist/ ubuntu@18.217.219.87:/var/www/html/petainer/
+    
