@@ -13,8 +13,16 @@ body * { -webkit-font-smoothing: antialiased; text-shadow: 0 1px 0 rgba(0,0,0,0.
     font-family: $fontMedium;
 }
 
+.text-g {
+    color: $colorTextG;
+}
+
 h1, h2, h3, h4, h5 {
     font-weight: normal;
+
+    a:hover {
+        color: $colorGreen;
+    }
 }
 
 .ttl-1, .ttl-2, .ttl-3, .ttl-4, .ttl-5 {
@@ -60,7 +68,7 @@ h1, h2, h3, h4, h5 {
 
 .ttl-5 {
     font-size: 14px;
-    line-height: 17px;
+    line-height: 18px;
     letter-spacing: -0.2px;
 }
 

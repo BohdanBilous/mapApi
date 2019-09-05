@@ -128,7 +128,7 @@
 
         &::after {
             left: 0;
-            border-color: $colorTextL transparent transparent transparent;
+            // border-color: $colorTextL transparent transparent transparent;
         }
     }
 }
@@ -322,6 +322,25 @@
             top: 21px;
         }
     }      
+}
+
+@media screen and (max-width: 800px) {
+    .btn-back {
+        min-width: auto !important;
+        width: 95px;
+        height: 40px;
+
+        span {
+            display: none;
+        }
+
+        .arrow {
+            top: 16px;
+            right: auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
 
 @include mobile {
@@ -533,8 +552,12 @@
 
     span {
         display: block;
-        color: $colorGreen
+        color: $colorGreen;
     }
+}
+
+.month, .year {
+    @extend .text-g;
 }
 
 // Quote Block
@@ -784,8 +807,6 @@
         background: url(../images/ico-search.svg) no-repeat 0 0;
         background-size: 100% 100%;
     }
-
-    
 }
 
 .no-touchevents .btn-search:hover::after {
@@ -831,4 +852,55 @@
     color: $colorBg;
     border-radius: 4px;
     font-size: 13px;
+}
+
+// Date Range
+.date-range {
+    .date-start, .date-end {
+        font-size: 50px;
+        line-height: 47px;
+        letter-spacing: -1.75px;
+        font-family: $fontMedium;
+    }
+
+    .date-start {
+        position: relative;
+        width: 60px;
+        
+        &::after {
+            @extend .ps;
+            width: 47px;
+            height: 4px;
+            top: 19px;
+            right: -47px;
+            background-color: $colorText;
+        }
+    }
+
+    .date-end {
+        padding-left: 67px;
+    }
+}
+
+@include mobile {
+    .date-range {
+        .date-start, .date-end {
+            font-size: 35px;
+            line-height: 42px;
+            letter-spacing: 0;
+        }
+
+        .date-start {
+            width: 48px;
+            
+            &::after {
+                width: 35px;
+                right: -35px;
+            }
+        }
+
+        .date-end {
+            padding-left: 52px;
+        }
+    }
 }
