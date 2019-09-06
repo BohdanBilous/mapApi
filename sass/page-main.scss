@@ -1430,6 +1430,7 @@ $animateDur: 0.30s;
 @include mobile {
     .video-section, .article-section {
         height: 535px;
+        border-radius: 10px;
 
         .col {
             padding: 38px 0;

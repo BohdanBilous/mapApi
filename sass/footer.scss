@@ -16,10 +16,6 @@
 
 .footer-main {
     padding-top: 75px;
-
-    .logo {
-        
-    }
 }
 
 .footer-bg {
@@ -156,6 +152,10 @@
 .footer-main-bottom {
     height: 30px;
 
+    .terms {
+        color: $colorTextG;
+    }
+
     .social {
         li {
             margin-right: 40px;
@@ -168,6 +168,7 @@
 }
 
 @include mobile {
+
     .email-form {
         width: 100%;
 

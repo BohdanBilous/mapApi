@@ -609,7 +609,7 @@
 }
 
 .event-section {
-    margin-bottom: 90px;
+    margin-bottom: 70px;
 
     &:last-child {
         margin-bottom: 0;
@@ -659,7 +659,7 @@
 
 .filter-sidebar {
     position: sticky;
-    top: 25px;
+    top: 45px;
     padding-left: 15px;
     border-left: 1px solid $colorBorder;
 
@@ -669,7 +669,7 @@
 }
 
 .filter-nav {
-    margin-bottom: 108px;
+    margin-bottom: 98px;
 
     .filter-item {
         @extend .flex-sb;
@@ -694,6 +694,18 @@
 
         span {
             color: $colorTextG;
+        }
+    }
+}
+
+@include desktop-only {
+    @media screen and (max-height: 550px) {
+        .filter-sidebar .ttl-4 {
+            margin-bottom: 30px;
+        }
+
+        .filter-nav {
+            margin-bottom: 30px;
         }
     }
 }
@@ -961,7 +973,7 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 960px) {
     .media-stream--article {
         width: 100%;
 
@@ -1196,6 +1208,7 @@
                 width: auto;
                 font-size: 30px;
                 margin: 0;
+                max-height: 235px;
             }
 
             .date {
@@ -1203,8 +1216,8 @@
             }
             
             .place {
-                align-self: center;
-                padding: 0;
+                align-self: flex-end;
+                padding: 0 0 6px;
             }
         }
 

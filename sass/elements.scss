@@ -553,6 +553,14 @@
     span {
         display: block;
         color: $colorGreen;
+
+        &:first-child {
+            margin-bottom: 13px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -626,6 +634,7 @@
     color: $colorTextG;
     font-size: 12px;
     line-height: 14px;
+    letter-spacing: 0.6px;
 
     &.brackets {
         &::before {
@@ -872,7 +881,7 @@
             width: 47px;
             height: 4px;
             top: 19px;
-            right: -47px;
+            right: -53px;
             background-color: $colorText;
         }
     }
@@ -882,25 +891,60 @@
     }
 }
 
+@mixin dataRangeTbl {
+    .date-start, .date-end {
+        font-size: 35px;
+        line-height: 35px;
+        letter-spacing: -1.23px;
+    }
+
+    .date-start {
+        width: 45px;
+
+        &::after {
+            top: 15px;
+            right: -34px;
+            width: 34px;
+            height: 3px;
+        }
+    }
+
+    .date-end {
+        padding-left: 48px;
+    }
+}
+
+@mixin dataRangeMob {
+    .date-start, .date-end {
+        font-size: 27px;
+        line-height: 27px;
+        letter-spacing: -0.7px;
+    }
+
+    .date-start {
+        width: 37px;
+
+        &::after {
+            top: 12px;
+            right: -28px;
+            width: 26px;
+        }
+    }
+
+    .date-end {
+        padding-left: 40px;
+    }
+}
+
+@media screen and (min-width: 1151px) and (max-width: 1440px) {
+    .date-range {
+        @include dataRangeTbl;
+    }
+}
+
+
 @include mobile {
     .date-range {
-        .date-start, .date-end {
-            font-size: 35px;
-            line-height: 42px;
-            letter-spacing: 0;
-        }
-
-        .date-start {
-            width: 48px;
-            
-            &::after {
-                width: 35px;
-                right: -35px;
-            }
-        }
-
-        .date-end {
-            padding-left: 52px;
-        }
+        @include dataRangeTbl;
     }
 }

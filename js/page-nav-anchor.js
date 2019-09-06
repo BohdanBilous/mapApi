@@ -14,12 +14,13 @@
 
 export class PageNav {
 
-    constructor(navWrap, block, sticky, stickyHeight) {
+    constructor(navWrap, block, callback, sticky, stickyHeight) {
         this.navWrap = document.querySelector(navWrap);
         this.sticky = sticky || false;
         this.stickyHeight = stickyHeight || null;
         this.block = document.querySelectorAll(block);
         this.stickyTopMargin = 0;
+        this.callback = callback;
         
         this.buttonClickHandler();
         this.onScreenHandler();
@@ -74,7 +75,15 @@ export class PageNav {
                 
             if (this.onScreenDetect(block, 0.2)) {
                 let buttonNav = this.navWrap.querySelector(`[data-hash=${id}]`);
+                let itemsElement, items = null;
                 this.changeActiveButton(buttonNav);
+
+                if (buttonNav.querySelector(".items") != null) {
+                    itemsElement = buttonNav.querySelector(".items");
+                    items = itemsElement.textContent || itemsElement.innerText;
+                }
+                
+                if (this.callback) this.callback(id, items);
             }
         });
     }

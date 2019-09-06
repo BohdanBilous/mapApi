@@ -18,7 +18,7 @@
 .event-section-main {
     height: 667px;
     border-radius: 25px 25px 0 0;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 
     .screen-content--ttl-s {
         align-self: flex-end;
@@ -40,8 +40,6 @@
         left: 0;
     }
 }
-
-
 
 @include tablet {
     .event-section-main {
@@ -185,10 +183,22 @@
 }
 
 // Content
+.event-month-container {
+    margin-bottom: 200px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .media-stream--events {
 
     .media-stream--col-l {
         padding-top: 50px;
+    }
+
+    .media-stream--col-r {
+        padding-top: 100px;
     }
 }
 
@@ -201,13 +211,12 @@
     left: 0;
     border-bottom: 1px solid $colorBorder;
     background-color: $colorBg;
-    z-index: 1;
+    z-index: 100;
 
     .items {
-        @extend .ctrVert;
         font-size: 12px;
         color: $colorGreen;
-        align-self: flex-end;
+        align-self: center;
     }
 }
 
@@ -221,12 +230,12 @@
     }
 
     &--item {
-        width: 26%;
+        width: 25%;
         position: relative;
 
-        &:last-child {
-            width: 22%;
-        }
+        // &:last-child {
+        //     width: 22%;
+        // }
 
         .button-next {
             display: none;
@@ -301,8 +310,10 @@
     }
 
     .media-stream--categories-ttl-sticky {
+        justify-content: flex-start;
+
         .items {
-            display: none;
+            margin-left: 13px;
         }
     }
 
@@ -311,6 +322,7 @@
         &--wrap {
             flex-wrap: wrap;
             padding-top: 0;
+            margin-bottom: 20px;
         }
 
         &--item {
@@ -321,6 +333,7 @@
 
             &:last-child {
                 width: 100%;
+                border: none;
             }
 
             .button-next {
@@ -337,7 +350,7 @@
         }
 
         &--date {
-            width: 27%;
+            width: 30%;
             padding-top: 13px;
             height: auto;
 
@@ -347,7 +360,7 @@
         }
 
         &--content {
-            width: 73%;
+            width: 70%;
             padding-top: 0;
 
             .now-flag {
@@ -380,20 +393,6 @@
     }
 }
 
-@media screen and (max-width: 960px) {
-
-    .events-cal {
-
-        &--date {
-            width: 35%;
-        }
-
-        &--content {
-            width: 65%;
-        }
-    }
-}
-
 @include mobile {
     .media-stream--events {
         .filter-sidebar {
@@ -406,17 +405,33 @@
     }
 
     .events-cal {
+
+        &--wrap {
+            margin-bottom: 0;
+        }
+
         &--item {
-            padding: 36px 0;
+            padding: 40px 0;
             flex-wrap: wrap;
 
             .button-next {
                 display: none;
             }
+
+            &.is-now {
+                .date-range {
+                    color: $colorText;
+
+                    .date-start::after {
+                        background-color: $colorText;
+                    }
+                }
+            }
         }
 
         &--date {
             width: 100%;
+            padding-top: 0;
             margin-bottom: 43px;
         }
 
@@ -424,8 +439,16 @@
             position: static;
             width: 100%;
 
+            .now-flag {
+                display: none !important;
+            }
+
             .ttl {
                 width: 200px;
+            }
+
+            .city {
+                margin-bottom: 0;
             }
 
             &--ym {
@@ -445,5 +468,281 @@
             }
         }
     }
+}
+
+// Events Section
+.event-section {
+
+    .event-section-content {
+        position: relative;
+        padding: 20px 20px 20px 50px;
+
+        .desc-row {
+            .ttl {
+                width: 500px;
+                max-height: 195px;
+            }
+        }
+
+        .btn-more {
+            min-width: 150px;
+        }
+    }
+}
+
+.media-stream {
+
+    &--bbox-top {
+        border-top: 1px solid $colorBorder;
+        padding-top: 60px;
+    }
+
+    &--bbox {
+        border-bottom: 1px solid $colorBorder;
+        margin-bottom: 100px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .media-stream--article {
+            margin-bottom: 0;
+            border: none;
+        }
+    }
+
+    &--article.event {
+        padding-bottom: 40px;
+        
+        .media-content {
+            position: relative;
+            margin-top: 60px;
+            padding-top: 0;
+            padding-left: 308px;
+
+            .date-range {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .ttl {
+                width: auto;
+                height: auto;
+                max-height: 175px;
+                padding-right: 50px;
+                margin-bottom: 18px;
+
+                span {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1900px) {
+
+    .event-month-container {
+        margin-bottom: 125px;
+    }
+
+    .event-section {
+        margin-bottom: 45px;
+
+        .event-section-content {
+
+            .desc-row {
+                .ttl {
+                    width: 40%;
+                }
+            }
+        }
+    }
+
+    .media-stream {
+
+        &--bbox-top {
+            padding-top: 50px;
+        }
+
+        &--bbox {
+            margin-bottom: 70px;
+        }
+
+        &--article.event {
+            padding-bottom: 25px;
+
+            .media-content {
+                padding-left: 200px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1151px) and (max-width: 1440px) {
+    .events-cal {
+
+        &--date {
+            height: 145px;
+
+            .date-range {
+                margin-bottom: 28px;
+            }
+        }
+        
+        &--content {
+            .month {
+                top: -41px;
+            }
+
+            .ttl {
+                width: 75%;
+            }
+        }
+    }
+}
+
+@include tablet {
+
+    .event-section {
+        margin-bottom: 30px;
+
+        .event-section-content {
+            padding-left: 20px;
+
+            .desc-row {
+
+                .ttl {
+                    font-size: 35px;
+                    line-height: 37px;
+                }
+            }
+        }
+    }
+
+    .media-stream {
+
+        &--bbox-top {
+            padding-top: 30px;
+        }
+
+        &--events {
+            .media-stream--col-l {
+                padding-bottom: 100px;
+            }
     
+            .media-stream--col-r {
+                padding: 0;
+            }
+
+            .filter-sidebar {
+                padding-top: 30px;
+            }
+        }
+
+        &--article.event {
+            padding-bottom: 35px;
+
+            .media-content {
+                margin-top: 38px;
+                padding-left: 127px;
+
+                .date-range {
+                    @include dataRangeTbl;
+                }
+
+                .ttl {
+                    width: 270px;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    .event-month-container {
+        margin-bottom: 95px;
+    }
+
+    .media-stream {
+
+        
+
+        &--bbox {
+            margin-bottom: 0;
+            border: none;
+        }
+
+        &--bbox-top {
+            border-top: 1px solid $colorBorder;
+        }
+
+        &--article.event {
+            padding-bottom: 40px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid $colorBorder;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .media-content {
+                padding-left: 30%;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .media-stream {
+
+        &--events {
+
+            .filter-sidebar {
+                top: 40px;
+                padding-top: 0;
+            }
+
+            .media-stream--col-l {
+                padding-top: 160px;
+            }
+        }
+
+        &--article.event {
+
+            .media-content {
+                padding-left: 115px;
+
+                .ttl {
+                    width: auto;
+                    padding-right: 25px;
+                }
+
+                .date-range {
+                    @include dataRangeMob;
+                    top: 27px;
+                }
+            }
+        }
+    }
+
+    .event-section {
+        .event-section-content {
+            padding: 25px;
+
+            .desc-row {
+                .ttl {
+                    font-size: 30px;
+                    line-height: 34px;
+                    width: 65%;
+                    max-height: 235px;
+                }
+            }
+        }
+    }
 }

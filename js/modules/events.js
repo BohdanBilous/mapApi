@@ -7,8 +7,23 @@ import { PageNav } from '../page-nav-anchor';
 window.addEventListener("load", function() {
 
     // Page Nav
-    if (exists(".media-stream--container")) {
-        let pageNav = new PageNav(".media-stream--container", ".checkpoint");
+    if (exists(".media-stream--container") && exists(".event-month-container")) {
+        const titleWrap = document.querySelector(".media-stream--categories-ttl-sticky") || null;
+        let pageNav = new PageNav(".media-stream--container", ".event-month-container", changeMonth);
+
+        function changeMonth(id, items) {
+            titleWrap.querySelector(".ttl").innerHTML = firstLetterToUpperCase(id);
+            titleWrap.querySelector(".items").innerHTML = items;
+        }
+
+        function firstLetterToUpperCase(word) {
+            let monthNameFirstLetter  = word.charAt(0);
+            let idWithoutFirstLetter  = word.substring(1, word.length);
+            let monthNameFirstLetterB = monthNameFirstLetter.toUpperCase();
+            word = monthNameFirstLetterB + idWithoutFirstLetter;
+
+            return word;
+        }
     }
 
     // Scroll From Screen
