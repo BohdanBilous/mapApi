@@ -76,6 +76,7 @@ export class PageNav {
             if (this.onScreenDetect(block, 0.2)) {
                 let buttonNav = this.navWrap.querySelector(`[data-hash=${id}]`);
                 let itemsElement, items = null;
+                let buttonNavName = buttonNav.querySelector("span").textContent || buttonNav.querySelector("span").innerText;
                 this.changeActiveButton(buttonNav);
 
                 if (buttonNav.querySelector(".items") != null) {
@@ -83,7 +84,7 @@ export class PageNav {
                     items = itemsElement.textContent || itemsElement.innerText;
                 }
                 
-                if (this.callback) this.callback(id, items);
+                if (this.callback) this.callback(buttonNavName, items);
             }
         });
     }

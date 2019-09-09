@@ -113,6 +113,7 @@
     display: inline-block;
     color: $colorTextL;
     white-space: nowrap;
+    align-self: flex-start;
 
     &.with-arrow, &.with-arrow-left {
         padding-right: 13px;
@@ -854,6 +855,7 @@
 // Now Flag
 .now-flag {
     position: absolute;
+    display: inline-block;
     padding: 0 10px;
     height: 19px;
     line-height: 19px;

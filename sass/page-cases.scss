@@ -1,0 +1,82 @@
+/* =========================
+    Cases Studies
+   ========================= */
+
+.screen-inner-simple {
+    padding-top: 55px;
+    
+    .col {
+        padding: 0;
+    }
+
+    .now-flag, .btn-more {
+        align-self: flex-start;
+    }
+
+    .now-flag {
+        position: static;
+    }
+}  
+
+.cases-container {
+    padding-top: 57px;
+    margin-bottom: 95px;
+
+    @include tablet {
+        padding-top: 30px;
+    }
+
+    @include mobile {
+        padding-top: 40px;
+        margin-bottom: 65px;
+    }
+
+    .case-item {
+        margin-bottom: 70px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include tablet {
+    .screen-inner-simple {
+        
+        .layout-col-r  {
+            width: calc(100% - #{$left-col-width});
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .screen-inner-simple {
+        padding-top: 35px;
+
+        .layout-col-r {
+            padding-bottom: 0;
+        }
+
+        .now-flag {
+            display: block;
+        }
+    }
+}
+
+@include mobile {
+    .screen-inner-simple {
+        padding-top: 25px;
+        
+        .layout-col-r {
+            width: 100%;
+            padding-bottom: 0;
+        }
+    }
+
+    .cases-container {
+        .case-item:not(:last-child) {
+            margin-bottom: 42px;
+        }
+    }
+
+}

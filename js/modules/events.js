@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import { html, desktop, mobile, exists, scrollFromScreen, tags } from '../generic-helpers';
+import { html, desktop, mobile, exists, scrollFromScreen, tags, filterSidebarInit } from '../generic-helpers';
 import { PageNav } from '../page-nav-anchor';
 
 window.addEventListener("load", function() {
@@ -11,19 +11,19 @@ window.addEventListener("load", function() {
         const titleWrap = document.querySelector(".media-stream--categories-ttl-sticky") || null;
         let pageNav = new PageNav(".media-stream--container", ".event-month-container", changeMonth);
 
-        function changeMonth(id, items) {
-            titleWrap.querySelector(".ttl").innerHTML = firstLetterToUpperCase(id);
+        function changeMonth(name, items) {
+            titleWrap.querySelector(".ttl").innerHTML = name;
             titleWrap.querySelector(".items").innerHTML = items;
         }
 
-        function firstLetterToUpperCase(word) {
-            let monthNameFirstLetter  = word.charAt(0);
-            let idWithoutFirstLetter  = word.substring(1, word.length);
-            let monthNameFirstLetterB = monthNameFirstLetter.toUpperCase();
-            word = monthNameFirstLetterB + idWithoutFirstLetter;
+        // function firstLetterToUpperCase(word) {
+        //     let monthNameFirstLetter  = word.charAt(0);
+        //     let idWithoutFirstLetter  = word.substring(1, word.length);
+        //     let monthNameFirstLetterB = monthNameFirstLetter.toUpperCase();
+        //     word = monthNameFirstLetterB + idWithoutFirstLetter;
 
-            return word;
-        }
+        //     return word;
+        // }
     }
 
     // Scroll From Screen
@@ -33,48 +33,7 @@ window.addEventListener("load", function() {
     if (exists(".tags-more")) tags();
 
     // Filter Mobile
-    const filterSidebar = document.querySelector(".filter-sidebar");
-
-    if (exists(".btn-filter")) {
-        document.querySelector(".btn-filter").addEventListener("click", () => {
-            if (filterSidebar.classList.contains("open")) {
-                filterSidebar.classList.remove("open");
-                filterSidebar.classList.add("close");
-            } else {
-                filterSidebar.classList.add("open");
-                filterSidebar.classList.remove("close", "close-search");
-            }
-
-            if (filterSidebar.classList.contains("open-search")) {
-                filterSidebar.classList.remove("open-search", "open");
-                filterSidebar.classList.add("close-search");
-            } else if (filterSidebar.classList.contains("close-search")) {
-                filterSidebar.classList.add("open-search");
-                filterSidebar.classList.remove("close-search", "close");
-            }
-        });
-    }
-
-    if (exists(".btn-search")) { 
-        document.querySelector(".btn-search").addEventListener("click", () => {
-            if (filterSidebar.classList.contains("open-search")) {
-                filterSidebar.classList.remove("open-search");
-                filterSidebar.classList.add("close-search");
-            } else {
-                filterSidebar.classList.add("open-search");
-                filterSidebar.classList.remove("close-search", "close");
-                
-                filterSidebar.querySelector(".search-block input[type='text']").value = "";
-                filterSidebar.querySelector(".search-block input[type='text']").focus();
-            }
-        }); 
-    }
-
-    document.querySelectorAll(".filter-item").forEach(filterItem => {
-        filterItem.addEventListener("click", () => {
-            if (mobile) filterSidebar.classList.remove("open");
-        });
-    });
+    filterSidebarInit();
 
         
 });

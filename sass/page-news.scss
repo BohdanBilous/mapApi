@@ -55,6 +55,18 @@
 .screen-inner {
     padding: 35px 0;
     z-index: 1;
+
+    &.screen-inner--with-pad-btns {
+        padding-bottom: 85px;
+
+        @media screen and (max-width: 960px) {
+            padding-bottom: 105px;
+        }
+
+        @include mobile {
+            padding-bottom: 105px;
+        }
+    }
 }
 
 .screen-content {
@@ -255,7 +267,6 @@
 
     .screen-inner {
         min-height: calc(100vh - 55px);
-        padding-bottom: 110px;
     }
 }
 
@@ -615,10 +626,6 @@
         margin-bottom: 0;
     }
 
-    .socket {
-        margin: 0 18px;
-    }
-
     .col {
         padding: 22px 0 20px;
     }
@@ -647,6 +654,13 @@
 
         .layout-col-r {
             width: 68.5%;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (orientation: portrait),
+           screen and (min-width: 815px) and (orientation: landscape) {
+        .event-section .socket {
+            margin: 0 18px;
         }
     }
 }

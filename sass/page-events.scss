@@ -41,7 +41,7 @@
     }
 }
 
-@include tablet {
+@media screen and (max-width: 960px) {
     .event-section-main {
         height: 830px;
 
@@ -53,12 +53,8 @@
             display: none;
         }
 
-        .layout-col-r {
+        .screen-inner .layout-col-r {
             width: calc(100% - #{$left-col-width});
-        }
-
-        .screen-inner {
-            padding-bottom: 80px;
         }
 
         .screen-content {
@@ -143,10 +139,11 @@
     .event-section-main {
         height: 690px;
         margin: 0;
-        background-position: 5% 0;
+        // background-position: 5% 0;
 
-        .layout-col-r {
+        .screen-inner .layout-col-r {
             width: 100%;
+            padding-bottom: 0;
         }
 
         .screen-content--ttl-s {
@@ -191,7 +188,7 @@
     }
 }
 
-.media-stream--events {
+.media-stream--events, .media-stream--cases {
 
     .media-stream--col-l {
         padding-top: 50px;
@@ -209,9 +206,19 @@
     padding: 11px 0;
     top: 0;
     left: 0;
-    border-bottom: 1px solid $colorBorder;
+    
     background-color: $colorBg;
     z-index: 100;
+
+    &::after {
+        @extend .ps;
+        height: 1px;
+        top: auto;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $colorBorder;
+    }
 
     .items {
         font-size: 12px;
@@ -302,10 +309,10 @@
 
 @include tablet {
 
-    .media-stream--events {
+    .media-stream--events, .media-stream--cases {
         
         .media-stream--col-l {
-            padding-top: 83px;   
+            padding-top: 100px;   
         }
     }
 
@@ -394,7 +401,19 @@
 }
 
 @include mobile {
-    .media-stream--events {
+
+    .media-stream--categories-ttl-sticky {
+        margin: 0 -25px;
+        padding-left: 25px;
+        padding-right: 25px;
+
+        &:after {
+            left: 25px;
+            right: 25px;
+        }
+    }
+
+    .media-stream--events, .media-stream--cases {
         .filter-sidebar {
             top: 30px;
         }
@@ -466,6 +485,18 @@
                     margin-right: 0;
                 }
             }
+        }
+    }
+}
+@include mobile-min {
+    .media-stream--categories-ttl-sticky {
+        margin: 0 -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &:after {
+            left: 20px;
+            right: 20px;
         }
     }
 }
@@ -629,7 +660,7 @@
             padding-top: 30px;
         }
 
-        &--events {
+        &--events, &--cases {
             .media-stream--col-l {
                 padding-bottom: 100px;
             }

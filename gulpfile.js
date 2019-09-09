@@ -67,7 +67,8 @@ function js(){
         'js/modules/index.js',
         'js/modules/solutions.js',
         'js/modules/news.js',
-        'js/modules/events.js'
+        'js/modules/events.js',
+        'js/modules/cases.js'
         ],
     experimentalCodeSplitting: true,
     optimizeChunks: true,
@@ -102,7 +103,8 @@ function jsProd(){
         'js/modules/index.js',
         'js/modules/solutions.js',
         'js/modules/news.js',
-        'js/modules/events.js'
+        'js/modules/events.js',
+        'js/modules/cases.js'
         ],
     experimentalCodeSplitting: true,
     optimizeChunks: true,
