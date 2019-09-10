@@ -1,0 +1,40 @@
+/* =========================
+    Resources
+   ========================= */
+
+.indicators-tabs-wrap {
+    position: relative;
+    padding: 35px 0 12px 170px;
+    border-bottom: 1px solid $colorBorder;
+
+    .hint {
+        position: absolute;
+        left: 0;
+        top: 81px;
+        color: $colorText2;
+    }
+
+    .indicators {
+        padding: 0 30px 0 0;
+    }
+}
+
+.media-stream--resources {
+
+    .media-stream--col-l {
+        padding-top: 45px;
+    }
+
+    .media-stream--col-r {
+        padding-top: 116px;
+    }
+}
+
+.media-stream--categories-ttl-f {
+    .ttl-top {
+        font-family: $fontMedium;
+        font-size: 12px;
+        line-height: 14px;
+        color: $colorMain;
+    }
+}

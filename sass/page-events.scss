@@ -17,7 +17,6 @@
 
 .event-section-main {
     height: 667px;
-    border-radius: 25px 25px 0 0;
     margin-bottom: 0 !important;
 
     .screen-content--ttl-s {
@@ -39,6 +38,14 @@
         top: 60px;
         left: 0;
     }
+}
+
+div.border-rad-btm {
+    border-radius: 0 0 25px 25px;
+}
+
+div.border-rad-top {
+    border-radius: 25px 25px 0 0;
 }
 
 @media screen and (max-width: 960px) {

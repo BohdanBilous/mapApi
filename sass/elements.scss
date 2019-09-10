@@ -98,11 +98,23 @@
 }
 
 .link-l {
+    position: relative;
     color: $colorTextL;
-    text-decoration: underline;
+    border-bottom: 1px solid $colorTextL;
+    // text-decoration: underline;
+
+    &::after {
+        @extend .ps;
+        width: 100%;
+        top: auto;
+        height: 4px;
+        bottom: -4px;
+        left: 0;
+    }
 
     &:hover {
         text-decoration: none;
+        border: none;
         color: $colorGreen;
     }
 }
@@ -312,6 +324,10 @@
             }
         }
     }
+}
+
+.btn-m {
+    min-width: 125px;
 }
 
 @include tablet {
@@ -773,8 +789,22 @@
 .search-block {
     position: relative;
     height: 40px;
+    overflow: hidden;
     border-radius: 5px;
-    background-color: $colorPanel;
+
+    form {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::after {
+        @extend .ps;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $colorPanel;
+    }
 
     input[type="text"] {
         width: 100%;
@@ -800,6 +830,25 @@
         @extend .ctrVert;
         position: absolute;
         right: 18px;
+    }
+
+    &.blur {
+        &::after {
+            background: #E5E5E5;
+            filter: blur(30px);
+        }
+
+        input[type="text"] {
+            color: $colorBg;
+
+            @include ph {
+                color: $colorBg;
+            }
+        }
+
+        .btn-search::after {
+            background: url(../images/ico-search-w.svg) no-repeat 0 0;
+        }
     }
 }
 

@@ -22,6 +22,8 @@ window.addEventListener("load", function() {
     filterSidebarInit();
 
     // Parallax Scroll
-    new ParallaxScroll(".screen-head", ".screen-bg", 200);
+    if (exists(".screen-head")) {
+        new ParallaxScroll(".screen-head", ".screen-bg", 200);
+    }
         
 });

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+    @@include('./partials/scripts.htm')
+    <body>
+        @@include('./partials/preloader.htm')
+        @@include('./partials/header.htm', { "classes": "color-w" })
+        @@include('./partials/menu.htm')
+        
+        <main class="main">
+
+            <!-- Top Screen -->
+            <div class="screen screen-top screen-head">
+                <div class="screen-bg" style="background-image: url(images/res-bg.jpg)"></div>
+                <div class="screen-inner screen-inner--with-pad-btns socket layout-row align-right">
+                    <div class="button-btm-right">
+                        @@include('./partials/elements/button-link.htm', { 
+                            "text": "News", 
+                            "href" : "news.html", 
+                            "classes": "btn-more btn-blur btn-m btn-arrow-a" 
+                        })
+
+                        @@include('./partials/elements/button-link.htm', { 
+                            "text": "FAQ", 
+                            "href" : "faq.html", 
+                            "classes": "btn-more btn-blur btn-m btn-arrow-a" 
+                        })
+                    </div>
+
+                    <div class="layout-col-r">
+                        <div class="screen-content">
+                            <div class="screen-content--ttl-s">
+                                <h1 class="ttl-1 ttl">How can we  help you?</h1>
+                                <div class="search-block blur">
+                                    <form action="#">
+                                        <input placeholder="Search a keyword" type="text">
+                                        <button class="btn-search" type="submit"></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="screen-content--help text-main-2">Select the industry or use the search bar to explore the materials bellow.</div>
+                            <div class="screen-content--usage text-main-2">
+                                <a class="text-main-2 link-l" href="#">Getting started</a>
+                                <a class="text-main-2 link-l" href="#">Usage and Disposal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="content content-media">
+
+                <!-- Top Panel -->
+                <div class="indicators-tabs-wrap socket">
+                    <div class="hint with-arrow-left hint-from-top">Scroll</div>
+
+                    <div class="indicators indicators-min">
+                        <div class="indicator tab-item" data-tab="beer">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <span>Beer</span>
+                        </div>
+                        <div class="indicator tab-item" data-tab="cider">
+                            <div class="icon">
+                                <img src="images/ind-2.svg" alt="">
+                            </div>
+                            <span>Cider</span>
+                        </div>
+                        <div class="indicator tab-item" data-tab="wine">
+                            <div class="icon">
+                                <img src="images/ind-3.svg" alt="">
+                            </div>
+                            <span>Wine</span>
+                        </div>
+                        <div class="indicator tab-item" data-tab="coffee">
+                            <div class="icon">
+                                <img src="images/ind-4.svg" alt="">
+                            </div>
+                            <span>Coffee</span>
+                        </div>
+                        <div class="indicator tab-item" data-tab="kombucha">
+                            <div class="icon">
+                                <img src="images/ind-5.svg" alt="">
+                            </div>
+                            <span>Kombucha</span>
+                        </div>
+                        <div class="indicator tab-item" data-tab="soft">
+                            <div class="icon">
+                                <img src="images/ind-6.svg" alt="">
+                            </div>
+                            <span>Soft Drinks</span>
+                        </div>
+                        <div class="indicator tab-item" data-tab="water">
+                            <div class="icon">
+                                <img src="images/ind-7.svg" alt="">
+                            </div>
+                            <span>Water</span>
+                        </div>
+                        <div class="indicator tab-item" data-ind="food">
+                            <div class="icon">
+                                <img src="images/ind-8.svg" alt="">
+                            </div>
+                            <span>Food <br> Products</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Stream -->
+                <div class="media-stream--container media-stream--resources socket">
+
+                    <!-- Left Column -->
+                    <div class="media-stream--col-l">
+                        <div class="media-stream--categories-ttl-f">
+                            <div class="ttl-top">7 videos</div>
+                            <h2 class="ttl-2">Getting started</h2>
+                        </div>
+                       
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="media-stream--col-r">
+                        <aside class="filter-sidebar">
+                            <div class="filter-btns">
+                                <div class="btn-search"></div>
+                                <button class="btn-filter">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </button>
+                            </div>
+                            <h4 class="ttl-4">Filter</h4>
+                            <nav class="filter-nav">
+                                <ul>
+                                    <li data-hash="september" class="filter-item active">
+                                        <span>September</span>
+                                        <div class="items brackets">5</div>
+                                    </li>   
+                                    <li data-hash="october" class="filter-item">
+                                        <span>October</span>
+                                        <div class="items brackets">1</div>
+                                    </li> 
+                                    <li data-hash="november" class="filter-item">
+                                        <span>November</span>
+                                        <div class="items brackets">2</div>
+                                    </li>  
+                                </ul>   
+                            </nav>
+                            <div class="search-block">
+                                <form action="#">
+                                    <input placeholder="Search a keyword" type="text">
+                                    <button class="btn-search" type="submit"></button>
+                                </form>
+                            </div>
+                        </aside>
+                    </div>
+                    
+                </div>
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="info-row layout-row socket">
+                        <div class="layout-col-l">
+                            <h3 class="ttl-4">Becoming a customer</h3>
+                            @@include('./partials/elements/button-link.htm', { 
+                                "text": "Place an order", 
+                                "href" : "#", 
+                                "classes": "btn-g btn-arrow-a" 
+                            })
+                        </div>
+                        <div class="layout-col-r">
+                            <div class="layout-col-s-4">
+                                <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                            </div>
+                            <div class="layout-col-s-6">
+                                <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                                <div class="with-us">
+                                    <h3 class="ttl-4">Already with us</h3>
+                                    @@include('./partials/elements/button-link.htm', { 
+                                        "text": "Tools & Resources", 
+                                        "href" : "#", 
+                                        "classes": "" 
+                                    })
+                                </div>
+                                <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
+                            </div>
+                        </div>
+                    </div>
+                    @@include('./partials/footer-main.htm', { "classes": "footer-bg" })
+                </footer>
+            </div>
+
+            
+    
+        </main>
+    </body>
+
+    <script>
+        SystemJS.import('./js/app.js');
+        SystemJS.import('./js/resources.js');
+    </script>
+</html>
