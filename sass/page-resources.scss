@@ -22,19 +22,154 @@
 .media-stream--resources {
 
     .media-stream--col-l {
-        padding-top: 45px;
+        padding-top: 30px;
     }
 
     .media-stream--col-r {
         padding-top: 116px;
     }
+
+    .media-stream--head-ttl {
+        padding-bottom: 47px;
+    }
 }
 
 .media-stream--categories-ttl-f {
+    padding-top: 20px;
+    margin-bottom: 35px;
+
     .ttl-top {
         font-family: $fontMedium;
         font-size: 12px;
         line-height: 14px;
-        color: $colorMain;
+        color: $colorText;
+    }
+}
+
+// Instruction
+.media-stream--section-res {
+    margin-bottom: 75px;
+}
+
+.media-stream--more {
+    display: flex;
+    padding: 18px 0;
+    justify-content: flex-end;
+    border-bottom: 1px solid $colorBorder;
+}
+
+.media-stream--article.instruction {
+    margin-bottom: 60px;
+
+    &:last-child, &:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+
+    .media-panel {
+        height: 390px;
+
+        &::after {
+            @extend .ps;
+            @extend .eclipse-bg;
+            opacity: 0.7;
+        }
+
+        .read {
+            position: absolute;
+            padding: 0 12px;
+            z-index: 1;
+            right: 15px;
+            bottom: 15px;
+        }
+    }
+
+    .num {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        z-index: 1;
+    }
+
+    .instruction-ttl {
+        padding: 24px 0 11px;
+        border-bottom: 1px solid $colorBorder;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+
+    .media-stream--resources {
+        .media-stream--article.has-img, 
+        .media-stream--article.has-video {
+            padding-bottom: 25px;
+            border-bottom: 1px solid $colorBorder;
+        }
+    }
+
+    .media-stream--section-res {
+        margin-bottom: 50px;
+    }
+
+    .media-stream--article.instruction {
+        margin-bottom: 38px;
+
+        .media-panel {
+            height: 280px;
+        }
+
+        .instruction-ttl {
+            padding: 16px 0 4px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .screen-resources {
+        .button-btm-right {
+            display: none;
+        }
+    }
+}
+
+@include mobile {
+    .screen-resources {
+        .screen-content--usage {
+            display: none;
+        }
+
+        .screen-content {
+            height: 100%;
+            padding-bottom: 65px;
+        }
+
+        .screen-inner.screen-inner--with-pad-btns {
+            padding-bottom: 0;
+        }
+
+        .screen-content--ttl-s {
+            align-self: flex-end;
+            margin-bottom: 50px;
+
+            .search-block {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                margin: 0;
+
+                height: 60px;
+
+                input[type=text] {
+                    line-height: 60px;
+                    padding: 0 55px 0 24px;
+                }
+            }
+        }
+
+        .screen-content--help {
+            align-self: flex-end;
+            margin: 0 0 auto;
+            font-size: 14px;
+            line-height: 18px;
+        }
     }
 }

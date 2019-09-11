@@ -476,15 +476,8 @@
             }
         }
 
-        &.has-video { // With Video
+        &.has-video, &.instruction { // With Video And Instruction
             .media-panel {
-                cursor: pointer;
-
-                &::after {
-                    @extend .ps;
-                    @extend .eclipse-bg; 
-                }
-
                 .play-button-wrap {
                     position: absolute;
                     left: 15px;
@@ -503,6 +496,17 @@
                         left: 50%;
                         transform: translate(-50%);
                     }
+                }
+            }
+        }
+
+        &.has-video { // With Video
+            .media-panel {
+                cursor: pointer;
+
+                &::after {
+                    @extend .ps;
+                    @extend .eclipse-bg; 
                 }
             }
         }

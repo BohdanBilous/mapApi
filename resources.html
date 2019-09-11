@@ -11,7 +11,7 @@
         <main class="main">
 
             <!-- Top Screen -->
-            <div class="screen screen-top screen-head">
+            <div class="screen screen-top screen-resources  screen-head">
                 <div class="screen-bg" style="background-image: url(images/res-bg.jpg)"></div>
                 <div class="screen-inner screen-inner--with-pad-btns socket layout-row align-right">
                     <div class="button-btm-right">
@@ -27,6 +27,8 @@
                             "classes": "btn-more btn-blur btn-m btn-arrow-a" 
                         })
                     </div>
+
+                    <div class="hint hint-from-top with-arrow-left">Scroll</div>
 
                     <div class="layout-col-r">
                         <div class="screen-content">
@@ -52,8 +54,7 @@
             <!-- Content -->
             <div class="content content-media">
 
-                <!-- Top Panel -->
-                <div class="indicators-tabs-wrap socket">
+                <!-- <div class="indicators-tabs-wrap socket">
                     <div class="hint with-arrow-left hint-from-top">Scroll</div>
 
                     <div class="indicators indicators-min">
@@ -106,17 +107,240 @@
                             <span>Food <br> Products</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- News Stream -->
                 <div class="media-stream--container media-stream--resources socket">
 
                     <!-- Left Column -->
                     <div class="media-stream--col-l">
-                        <div class="media-stream--categories-ttl-f">
-                            <div class="ttl-top">7 videos</div>
-                            <h2 class="ttl-2">Getting started</h2>
+
+                        <!-- Content Load Here -->
+                        <div class="media-stream--content-load">
+                            <div id="getting-started" class="media-stream--section">
+                                <div class="media-stream--categories-ttl-f">
+                                    <div class="ttl-top">7 videos</div>
+                                    <h2 class="ttl-2">Getting started</h2>
+                                </div>
+                                
+                                <div class="media-stream--cols">
+                                    <article class="media-stream--article instruction">
+                                        <div class="media-panel">
+                                            <div class="num">01</div>
+                                            <img class="media-img" src="images/res-1.jpg" alt="#">
+                                            <div class="play-button-wrap">
+                                                <div class="play trans"></div>
+                                                <div class="text-b trans">1:01</div>
+                                            </div>
+                                        </div>
+                                        <h4 class="instruction-ttl ttl-4">Before you Start.</h4>
+                                    </article>
+
+                                    <article class="media-stream--article instruction">
+                                        <div class="media-panel">
+                                            <div class="num">02</div>
+                                            <img class="media-img" src="images/res-2.jpg" alt="#">
+                                            <a href="#" class="text-b trans read">Read Article</a>
+                                        </div>
+                                        <h4 class="instruction-ttl ttl-4">Set Up.</h4>
+                                    </article>
+
+                                    <article class="media-stream--article instruction">
+                                        <div class="media-panel">
+                                            <div class="num">03</div>
+                                            <img class="media-img" src="images/res-3.jpg" alt="#">
+                                            <div class="play-button-wrap">
+                                                <div class="play trans"></div>
+                                                <div class="text-b trans">3:14</div>
+                                            </div>
+                                        </div>
+                                        <h4 class="instruction-ttl ttl-4">Manual Filling.</h4>
+                                    </article>
+
+                                    <article class="media-stream--article instruction">
+                                        <div class="media-panel">
+                                            <div class="num">04</div>
+                                            <img class="media-img" src="images/res-4.jpg" alt="#">
+                                            <div class="play-button-wrap">
+                                                <div class="play trans"></div>
+                                                <div class="text-b trans">1:22</div>
+                                            </div>
+                                        </div>
+                                        <h4 class="instruction-ttl ttl-4">Before you Start.</h4>
+                                    </article>
+                                </div>
+
+                                <div class="media-stream--more">
+                                    @@include('./partials/elements/button-more.htm', { 
+                                        "text": "Show more", 
+                                        "classes": "" 
+                                    })
+                                </div>
+                            </div>
+
+                            <div id="usage" class="media-stream--section">
+                                <div class="media-stream--categories-ttl-f">
+                                    <div class="ttl-top">5 videos</div>
+                                    <h2 class="ttl-2">Usage and Disposal</h2>
+                                </div>
+                                
+                                <div class="media-stream--cols">
+                                    <article class="media-stream--article instruction">
+                                        <div class="media-panel">
+                                            <div class="num">01</div>
+                                            <img class="media-img" src="images/res-4.jpg" alt="#">
+                                            <div class="play-button-wrap">
+                                                <div class="play trans"></div>
+                                                <div class="text-b trans">1:01</div>
+                                            </div>
+                                        </div>
+                                        <h4 class="instruction-ttl ttl-4">Before you Start.</h4>
+                                    </article>
+
+                                    <article class="media-stream--article instruction">
+                                        <div class="media-panel">
+                                            <div class="num">02</div>
+                                            <img class="media-img" src="images/res-3.jpg" alt="#">
+                                            <a href="#" class="text-b trans read">Read Article</a>
+                                        </div>
+                                        <h4 class="instruction-ttl ttl-4">Set Up.</h4>
+                                    </article>
+
+                                    <article class="media-stream--article instruction">
+                                        <div class="media-panel">
+                                            <div class="num">03</div>
+                                            <img class="media-img" src="images/res-2.jpg" alt="#">
+                                            <div class="play-button-wrap">
+                                                <div class="play trans"></div>
+                                                <div class="text-b trans">3:14</div>
+                                            </div>
+                                        </div>
+                                        <h4 class="instruction-ttl ttl-4">Manual Filling.</h4>
+                                    </article>
+
+                                    <article class="media-stream--article instruction">
+                                        <div class="media-panel">
+                                            <div class="num">04</div>
+                                            <img class="media-img" src="images/res-1.jpg" alt="#">
+                                            <div class="play-button-wrap">
+                                                <div class="play trans"></div>
+                                                <div class="text-b trans">1:22</div>
+                                            </div>
+                                        </div>
+                                        <h4 class="instruction-ttl ttl-4">Before you Start.</h4>
+                                    </article>
+                                </div>
+
+                                <div class="media-stream--more">
+                                    @@include('./partials/elements/button-more.htm', { 
+                                        "text": "Show more", 
+                                        "classes": "" 
+                                    })
+                                </div>
+                            </div>
+                        </div><!-- / Content Load Here -->
+
+                        <!-- Cases -->
+                        <div class="media-stream--head-ttl">
+                            <h1 class="ttl-1">Case Studies</h1>
                         </div>
+
+                        <div class="media-stream--categories-ttl">
+                            <div class="items">1</div>
+                            <h4 class="ttl-4">Featured</h4>
+                            @@include('./partials/elements/button-all.htm', { 
+                                "text": "View all", 
+                                "items" : "15",
+                                "href" : "case-studies.html", 
+                                "classes": "" 
+                            })
+                        </div>
+
+                        <div class="case-item">
+                            <div class="media-panel">
+                                <div class="case-item-text">
+                                    <div class="case-item-pos">Product Manager</div>
+                                    <div class="case-item-name ttl-2">Janet Flores</div>
+                                </div>
+                                <img class="media-img" src="images/case-1.jpg" alt="#">
+                            </div>
+
+                            <div class="customers-item">
+                                <div class="customers-logo-wrap">
+                                    <img class="customers-logo" src="images/c-1.png">
+                                </div>
+
+                                <div class="city">
+                                    <div class="ttl-5">New York</div>
+                                    <span>(USA)</span>
+                                </div>
+
+                                <div class="customers-text">
+                                    <div class="ttl-5">Rooster Beers</div>
+                                    <p>Sales</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- News -->
+                        <div class="media-stream--head-ttl">
+                            <h1 class="ttl-1">News</h1>
+                        </div>
+
+                        <div class="media-stream--categories-ttl">
+                            <div class="items">1</div>
+                            <h4 class="ttl-4">Featured</h4>
+                            @@include('./partials/elements/button-all.htm', { 
+                                "text": "View all", 
+                                "items" : "15",
+                                "href" : "news.html", 
+                                "classes": "" 
+                            })
+                        </div>
+
+                        <div class="media-stream--cols">
+                            <article class="media-stream--article has-img">
+                                <div class="media-panel">
+                                    <img class="media-img" src="images/news-1.jpg" alt="#">
+                                    <div class="author-block">
+                                        <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                        <div class="author-name ttl-5">George Boyd</div>
+                                    </div>
+                                </div>
+                                <div class="media-content">
+                                    <div class="date">17.05</div>
+                                    <h4 class="ttl ttl-4"><a href="news-open.html">How to increase revenue increase ?</a></h4>
+                
+                                    <div class="tags-list">
+                                        <a href="page-tag.html" class="tag">Petainer News</a>
+                                    </div>
+
+                                    <a href="news-open.html" class="button-next grey"></a>
+                                </div>
+                            </article>
+
+                            <article class="media-stream--article has-img">
+                                <div class="media-panel">
+                                    <img class="media-img" src="images/news-2.jpg" alt="#">
+                                    <div class="author-block">
+                                        <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                        <div class="author-name ttl-5">George Boyd</div>
+                                    </div>
+                                </div>
+                                <div class="media-content">
+                                    <div class="date">17.05</div>
+                                    <h4 class="ttl ttl-4"><a href="news-open.html">Petainer launches new <br> Hybrid kegs.</a></h4>
+
+                                    <div class="tags-list">
+                                        <a href="page-tag.html" class="tag">Petainer News</a>
+                                    </div>
+
+                                    <a href="news-open.html" class="button-next grey"></a>
+                                </div>
+                            </article>
+                        </div>
+                           
+
                        
                     </div>
 
@@ -134,18 +358,14 @@
                             <h4 class="ttl-4">Filter</h4>
                             <nav class="filter-nav">
                                 <ul>
-                                    <li data-hash="september" class="filter-item active">
-                                        <span>September</span>
-                                        <div class="items brackets">5</div>
+                                    <li data-hash="getting-started" class="filter-item active">
+                                        <span>Getting started</span>
+                                        <div class="items brackets">7</div>
                                     </li>   
-                                    <li data-hash="october" class="filter-item">
-                                        <span>October</span>
-                                        <div class="items brackets">1</div>
-                                    </li> 
-                                    <li data-hash="november" class="filter-item">
-                                        <span>November</span>
+                                    <li data-hash="usage" class="filter-item">
+                                        <span>Usage and Disposal</span>
                                         <div class="items brackets">2</div>
-                                    </li>  
+                                    </li> 
                                 </ul>   
                             </nav>
                             <div class="search-block">

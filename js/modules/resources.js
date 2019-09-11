@@ -8,9 +8,8 @@ import { ParallaxScroll } from '../parallax-scroll';
 window.addEventListener("load", function() {
 
     // Page Nav
-    if (exists(".media-stream--container") && exists(".resources-container")) {
-        const titleWrap = document.querySelector(".media-stream--categories-ttl-sticky") || null;
-        let pageNav = new PageNav(".media-stream--container", ".resources-container");
+    if (exists(".media-stream--container") && exists(".media-stream--section")) {
+        let pageNav = new PageNav(".media-stream--container", ".media-stream--section");
     }
 
     // Scroll From Screen

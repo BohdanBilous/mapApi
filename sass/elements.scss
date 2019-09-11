@@ -189,7 +189,8 @@
         z-index: 1;
     }
 
-    .no-touchevents &:not(.btn-arrow-a):hover {
+    .no-touchevents &:not(.btn-arrow-a):hover,
+    .no-touchevents &:not(.btn-show-more):hover {
         &::before {
             transform: translateX(0);
         }
@@ -249,6 +250,29 @@
 
         span {
             color: #fff;
+        }
+    }
+
+    &.btn-show-more {
+        text-align: left;
+        padding: 0 45px 0 14px;
+
+        .points {
+            @extend .flex-sb;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            z-index: 1;
+            right: 12px;
+            width: 20px;
+
+            i {
+                align-self: center;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: #a9d8d9;
+            }
         }
     }
 
@@ -513,7 +537,14 @@
 
     &.trans {
         border: 2px solid rgba(255, 255, 255, 0.16);
+        transition: border 0.3s;
+
+        &[href]:hover {
+            border: 2px solid rgba(255, 255, 255, 1);
+        }
     }
+
+    
 }
 
 // Swipe Hint
@@ -662,6 +693,21 @@
             content: "]";
         }
     }
+}
+
+// Numbers
+.num {
+    display: inline-block;
+    height: 19px;
+    font-size: 13px;
+    line-height: 19px;
+    min-width: 50px;
+    padding: 0 12px;
+    color: $colorBg;
+    white-space: nowrap;
+    border-radius: 4px;
+    text-align: center;
+    background-color: $colorGreen;
 }
 
 // Author
