@@ -109,14 +109,14 @@
                     </div>
                 </div> -->
 
-                <!-- News Stream -->
+                <!-- Resources Stream -->
                 <div class="media-stream--container media-stream--resources socket">
 
                     <!-- Left Column -->
                     <div class="media-stream--col-l">
 
                         <!-- Content Load Here -->
-                        <div class="media-stream--content-load">
+                        <div id="content-load" class="media-stream--content-load">
                             <div id="getting-started" class="media-stream--section">
                                 <div class="media-stream--categories-ttl-f">
                                     <div class="ttl-top">7 videos</div>
@@ -173,6 +173,34 @@
                                 <div class="media-stream--more">
                                     @@include('./partials/elements/button-more.htm', { 
                                         "text": "Show more", 
+                                        "classes": "" 
+                                    })
+                                </div>
+
+                                <div class="media-stream--files-wrap">
+                                    <h4 class="ttl ttl-4">PDF Getting started </h4>
+                                    @@include('./partials/elements/file-item.htm', { 
+                                        "href": "#",
+                                        "text": "Before you Start", 
+                                        "size": "3 mb", 
+                                        "classes": "" 
+                                    })
+                                    @@include('./partials/elements/file-item.htm', { 
+                                        "href": "#",
+                                        "text": "Set Up", 
+                                        "size": "1 mb", 
+                                        "classes": "" 
+                                    })
+                                    @@include('./partials/elements/file-item.htm', { 
+                                        "href": "#",
+                                        "text": "Manual Filling", 
+                                        "size": "8 mb", 
+                                        "classes": "" 
+                                    })
+                                    @@include('./partials/elements/file-item.htm', { 
+                                        "href": "#",
+                                        "text": "Set your filling", 
+                                        "size": "11 mb", 
                                         "classes": "" 
                                     })
                                 </div>
@@ -234,6 +262,34 @@
                                 <div class="media-stream--more">
                                     @@include('./partials/elements/button-more.htm', { 
                                         "text": "Show more", 
+                                        "classes": "" 
+                                    })
+                                </div>
+
+                                <div class="media-stream--files-wrap">
+                                    <h4 class="ttl ttl-4">PDF Usage and Disposal</h4>
+                                    @@include('./partials/elements/file-item.htm', { 
+                                        "href": "#",
+                                        "text": "Before you Start", 
+                                        "size": "3 mb", 
+                                        "classes": "" 
+                                    })
+                                    @@include('./partials/elements/file-item.htm', { 
+                                        "href": "#",
+                                        "text": "Set Up", 
+                                        "size": "1 mb", 
+                                        "classes": "" 
+                                    })
+                                    @@include('./partials/elements/file-item.htm', { 
+                                        "href": "#",
+                                        "text": "Manual Filling", 
+                                        "size": "8 mb", 
+                                        "classes": "" 
+                                    })
+                                    @@include('./partials/elements/file-item.htm', { 
+                                        "href": "#",
+                                        "text": "Set your filling", 
+                                        "size": "11 mb", 
                                         "classes": "" 
                                     })
                                 </div>
@@ -339,48 +395,202 @@
                                 </div>
                             </article>
                         </div>
-                           
-
-                       
                     </div>
 
                     <!-- Right Column -->
                     <div class="media-stream--col-r">
                         <aside class="filter-sidebar">
-                            <div class="filter-btns">
-                                <div class="btn-search"></div>
-                                <button class="btn-filter">
-                                    <i></i>
-                                    <i></i>
-                                    <i></i>
-                                </button>
+                            <div class="filter-sidebar-section">
+                                <h4 class="ttl-4">Industries</h4>
+                                <div class="select-industries-wrap">
+                                    <div class="select-industries-icon icon">
+                                        <img src="images/ind-0.svg" alt="icon">
+                                    </div>
+                                    <div class="select-custom">
+                                        <select>
+                                            <option data-icon="images/ind-0.svg" value="0">All Industries</option>
+                                            <option data-icon="images/ind-1.svg" value="1">Beer</option>
+                                            <option data-icon="images/ind-2.svg" value="2">Cider</option>
+                                            <option data-icon="images/ind-3.svg" value="3">Wine</option>
+                                            <option data-icon="images/ind-4.svg" value="4">Coffee</option>
+                                            <option data-icon="images/ind-5.svg" value="5">Kombucha</option>
+                                            <option data-icon="images/ind-6.svg" value="6">Soft Drinks</option>
+                                            <option data-icon="images/ind-7.svg" value="7">Water</option>
+                                            <option data-icon="images/ind-8.svg" value="8">Food Products</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
-                            <h4 class="ttl-4">Filter</h4>
-                            <nav class="filter-nav">
-                                <ul>
-                                    <li data-hash="getting-started" class="filter-item active">
-                                        <span>Getting started</span>
-                                        <div class="items brackets">7</div>
-                                    </li>   
-                                    <li data-hash="usage" class="filter-item">
-                                        <span>Usage and Disposal</span>
-                                        <div class="items brackets">2</div>
-                                    </li> 
-                                </ul>   
-                            </nav>
-                            <div class="search-block">
-                                <form action="#">
-                                    <input placeholder="Search a keyword" type="text">
-                                    <button class="btn-search" type="submit"></button>
-                                </form>
+                            <div class="filter-sidebar-section has-tail only-desktop">
+                                <!-- <div class="filter-btns">
+                                    <div class="btn-search"></div>
+                                    <button class="btn-filter">
+                                        <i></i>
+                                        <i></i>
+                                        <i></i>
+                                    </button>
+                                </div> -->
+                                <h4 class="ttl-4">Filter</h4>
+
+                                <nav class="filter-nav">
+                                    <ul>
+                                        <li data-hash="getting-started" class="filter-item active">
+                                            <span>Getting started</span>
+                                            <div class="items brackets">7</div>
+                                        </li>   
+                                        <li data-hash="usage" class="filter-item">
+                                            <span>Usage and Disposal</span>
+                                            <div class="items brackets">2</div>
+                                        </li> 
+                                    </ul>   
+                                </nav>
+                            </div>
+
+                            <div class="filter-sidebar-section has-tail only-desktop">
+                                <h4 class="ttl-4">PDF File</h4>
+                                
+                                @@include('./partials/_file-list-0.htm', { "id": "file-list-0", "classes" : "show"})
+                                @@include('./partials/_file-list-2.htm', { "id": "file-list-1", "classes" : ""})
+                                @@include('./partials/_file-list-2.htm', { "id": "file-list-2", "classes" : ""})
+                                @@include('./partials/_file-list-3.htm', { "id": "file-list-3", "classes" : ""})
+                                @@include('./partials/_file-list-4.htm', { "id": "file-list-4", "classes" : ""})
+                                @@include('./partials/_file-list-5.htm', { "id": "file-list-5", "classes" : ""})
+                                @@include('./partials/_file-list-6.htm', { "id": "file-list-6", "classes" : ""})
+                                @@include('./partials/_file-list-7.htm', { "id": "file-list-7", "classes" : ""})
+                                @@include('./partials/_file-list-8.htm', { "id": "file-list-8", "classes" : ""})
                             </div>
                         </aside>
                     </div>
                     
                 </div>
+                
+                <!-- FAQ -->
+                <div class="faq-main--container socket">
+                    <div class="faq-main--col-l">
+                        <div class="ttl-top text-g">FAQ</div>
+                        <div class="ttl ttl-3">Frequently Asked <br> Questions</div>
+                    </div>
+
+                    <div class="faq-main--col-r">
+                        <div class="faq-main--section">
+                            <div class="faq-main--ttl-s">
+                                <div class="icon">
+                                    <img src="images/ind-2.svg" alt="">
+                                </div>
+                                <div class="ttl ttl-4">Why Petainer <br> Keg?</div>
+                            </div>
+
+                            <div class="faq-main--body-s">
+                                <div class="cols">
+                                    <div class="col">
+                                        <p class="text-top">PetainerKeg opens new markets, reduces costs, reduces initial investment, guarantees taste and is environmentally friendly.</p>
+                                    </div>
+                                </div>
+
+                                <div class="cols">
+                                    <div class="col">
+                                        <div class="ans-item">
+                                            <div class="count">01</div>
+                                            <div class="ttl ttl-5">How to increase revenue?</div>
+                                            <p>Yes, the petainerKeg can be tapped to standard and Micromatic-compatible coupling systems (A—, S—, D— and G—Type), no conversion and additional investment is necessary.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="ans-item">
+                                            <div class="count">02</div>
+                                            <div class="ttl ttl-5">How to ?</div>
+                                            <p>The petainerKeg offers the possibility to increase exports and explore new markets.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-main--section">
+                            <div class="faq-main--ttl-s">
+                                <div class="icon">
+                                    <img src="images/ind-3.svg" alt="">
+                                </div>
+                                <div class="ttl ttl-4">Safety</div>
+                            </div>
+
+                            <div class="faq-main--body-s">
+                                <div class="cols">
+                                    <div class="col">
+                                        <p class="text-top">Opens new markets, reduces costs, reduces initial investment, guarantees taste and is environmentally friendly. All you do is fill it and no need to worry about return logistics as you do with steel kegs.</p>
+                                    </div>
+                                </div>
+
+                                <div class="cols">
+                                    <div class="col">
+                                        <div class="ans-item">
+                                            <div class="count">01</div>
+                                            <div class="ttl ttl-5">Are Petainer kegs safe? </div>
+                                            <p>Yes, when using Petainer kegs according to our instructions and specifications, Petainer kegs are easy to handle and safe for products. Our kegs are available in two versions, with and without “pressure relief function”.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="ans-item">
+                                            <div class="count">02</div>
+                                            <div class="ttl ttl-5">How to ?</div>
+                                            <p>For kegs with pressure relief function,  the system is automatically depressurised at decoupling after dispensing. The Classic kegs are protected by outer packaging, either a cardboard or a polypropylene box. The Linestar and Hybrid kegs are additionally more stable by themselves.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-main--section">
+                            <div class="faq-main--ttl-s">
+                                <div class="icon">
+                                    <img src="images/ind-4.svg" alt="">
+                                </div>
+                                <div class="ttl ttl-4">Technical pre & <br> after sales </div>
+                            </div>
+
+                            <div class="faq-main--body-s">
+                                <div class="cols">
+                                    <div class="col">
+                                        <p class="text-top">All you do is fill it and no need to worry about return logistics as you do with steel kegs. PetainerKeg opens new markets, reduces costs, reduces initial investment, guarantees taste and is environmentally friendly.</p>
+                                    </div>
+                                </div>
+
+                                <div class="cols">
+                                    <div class="col">
+                                        <div class="ans-item">
+                                            <div class="count">01</div>
+                                            <div class="ttl ttl-5">Can I test the keg prior to ordering? </div>
+                                            <p>We provide free samples for testing purposes to qualifying brewers and drink manufacturers. Please contact our sales team for further information or find out more about our kegs compatibility. </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="ans-item">
+                                            <div class="count">02</div>
+                                            <div class="ttl ttl-5">Where and how can I order kegs?</div>
+                                            <p>Please contact our sales team for further information. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-main--section align-right">
+                            <div class="faq-main--body-s">
+                                @@include('./partials/elements/button-link.htm', { 
+                                    "text": "View all FAQ", 
+                                    "href" : "faq.html", 
+                                    "classes": "btn-g btn-arrow-a" 
+                                })
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Footer -->
-                <footer class="footer">
+                <footer class="footer footer-bg">
                     <div class="info-row layout-row socket">
                         <div class="layout-col-l">
                             <h3 class="ttl-4">Becoming a customer</h3>
@@ -408,7 +618,7 @@
                             </div>
                         </div>
                     </div>
-                    @@include('./partials/footer-main.htm', { "classes": "footer-bg" })
+                    @@include('./partials/footer-main.htm', { "classes": "" })
                 </footer>
             </div>
 

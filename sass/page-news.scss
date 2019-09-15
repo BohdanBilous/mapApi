@@ -560,7 +560,7 @@
 
         .items {
             top: 6px;
-            right: 0;
+            right: -2px;
             position: absolute;
         }
     }
@@ -573,21 +573,10 @@
     }
 
     &--categories-scroll {
+        @extend .scroll-custom;
         height: 255px;
         padding-right: 18px;
-        overflow-y: scroll;
-
-        &::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        &::-webkit-scrollbar-track {
-            
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background-color: $colorGreen;
-        }
+        overflow-y: auto;
     }
 }
 
@@ -710,11 +699,27 @@
 .filter-sidebar {
     position: sticky;
     top: 45px;
-    padding-left: 15px;
-    border-left: 1px solid $colorBorder;
 
     .ttl-4 {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
+    }
+}
+
+.filter-sidebar-section {
+    padding-left: 15px;
+    border-left: 1px solid $colorBorder;
+    margin-bottom: 50px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.has-tail {
+        padding-bottom: 45px;
+
+        .filter-nav {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -749,13 +754,19 @@
 }
 
 @include desktop-only {
-    @media screen and (max-height: 550px) {
+    @media screen and (max-height: 650px) {
         .filter-sidebar .ttl-4 {
             margin-bottom: 30px;
         }
 
         .filter-nav {
             margin-bottom: 30px;
+        }
+
+        .filter-sidebar-section {
+            &.has-tail {
+                padding-bottom: 0;
+            }
         }
     }
 }
@@ -987,11 +998,16 @@
     .filter-sidebar {
         position: absolute;
         padding-top: 38px;
-        padding-left: 0;
         top: 0;
         left: 0;
         right: 0;
-        border: none;
+        
+
+        .filter-sidebar-section {
+            padding-left: 0;
+            border: none;
+            margin: 0;
+        }
 
         .ttl-4, .filter-nav, .search-block {
             display: none;

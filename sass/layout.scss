@@ -60,10 +60,17 @@ body {
     display: none;
 }
 
+.only-desktop,
 .only-tablet-mobile,
 .only-mobile,
 .only-tablet {
     display: none;
+}
+
+@include desktop-only {
+    .only-desktop {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 1150px) {

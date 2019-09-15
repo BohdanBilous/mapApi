@@ -1045,3 +1045,94 @@
         @include dataRangeTbl;
     }
 }
+
+// Icon
+.icon {
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Answear Item
+.ans-item {
+
+    .count {
+        font-family: $fontMedium;
+        margin-bottom: 13px;
+    }
+
+    .ttl {
+        margin-bottom: 26px;
+    }
+
+    p {
+        color: $colorText2;
+    }
+}
+
+.count {
+    color: $colorGreen;
+}
+
+.cols {
+    @extend .flex-sb;
+}
+
+// File Item
+.file-item {
+    display: block;
+    position: relative;
+    padding-right: 65px;
+    font-family: $fontMedium;
+    color: $colorTextG;
+    margin-bottom: 13px;  
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &--name {
+        @extend .trans-opacity;
+        padding-top: 3px;
+    }
+
+    &--size {
+        @extend .trans-opacity;
+        position: absolute;
+        bottom: 1px;
+        right: 21px;
+        font-size: 12px;
+
+        &:before {
+            content: "[";
+        }
+
+        &:after {
+            content: "]";
+        }
+    }
+
+    &--btn {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        width: 14px;
+        height: 13px;
+
+        &::after {
+            @extend .ps;
+            width: 14px;
+            height: 13px;
+            background: url(../images/ico-file.svg) no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+
+    &:hover {
+        .file-item--name, .file-item--size {
+            color: $colorGreen;
+        }
+    }
+}

@@ -472,3 +472,22 @@ $dotsLiWidth: 250px;
     height: 100%;
     background-image: linear-gradient(to top, #000000 0%, rgba(0, 0, 0, 0) 100%);
 }
+
+.scroll-custom {
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        width: 3px;
+        background: repeating-linear-gradient(to right,
+        #e5e5e5,
+        #e5e5e5 1px,
+        $colorBorder 1px,
+        $colorBorder 2px)
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $colorGreen;
+    }
+}
