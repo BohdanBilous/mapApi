@@ -98,10 +98,11 @@
 }
 
 .link-l {
+    display: inline-block;
     position: relative;
     color: $colorTextL;
-    border-bottom: 1px solid $colorTextL;
-    // text-decoration: underline;
+    text-decoration: underline;
+    // border-bottom: 1px solid $colorTextL;
 
     &::after {
         @extend .ps;
@@ -114,7 +115,7 @@
 
     &:hover {
         text-decoration: none;
-        border: none;
+        // border: 1px solid rgba(255,255,255, 0);
         color: $colorGreen;
     }
 }
@@ -599,6 +600,8 @@
         top: 55px;
         text-align: center;
         opacity: 0;
+        margin-left: -15px;
+        margin-right: -15px;
         color: $colorTextL;
         transition: opacity 0.3s linear 0s;
     }

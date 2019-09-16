@@ -27,7 +27,7 @@ export class CursorFader {
             } else {
                 this.cursorButton.classList.remove("button-next");
                 this.cursorButton.classList.add("button-prev");
-                this.cursorButtonText.innerHTML = "Prev";
+                this.cursorButtonText.innerHTML = "Previous";
             }
         });
     }
