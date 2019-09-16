@@ -154,6 +154,7 @@
 
     .terms {
         color: $colorTextG;
+        border: none;
     }
 
     .social {
@@ -168,6 +169,13 @@
 }
 
 @include mobile {
+
+    .footer-main-bottom {
+        .terms {
+            align-self: flex-start;
+            border-bottom: 1px solid $colorTextG;
+        }
+    }
 
     .email-form {
         width: 100%;

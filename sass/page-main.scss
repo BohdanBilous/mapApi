@@ -1040,6 +1040,11 @@ $animateDur: 0.30s;
         position: absolute;
         width: 630px;
         bottom: 0;
+
+        img {
+            transition: transform 0.15s;
+            width: 100%;
+        }
     }
 
     .slides {
