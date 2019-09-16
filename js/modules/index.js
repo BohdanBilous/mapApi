@@ -37,7 +37,7 @@ window.addEventListener("load", function() {
         let moveValue = left - ( ( ( mouseX - ( parseInt( obj.offsetWidth ) / 1 + left ) ) / containerWidth ) * speed );
         console.log();
         obj.style = "transform: translateX(" + moveValue + "px)";
-    }
+    }    
 
     // Feedback Fader
     let feedbackFader = new SuperSlider(".feedback-fader", "fader");

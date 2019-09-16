@@ -354,6 +354,121 @@
     min-width: 125px;
 }
 
+.btn-add-wrap {
+    position: relative;
+    height: 40px;
+
+    .no-touchevents &:hover {
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 20px;
+            width: 100%;
+            top: -20px;
+            left: 0px;
+        }
+
+        .btn-add {
+
+            &::before {
+                transform: translateX(0);
+            }
+
+            span {
+                color: $colorBg;
+            }
+
+            .plus {
+                transition-delay: 0.1s;
+                background-color: #e5e5e5;
+    
+                &::before, &::after {
+                    background-color: $colorText;
+                    transition-delay: 0.1s;
+                }
+            }
+        }
+    }
+
+    .addeventatc {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border: none;
+        background: none;
+        font-family: $fontMain;
+        box-shadow: none !important;
+        outline: none !important;
+
+        &:hover {
+            background: none;
+        }
+
+        &:active {
+            border: none;
+        }
+
+        .addeventatc_icon {
+            display: none;
+        }
+    }
+
+    .addeventatc_dropdown {
+        top: auto !important;
+        bottom: 60px;
+        padding: 10px 0;
+        width: 100%;
+        left: 0 !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        border-radius: 5px;
+
+        @include mobile {
+            bottom: 75px;
+        }
+
+        > span {
+            color: $colorTextG;
+            filter: grayscale(100%);
+            padding-left: 47px;
+            font-size: 12px;
+            transition: filter 0.2s, color 0.2s;
+            
+            &.ateappleical {
+                background-size: 16px auto;
+            }
+
+            &.ategoogle {
+                background-size: 16px auto;
+            }
+
+            &.ateoutlook {
+                background-size: 17px auto;
+            }
+
+            &.ateoutlookcom {
+                background-size: 16px auto;
+            }
+
+            &.ateyahoo {
+                background-size: 14px auto;
+            }
+
+            &:hover {
+                filter: grayscale(0);
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+
 @include tablet {
     .btn {
         height: 50px;

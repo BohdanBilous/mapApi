@@ -1742,6 +1742,10 @@ $animateDur: 0.30s;
 
 .events-table-cell-m {
     @extend .flex-sb;
+
+    .btn-add {
+        min-width: 165px;
+    }
 }
 
 .events-table-bottom {
@@ -1825,9 +1829,17 @@ $animateDur: 0.30s;
             width: 100% !important;
         }
 
+        .events-table-cell-m {
+            .btn-add-wrap, .btn-add {
+                height: 62px;
+                width: 100%;
+            }
+        }
+
         .dates {
             margin-bottom: 20px;
         }
+        
         
     }
 

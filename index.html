@@ -543,6 +543,7 @@
                                         <div class="ttl-4"><a href="event-open.html">CiderCon</a></div>
                                     </div>
                                     
+                                    
                                     @@include('./partials/elements/button-add.htm', { 
                                         "text": "Add to Calendar", 
                                         "classes": "" 
@@ -613,6 +614,17 @@
         </main>
     </body>
 
+    <script src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+    <script>
+        window.addeventasync = function(){
+            addeventatc.settings({
+                outlook    : { show: true, text:"Outlook Calendar" },
+                appleical  : { show: true, text:"Apple Calendar"   },
+                google     : { show: true, text:"Google Calendar"  },
+                yahoo      : { show: true, text:"Yahoo Calendar"   }
+            });
+        };
+    </script>
     <script>
         SystemJS.import('./js/app.js');
         SystemJS.import('./js/index.js');
