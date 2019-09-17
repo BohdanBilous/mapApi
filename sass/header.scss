@@ -13,6 +13,8 @@
     text-align: left;
     // z-index: 998;
 
+    border: 1px solid #111;
+
     &::after {
         @extend .ps;
         @extend .zIndex;
@@ -28,6 +30,8 @@
         @extend .ctrVert;
         width: 37%;
         z-index: 999;
+
+        align-self: center;
     }
 
     .link-main, .logo, .search-switcher {

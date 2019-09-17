@@ -1370,6 +1370,16 @@ $animateDur: 0.30s;
     }
 }
 
+@include ie10 {
+    .video-section {
+        .ttl-section {
+            position: absolute;
+            left: 0;
+            bottom: 40px;
+        }
+    }
+}
+
 .article-section {
     height: 425px;
 
