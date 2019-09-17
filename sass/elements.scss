@@ -759,7 +759,7 @@
 // Place Point
 .location {
     display: flex;
-    align-self: self-start;
+    align-self: flex-start;
     position: relative;    
     min-width: 120px;
     height: 30px;
