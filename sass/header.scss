@@ -13,9 +13,6 @@
     text-align: left;
     // z-index: 998;
 
-    // border: 1px solid #111;
-    // z-index: 999;
-
     &::after {
         @extend .ps;
         @extend .zIndex;
@@ -67,6 +64,21 @@
         @extend .zIndex;
         position: relative;
         margin-right: 25px;
+    }
+}
+
+@include ie10 {
+    .header {
+    
+        .drop-down-element, .link-main {
+            top: 20px;
+            transform: none;
+        }
+
+        .logo {
+            top: 17px;
+            transform: none;
+        }
     }
 }
 
