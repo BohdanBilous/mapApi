@@ -250,10 +250,10 @@ $widthMidCol: 36%;
         height: 100%;
         visibility: hidden;
         opacity: 0;
-        animation: fadeOut-l 0.4s forwards;
+        animation: fadeOut-l 0.4s forwards 0s;
 
         &.active {
-            animation: fadeIn-l 0.4s forwards;
+            animation: fadeIn-l 0.4s forwards 0.3s;
         }
     }
 }

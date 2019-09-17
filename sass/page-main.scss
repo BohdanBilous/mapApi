@@ -720,7 +720,6 @@ $animateDur: 0.30s;
 }
 
 // Mission
-
 .fader {
     padding-top: 105px;
     padding-bottom: 120px;
@@ -792,11 +791,13 @@ $animateDur: 0.30s;
     }
 
     .slide {
-        transition: transform 0.3s $easing;
+        transition: transform 0.2s $easing 0s;
         transform: translateX(30px);
 
         &.active {
             transform: translateX(0);
+            transition-duration: 0.4s;
+            transition-delay: 0.3s;
         }
         
         .icon {
@@ -1058,6 +1059,8 @@ $animateDur: 0.30s;
         }
 
         &.active {
+            animation-delay: 0s;
+            
             .col, .layout-col-l {
                 transform: translateX(0);
             }
