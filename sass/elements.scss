@@ -242,7 +242,9 @@
 
         &::after {
             background: #E5E5E5;
-            filter: blur(30px);
+            filter: blur(4px);
+            -ms-filter: blur(30px);
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='30');
         }
 
         .arrow {
@@ -1075,6 +1077,11 @@
     color: $colorBg;
     border-radius: 4px;
     font-size: 13px;
+
+    @include ie10 {
+        line-height: 1;
+        padding: 5px 10px;
+    }
 }
 
 // Date Range
