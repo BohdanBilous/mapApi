@@ -19,6 +19,7 @@ const commonJs = require('rollup-plugin-commonjs');
 const resolveNodeModules = require('rollup-plugin-node-resolve');
 const uglify = require('rollup-plugin-uglify-es');
 const buble = require('rollup-plugin-buble');
+const arrowFunc = require('@babel/plugin-transform-arrow-functions');
 
 gulp.task('sass', function () {
     return gulp.src([
@@ -37,6 +38,7 @@ gulp.task('sass', function () {
         .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./css'));
+        
 });
 
 function errorHandler(error) {
@@ -85,6 +87,7 @@ function js(){
     plugins: [
         resolveNodeModules(),
         commonJs()
+        // arrowFunc()
     ]
   }).then(bundle => {
     return bundle.write({

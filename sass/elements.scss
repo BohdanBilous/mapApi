@@ -242,9 +242,7 @@
 
         &::after {
             background: #E5E5E5;
-            filter: blur(4px);
-            -ms-filter: blur(30px);
-            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='30');
+            filter: blur(40px);
         }
 
         .arrow {
@@ -1013,6 +1011,21 @@
 
         .btn-search::after {
             background: url(../images/ico-search-w.svg) no-repeat 0 0;
+        }
+    }
+
+    @include ie10 {
+        input[type="text"] {
+            position: relative;
+            top: 14px;
+            // border: 1px solid #111;
+            z-index: 100;
+            line-height: 1;
+        }
+
+        .btn-search {
+            transform: none;
+            top: 12px;
         }
     }
 }

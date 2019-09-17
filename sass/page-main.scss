@@ -1251,6 +1251,11 @@ $animateDur: 0.30s;
 @include tablet {
     .about-section {
         padding: 80px 0 70px;
+
+        .numbers-row .numbers-col:nth-child(3) {
+            position: relative;
+            right: -50%;
+        }
     }
 
     .numbers-row {
@@ -1282,6 +1287,10 @@ $animateDur: 0.30s;
 
         .about-head {
             margin-bottom: 84px;
+        }
+
+        .numbers-row .numbers-col:nth-child(3) {
+            right: auto;
         }
     }
 
@@ -1886,6 +1895,7 @@ $animateDur: 0.30s;
 
 .section-one {
     position: absolute;
+    top: 0;
     left: 0; 
     right: 0;  
     
