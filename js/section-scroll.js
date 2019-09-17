@@ -33,6 +33,7 @@ export class SectionScroll {
 
     setSectionPosition() {
         this.sectionTwo.style = `top: ${this.sectionOneHeight}px`;
+        this.sectionTwo.querySelector(".ttl-2").innerHTML = this.sectionOneHeight;
     }
 }
 
