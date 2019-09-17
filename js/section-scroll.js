@@ -18,7 +18,7 @@ export class SectionScroll {
         window.addEventListener("scroll", (e) => {
             this.scrollTop = window.pageYOffset || document.documentElement.scrollTop;
            
-            if (this.scrollTop >= this.sectionOneHeight - window.innerHeight) {
+            if (this.scrollTop >= this.sectionOneHeight - window.innerHeight + 50) {
                 this.eclipseValue = Math.abs(1 - (this.scrollTop / ( this.sectionOneHeight - window.innerHeight)));
                
                 this.sectionOne.classList.add("fixed");
