@@ -2,7 +2,10 @@
   "name": "gulp-boilerplate",
   "version": "0.0.1",
   "devDependencies": {
+    "@babel/core": "^7.6.0",
     "@babel/plugin-transform-arrow-functions": "^7.2.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
     "beeper": "^1.1.1",
     "connect": "^3.6.6",
     "del": "^3.0.0",
@@ -19,13 +22,15 @@
     "gulp-sourcemaps": "^2.6.4",
     "imagemin-mozjpeg": "^7.0.0",
     "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-buble": "^0.19.4",
     "rollup-plugin-commonjs": "^9.1.8",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-uglify": "^6.0.0",
     "rollup-plugin-uglify-es": "0.0.1",
-    "three": "^0.97.0"
+    "three": "^0.97.0",
+    "webpack": "^4.40.2"
   },
   "repository": {
     "type": "git",

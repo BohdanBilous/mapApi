@@ -824,6 +824,7 @@
     white-space: nowrap;
     border-radius: 4px;
     text-align: center;
+    letter-spacing: 1px;
     background-color: $colorGreen;
 }
 
@@ -1253,7 +1254,7 @@
 
     &--btn {
         position: absolute;
-        bottom: 10px;
+        bottom: 2px;
         right: 0;
         width: 14px;
         height: 13px;

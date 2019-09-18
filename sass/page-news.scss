@@ -64,7 +64,7 @@
         }
 
         @include mobile {
-            padding-bottom: 105px;
+
         }
     }
 }
@@ -103,7 +103,7 @@
     &--slog, &--help {
         position: absolute;
         width: 155px;
-        max-height: 115px;
+        max-height: 100px;
         overflow: hidden;
         top: 0;
         right: 0;

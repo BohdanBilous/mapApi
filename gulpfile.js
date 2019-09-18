@@ -19,18 +19,12 @@ const commonJs = require('rollup-plugin-commonjs');
 const resolveNodeModules = require('rollup-plugin-node-resolve');
 const uglify = require('rollup-plugin-uglify-es');
 const buble = require('rollup-plugin-buble');
-const arrowFunc = require('@babel/plugin-transform-arrow-functions');
+
+const babel = require('rollup-plugin-babel');
 
 gulp.task('sass', function () {
     return gulp.src([
-        'sass/main.scss'
-        // 'sass/page-main.scss',
-        // 'sass/page-company.scss',
-        // 'sass/page-contacts.scss',
-        // 'sass/page-people.scss',
-        // 'sass/page-products.scss',
-        // 'sass/page-publications.scss',
-        // 'sass/page-roadmap.scss'
+            'sass/main.scss'
         ])
         .pipe(plumber(errorHandler))
         .pipe(sourcemaps.init())
@@ -86,8 +80,10 @@ function js(){
     // },
     plugins: [
         resolveNodeModules(),
-        commonJs()
-        // arrowFunc()
+        commonJs(),
+        babel({
+            plugins: ['@babel/plugin-transform-arrow-functions']
+          })
     ]
   }).then(bundle => {
     return bundle.write({

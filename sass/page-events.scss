@@ -148,9 +148,13 @@ div.border-rad-top {
         margin: 0;
         // background-position: 5% 0;
 
-        .screen-inner .layout-col-r {
-            width: 100%;
-            padding-bottom: 0;
+        .screen-inner {
+            min-height: auto;
+
+            .layout-col-r {
+                width: 100%;
+                padding-bottom: 0;
+            }
         }
 
         .screen-content--ttl-s {
