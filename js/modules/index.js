@@ -6,8 +6,7 @@ import { SolutionsInd } from '../solutions-ind';
 import { SuperSlider } from '../super-slider';
 import { CursorFader } from '../fader-cursor';
 import { SectionScroll } from '../section-scroll';
-
-
+import { ImageCursor } from '../image-cursor';
 
 window.addEventListener("load", function() {
 
@@ -26,7 +25,7 @@ window.addEventListener("load", function() {
     let x;
 
     imgList.forEach( (img) => {
-        parallaxBox.addEventListener("mousemove", (event) => {
+        parallaxBox.addEventListener("mousemove", event => {
             event = event || window.event;
             x = event.clientX - parallaxBox.offsetLeft;
 
@@ -37,7 +36,7 @@ window.addEventListener("load", function() {
     function mouseParallax(container, obj, left, mouseX, speed) {
         let containerWidth = parseInt(container.clientWidth);
         let moveValue = left - ( ( ( mouseX - ( parseInt( obj.offsetWidth ) / 1 + left ) ) / containerWidth ) * speed );
-        console.log();
+
         obj.style = "transform: translateX(" + moveValue + "px)";
     }    
 
@@ -50,6 +49,23 @@ window.addEventListener("load", function() {
         document.querySelector(".graph-scroll").scrollLeft = (window.innerWidth / 4);
     }
 
+    // Events Cursor Image
+    if (desktop) {
+        const eventsTitles = document.querySelectorAll(".events-table-row .events-ttl-section");
+
+        eventsTitles.forEach( eventsTitle => {
+            let eventsWrapOffsetTop  = document.querySelector(".events-wrap").offsetTop;
+            let eventsWrapOffsetLeft = document.querySelector(".events-wrap .layout-col-r").offsetLeft;
+
+            new ImageCursor(
+                eventsTitle, 
+                ".events-img", 
+                eventsWrapOffsetLeft,
+                (eventsWrapOffsetTop + sectionScroll.sectionOneHeight)
+            );
+        });
+    }
+    
     // Scroll From Screen
     if (exists(".hint-from-top")) scrollFromScreen(".screen-top");
 });

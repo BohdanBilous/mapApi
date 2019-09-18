@@ -482,6 +482,10 @@
                                     <div class="events-ttl-section">
                                         <div class="ttl-top">Chicago (US)</div>
                                         <div class="ttl-4"><a href="event-open.html">CiderCon</a></div>
+
+                                        <div class="events-img">
+                                            <img src="" data-src="images/events-img.jpg" alt="">
+                                        </div>
                                     </div>
                                     
                                     @@include('./partials/elements/button-add.htm', { 
@@ -499,6 +503,10 @@
                                     <div class="events-ttl-section">
                                         <div class="ttl-top">Sacramento - CA (US)</div>
                                         <div class="ttl-4"><a href="event-open.html">UWGS—Unified Wine & Grapes Symposium</a></div>
+
+                                        <div class="events-img">
+                                            <img src="" data-src="images/events-img.jpg" alt="">
+                                        </div>
                                     </div>
                                     
                                     @@include('./partials/elements/button-add.htm', { 
@@ -516,6 +524,10 @@
                                     <div class="events-ttl-section">
                                         <div class="ttl-top">Portland (US)</div>
                                         <div class="ttl-4"><a href="event-open.html">Oregon Wine Symposium</a></div>
+
+                                        <div class="events-img">
+                                            <img src="" data-src="images/events-img.jpg" alt="">
+                                        </div>
                                     </div>
                                     
                                     @@include('./partials/elements/button-add.htm', { 
@@ -616,7 +628,17 @@
     
         </main>
     </body>
-
+    <script src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+    <script>
+        window.addeventasync = function(){
+            addeventatc.settings({
+                outlook    : { show: true, text:"Outlook Calendar" },
+                appleical  : { show: true, text:"Apple Calendar"   },
+                google     : { show: true, text:"Google Calendar"  },
+                yahoo      : { show: true, text:"Yahoo Calendar"   }
+            });
+        };
+    </script>
     <script>
         SystemJS.import('./js/app.js');
         SystemJS.import('./js/news.js');

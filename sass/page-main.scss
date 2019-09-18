@@ -976,7 +976,6 @@ $animateDur: 0.30s;
     border-radius: 25px;
     overflow: hidden;
 
-
     &::before, &::after {
         @extend .ps;
         width: 100%;
@@ -1112,7 +1111,8 @@ $animateDur: 0.30s;
             opacity: 1;
             width: 103px;
             top: 30px;
-            left: calc(#{$left-col-width} + ((0.17 + 0.243) * (100% - #{$left-col-width})));
+            // left: calc(#{$left-col-width} + ((0.17 + 0.243) * (100% - #{$left-col-width})));
+            left: calc(#{$left-col-width} + ((.17 + .22) * (100% - #{$left-col-width})));
 
             .prev, .next {
                 opacity: 1;
@@ -1751,19 +1751,40 @@ $animateDur: 0.30s;
     }
 }
 
+.events-img {
+    position: absolute;
+    z-index: 100;
+    animation: fadeOut-l 0.2s forwards;
+    width: 230px;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: clip-path 0.2s $easing;
+
+    &.show {
+        animation: fadeIn-l 0.2s forwards;
+        transition-duration: 0.3s;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
 .events-table-row {
+    position: relative;
     padding: 108px 0 103px;
     border-bottom: 1px solid $colorBorder;
 }
 
 .events-ttl-section {
+    width: 320px;
+
     .ttl-top {
         color: $colorGreen;
         margin-bottom: 4px;
     }
 
     .ttl-4 {
-        max-width: 320px;
 
         a:hover {
             color: $colorGreen;
@@ -1840,9 +1861,7 @@ $animateDur: 0.30s;
 
 @media screen and (max-width: 800px) {
     .events-ttl-section {
-        .ttl-4 {
-            max-width: 250px;
-        }
+        width: 250px;
     }
 
     .events-wrap {
@@ -1881,11 +1900,7 @@ $animateDur: 0.30s;
     }
 
     .events-ttl-section {
-        margin-bottom: 28px;
-
-        .ttl-4 {
-            width: 290px;
-        }
+        width: 290px;
 
         .ttl-top {
             margin-bottom: 7px;

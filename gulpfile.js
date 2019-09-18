@@ -80,10 +80,10 @@ function js(){
     // },
     plugins: [
         resolveNodeModules(),
-        commonJs(),
-        babel({
-            plugins: ['@babel/plugin-transform-arrow-functions']
-          })
+        commonJs()
+        // babel({
+        //     plugins: ['@babel/plugin-transform-arrow-functions']
+        //   })
     ]
   }).then(bundle => {
     return bundle.write({
