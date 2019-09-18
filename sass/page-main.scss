@@ -1844,6 +1844,12 @@ $animateDur: 0.30s;
             max-width: 250px;
         }
     }
+
+    .events-wrap {
+        > .layout-col-l {
+            padding-top: 0;
+        }
+    }
 }
 
 @include mobile {
