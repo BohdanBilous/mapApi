@@ -912,6 +912,7 @@ $animateDur: 0.30s;
             width: calc(100% + 25px);
             padding-bottom: 8px;
             overflow-x: auto;
+            white-space: nowrap;
             border-bottom: 1px solid $colorBorder;
 
             &::after {
