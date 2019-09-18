@@ -170,6 +170,11 @@
     overflow: hidden;
     align-self: flex-start;
 
+    .blur-bg {
+        display: none;
+    }
+
+
     &.btn-mini {
         min-width: 150px;
     }
@@ -239,10 +244,28 @@
     }
 
     &.btn-blur {
-
+        background: inherit;
+        
         &::after {
-            background: #E5E5E5;
-            filter: blur(50px);
+            // background: #E5E5E5;
+            // filter: blur(40px);
+            // background: inherit;
+            // box-shadow: inset 0 0 0 3000px rgba(255,255,255,0.3);
+            // top: -20px;
+            // left: -20px;
+            // bottom: -20px;
+            // right: -20px;
+            // width: auto;
+            // height: auto;
+            
+            background-image: inherit;
+            filter: url(#blur-filter);
+            filter: blur(60px);
+            overflow: hidden;
+        }
+
+        .blur-bg {
+            
         }
 
         .arrow {
