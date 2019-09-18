@@ -742,7 +742,6 @@ $animateDur: 0.30s;
         display: inline-block;
         position: relative;
         margin-bottom: 98px;
-        white-space: nowrap;
 
         @include macbook {
             margin-bottom: 70px;
@@ -759,7 +758,7 @@ $animateDur: 0.30s;
         }
 
         li {
-            width: $dotsLiWidth;
+            min-width: $dotsLiWidth;
             display: inline-block;
             vertical-align: top;
             cursor: pointer;
@@ -872,12 +871,19 @@ $animateDur: 0.30s;
             height: 400px;
         }
 
-        .slider-dots li:not(:last-child) {
-            width: calc(#{$dotsLiWidth} - 50px);
+        .slider-dots {
+
+            li:not(:last-child) {
+                min-width: calc(#{$dotsLiWidth} - 50px);
+            }
+
+            li:first-child {
+                min-width: calc(#{$dotsLiWidth} - 120px);
+            }
         }
 
         .slide {
-            padding-left: calc(#{$dotsLiWidth} - 50px);
+            padding-left: calc(#{$dotsLiWidth} - 120px);
 
             .text-cols {
                 .text-col, .text-col:first-child {
@@ -913,7 +919,7 @@ $animateDur: 0.30s;
             }
 
             li:last-child {
-                width: calc(#{$dotsLiWidth} - 30px);
+                min-width: calc(#{$dotsLiWidth} - 30px);
             }
         }
 
