@@ -1701,6 +1701,10 @@ $animateDur: 0.30s;
             width: calc(100% + 50px);
             overflow-x: auto;
             left: -25px;
+
+            // &::-webkit-scrollbar { 
+            //     display: none;  
+            // }
         }
 
         .graph {
