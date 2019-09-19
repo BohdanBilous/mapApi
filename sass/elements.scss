@@ -262,10 +262,10 @@
             filter: url(#blur-filter);
             filter: blur(60px);
             overflow: hidden;
-        }
 
-        .blur-bg {
-            
+            @include ie10 {
+                background: #949494;
+            }
         }
 
         .arrow {
@@ -1023,6 +1023,10 @@
         &::after {
             background: #E5E5E5;
             filter: blur(30px);
+
+            @include ie10 {
+                background: #949494;
+            }
         }
 
         input[type="text"] {
