@@ -210,8 +210,6 @@
     }
 }
 
-
-
 @include tablet {
     .footer-main {
         padding-top: 43px;
@@ -309,7 +307,7 @@
         .layout-col-s-6 {
             display: flex;
             justify-content: center;
-            padding: 0 0 20px;
+            padding: 0 0 50px;
         }
     }
 }
