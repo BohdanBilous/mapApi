@@ -665,6 +665,8 @@
 
             .link-l {
                 display: inline-block;
+                margin-bottom: 25px;
+                color: $colorTextG;
             }
         }
     }
@@ -760,9 +762,7 @@
             }
 
             .link-l {
-                margin: 0 0 25px;
                 font-size: 18px;
-                color: $colorTextG;
             }
         }
     }
