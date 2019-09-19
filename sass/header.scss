@@ -637,7 +637,7 @@
             }
 
             .social {
-                margin: 0;
+                margin: 0 0 70px;
 
                 li {
                     position: relative;
@@ -665,7 +665,6 @@
 
             .link-l {
                 display: inline-block;
-                margin-top: 45px;
             }
         }
     }
@@ -761,6 +760,7 @@
             }
 
             .link-l {
+                margin: 0 0 25px;
                 font-size: 18px;
                 color: $colorTextG;
             }
@@ -769,6 +769,7 @@
 
     .menu-inner {
         padding-left: 25px;
+        padding-bottom: 0;
     }
 
     .menu-main {
