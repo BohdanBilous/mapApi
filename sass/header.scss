@@ -364,6 +364,10 @@
             }
         }
 
+        .link-l {
+            @extend .text-g; 
+        }
+
         .social {
             margin-left: 35px;
             margin-right: auto;

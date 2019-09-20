@@ -207,6 +207,15 @@
             margin-bottom: 60px;
         }
 
+        &--usage {
+            width: 100%;
+        }
+
+        &--help, &--usage .link-l {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
         &--type-s {
             order: 2;
             width: 22%;

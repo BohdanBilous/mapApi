@@ -37,7 +37,6 @@
 
 .media-stream--categories-ttl-f {
     padding-top: 20px;
-    margin-bottom: 35px;
 
     .ttl-top {
         font-family: $fontMedium;
@@ -45,6 +44,10 @@
         line-height: 14px;
         color: $colorText;
     }
+}
+
+.media-stream--load-place {
+    width: 100%;
 }
 
 // Instruction
@@ -57,14 +60,14 @@
     padding: 20px 0;
     justify-content: flex-end;
     border-bottom: 1px solid $colorBorder;
+
+    &.hide {
+        display: none;
+    }
 }
 
 .media-stream--article.instruction {
-    margin-bottom: 60px;
-
-    &:last-child, &:nth-last-child(2) {
-        margin-bottom: 0;
-    }
+    margin: 60px 0 0;
 
     .media-panel {
         height: 390px;
@@ -397,7 +400,7 @@
     }
 
     .media-stream--article.instruction {
-        margin-bottom: 38px;
+        margin-top: 38px;
 
         .media-panel {
             height: 280px;

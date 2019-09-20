@@ -104,6 +104,11 @@ p {
 
 .tel {
     font-family: $fontMedium;
+    transition: color 0.3s;
+
+    &[href]:hover {
+        color: $colorGreen;
+    }
 }
 
 .content-w {
