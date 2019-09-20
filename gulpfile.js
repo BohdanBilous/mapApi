@@ -19,7 +19,6 @@ const commonJs = require('rollup-plugin-commonjs');
 const resolveNodeModules = require('rollup-plugin-node-resolve');
 const uglify = require('rollup-plugin-uglify-es');
 const buble = require('rollup-plugin-buble');
-
 const babel = require('rollup-plugin-babel');
 
 gulp.task('sass', function () {
@@ -80,10 +79,10 @@ function js(){
     // },
     plugins: [
         resolveNodeModules(),
-        commonJs()
-        // babel({
-        //     plugins: ['@babel/plugin-transform-arrow-functions']
-        //   })
+        commonJs(),
+        babel({
+            plugins: ['@babel/plugin-transform-arrow-functions']
+          })
     ]
   }).then(bundle => {
     return bundle.write({
