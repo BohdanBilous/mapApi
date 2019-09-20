@@ -1809,6 +1809,10 @@ $animateDur: 0.30s;
 .events-table-cell-m {
     @extend .flex-sb;
 
+    .events-ttl-section {
+        cursor: pointer;
+    }
+
     .btn-add {
         min-width: 165px;
     }
