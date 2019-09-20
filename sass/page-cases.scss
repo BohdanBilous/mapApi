@@ -64,6 +64,12 @@
 }
 
 @include mobile {
+    .media-stream--cases {
+        .media-stream--col-l {
+            padding-bottom: 70px;
+        }
+    }
+
     .screen-inner-simple {
         padding-top: 25px;
         
@@ -78,5 +84,4 @@
             margin-bottom: 42px;
         }
     }
-
 }
