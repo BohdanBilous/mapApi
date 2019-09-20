@@ -29,6 +29,12 @@ $dotsLiWidth: 250px;
   	}
 }
 
+@mixin mobile-land {
+    @media  screen and (min-width: 420px) and (max-width: 825px) and (orientation: landscape) {
+   		@content;
+  	}
+}
+
 @mixin mobile-min {
     @media (max-width: 320px) {
         @content;

@@ -145,7 +145,8 @@
             border: 1px solid $colorBorder;
 
             &::after {
-                @extend .ctr;  
+                @extend .ctr;
+                left: 51% !important;  
             }
         }
     }
