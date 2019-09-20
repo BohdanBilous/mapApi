@@ -199,16 +199,25 @@ div.border-rad-top {
     }
 }
 
-.media-stream--events, .media-stream--cases {
+.media-stream {
 
-    .media-stream--col-l {
-        padding-top: 50px;
+    &--events, &--cases {
+        .media-stream--col-l {
+            padding-top: 50px;
+        }
+
+        .media-stream--col-r {
+            padding-top: 100px;
+        }
     }
-
-    .media-stream--col-r {
-        padding-top: 100px;
+    
+    &--cases {
+        .media-stream--col-l {
+            padding-bottom: 20px;
+        }
     }
 }
+
 
 .media-stream--categories-ttl-sticky {
     position: sticky;
