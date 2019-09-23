@@ -18,7 +18,6 @@
     text-align: left;
     z-index: 998;
 
-
     &::after {
         @extend .ps;
         @extend .zIndex;
@@ -28,6 +27,10 @@
         top: auto;
         left: 0;
         background: $colorBorder;
+    }
+
+    .layout-col-l, .layout-col-r {
+        height: 100%;
     }
 
     .drop-down-element {
