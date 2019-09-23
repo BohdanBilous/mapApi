@@ -1267,7 +1267,7 @@
 .file-item {
     display: block;
     position: relative;
-    padding-right: 65px;
+    padding-right: 75px;
     font-family: $fontMedium;
     color: $colorTextG;
     margin-bottom: 13px;  
@@ -1285,7 +1285,7 @@
         @extend .trans-opacity;
         position: absolute;
         bottom: 1px;
-        right: 21px;
+        right: 37px;
         font-size: 12px;
 
         &:before {
@@ -1317,5 +1317,13 @@
         .file-item--name, .file-item--size {
             color: $colorGreen;
         }
+    }
+}
+
+@include macbook {
+    .file-item {
+        padding-right: 60px;
+
+        &--size{ right: 21px; }
     }
 }
