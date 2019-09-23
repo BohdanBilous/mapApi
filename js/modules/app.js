@@ -2,7 +2,8 @@
 
 /* MODULE IMPORTS */
 import '../../vendor/modernizr-custom';
-import { html, desktop, tablet, mobile, exists, animateSwitch, buttonArrowAnimate } from '../generic-helpers';
+import { html, desktop, tablet, mobile, exists, 
+         animateSwitch, buttonArrowAnimate } from '../generic-helpers';
 
 console.log('== Begin executing app.js ==');
 
@@ -68,7 +69,10 @@ window.addEventListener("load", function() {
     }
 
     // Links Locking
-    const hrefArray = ["case-open.html", "news-open.html", "event-open.html"];
+    const hrefArray = ["case-open.html", 
+                        "news-open.html", 
+                        "event-open.html",
+                        "contact.htm"];
 
     document.querySelectorAll("a").forEach( link => {
         if (hrefArray.includes(link.getAttribute("href"))) {

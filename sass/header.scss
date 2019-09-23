@@ -5,7 +5,7 @@
 
 .logo-col {
     height: 55px;
-    border: 1px solid #666;
+    border: 1px solid orange;
 }
 
 .header {
@@ -16,10 +16,8 @@
     left: 0;
     right: 0;
     text-align: left;
-    // z-index: 998;
+    z-index: 998;
 
-    border: 1px solid red;
-    z-index: 999;
 
     &::after {
         @extend .ps;
