@@ -64,7 +64,7 @@ body {
 .only-tablet-mobile,
 .only-mobile,
 .only-tablet {
-    display: none;
+    display: none !important;
 }
 
 @include desktop-only {
@@ -75,7 +75,7 @@ body {
 
 @media screen and (max-width: 1150px) {
     .only-tablet-mobile {
-        display: block;
+        display: block !important;
     }
 }
 
