@@ -99,6 +99,10 @@
     }
 
     .cases-container {
+        &:last-child {
+            margin-bottom: 0;
+        }
+        
         .case-item:not(:last-child) {
             margin-bottom: 42px;
         }
