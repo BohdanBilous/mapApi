@@ -28,21 +28,21 @@ window.addEventListener("load", function() {
     }
 
     // Menu 
-    // const menuSwitcher = document.querySelector(".menu-switcher");
+    const menuSwitcher = document.querySelector(".menu-switcher");
 
-    // menuSwitcher.addEventListener("click", () => {
-    //     if (html.classList.contains("menu-open")) { 
-    //         html.classList.remove("menu-open");
-    //         html.classList.add("menu-close");
-    //         animateSwitch(".menu .fade-in", "off");
-    //         animateSwitch(".menu .move-from-right", "off");
-    //     } else {
-    //         html.classList.add("menu-open");
-    //         html.classList.remove("menu-close");   
-    //         animateSwitch(".menu .fade-in", "on", 1, 800);
-    //         animateSwitch(".menu .move-from-right", "on", 65, 250); 
-    //     } 
-    // });
+    menuSwitcher.addEventListener("click", () => {
+        if (html.classList.contains("menu-open")) { 
+            html.classList.remove("menu-open");
+            html.classList.add("menu-close");
+            animateSwitch(".menu .fade-in", "off");
+            animateSwitch(".menu .move-from-right", "off");
+        } else {
+            html.classList.add("menu-open");
+            html.classList.remove("menu-close");   
+            animateSwitch(".menu .fade-in", "on", 1, 800);
+            animateSwitch(".menu .move-from-right", "on", 65, 250); 
+        } 
+    });
 
     // /* ------------------
     //     Buttons
