@@ -84,6 +84,13 @@
         @media screen and (max-height: 590px) {
             height: 590px;
         }
+
+        .ttl-1 {
+            width: 57%;
+            font-size: 35px;
+            line-height: 34px;
+            margin-bottom: 0;
+        }
         
         .col {
             left: auto;
@@ -93,7 +100,7 @@
 
             p {
                 width: 160px;
-                margin: 27px 0 auto;
+                margin: 33px 0 auto;
                 // margin-bottom: 200px;
             }
         }
