@@ -55,7 +55,7 @@ window.addEventListener("load", function() {
         const btnChangeText = document.querySelectorAll(".btn-change-text");
         let btnText, btnDataText, btnMedia;
 
-        btnChangeText.forEach( (btn) => {
+        btnChangeText.forEach( btn => {
             btnDataText  = btn.dataset.text;
             btnText = btn.querySelector("span").innerHTML;
             btnMedia = btn.dataset.media;
@@ -66,10 +66,20 @@ window.addEventListener("load", function() {
             }
         });
     }
+
+    // Links Locking
+    const hrefArray = ["case-open.html", "news-open.html", "event-open.html"];
+
+    document.querySelectorAll("a").forEach( link => {
+        if (hrefArray.includes(link.getAttribute("href"))) {
+            link.addEventListener("click", e => e.preventDefault());
+        }
+    });
+    
 });
 
 Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-    get: function(){
+    get: function() {
         return (this.currentTime > 0 && !this.paused);
     }
 });

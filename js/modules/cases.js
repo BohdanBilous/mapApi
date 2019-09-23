@@ -49,7 +49,5 @@ window.addEventListener("load", function() {
     if (exists(".hint-from-top")) scrollFromScreen(".title-top");
 
     // Filter Mobile
-    filterSidebarInit();
-
-        
+    filterSidebarInit();  
 });

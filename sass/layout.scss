@@ -69,7 +69,7 @@ body {
 
 @include desktop-only {
     .only-desktop {
-        display: block;
+        display: block !important;
     }
 }
 
