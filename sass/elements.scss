@@ -770,6 +770,7 @@
 }
 
 .month, .year {
+    @extend .bold;
     @extend .text-g;
 }
 
@@ -835,6 +836,7 @@
 
 // Items
 .items {
+    @extend .bold;
     color: $colorTextG;
     font-size: 12px;
     line-height: 14px;
