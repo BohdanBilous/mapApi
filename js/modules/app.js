@@ -16,65 +16,65 @@ window.addEventListener("load", function() {
     --------------------- */
 
     // Drop Down
-    // if (exists(".drop-down-element")) {
-    //     document.querySelectorAll(".drop-down-element").forEach( dropDownElement => {
-    //         dropDownElement.querySelector(".drop-down-sel").addEventListener("click", () => {
-    //             dropDownElement.classList.contains("open")
-    //                 ? dropDownElement.classList.remove("open")
-    //                 : dropDownElement.classList.add("open");
-    //         });
-    //     });
-    // }
+    if (exists(".drop-down-element")) {
+        document.querySelectorAll(".drop-down-element").forEach( dropDownElement => {
+            dropDownElement.querySelector(".drop-down-sel").addEventListener("click", () => {
+                dropDownElement.classList.contains("open")
+                    ? dropDownElement.classList.remove("open")
+                    : dropDownElement.classList.add("open");
+            });
+        });
+    }
 
-    // // Menu 
-    // const menuSwitcher = document.querySelector(".menu-switcher");
+    // Menu 
+    const menuSwitcher = document.querySelector(".menu-switcher");
 
-    // menuSwitcher.addEventListener("click", () => {
-    //     if (html.classList.contains("menu-open")) { 
-    //         html.classList.remove("menu-open");
-    //         html.classList.add("menu-close");
-    //         animateSwitch(".menu .fade-in", "off");
-    //         animateSwitch(".menu .move-from-right", "off");
-    //     } else {
-    //         html.classList.add("menu-open");
-    //         html.classList.remove("menu-close");   
-    //         animateSwitch(".menu .fade-in", "on", 1, 800);
-    //         animateSwitch(".menu .move-from-right", "on", 65, 250); 
-    //     } 
-    // });
+    menuSwitcher.addEventListener("click", () => {
+        if (html.classList.contains("menu-open")) { 
+            html.classList.remove("menu-open");
+            html.classList.add("menu-close");
+            animateSwitch(".menu .fade-in", "off");
+            animateSwitch(".menu .move-from-right", "off");
+        } else {
+            html.classList.add("menu-open");
+            html.classList.remove("menu-close");   
+            animateSwitch(".menu .fade-in", "on", 1, 800);
+            animateSwitch(".menu .move-from-right", "on", 65, 250); 
+        } 
+    });
 
-    // /* ------------------
-    //     Buttons
-    // --------------------- */
+    /* ------------------
+        Buttons
+    --------------------- */
 
-    // // Button Animate
-    // if (desktop) buttonArrowAnimate();
+    // Button Animate
+    if (desktop) buttonArrowAnimate();
 
-    // // Button Change Text
-    // if (exists(".btn-change-text")) {
-    //     const btnChangeText = document.querySelectorAll(".btn-change-text");
-    //     let btnText, btnDataText, btnMedia;
+    // Button Change Text
+    if (exists(".btn-change-text")) {
+        const btnChangeText = document.querySelectorAll(".btn-change-text");
+        let btnText, btnDataText, btnMedia;
 
-    //     btnChangeText.forEach( btn => {
-    //         btnDataText  = btn.dataset.text;
-    //         btnText = btn.querySelector("span").innerHTML;
-    //         btnMedia = btn.dataset.media;
+        btnChangeText.forEach( btn => {
+            btnDataText  = btn.dataset.text;
+            btnText = btn.querySelector("span").innerHTML;
+            btnMedia = btn.dataset.media;
 
-    //         if (window.matchMedia(btnMedia).matches) {
-    //             btn.querySelector("span").innerHTML = btnDataText;
-    //             btn.setAttribute("data-text", btnText);
-    //         }
-    //     });
-    // }
+            if (window.matchMedia(btnMedia).matches) {
+                btn.querySelector("span").innerHTML = btnDataText;
+                btn.setAttribute("data-text", btnText);
+            }
+        });
+    }
 
-    // // Links Locking
-    // const hrefArray = ["case-open.html", "news-open.html", "event-open.html"];
+    // Links Locking
+    const hrefArray = ["case-open.html", "news-open.html", "event-open.html"];
 
-    // document.querySelectorAll("a").forEach( link => {
-    //     if (hrefArray.includes(link.getAttribute("href"))) {
-    //         link.addEventListener("click", e => e.preventDefault());
-    //     }
-    // });
+    document.querySelectorAll("a").forEach( link => {
+        if (hrefArray.includes(link.getAttribute("href"))) {
+            link.addEventListener("click", e => e.preventDefault());
+        }
+    });
     
 });
 

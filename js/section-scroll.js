@@ -1,4 +1,6 @@
 
+import { desktop, html } from './generic-helpers';
+
 export class SectionScroll {
 
     constructor() {
@@ -32,8 +34,8 @@ export class SectionScroll {
     }
 
     setSectionPosition() {
-        this.sectionTwo.style = `top: ${this.sectionOneHeight}px`;
-        this.sectionTwo.querySelector(".ttl-2").innerHTML = this.sectionOneHeight;
+        if (desktop && html.classList.contains("no-touchevents")) this.sectionTwo.style = `top: ${this.sectionOneHeight}px`;
+        // this.sectionTwo.querySelector(".ttl-2").innerHTML = this.sectionOneHeight;
     }
 }
 
