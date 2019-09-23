@@ -43,6 +43,11 @@
 @include tablet {
     
     .media-stream--cases {
+
+        .media-stream--col-l {
+            padding-bottom: 0;
+        }
+        
         .media-stream--categories-ttl-sticky {
             .ttl {
                 font-size: 35px;

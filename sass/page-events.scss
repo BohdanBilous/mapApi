@@ -332,15 +332,13 @@ div.border-rad-top {
 
 @include tablet {
 
-    .media-stream--events, .media-stream--cases {
+    .media-stream--events {
         
         .media-stream--col-l {
             padding-top: 100px;   
         }
     }
-
    
-
     .media-stream--categories-ttl-b {
         justify-content: flex-start;
 
