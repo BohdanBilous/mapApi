@@ -48,7 +48,7 @@
     }
 
     p {
-        font-family: $fontMedium;
+        @extend .bold;
     }
 
     .slog {
@@ -153,6 +153,7 @@
         right: 0;
 
         p {
+            @extend .bold;
             margin-bottom: 70px;
         }
     }
@@ -188,11 +189,11 @@
         }
 
         span {
+            @extend .bold;
             display: block;
             margin-left: -25px;
             margin-right: -25px;
             line-height: 18px;
-            font-family: $fontMedium;
             transition: color 0.3s;
         }
     }
@@ -653,9 +654,9 @@ $animateDur: 0.30s;
     }
 
     .text-chunk-1 {
+        @extend .bold;
         width: 175px;
         margin: 0;
-        font-family: $fontMedium;
     }
 
     .text-chunk-2 {
@@ -823,9 +824,9 @@ $animateDur: 0.30s;
             }
 
             .index {
+                @extend .bold;
                 opacity: 0.4;
                 margin-bottom: 9px;
-                font-family: $fontMedium;
             }
 
             &:last-child {
@@ -1267,10 +1268,10 @@ $animateDur: 0.30s;
     }
 
     span {
+        @extend .bold;
         display: inline-block;
         padding-right: 12px;
         color: $colorText2;
-        font-family: $fontMedium;
         background-color: $colorBg;
         z-index: 1;
 
@@ -1641,7 +1642,7 @@ $animateDur: 0.30s;
         }
 
         span {
-            font-family: $fontMedium;
+            @extend .bold;
             font-size: 19px;
             line-height: 24px;
         }
@@ -1794,9 +1795,9 @@ $animateDur: 0.30s;
 }
 
 .dates {
+    @extend .bold;
     font-size: 40px;
     line-height: 47px;
-    font-family: $fontMedium;
     white-space: nowrap;
 
     @include macbook {

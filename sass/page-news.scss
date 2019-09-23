@@ -605,7 +605,7 @@
         border-bottom: 1px solid $colorBorder;
 
         .link-g {
-            font-family: $fontMedium;
+            @extend .bold;
         }
     }
 
@@ -765,11 +765,11 @@
     margin-bottom: 98px;
 
     .filter-item {
+        @extend .bold;
         @extend .flex-sb;
         @extend .trans-opacity;
         margin-bottom: 15px;
         cursor: pointer;
-        font-family: $fontMedium;
 
         &:hover span {
             color: $colorGreen;

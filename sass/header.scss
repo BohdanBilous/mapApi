@@ -431,9 +431,9 @@
 
     li {
         a {
+            @extend .bold;
             font-size: 60px;
             line-height: 60px;
-            font-family: $fontMedium;
             transition-duration: 0.5s;
             letter-spacing: -2.4px;
 
@@ -492,9 +492,9 @@
 
     li {
         a {
+            @extend .bold;
             font-size: 27px;
             line-height: 33px;
-            font-family: $fontMedium;
             transition-duration: 0.5s;
             letter-spacing: -0.5px;
 
@@ -521,8 +521,8 @@
         }
 
         span {
+            @extend .bold;
             @extend .trans-color;
-            font-family: $fontMedium;
         }
 
         img {

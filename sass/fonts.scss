@@ -7,10 +7,10 @@ body * { -webkit-font-smoothing: antialiased; text-shadow: 0 1px 0 rgba(0,0,0,0.
 
 
 .text-main {
+    @extend .bold;
     font-size: 20px;
     letter-spacing: -0.4px;
     line-height: 25px;
-    font-family: $fontMedium;
 }
 
 .text-main-2 {
@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .ttl-1, .ttl-2, .ttl-3, .ttl-4, .ttl-5 {
-    font-family: $fontMedium;
+    @extend .bold;
 }
 
 .ttl-1 {
@@ -103,7 +103,7 @@ p {
 }
 
 .tel {
-    font-family: $fontMedium;
+    @extend .bold;
     transition: color 0.3s;
 
     &[href]:hover {
