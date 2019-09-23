@@ -3,6 +3,10 @@
     Header
    ========================= */
 
+body {
+    border: 2px solid #111;
+}
+
 .header {
     position: absolute;
     // position: fixed;
@@ -13,8 +17,8 @@
     text-align: left;
     // z-index: 998;
 
-    // border: 1px solid #000;
-    // z-index: 999;
+    border: 1px solid red;
+    z-index: 999;
 
     &::after {
         @extend .ps;
