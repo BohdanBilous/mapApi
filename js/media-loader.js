@@ -36,7 +36,7 @@ export class MediaLoader {
             
             if (window.matchMedia(this.mediaQueryArray[i].media).matches) {
                 let src = this.mediaQueryArray[i].src;
-
+                console.log(this.mediaQueryArray);
                 if (this.mediaType === "background") this.element.style.backgroundImage = src;
                 if (this.mediaType === "image") this.element.src = src;
                 if (this.mediaType === "video") this.initVideo(src);
