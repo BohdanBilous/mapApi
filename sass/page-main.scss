@@ -548,7 +548,7 @@ $animateDur: 0.30s;
 
 @include mobile {
     .solutions-main-wrap {
-        padding-top: 30px;
+        padding-top: 35px;
     }
 
     .solutions-main-block {
@@ -564,6 +564,11 @@ $animateDur: 0.30s;
         padding: 0;
         margin-bottom: 37px;
         border: none;
+
+        .ttl {
+            font-size: 30px;
+            line-height: 32px;
+        }
 
         .right-elements {
             display: none;
