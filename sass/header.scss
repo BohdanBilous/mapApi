@@ -3,19 +3,18 @@
     Header
    ========================= */
 
-   .main, .menu-wrap {
-       display: none;
-   }
+//    .main, .menu-wrap {
+//        display: none;
+//    }
 
 .header {
     position: absolute;
-    // position: fixed;
     height: 55px;
     top: 0;
     left: 0;
     right: 0;
     text-align: left;
-    z-index: 999;
+    // z-index: 999;
 
     &::after {
         @extend .ps;
