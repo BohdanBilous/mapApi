@@ -44,41 +44,41 @@ window.addEventListener("load", function() {
         } 
     });
 
-    // /* ------------------
-    //     Buttons
-    // --------------------- */
+    /* ------------------
+        Buttons
+    --------------------- */
 
-    // // Button Animate
-    // if (desktop) buttonArrowAnimate();
+    // Button Animate
+    if (desktop) buttonArrowAnimate();
 
-    // // Button Change Text
-    // if (exists(".btn-change-text")) {
-    //     const btnChangeText = document.querySelectorAll(".btn-change-text");
-    //     let btnText, btnDataText, btnMedia;
+    // Button Change Text
+    if (exists(".btn-change-text")) {
+        const btnChangeText = document.querySelectorAll(".btn-change-text");
+        let btnText, btnDataText, btnMedia;
 
-    //     btnChangeText.forEach( btn => {
-    //         btnDataText  = btn.dataset.text;
-    //         btnText = btn.querySelector("span").innerHTML;
-    //         btnMedia = btn.dataset.media;
+        btnChangeText.forEach( btn => {
+            btnDataText  = btn.dataset.text;
+            btnText = btn.querySelector("span").innerHTML;
+            btnMedia = btn.dataset.media;
 
-    //         if (window.matchMedia(btnMedia).matches) {
-    //             btn.querySelector("span").innerHTML = btnDataText;
-    //             btn.setAttribute("data-text", btnText);
-    //         }
-    //     });
-    // }
+            if (window.matchMedia(btnMedia).matches) {
+                btn.querySelector("span").innerHTML = btnDataText;
+                btn.setAttribute("data-text", btnText);
+            }
+        });
+    }
 
-    // // Links Locking
-    // const hrefArray = ["case-open.html", 
-    //                     "news-open.html", 
-    //                     "event-open.html",
-    //                     "contact.htm"];
+    // Links Locking
+    const hrefArray = ["case-open.html", 
+                        "news-open.html", 
+                        "event-open.html",
+                        "contact.htm"];
 
-    // document.querySelectorAll("a").forEach( link => {
-    //     if (hrefArray.includes(link.getAttribute("href"))) {
-    //         link.addEventListener("click", e => e.preventDefault());
-    //     }
-    // });
+    document.querySelectorAll("a").forEach( link => {
+        if (hrefArray.includes(link.getAttribute("href"))) {
+            link.addEventListener("click", e => e.preventDefault());
+        }
+    });
     
 });
 
