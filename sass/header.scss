@@ -359,6 +359,8 @@
         bottom: 27px;
 
         .hint {
+            color: $colorTextG;
+
             &::after {
                 content: ":";
             }
@@ -631,6 +633,7 @@
             display: block;
 
             .hint {
+                color: $colorText;
                 padding-right: 13px;
                 margin-bottom: 37px;
 
