@@ -215,6 +215,7 @@
 .indicators-c {
     position: absolute;
     left: 0;
+    right: 0;
     top: 440px;
     justify-content: flex-start;
     padding-bottom: 0;
@@ -299,14 +300,6 @@ $animateDur: 0.30s;
     position: relative;
     width: 24.35%;
     height: $tareHeight;
-
-    &::after {
-        @extend .ps;
-        width: 100%;
-        height: 100px;
-        left: 0;
-        top: 100%;
-    }
     
     .tare-inner {
         position: relative;
@@ -344,6 +337,10 @@ $animateDur: 0.30s;
     .tare-name {
         @extend .trans-color;
         top: 20px;
+
+        @media screen and (min-width: 1800px) {
+            font-size: 27px;
+        }
     }
 
     .tare-number {
@@ -372,6 +369,7 @@ $animateDur: 0.30s;
 
     // HOVER
     .no-touchevents &:hover {
+        z-index: 100;
 
         .tare-name {
             color: $colorGreen;
@@ -421,6 +419,14 @@ $animateDur: 0.30s;
     .tare-item {
         transition: opacity 0.3s;
 
+        &::after {
+            @extend .ps;
+            width: 100%;
+            height: 100px;
+            left: 0;
+            top: 100%;
+        }
+
         &:hover {
             .tare-inner {
                 clip-path: inset(0 0 30% 0 round 10px);
@@ -433,6 +439,10 @@ $animateDur: 0.30s;
 
         &.inactive {
             opacity: 0.42;
+
+            &::after {
+                display: none;
+            }
 
             .tare-inner {
                 clip-path: inset(0 0 50% 0 round 10px);

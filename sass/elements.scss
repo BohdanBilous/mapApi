@@ -717,6 +717,7 @@
 
 // Count
 .count-item {
+    @extend .bold;
     color: $colorText2;
 
     .count-num {
