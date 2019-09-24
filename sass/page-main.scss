@@ -47,10 +47,6 @@
         }
     }
 
-    p {
-        @extend .bold;
-    }
-
     .slog {
         margin-top: auto;
         margin-bottom: 4vh;
@@ -153,7 +149,6 @@
         right: 0;
 
         p {
-            @extend .bold;
             margin-bottom: 70px;
         }
     }
@@ -713,6 +708,11 @@ $animateDur: 0.30s;
 
     .layout-col-s-6 {
         @extend .flex-sb;
+        width: 59%;
+
+        @include macbook {
+            width: 60.6%;
+        }
 
         > * {
             align-self: flex-end;
@@ -1727,7 +1727,6 @@ $animateDur: 0.30s;
     padding-top: 80px;
 
     p {
-        @extend .bold;
         width: 195px;
     }
 }
