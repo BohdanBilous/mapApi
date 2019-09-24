@@ -5,7 +5,6 @@
 body { -ms-overflow-style: scrollbar; font-family: $fontMain; color: $colorText; font-size: 14px; }
 body * { -webkit-font-smoothing: antialiased; text-shadow: 0 1px 0 rgba(0,0,0,0.01); }
 
-
 .text-main {
     @extend .bold;
     font-size: 20px;

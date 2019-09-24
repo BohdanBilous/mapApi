@@ -1,0 +1,411 @@
+/* =========================
+    Careers
+   ========================= */
+
+.text-top-s {
+    width: 205px;
+    margin-bottom: 65px;
+}
+
+.careers-ttl-row {
+    @extend .flex-sb;
+    padding-bottom: 10px;
+    margin-bottom: 45px;
+    border-bottom: 1px solid $colorBorder;
+
+    .ttl {
+        width: 50%;
+        padding-top: 12px;
+    }
+
+    .location-tab-wrap {
+        margin: 0;
+    }
+}
+
+.tabs-label {
+    @extend .bold;
+    margin-bottom: 11px;
+}
+
+.location-tabs {
+
+    ul {
+        @extend .flex-sb;
+        flex-wrap: wrap;
+    }
+
+    li {
+        @extend .bold;
+        min-width: 29.5%;
+        height: 29px;
+        padding: 8px 12px 0;
+        text-align: center;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        background-color: #e5e5e5;
+        cursor: pointer;
+        transition: color 0.2s, background-color 0.2s;
+
+        @include macbook {
+            min-width: 95px;
+        }
+
+        &.active, &:hover {
+            background-color: $colorGreen;
+            color: #fff;
+        }
+    }
+}
+
+.address-block {
+    color: $colorTextG;
+    font-size: 12px;
+    line-height: 16px;
+    font-style: normal;
+    margin-bottom: 86px;
+}
+
+.careers-tablet {
+
+    .careers-row {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid $colorBorder;
+        
+        &.open {
+            .position-name {
+                i {
+                    background-color: $colorGreen;
+
+                    &::before {
+                        background-color: #fff;
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .careers-td {
+        text-align: left;
+        padding: 60px 0;
+
+        &:nth-child(1) {
+            width: 41%;
+            padding-right: 35px;
+        }
+
+        &:nth-child(2) {
+            width: 21%;
+        }
+
+        &:nth-child(3) {
+            @extend .flex-sb;
+            width: 38%;
+        }
+    }
+
+    .careers-th {
+        font-size: 12px;
+        color: $colorTextG;
+        padding: 0 0 12px;
+    }
+
+    .position-desc-item {
+        padding-top: 14px;
+    }
+}
+
+.position-name {
+    position: relative;
+    padding-left: 60px;
+    cursor: pointer;
+
+    i {
+        @extend .ctrVert;
+        position: absolute;
+        left: 0;
+        display: block;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        transition: background-color 0.1s;
+        background-color: #e6e6e6;
+
+        &::before, &::after {
+            @extend .ctr;
+            @extend .ps;
+            background-color: $colorText;
+        }
+
+        &::before {
+            width: 7px;
+            height: 1px;
+        }
+
+        &::after {
+            width: 1px;
+            height: 7px;
+        }
+    }
+
+    .ttl {
+        transition: color 0.3s;
+    }
+
+    .no-touchevents &:hover {
+        .ttl {
+            color: $colorGreen;
+        }
+    }
+}
+
+.position-drop {
+    width: 100%;
+    padding-right: 60%;
+    padding-left: 60px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s $easing;
+
+    ul {
+        padding-right: 20%;
+    }
+
+    &.content-text {
+        section > p:last-child, section > ul:last-child {
+            margin-bottom: 105px;
+        }
+    }
+
+    .btn-touch {
+        display: none;
+    }
+}
+
+.position-desc-item {
+    .label {
+        display: none;
+    }
+
+    .date {
+        @extend .bold;
+        color: $colorText2;
+    }
+
+    .city {
+        @extend .bold;
+        color: $colorGreen;
+    }
+}
+
+.content-text {
+
+    * {
+        color: $colorText2;
+    }
+
+    .ttl-3, .ttl-4, .ttl-5 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 43px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    ul {
+        margin-bottom: 60px;
+
+        li {
+            @extend .bold;
+            position: relative;
+            padding-left: 20px;
+            list-style: none;
+            margin-bottom: 22px;
+            line-height: 19px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &::before {
+                @extend .ctrVert;
+                @extend .ps;
+                position: absolute;
+                top: 45%;
+                left: 0;
+                width: 6px;
+                height: 6px;
+                transform: rotate(45deg);
+                background-color: $colorGreen;
+            }
+        }
+    }
+}
+
+
+@include macbook {
+    .careers-tablet {
+
+        .careers-td:not(.careers-th) {
+            padding: 45px 0;
+
+            .ttl {
+                font-size: 20px;
+                line-height: 23px;
+            }
+        }
+
+        // .position-desc-item {
+        //     padding-top: 7px;
+        // }
+    }
+
+    .position-name, .position-drop {
+        padding-left: 30px;
+    }
+
+    .position-name {
+        padding-top: 8px;
+        min-height: 40px;
+
+        i {
+            top: 45%;
+        }
+    }
+
+    .position-drop {
+        padding-right: 45%;
+    }
+}
+
+@include tablet {
+    
+    .layout-row-content {
+
+        .layout-col-l {
+            width: 0;
+
+            .btn-back {
+                position: absolute;
+            }
+        }
+
+        .layout-col-r {
+            width: 100%;
+        }
+    }
+
+    .careers-top-section {
+        padding-top: 10px;
+        padding-left: 160px;
+    }
+
+    .careers-ttl-row {
+        padding-bottom: 20px;
+
+        .ttl {
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .location-tab-wrap {
+            width: 100%;
+        }
+    }
+
+    .tabs-label {
+        margin-bottom: 13px;
+    }
+
+    .location-tabs {
+        overflow-x: auto;
+        margin-right: -25px;
+
+        ul {
+            padding-bottom: 25px;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+        }
+
+        li {
+            min-width: 130px;
+            height: 50px;
+            margin-right: 17px;
+            margin-bottom: 0;
+            padding-top: 17px;
+            border-radius: 7px;
+        }
+    }
+
+    .position-name {
+        position: static;
+        padding-left: 0;
+
+        i {
+            top: 47px;
+            transform: none;
+            left: auto;
+            right: 0;
+            width: 35px;
+            height: 35px;
+
+            &::before {
+                width: 12px;
+            }
+
+            &::after {
+                height: 12px;
+            }
+        }
+    }
+
+    .careers-tablet {
+        .careers-row {
+            position: relative;
+        }
+
+        .careers-td {
+            &:nth-child(1) {
+                width: 47%;
+            }
+
+            &:nth-child(2) {
+                width: 21%;
+            }
+
+            &:nth-child(3) {
+                width: 32%;
+            }
+
+            .btn-touch {
+                display: none;
+            }
+        }
+    }
+
+    .position-drop {
+        padding-left: 0;
+        padding-right: 20%;
+
+        .btn-touch {
+            display: block;
+            margin-bottom: 65px;
+        }
+
+        &.content-text {
+            section > p:last-child, section > ul:last-child {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

@@ -1046,9 +1046,14 @@ $animateDur: 0.30s;
                 display: none;
             }
 
-            li:last-child {
-                min-width: calc(#{$dotsLiWidth} - 30px);
+            li {
+                min-width: auto !important;
+                margin-right: 40px;
             }
+
+            // li:last-child {
+            //     min-width: calc(#{$dotsLiWidth} - 30px);
+            // }
         }
 
         .layout-col-l .ttl-2 {

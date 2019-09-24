@@ -119,6 +119,11 @@ $widthLogoCol: 17%;
 $widthMidLeftCol: 22%;
 $widthMidCol: 36%;
 
+.layout-row-content {
+    padding-top: 82px;
+    padding-bottom: 115px;
+}
+
 .layout-row {
     position: relative;
     display: flex;

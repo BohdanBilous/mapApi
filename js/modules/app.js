@@ -72,7 +72,7 @@ window.addEventListener("load", function() {
     const hrefArray = ["case-open.html", 
                         "news-open.html", 
                         "event-open.html",
-                        "contact.htm"];
+                        "contact.html"];
 
     document.querySelectorAll("a").forEach( link => {
         if (hrefArray.includes(link.getAttribute("href"))) {
