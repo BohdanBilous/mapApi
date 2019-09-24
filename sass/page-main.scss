@@ -328,7 +328,6 @@ $animateDur: 0.30s;
             width: 100%;
             height: 100%;
             // border-radius: 10px;
-            z-index: -1;
             background-color: $colorPanel;
             transition: height $animateDur $easing;
         }
@@ -336,6 +335,10 @@ $animateDur: 0.30s;
 
     .indicators {
         display: none;
+    }
+
+    .text-main, .tare-img {
+        z-index: 1;
     }
     
     .text-main {
@@ -395,6 +398,18 @@ $animateDur: 0.30s;
         .tare-img  img {            
             transform: translateX(0) translateY(-55px) scale(0.80);
             zoom: 1;
+        }
+
+        @include edge {
+            .tare-inner {
+                &::after {
+                    height: 100%;
+                }
+            }
+            
+            .tare-img  img {
+                transform: translateX(0) translateY(0) scale(0.80);
+            }
         }
     }
 
@@ -2058,5 +2073,21 @@ $animateDur: 0.30s;
         .section-eclipse {
             display: none;
         }
+    }
+}
+
+@include edge {
+    .section-one {
+        position: static;
+
+        &.fixed {  position: relative; }
+    }
+
+    .section-two {
+        top: auto !important;
+    }
+
+    .section-eclipse {
+        display: none;
     }
 }
