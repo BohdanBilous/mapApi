@@ -1727,6 +1727,7 @@ $animateDur: 0.30s;
     padding-top: 80px;
 
     p {
+        @extend .bold;
         width: 195px;
     }
 }
