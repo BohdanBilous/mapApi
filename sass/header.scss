@@ -308,9 +308,9 @@
     //z-index: 1000;
     z-index: -1;
     top: 0;
-    right: 0;
     left: 0;
-    bottom: 0;
+    // right: 0;
+    // bottom: 0;
     text-align: left;
     visibility: hidden;
 }
@@ -389,7 +389,8 @@
 
     .menu-wrap {
         animation: menuShow 0.3s forwards;
-        
+        right: 0;
+        bottom: 0;
     }
 
     .menu {
@@ -414,13 +415,13 @@
 
     .menu {
         transition-duration: 0.35s;
+        // right: auto;
+        // bottom: auto;
     }
     
     .menu-wrap {
         visibility: visible;
-        animation: menuHide 0.5s forwards 1.0s;
-        z-index: 1000;
-        
+        animation: menuHide 2.5s forwards 1.0s;        
     }
 }
 
@@ -448,24 +449,32 @@
         opacity: 1;
         visibility: visible;
         z-index: 1000;
+        bottom: 0;
+        right: 0;
     }
 
     75% {
         opacity: 0;
         visibility: visible;
         z-index: 1000;
+        bottom: 0;
+        right: 0;
     }
 
     80% {
         opacity: 0;
         visibility: hidden;
         z-index: 1000;
+        bottom: 0;
+        right: 0;
     }
 
     100% {
         opacity: 0;
         visibility: hidden;
         z-index: -1;
+        bottom: auto;
+        right: auto;
     }
 }
 
