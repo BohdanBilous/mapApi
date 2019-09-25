@@ -115,12 +115,6 @@ body {
     
 }
 
-.content-media {
-    @include mobile {
-        overflow: hidden;
-    }
-}
-
 $widthLogoCol: 17%;
 $widthMidLeftCol: 22%;
 $widthMidCol: 36%;
