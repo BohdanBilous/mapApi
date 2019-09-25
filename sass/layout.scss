@@ -115,6 +115,12 @@ body {
     
 }
 
+.content-media {
+    @include mobile {
+        overflow: hidden;
+    }
+}
+
 $widthLogoCol: 17%;
 $widthMidLeftCol: 22%;
 $widthMidCol: 36%;
@@ -165,7 +171,7 @@ $widthMidCol: 36%;
     position: relative;
     width: calc(100% - #{$left-col-width});
 
-    
+
     @include mobile {
         width: 100%;
     }
