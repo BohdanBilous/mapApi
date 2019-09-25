@@ -1075,6 +1075,24 @@
             line-height: 47px;
         }
     }
+
+    .media-stream--article, .media-stream--article.instruction, .media-stream--article.has-video {
+        .media-panel {
+            .play-button-wrap {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                .text-b {
+                    display: none;
+                }
+
+                .play {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 960px) {
