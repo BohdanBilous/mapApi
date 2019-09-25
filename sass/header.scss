@@ -14,7 +14,6 @@
     left: 0;
     right: 0;
     text-align: left;
-    z-index: 999;
 
     &::after {
         @extend .ps;
@@ -388,7 +387,8 @@
     }
 
     .menu-wrap {
-        animation: fadeIn-l 0.3s forwards;
+        animation: menuShow 0.3s forwards;
+        
     }
 
     .menu {
@@ -412,7 +412,47 @@
 .menu-close {
     .menu-wrap {
         visibility: visible;
-        animation: fadeOut-l 0.3s forwards 1.0s;
+        animation: menuHide 0.3s forwards 1.0s;
+        
+    }
+}
+
+@keyframes menuShow {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    5% {
+        opacity: 0;
+        visibility: visible;
+        z-index: 1000;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1000;
+    }
+}
+
+@keyframes menuHide {
+    0% {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1000;
+    }
+
+    95% {
+        opacity: 0;
+        visibility: visible;
+        z-index: 1000;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
     }
 }
 
