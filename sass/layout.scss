@@ -165,6 +165,7 @@ $widthMidCol: 36%;
     position: relative;
     width: calc(100% - #{$left-col-width});
 
+    
     @include mobile {
         width: 100%;
     }
