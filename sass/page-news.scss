@@ -685,6 +685,11 @@
 .event-section {
     margin-bottom: 70px;
 
+    .text-main {
+        max-height: 98px;
+        overflow: hidden;
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -1370,8 +1375,9 @@
         .text-main {
             align-self: flex-end;
             text-align: right;
-            font-size: 14px;
-            line-height: 18px;
+            max-height: 98px;
+            // font-size: 14px;
+            // line-height: 18px;
         }
     }
 }

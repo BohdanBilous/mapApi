@@ -253,6 +253,12 @@
 
 
 @include macbook {
+
+    .careers-ttl-row {
+        .location-tab-wrap {
+            width: 30%;
+        }
+    }
     .careers-tablet {
 
         .careers-td:not(.careers-th) {
