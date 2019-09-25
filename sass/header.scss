@@ -7,6 +7,12 @@
 //        display: none;
 //    }
 
+@include tablet-only {
+    #loader {
+        display: none;
+    }
+}
+
 .header {
     position: absolute;
     height: 55px;
@@ -15,7 +21,6 @@
     right: 0;
     text-align: left;
     // z-index: 999;
-    border: 1px solid #000;
 
     &::after {
         @extend .ps;
