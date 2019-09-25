@@ -1001,26 +1001,26 @@ $animateDur: 0.30s;
         .slider-dots {
 
             li:not(:last-child) {
-                min-width: calc(#{$dotsLiWidth} - 50px);
+                min-width: calc(#{$dotsLiWidth} - 20px);
             }
 
             li:first-child {
-                min-width: calc(#{$dotsLiWidth} - 120px);
+                min-width: calc(#{$dotsLiWidth} - 100px);
             }
         }
 
         .slide {
-            padding-left: calc(#{$dotsLiWidth} - 120px);
+            padding-left: calc(#{$dotsLiWidth} - 100px);
 
             .text-cols {
                 .text-col, .text-col:first-child {
-                    width: calc(#{$dotsLiWidth} - 50px);
+                    width: calc(#{$dotsLiWidth} - 20px);
                 }
             }
         }
 
         .btn-contact-us {
-            margin-left: calc(2 * (#{$dotsLiWidth} - 50px));
+            margin-left: calc((#{$dotsLiWidth} - 100px) + (#{$dotsLiWidth} - 20px));
         }
     }
 } 
