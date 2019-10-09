@@ -63,7 +63,10 @@
     font-size: 12px;
     line-height: 16px;
     font-style: normal;
-    margin-bottom: 86px;
+   
+    .careers-tab-block & {
+        margin-bottom: 86px;
+    }
 }
 
 .careers-tablet {
@@ -75,7 +78,7 @@
         
         &.open {
             .position-name {
-                i {
+                .plus-drop {
                     background-color: $colorGreen;
 
                     &::before {
@@ -125,34 +128,6 @@
     padding-left: 60px;
     cursor: pointer;
 
-    i {
-        @extend .ctrVert;
-        position: absolute;
-        left: 0;
-        display: block;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        transition: background-color 0.1s;
-        background-color: #e6e6e6;
-
-        &::before, &::after {
-            @extend .ctr;
-            @extend .ps;
-            background-color: $colorText;
-        }
-
-        &::before {
-            width: 7px;
-            height: 1px;
-        }
-
-        &::after {
-            width: 1px;
-            height: 7px;
-        }
-    }
-
     .ttl {
         transition: color 0.3s;
     }
@@ -161,6 +136,34 @@
         .ttl {
             color: $colorGreen;
         }
+    }
+}
+
+.plus-drop {
+    @extend .ctrVert;
+    position: absolute;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: background-color 0.1s;
+    background-color: #e6e6e6;
+
+    &::before, &::after {
+        @extend .ctr;
+        @extend .ps;
+        background-color: $colorText;
+    }
+
+    &::before {
+        width: 7px;
+        height: 1px;
+    }
+
+    &::after {
+        width: 1px;
+        height: 7px;
     }
 }
 
@@ -190,6 +193,9 @@
 .position-desc-item {
     .label {
         display: none;
+        font-size: 12px;
+        color: $colorTextG;
+        margin-bottom: 6px;
     }
 
     .date {
@@ -251,7 +257,6 @@
     }
 }
 
-
 @include macbook {
 
     .careers-ttl-row {
@@ -283,7 +288,7 @@
         padding-top: 8px;
         min-height: 40px;
 
-        i {
+        .plus-drop {
             top: 45%;
         }
     }
@@ -312,7 +317,11 @@
 
     .careers-top-section {
         padding-top: 10px;
-        padding-left: 160px;
+    }
+
+    .careers-top-section,
+    .careers-tab-block .address-block {
+        padding-left: 175px;
     }
 
     .careers-ttl-row {
@@ -357,21 +366,24 @@
         position: static;
         padding-left: 0;
 
-        i {
+        .plus-drop {
             top: 47px;
             transform: none;
             left: auto;
             right: 0;
-            width: 35px;
-            height: 35px;
+        }
+    }
 
-            &::before {
-                width: 12px;
-            }
+    .plus-drop {
+        width: 35px;
+        height: 35px;
 
-            &::after {
-                height: 12px;
-            }
+        &::before {
+            width: 12px;
+        }
+
+        &::after {
+            height: 12px;
         }
     }
 
@@ -391,6 +403,7 @@
 
             &:nth-child(3) {
                 width: 32%;
+                padding-right: 42px;
             }
 
             .btn-touch {
@@ -412,6 +425,139 @@
             section > p:last-child, section > ul:last-child {
                 margin-bottom: 50px;
             }
+        }
+    }
+}
+
+@include mobile {
+
+    .layout-row-content {
+        padding-bottom: 80px;
+
+        .btn-back {
+            display: none;
+        }
+    }
+
+    .careers-top-section,
+    .careers-tab-block .address-block {
+        padding-left: 0;
+    }
+
+    .careers-ttl-row {
+        margin-bottom: 70px;
+        border-bottom: none;
+
+        .ttl {
+            margin-bottom: 38px;    
+        }
+    }
+
+    .location-tabs {
+        margin-left: -25px;
+
+        ul {
+            padding-left: 25px;
+
+            li:last-child {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    .careers-tab-block {
+        .address-block {
+            margin-bottom: 0;
+            padding-bottom: 50px;
+        }
+    }
+
+    .careers-tablet {
+
+        .position-desc-item {
+            padding-top: 0;
+        }
+
+        .careers-row {
+            padding: 28px 63px 28px 0;
+        }
+
+        .careers-td {   
+
+            &.careers-th {
+                display: none;
+            }
+
+            &:not(.careers-th) {
+                padding: 0;
+            }
+
+            &:nth-child(1) {
+                width: 100%;
+            }
+
+            &:nth-child(2), &:nth-child(3) {
+                width: auto;
+            }
+
+            &:nth-child(2) {
+                .position-desc-item {
+                    padding-right: 23px;
+                    margin-right: 28px;
+                    border-right: 1px solid $colorBorder;
+                }
+            }
+        }
+    }
+
+    .plus-drop {
+        width: 54px;
+        height: 54px;
+
+        &::before {
+            width: 18px;
+            height: 2px;
+        }
+
+        &::after {
+            width: 2px;
+            height: 18px;
+        }
+    }
+
+    .position-name {
+        margin-bottom: 40px;
+        padding: 0;
+        min-height: auto;
+    }
+
+    .position-desc-item {
+        .label {
+            display: block;
+        }
+    }
+
+    .position-drop {
+        width: calc(100% + 60px);
+        margin-right: -60px;
+        padding-right: 0;
+
+        section {
+            padding-top: 80px;
+        }
+    }
+}
+
+@include mobile-min {
+    .careers-top-section {
+        padding-top: 0;
+    }
+
+    .location-tabs {
+        margin-left: -20px;
+
+        ul {
+            padding-left: 20px;
         }
     }
 }
