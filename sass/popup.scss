@@ -1,0 +1,373 @@
+/* =========================
+    Popup
+   =========================*/
+
+.popup {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    text-align: left;
+    visibility: hidden;
+    z-index: 1001;
+}
+
+.popup-bg, .popup-side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.popup-bg {
+    width: 100%;
+    left: 0;
+    background: #555;
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+
+.popup-side {
+    width: 50%;
+    z-index: 1;
+    right: 0;
+    background-color: $colorBg;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.35s $easing;
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100%;
+    padding: 40px 105px 60px 65px;
+
+    .hint {
+        color: $colorText2;
+    }
+}
+
+.close {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    top: 27px;
+    right: 35px;
+    cursor: pointer;
+
+    &::before, &::after {
+        @extend .ps;
+        width: 2px;
+        height: 25px;
+        top: -2px;
+        background-color: $colorText;
+        transform-origin: center;
+        transition: background 0.2s;
+    }
+
+    &::before {
+        left: 9px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        left: 9px;
+        transform: rotate(-45deg);
+    }
+
+    &:hover {
+        &::before, &::after {
+            background-color: $colorGreen;
+        }
+    }
+}
+
+
+// Popup Open / Close
+.popup-open {
+
+    body {
+        overflow: hidden;
+    }
+
+    .popup {
+        // z-index: 1001;
+        animation: fadeIn-l 0.3s forwards;
+    }
+
+    .popup-side {
+        transform: translateX(0);
+    }
+
+    .popup-bg {
+        opacity: .45;
+        transition-delay: 0.2s;
+    }
+}
+
+.popup-close {
+
+    .popup-side {
+        transition-duration: 0.35s;
+    }
+    
+    .popup {
+        visibility: visible;
+        animation: fadeOut-l 0.2s forwards 0.7s;        
+    }
+}
+
+
+.position-popup-block {
+    margin: 150px 0;
+
+    .position-name {
+        .ttl {
+            margin-bottom: 7px;
+        }
+    }
+
+    .position-city {
+        @extend .bold;
+        padding-left: 2px;
+        color: $colorGreen;
+    }
+
+    .plus-drop {
+        width: 35px;
+        height: 35px;
+
+        &::before {
+            width: 13px;
+        }
+    
+        &::after {
+            height: 13px;
+        }
+    }
+
+    .position-drop {
+        padding-right: 0;
+
+        section {
+            padding-top: 50px;
+        }
+
+        &.content-text section {
+            > ul:last-child, > p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.input-line {
+    margin-bottom: 35px;
+
+    input, textarea {
+        @extend .bold;
+        width: 100%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid $colorBorder;
+        transition: border-color 0.2s;
+
+        @include ph {
+            opacity: 1 !important;
+        }
+
+        &:focus {
+            border-color: $colorGreen;
+
+            @include ph {
+                opacity: 0.35 !important;
+            }
+        }
+    }
+
+    input {
+        padding-bottom: 31px;
+        color: $colorText;
+
+        @include ph {
+            color: $colorText;
+        }
+    }
+
+    textarea {
+        color: $colorTextG;
+        padding-bottom: 7px;
+        height: 86px;
+        line-height: 18px;
+        resize: none;
+
+        @include ph {
+            color: $colorTextG;
+        }
+    }
+
+    &.textarea {
+        position: relative;
+        margin-bottom: 0;
+
+        .max-length {
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: $colorTextG;
+        }
+    }
+}
+
+.popup-form {
+
+    .input-line:nth-child(2) {
+        margin-bottom: 125px;
+    }
+}
+
+.popup-form-bottom {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 60px;
+
+    .form-element {
+        margin-right: 22px;
+    }
+
+    .btn {
+        margin-left: auto;
+        // align-self: flex-end;
+    }
+}
+
+.form-element {
+    position: relative;
+    overflow: hidden;
+
+    &:hover .ico-c {
+        border-color: $colorGreen;
+    }
+}
+
+.file-add {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+@include desktop--tablet {
+    @media (max-height: 850px) {
+
+        .popup-content {
+            padding-top: 30px;
+            padding-bottom: 35px;
+
+            .hint {
+                display: none;
+            }
+        }
+
+        .position-popup-block {
+            margin: 34px 0 130px;
+        }
+
+        .popup-form {
+            .input-line:nth-child(2) {
+                margin-bottom: 88px;
+            }
+        }
+
+        .popup-form-bottom {
+            padding-top: 55px;
+        }
+    }
+}
+
+@include macbook {
+    .popup-side {
+        width: 55%;
+    }
+
+    .popup-content {
+        padding-right: 75px;
+    }
+
+    .position-popup-block {
+        .position-name {
+            padding-left: 60px;
+        }
+    }
+}
+
+@include tablet {
+    .popup-side {
+        width: 77%;
+    }
+}
+
+@include mobile {
+    .popup-side {
+        width: 100%;
+    }
+
+    .popup-content {
+        padding: 86px 25px 62px;
+
+        .hint {
+            display: none;
+        }
+    }
+
+    .position-popup-block {
+        margin: 0 0 105px;
+
+        .position-name {
+            padding-left: 0;
+        }
+
+        .plus-drop {
+            display: none;
+        }
+    }
+
+    
+
+    .input-line.textarea .max-length {
+        display: none;
+    }
+
+    .popup-form-bottom {
+        position: relative;
+        padding-top: 45px;
+        padding-bottom: 130px;
+
+        .btn {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        .form-element {
+        
+        }
+    }
+
+    // Popup Open / Close
+    .popup-open {
+        .popup-bg {
+            transition-delay: 0s;
+            transition-duration: 0.35s;
+        }
+    }
+}

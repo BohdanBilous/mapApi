@@ -1328,3 +1328,68 @@
         &--size{ right: 21px; }
     }
 }
+
+
+// Tabs
+.tab-block {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+// Icons Circle
+.ico-c {
+    width: 42px;
+    height: 42px;
+    position: relative;
+    border-radius: 50%;
+    transition: border-color 0.2s;
+    border: 2px solid #e5e5e5;
+    cursor: pointer;
+
+    img {
+        @extend .ctr;
+        display: block;
+    }
+
+    &:hover {
+        border-color: $colorGreen;
+    }
+}
+
+.ico-file {
+    img {
+        width: 14px;
+        height: 17px;
+    }
+}
+
+.ico-q {
+    img {
+        width: 10px;
+        height: 16px;
+    }
+}
+
+@include mobile {
+    .ico-c {
+        width: 67px;
+        height: 67px;
+    }
+
+    .ico-file {
+        img {
+            width: 21px;
+            height: 26px;
+        }
+    }
+
+    .ico-q {
+        img {
+            width: 15px;
+            height: 23px;
+        }
+    }
+}

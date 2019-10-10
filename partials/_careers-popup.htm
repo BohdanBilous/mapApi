@@ -1,0 +1,63 @@
+<div class="popup careers-popup @@classes">
+    <div class="popup-bg"></div>
+    <div class="popup-side">
+        <div class="close"></div>
+
+        <div class="popup-content">
+            <div class="hint with-arrow-left">Opened Positions</div>
+
+            <div class="position-popup-block drop-block">
+                <div class="position-name drop-block-ttl">
+                    <div class="plus-drop"></div>
+                    <div class="ttl ttl-3"></div> <!-- Position Title -->
+                    <div class="position-city"></div> <!-- Position City -->
+                </div>
+
+                <div class="position-drop drop-block-content content-text">
+                    <section>
+                        <!-- Position Desc -->
+                    </section>
+                </div>
+            </div>
+
+            <form class="popup-form" autocomplete="off">
+                <div class="input-line">
+                    <input autocomplete="none" placeholder="First & Last Name" type="text" required>
+                </div>
+
+                <div class="input-line">
+                    <input autocomplete="none" placeholder="Email / Phone" type="text" required>
+                </div>
+
+                <div class="input-line textarea">
+                    <div class="max-length">(max.356)</div>
+                    <textarea maxlength="356" placeholder="Your message...." cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="popup-form-bottom">
+                    <div class="form-element">
+                        <input class="file-add" type="file">
+                        <div class="ico-c ico-file">
+                            <img src="images/ico-f.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="form-element">
+                        <div class="ico-c ico-q">
+                            <img src="images/ico-q.svg" alt="">
+                        </div>
+                    </div>
+
+                    @@include('./elements/button.htm', { 
+                        "text": "Apply", 
+                        "submit" : "true", 
+                        "classes": "btn-g btn-arrow-a" 
+                    })
+                </div>
+            </form>
+
+        </div>
+
+
+    </div>
+</div>

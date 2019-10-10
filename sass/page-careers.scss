@@ -69,28 +69,30 @@
     }
 }
 
+.drop-block {
+    &.open {
+        .drop-block-ttl {
+            .plus-drop {
+                background-color: $colorGreen;
+
+                &::before {
+                    background-color: #fff;
+                }
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 .careers-tablet {
 
     .careers-row {
         display: flex;
         flex-wrap: wrap;
         border-bottom: 1px solid $colorBorder;
-        
-        &.open {
-            .position-name {
-                .plus-drop {
-                    background-color: $colorGreen;
-
-                    &::before {
-                        background-color: #fff;
-                    }
-
-                    &::after {
-                        display: none;
-                    }
-                }
-            }
-        }
     }
 
     .careers-td {
@@ -362,7 +364,7 @@
         }
     }
 
-    .position-name {
+    .careers-row .position-name {
         position: static;
         padding-left: 0;
 
