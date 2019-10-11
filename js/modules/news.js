@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import { html, desktop, mobile, exists, scrollFromScreen, tags, imageLazy, filterSidebarInit } from '../generic-helpers';
+import { html, desktop, mobile, exists, scrollFromScreen, tags, filterSidebarInit } from '../generic-helpers';
 import { PageNav } from '../page-nav-anchor';
 import { ParallaxScroll } from '../parallax-scroll';
 import { ImageCursor } from '../image-cursor';
@@ -29,16 +29,31 @@ window.addEventListener("load", function() {
     }
 
     // Lazy Loader Images
-    const images = document.querySelectorAll(".lazy-img");
+    if (exists(".lazy-img")) {
+        const images = document.querySelectorAll(".lazy-img");
 
-    images.forEach( image => {
-        const mediaQueryImages = [
-            { media: "screen and (min-width: 768px)", src: image.dataset.src }, 
-            { media: "screen and (max-width: 767px)", src: image.dataset.srcmob }
-        ];
+        images.forEach( image => {
+            const mediaQueryImages = [
+                { media: "screen and (min-width: 768px)", src: image.dataset.bg }, 
+                { media: "screen and (max-width: 767px)", src: image.dataset.bgmob }
+            ];
+    
+            new MediaLoader(image, "image", mediaQueryImages);
+        });
+    }
+    
+    if (exists(".lazy-bg")) {
+        const bgs = document.querySelectorAll(".lazy-bg");
 
-        new MediaLoader(image, "image", mediaQueryImages);
-    });
+        bgs.forEach( bg => {
+            const mediaQueryBackgrounds = [
+                { media: "screen and (min-width: 768px)", src: bg.dataset.bg }, 
+                { media: "screen and (max-width: 767px)", src: bg.dataset.bgmob }
+            ];
+    
+            new MediaLoader(bg, "background", mediaQueryBackgrounds);
+        });
+    }
 
     // Events Cursor Image
     if (desktop) {

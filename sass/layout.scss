@@ -275,6 +275,14 @@ $widthMidCol: 36%;
     justify-content: space-between;
 }
 
+.simple-col {
+    .now-flag {
+        position: static;
+        align-self: flex-start;
+        
+    }
+}
+
 .fx-sb {
     @extend .flex-sb; 
 }

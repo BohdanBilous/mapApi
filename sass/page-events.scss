@@ -103,6 +103,16 @@ div.border-rad-top {
             bottom: 30px;
         }
     }
+
+    .event-section-main {
+        .simple-col {
+            padding-bottom: 55px;
+            
+            .now-flag {
+                display: block;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 800px) {

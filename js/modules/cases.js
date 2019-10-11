@@ -11,9 +11,9 @@ window.addEventListener("load", function() {
     // Page Nav
     if (exists(".media-stream--container") && exists(".cases-container")) {
         const titleWrap = document.querySelector(".media-stream--categories-ttl-sticky") || null;
-        let pageNav = new PageNav(".media-stream--container", ".cases-container", changeMonth);
+        let pageNav = new PageNav(".media-stream--container", ".cases-container", changeCat);
 
-        function changeMonth(name, items) {
+        function changeCat(name, items) {
             titleWrap.querySelector(".ttl").innerHTML = name;
             titleWrap.querySelector(".items").innerHTML = items;
         }

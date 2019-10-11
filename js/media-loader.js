@@ -45,6 +45,7 @@ export class MediaLoader {
     }
 
     setBackground() {
+        console.log(this.element);
         this.element.style.backgroundImage = this.element.dataset.src;
     }
 
