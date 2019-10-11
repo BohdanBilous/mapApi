@@ -419,10 +419,12 @@
                     }
     
                     .tags-more {
+                        overflow: hidden;
                         margin-left: 14px;
     
                         &.open {
                             margin-left: 0;
+                            overflow: visible;
                         }
     
                         .tags-more--drop {
