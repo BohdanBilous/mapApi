@@ -11,6 +11,9 @@
     text-align: left;
     visibility: hidden;
     z-index: 1001;
+
+
+    visibility: visible;
 }
 
 .popup-bg, .popup-side {
@@ -364,4 +367,114 @@
             transition-duration: 0.35s;
         }
     }
+}
+
+// POPUP TEAM
+
+.team-popup {
+    .popup-content {
+        padding-bottom: 30px;
+
+        .hint {
+            display: block;
+        }
+    }
+}
+
+.team-member-desc {
+    width: 45%;
+    margin-top: 50px;
+    margin-bottom: 45px;
+
+    @include macbook {
+        width: 57%;
+    }
+
+    .photo {
+        overflow: hidden;
+        margin: auto -105px 0 -65px;
+        max-height: 345px;
+
+        @include macbook {
+            margin-right: -75px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .team-name {
+        padding-top: 52px;
+        padding-bottom: 50px;
+
+        p {
+            padding-top: 4px;
+            color: $colorTextG;
+        }
+    }
+}
+
+.team-member-address {
+    div, a {
+        display: block;
+        margin-bottom: 7px;
+        color: $colorTextG;
+    }
+}
+
+.popup-content {
+    .social {
+        margin: 0 auto 0 23px;
+    }
+
+    .follow-us {
+        margin-top: 33px;
+
+        .link-l {
+            color: $colorText2;
+        }
+    }
+}
+
+
+@include tablet {
+    .popup {
+        .follow-us {
+            margin-top: 65px;
+
+            .hint {
+                opacity: 0.5;
+                color: $colorText2;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            .social {
+                margin: 0;
+
+                li {
+                    margin-bottom: 23px;
+                    padding-left: 34px;
+    
+                    span {
+                        font-size: 14px;
+                        line-height: 44px;
+                    }
+    
+                    img {
+                        right: auto;
+                        left: 0;
+                        bottom: 11px;
+                    }
+                }
+            }
+
+            .link-l {
+                display: none;
+            }
+        }
+    }    
 }

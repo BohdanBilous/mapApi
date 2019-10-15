@@ -66,6 +66,7 @@ function js(){
         'js/modules/events.js',
         'js/modules/cases.js',
         'js/modules/careers.js',
+        'js/modules/team.js',
         'js/modules/resources.js'
         ],
     experimentalCodeSplitting: true,
@@ -108,6 +109,7 @@ function jsProd(){
         'js/modules/events.js',
         'js/modules/cases.js',
         'js/modules/careers.js',
+        'js/modules/team.js',
         'js/modules/resources.js'
         ],
     experimentalCodeSplitting: true,

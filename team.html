@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js popup-open">
+    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+    @@include('./partials/scripts.htm')
+    <body>
+        @@include('./partials/preloader.htm')
+        @@include('./partials/header.htm', { "classes": "" })
+        @@include('./partials/menu.htm', {
+            "solution": "",
+            "about": "",
+            "news-act": "",
+            "resources": "",
+            "events": "",
+            "cases": "",
+            "careers": "",
+            "sites": "",
+            "contact": ""
+        })
+        
+        <main class="main">
+
+            <!-- Top Screen -->
+            <div class="title-top title-top--mob-ver socket layout-row">
+                <div class="layout-col-l">
+                    @@include('./partials/elements/button-link.htm', { 
+                        "text": "Back", 
+                        "href" : "index.html", 
+                        "classes": "btn-back" 
+                    })
+                </div>
+
+                <div class="layout-col-r">
+                    <div class="col">
+                        <h1 class="ttl-1 ttl">Team</h1>
+                        <div class="hint hint-from-top with-arrow-left">Discover Team</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="socket">
+                <div class="team-grid">
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="images/team-1.jpg" alt="">
+                        </div>
+                        <div class="team-name">
+                            <div class="ttl ttl-4">Sandra Nelson</div>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                        <div class="location-city">London</div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="images/team-2.jpg" alt="">
+                        </div>
+                        <div class="team-name">
+                            <div class="ttl ttl-4">Randy Hart</div>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                        <div class="location-city">Madrid</div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="images/team-3.jpg" alt="">
+                        </div>
+                        <div class="team-name">
+                            <div class="ttl ttl-4">Debra Bowman</div>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                        <div class="location-city">Berlin</div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="images/team-4.jpg" alt="">
+                        </div>
+                        <div class="team-name">
+                            <div class="ttl ttl-4">Debra Bowman</div>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                        <div class="location-city">London</div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="images/team-5.jpg" alt="">
+                        </div>
+                        <div class="team-name">
+                            <div class="ttl ttl-4">Randy Hart</div>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                        <div class="location-city">Madrid</div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="images/team-6.jpg" alt="">
+                        </div>
+                        <div class="team-name">
+                            <div class="ttl ttl-4">Sandra Nelson</div>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                        <div class="location-city">Berlin</div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="images/team-7.jpg" alt="">
+                        </div>
+                        <div class="team-name">
+                            <div class="ttl ttl-4">Karen Gardner</div>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                        <div class="location-city">London</div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="images/team-8.jpg" alt="">
+                        </div>
+                        <div class="team-name">
+                            <div class="ttl ttl-4">Maria Burke</div>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                        <div class="location-city">Madrid</div>
+                    </div>
+
+                    <div class="team-item">
+                        <div class="team-img">
+                            <img src="images/team-9.jpg" alt="">
+                        </div>
+                        <div class="team-name">
+                            <div class="ttl ttl-4">Randy Boyd</div>
+                            <p>Chief Executive Officer</p>
+                        </div>
+                        <div class="location-city">Berlin</div>
+                    </div>
+                </div>
+
+                <div class="team-slog">
+                    <p>We believe that people are our most valuable asset. We also believe that to truly challenge our clients we must be the consultants that best master both deep functional expertise and change impact expertise. </p>
+                    @@include('./partials/elements/button-link.htm', { 
+                        "text": "Join Us",
+                        "href" : "#", 
+                        "classes": "btn-g btn-arrow-a" 
+                    })
+                </div>
+            </div>
+          
+            <!-- Footer -->
+            <footer class="footer footer-bg">
+                <div class="info-row layout-row socket">
+                    <div class="layout-col-l">
+                        <h3 class="ttl-4">Becoming a customer</h3>
+                        @@include('./partials/elements/button-link.htm', { 
+                            "text": "Place an order", 
+                            "href" : "#", 
+                            "classes": "btn-g btn-arrow-a" 
+                        })
+                    </div>
+                    <div class="layout-col-r">
+                        <div class="layout-col-s-4">
+                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                        </div>
+                        <div class="layout-col-s-6">
+                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                            <div class="with-us">
+                                <h3 class="ttl-4">Already with us</h3>
+                                @@include('./partials/elements/button-link.htm', { 
+                                    "text": "Tools & Resources", 
+                                    "href" : "#", 
+                                    "classes": "" 
+                                })
+                            </div>
+                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
+                        </div>
+                    </div>
+                </div>
+                @@include('./partials/footer-main.htm', { "classes": "footer-bg" })
+            </footer>
+        </main>
+
+        @@include('./partials/_team-popup.htm', { "classes": "" })
+    </body>
+
+    <script>
+        SystemJS.import('./js/app.js');
+        SystemJS.import('./js/team.js');
+    </script>
+</html>

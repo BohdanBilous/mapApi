@@ -435,7 +435,7 @@
             }
         }
 
-        &.has-img, &.has-video { // With Image
+        &.has-img, &.has-video, &.instruction { // With Image
             border-bottom: 1px solid $colorBorder;
 
             .author-block {

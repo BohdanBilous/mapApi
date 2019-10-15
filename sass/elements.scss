@@ -813,11 +813,26 @@
         margin-right: 10px;   
     }
 
-
     span {
         display: inline-block;
         line-height: 32px;
         color: $colorText2;
+    }
+}
+
+.location-city {
+    @extend .bold;
+    position: relative;
+    padding-left: 15px;
+    color: $colorGreen;
+
+    &::before {
+        @extend .ps;
+        left: 0;
+        width: 8px;
+        height: 11px;
+        background: url(../images/ico-loc.svg);
+        background-size: 100% 100%;
     }
 }
 
@@ -1325,7 +1340,7 @@
     .file-item {
         padding-right: 60px;
 
-        &--size{ right: 21px; }
+        &--size { right: 21px; }
     }
 }
 
