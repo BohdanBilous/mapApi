@@ -2,32 +2,36 @@
 
 /* MODULE IMPORTS */
 import { html, desktop, mobile, exists, scrollFromScreen,
-         findParent, animateSwitch } from '../generic-helpers';
+         findParent, animateSwitch, loadContent } from '../generic-helpers';
 
 window.addEventListener("load", function() {
 
     // Scroll From Screen
     if (exists(".hint-from-top")) scrollFromScreen(".title-top");
 
-    // Popup Open 
-    // const teamMembers = document.querySelectorAll(".team-member");
-    // const popupClose = document.querySelector(".popup .close");
-    
-    // teamMembers.forEach( teamMember => {
-    //     button.addEventListener("click", () => {
-    //         html.classList.add("popup-open");
-    //         html.classList.remove("popup-close");   
-    //         animateSwitch(".popup .fade-in", "on", 1, 800);
-    //         animateSwitch(".popup .move-from-right", "on", 65, 250); 
+    // Popup Team Open 
+    const teamMembers = document.querySelectorAll(".team-item");
+    const popupClose = document.querySelector(".popup .close");
+    const popupLoadBlock = document.querySelector(".popup .team-member-load");
+    let teamMemberId;
 
-    //     });
-    // });
+    let loadPopupInfo = () => {
+        loadContent(popupLoadBlock, `_load-team-info.html`);
+        // loadContent(popupLoadBlock, `_load-team-info-${teamMemberId}.html`);
+    }
 
-    // popupClose.addEventListener("click", () => {
-    //     html.classList.remove("popup-open");
-    //     html.classList.add("popup-close");
-    //     animateSwitch(".popup .fade-in", "off");
-    //     animateSwitch(".popup .move-from-right", "off");
-    // });
+    teamMembers.forEach( teamMember => {
+        teamMember.addEventListener("click", () => {
+            teamMemberId = teamMember.getAttribute("id");
+            html.classList.add("popup-open");
+            html.classList.remove("popup-close");   
+            
+            loadPopupInfo(teamMemberId);
+        });
+    });
 
+    popupClose.addEventListener("click", () => {
+        html.classList.remove("popup-open");
+        html.classList.add("popup-close");
+    });
 });

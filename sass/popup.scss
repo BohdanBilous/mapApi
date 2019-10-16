@@ -13,7 +13,7 @@
     z-index: 1001;
 
 
-    visibility: visible;
+    // visibility: visible;
 }
 
 .popup-bg, .popup-side {
@@ -370,7 +370,6 @@
 }
 
 // POPUP TEAM
-
 .team-popup {
     .popup-content {
         padding-bottom: 30px;
@@ -382,13 +381,8 @@
 }
 
 .team-member-desc {
-    width: 45%;
     margin-top: 50px;
     margin-bottom: 45px;
-
-    @include macbook {
-        width: 57%;
-    }
 
     .photo {
         overflow: hidden;
@@ -399,8 +393,14 @@
             margin-right: -75px;
         }
 
+        @include mobile {
+            margin-right: -25px;
+            margin-left: -25px;
+        }
+
         img {
             width: 100%;
+            object-fit: cover;
         }
     }
 
@@ -412,6 +412,14 @@
             padding-top: 4px;
             color: $colorTextG;
         }
+    }
+}
+
+.team-member-text {
+    width: 45%;
+
+    @include macbook {
+        width: 57%;
     }
 }
 
@@ -477,4 +485,24 @@
             }
         }
     }    
+}
+
+@include mobile {
+    .team-popup {
+        .popup-content {
+            padding-top: 120px;
+
+            > .hint {
+                display: none;
+            }
+        }
+    }
+
+    .team-member-desc {
+        margin-top: 0;
+    }
+
+    .team-member-text {
+        width: 86%;
+    }
 }
