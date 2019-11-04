@@ -3,7 +3,7 @@
    ========================= */
 
 // Drop Down Element
-.drop-down-element {    
+.drop-down-element {
     @extend .zIndex;
     position: relative;
     display: inline-block;
@@ -128,7 +128,8 @@
     white-space: nowrap;
     align-self: flex-start;
 
-    &.with-arrow, &.with-arrow-left {
+    &.with-arrow,
+    &.with-arrow-left {
         padding-right: 13px;
 
         &::after {
@@ -178,7 +179,8 @@
         min-width: 150px;
     }
 
-    &::after, &:not(.btn-arrow-a)::before {
+    &::after,
+    &:not(.btn-arrow-a)::before {
         @extend .ps;
         width: 100%;
         height: 100%;
@@ -211,7 +213,7 @@
     }
 
     .arrow {
-        @include tr-right(4px,4px,4px, $colorText2);
+        @include tr-right(4px, 4px, 4px, $colorText2);
         position: absolute;
         z-index: 1;
         right: 14px;
@@ -245,7 +247,7 @@
 
     &.btn-blur {
         background: inherit;
-        
+
         &::after {
             // background: #E5E5E5;
             // filter: blur(40px);
@@ -257,7 +259,7 @@
             // right: -20px;
             // width: auto;
             // height: auto;
-            
+
             background-image: inherit;
             filter: url(#blur-filter);
             filter: blur(60px);
@@ -310,7 +312,8 @@
                 transition-delay: 0.1s;
                 background-color: #e5e5e5;
 
-                &::before, &::after {
+                &::before,
+                &::after {
                     background-color: $colorText;
                     transition-delay: 0.1s;
                 }
@@ -422,8 +425,9 @@
             .plus {
                 transition-delay: 0.1s;
                 background-color: #e5e5e5;
-    
-                &::before, &::after {
+
+                &::before,
+                &::after {
                     background-color: $colorText;
                     transition-delay: 0.1s;
                 }
@@ -472,13 +476,13 @@
             bottom: 75px;
         }
 
-        > span {
+        >span {
             color: $colorTextG;
             filter: grayscale(100%);
             padding-left: 47px;
             font-size: 12px;
             transition: filter 0.2s, color 0.2s;
-            
+
             &.ateappleical {
                 background-size: 16px auto;
             }
@@ -517,7 +521,7 @@
         .arrow {
             top: 21px;
         }
-    }      
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -558,7 +562,7 @@
                 right: 15px;
             }
         }
-    }       
+    }
 }
 
 // Slider Buttons
@@ -568,7 +572,9 @@
     width: 100px;
 }
 
-.button-prev, .button-next, .play {
+.button-prev,
+.button-next,
+.play {
     display: inline-block;
     position: relative;
     width: 45px;
@@ -590,10 +596,8 @@
     &.grey {
         border: none;
         background-color: #e5e5e5;
-        
-        &::after {
 
-        }
+        &::after {}
     }
 }
 
@@ -602,17 +606,17 @@
     background-color: #fff;
 
     &::after {
-        @include tr-right(3px,3px,4px, $colorText2);
+        @include tr-right(3px, 3px, 4px, $colorText2);
     }
 }
 
 .button-next::after {
-    @include tr-right(4px,4px,4px, $colorText2);
+    @include tr-right(4px, 4px, 4px, $colorText2);
     left: 52%;
 }
 
 .button-prev::after {
-    @include tr-left(4px,4px,4px, $colorText2);
+    @include tr-left(4px, 4px, 4px, $colorText2);
     left: 47%;
 }
 
@@ -645,7 +649,8 @@
         transition: opacity 0.3s linear 0s;
     }
 
-    &.show { // SHOW
+    &.show {
+        // SHOW
         transform: scale(1);
 
         span {
@@ -667,11 +672,11 @@
 .play {
     width: 32px;
     height: 32px;
-    border-color:#bcbcba;
+    border-color: #bcbcba;
     background-color: #adadab;
 
     &::after {
-        @include tr-right(4px,4px,4px, #fff);
+        @include tr-right(4px, 4px, 4px, #fff);
     }
 
     &.trans {
@@ -768,7 +773,8 @@
     }
 }
 
-.month, .year {
+.month,
+.year {
     @extend .bold;
     @extend .text-g;
 }
@@ -799,7 +805,7 @@
 .location {
     display: flex;
     align-self: flex-start;
-    position: relative;    
+    position: relative;
     min-width: 120px;
     height: 30px;
     border-radius: 7px;
@@ -809,8 +815,8 @@
     img {
         @extend .ctrVert;
         width: 10px;
-        height: 14px; 
-        margin-right: 10px;   
+        height: 14px;
+        margin-right: 10px;
     }
 
     span {
@@ -895,7 +901,7 @@
         border-radius: 50%;
     }
 
-    .author-name {  
+    .author-name {
         align-self: center;
     }
 }
@@ -1046,7 +1052,7 @@
             color: $colorTextG;
         }
     }
-    
+
     .btn-search {
         @extend .ctrVert;
         position: absolute;
@@ -1096,7 +1102,7 @@
     width: 15px;
     height: 15px;
     cursor: pointer;
-    
+
     &::after {
         @extend .ps;
         left: 0;
@@ -1161,7 +1167,9 @@
 
 // Date Range
 .date-range {
-    .date-start, .date-end {
+
+    .date-start,
+    .date-end {
         font-size: 50px;
         line-height: 47px;
         letter-spacing: -1.75px;
@@ -1171,7 +1179,7 @@
     .date-start {
         position: relative;
         width: 60px;
-        
+
         &::after {
             @extend .ps;
             width: 47px;
@@ -1188,7 +1196,9 @@
 }
 
 @mixin dataRangeTbl {
-    .date-start, .date-end {
+
+    .date-start,
+    .date-end {
         font-size: 35px;
         line-height: 35px;
         letter-spacing: -1.23px;
@@ -1211,7 +1221,9 @@
 }
 
 @mixin dataRangeMob {
-    .date-start, .date-end {
+
+    .date-start,
+    .date-end {
         font-size: 27px;
         line-height: 27px;
         letter-spacing: -0.7px;
@@ -1286,8 +1298,8 @@
     padding-right: 75px;
     font-family: $fontMedium;
     color: $colorTextG;
-    margin-bottom: 13px;  
-    
+    margin-bottom: 13px;
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -1330,7 +1342,9 @@
     }
 
     &:hover {
-        .file-item--name, .file-item--size {
+
+        .file-item--name,
+        .file-item--size {
             color: $colorGreen;
         }
     }
@@ -1340,7 +1354,9 @@
     .file-item {
         padding-right: 60px;
 
-        &--size { right: 21px; }
+        &--size {
+            right: 21px;
+        }
     }
 }
 
