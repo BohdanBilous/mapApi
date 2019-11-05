@@ -6,83 +6,87 @@
 
 <body>
     @@include('./partials/preloader.htm')
-    @@include('./partials/header.htm', { "classes": "color-w" })
-    @@include('./partials/menu.htm', {
-    "solution": "",
-    "about": "",
-    "news": "active",
-    "resources": "",
-    "events": "",
-    "cases": "",
-    "careers": "",
-    "sites": "",
-    "contact": ""
-    })
-
-    <main class="main">
-
-        <!-- Top Screen -->
-        <div class="screen screen-top screen-head">
-            <div class="screen-bg" style="background-image: url(images/news-bg.jpg)"></div>
-            <div class="screen-inner screen-inner--with-pad-btns socket layout-row align-right">
-                <div class="hint hint-from-top with-arrow-left">Discover News</div>
-                <div class="button-btm-right">
-                    @@include('./partials/elements/button-link.htm', {
-                    "text": "Learn More",
-                    "href" : "events.html",
-                    "classes": "btn-g btn-arrow-a"
-                    })
-
-                    @@include('./partials/elements/button-link.htm', {
-                    "text": "Details",
-                    "href" : "event-open.html",
-                    "classes": "btn-more btn-blur btn-arrow-a"
-                    })
-                </div>
-
-                <div class="layout-col-r">
-                    <div class="screen-content">
-                        <div class="screen-content--ttl-s">
-                            <h1 class="ttl-1 ttl">MeshMinds 2.0: Artx Tech for Good.</h1>
-                        </div>
-                        <div class="screen-content--slog ttl-4">We are looking forward to meet you.</div>
-                        <div class="screen-content--type-s">Events</div>
-                        <div class="screen-content--date-s">
-                            <div class="place">Berlin, Germany</div>
-                            <div class="date">24.4 — 28.4</div>
-                        </div>
+    <div class="news-open-top">
+        <div class="news-open-header-main">
+            @@include('./partials/header.htm')
+            @@include('./partials/menu.htm', {
+            "solution": "",
+            "about": "",
+            "news": "active",
+            "resources": "",
+            "events": "",
+            "cases": "",
+            "careers": "",
+            "sites": "",
+            "contact": ""
+            })
+            <div class="header-content">
+                <div class="header-content-inner ml-layout">
+                    <div class="inner-left">
+                        <p class="header-content-time">6 min read</p>
+                        <h2 class="ttl-2">Petainer launches new Hybrid kegs.</h2>
+                        <a href="#main" class="header-content-scroll">
+                            <span class="text">Scroll</span>
+                        </a>
+                    </div>
+                    <div class="inner-right">
+                        <p>Published</p>
+                        <h3 class="ttl-3">24.4</h3>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Top Screen -->
+        <div class="screen screen-top screen-head ">
+            <div class="screen-bg" style="background-image: url(images/news-open-0.jpg)"></div>
+        </div>
+    </div>
 
+
+
+
+    <main id="main" class="main news-open">
         <!-- Content -->
         <div class="content content-media content-news-open ">
             <div class="news-open-header">
                 <div class="news-open-header-inner">
-                    <button class="btn btn-arrow-a " type="button">
-                        <span>Back</span>
-                        <div class="arrow"></div>
-                    </button>
-                    <div class="author-block">
-                        <div class="avatar"><img src="images/avatar.png" alt=""></div>
-                        <div class="author-name ttl-5">George Boyd</div>
-                        <span class="gray">Author</span>
+                    <div class="btn-block">
+                        <button class="btn" type="button">
+                            <span>Back</span>
+                            <div class="arrow"></div>
+                        </button>
                     </div>
-                    <div class="share">
-                        <p>Share :</p>
-                        <div class="share-icons">
-                            <a href="#">
-                                <div class="share-icon"></div>
-                            </a>
+                    <div class="author-block ml-layout">
+                        <div class="avatar"><img src="images/av-2.png" alt=""></div>
+                        <div class="author-block-text">
+                            <div class="author-name ttl-5">Brenda Arnold</div>
+                            <span class="gray">Author</span>
                         </div>
+                    </div>
+                    <div class="follow-us">
+                        <div class="hint">Social Medias :</div>
+                        <ul class="social">
+                            <li>
+                                <a href="">
+                                    <img src="images/social-facebook.svg" alt="">
+                                    <span>246</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/social-twitter.svg" alt="">
+                                    <span>535</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
             </div>
             <div class="news-open-container ">
                 <div class="news-open-article">
-                    <article class=" has-video">
-                        <p>
+                    <article class="has-video">
+                        <p class=" ml-layout">
                             Petainer, the market leader in one—way <a href="#" class="blue underline">Pet kegs</a>,
                             is launching its new
                             30L and
@@ -108,24 +112,26 @@
                             logistics and washing processes because it is filled, sent and recycled when it is
                             empty, the
                             keg reduces supply chain costs by up to 40% versus steel.</p>
-                        <blockquote>
+                        <blockquote class="ml-layout tbl-left">
                             First one—way keg to use a circular economy design.
                         </blockquote>
-                        <div class="news-open-info">
+                        <div class="news-open-info ml-layout tbl-left">
                             <span class="time blue">2:21</span>
                             <span class="gray">Closing the loop. </span>
                         </div>
-                        <div class="news-open-video">
+                        <div class="news-open-video ml-layout-video">
                             <img class="media-img" src="images/news-open-1.jpg" alt="#">
                             <div class="play-button-wrap">
                                 <div class="play trans"></div>
                             </div>
                         </div>
-                        <p class="news-open-description gray">How Petainer is taking recycling to the next
+
+                        <p class="news-open-description gray ml-layout tbl-left">How Petainer is taking recycling to the
+                            next
                             level.
                         </p>
-                        <h2 class="ttl-2">Hybrid Keg</h2>
-                        <p>
+                        <h2 class="ttl-2 ml-layout">Hybrid Keg</h2>
+                        <p class="ml-layout">
                             The Hybrid keg portfolio is designed to support brand expansion to new markets with
                             improved safety features like puncture and drop resistance, burst pressure over 7bar and
                             is fully functional at 40oC. At just 10% the weight of a steel keg, the Hybrid provides
@@ -143,7 +149,7 @@
                             product can be dispensed anywhere in the world. In addition, the 20L Slimline Hybrid has
                             been designed so that it fits in standard kegerators.
                         </p>
-                        <div class="news-open-info">
+                        <div class="news-open-info ml-layout">
                             <span class="blue">6 photos</span>
                             <span class="gray">Closing the loop. </span>
 
@@ -154,6 +160,17 @@
                                 <button class="next button-next"></button>
                             </div>
                             <div class="swipe-hint only-mobile"></div>
+                            <ul class="slider-dots ">
+                                <li class="active">
+                                </li>
+                                <li>
+
+                                </li>
+                                <li>
+
+                                </li>
+                            </ul>
+
                             <div class="slides">
                                 <div class="slide active">
                                     <figure>
@@ -172,43 +189,57 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="news-open-description gray">How Petainer is taking recycling to the next
+                        <p class="news-open-description gray ml-layout">How Petainer is taking recycling to the next
                             level.
                         </p>
+                        <ul class="social social-mobile">
+                            <li>
+                                <a href="">
+                                    <img src="images/social-facebook.svg" alt="">
+                                    <span>246</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="images/social-twitter.svg" alt="">
+                                    <span>535</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </article>
                     <div class="news-open-subscribe">
-                        <h3 class="ttl-3"> Subscribe: </h3>
-                        <h5>Business, Sustainability and Innovation:
-                            sign—up for the latest news!</h5>
-
-                        <form class="email-form full" action="#" autocomplete="off">
-                            <input type="email" placeholder="Email" required>
-                            <button class="btn btn-g btn-arrow-a btn-change-text" data-text="Subscribe" type="submit"
-                                data-media="(max-width: 767px), and (max-width: 840px) and (orientation: landscape)">
-                                <span>OK</span>
-                                <div class="arrow"></div>
-                            </button>
-                        </form>
-                        </form>
+                        <h4 class="ttl-4 ml-layout"> Subscribe: </h3>
+                            <h5 class="ml-layout">Business, Sustainability and Innovation:
+                                <br>
+                                sign—up for the latest news!</h5>
+                            <form class="email-form full ml-layout" action="#" autocomplete="off">
+                                <input type="email" placeholder="Email" required>
+                                <button class="btn btn-g btn-arrow-a btn-change-text" data-text="OK" type="submit">
+                                    <span>OK</span>
+                                    <div class="arrow"></div>
+                                </button>
+                            </form>
                     </div>
                 </div>
                 <div class="next-arcticle">
-                    <div class="next-arcticle-inner">
-                        <h2 class="ttl-2">Read Next</h2>
-                        <div class="next-arcticle-info">
-                            <span class="time gray  ">17.05</span>
-                            <h4 class="ttl-4">How to increase revenue?</h4>
-                            <div class="tags-list"><a href="page-tag.html" class="tag">Sustainability</a></div>
-                            <a class="btn" href="#"><span>Open Article</span>
-                                <div class="arrow" style=""></div><svg class="blur-bg" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <filter id="blur-filter">
-                                        <feGaussianBlur stdDeviation="10"></feGaussianBlur>
-                                    </filter>
-                                </svg>
-                            </a>
+                    <div class="next-arcticle-inner ">
+                        <div class="ml-layout">
+                            <h2 class="ttl-2">Read Next</h2>
+                            <div class="next-arcticle-info">
+                                <span class="time gray  ">17.05</span>
+                                <h4 class="ttl-4">How to increase <br> revenue?</h4>
+                                <div class="tags-list"><a href="page-tag.html" class="tag">Sustainability</a></div>
+                                <a class="btn" href="#"><span>Open Article</span>
+                                    <div class="arrow" style=""></div><svg class="blur-bg" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <filter id="blur-filter">
+                                            <feGaussianBlur stdDeviation="10"></feGaussianBlur>
+                                        </filter>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-
                     </div>
                 </div>
                 <!-- Footer -->
