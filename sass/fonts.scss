@@ -27,6 +27,10 @@ h1, h2, h3, h4, h5 {
 
 .ttl-1, .ttl-2, .ttl-3, .ttl-4, .ttl-5 {
     @extend .bold;
+
+    span {
+        color: $colorTextG;
+    }
 }
 
 .ttl-1 {

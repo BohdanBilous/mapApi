@@ -189,10 +189,6 @@
         display: block;
     }
 
-    .file-item {
-        
-    }
-
     &.scroll {
         @extend .scroll-custom;
         padding-right: 10px;
@@ -217,6 +213,10 @@
 .select-custom {
     position: relative;
 
+    &.with-shadow .select-items {
+        box-shadow: 0px 2px 1px 0px #0000002b;
+    }
+
     select {
         position: absolute;
         opacity: 0;
@@ -227,13 +227,14 @@
     .select-selected {
         @extend .bold;
         position: relative;
+        height: 29px;
+        line-height: 30px;
         padding: 0 35px 0 18px;
-        height: 35px;
-        line-height: 37px;
         background-color: #e5e5e5;
         border-radius: 4px;
         color: $colorText;
         cursor: pointer;
+        white-space: nowrap;
 
         &.select-arrow-active {
             border-radius: 4px 4px 0 0;
@@ -257,9 +258,9 @@
     .select-items {
         position: absolute;
         left: 0;
-        top: 35px;
+        top: 29px;
         width: 100%;
-        padding: 15px 30px 0 20px;
+        padding: 15px 15px 15px 20px;
         border-radius: 0 0 4px 4px;
         background-color: #e5e5e5;
         z-index: 600;
@@ -267,7 +268,6 @@
         .select-inner {
             @extend .scroll-custom;
             padding: 0 30px 0 0;
-            max-height: 343px;
             overflow-y: auto;
         }
 
@@ -275,12 +275,37 @@
             @extend .bold;
             @extend .trans-opacity;
             position: relative;
-            min-height: 85px;
-            line-height: 37px;
-            padding: 24px 0 24px 70px;
+            padding: 5px 0;
             font-size: 12px;
             color: $colorText;
             cursor: pointer;
+
+            &:hover {
+                color: $colorGreen;
+            }
+        }
+    }
+}
+
+.select-custom.with-icons {
+
+    .select-selected {
+        height: 35px;
+        line-height: 37px;
+    }
+
+    .select-items {
+        top: 35px;
+        padding: 15px 30px 0 20px;
+
+        .select-inner {
+            max-height: 343px;
+        }
+
+        .select-item {
+            min-height: 85px;
+            line-height: 37px;
+            padding: 24px 0 24px 70px;
             border-bottom: 1px solid $colorBorder;
 
             &::before {
@@ -290,6 +315,18 @@
                 width: 35px;
                 height: 35px;
                 background-size: 100% 100%;
+            }
+
+            &:last-child {
+                border: none;
+            }
+
+            img.icon {
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                top: 24px;
+                left: 5px;
             }
 
             &:nth-child(1)::before { background: url(../images/ind-0.svg); }
@@ -312,27 +349,12 @@
             &:nth-child(8):hover::before { background: url(../images/ind-7-h.svg); }
             &:nth-child(9):hover::before { background: url(../images/ind-8-h.svg); }
 
-            &:last-child {
-                border: none;
-            }
-
-            img.icon {
-                position: absolute;
-                width: 35px;
-                height: 35px;
-                top: 24px;
-                left: 5px;
-            }
-
-            &:hover {
-                color: $colorGreen;
-            }
         }
     }
 }
 
 @include macbook {
-    .select-custom {
+    .select-custom.with-icons {
         .select-items {
             padding-right: 15px;
 
@@ -357,7 +379,7 @@
         border-bottom: 1px solid $colorBorder;
     }
 
-    .select-custom {
+    .select-custom.with-icons {
 
         .select-selected {
             background: none;

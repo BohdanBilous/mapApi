@@ -1,0 +1,463 @@
+/* =========================
+    Solution Open
+   ========================= */
+
+.solution-p-filter-row {
+    display: flex;
+    justify-content: space-between;
+
+    .solution-p-filters {
+        display: flex;
+    }
+
+    .solution-p-select {
+        height: 100%;
+        display: flex;
+        align-self: baseline;
+        padding-bottom: 17px;
+
+        .select-custom {
+            align-self: flex-end;
+        }
+    }
+}
+
+.solution-p-filter {
+    margin: 0 82px 0 0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--buttons {
+        display: flex;
+    }
+
+    &--label {
+        width: 100%;
+        margin-bottom: 11px;
+    }
+
+    &--button {
+        min-width: 66px;
+        height: 29px;
+        cursor: pointer;
+        text-align: center;
+        margin: 0 17px 17px 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        span {
+            display: block;
+            height: 100%;
+            padding: 0 13px;
+            line-height: 31px;
+            border-radius: 4px;
+            background-color: #e5e5e5;
+            transition: background-color 0.2s;
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+
+            &:checked ~ span {
+                background-color: $colorGreen;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.select-custom-ind {
+    width: 155px;
+}
+
+// SPECS SECTION
+.specs-section {
+    height: 655px;
+    padding-bottom: 18px;
+    background-color: $colorPanel;
+    overflow: hidden;
+
+    .hint {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .ttl-2 {
+        position: absolute;
+        left: 0;
+        bottom: 335px;
+    }
+
+    .spec-button-wrap {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        bottom: 0;
+    }
+
+    .spec-img {
+        position: absolute;
+        width: 620px;
+        bottom: -18px;
+        right: 16%;
+        transition: transform 0.2s;
+        transform-origin: left bottom;
+    }
+
+    &.open {
+        .spec-det-block {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .spec-img {
+            transform: scale(0.83);
+        }
+    }
+}
+
+.spec-det-block {
+    position: absolute;
+    left: 0;
+    top: 405px;
+    max-height: 180px;
+    overflow: hidden;
+    transition: transform 0.2s $easing, opacity 0.3s;
+    transform: translateX(-50px);
+    opacity: 0;
+
+    li {
+        margin-bottom: 16px;
+
+        span {
+            display: inline-block;
+            min-width: 213px;
+            color: $colorTextG;
+        }
+    }
+}
+
+
+.spec-button-wrap {
+    display: flex;
+
+    .spec-button-label {
+        padding-top: 4px;
+        margin-right: 30px;
+        color: $colorText2;
+    }
+}
+
+.spec-button {
+    position: relative;
+    height: 20px;
+    line-height: 22px;
+    padding-left: 28px;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $colorGreen;
+    }
+
+    i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        width: 21px;
+        height: 21px;
+        background-color: #fff;
+        border-radius: 50%;
+
+        &::before, &::after {
+            @extend .ps;
+            @extend .ctr;
+            position: absolute;
+            background-color: #707070;
+            transition: opacity 0.2s;
+        }
+
+        &::before {
+            width: 7px;
+            height: 1px;
+        }
+
+        &::after {
+            width: 1px;
+            height: 7px;
+        }
+    }
+
+    &.active i::after {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .specs-section {
+        height: 435px;
+
+        .ttl-2 {
+            bottom: 225px;
+        }
+
+        .spec-img {
+            right: 8%;
+            transform: scale(.74);
+        }
+
+        &.open {
+            .spec-img {
+                transform: scale(.63);
+            }
+        }
+    }
+
+    .spec-det-block {
+        top: 245px;
+
+        li {
+            margin-bottom: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .specs-section {
+
+        .spec-img {
+            right: 0;
+            transform: scale(.65);
+        }
+
+        &.open {
+            .spec-img {
+                transform: scale(.55);
+            }
+        }
+    }
+}
+
+@include tablet {
+    .solution-open-page {
+        .title-top .ttl {
+            margin-bottom: 50px;
+        }
+    }
+
+    .specs-section {
+        height: 750px;
+        border-radius: 10px;
+
+        .hint {
+            display: none;
+        }
+
+        .ttl-2 {
+            top: 55px;
+            bottom: auto;
+        }
+
+        .spec-img {
+            right: auto;
+            left: 0;
+            transform: scale(0.9);
+        }
+
+        .spec-button-wrap {
+            top: 205px;
+            bottom: auto;
+            left: 0;
+    
+            .spec-button-label {
+                display: none;
+            }
+        }
+
+        &.open {
+            .spec-img {
+                transform: scale(.72);
+            }
+        }
+    }
+
+    .spec-det-block {
+        top: 275px;
+
+        li {
+            margin-bottom: 11px;
+        }
+    }
+
+    .spec-button {
+        height: 35px;
+        padding-left: 49px;
+        line-height: 36px;
+
+        i {
+            width: 35px;
+            height: 35px;
+
+            &::before {
+                width: 13px;
+                background-color: #2a2a2a;
+            }
+
+            &::after {
+                height: 13px;
+                background-color: #2a2a2a;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .solution-p-filter-row {
+        display: block;
+
+        .solution-p-filters {
+            display: block;
+        }
+
+        .solution-p-select {
+            height: auto;
+            padding-bottom: 0;
+        }
+
+        .solution-p-filter {
+            margin-bottom: 10px;
+        }
+    }
+
+    .specs-section {
+        .spec-img {
+            left: -45px;
+            transform: scale(0.8);
+        }
+
+        &.open {
+            .spec-img {
+                transform: translateX(45px) scale(0.65);
+            }
+        }
+    }
+}
+
+@include mobile {
+    .specs-section {
+        height: 435px;
+
+        .spec-button-wrap {
+            display: none;
+        }
+
+        .spec-img {
+            left: 50%;
+            width: 300px;
+            transform: translateX(-50%) scale(1);
+        }
+    }   
+}
+
+// PRDUCT 3D WRAPPER
+.prod-3d-wrap {
+    padding-top: 67px;
+}
+
+.prod-3d-side {
+    position: absolute;
+    width: 270px;
+
+    .ttl {
+        margin-bottom: 26px;
+    }
+
+    p {
+        color: $colorTextG;
+        margin-bottom: 33px;        
+    }
+
+    &.left {
+        left: 0;
+    }
+
+    &.right {
+        right: 0;
+        text-align: right;
+    }
+}
+
+.solution-open-page {
+    .prod-3d-wrap {
+        min-height: 3000px;
+    }
+}
+
+$scaleIn: 1.3;
+
+#hybrid-top, #hybrid-mid, #hybrid-btm,
+#hybrid-top-1, #hybrid-top-2 {
+    position: absolute;
+    transition: transform 0.35s $easing;
+    // width: 100%;
+    // transform: translateX(-50%);
+    // left: 50%;
+}
+
+.prod-object-socket {
+    position: relative;
+    width: 495px;
+    height: 500px;
+    margin: auto;
+}
+
+#hybrid-top-1 {
+    top: 124px;
+    width: 517px;
+    height: 406px;
+    background: url(../images/obj-hybrid-top.svg) no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+    transform: translate(-10px,-1px);
+
+    &.scale-in {
+        transform: scale($scaleIn) translate(-14px,16px);
+    }
+}
+
+#hybrid-top-2 {
+    top: 100px; 
+    left: 16%; 
+    width: 381px;
+    height: 309px;
+    background: url(../images/obj-hybrid-top-2.svg) no-repeat;
+    background-size: 100% 100%;
+
+    &.scale-in {
+        transform: scale($scaleIn);
+    }
+}
+
+#hybrid-mid {
+    top: 240px;
+    left: 13%;
+    width: 435px;
+    height: 987px;
+    background: url(../images/obj-hybrid-mid.svg) no-repeat;
+    background-size: 100% 100%;
+
+    &.scale-in {
+        transform: scale($scaleIn) translate(0, 109px);
+    }
+}
+
+.scale-in {
+    
+}
