@@ -891,7 +891,7 @@
 
 // Author
 .author-block {
-    display: flex;
+    display: none; // temp / flex after
 
     .avatar {
         width: 50px;
@@ -908,7 +908,7 @@
 
 // Tags
 .tags-list {
-    display: flex;
+    display: none; // temp / flexa fter
 
     .tag {
         display: flex;
