@@ -19,13 +19,21 @@ window.addEventListener("load", function() {
     // Drop Down
     if (exists(".drop-down-element")) {
         document.querySelectorAll(".drop-down-element").forEach( dropDownElement => {
-            dropDownElement.querySelector(".drop-down-sel").addEventListener("click", () => {
+            dropDownElement.querySelector(".drop-down-sel").addEventListener("click", (e) => {
+                e.stopPropagation();
                 dropDownElement.classList.contains("open")
                     ? dropDownElement.classList.remove("open")
                     : dropDownElement.classList.add("open");
+                if(dropDownElement.classList.contains("open")){
+                    window.addEventListener("click", () => {  
+                        dropDownElement.classList.remove("open");
+                    });
+                };
             });
         });
     }
+    
+    
 
     // Menu 
     const menuSwitcher = document.querySelector(".menu-switcher");
