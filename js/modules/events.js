@@ -1,10 +1,20 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import { html, desktop, mobile, exists, scrollFromScreen, tags, filterSidebarInit } from '../generic-helpers';
-import { PageNav } from '../page-nav-anchor';
+import {
+    html,
+    desktop,
+    mobile,
+    exists,
+    scrollFromScreen,
+    tags,
+    filterSidebarInit
+} from '../generic-helpers';
+import {
+    PageNav
+} from '../page-nav-anchor';
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
 
     // Page Nav
     if (exists(".media-stream--container") && exists(".event-month-container")) {
@@ -35,5 +45,5 @@ window.addEventListener("load", function() {
     // Filter Mobile
     filterSidebarInit();
 
-        
+
 });

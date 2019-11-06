@@ -16,7 +16,8 @@
     // visibility: visible;
 }
 
-.popup-bg, .popup-side {
+.popup-bg,
+.popup-side {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -53,7 +54,7 @@
     }
 }
 
-.close {
+.popup-close {
     position: absolute;
     width: 21px;
     height: 21px;
@@ -61,7 +62,8 @@
     right: 35px;
     cursor: pointer;
 
-    &::before, &::after {
+    &::before,
+    &::after {
         @extend .ps;
         width: 2px;
         height: 25px;
@@ -82,7 +84,9 @@
     }
 
     &:hover {
-        &::before, &::after {
+
+        &::before,
+        &::after {
             background-color: $colorGreen;
         }
     }
@@ -116,10 +120,10 @@
     .popup-side {
         transition-duration: 0.35s;
     }
-    
+
     .popup {
         visibility: visible;
-        animation: fadeOut-l 0.2s forwards 0.7s;        
+        animation: fadeOut-l 0.2s forwards 0.7s;
     }
 }
 
@@ -146,7 +150,7 @@
         &::before {
             width: 13px;
         }
-    
+
         &::after {
             height: 13px;
         }
@@ -160,7 +164,9 @@
         }
 
         &.content-text section {
-            > ul:last-child, > p:last-child {
+
+            >ul:last-child,
+            >p:last-child {
                 margin-bottom: 0;
             }
         }
@@ -170,7 +176,8 @@
 .input-line {
     margin-bottom: 35px;
 
-    input, textarea {
+    input,
+    textarea {
         @extend .bold;
         width: 100%;
         background: none;
@@ -424,7 +431,9 @@
 }
 
 .team-member-address {
-    div, a {
+
+    div,
+    a {
         display: block;
         margin-bottom: 7px;
         color: $colorTextG;
@@ -466,12 +475,12 @@
                 li {
                     margin-bottom: 23px;
                     padding-left: 34px;
-    
+
                     span {
                         font-size: 14px;
                         line-height: 44px;
                     }
-    
+
                     img {
                         right: auto;
                         left: 0;
@@ -484,7 +493,7 @@
                 display: none;
             }
         }
-    }    
+    }
 }
 
 @include mobile {
@@ -492,7 +501,7 @@
         .popup-content {
             padding-top: 120px;
 
-            > .hint {
+            >.hint {
                 display: none;
             }
         }
