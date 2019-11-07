@@ -63,6 +63,32 @@
     }
 }
 
+.scroll-top-btn {
+    cursor: pointer;
+    position: fixed;
+    top: 50%;
+    left: 23px;
+    border-radius: 15px;
+    border: 2px solid rgba(#b9b9b9, 0.3);
+    padding: 8px 16px 8px 24px;
+    z-index: 101;
+    background-color: #f5f5f5;
+    transform: translateY(-50%);
+    color: rgba(#2a2a2a, 0.8);
+    font-size: 11px;
+    font-weight: 600;
+
+    &::after {
+        @include tr-top(5px, 7px, 5px, #c8c8c8);
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        display: block;
+        transform: translateY(-50%);
+    }
+}
+
 @media screen and (max-width: 960px) {
     .screen-main {
         .ttl-1 {
@@ -619,6 +645,10 @@ $animateDur: 0.30s;
                 }
             }
         }
+    }
+
+    .scroll-top-btn {
+        display: none;
     }
 }
 
@@ -1871,7 +1901,7 @@ $animateDur: 0.30s;
             position: relative;
             width: calc(100% + 50px);
             overflow-x: auto;
-            overflow-y: auto ;
+            overflow-y: auto;
             left: -25px;
 
             // &::-webkit-scrollbar { 
