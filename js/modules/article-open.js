@@ -52,6 +52,6 @@ window.addEventListener("load", function () {
   }
 
   // Mission Fader
-  let missinFader = new SuperSlider(".news-open-slider", "fader");
+  let missinFader = new SuperSlider(".article-open-slider", "fader");
 
 });

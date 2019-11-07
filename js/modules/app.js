@@ -5,8 +5,6 @@ import "../../vendor/modernizr-custom";
 import {
   html,
   desktop,
-  tablet,
-  mobile,
   exists,
   animateSwitch,
   buttonArrowAnimate
@@ -29,10 +27,16 @@ window.addEventListener("load", function() {
     document.querySelectorAll(".drop-down-element").forEach(dropDownElement => {
       dropDownElement
         .querySelector(".drop-down-sel")
-        .addEventListener("click", () => {
+        .addEventListener("click", e => {
+          e.stopPropagation();
           dropDownElement.classList.contains("open")
             ? dropDownElement.classList.remove("open")
             : dropDownElement.classList.add("open");
+          if (dropDownElement.classList.contains("open")) {
+            window.addEventListener("click", () => {
+              dropDownElement.classList.remove("open");
+            });
+          }
         });
     });
   }

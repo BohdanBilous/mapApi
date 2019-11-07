@@ -1,171 +1,173 @@
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
-    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
-    @@include('./partials/scripts.htm')
-    <body>
-        <!-- @@include('./partials/preloader.htm') -->
-        @@include('./partials/header.htm', { "classes": "" })
-        @@include('./partials/menu.htm', {
-            "solution": "",
-            "about": "",
-            "news-act": "",
-            "resources": "",
-            "events": "active",
-            "cases": "",
-            "careers": "",
-            "sites": "",
-            "contact": ""
-        })
-        
-        <main class="main">
+@@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+@@include('./partials/scripts.htm')
 
-            <!-- Top Screen -->
-            <div class="title-top socket layout-row">
-                <div class="layout-col-l">
-                    @@include('./partials/elements/button-link.htm', { 
-                        "text": "Back", 
-                        "href" : "index.html", 
-                        "classes": "btn-back" 
-                    })
+<body>
+    <!-- @@include('./partials/preloader.htm') -->
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "active",
+    "cases": "",
+    "careers": "",
+    "sites": "",
+    "contact": ""
+    })
+
+    <main class="main">
+
+        <!-- Top Screen -->
+        <div class="title-top socket layout-row">
+            <div class="layout-col-l">
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Back",
+                "href" : "javascript:history.back()",
+                "classes": "btn-back"
+                })
+            </div>
+
+            <div class="layout-col-r">
+                <div class="col">
+                    <h1 class="ttl-1 ttl">Events</h1>
+                    <div class="hint hint-from-top with-arrow-left">Discover Events</div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Event Main -->
+        <div class="article-section event-section event-section-main border-rad-top"
+            style="background-image: url(images/events-main-bg.jpg)">
+            <div class="screen-inner screen-inner--with-pad-btns socket layout-row align-right">
 
                 <div class="layout-col-r">
-                    <div class="col">
-                        <h1 class="ttl-1 ttl">Events</h1>
-                        <div class="hint hint-from-top with-arrow-left">Discover Events</div>
+                    <div class="screen-content">
+                        <div class="screen-content--ttl-s">
+                            <h2 class="ttl-2 ttl">AMBQ (Association des Microbrasseries du Quebec)</h2>
+                        </div>
+                        <div class="screen-content--slog ttl-4">We are looking forward to meet you.</div>
+                        <div class="screen-content--type-s">Events</div>
+                        <div class="screen-content--date-s">
+                            <div class="place">Montreal, QB (Canada)</div>
+                            <div class="date">11.11 - 13.11</div>
+                        </div>
                     </div>
+
+                    <div class="now-flag">Now</div>
+                </div>
+
+                <div class="button-btm-right">
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Book a Ticket",
+                    "href" : "#",
+                    "classes": "btn-g btn-arrow-a"
+                    })
+
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Details",
+                    "href" : "events-open.html",
+                    "classes": "btn-more btn-blur btn-arrow-a"
+                    })
                 </div>
             </div>
+        </div>
 
-            <!-- Event Main -->
-            <div class="article-section event-section event-section-main border-rad-top" style="background-image: url(images/events-main-bg.jpg)">
-                <div class="screen-inner screen-inner--with-pad-btns socket layout-row align-right">
-                    
-                    <div class="layout-col-r">
-                        <div class="screen-content">
-                            <div class="screen-content--ttl-s">
-                                <h2 class="ttl-2 ttl">AMBQ (Association des Microbrasseries du Quebec)</h2>
+        <!-- Content -->
+        <div class="content content-media">
+
+            <!-- News Stream -->
+            <div class="media-stream--container media-stream--events socket">
+
+                <!-- Left Column -->
+                <div class="media-stream--col-l">
+
+                    <!-- Events Month Title -->
+                    <div class="media-stream--categories-ttl-sticky">
+                        <h4 class="ttl-4 ttl">September</h4>
+                        <div class="items brackets">5</div>
+                    </div>
+
+                    <!-- Month Container -->
+                    <div id="september" class="event-month-container">
+
+                        <!-- Events Calendar -->
+                        <div class="events-cal--wrap">
+                            <div class="events-cal--item">
+                                <div class="events-cal--date">
+                                    <div class="date-range">
+                                        <div class="date-start">03</div>
+                                        <div class="date-end">06</div>
+                                    </div>
+                                </div>
+                                <div class="events-cal--content">
+                                    <div class="now-flag">Now</div>
+                                    <h5 class="ttl-5 ttl city">
+                                        <a href="event-open.html">
+                                            BrewCon
+                                            <span>Melbourne (Australia)</span>
+                                        </a>
+                                    </h5>
+                                    <div class="events-cal--content--ym">
+                                        <div class="year">2019</div>
+                                        <div class="month">September</div>
+                                    </div>
+
+                                </div>
+                                <a href="event-open.html" class="button-next grey"></a>
                             </div>
-                            <div class="screen-content--slog ttl-4">We are looking forward to meet you.</div>
-                            <div class="screen-content--type-s">Events</div>
-                            <div class="screen-content--date-s">
-                                <div class="place">Montreal, QB (Canada)</div>
-                                <div class="date">11.11 - 13.11</div>
+
+                            <div class="events-cal--item">
+                                <div class="events-cal--date">
+                                    <div class="date-range">
+                                        <div class="date-start">22</div>
+                                        <div class="date-end">25</div>
+                                    </div>
+                                </div>
+                                <div class="events-cal--content">
+                                    <div class="now-flag">Now</div>
+                                    <h5 class="ttl-5 ttl city">
+                                        <a href="event-open.html">
+                                            America's Beer Distributors NBWA Annual Convention
+                                            <span>Las Vegas (US)</span>
+                                        </a>
+                                    </h5>
+                                    <div class="events-cal--content--ym">
+                                        <div class="year">2019</div>
+                                        <div class="month">September</div>
+                                    </div>
+                                </div>
+                                <a href="event-open.html" class="button-next grey"></a>
+                            </div>
+
+                            <div class="events-cal--item is-now">
+                                <div class="events-cal--date">
+                                    <div class="date-range">
+                                        <div class="date-start">26</div>
+                                        <div class="date-end">27</div>
+                                    </div>
+                                </div>
+                                <div class="events-cal--content">
+                                    <div class="now-flag">Now</div>
+                                    <h5 class="ttl-5 ttl city">
+                                        <a href="events-open.html">
+                                            SEA Brew
+                                            <span>Bangkok (Thailand)</span>
+                                        </a>
+                                    </h5>
+                                    <div class="events-cal--content--ym">
+                                        <div class="year">2019</div>
+                                        <div class="month">September</div>
+                                    </div>
+                                </div>
+                                <a href="news-open.html" class="button-next grey"></a>
                             </div>
                         </div>
 
-                        <div class="now-flag">Now</div>
-                    </div>
-
-                    <div class="button-btm-right">
-                        @@include('./partials/elements/button-link.htm', { 
-                            "text": "Book a Ticket", 
-                            "href" : "#", 
-                            "classes": "btn-g btn-arrow-a" 
-                        })
-
-                        @@include('./partials/elements/button-link.htm', { 
-                            "text": "Details", 
-                            "href" : "events-open.html", 
-                            "classes": "btn-more btn-blur btn-arrow-a" 
-                        })
-                    </div>
-                </div>
-            </div>
-
-            <!-- Content -->
-            <div class="content content-media">
-
-                <!-- News Stream -->
-                <div class="media-stream--container media-stream--events socket">
-
-                    <!-- Left Column -->
-                    <div class="media-stream--col-l">
-
-                        <!-- Events Month Title -->
-                        <div class="media-stream--categories-ttl-sticky">
-                            <h4 class="ttl-4 ttl">September</h4>
-                            <div class="items brackets">5</div>
-                        </div>
-
-                        <!-- Month Container -->
-                        <div id="september" class="event-month-container">
-
-                            <!-- Events Calendar -->
-                            <div class="events-cal--wrap">
-                                <div class="events-cal--item">
-                                    <div class="events-cal--date">
-                                        <div class="date-range">
-                                            <div class="date-start">03</div>
-                                            <div class="date-end">06</div>
-                                        </div>
-                                    </div>
-                                    <div class="events-cal--content">
-                                        <div class="now-flag">Now</div>
-                                        <h5 class="ttl-5 ttl city">
-                                            <a href="event-open.html">
-                                                BrewCon
-                                                <span>Melbourne (Australia)</span>
-                                            </a>
-                                        </h5>
-                                        <div class="events-cal--content--ym">
-                                            <div class="year">2019</div>
-                                            <div class="month">September</div>
-                                        </div>
-                                        
-                                    </div>
-                                    <a href="event-open.html" class="button-next grey"></a>
-                                </div>
-
-                                <div class="events-cal--item is-now">
-                                    <div class="events-cal--date">
-                                        <div class="date-range">
-                                            <div class="date-start">22</div>
-                                            <div class="date-end">25</div>
-                                        </div>
-                                    </div>
-                                    <div class="events-cal--content">
-                                        <div class="now-flag">Now</div>
-                                        <h5 class="ttl-5 ttl city">
-                                            <a href="event-open.html">
-                                                America's Beer Distributors NBWA Annual Convention 
-                                                <span>Las Vegas (US)</span>
-                                            </a>
-                                        </h5>
-                                        <div class="events-cal--content--ym">
-                                            <div class="year">2019</div>
-                                            <div class="month">September</div>
-                                        </div>
-                                    </div>
-                                    <a href="event-open.html" class="button-next grey"></a>
-                                </div>
-
-                                <div class="events-cal--item">
-                                    <div class="events-cal--date">
-                                        <div class="date-range">
-                                            <div class="date-start">26</div>
-                                            <div class="date-end">27</div>
-                                        </div>
-                                    </div>
-                                    <div class="events-cal--content">
-                                        <div class="now-flag">Now</div>
-                                        <h5 class="ttl-5 ttl city">
-                                            <a href="events-open.html">
-                                                SEA Brew
-                                                <span>Bangkok (Thailand)</span>
-                                            </a>
-                                        </h5>
-                                        <div class="events-cal--content--ym">
-                                            <div class="year">2019</div>
-                                            <div class="month">September</div>
-                                        </div>
-                                    </div>
-                                    <a href="news-open.html" class="button-next grey"></a>
-                                </div>
-                            </div>
-
-                            <!-- Events List
+                        <!-- Events List
                             <div class="article-section event-section" style="background-image: url(images/events-section.jpg)">
                                 <div class="event-section-content content-w col">
                                     <p class="text-main">
@@ -187,7 +189,7 @@
                                 </div>
                             </div> -->
 
-                            <!-- <div class="media-stream--cols media-stream--bbox media-stream--bbox-top">
+                        <!-- <div class="media-stream--cols media-stream--bbox media-stream--bbox-top">
                                 <div class="media-stream--article has-img event">
                                     <div class="media-panel">
                                         <img class="media-img" src="images/events-0.jpg" alt="#">
@@ -231,7 +233,7 @@
                                 </div>
                             </div> -->
 
-                            <!-- <div class="media-stream--cols media-stream--bbox">
+                        <!-- <div class="media-stream--cols media-stream--bbox">
                                 <div class="media-stream--article has-img event">
                                     <div class="media-panel">
                                         <img class="media-img" src="images/events-3.jpg" alt="#">
@@ -275,260 +277,265 @@
                                 </div>
                             </div> -->
 
-                        </div> <!-- / Month Container -->
+                    </div> <!-- / Month Container -->
 
-                        <!-- Month Container -->
-                        <div id="october" class="event-month-container">
-                            
-                            
+                    <!-- Month Container -->
+                    <div id="october" class="event-month-container">
 
-                            <!-- Events List -->
-                            <div class="article-section event-section" style="background-image: url(images/events-section-2.jpg)">
-                                <div class="event-section-content content-w col">
-                                    <p class="text-main">
-                                        We are looking forward to meeting you.
-                                    </p>
 
-                                    <div class="desc-row">
-                                        <h3 class="ttl-2 ttl">Empack Stockholm</h3>
 
-                                        <div class="place">Stockholm</div>
-                                        <div class="date">02.10</div>
-                                    </div>
+                        <!-- Events List -->
+                        <div class="article-section event-section"
+                            style="background-image: url(images/events-section-2.jpg)">
+                            <div class="event-section-content content-w col">
+                                <p class="text-main">
+                                    We are looking forward to meeting you.
+                                </p>
 
-                                    @@include('./partials/elements/button-link.htm', { 
-                                        "text": "Details", 
-                                        "href" : "#", 
-                                        "classes": "btn-more btn-blur btn-arrow-a" 
-                                    })
+                                <div class="desc-row">
+                                    <h3 class="ttl-2 ttl">Empack Stockholm</h3>
+
+                                    <div class="place">Stockholm</div>
+                                    <div class="date">02.10</div>
                                 </div>
+
+                                @@include('./partials/elements/button-link.htm', {
+                                "text": "Details",
+                                "href" : "#",
+                                "classes": "btn-more btn-blur btn-arrow-a"
+                                })
                             </div>
                         </div>
-                         <div class="media-stream--cols media-stream--bbox">
-                                <div class="media-stream--article has-img event">
-                                    <div class="media-panel">
-                                        <img class="media-img" src="images/events-3.jpg" alt="#">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="date-range">
-                                            <div class="date-start">17</div>
-                                            <div class="date-end">18</div>
-                                        </div>
-
-                                        <h4 class="ttl ttl-4 city">
-                                            <span>Vancouver BC (Canada)</span>
-                                            <a href="event-open.html">BC Craft Brewers Conference</a>
-                                        </h4>
-
-                                        <div class="year">2019</div>
-
-                                        <a href="event-open.html" class="button-next grey"></a>
-                                    </div>
-                                </div>
-
-                                <div class="media-stream--article has-img event">
-                                    <div class="media-panel">
-                                        <img class="media-img" src="images/events-4.jpg" alt="#">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="date-range">
-                                            <div class="date-start">25</div>
-                                            <div class="date-end">26</div>
-                                        </div>
-
-                                        <h4 class="ttl ttl-4 city">
-                                            <span>Malmö (Sweden)</span>
-                                            <a href="event-open.html">Brewing Conf: Challenges and Opportunities for the Brewing.</a>
-                                        </h4>
-
-                                        <div class="year">2019</div>
-
-                                        <a href="event-open.html" class="button-next grey"></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="article-section event-section" style="background-image: url(./images/events-section-2.jpg)">
-                                <div class="event-section-content content-w col">
-                                    <p class="text-main">
-                                        We are looking forward to meeting you.
-                                    </p>
-
-                                    <div class="desc-row">
-                                        <h3 class="ttl-2 ttl">Ontario Brewer's Award</h3>
-
-                                        <div class="place">Niagra Falls Ontario (Canada)</div>
-                                        <div class="date">29.10 - 30.10</div>
-                                    </div>
-
-                                    @@include('./partials/elements/button-link.htm', { 
-                                        "text": "Details", 
-                                        "href" : "#", 
-                                        "classes": "btn-more btn-blur btn-arrow-a" 
-                                    })
-                                </div>
-                            </div>
-                        
-                        
-                        <!-- Month Container -->
-                        <div id="november" class="event-month-container">
-
-                            <!-- Events Calendar -->
-                            <div class="events-cal--wrap">
-                                <div class="events-cal--item">
-                                    <div class="events-cal--date">
-                                        <div class="date-range">
-                                            <div class="date-start">08</div>
-                                            <div class="date-end">10</div>
-                                        </div>
-                                    </div>
-                                    <div class="events-cal--content">
-                                        <div class="now-flag">Now</div>
-                                        <h5 class="ttl-5 ttl city">
-                                            <a href="events-open.html">
-                                                International Fitness and Wellbeing Festival
-                                                <span>Moscow (Russia)</span>
-                                            </a>
-                                        </h5>
-                                        <div class="events-cal--content--ym">
-                                            <div class="year">2019</div>
-                                            <div class="month">November</div>
-                                        </div>
-                                        
-                                    </div>
-                                    <a href="news-open.html" class="button-next grey"></a>
-                                </div>
-
-                                <div class="events-cal--item">
-                                    <div class="events-cal--date">
-                                        <div class="date-range">
-                                            <div class="date-start">11</div>
-                                            <div class="date-end">13</div>
-                                        </div>
-                                    </div>
-                                    <div class="events-cal--content">
-                                        <div class="now-flag">Now</div>
-                                        <h5 class="ttl-5 ttl city">
-                                            <a href="events-open.html">
-                                                AMBQ (Association des Microbrasseries du Quebec)
-                                                <span>Montreal, QB (Canada)</span>
-                                            </a>
-                                        </h5>
-                                        <div class="events-cal--content--ym">
-                                            <div class="year">2019</div>
-                                            <div class="month">November</div>
-                                        </div>
-                                    </div>
-                                    <a href="news-open.html" class="button-next grey"></a>
-                                </div>
-
-                                <div class="events-cal--item">
-                                    <div class="events-cal--date">
-                                        <div class="date-range">
-                                            <div class="date-start">12</div>
-                                            <div class="date-end">14</div>
-                                        </div>
-                                    </div>
-                                    <div class="events-cal--content">
-                                        <div class="now-flag">Now</div>
-                                        <h5 class="ttl-5 ttl city">
-                                            <a href="events-open.html">
-                                                Brau Bievale
-                                                <span>Nuremberg (Germany)</span>
-                                            </a>
-                                        </h5>
-                                        <div class="events-cal--content--ym">
-                                            <div class="year">2019</div>
-                                            <div class="month">November</div>
-                                        </div>
-                                    </div>
-                                    <a href="news-open.html" class="button-next grey"></a>
-                                </div>
-                            </div>
-                        </div><!-- / Month Container -->
-
                     </div>
+                    <div class="media-stream--cols media-stream--bbox">
+                        <div class="media-stream--article has-img event">
+                            <div class="media-panel">
+                                <img class="media-img" src="images/events-3.jpg" alt="#">
+                            </div>
+                            <div class="media-content">
+                                <div class="date-range">
+                                    <div class="date-start">17</div>
+                                    <div class="date-end">18</div>
+                                </div>
 
-                    <!-- Right Column -->
-                    <div class="media-stream--col-r">
-                        <aside class="filter-sidebar">
-                            <div class="filter-sidebar-section">
-                                <div class="filter-btns">
-                                    <div class="btn-search"></div>
-                                    <button class="btn-filter">
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
-                                    </button>
+                                <h4 class="ttl ttl-4 city">
+                                    <span>Vancouver BC (Canada)</span>
+                                    <a href="event-open.html">BC Craft Brewers Conference</a>
+                                </h4>
+
+                                <div class="year">2019</div>
+
+                                <a href="event-open.html" class="button-next grey"></a>
+                            </div>
+                        </div>
+
+                        <div class="media-stream--article has-img event">
+                            <div class="media-panel">
+                                <img class="media-img" src="images/events-4.jpg" alt="#">
+                            </div>
+                            <div class="media-content">
+                                <div class="date-range">
+                                    <div class="date-start">25</div>
+                                    <div class="date-end">26</div>
                                 </div>
-                                <h4 class="ttl-4">Filter</h4>
-                                <nav class="filter-nav">
-                                    <ul>
-                                        <li data-hash="september" class="filter-item active">
-                                            <span>September</span>
-                                            <div class="items brackets">5</div>
-                                        </li>
-                                        <li data-hash="october" class="filter-item">
-                                            <span>October</span>
-                                            <div class="items brackets">4</div>
-                                        </li>
-                                        <li data-hash="november" class="filter-item">
-                                            <span>November</span>
-                                            <div class="items brackets">6</div>
-                                        </li>
-                                    </ul>   
-                                </nav>
-                                <div class="search-block">
-                                    <form action="#">
-                                        <input placeholder="Search a keyword" type="text">
-                                        <button class="btn-search" type="submit"></button>
-                                    </form>
-                                </div>
-                            </div>    
-                        </aside>
+
+                                <h4 class="ttl ttl-4 city">
+                                    <span>Malmö (Sweden)</span>
+                                    <a href="event-open.html">Brewing Conf: Challenges and Opportunities for the
+                                        Brewing.</a>
+                                </h4>
+
+                                <div class="year">2019</div>
+
+                                <a href="event-open.html" class="button-next grey"></a>
+                            </div>
+                        </div>
                     </div>
-                    
-                </div>
+                    <div class="article-section event-section"
+                        style="background-image: url(./images/events-section-2.jpg)">
+                        <div class="event-section-content content-w col">
+                            <p class="text-main">
+                                We are looking forward to meeting you.
+                            </p>
 
-                <!-- Footer -->
-                <footer class="footer">
-                    <div class="info-row layout-row socket">
-                        <div class="layout-col-l">
-                            <h3 class="ttl-4">Becoming a customer</h3>
-                            @@include('./partials/elements/button-link.htm', { 
-                                "text": "Place an order", 
-                                "href" : "#", 
-                                "classes": "btn-g btn-arrow-a" 
+                            <div class="desc-row">
+                                <h3 class="ttl-2 ttl">Ontario Brewer's Award</h3>
+
+                                <div class="place">Niagra Falls Ontario (Canada)</div>
+                                <div class="date">29.10 - 30.10</div>
+                            </div>
+
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Details",
+                            "href" : "#",
+                            "classes": "btn-more btn-blur btn-arrow-a"
                             })
                         </div>
-                        <div class="layout-col-r">
-                            <div class="layout-col-s-4">
-                                <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
-                            </div>
-                            <div class="layout-col-s-6">
-                                <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
-                                <div class="with-us">
-                                    <h3 class="ttl-4">Already with us</h3>
-                                    @@include('./partials/elements/button-link.htm', { 
-                                        "text": "Tools & Resources", 
-                                        "href" : "#", 
-                                        "classes": "" 
-                                    })
+                    </div>
+
+
+                    <!-- Month Container -->
+                    <div id="november" class="event-month-container">
+
+                        <!-- Events Calendar -->
+                        <div class="events-cal--wrap">
+                            <div class="events-cal--item">
+                                <div class="events-cal--date">
+                                    <div class="date-range">
+                                        <div class="date-start">08</div>
+                                        <div class="date-end">10</div>
+                                    </div>
                                 </div>
-                                <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
+                                <div class="events-cal--content">
+                                    <div class="now-flag">Now</div>
+                                    <h5 class="ttl-5 ttl city">
+                                        <a href="events-open.html">
+                                            International Fitness and Wellbeing Festival
+                                            <span>Moscow (Russia)</span>
+                                        </a>
+                                    </h5>
+                                    <div class="events-cal--content--ym">
+                                        <div class="year">2019</div>
+                                        <div class="month">November</div>
+                                    </div>
+
+                                </div>
+                                <a href="news-open.html" class="button-next grey"></a>
+                            </div>
+
+                            <div class="events-cal--item is-now">
+                                <div class="events-cal--date">
+                                    <div class="date-range">
+                                        <div class="date-start">11</div>
+                                        <div class="date-end">13</div>
+                                    </div>
+                                </div>
+                                <div class="events-cal--content">
+                                    <div class="now-flag">Now</div>
+                                    <h5 class="ttl-5 ttl city">
+                                        <a href="events-open.html">
+                                            AMBQ (Association des Microbrasseries du Quebec)
+                                            <span>Montreal, QB (Canada)</span>
+                                        </a>
+                                    </h5>
+                                    <div class="events-cal--content--ym">
+                                        <div class="year">2019</div>
+                                        <div class="month">November</div>
+                                    </div>
+                                </div>
+                                <a href="news-open.html" class="button-next grey"></a>
+                            </div>
+
+                            <div class="events-cal--item">
+                                <div class="events-cal--date">
+                                    <div class="date-range">
+                                        <div class="date-start">12</div>
+                                        <div class="date-end">14</div>
+                                    </div>
+                                </div>
+                                <div class="events-cal--content">
+                                    <div class="now-flag">Now</div>
+                                    <h5 class="ttl-5 ttl city">
+                                        <a href="events-open.html">
+                                            Brau Bievale
+                                            <span>Nuremberg (Germany)</span>
+                                        </a>
+                                    </h5>
+                                    <div class="events-cal--content--ym">
+                                        <div class="year">2019</div>
+                                        <div class="month">November</div>
+                                    </div>
+                                </div>
+                                <a href="news-open.html" class="button-next grey"></a>
                             </div>
                         </div>
-                    </div>
-                    @@include('./partials/footer-main.htm', { "classes": "footer-bg" })
-                </footer>
+                    </div><!-- / Month Container -->
+
+                </div>
+
+                <!-- Right Column -->
+                <div class="media-stream--col-r">
+                    <aside class="filter-sidebar">
+                        <div class="filter-sidebar-section">
+                            <div class="filter-btns">
+                                <div class="btn-search"></div>
+                                <button class="btn-filter">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </button>
+                            </div>
+                            <h4 class="ttl-4">Filter</h4>
+                            <nav class="filter-nav">
+                                <ul>
+                                    <li data-hash="september" class="filter-item active">
+                                        <span>September</span>
+                                        <div class="items brackets">5</div>
+                                    </li>
+                                    <li data-hash="october" class="filter-item">
+                                        <span>October</span>
+                                        <div class="items brackets">4</div>
+                                    </li>
+                                    <li data-hash="november" class="filter-item">
+                                        <span>November</span>
+                                        <div class="items brackets">6</div>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="search-block">
+                                <form action="#">
+                                    <input placeholder="Search a keyword" type="text">
+                                    <button class="btn-search" type="submit"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
             </div>
 
-            
-    
-        </main>
-    </body>
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="info-row layout-row socket">
+                    <div class="layout-col-l">
+                        <h3 class="ttl-4">Becoming a customer</h3>
+                        @@include('./partials/elements/button-link.htm', {
+                        "text": "Place an order",
+                        "href" : "#",
+                        "classes": "btn-g btn-arrow-a"
+                        })
+                    </div>
+                    <div class="layout-col-r">
+                        <div class="layout-col-s-4">
+                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                        </div>
+                        <div class="layout-col-s-6">
+                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                            <div class="with-us">
+                                <h3 class="ttl-4">Already with us</h3>
+                                @@include('./partials/elements/button-link.htm', {
+                                "text": "Tools & Resources",
+                                "href" : "#",
+                                "classes": ""
+                                })
+                            </div>
+                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business
+                                grow. </p>
+                        </div>
+                    </div>
+                </div>
+                @@include('./partials/footer-main.htm', { "classes": "footer-bg" })
+            </footer>
+        </div>
 
-    <script>
-        SystemJS.import('./js/app.js');
-        SystemJS.import('./js/events.js');
-    </script>
+
+
+    </main>
+</body>
+
+<script>
+    SystemJS.import('./js/app.js');
+    SystemJS.import('./js/events.js');
+</script>
+
 </html>

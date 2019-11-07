@@ -1,0 +1,55 @@
+/* =========================
+    Stub
+   ========================= */
+.stub {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100vh;
+  width: 100vw;
+  h1{
+    line-height: 157px;
+    letter-spacing: -6.28px;
+    font-weight: 500;
+    font-size: 157px;
+    padding-left: 64px;
+  }
+  span:first-child {
+    color: #0b989d;
+  }
+  span:nth-child(2) {
+    color: #333333;
+  }
+
+  @media screen and (max-width: 1360px) {
+    h1{
+      font-size: 108px;
+      line-height: 108px;
+      letter-spacing: -4.32px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1{
+      font-size: 84px;
+      line-height: 84px;
+      letter-spacing: -3.36px;;
+    }
+  }
+
+  @media screen and (max-width: 630px) {
+    h1{
+      font-size: 62px;
+      line-height: 62px;
+      letter-spacing: -3.36px;;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    h1{
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -1.92px;
+    }
+  }
+}

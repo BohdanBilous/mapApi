@@ -1,14 +1,31 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import { html, desktop, mobile, exists, loadContent, findParent, 
-         scrollFromScreen, imageLazy, filterSidebarInit } from '../generic-helpers';
-import { PageNav } from '../page-nav-anchor';
-import { ParallaxScroll } from '../parallax-scroll';
-import { customSelect } from '../custom-select';
-import { MediaLoader } from '../media-loader';
+import {
+    html,
+    desktop,
+    mobile,
+    exists,
+    loadContent,
+    findParent,
+    scrollFromScreen,
+    imageLazy,
+    filterSidebarInit
+} from '../generic-helpers';
+import {
+    PageNav
+} from '../page-nav-anchor';
+import {
+    ParallaxScroll
+} from '../parallax-scroll';
+import {
+    customSelect
+} from '../custom-select';
+import {
+    MediaLoader
+} from '../media-loader';
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
 
     // Page Nav
     if (exists(".media-stream--container") && exists(".media-stream--section")) {
@@ -27,19 +44,19 @@ window.addEventListener("load", function() {
     if (exists(".select-custom")) {
         customSelect();
         const selectIndustriesIcon = document.querySelector(".select-industries-icon img");
-        const selectIndustries =  document.querySelector(".select-custom select");
+        const selectIndustries = document.querySelector(".select-custom select");
         const blockForLoad = document.getElementById("content-load");
 
         selectIndustries.addEventListener("change", () => {
             let index = selectIndustries.value;
             let getFileName = `_res-content-${index}.html`;
             selectIndustriesIcon.src = `images/ind-${index}.svg`;
-            
+
             loadContent(blockForLoad, getFileName);
             changeFileList(index);
         });
 
-        
+
 
         let changeFileList = (index) => {
             if (exists(".file-list")) {
@@ -52,7 +69,7 @@ window.addEventListener("load", function() {
     // Load More
     const buttonsMore = document.querySelectorAll(".btn-show-more");
 
-    buttonsMore.forEach( button => {
+    buttonsMore.forEach(button => {
         button.addEventListener("click", () => {
             let parentBlock = findParent(button, "media-stream--section");
             let loadPlace = parentBlock.querySelector(".media-stream--load-place .media-stream--cols");
@@ -65,10 +82,15 @@ window.addEventListener("load", function() {
     // Lazy Loader Images
     const images = document.querySelectorAll(".lazy-img");
 
-    images.forEach( image => {
-        const mediaQueryImages = [
-            { media: "screen and (min-width: 768px)", src: image.dataset.src }, 
-            { media: "screen and (max-width: 767px)", src: image.dataset.srcmob }
+    images.forEach(image => {
+        const mediaQueryImages = [{
+                media: "screen and (min-width: 768px)",
+                src: image.dataset.src
+            },
+            {
+                media: "screen and (max-width: 767px)",
+                src: image.dataset.srcmob
+            }
         ];
 
         new MediaLoader(image, "image", mediaQueryImages);
@@ -76,5 +98,5 @@ window.addEventListener("load", function() {
 
     // Filter Mobile
     filterSidebarInit();
-    
+
 });

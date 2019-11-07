@@ -454,6 +454,7 @@
             }
 
             .media-panel {
+                border-radius: 12px;
                 &:hover {
 
                     .media-img {
@@ -506,6 +507,7 @@
 
         &.has-video, &.instruction { // With Video And Instruction
             .media-panel {
+                border-radius: 12px;
                 .play-button-wrap {
                     position: absolute;
                     left: 15px;
@@ -530,6 +532,7 @@
 
         &.has-video { // With Video
             .media-panel {
+                border-radius: 12px;
                 cursor: pointer;
 
                 &::after {
@@ -566,6 +569,7 @@
     height: 345px;
     border-radius: 12px;
     background-color: $colorPanel;
+    border-radius: 12px;
 
     .media-img {
         // @extend .ctr;
@@ -620,6 +624,7 @@
         height: 255px;
         padding-right: 18px;
         overflow-y: auto;
+        overflow-x: auto;
     }
 }
 
@@ -628,6 +633,7 @@
     margin-bottom: 53px;
 
     .media-panel {
+        border-radius: 12px;
         height: 310px;
         margin-bottom: 20px;
 
@@ -870,6 +876,7 @@
     }
 
     .media-panel {
+        border-radius: 12px;
         &--categories-block {
             padding: 15px 20px 5px 20px;
         }
@@ -1091,6 +1098,7 @@
 
     .media-stream--article, .media-stream--article.instruction, .media-stream--article.has-video {
         .media-panel {
+            border-radius: 12px;
             .play-button-wrap {
                 top: 50%;
                 left: 50%;
@@ -1249,6 +1257,7 @@
             padding-bottom: 20px;
 
             .media-panel {
+                border-radius: 12px;
                 height: 185px;
             }
 
@@ -1282,6 +1291,7 @@
 
         &.subscribe {
             .media-panel {
+                border-radius: 12px;
                 height: 355px;
             }
 
@@ -1297,16 +1307,19 @@
 
         &.categories {
             .media-panel {
+                border-radius: 12px;
                 height: auto;
             }
         }
 
         .media-panel {
+            border-radius: 12px;
             margin: 0 -25px;
         }
     }
 
     .media-panel {
+        border-radius: 12px;
 
         &--categories-scroll {
             padding-right: 0;
@@ -1331,6 +1344,7 @@
         margin-bottom: 75px;
 
         .media-panel, .customers-item {
+            border-radius: 12px;
             margin-left: -25px;
             margin-right: -25px;
         }
@@ -1346,6 +1360,7 @@
         }
 
         .media-panel {
+            border-radius: 12px;
             margin-bottom: 25px;
         }
     }

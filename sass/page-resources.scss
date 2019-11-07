@@ -75,6 +75,7 @@
     }
 
     .media-panel {
+        border-radius: 12px;
         height: 390px;
 
         &::after {
@@ -431,6 +432,7 @@
         margin-top: 38px;
 
         .media-panel {
+            border-radius: 12px;
             height: 280px;
         }
 
@@ -451,6 +453,7 @@
 @include tablet {
     .media-stream--article.instruction {
         .media-panel {
+            border-radius: 12px;
             height: 400px;
         }
 
@@ -505,6 +508,7 @@
 
     .media-stream--article.instruction {
         .media-panel {
+            border-radius: 12px;
             height: 212px;
         }
     }

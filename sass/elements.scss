@@ -1370,6 +1370,14 @@
     }
 }
 
+.select-block {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
 // Icons Circle
 .ico-c {
     width: 42px;

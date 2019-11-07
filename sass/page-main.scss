@@ -10,7 +10,7 @@
 
     @media screen and (max-width: 768px) and (orientation: portrait) {
         background-image: url(../images/screen-bg-tablet.jpg);
-    } 
+    }
 
     @media screen and (max-width: 820px) and (orientation: landscape) {
         background-image: url(../images/screen-bg.jpg);
@@ -87,7 +87,7 @@
             line-height: 34px;
             margin-bottom: 0;
         }
-        
+
         .col {
             left: auto;
             width: auto;
@@ -129,7 +129,7 @@
     position: relative;
     padding-left: 13%;
 
-    > .hint {
+    >.hint {
         position: absolute;
         top: 2px;
         left: 0;
@@ -230,7 +230,7 @@
         align-self: flex-start;
         margin-right: 40px;
         display: none;
-        
+
         span {
             @extend .trans-opacity;
             opacity: 0;
@@ -245,7 +245,8 @@
         }
     }
 
-    &.show { // INDICATORS SHOW
+    &.show {
+        // INDICATORS SHOW
         animation: fadeIn-l 0.3s linear forwards;
 
         .indicator {
@@ -285,7 +286,7 @@ $animateDur: 0.30s;
     position: relative;
     height: calc(#{$tareHeight} + 50px);
     margin-bottom: 0;
-    z-index: 100;    
+    z-index: 100;
 
     @media screen and (max-width: 1800px) {
         height: calc(#{$tareHeight} - 70px);
@@ -300,7 +301,7 @@ $animateDur: 0.30s;
     position: relative;
     width: 24.35%;
     height: $tareHeight;
-    
+
     .tare-inner {
         position: relative;
         width: 100%;
@@ -325,10 +326,11 @@ $animateDur: 0.30s;
         display: none;
     }
 
-    .text-main, .tare-img {
+    .text-main,
+    .tare-img {
         z-index: 1;
     }
-    
+
     .text-main {
         position: absolute;
         left: 20px;
@@ -388,7 +390,7 @@ $animateDur: 0.30s;
             }
         }
 
-        .tare-img  img {            
+        .tare-img img {
             transform: translateX(0) translateY(-55px) scale(0.80);
             zoom: 1;
         }
@@ -400,7 +402,7 @@ $animateDur: 0.30s;
                 }
             }
 
-            .tare-img  img {
+            .tare-img img {
                 transform: translateX(0) translateY(0) scale(0.80);
             }
         }
@@ -475,22 +477,22 @@ $animateDur: 0.30s;
                     }
                 }
             }
-        
+
             &.inactive {
                 .tare-inner {
-        
+
                     &::after {
                         height: 100%;
                     }
                 }
-        
+
                 .tare-img img {
                     transform: translateX(11vw) translateY(0px);
                 }
             }
         }
     }
-    
+
     .indicators-c {
         top: calc(#{$tareHeight} + 60px);
 
@@ -501,14 +503,16 @@ $animateDur: 0.30s;
 }
 
 @include tablet {
-    .solutions-main-block, .tare-container {
-        
+
+    .solutions-main-block,
+    .tare-container {
+
         .indicators {
             display: none;
         }
     }
 
-    .solutions-main-block { 
+    .solutions-main-block {
         padding-left: 90px;
     }
 
@@ -564,7 +568,7 @@ $animateDur: 0.30s;
             margin: 0 0 0 25px;
             padding: 30px 0 0;
             justify-content: flex-start;
-            
+
             &::after {
                 content: "";
                 display: block;
@@ -626,7 +630,7 @@ $animateDur: 0.30s;
     .solutions-main-block {
         padding-left: 0;
 
-        > .hint {
+        >.hint {
             display: none;
         }
     }
@@ -656,7 +660,7 @@ $animateDur: 0.30s;
         .tare-name {
             top: 25px;
         }
-        
+
         .tare-number {
             left: auto;
             top: 28px;
@@ -676,13 +680,13 @@ $animateDur: 0.30s;
             margin-bottom: 27px;
 
             .indicators {
-                padding-top: 35px;                
-                
+                padding-top: 35px;
+
                 .indicator {
                     width: 47px;
                     margin-right: 27px;
                     margin-bottom: 33px;
-    
+
                     .icon {
                         width: 47px;
                         height: 47px;
@@ -711,7 +715,7 @@ $animateDur: 0.30s;
         @extend .flex-sb;
         padding-right: 65px;
 
-        > * {
+        >* {
             align-self: flex-end;
         }
     }
@@ -724,7 +728,7 @@ $animateDur: 0.30s;
             width: 60.6%;
         }
 
-        > * {
+        >* {
             align-self: flex-end;
         }
     }
@@ -754,7 +758,7 @@ $animateDur: 0.30s;
 
 @media screen and (max-width: 1900px) {
     .info-row {
-        
+
         .layout-col-r {
             padding-right: 0;
         }
@@ -784,12 +788,14 @@ $animateDur: 0.30s;
         position: relative;
         padding: 0 0 60px;
 
-        .layout-col-l, .layout-col-r {
+        .layout-col-l,
+        .layout-col-r {
             position: static;
             width: 50%;
         }
 
-        .layout-col-s-4, .layout-col-s-6 {
+        .layout-col-s-4,
+        .layout-col-s-6 {
             width: 100%;
         }
 
@@ -804,7 +810,8 @@ $animateDur: 0.30s;
             order: 2;
         }
 
-        .text-chunk-1, .text-chunk-2 {
+        .text-chunk-1,
+        .text-chunk-2 {
             display: none;
         }
 
@@ -829,12 +836,14 @@ $animateDur: 0.30s;
             margin-bottom: 0;
         }
 
-        .layout-col-l, .layout-col-r {
+        .layout-col-l,
+        .layout-col-r {
             width: 100%;
             display: block;
         }
 
-        .text-chunk-1, .text-chunk-2 {
+        .text-chunk-1,
+        .text-chunk-2 {
             display: block;
             width: 100%;
             position: static;
@@ -849,7 +858,7 @@ $animateDur: 0.30s;
 // Mission
 .fader {
     padding-top: 105px;
-    padding-bottom: 120px;
+    padding-bottom: 70px;
 
     .layout-col-l .ttl-2 {
         margin-bottom: 290px;
@@ -890,7 +899,7 @@ $animateDur: 0.30s;
             vertical-align: top;
             cursor: pointer;
 
-            .no-touchevents &:hover  .text-main,
+            .no-touchevents &:hover .text-main,
             &.active .text-main {
                 color: $colorGreen;
             }
@@ -912,7 +921,7 @@ $animateDur: 0.30s;
     }
 
     .slides {
-        height: 355px;
+        height: 425px;
         overflow: hidden;
     }
 
@@ -920,12 +929,16 @@ $animateDur: 0.30s;
         transition: transform 0.2s $easing 0s;
         transform: translateX(30px);
 
+        .slide-btn {
+            margin-top: 54px;
+        }
+
         &.active {
             transform: translateX(0);
             transition-duration: 0.4s;
             transition-delay: 0.3s;
         }
-        
+
         .icon {
             width: 38px;
             height: 38px;
@@ -968,7 +981,8 @@ $animateDur: 0.30s;
             display: none;
         }
 
-        .layout-col-l, .layout-col-r {
+        .layout-col-l,
+        .layout-col-r {
             width: 100%;
         }
 
@@ -980,7 +994,9 @@ $animateDur: 0.30s;
             padding-left: calc(#{$dotsLiWidth});
 
             .text-cols {
-                .text-col, .text-col:first-child {
+
+                .text-col,
+                .text-col:first-child {
                     width: $dotsLiWidth;
 
                     p {
@@ -988,7 +1004,7 @@ $animateDur: 0.30s;
                     }
                 }
             }
-        } 
+        }
     }
 }
 
@@ -1013,7 +1029,9 @@ $animateDur: 0.30s;
             padding-left: calc(#{$dotsLiWidth} - 100px);
 
             .text-cols {
-                .text-col, .text-col:first-child {
+
+                .text-col,
+                .text-col:first-child {
                     width: calc(#{$dotsLiWidth} - 20px);
                 }
             }
@@ -1023,7 +1041,7 @@ $animateDur: 0.30s;
             margin-left: calc((#{$dotsLiWidth} - 100px) + (#{$dotsLiWidth} - 20px));
         }
     }
-} 
+}
 
 @include mobile {
     .fader {
@@ -1084,7 +1102,8 @@ $animateDur: 0.30s;
             .text-cols {
                 display: block;
 
-                .text-col, .text-col:first-child {
+                .text-col,
+                .text-col:first-child {
                     width: 100%;
 
                     p {
@@ -1094,7 +1113,8 @@ $animateDur: 0.30s;
             }
         }
 
-        .btn-contact-us, .btn-about-us {
+        .btn-contact-us,
+        .btn-about-us {
             width: calc(100% - 25px);
             margin-left: 0;
         }
@@ -1108,7 +1128,8 @@ $animateDur: 0.30s;
     border-radius: 25px;
     overflow: hidden;
 
-    &::before, &::after {
+    &::before,
+    &::after {
         @extend .ps;
         width: 100%;
         left: 0;
@@ -1134,8 +1155,9 @@ $animateDur: 0.30s;
         width: 100%;
         height: 100%;
         z-index: 1;
-        
-        .prev, .next {
+
+        .prev,
+        .next {
             top: 0;
             position: absolute;
             height: 100%;
@@ -1174,7 +1196,7 @@ $animateDur: 0.30s;
             }
         }
     }
-    
+
     .feedback-img {
         @extend .ctrHor;
         position: absolute;
@@ -1183,7 +1205,7 @@ $animateDur: 0.30s;
 
         img {
             display: block;
-            width: 100%;            
+            width: 100%;
             transition: transform 0.15s;
         }
     }
@@ -1192,16 +1214,20 @@ $animateDur: 0.30s;
         height: 100%;
     }
 
-    .slide { // Slide
-        .col, .layout-col-l {
+    .slide {
+
+        // Slide
+        .col,
+        .layout-col-l {
             transform: translateX(40px);
             transition: transform 0.5s $easing;
         }
 
         &.active {
             animation-delay: 0s;
-            
-            .col, .layout-col-l {
+
+            .col,
+            .layout-col-l {
                 transform: translateX(0);
             }
         }
@@ -1210,7 +1236,9 @@ $animateDur: 0.30s;
             padding: 80px 0 40px;
         }
 
-        .ttl-top, .ttl-3, p {
+        .ttl-top,
+        .ttl-3,
+        p {
             @extend .not-blurry;
         }
 
@@ -1224,7 +1252,9 @@ $animateDur: 0.30s;
 .no-touchevents {
     .feedback-fader {
         .slider-buttons {
-            .prev, .next {
+
+            .prev,
+            .next {
                 cursor: none !important;
             }
         }
@@ -1246,7 +1276,8 @@ $animateDur: 0.30s;
             // left: calc(#{$left-col-width} + ((0.17 + 0.243) * (100% - #{$left-col-width})));
             left: calc(#{$left-col-width} + ((.17 + .22) * (100% - #{$left-col-width})));
 
-            .prev, .next {
+            .prev,
+            .next {
                 opacity: 1;
                 width: 45px;
                 height: 45px;
@@ -1294,12 +1325,12 @@ $animateDur: 0.30s;
         .slide {
             flex-wrap: wrap;
             flex-direction: column;
-            
+
             .layout-col-l {
                 height: 325px;
                 order: 2;
             }
-    
+
             .layout-col-r {
                 order: 1;
                 padding: 105px 0 0;
@@ -1321,7 +1352,7 @@ $animateDur: 0.30s;
 .about-section {
     padding: 104px 0 144px;
     justify-content: flex-end;
-    
+
     .about-head {
         margin-bottom: 115px;
 
@@ -1454,7 +1485,8 @@ $animateDur: 0.30s;
 }
 
 // Video Section
-.video-section, .article-section {
+.video-section,
+.article-section {
     position: relative;
     height: 480px;
     background-repeat: no-repeat;
@@ -1531,8 +1563,8 @@ $animateDur: 0.30s;
 .article-section {
     height: 425px;
 
-    .text-main, 
-    .desc-row .place, 
+    .text-main,
+    .desc-row .place,
     .desc-row .date,
     .btn-more {
         align-self: flex-end;
@@ -1550,7 +1582,8 @@ $animateDur: 0.30s;
     .desc-row {
         @extend .flex-sb;
 
-        .place, .date {
+        .place,
+        .date {
             padding-bottom: 5px;
             color: $colorBg;
             opacity: 0.8;
@@ -1568,7 +1601,9 @@ $animateDur: 0.30s;
 }
 
 @include tablet {
-    .video-section, .article-section {
+
+    .video-section,
+    .article-section {
         .layout-col-r {
             width: 100%;
             height: 100%;
@@ -1619,7 +1654,9 @@ $animateDur: 0.30s;
 }
 
 @include mobile {
-    .video-section, .article-section {
+
+    .video-section,
+    .article-section {
         height: 535px;
         border-radius: 10px;
 
@@ -1752,7 +1789,7 @@ $animateDur: 0.30s;
         .layout-col-r {
             width: calc(100% - #{$left-col-width});
         }
-        
+
         .graph-col-l {
             width: 39%;
         }
@@ -1771,7 +1808,8 @@ $animateDur: 0.30s;
             flex-wrap: wrap;
         }
 
-        .graph-col-l, .graph-col-r {
+        .graph-col-l,
+        .graph-col-r {
             width: 100%;
         }
 
@@ -1809,7 +1847,7 @@ $animateDur: 0.30s;
         .swipe-hint {
             top: 7px;
         }
-        
+
         .legend {
             padding-right: 120px;
 
@@ -1833,6 +1871,7 @@ $animateDur: 0.30s;
             position: relative;
             width: calc(100% + 50px);
             overflow-x: auto;
+            overflow-y: auto ;
             left: -25px;
 
             // &::-webkit-scrollbar { 
@@ -1865,14 +1904,14 @@ $animateDur: 0.30s;
         padding-right: 50px;
     }
 
-    > .layout-col-l {
+    >.layout-col-l {
         padding-top: 125px;
     }
 
-    > .layout-col-r {
-        > .hint {
+    >.layout-col-r {
+        >.hint {
             margin-bottom: 31px;
-        } 
+        }
     }
 }
 
@@ -1948,7 +1987,7 @@ $animateDur: 0.30s;
 
 @include macbook {
     .events-wrap {
-        > .layout-col-l {
+        >.layout-col-l {
             .ttl-2 {
                 font-size: 35px;
                 line-height: 35px;
@@ -1970,12 +2009,13 @@ $animateDur: 0.30s;
         padding: 90px 0 105px;
         flex-wrap: wrap;
 
-        > .layout-col-l, > .layout-col-r {
+        >.layout-col-l,
+        >.layout-col-r {
             width: 100%;
         }
 
-        > .layout-col-r {
-            > .hint {
+        >.layout-col-r {
+            >.hint {
                 display: none;
             }
         }
@@ -2006,7 +2046,7 @@ $animateDur: 0.30s;
     }
 
     .events-wrap {
-        > .layout-col-l {
+        >.layout-col-l {
             padding-top: 0;
         }
     }
@@ -2024,18 +2064,22 @@ $animateDur: 0.30s;
             }
         }
 
-        > .layout-col-l {
+        >.layout-col-l {
             padding-top: 0;
         }
     }
 
     .events-table {
-        .events-table-cell, .events-table-cell-m {
+
+        .events-table-cell,
+        .events-table-cell-m {
             width: 100% !important;
         }
 
         .events-table-cell-m {
-            .btn-add-wrap, .btn-add {
+
+            .btn-add-wrap,
+            .btn-add {
                 height: 62px;
                 width: 100%;
             }
@@ -2077,9 +2121,9 @@ $animateDur: 0.30s;
     .section-one {
         position: absolute;
         top: 0;
-        left: 0; 
-        right: 0;  
-        
+        left: 0;
+        right: 0;
+
         &.fixed {
             position: fixed;
             top: auto;
@@ -2104,19 +2148,23 @@ $animateDur: 0.30s;
         opacity: 0;
         z-index: -1;
         transition: opacity 0.05s;
-    
+
         &.show {
             z-index: 1;
         }
     }
 }
 
-.touchevents { // iPad Pro Land
+.touchevents {
+
+    // iPad Pro Land
     @media screen and (max-width: 1366px) and (min-width: 1355px) {
         .section-one {
             position: static;
 
-            &.fixed {  position: relative; }
+            &.fixed {
+                position: relative;
+            }
         }
 
         .section-two {
@@ -2133,7 +2181,9 @@ $animateDur: 0.30s;
     .section-one {
         position: static;
 
-        &.fixed {  position: relative; }
+        &.fixed {
+            position: relative;
+        }
     }
 
     .section-two {

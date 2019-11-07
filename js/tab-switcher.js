@@ -56,7 +56,7 @@ export class TabSwitcher {
         let tabBlockCurrent = this.tabsContainer.querySelector(`${this.blockClassName}.active`);
         this.tabCurrentName = tab.dataset.tab;
         this.changeTabButton(tab);
-        this.changeTabBlock(this.tabCurrentName, tabBlockCurrent);  
+        this.changeTabBlock(this.tabCurrentName, tabBlockCurrent);
 
         if (this.callBackOnTabChange) {
             this.callBackOnTabChange();
@@ -66,12 +66,11 @@ export class TabSwitcher {
     clickTabHandler() {
         Array.prototype.forEach.call(this.tabs, (tab) => {
             tab.addEventListener("click", () => {
-                                       
+
                 if (!tab.classList.contains("active")) {
-                    this.switchTab(tab);   
+                    this.switchTab(tab);
                 }
             });
         });
     }
 }
-

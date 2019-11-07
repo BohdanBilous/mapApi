@@ -25,8 +25,7 @@
 
 @import "page-news";
 
-@import "page-news-open.scss";
-
+@import "page-article-open.scss";
 
 @import "page-events";
 
@@ -36,7 +35,14 @@
 
 @import "page-careers";
 
+@import "page-contact";
+
+@import "page-faq";
+
 @import "page-team";
+
+@import "stub.scss";
+
 
 // Others
 @import "popup";
