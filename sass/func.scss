@@ -483,6 +483,7 @@ $dotsLiWidth: 250px;
     }
 
     &::-webkit-scrollbar-track {
+        -webkit-overflow-scrolling: auto !important;
         width: 3px;
         background: repeating-linear-gradient(to right,
         #e5e5e5,

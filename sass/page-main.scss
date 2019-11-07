@@ -1871,6 +1871,7 @@ $animateDur: 0.30s;
             position: relative;
             width: calc(100% + 50px);
             overflow-x: auto;
+            overflow-y: auto ;
             left: -25px;
 
             // &::-webkit-scrollbar { 

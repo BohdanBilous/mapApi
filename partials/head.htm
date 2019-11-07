@@ -148,14 +148,20 @@
         
         #loader .text-wrap {
             position: absolute;
+            width: 443px;
+            height: 188px;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            animation: fadeLoaderIn 1.4s linear forwards
+            animation: fadeLoaderIn 1.4s linear forwards;
+
         }
         
-        #loader .text {
-            font-size: 24px;
+        #loader img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;  
+            /* font-size: 24px;
             font-weight: 500;
             color: #000;
             white-space: nowrap;
@@ -164,7 +170,7 @@
             animation: zoomInLoaderText 1.2s linear .25s;
             -webkit-backface-visibility: hidden;
             -moz-backface-visibility: hidden;
-            backface-visibility: hidden
+            backface-visibility: hidden */
         }
         
         #loader.finished {
