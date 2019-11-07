@@ -22,6 +22,19 @@ window.addEventListener("load", function() {
         Header
     --------------------- */
 
+  // hide-activate header
+  let lastScrollTop = 0;
+
+window.addEventListener("scroll", function(){  
+   var st = window.pageYOffset || document.documentElement.scrollTop;  
+   if (st > lastScrollTop){
+       document.querySelector(".header").classList.add("hide-header");
+   } else {
+      document.querySelector(".header").classList.remove("hide-header");
+   }
+   lastScrollTop = st;
+}, false);
+
   // Drop Down
   if (exists(".drop-down-element")) {
     document.querySelectorAll(".drop-down-element").forEach(dropDownElement => {
