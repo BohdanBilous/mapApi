@@ -90,7 +90,7 @@ body {
 @media screen and (max-width: 767px),
        screen and (max-width: 815px) and (orientation: landscape) {
     .only-mobile {
-        display: block;
+        display: block !important;
     }   
 }
 

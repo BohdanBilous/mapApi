@@ -1458,3 +1458,51 @@
         }
     }
 }
+
+// Parameters
+.par-desc-item {
+    div {
+        color: $colorTextG;
+        margin-bottom: 2px;
+    }
+}
+
+// Button Toggle
+.btn-toggle {
+    position: relative;
+    padding-left: 28px;
+    height: 20px;
+    line-height: 22px;
+    white-space: nowrap;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $colorGreen;
+    }
+
+    i {
+        @extend .circle-cross;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $colorGreen;
+
+        &::before, &::after {
+            background-color: #fff;
+        }
+    }
+
+    &.hide-mode {
+        i::after {
+           display: none;
+        }
+    }
+}
+
+.ico-check {
+    display: inline-block;
+    width: 12px;
+    height: 8px;
+    background: url(../images/ico-check.png) no-repeat;
+    background-size: 100% 100%;
+}

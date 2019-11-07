@@ -10,9 +10,10 @@ import {
 } from "../generic-helpers";
 import { MediaLoader } from "../media-loader";
 import { customSelect } from "../custom-select";
+import { SuperSlider } from "../super-slider";
 
-import ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
-import { TweenMax, TimelineMax } from "gsap"; // Also works with TweenLite and TimelineLite
+import ScrollMagic from "scrollmagic";
+import { TweenMax, TimelineMax } from "gsap";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators";
 
@@ -51,6 +52,27 @@ window.addEventListener("load", function() {
 
   // Scroll From Screen
   if (exists(".hint-from-top")) scrollFromScreen(".specs-section");
+
+  // Fader
+  new SuperSlider(".prod-fader", "fader");
+
+  // Tech Spec Drop
+  if (exists(".tech-spec-wrap")) {
+    const btnTechOpen = document.querySelector(".btn-tech-spec-open");
+    const btnTechHide = document.querySelector(".btn-tech-spec-hide");
+    const techSpecDrop = document.querySelector(".tech-spec-drop");
+    const techSpecWrap = document.querySelector(".tech-spec-wrap");
+
+    btnTechOpen.addEventListener("click", () => {
+      techSpecWrap.classList.add("open");
+      techSpecDrop.style.maxHeight = techSpecDrop.scrollHeight + "px";
+    });
+
+    btnTechHide.addEventListener("click", () => {
+      techSpecWrap.classList.remove("open");
+      techSpecDrop.style.maxHeight = null;
+    });
+  }
 
   // ====== Object Animation ====== //
   if (desktop) {

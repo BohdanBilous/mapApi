@@ -500,3 +500,29 @@ $dotsLiWidth: 250px;
 .bold {
     font-family: $fontMedium;
 }
+
+.circle-cross {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    border-radius: 50%;
+
+    &::before, &::after {
+        @extend .ps;
+        @extend .ctr;
+        position: absolute;
+        background-color: #707070;
+        transition: opacity 0.2s;
+    }
+
+    &::before {
+        width: 7px;
+        height: 1px;
+    }
+
+    &::after {
+        width: 1px;
+        height: 7px;
+    }
+}
