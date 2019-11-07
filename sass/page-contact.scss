@@ -21,6 +21,7 @@
             display: flex;
             align-items: center;
             margin-left: 10px;
+            color: inherit;
 
             img {
                 display: block;
@@ -40,7 +41,7 @@
 
 .contact-top-section {
     .select-custom .select-selected {
-        min-width: 220px;
+        min-width: 151px;
         text-align: center;
     }
 
@@ -90,8 +91,11 @@
     .persone {
         display: flex;
         flex-direction: column;
-        width: calc(20% - 10px);
-        min-width: 200px;
+        margin-right: 143px;
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         .flag-inner,
         .persone-inner {
@@ -103,9 +107,15 @@
 
     .flag {
         margin-bottom: 50px;
+        width: 106px;
 
         .flag-inner {
             text-align: center;
+            width: 100%;
+
+            img {
+                margin: 0 auto 30px;
+            }
         }
 
         span {
@@ -156,6 +166,22 @@
         .location-tab-wrap {
             width: 30%;
         }
+    }
+}
+
+@include laptop {
+    .contact-row {
+
+        .flag,
+        .persone {
+            margin-right: 100px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+
     }
 }
 
@@ -217,7 +243,13 @@
 
         .flag,
         .persone {
-            min-width: 167px;
+            margin-right: 107px;
+
+            // min-width: 167px;
+            &:last-child {
+                margin-right: 107px;
+
+            }
         }
     }
 }
@@ -228,7 +260,16 @@
     .contact-select-block {
         padding-left: 0;
 
+        .select-custom .select-selected {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 50px;
+        }
+
     }
+
+
 
     .contact-tabs-container {
 
@@ -257,17 +298,10 @@
     }
 
     .contact-row {
-        justify-content: space-between;
 
         .flag,
         .persone {
-            min-width: calc(50% - 10px);
-            margin-right: 0;
-
-
-            &:nth-child(2n+1) {
-                margin-right: 10px;
-            }
+            margin-right: 73px;
         }
 
 
@@ -280,10 +314,37 @@
 
 }
 
+@media screen and (max-width: 550px) {
+    .contact-row {
+
+        .flag {
+            margin-right: 65px;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+
+        .persone {
+            width: 133px;
+            margin-right: 35px;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
 @include mobile-min {
     .contact-top-section {
         padding-top: 0;
     }
 
+    .contact-row {
+        .persone {
+            margin-right: 12px;
 
+        }
+    }
 }
