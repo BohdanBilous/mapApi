@@ -2,8 +2,17 @@
     Fonts
    =========================*/
 
-body { -ms-overflow-style: scrollbar; font-family: $fontMain; color: $colorText; font-size: 14px; }
-body * { -webkit-font-smoothing: antialiased; text-shadow: 0 1px 0 rgba(0,0,0,0.01); }
+body {
+    -ms-overflow-style: scrollbar;
+    font-family: $fontMain;
+    color: $colorText;
+    font-size: 14px;
+}
+
+body * {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.01);
+}
 
 .text-main {
     @extend .bold;
@@ -17,7 +26,11 @@ body * { -webkit-font-smoothing: antialiased; text-shadow: 0 1px 0 rgba(0,0,0,0.
     line-height: 22px;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
     font-weight: normal;
 
     a:hover {
@@ -25,7 +38,11 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-.ttl-1, .ttl-2, .ttl-3, .ttl-4, .ttl-5 {
+.ttl-1,
+.ttl-2,
+.ttl-3,
+.ttl-4,
+.ttl-5 {
     @extend .bold;
 
     span {
@@ -122,7 +139,13 @@ p {
 
 .content-w {
 
-    .ttl-1, .ttl-2, .ttl-3, .ttl-4, .ttl-top, p, a {
+    .ttl-1,
+    .ttl-2,
+    .ttl-3,
+    .ttl-4,
+    .ttl-top,
+    p,
+    a {
         color: #f5f5f5;
     }
 
@@ -136,8 +159,8 @@ p {
     font-family: "CircularStd-Book";
     src: url("fonts/CircularStd-Book.eot");
     src: url("fonts/CircularStd-Book.eot?#iefix") format("embedded-opentype"),
-         url("fonts/CircularStd-Book.woff") format("woff"),
-         url("fonts/CircularStd-Book.ttf") format("truetype");
+        url("fonts/CircularStd-Book.woff") format("woff"),
+        url("fonts/CircularStd-Book.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -146,8 +169,8 @@ p {
     font-family: "CircularStd-Medium";
     src: url("fonts/CircularStd-Medium.eot");
     src: url("fonts/CircularStd-Medium.eot?#iefix") format("embedded-opentype"),
-         url("fonts/CircularStd-Medium.woff") format("woff"),
-         url("fonts/CircularStd-Medium.ttf") format("truetype");
-    font-weight: normal;
+        url("fonts/CircularStd-Medium.woff") format("woff"),
+        url("fonts/CircularStd-Medium.ttf") format("truetype");
+    font-weight: 500;
     font-style: normal;
 }

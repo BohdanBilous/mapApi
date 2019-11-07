@@ -1,7 +1,11 @@
 /* =========================
     News
    ========================= */
-
+.media-stream--news{
+    .play-button-wrap{
+        display: none; // temporary
+    }
+}
 .screen-fixed {
     position: fixed;
     width: 100%;

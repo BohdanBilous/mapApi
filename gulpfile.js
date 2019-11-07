@@ -27,7 +27,11 @@ gulp.task("sass", function() {
     .pipe(plumber(errorHandler))
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(autoprefixer({ browsers: ["last 2 versions"] }))
+    .pipe(
+      autoprefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./css"));
 });
@@ -51,7 +55,11 @@ function html() {
           indent: true
         })
       )
-      .pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(
+        htmlmin({
+          collapseWhitespace: true
+        })
+      )
       .pipe(gulp.dest("dist/"))
   );
   //.pipe(refresh(server));
@@ -66,14 +74,14 @@ function js() {
         "js/modules/index.js",
         "js/modules/solutions.js",
         "js/modules/news.js",
+        "js/modules/news-open.js",
         "js/modules/tag-page.js",
         "js/modules/events.js",
         "js/modules/cases.js",
         "js/modules/careers.js",
         "js/modules/team.js",
-        "js/modules/solutions-open.js",
         "js/modules/resources.js",
-        "node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"
+        "js/modules/solutions-open.js"
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,
@@ -118,9 +126,8 @@ function jsProd() {
         "js/modules/cases.js",
         "js/modules/careers.js",
         "js/modules/team.js",
-        "js/modules/solutions-open.js",
         "js/modules/resources.js",
-        "node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"
+        "js/modules/solutions-open.js"
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,
@@ -158,13 +165,25 @@ gulp.task("images", function() {
     .pipe(
       imagemin(
         [
-          imagemin.gifsicle({ interlaced: true }),
+          imagemin.gifsicle({
+            interlaced: true
+          }),
           /*imagemin.jpegtran({progressive: true}),*/
-          imageminMozjpeg({ quality: 87, progressive: true }),
+          imageminMozjpeg({
+            quality: 87,
+            progressive: true
+          }),
           /*imagemin.optipng({optimizationLevel: 7}),*/
 
           imagemin.svgo({
-            plugins: [{ removeViewBox: false }, { cleanupIDs: false }]
+            plugins: [
+              {
+                removeViewBox: false
+              },
+              {
+                cleanupIDs: false
+              }
+            ]
           })
         ],
         {
@@ -204,7 +223,11 @@ gulp.task("pdf", function() {
 gulp.task("css", function() {
   return gulp
     .src(["css/**/*.css"])
-    .pipe(cleanCSS({ compatibility: "ie10" }))
+    .pipe(
+      cleanCSS({
+        compatibility: "ie10"
+      })
+    )
     .pipe(gulp.dest("dist/css"));
   //   .pipe(sass().on('error', sass.logError));
 });
@@ -232,7 +255,9 @@ gulp.task("vendor", function() {
 });
 
 gulp.task("clean:cache", function() {
-  return del(".sass-cache/**", { force: true });
+  return del(".sass-cache/**", {
+    force: true
+  });
 });
 
 gulp.task("sw", function() {

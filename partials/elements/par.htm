@@ -1,0 +1,57 @@
+<div class="par-item @@classes">
+    @@if (dir === "from-top-left") {  
+        <div class="par-text">
+            <div>@@textTitle</div>
+            <span>@@textDesc</span>
+        </div>
+        <div class="par-line">
+            <svg>
+                <line x1="2" y1="3" x2="97%" y2="96%"></line>
+                <circle cx="3" cy="4" r="3" fill="#1c989c" stroke="#1c989c" />
+                <circle cx="97%" cy="95%" r="3" fill="#1c989c" stroke="#1c989c" />
+            </svg>
+        </div>
+    } 
+
+    @@if (dir === "from-top-right") {  
+        <div class="par-line">
+            <svg>
+                <line x1="97%" y1="2" x2="3" y2="98%"></line>
+                <circle cx="96%" cy="4" r="3" fill="#1c989c" stroke="#1c989c" />
+                <circle cx="4" cy="97%" r="3" fill="#1c989c" stroke="#1c989c" />
+            </svg>
+        </div>
+        <div class="par-text">
+            <div>@@textTitle</div>
+            <span>@@textDesc</span>
+        </div>
+    } 
+
+    @@if (dir === "from-bottom-left") {  
+        <div class="par-text">
+            <div>@@textTitle</div>
+            <span>@@textDesc</span>
+        </div>
+        <div class="par-line">
+            <svg>
+                <line x1="97%" y1="2" x2="3" y2="96%"></line>
+                <circle cx="96%" cy="4" r="3" fill="#1c989c" stroke="#1c989c" />
+                <circle cx="3" cy="96%" r="3" fill="#1c989c" stroke="#1c989c" />
+            </svg>
+        </div>
+    } 
+
+    @@if (dir === "from-bottom-right") {  
+        <div class="par-line">
+            <svg>
+                <line x1="2" y1="3" x2="97%" y2="96%"></line>
+                <circle cx="3" cy="4" r="3" fill="#1c989c" stroke="#1c989c" />
+                <circle cx="97%" cy="95%" r="3" fill="#1c989c" stroke="#1c989c" />
+            </svg>
+        </div>
+        <div class="par-text">
+            <div>@@textTitle</div>
+            <span>@@textDesc</span>
+        </div>
+    } 
+</div>
