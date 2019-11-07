@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+    @@include('./partials/scripts.htm')
+    <body>
+        @@include('./partials/preloader.htm')
+        @@include('./partials/header.htm', { "classes": "" })
+        @@include('./partials/menu.htm', {
+            "solution": "active",
+            "about": "",
+            "news-act": "",
+            "resources": "",
+            "events": "",
+            "cases": "",
+            "careers": "active",
+            "sites": "",
+            "contact": ""
+        })
+        
+        <main class="main solution-open-page">
+
+            <!-- Top Screen -->
+            <div class="title-top socket layout-row">
+                <div class="layout-col-l">
+                    @@include('./partials/elements/button-link.htm', { 
+                        "text": "Back", 
+                        "href" : "index.html", 
+                        "classes": "btn-back" 
+                    })
+                </div>
+
+                <div class="layout-col-r">
+                    <div class="col">
+                        <h1 class="ttl-1 ttl">Solutions.</h1>
+                        <div class="solution-p-filter-row">
+                            <div class="solution-p-filters">
+                                <div class="solution-p-filter">
+                                    <div class="solution-p-filter--label">Category:</div>
+                                    <div class="solution-p-filter--buttons">
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-cat" checked>
+                                            <span>Hybrid</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-cat">
+                                            <span>Classic</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="solution-p-filter">
+                                    <div class="solution-p-filter--label">Size :</div>
+                                    <div class="solution-p-filter--buttons">
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size" checked>
+                                            <span>20L</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size">
+                                            <span>30L</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="solution-p-select">
+                                <div class="select-custom with-shadow select-custom-ind">
+                                    <select>
+                                        <option>Beer</option>
+                                        <option>Cider</option>
+                                        <option>Wine</option>
+                                        <option>Coffee</option>
+                                        <option>Kombucha</option>
+                                        <option>Soft Drinks</option>
+                                        <option>Water</option>
+                                        <option>Food Products</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Spec -->
+            <div class="specs-section">
+                <div class="socket layout-row align-right">
+                    <div class="hint hint-from-top with-arrow-left">Hyberid system</div>
+
+                    <div class="layout-col-r">
+                        <div class="ttl ttl-2">
+                            <span>20L</span> <br>
+                            Hybrid Keg.
+                        </div>
+
+                        <div class="spec-button-wrap">
+                            <div class="spec-button-label">Category :</div>
+                            <div class="spec-button">
+                                <i></i>
+                                Technical Specs
+                            </div>
+                        </div>
+
+                        <img class="spec-img" src="images/spec-img.png" alt="">
+
+                        <ul class="spec-det-block">
+                            <li>
+                                <span>Light and UV protection </span> 4,1 bar or 60 psig
+                            </li>
+                            <li>
+                                <span>CO2 Barrier (after 9 months) </span> &#60; 15% CO2 Loss
+                            </li>
+                            <li>
+                                <span>O2 Barrier (after 12 months): </span> &#60; 200 ppb
+                            </li>
+                            <li>
+                                <span>Max operating pressure: </span> (up to 500 nm)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3D -->
+            <div class="prod-anim-wrap socket">
+                <aside class="prod-anim-side left">
+                    <div class="ttl ttl-3">Safe. <br> Strong. <br> Susrainable.</div>
+                    <p>Hybrid helps you achieve up <br> to 40% savings on logistics <br> (versus steel kegs).</p>
+                </aside>
+
+                <aside class="prod-anim-side right">
+                    <p>Combining business understanding and innovation, the Petainer Keg range meets the highest industry standards for safety and product protection, whilst offering superior economic benefits.</p>
+                    <p>Initially available in 20 L, and soon 30 L, the Hybrid is the latest addition to the Petainer Keg portfolio. </p>
+                    <p>Designed to fill on manual,  semi—automatic and automatic filling equipment, the Hybrid Keg brings additional flexibility to your business, helps you manage seasonal peaks and access  low—rotation or new export markets.</p>
+                </aside>
+
+                <div id="section-1" class="prod-animate-section prod-animate-section-1">
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">1.</div>
+                            <img src="images/ind-2.svg" alt="">
+                        </div>
+                        <p>Optimal UV and Light <br>  protection; <br>  O2 and CO2. <br>  Barrier Technology</p>
+                    </div>
+                    <aside class="prod-anim-side right">
+                        <div class="ttl ttl-3">Product Protection</div>
+                        <p>Blown from a heavier weight preform, the Hybrid provides improved performance, removes the need for an additional inside bag or outer packaging, and takes product protection one step further. </p>
+                        <p>Fresh and perfectly carbonated beer with every pour.</p>
+                    </aside>
+                </div>
+
+                <div id="section-2" class="prod-animate-section prod-animate-section-2">
+                    <aside class="prod-anim-side left">
+                        <div class="ttl ttl-4">No Difference in taste profiles </div>
+                        <p>Between Petainer Kegs, steel kegs, and glass bottles. Test conducted by an  independent expert panel.</p>
+                    </aside>
+                    <p class="prod-anim-text">
+                        A clean fill every <br>
+                        time: no maintenance orchemicals needed
+                    </p>
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">2.</div>
+                            <img src="images/ind-1.svg" alt="">
+                        </div>
+                        <p>Product integrity at <br> higher temperatures.</p>
+                    </div>
+                    
+                </div>
+                
+
+                <!-- Parameters -->
+                <div id="parameters" class="prod-object-parameters">
+                    @@include('./partials/elements/par.htm', { 
+                        "classes": "par-item-1", 
+                        "textTitle" : "Diameter", 
+                        "textDesc": "243 mm" ,
+                        "dir": "from-top-left"
+                    })
+                    @@include('./partials/elements/par.htm', { 
+                        "classes": "par-item-2", 
+                        "textTitle" : "Available fitting types", 
+                        "textDesc": "(A,G,S,D)" ,
+                        "dir": "from-top-right"
+                    })
+                    @@include('./partials/elements/par.htm', { 
+                        "classes": "par-item-3", 
+                        "textTitle" : "Pressure Relief Tool (PRT)", 
+                        "textDesc": "supplied with every keg." ,
+                        "dir": "from-bottom-left"
+                    })
+                    @@include('./partials/elements/par.htm', { 
+                        "classes": "par-item-4", 
+                        "textTitle" : "", 
+                        "textDesc": "Reusable and stackable chimes" ,
+                        "dir": "from-bottom-right"
+                    })
+                </div>
+
+                <!-- Object -->
+                <div class="prod-object-socket">
+                    <div id="hybrid-top-2" class="hybrid-top"></div>
+                    <div id="hybrid-top-1" class="hybrid-top"></div>
+                    <div id="hybrid-mid"></div>
+                    <div id="hybrid-btm"></div>
+                </div>
+
+                
+            </div>
+          
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="info-row layout-row socket">
+                    <div class="layout-col-l">
+                        <h3 class="ttl-4">Becoming a customer</h3>
+                        @@include('./partials/elements/button-link.htm', { 
+                            "text": "Place an order", 
+                            "href" : "#", 
+                            "classes": "btn-g btn-arrow-a" 
+                        })
+                    </div>
+                    <div class="layout-col-r">
+                        <div class="layout-col-s-4">
+                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                        </div>
+                        <div class="layout-col-s-6">
+                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                            <div class="with-us">
+                                <h3 class="ttl-4">Already with us</h3>
+                                @@include('./partials/elements/button-link.htm', { 
+                                    "text": "Tools & Resources", 
+                                    "href" : "#", 
+                                    "classes": "" 
+                                })
+                            </div>
+                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bg">
+                    @@include('./partials/footer-main.htm', { "classes": "" })
+                </div>
+            </footer>
+        </main>
+
+        @@include('./partials/_careers-popup.htm', { "classes": "" })
+    </body>
+
+    <script>
+        SystemJS.import('./js/app.js');
+        SystemJS.import('./js/solutions-open.js');
+    </script>
+</html>

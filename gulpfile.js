@@ -21,15 +21,17 @@ const uglify = require("rollup-plugin-uglify-es");
 const buble = require("rollup-plugin-buble");
 const babel = require("rollup-plugin-babel");
 
-gulp.task("sass", function () {
+gulp.task("sass", function() {
   return gulp
     .src(["sass/main.scss"])
     .pipe(plumber(errorHandler))
     .pipe(sourcemaps.init())
     .pipe(sass().on("error", sass.logError))
-    .pipe(autoprefixer({
-      browsers: ["last 2 versions"]
-    }))
+    .pipe(
+      autoprefixer({
+        browsers: ["last 2 versions"]
+      })
+    )
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./css"));
 });
@@ -44,19 +46,21 @@ function errorHandler(error) {
 function html() {
   return (
     gulp
-    .src(["*.html", "*.htm"])
-    //.pipe(embedlr())
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-        basepath: "@file",
-        indent: true
-      })
-    )
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
-    .pipe(gulp.dest("dist/"))
+      .src(["*.html", "*.htm"])
+      //.pipe(embedlr())
+      .pipe(
+        fileinclude({
+          prefix: "@@",
+          basepath: "@file",
+          indent: true
+        })
+      )
+      .pipe(
+        htmlmin({
+          collapseWhitespace: true
+        })
+      )
+      .pipe(gulp.dest("dist/"))
   );
   //.pipe(refresh(server));
 }
@@ -78,7 +82,8 @@ function js() {
         "js/modules/careers.js",
         "js/modules/contact.js",
         "js/modules/team.js",
-        "js/modules/resources.js"
+        "js/modules/resources.js",
+        "js/modules/solutions-open.js"
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,
@@ -126,7 +131,8 @@ function jsProd() {
         "js/modules/careers.js",
         "js/modules/contact.js",
         "js/modules/team.js",
-        "js/modules/resources.js"
+        "js/modules/resources.js",
+        "js/modules/solutions-open.js"
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,
@@ -158,7 +164,7 @@ function jsProd() {
     });
 }
 
-gulp.task("images", function () {
+gulp.task("images", function() {
   return gulp
     .src(["images/**/*.gif", "images/**/*.jpg", "images/**/*.svg"])
     .pipe(
@@ -175,13 +181,17 @@ gulp.task("images", function () {
           /*imagemin.optipng({optimizationLevel: 7}),*/
 
           imagemin.svgo({
-            plugins: [{
-              removeViewBox: false
-            }, {
-              cleanupIDs: false
-            }]
+            plugins: [
+              {
+                removeViewBox: false
+              },
+              {
+                cleanupIDs: false
+              }
+            ]
           })
-        ], {
+        ],
+        {
           verbose: true
         }
       )
@@ -189,7 +199,7 @@ gulp.task("images", function () {
     .pipe(gulp.dest("dist/images"));
 });
 
-gulp.task("png", function () {
+gulp.task("png", function() {
   return gulp
     .src(["images/**/*.png"])
     .pipe(
@@ -203,29 +213,31 @@ gulp.task("png", function () {
 // TODO: add video optimization
 // Example: ffmpeg -i input.mp4 -movflags faststart -c:a aac -b:a 64k -c:v libx264 -r 23 -crf 23 output.mp4
 // No audio: ffmpeg -i "input.mp4" -movflags faststart -c:v libx264 -r 27 -crf 23 output.mp4
-gulp.task("video", function () {
+gulp.task("video", function() {
   return gulp.src(["videos/**/*"]).pipe(gulp.dest("dist/videos"));
 });
 
-gulp.task("fonts", function () {
+gulp.task("fonts", function() {
   return gulp.src(["css/fonts/**/*"]).pipe(gulp.dest("dist/css/fonts"));
 });
 
-gulp.task("pdf", function () {
+gulp.task("pdf", function() {
   return gulp.src(["*.pdf"]).pipe(gulp.dest("dist"));
 });
 
-gulp.task("css", function () {
+gulp.task("css", function() {
   return gulp
     .src(["css/**/*.css"])
-    .pipe(cleanCSS({
-      compatibility: "ie10"
-    }))
+    .pipe(
+      cleanCSS({
+        compatibility: "ie10"
+      })
+    )
     .pipe(gulp.dest("dist/css"));
   //   .pipe(sass().on('error', sass.logError));
 });
 
-gulp.task("assets", function () {
+gulp.task("assets", function() {
   return gulp.src(["assets/**/*"]).pipe(gulp.dest("dist/assets"));
 });
 
@@ -237,31 +249,31 @@ function watch(done) {
 }
 gulp.task("watch", watch);
 
-gulp.task("favicon", function () {
+gulp.task("favicon", function() {
   return gulp
     .src(["favicon.ico", "*.png", "browserconfig.xml", "manifest.json"])
     .pipe(gulp.dest("dist"));
 });
 
-gulp.task("vendor", function () {
+gulp.task("vendor", function() {
   return gulp.src(["vendor/**/*"]).pipe(gulp.dest("dist/vendor"));
 });
 
-gulp.task("clean:cache", function () {
+gulp.task("clean:cache", function() {
   return del(".sass-cache/**", {
     force: true
   });
 });
 
-gulp.task("sw", function () {
+gulp.task("sw", function() {
   return gulp.src(["sw.js"]).pipe(gulp.dest("dist"));
 });
 
-gulp.task("workers", function () {
+gulp.task("workers", function() {
   return gulp.src("js/workers/*").pipe(gulp.dest("dist/workers"));
 });
 
-gulp.task("server", function (done) {
+gulp.task("server", function(done) {
   connect.server({
     host: "localhost",
     port: 5000,

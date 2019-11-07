@@ -44,6 +44,10 @@ h5 {
 .ttl-4,
 .ttl-5 {
     @extend .bold;
+
+    span {
+        color: $colorTextG;
+    }
 }
 
 .ttl-1 {
