@@ -90,8 +90,8 @@ div.border-rad-top {
         }
 
         .screen-content--date-s {
-            width: 48%;  
-            justify-content: space-between;  
+            width: 48%;
+            justify-content: space-between;
             order: 1;
 
             .place {
@@ -107,7 +107,7 @@ div.border-rad-top {
     .event-section-main {
         .simple-col {
             padding-bottom: 55px;
-            
+
             .now-flag {
                 display: block;
             }
@@ -155,7 +155,7 @@ div.border-rad-top {
 
     .title-top--mob-ver {
         padding-bottom: 12px;
-        
+
         .ttl {
             margin-bottom: 90px;
         }
@@ -198,7 +198,7 @@ div.border-rad-top {
             justify-content: space-between;
 
             .btn:nth-child(1) {
-                width: 62%;    
+                width: 62%;
                 min-width: auto;
             }
 
@@ -223,7 +223,8 @@ div.border-rad-top {
 
 .media-stream {
 
-    &--events, &--cases {
+    &--events,
+    &--cases {
         .media-stream--col-l {
             padding-top: 50px;
         }
@@ -232,7 +233,7 @@ div.border-rad-top {
             padding-top: 100px;
         }
     }
-    
+
     &--cases {
         .media-stream--col-l {
             padding-bottom: 20px;
@@ -241,7 +242,8 @@ div.border-rad-top {
 }
 
 
-.media-stream--categories-ttl-sticky, .media-stream--categories-ttl-b {
+.media-stream--categories-ttl-sticky,
+.media-stream--categories-ttl-b {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -355,12 +357,12 @@ div.border-rad-top {
 @include tablet {
 
     .media-stream--events {
-        
+
         .media-stream--col-l {
-            padding-top: 100px;   
+            padding-top: 100px;
         }
     }
-   
+
     .media-stream--categories-ttl-b {
         justify-content: flex-start;
 
@@ -441,7 +443,7 @@ div.border-rad-top {
                 }
             }
         }
-        
+
     }
 }
 
@@ -459,7 +461,8 @@ div.border-rad-top {
         }
     }
 
-    .media-stream--events, .media-stream--cases {
+    .media-stream--events,
+    .media-stream--cases {
         .filter-sidebar {
             top: 30px;
         }
@@ -593,7 +596,7 @@ div.border-rad-top {
 
     &--article.event {
         padding-bottom: 40px;
-        
+
         .media-content {
             position: relative;
             margin-top: 60px;
@@ -673,7 +676,7 @@ div.border-rad-top {
                 margin-bottom: 28px;
             }
         }
-        
+
         &--content {
             .month {
                 top: -41px;
@@ -710,11 +713,12 @@ div.border-rad-top {
             padding-top: 30px;
         }
 
-        &--events, &--cases {
+        &--events,
+        &--cases {
             .media-stream--col-l {
                 padding-bottom: 100px;
             }
-    
+
             .media-stream--col-r {
                 padding: 0;
             }
@@ -738,6 +742,7 @@ div.border-rad-top {
                 .ttl {
                     width: 270px;
                     padding-right: 0;
+                    max-width: 100%;
                 }
             }
         }
@@ -752,7 +757,7 @@ div.border-rad-top {
 
     .media-stream {
 
-        
+
 
         &--bbox {
             margin-bottom: 0;

@@ -1,5 +1,6 @@
-
-import { tablet } from './generic-helpers';
+import {
+    tablet
+} from './generic-helpers';
 
 export class SolutionsInd {
 
@@ -9,35 +10,35 @@ export class SolutionsInd {
         this.tares = this.wrap.querySelectorAll(".tare-item");
         this.typeImg = typeImg;
         this.taresArray = [];
-        
+
         this.hoverHandler();
-        if (tablet) this.setIndicators(); 
+        if (tablet) this.setIndicators();
     }
 
     hoverHandler() {
         let tareCompList = [];
 
-        this.tares.forEach( (tare, index) => {
+        this.tares.forEach((tare, index) => {
 
             tare.addEventListener("mouseover", () => {
                 tareCompList = tare.dataset.tare.split(" ");
-                
+
                 if (this.typeImg) {
                     this.setInactiveTare(index);
                     this.indicators[0].parentNode.classList.add("show");
                 }
 
-                this.indicators.forEach( ind => {
+                this.indicators.forEach(ind => {
                     let nameInd = ind.dataset.ind;
-                    
+
                     if (!tareCompList.includes(nameInd)) {
                         ind.classList.add("eclipse");
-                    } 
+                    }
                 });
             });
 
             tare.addEventListener("mouseleave", () => {
-                this.indicators.forEach( ind => {
+                this.indicators.forEach(ind => {
                     ind.classList.remove("eclipse");
                 });
 
@@ -47,14 +48,14 @@ export class SolutionsInd {
     }
 
     setInactiveTare(hoverIndex) {
-        this.tares.forEach( (tare, i) => {
+        this.tares.forEach((tare, i) => {
             if (hoverIndex != i) tare.classList.add("inactive");
         });
     }
 
 
     removeInactiveTare() {
-        this.tares.forEach( tare => {
+        this.tares.forEach(tare => {
             tare.classList.remove("inactive");
         });
 
@@ -63,12 +64,12 @@ export class SolutionsInd {
 
     setIndicators() {
         let tareCompList = [];
-        
-        this.tares.forEach( tare => {
+
+        this.tares.forEach(tare => {
             tareCompList = tare.dataset.tare.split(" ");
             this.appendHTML(tare);
 
-            this.indicators.forEach( ind => {
+            this.indicators.forEach(ind => {
                 let nameInd = ind.dataset.ind;
                 let indClone = ind.cloneNode(true);
 
@@ -86,4 +87,3 @@ export class SolutionsInd {
         container.appendChild(indicatorsHTML);
     }
 }
-
