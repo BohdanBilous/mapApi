@@ -12,6 +12,11 @@ import {
   SuperSlider
 } from '../super-slider';
 
+import {
+  MediaLoader
+} from '../media-loader';
+
+
 window.addEventListener("load", function () {
 
   // Lazy Loader Images
@@ -21,11 +26,11 @@ window.addEventListener("load", function () {
     images.forEach(image => {
       const mediaQueryImages = [{
           media: "screen and (min-width: 768px)",
-          src: image.dataset.bg
+          src: image.dataset.src
         },
         {
           media: "screen and (max-width: 767px)",
-          src: image.dataset.bgmob
+          src: image.dataset.srcmob
         }
       ];
 
@@ -39,11 +44,11 @@ window.addEventListener("load", function () {
     bgs.forEach(bg => {
       const mediaQueryBackgrounds = [{
           media: "screen and (min-width: 768px)",
-          src: bg.dataset.bg
+          src: bg.dataset.src
         },
         {
           media: "screen and (max-width: 767px)",
-          src: bg.dataset.bgmob
+          src: bg.dataset.srcmob
         }
       ];
 
