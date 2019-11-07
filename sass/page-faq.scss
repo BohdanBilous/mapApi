@@ -104,8 +104,14 @@
                 margin-bottom: 80px;
             }
 
-            .input-line.textarea .max-length {
-                top: -14px;
+            .input-line.textarea {
+                .max-length {
+                    top: -14px;
+                }
+
+                textarea::placeholder {
+                    color: #333;
+                }
             }
         }
     }
@@ -152,6 +158,12 @@
             max-width: 100%;
             color: #595a5a;
             font-weight: 500;
+
+
+        }
+
+        .fag-is-help p {
+            color: #333333;
         }
 
         .fag-is-help-buttons {

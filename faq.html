@@ -32,7 +32,7 @@
 
             <div class="layout-col-r">
                 <div class="col">
-                    <h1 class="ttl-1 ttl">FAQ</h1>
+                    <h2 class="ttl-2 ttl">FAQ</h2>
                 </div>
             </div>
         </div>
@@ -1145,7 +1145,7 @@
                         </div>
                         <div class="far-col-r">
                             <div class="col-inner tillHaveQ">
-                                <h3 class="ttl-3">Till have <br>
+                                <h3 class="ttl-3">Still have <br>
                                     questions? </h3>
                                 <h4 class="4">Please get in touch, we would love to <br> hear from you</h4>
                                 <form class="popup-form" autocomplete="off">
@@ -1218,41 +1218,42 @@
                     </aside>
                 </div>
             </div>
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="info-row layout-row socket">
-                    <div class="layout-col-l">
-                        <h3 class="ttl-4">Becoming a customer</h3>
-                        @@include('./partials/elements/button-link.htm', {
-                        "text": "Place an order",
-                        "href" : "#",
-                        "classes": "btn-g btn-arrow-a"
-                        })
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="info-row layout-row socket">
+                <div class="layout-col-l">
+                    <h3 class="ttl-4">Becoming a customer</h3>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Place an order",
+                    "href" : "#",
+                    "classes": "btn-g btn-arrow-a"
+                    })
+                </div>
+                <div class="layout-col-r">
+                    <div class="layout-col-s-4">
+                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
                     </div>
-                    <div class="layout-col-r">
-                        <div class="layout-col-s-4">
-                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                    <div class="layout-col-s-6">
+                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                        <div class="with-us">
+                            <h3 class="ttl-4">Already with us</h3>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Tools & Resources",
+                            "href" : "#",
+                            "classes": ""
+                            })
                         </div>
-                        <div class="layout-col-s-6">
-                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
-                            <div class="with-us">
-                                <h3 class="ttl-4">Already with us</h3>
-                                @@include('./partials/elements/button-link.htm', {
-                                "text": "Tools & Resources",
-                                "href" : "#",
-                                "classes": ""
-                                })
-                            </div>
-                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business
-                                grow.
-                            </p>
-                        </div>
+                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business
+                            grow.
+                        </p>
                     </div>
                 </div>
-                <div class="footer-bg">
-                    @@include('./partials/footer-main.htm', { "classes": "" })
-                </div>
-            </footer>
+            </div>
+            <div class="footer-bg">
+                @@include('./partials/footer-main.htm', { "classes": "" })
+            </div>
+        </footer>
     </main>
 
     @@include('./partials/_careers-popup.htm', { "classes": "" })
