@@ -2,6 +2,7 @@
 
 /* MODULE IMPORTS */
 import {
+  desktop,
   exists,
   scrollFromScreen,
   filterSidebarInit,
@@ -51,162 +52,188 @@ window.addEventListener("load", function() {
   // Scroll From Screen
   if (exists(".hint-from-top")) scrollFromScreen(".specs-section");
 
-  // ====== Scene 3D ====== //
-  let controller = new ScrollMagic.Controller();
+  // ====== Object Animation ====== //
+  if (desktop) {
+    let controller = new ScrollMagic.Controller();
+    const scene_1_duration = 150;
+    const scene_2_duration = 100;
 
-  // document
-  //   .querySelectorAll("#hybrid-top-1, #hybrid-top-2, #hybrid-mid")
-  //   .forEach(elem => {
-  //     const tweenCapAndBottle = TweenMax.to(elem, 1, {
-  //       ease: Linear.easeNone
-  //     });
-
-  //     const scene_1 = new ScrollMagic.Scene({
-  //       triggerElement: "#hybrid-top-1",
-  //       duration: 450
-  //     })
-  //       .triggerHook(0.82)
-  //       .setClassToggle(elem, "scale-in")
-  //       .setTween(elem, 0.25, {})
-  //       .offset(0)
-  //       .addIndicators({ name: "1: Scale In" })
-  //       .addTo(controller);
-  //   });
-
-  // 1: Scale In
-  const scene_1_duration = 150;
-  const scene_2_duration = 100;
-
-  const scene_1_1 = new ScrollMagic.Scene({
-    triggerElement: "#hybrid-top-1",
-    duration: scene_1_duration
-  })
-    .triggerHook(0.92)
-    .setTween("#hybrid-top-1", 0.25, {
-      transform: "scale(1.3)"
+    // 1: Scale In
+    new ScrollMagic.Scene({
+      triggerElement: "#hybrid-top-1",
+      duration: scene_1_duration
     })
-    // .addIndicators({ name: "1: Scale In" })
-    .addTo(controller);
+      .triggerHook(0.92)
+      .setTween("#hybrid-top-1", 0.25, {
+        transform: "scale(1.3)"
+      })
+      // .addIndicators({ name: "1: Scale In" })
+      .addTo(controller);
 
-  const scene_1_2 = new ScrollMagic.Scene({
-    triggerElement: "#hybrid-top-1",
-    duration: scene_1_duration
-  })
-    .triggerHook(0.92)
-    .setTween("#hybrid-top-2", 0.25, {
-      transform: "scale(1.3) translate(7px,-4px)"
+    new ScrollMagic.Scene({
+      triggerElement: "#hybrid-top-1",
+      duration: scene_1_duration
     })
-    .addTo(controller);
+      .triggerHook(0.92)
+      .setTween("#hybrid-top-2", 0.25, {
+        transform: "scale(1.3) translate(7px,-4px)"
+      })
+      .addTo(controller);
 
-  const scene_1_3 = new ScrollMagic.Scene({
-    triggerElement: "#hybrid-top-1",
-    duration: scene_1_duration
-  })
-    .triggerHook(0.92)
-    .setTween("#hybrid-mid", 0.25, {
-      transform: "scale(1.3) translate(0,65px)"
+    new ScrollMagic.Scene({
+      triggerElement: "#hybrid-top-1",
+      duration: scene_1_duration
     })
-    .addTo(controller);
+      .triggerHook(0.92)
+      .setTween("#hybrid-mid", 0.25, {
+        transform: "scale(1.3) translate(0,65px)"
+      })
+      .addTo(controller);
 
-  // 1.1: Parameter Fade In
-  new ScrollMagic.Scene({
-    triggerElement: "#hybrid-top-1",
-    duration: 500
-  })
-    .setClassToggle("#parameters", "show")
-    .triggerHook(0.8)
-    .setTween("#parameters")
-    // .addIndicators({ name: "1.1: Par Fade In" })
-    .addTo(controller);
-
-  // 2: Scale Out
-  const scene_2_1 = new ScrollMagic.Scene({
-    triggerElement: "#hybrid-mid",
-    duration: scene_2_duration
-  })
-    .triggerHook(0.4)
-    .setTween("#hybrid-top-1", 0.25, {
-      transform: "scale(1)"
+    // 1.1: Parameter Fade In
+    new ScrollMagic.Scene({
+      triggerElement: "#hybrid-top-1",
+      duration: 500
     })
-    // .addIndicators({ name: "2: Scale Out" })
-    .addTo(controller);
+      .setClassToggle("#parameters", "show")
+      .triggerHook(0.8)
+      .setTween("#parameters")
+      // .addIndicators({ name: "1.1: Par Fade In" })
+      .addTo(controller);
 
-  const scene_2_2 = new ScrollMagic.Scene({
-    triggerElement: "#hybrid-mid",
-    duration: scene_2_duration
-  })
-    .triggerHook(0.4)
-    .setTween("#hybrid-top-2", 0.25, {
-      transform: "scale(1) translate(5px, 7px)"
+    // 2: Scale Out
+    new ScrollMagic.Scene({
+      triggerElement: "#hybrid-mid",
+      duration: scene_2_duration
     })
-    .addTo(controller);
+      .triggerHook(0.4)
+      .setTween("#hybrid-top-1", 0.25, {
+        transform: "scale(1)"
+      })
+      // .addIndicators({ name: "2: Scale Out" })
+      .addTo(controller);
 
-  const scene_2_3 = new ScrollMagic.Scene({
-    triggerElement: "#hybrid-mid",
-    duration: scene_2_duration
-  })
-    .triggerHook(0.4)
-    .setTween("#hybrid-mid", 0.25, {
-      transform: "scale(1) translateX(-6px)"
+    new ScrollMagic.Scene({
+      triggerElement: "#hybrid-mid",
+      duration: scene_2_duration
     })
-    .addTo(controller);
+      .triggerHook(0.4)
+      .setTween("#hybrid-top-2", 0.25, {
+        transform: "scale(1) translate(5px, 7px)"
+      })
+      .addTo(controller);
 
-  // 3: Departure
-  const tweenBottle = TweenMax.to("#hybrid-mid", 1, {
-    ease: Linear.easeNone
-  });
+    new ScrollMagic.Scene({
+      triggerElement: "#hybrid-mid",
+      duration: scene_2_duration
+    })
+      .triggerHook(0.4)
+      .setTween("#hybrid-mid", 0.25, {
+        transform: "scale(1) translateX(-6px)"
+      })
+      .addTo(controller);
 
-  new ScrollMagic.Scene({
-    triggerElement: "#hybrid-mid",
-    duration: 300
-  })
-    .setTween(tweenBottle, 0.25, { scale: 1 })
-    .setPin("#hybrid-mid", { pushFollowers: false })
-    // .addIndicators({ name: "2: Departure" })
-    .addTo(controller);
-
-  new ScrollMagic.Scene({
-    triggerElement: "#section-1",
-    duration: 700,
-    offset: 100
-  })
-    .setClassToggle("#section-1", "show")
-    .setTween("#section-1")
-    .addTo(controller);
-
-  new ScrollMagic.Scene({
-    triggerElement: "#section-2",
-    duration: 700
-  })
-    .setClassToggle("#section-2", "show")
-    .setTween("#section-2")
-    .addTo(controller);
-
-  // 4: Connect
-  document.querySelectorAll(".hybrid-top").forEach(elem => {
-    const tweenElement = TweenMax.to(elem, 1, {
+    // 3: Departure
+    const tweenBottle = TweenMax.to("#hybrid-mid", 1, {
       ease: Linear.easeNone
     });
 
     new ScrollMagic.Scene({
       triggerElement: "#hybrid-mid",
-      // duration: 300,
-      duration: 500,
-      offset: 250
+      duration: 300
     })
-      .setTween(tweenElement)
-      .setPin(elem, { pushFollowers: false })
-      // .addIndicators({ name: "4: Connect" })
+      .setTween(tweenBottle, 0.25, { scale: 1 })
+      .setPin("#hybrid-mid", { pushFollowers: false })
+      // .addIndicators({ name: "2: Departure" })
       .addTo(controller);
-  });
 
-  new ScrollMagic.Scene({
-    triggerElement: "#hybrid-mid",
-    duration: 200,
-    offset: 550
-  })
-    .setTween("#hybrid-mid")
-    .setPin("#hybrid-mid", { pushFollowers: false })
-    // .addIndicators({ name: "4: Connect Bottom" })
-    .addTo(controller);
+    new ScrollMagic.Scene({
+      triggerElement: "#section-1",
+      duration: 700,
+      offset: 100
+    })
+      .setClassToggle("#section-1", "show")
+      .setTween("#section-1")
+      .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement: "#section-2",
+      duration: 700
+    })
+      .setClassToggle("#section-2", "show")
+      .setTween("#section-2")
+      .addTo(controller);
+
+    // 4: Connect
+    document.querySelectorAll(".hybrid-top").forEach(elem => {
+      const tweenElement = TweenMax.to(elem, 1, {
+        ease: Linear.easeNone
+      });
+
+      new ScrollMagic.Scene({
+        triggerElement: "#hybrid-mid",
+        // duration: 300,
+        duration: 500,
+        offset: 250
+      })
+        .setTween(tweenElement)
+        .setPin(elem, { pushFollowers: false })
+        // .addIndicators({ name: "4: Connect" })
+        .addTo(controller);
+    });
+
+    new ScrollMagic.Scene({
+      triggerElement: "#hybrid-mid",
+      duration: 200,
+      offset: 550
+    })
+      .setTween("#hybrid-mid")
+      .setPin("#hybrid-mid", { pushFollowers: false })
+      // .addIndicators({ name: "4: Connect Bottom" })
+      .addTo(controller);
+  } else {
+    const distFromTop = 121;
+    const distFromBtm = 134;
+    const steps = 3;
+    const btnDir = document.querySelectorAll(".btn-dir");
+    const elementTop = document.querySelectorAll(".hybrid-top");
+    const elementBtm = document.querySelector("#hybrid-btm");
+    let stepCount = 0;
+    let distCurTop = 0;
+    let distCurBtm = 0;
+
+    btnDir.forEach(btn => {
+      btn.addEventListener("click", e => {
+        const target = e.target;
+        const stepFromTop = distFromTop / steps;
+        const stepFromBtm = distFromBtm / steps;
+
+        if (target.classList.contains("down")) {
+          if (stepCount < 3) {
+            stepCount++;
+            // From Top
+            distCurTop = distCurTop + stepFromTop;
+            elementTop.forEach(elem => {
+              elem.style.transform = `translateY(${distCurTop}px)`;
+            });
+            // From Bottom
+            distCurBtm = distCurBtm - stepFromBtm;
+            elementBtm.style.transform = `translateY(${distCurBtm}px)`;
+          }
+        } else if (target.classList.contains("up")) {
+          if (stepCount != 0) {
+            stepCount--;
+            // To Top
+            distCurTop = distCurTop - stepFromTop;
+            elementTop.forEach(elem => {
+              elem.style.transform = `translateY(${distCurTop}px)`;
+            });
+            // To Bottom
+            distCurBtm = distCurBtm + stepFromBtm;
+            elementBtm.style.transform = `translateY(${distCurBtm}px)`;
+          }
+        }
+      });
+    });
+  }
 });

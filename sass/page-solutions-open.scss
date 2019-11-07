@@ -366,6 +366,10 @@
     }   
 }
 
+.prod-object-buttons {
+    display: none;
+}
+
 // PRDUCT ANIMAATE WRAPPER
 .prod-anim-wrap {
     padding-top: 67px;
@@ -657,7 +661,12 @@ $leftOffset: 270px;
 
 @include tablet {
     .prod-anim-wrap {
+        min-height: auto;
+        padding-bottom: 170px;
+    }
 
+    .prod-anim-side {
+        position: static;
     }
 
     .prod-animate-section, 
@@ -667,12 +676,82 @@ $leftOffset: 270px;
     }
 
     .solution-open-page {
-        .prod-anim-wrap {
-            min-height: auto;
-        }
 
         .prod-object-socket {
-            
+            width: 150px;
+            height: 600px;
+            left: -10px;
         }
     }
+
+    #hybrid-top-1 {
+        top: 0;
+        width: 150px;
+        height: 119px;
+    }
+
+    #hybrid-top-2 {
+        width: 111px;
+        height: 90px;
+        left: 21px;
+        top: -13px;
+    }
+
+    #hybrid-mid {
+        width: 126px;
+        height: 285px;
+        top: 156px;
+    }
+
+    #hybrid-btm {
+        width: 132px;
+        height: 153px;
+        top: auto;
+        bottom: 0;
+    }
+
+    .prod-object-buttons {
+        position: absolute;
+        width: 600px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 550px;
+        height: 44px;
+        display: block;
+
+        .btn-dir.up {
+            position: absolute;
+            left: 0;
+        }
+
+        .btn-dir.down {
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+@include mobile {
+    .prod-object-buttons {
+        left: 0;
+        right: 0;
+        width: auto;
+        transform: none;
+    }
+}
+
+// TECHNICAL SPEC
+.prod-tech-spec-wrap {
+    
+    overflow: hidden;
+
+    .ttl-5 {
+
+    }
+}
+
+.prod-tech-spec-main {
+    padding: 23px 0 26px;
+    border-top: 1px solid $colorBorder;
+    border-bottom: 1px solid $colorBorder;
 }

@@ -1432,3 +1432,29 @@
         }
     }
 }
+
+// Buttons up / down
+.btn-dir {
+    position: relative;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    background-color: #e6e6e6;
+
+    &::after {
+        @extend .ps;
+        position: absolute;
+        top: 15px;
+        left: 19px;
+        width: 7px;
+        height: 12px;
+        background-size: 100% 100%;
+        background-image: url(../images/arrow-down.svg);
+    }
+
+    &.up {
+        &::after {
+            transform: rotate(-180deg);
+        }
+    }
+}
