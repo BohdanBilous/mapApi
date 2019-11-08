@@ -1,89 +1,86 @@
-import {
-    tablet
-} from './generic-helpers';
+import { tablet } from "./generic-helpers";
 
 export class SolutionsInd {
+  constructor(typeImg) {
+    this.wrap = document.querySelector(".solutions-highlights");
+    this.indicators = this.wrap.querySelectorAll(
+      ".indicators-hightlight .indicator"
+    );
+    this.tares = this.wrap.querySelectorAll(".hover-mode .tare-item");
+    this.typeImg = typeImg;
+    this.taresArray = [];
 
-    constructor(typeImg) {
-        this.wrap = document.querySelector(".solutions-highlights");
-        this.indicators = this.wrap.querySelectorAll(".indicators-hightlight .indicator");
-        this.tares = this.wrap.querySelectorAll(".tare-item");
-        this.typeImg = typeImg;
-        this.taresArray = [];
+    this.hoverHandler();
+    if (tablet) this.setIndicators();
+  }
 
-        this.hoverHandler();
-        if (tablet) this.setIndicators();
-    }
+  hoverHandler() {
+    let tareCompList = [];
 
-    hoverHandler() {
-        let tareCompList = [];
+    this.tares.forEach((tare, index) => {
+      tare.addEventListener("mouseover", () => {
+        tareCompList = tare.dataset.tare.split(" ");
 
-        this.tares.forEach((tare, index) => {
+        if (this.typeImg) {
+          this.setInactiveTare(index);
+          this.indicators[0].parentNode.classList.add("show");
+        }
 
-            tare.addEventListener("mouseover", () => {
-                tareCompList = tare.dataset.tare.split(" ");
+        this.indicators.forEach(ind => {
+          let nameInd = ind.dataset.ind;
 
-                if (this.typeImg) {
-                    this.setInactiveTare(index);
-                    this.indicators[0].parentNode.classList.add("show");
-                }
-
-                this.indicators.forEach(ind => {
-                    let nameInd = ind.dataset.ind;
-
-                    if (!tareCompList.includes(nameInd)) {
-                        ind.classList.add("eclipse");
-                    }
-                });
-            });
-
-            tare.addEventListener("mouseleave", () => {
-                this.indicators.forEach(ind => {
-                    ind.classList.remove("eclipse");
-                });
-
-                this.removeInactiveTare();
-            });
+          if (!tareCompList.includes(nameInd)) {
+            ind.classList.add("eclipse");
+          }
         });
-    }
+      });
 
-    setInactiveTare(hoverIndex) {
-        this.tares.forEach((tare, i) => {
-            if (hoverIndex != i) tare.classList.add("inactive");
-        });
-    }
-
-
-    removeInactiveTare() {
-        this.tares.forEach(tare => {
-            tare.classList.remove("inactive");
+      tare.addEventListener("mouseleave", () => {
+        this.indicators.forEach(ind => {
+          ind.classList.remove("eclipse");
         });
 
-        this.indicators[0].parentNode.classList.remove("show");
-    }
+        this.removeInactiveTare();
+      });
+    });
+  }
 
-    setIndicators() {
-        let tareCompList = [];
+  setInactiveTare(hoverIndex) {
+    this.tares.forEach((tare, i) => {
+      if (hoverIndex != i) tare.classList.add("inactive");
+    });
+  }
 
-        this.tares.forEach(tare => {
-            tareCompList = tare.dataset.tare.split(" ");
-            this.appendHTML(tare);
+  removeInactiveTare() {
+    this.tares.forEach(tare => {
+      tare.classList.remove("inactive");
+    });
 
-            this.indicators.forEach(ind => {
-                let nameInd = ind.dataset.ind;
-                let indClone = ind.cloneNode(true);
+    this.indicators[0].parentNode.classList.remove("show");
+  }
 
-                if (tareCompList.includes(nameInd)) {
-                    tare.querySelector(".indicators").appendChild(indClone);
-                }
-            });
-        });
-    }
+  setIndicators() {
+    let tareCompList = [];
 
-    appendHTML(container, element) {
-        const indicatorsHTML = document.createElement("div");
+    this.tares.forEach(tare => {
+      tareCompList = tare.dataset.tare.split(" ");
+      this.appendHTML(tare);
 
-        indicatorsHTML.classList.add("indicators");
-        container.appendChild(indicatorsHTML);
-    }
+      this.indicators.forEach(ind => {
+        let nameInd = ind.dataset.ind;
+        let indClone = ind.cloneNode(true);
+
+        if (tareCompList.includes(nameInd)) {
+          tare.querySelector(".indicators").appendChild(indClone);
+        }
+      });
+    });
+  }
+
+  appendHTML(container, element) {
+    const indicatorsHTML = document.createElement("div");
+
+    indicatorsHTML.classList.add("indicators");
+    container.appendChild(indicatorsHTML);
+  }
 }
