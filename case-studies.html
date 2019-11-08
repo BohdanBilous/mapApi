@@ -1,292 +1,281 @@
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
-    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
-    @@include('./partials/scripts.htm')
-    <body>
-        @@include('./partials/preloader.htm')
-        @@include('./partials/header.htm', { "classes": "" })
-        @@include('./partials/menu.htm', {
-            "solution": "",
-            "about": "",
-            "news": "",
-            "resources": "",
-            "events": "",
-            "cases": "active",
-            "careers": "",
-            "sites": "",
-            "contact": ""
-        })
-        
-        <main class="main">
+@@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+@@include('./partials/scripts.htm')
 
-            <!-- Top Screen -->
-            <div class="title-top socket layout-row">
-                <div class="layout-col-l">
-                    @@include('./partials/elements/button-link.htm', { 
-                        "text": "Back", 
-                        "href" : "javascript:history.back()", 
-                        "classes": "btn-back" 
+<body>
+    @@include('./partials/preloader.htm')
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "",
+    "about": "",
+    "news": "",
+    "resources": "",
+    "events": "",
+    "cases": "active",
+    "careers": "",
+    "sites": "",
+    "contact": ""
+    })
+
+    <main class="main">
+
+        <!-- Top Screen -->
+        <div class="title-top socket layout-row">
+            <div class="layout-col-l">
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Back",
+                "href" : "javascript:history.back()",
+                "classes": "btn-back"
+                })
+            </div>
+
+            <div class="layout-col-r">
+                <div class="col">
+                    <h1 class="ttl-1 ttl">Case Studies</h1>
+                    <div class="hint hint-from-top with-arrow-left">Discover Cases</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event Main -->
+        <div class="article-section event-section event-section-main" data-bg="url(images/cases-main-bg.jpg)"
+            data-bgmob="url(images/cases-main-bg-mob.jpg)">
+            <div class="screen-inner screen-inner-simple socket layout-row align-right">
+                <div class="layout-col-r col content-w">
+                    <!-- <div class="now-flag">Now</div> -->
+                    <div></div>
+                    <div class="ttl-section">
+                        <!-- <div class="ttl-top">Product Manager</div> -->
+                        <h2 class="ttl-2 ttl">How petainer Keg is <br> helping breweries grow <br> their business</h2>
+                    </div>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Read Case",
+                    "href" : "case-open.html",
+                    "classes": "btn-more btn-blur btn-arrow-a"
                     })
                 </div>
+            </div>
+        </div>
 
-                <div class="layout-col-r">
-                    <div class="col">
-                        <h1 class="ttl-1 ttl">Case Studies</h1>
-                        <div class="hint hint-from-top with-arrow-left">Discover Cases</div>
+        <!-- Content -->
+        <div class="content content-media">
+
+            <!-- News Stream -->
+            <div class="media-stream--container media-stream--cases socket">
+
+                <!-- Left Column -->
+                <div class="media-stream--col-l">
+
+                    <!-- Categories Title Sticky For Desktop -->
+                    <div class="media-stream--categories-ttl-sticky">
+                        <h4 class="ttl-4 ttl">Beer</h4>
+                        <div class="items brackets">2</div>
+                    </div>
+
+                    <div class="cases-container" id="c-beer">
+                        <a class="case-item" href="case-open.html">
+                            <div class="media-panel">
+                                <div class="case-item-text">
+                                    <!-- <div class="case-item-pos">Product Manager</div> -->
+                                    <div class="case-item-name ttl-2">Lovina Beach Brewery, Bali: <br> creating a unique
+                                        brewery</div>
+                                </div>
+
+                                <img class="lazy-img media-img" data-src="images/case-3.jpg"
+                                    data-srcmob="images/case-3-mob.jpg" alt="image">
+                            </div>
+
+                            <!-- <div class="customers-item">
+                                <div class="customers-logo-wrap">
+                                    <img class="customers-logo" src="images/c-1.png">
+                                </div>
+
+                                <div class="city">
+                                    <div class="ttl-5">New York</div>
+                                    <span>(USA)</span>
+                                </div>
+
+                                <div class="customers-text">
+                                    <div class="ttl-5">Rooster Beers</div>
+                                    <p>Sales</p>
+                                </div>
+                            </div> -->
+                        </a>
+
+                        <a class="case-item" href="case-open.html">
+                            <div class="media-panel">
+                                <div class="case-item-text">
+                                    <!-- <div class="case-item-pos">Chief Marketing Officer</div> -->
+                                    <div class="case-item-name ttl-2">Rooster Beers: <br> capitalizing on growth</div>
+                                </div>
+                                <img class="lazy-img media-img" data-src="images/case-2.jpg"
+                                    data-srcmob="images/case-2-mob.jpg" alt="image">
+                            </div>
+                            <!-- 
+                            <div class="customers-item">
+                                <div class="customers-logo-wrap">
+                                    <img class="customers-logo" src="images/c-2.png">
+                                </div>
+
+                                <div class="city">
+                                    <div class="ttl-5">New York</div>
+                                    <span>(USA)</span>
+                                </div>
+
+                                <div class="customers-text">
+                                    <div class="ttl-5">Jacobs Monarch</div>
+                                    <p>Sales</p>
+                                </div>
+                            </div> -->
+                        </a>
+                    </div>
+
+                    <div class="cases-container" id="c-coffee">
+                        <a class="case-item" href="case-open.html">
+                            <div class="media-panel">
+                                <div class="case-item-text">
+                                    <!-- <div class="case-item-pos">Product Manager</div> -->
+                                    <div class="case-item-name ttl-2">Steamworks: taking <br>advantage of new markets
+                                    </div>
+                                </div>
+                                <img class="lazy-img media-img" data-src="images/case-1.jpg"
+                                    data-srcmob="images/case-1-mob.jpg" alt="image">
+                            </div>
+
+                            <!-- <div class="customers-item">
+                                <div class="customers-logo-wrap">
+                                    <img class="customers-logo" src="images/c-4.png">
+                                </div>
+
+                                <div class="city">
+                                    <div class="ttl-5">New York</div>
+                                    <span>(USA)</span>
+                                </div>
+
+                                <div class="customers-text">
+                                    <div class="ttl-5">Rooster Beers</div>
+                                    <p>Sales</p>
+                                </div>
+                            </div> -->
+                        </a>
+                    </div>
+
+                    <div class="cases-container" id="c-soft">
+                        <a class="case-item" href="case-open.html">
+                            <div class="media-panel">
+                                <div class="case-item-text">
+                                    <!-- <div class="case-item-pos">Chief Marketing Officer</div> -->
+                                    <div class="case-item-name ttl-2">Wine on tap: innovation <br> in a traditional
+                                        industry</div>
+                                </div>
+                                <img class="lazy-img media-img" data-src="images/case-4.jpg"
+                                    data-srcmob="images/case-4-mob.jpg" alt="image">
+                            </div>
+
+                            <!-- <div class="customers-item">
+                                <div class="customers-logo-wrap">
+                                    <img class="customers-logo" src="images/c-5.png">
+                                </div>
+
+                                <div class="city">
+                                    <div class="ttl-5">New York</div>
+                                    <span>(USA)</span>
+                                </div>
+
+                                <div class="customers-text">
+                                    <div class="ttl-5">Jacobs Monarch</div>
+                                    <p>Sales</p>
+                                </div>
+                            </div> -->
+                        </a>
                     </div>
                 </div>
+
+                <!-- Right Column -->
+                <div class="media-stream--col-r">
+                    <aside class="filter-sidebar">
+                        <div class="filter-sidebar-section">
+                            <div class="filter-btns">
+                                <div class="btn-search"></div>
+                                <button class="btn-filter">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </button>
+                            </div>
+                            <h4 class="ttl-4">Filter</h4>
+                            <nav class="filter-nav">
+                                <ul>
+                                    <li data-hash="c-beer" class="filter-item active">
+                                        <span>Beer</span>
+                                        <div class="items brackets">2</div>
+                                    </li>
+                                    <li data-hash="c-coffee" class="filter-item">
+                                        <span>Coffee</span>
+                                        <div class="items brackets">1</div>
+                                    </li>
+                                    <li data-hash="c-soft" class="filter-item">
+                                        <span>Soft Drinks</span>
+                                        <div class="items brackets">2</div>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="search-block">
+                                <form action="#">
+                                    <input placeholder="Search a keyword" type="text">
+                                    <button class="btn-search" type="submit"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
             </div>
 
-            <!-- Event Main -->
-            <div class="article-section event-section event-section-main" 
-                data-bg="url(images/cases-main-bg.jpg)" 
-                data-bgmob="url(images/cases-main-bg-mob.jpg)"
-            >
-                <div class="screen-inner screen-inner-simple socket layout-row align-right">
-                    <div class="layout-col-r col content-w">
-                        <div class="now-flag">Now</div>
-                        <div class="ttl-section">
-                            <div class="ttl-top">Product Manager</div>
-                            <h2 class="ttl-2 ttl">Nathan Simmons</h2>
-                        </div>
-                        @@include('./partials/elements/button-link.htm', { 
-                            "text": "Read Case", 
-                            "href" : "case-open.html", 
-                            "classes": "btn-more btn-blur btn-arrow-a" 
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="info-row layout-row socket">
+                    <div class="layout-col-l">
+                        <h3 class="ttl-4">Becoming a customer</h3>
+                        @@include('./partials/elements/button-link.htm', {
+                        "text": "Place an order",
+                        "href" : "#",
+                        "classes": "btn-g btn-arrow-a"
                         })
                     </div>
-                </div>
-            </div>
-
-            <!-- Content -->
-            <div class="content content-media">
-
-                <!-- News Stream -->
-                <div class="media-stream--container media-stream--cases socket">
-
-                    <!-- Left Column -->
-                    <div class="media-stream--col-l">
-
-                        <!-- Categories Title Sticky For Desktop -->
-                        <div class="media-stream--categories-ttl-sticky">
-                            <h4 class="ttl-4 ttl">Beer</h4>
-                            <div class="items brackets">2</div>
+                    <div class="layout-col-r">
+                        <div class="layout-col-s-4">
+                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
                         </div>
-
-                        <div class="cases-container" id="c-beer">
-                            <a class="case-item" href="case-open.html">
-                                <div class="media-panel">
-                                    <div class="case-item-text">
-                                        <div class="case-item-pos">Product Manager</div>
-                                        <div class="case-item-name ttl-2">Rose Gutierrez</div>
-                                    </div>
-
-                                    <img 
-                                        class="lazy-img media-img" 
-                                        data-src="images/case-3.jpg"
-                                        data-srcmob = "images/case-3-mob.jpg"
-                                        alt="image"
-                                    >
-                                </div>
-
-                                <div class="customers-item">
-                                    <div class="customers-logo-wrap">
-                                        <img class="customers-logo" src="images/c-1.png">
-                                    </div>
-
-                                    <div class="city">
-                                        <div class="ttl-5">New York</div>
-                                        <span>(USA)</span>
-                                    </div>
-
-                                    <div class="customers-text">
-                                        <div class="ttl-5">Rooster Beers</div>
-                                        <p>Sales</p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a class="case-item" href="case-open.html">
-                                <div class="media-panel">
-                                    <div class="case-item-text">
-                                        <div class="case-item-pos">Chief Marketing Officer</div>
-                                        <div class="case-item-name ttl-2">Kevin Warren</div>
-                                    </div>
-                                    <img 
-                                        class="lazy-img media-img" 
-                                        data-src="images/case-2.jpg"
-                                        data-srcmob = "images/case-2-mob.jpg"
-                                        alt="image"
-                                    >
-                                </div>
-
-                                <div class="customers-item">
-                                    <div class="customers-logo-wrap">
-                                        <img class="customers-logo" src="images/c-2.png">
-                                    </div>
-
-                                    <div class="city">
-                                        <div class="ttl-5">New York</div>
-                                        <span>(USA)</span>
-                                    </div>
-
-                                    <div class="customers-text">
-                                        <div class="ttl-5">Jacobs Monarch</div>
-                                        <p>Sales</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="cases-container" id="c-coffee">
-                            <a class="case-item" href="case-open.html">
-                                <div class="media-panel">
-                                    <div class="case-item-text">
-                                        <div class="case-item-pos">Product Manager</div>
-                                        <div class="case-item-name ttl-2">Janet Flores</div>
-                                    </div>
-                                    <img 
-                                        class="lazy-img media-img" 
-                                        data-src="images/case-1.jpg"
-                                        data-srcmob = "images/case-1-mob.jpg"
-                                        alt="image"
-                                    >
-                                </div>
-
-                                <div class="customers-item">
-                                    <div class="customers-logo-wrap">
-                                        <img class="customers-logo" src="images/c-4.png">
-                                    </div>
-
-                                    <div class="city">
-                                        <div class="ttl-5">New York</div>
-                                        <span>(USA)</span>
-                                    </div>
-
-                                    <div class="customers-text">
-                                        <div class="ttl-5">Rooster Beers</div>
-                                        <p>Sales</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="cases-container" id="c-soft">
-                            <a class="case-item" href="case-open.html">
-                                <div class="media-panel">
-                                    <div class="case-item-text">
-                                        <div class="case-item-pos">Chief Marketing Officer</div>
-                                        <div class="case-item-name ttl-2">Nicole Delgado</div>
-                                    </div>
-                                    <img 
-                                        class="lazy-img media-img" 
-                                        data-src="images/case-4.jpg"
-                                        data-srcmob = "images/case-4-mob.jpg"
-                                        alt="image"
-                                    >
-                                </div>
-
-                                <div class="customers-item">
-                                    <div class="customers-logo-wrap">
-                                        <img class="customers-logo" src="images/c-5.png">
-                                    </div>
-
-                                    <div class="city">
-                                        <div class="ttl-5">New York</div>
-                                        <span>(USA)</span>
-                                    </div>
-
-                                    <div class="customers-text">
-                                        <div class="ttl-5">Jacobs Monarch</div>
-                                        <p>Sales</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Right Column -->
-                    <div class="media-stream--col-r">
-                        <aside class="filter-sidebar">
-                            <div class="filter-sidebar-section">
-                                <div class="filter-btns">
-                                    <div class="btn-search"></div>
-                                    <button class="btn-filter">
-                                        <i></i>
-                                        <i></i>
-                                        <i></i>
-                                    </button>
-                                </div>
-                                <h4 class="ttl-4">Filter</h4>
-                                <nav class="filter-nav">
-                                    <ul>
-                                        <li data-hash="c-beer" class="filter-item active">
-                                            <span>Beer</span>
-                                            <div class="items brackets">2</div>
-                                        </li>   
-                                        <li data-hash="c-coffee" class="filter-item">
-                                            <span>Coffee</span>
-                                            <div class="items brackets">1</div>
-                                        </li> 
-                                        <li data-hash="c-soft" class="filter-item">
-                                            <span>Soft Drinks</span>
-                                            <div class="items brackets">2</div>
-                                        </li>  
-                                    </ul>   
-                                </nav>
-                                <div class="search-block">
-                                    <form action="#">
-                                        <input placeholder="Search a keyword" type="text">
-                                        <button class="btn-search" type="submit"></button>
-                                    </form>
-                                </div>
-                            </div>    
-                        </aside>
-                    </div>
-                    
-                </div>
-
-                <!-- Footer -->
-                <footer class="footer">
-                    <div class="info-row layout-row socket">
-                        <div class="layout-col-l">
-                            <h3 class="ttl-4">Becoming a customer</h3>
-                            @@include('./partials/elements/button-link.htm', { 
-                                "text": "Place an order", 
-                                "href" : "#", 
-                                "classes": "btn-g btn-arrow-a" 
-                            })
-                        </div>
-                        <div class="layout-col-r">
-                            <div class="layout-col-s-4">
-                                <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                        <div class="layout-col-s-6">
+                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                            <div class="with-us">
+                                <h3 class="ttl-4">Already with us</h3>
+                                @@include('./partials/elements/button-link.htm', {
+                                "text": "Tools & Resources",
+                                "href" : "#",
+                                "classes": ""
+                                })
                             </div>
-                            <div class="layout-col-s-6">
-                                <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
-                                <div class="with-us">
-                                    <h3 class="ttl-4">Already with us</h3>
-                                    @@include('./partials/elements/button-link.htm', { 
-                                        "text": "Tools & Resources", 
-                                        "href" : "#", 
-                                        "classes": "" 
-                                    })
-                                </div>
-                                <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
-                            </div>
+                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business
+                                grow. </p>
                         </div>
                     </div>
-                    @@include('./partials/footer-main.htm', { "classes": "footer-bg" })
-                </footer>
-            </div>
+                </div>
+                @@include('./partials/footer-main.htm', { "classes": "footer-bg" })
+            </footer>
+        </div>
 
-            
-    
-        </main>
-    </body>
 
-    <script>
-        SystemJS.import('./js/app.js');
-        SystemJS.import('./js/cases.js');
-    </script>
+
+    </main>
+</body>
+
+<script>
+    SystemJS.import('./js/app.js');
+    SystemJS.import('./js/cases.js');
+</script>
+
 </html>

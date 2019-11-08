@@ -1,0 +1,81 @@
+/* =========================
+    Stub
+   ========================= */
+.solution-open-page.jars .prod-review-wrap .image {
+  width: 435px;
+  height: auto;
+  right: 0%;
+}
+
+.jars {
+  .tech-spec-wrap {
+    margin-bottom: 85px;
+  }
+
+  .prod-review-wrap .prod-a-desc-list {
+    padding-bottom: 15px;
+  }
+
+  .select-custom .select-selected {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .disposal-photo {
+    img {
+      width: 440px;
+      max-width: 90%;
+    }
+  }
+
+  .hbt-sys {
+    background-image: url(../images/image8.jpg);
+    background-position: center 30%;
+    margin-bottom: 100px;
+
+  }
+}
+
+@include tablet {
+  .solution-open-page.jars .prod-review-wrap .image {
+    position: relative;
+    margin: 0 auto;
+    width: 440px;
+    max-width: 90%;
+
+
+  }
+
+  .jars {
+    .solution-p-filter--buttons {
+      flex-wrap: wrap;
+    }
+
+    .hbt-sys {
+      background-position: 0 480px;
+
+      &::before {
+        top: 476px;
+      }
+
+      &::after {
+        bottom: 0px;
+      }
+    }
+  }
+
+}
+
+@include mobile {
+  .jars .hbt-sys {
+    background-position: 0 480px;
+
+    &::after {
+      bottom: 0px;
+    }
+  }
+
+  .jars .prod-fader .slides {
+    height: 510px;
+  }
+}

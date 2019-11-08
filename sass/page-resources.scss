@@ -120,7 +120,7 @@
     .ttl {
         width: 100%;
         margin-bottom: 22px;
-    }    
+    }
 
     .file-item {
         width: 49%;
@@ -130,13 +130,12 @@
         margin-bottom: 30px;
         border-bottom: 1px solid $colorBorder;
 
-        &:nth-last-child(1), &:nth-last-child(2) {
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
             margin-bottom: 0;
         }
 
-        &--name {
-
-        }
+        &--name {}
 
         &--size {
             bottom: 15px;
@@ -152,7 +151,7 @@
 
             &::after {
                 @extend .ctr;
-                left: 51% !important;  
+                left: 51% !important;
             }
         }
     }
@@ -168,7 +167,8 @@
             padding-bottom: 33px;
             margin-bottom: 40px;
 
-            &:nth-last-child(1), &:nth-last-child(2) {
+            &:nth-last-child(1),
+            &:nth-last-child(2) {
                 margin-bottom: 40px;
             }
 
@@ -222,6 +222,7 @@
         position: absolute;
         opacity: 0;
         height: 1px;
+        width: 0;
         overflow: hidden;
     }
 
@@ -330,25 +331,77 @@
                 left: 5px;
             }
 
-            &:nth-child(1)::before { background: url(../images/ind-0.svg); }
-            &:nth-child(2)::before { background: url(../images/ind-1.svg); }
-            &:nth-child(3)::before { background: url(../images/ind-2.svg); }
-            &:nth-child(4)::before { background: url(../images/ind-3.svg); }
-            &:nth-child(5)::before { background: url(../images/ind-4.svg); }
-            &:nth-child(6)::before { background: url(../images/ind-5.svg); }
-            &:nth-child(7)::before { background: url(../images/ind-6.svg); }
-            &:nth-child(8)::before { background: url(../images/ind-7.svg); }
-            &:nth-child(9)::before { background: url(../images/ind-8.svg); }
+            &:nth-child(1)::before {
+                background: url(../images/ind-0.svg);
+            }
 
-            &:nth-child(1):hover::before { background: url(../images/ind-0-h.svg); }
-            &:nth-child(2):hover::before { background: url(../images/ind-1-h.svg); }
-            &:nth-child(3):hover::before { background: url(../images/ind-2-h.svg); }
-            &:nth-child(4):hover::before { background: url(../images/ind-3-h.svg); }
-            &:nth-child(5):hover::before { background: url(../images/ind-4-h.svg); }
-            &:nth-child(6):hover::before { background: url(../images/ind-5-h.svg); }
-            &:nth-child(7):hover::before { background: url(../images/ind-6-h.svg); }
-            &:nth-child(8):hover::before { background: url(../images/ind-7-h.svg); }
-            &:nth-child(9):hover::before { background: url(../images/ind-8-h.svg); }
+            &:nth-child(2)::before {
+                background: url(../images/ind-1.svg);
+            }
+
+            &:nth-child(3)::before {
+                background: url(../images/ind-2.svg);
+            }
+
+            &:nth-child(4)::before {
+                background: url(../images/ind-3.svg);
+            }
+
+            &:nth-child(5)::before {
+                background: url(../images/ind-4.svg);
+            }
+
+            &:nth-child(6)::before {
+                background: url(../images/ind-5.svg);
+            }
+
+            &:nth-child(7)::before {
+                background: url(../images/ind-6.svg);
+            }
+
+            &:nth-child(8)::before {
+                background: url(../images/ind-7.svg);
+            }
+
+            &:nth-child(9)::before {
+                background: url(../images/ind-8.svg);
+            }
+
+            &:nth-child(1):hover::before {
+                background: url(../images/ind-0-h.svg);
+            }
+
+            &:nth-child(2):hover::before {
+                background: url(../images/ind-1-h.svg);
+            }
+
+            &:nth-child(3):hover::before {
+                background: url(../images/ind-2-h.svg);
+            }
+
+            &:nth-child(4):hover::before {
+                background: url(../images/ind-3-h.svg);
+            }
+
+            &:nth-child(5):hover::before {
+                background: url(../images/ind-4-h.svg);
+            }
+
+            &:nth-child(6):hover::before {
+                background: url(../images/ind-5-h.svg);
+            }
+
+            &:nth-child(7):hover::before {
+                background: url(../images/ind-6-h.svg);
+            }
+
+            &:nth-child(8):hover::before {
+                background: url(../images/ind-7-h.svg);
+            }
+
+            &:nth-child(9):hover::before {
+                background: url(../images/ind-8-h.svg);
+            }
 
         }
     }
@@ -631,7 +684,7 @@
             padding-right: 11%;
 
             .cols {
-    
+
                 .col {
                     width: 40%;
                 }
@@ -704,7 +757,9 @@
     }
 
     .select-custom .select-items {
-        &::before, &::after {
+
+        &::before,
+        &::after {
             content: "";
             display: block;
             position: absolute;
@@ -714,11 +769,11 @@
             background-color: $colorBg;
         }
 
-        &::before {    
+        &::before {
             left: -25px;
         }
 
-        &::after {    
+        &::after {
             right: -25px;
         }
     }
