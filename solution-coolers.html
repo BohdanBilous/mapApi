@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+    @@include('./partials/scripts.htm')
+    <body>
+        @@include('./partials/preloader.htm')
+        @@include('./partials/header.htm', { "classes": "" })
+        @@include('./partials/menu.htm', {
+            "solution": "active",
+            "about": "",
+            "news-act": "",
+            "resources": "",
+            "events": "",
+            "cases": "",
+            "careers": "active",
+            "sites": "",
+            "contact": ""
+        })
+        
+        <main class="main solution-open-page cooler">
+
+            <!-- Top Screen -->
+            <div class="title-top socket layout-row">
+                <div class="layout-col-l">
+                    @@include('./partials/elements/button-link.htm', { 
+                        "text": "Back", 
+                        "href" : "javascript:history.back()", 
+                        "classes": "btn-back" 
+                    })
+                </div>
+
+                <div class="layout-col-r">
+                    <div class="col">
+                        <h1 class="ttl-1 ttl">Solutions.</h1>
+                        <div class="solution-p-filter-row">
+                            <div class="solution-p-filters">
+                                <div class="solution-p-filter">
+                                    <div class="solution-p-filter--label">Category:</div>
+                                    <div class="solution-p-filter--buttons">
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-cat" checked>
+                                            <span>Blown</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-cat">
+                                            <span>Preforms</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="solution-p-filter">
+                                    <div class="solution-p-filter--label">Size :</div>
+                                    <div class="solution-p-filter--buttons">
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size" checked>
+                                            <span>18.95L</span>  
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="solution-p-select">
+                                <div class="select-custom with-shadow select-custom-ind">
+                                    <select>
+                                        <option>Water</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Spec -->
+            <div class="specs-section">
+                <div class="socket layout-row align-right">
+                    <div class="hint hint-from-top with-arrow-left">Hyberid system</div>
+
+                    <div class="layout-col-r">
+                        <div class="ttl ttl-2">
+                            <span>18.95L</span> <br>
+                            Water coolers.
+                        </div>
+
+                        <div class="spec-button-wrap">
+                            <div class="spec-button-label">Category :</div>
+                            <div class="spec-button">
+                                <i></i>
+                                Technical Specs
+                            </div>
+                        </div>
+
+                        <img class="spec-img" src="images/tare-4.png" alt="">
+
+                        <ul class="spec-det-block">
+                            <li>
+                                <span>Light and UV protection </span> (up to 500 nm)
+                            </li>
+                            <li>
+                                <span>Bisphenol A (BPA) </span> Free; EU/NSF/FDA approved
+                            </li>
+                            <li>
+                                <span>Volume 18.95L (Brim-full 20.16L) </span> or 5 US gallon
+                            </li>
+                            <li>
+                                <span>Empty weight:   </span> 639g
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Animate -->
+            <div class="prod-anim-wrap socket">
+                
+            </div>
+
+            <!-- Tech Spec -->
+            <div class="tech-spec-wrap socket">
+                <div class="swipe-hint only-mobile hide"></div>
+                <div class="ttl-5">Technical <br> Specifications :</div>
+                <div class="tech-spec-main">
+                    <div class="tech-spec-main-inner">
+                        <ul class="tech-spec-parameters">
+                            <li class="par-desc-item">
+                                <div>Light and UV protection </div>
+                                <span>(up to 500 nm)</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Bisphenol A (BPA) </div>
+                                <span>Free; EU/NSF/FDA approveds</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Volume 18.95L (Brim-full 20.16L)</div>
+                                <span>or 5 US gallon</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Empty weight:</div>
+                                <span>639g</span>
+                            </li>
+                        </ul>
+                        <div class="tech-spec-right-side">
+                            <div class="tech-spec-scale">
+                                <div class="scale-start">0</div>
+                                <div class="scale-end">254</div>
+                                <img width="226" height="32" src="images/scale.svg" alt="">
+                            </div>
+                            <!-- <button class="btn-toggle btn-tech-spec-open">
+                                <i></i>
+                                More Tech.Specs
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="tech-spec-drop">
+                    <div class="tech-spec-inner">
+                        <ul>
+                            <li class="par-desc-item">
+                                <div>Size</div>
+                                <span>18.95L</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Light and UV protection </div>
+                                <span>(up to 500 nm)</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Full kegs per pallet (recommended height 3 layers)</div>
+                                <span>60</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Diameter</div>
+                                <span>243 mm</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>CO2 Barrier (after 9 months)</div>
+                                <span>&lt;15% CO2 Loss</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Manual, semi-automatic and filling capability</div>
+                                <span><i class="ico-check"></i></span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Top load (Recommended height: 3 layers)</div>
+                                <span>3 Layers</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>O2 Barrier (after 12 months):</div>
+                                <span>&lt;200 ppb</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Empty Kegs per standard size pallet (1200 x 1000 mm)</div>
+                                <span>80</span>
+                            </li>
+                            <li class="par-desc-item">
+                                <div>Max operating pressure:</div>
+                                <span>4,1 bar or 60 psig</span>
+                            </li>
+                        </ul>
+                        <button class="btn-toggle hide-mode btn-tech-spec-hide">
+                            <i></i>
+                            More Tech.Specs
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Review -->
+            <div class="prod-review-wrap">
+                <div class="socket">
+                    <div class="text-part">
+                        <div class="ttl-wrap">
+                            <div class="pages">01 / 05</div>
+                            <div class="ttl-2 upper">Safety <br> And <br> Handling</div>
+                        </div>
+                        <p>Our watercoolers are can be filled using a range of different methods, from hand filling, semi-automatic and fully automatic filling, through to existing steel keg lines. Click below for technical information about how to fill and use our kegs.</p>
+                    </div>
+
+                    <div class="prod-a-desc-list">
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">1.</div>
+                                <img src="images/ind-2.svg" alt="">
+                            </div>
+                            <p>Fully compatible with market standard dispensers, closures and detergents </p>
+                        </div>
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">2.</div>
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <p>Lightweight structure, with smooth sealing surface</p>
+                        </div>
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">3.</div>
+                                <img src="images/ind-4.svg" alt="">
+                            </div>
+                            <p>Robust and Shrink resistant up to 63 degrees for over 40 washing cycles</p>
+                        </div>
+                    </div>
+
+                    <div class="image safety-img">
+                        <img src="images/tare-4.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="fader prod-fader layout-row socket">
+                <div class="ttl-5">Hybrid Kegs</div>
+                <div class="layout-col-l">
+                    <div class="slider-buttons slider-buttons-c">
+                        <button class="prev button-prev"></button>
+                        <button class="next button-next"></button>
+                    </div>
+                </div>
+                <div class="layout-col-r">
+                    <ul class="slider-dots">
+                        <li class="active">
+                            <div class="index">01.</div>
+                            <div class="text-main">Science.</div>
+                        </li>
+                        <!-- <li>
+                            <div class="index">02.</div>
+                            <div class="text-main">Innovation.</div>
+                        </li>
+                        <li>
+                            <div class="index">03.</div>
+                            <div class="text-main">Support.</div>
+                        </li>
+                        <li>
+                            <div class="index">04.</div>
+                            <div class="text-main">Development.</div>
+                        </li> -->
+                    </ul>
+
+                    <div class="swipe-hint only-mobile hide"></div>
+
+                    <div class="slides">
+                        <div class="slide active">
+                            <div class="col-left">
+                                <div class="icon">
+                                    <img src="images/ind-10.svg" alt="">
+                                </div>
+                                <div class="ttl-3">Science and testing.</div>
+                                <p>Independent tests show that the keg keeps the beer as fresh as other containers in the packaging mix</p>
+                            </div>
+                            <div class="col-right">
+                                <p>
+                                    Our watercoolers are subject to exhaustive scientific testing, including but not limited to, organoleptic, logistics and heat tests by Petainer’s own accredited laboratories including our Innovation Centre at Cranfield University and by globally recognised independent institutions. 
+                                </p>
+                                @@include('./partials/elements/button-link.htm', { 
+                                    "text": "Contact Us", 
+                                    "href" : "news.html#news-innovations", 
+                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn" 
+                                })
+                            </div>
+                        </div>
+
+                        <div class="slide">
+                            <div class="col-left">
+                                <div class="icon">
+                                    <img src="images/ind-1.svg" alt="">
+                                </div>
+                                <div class="ttl-3">Science and testing.</div>
+                                <p>Independent tests show that the keg keeps the beer as fresh as other containers in the packaging mix</p>
+                            </div>
+                            <div class="col-right">
+                                <p>
+                                    Our kegs are subject to exhaustive scientific testing, including but not limited to, organoleptic, logistics and heat tests by Petainer’s own accredited laboratories including our Innovation Centre at Cranfield University and by globally recognised independent institutions. 
+                                </p>
+                                @@include('./partials/elements/button-link.htm', { 
+                                    "text": "Contact Us", 
+                                    "href" : "news.html#news-innovations", 
+                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn" 
+                                })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THE HYBRID SYSTEM. -->
+        <div class="hbt-sys">
+                <div class="socket hbt-sys-socket">
+                    <div class="layout-row">
+                        <div class="layout-col-l">
+    
+                        </div>
+                        <div class="layout-col-r">
+                            <div class="sys-catagories">
+                                <div class="top">
+                                    <h2 class="ttl-2">We provide a <br> Complete System <br>Solution</h2>
+                                </div>
+                                <div class="sys-catagories-row">
+                                    <div class="prod-a-desc">
+                                        <div class="icon">
+                                            <img src="images/ind-10.svg" alt="">
+                                        </div>
+                                        <p>Ready-to-use water <br>cooler. </p>
+                                    </div>
+                                    <div class="prod-a-desc">
+                                        <div class="icon">
+                                            <img src="images/ind-4.svg" alt="">
+                                        </div>
+                                        <p>Label design for extra<br> branding opportunity</p>
+                                    </div>
+                                    <div class="prod-a-desc">
+                                        <div class="icon">
+                                            <img src="images/ind-4.svg" alt="">
+                                        </div>
+                                        <p>Compatible with <br>standard dispensers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <!-- DISPOSAL & RECYCLING -->
+            <div class="socket disposal-socket">
+                <div class="disposal-catagories">
+                    <div class="ttl-top">
+                        <div>Details</div>
+                        <h2 class="ttl-2 upper">Disposal & <br> Recycling</h2>
+                    </div>
+                    <div class="disposal-catagories-row">
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">1.</div><img src="images/ind-2.svg" alt="">
+                            </div>
+                            <p>Environmentally friendly:<br> up to half the carbon <br>emissions of <br>polycarbonate bottles.</p>
+                        </div>
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">2.</div><img src="images/ind-1.svg" alt="">
+                            </div>
+                            <p>Fully recyclable PET <br>(versus PC that requires <br> specialist recycling <br> facilities).</p>
+                        </div>
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">3.</div><img src="images/ind-4.svg" alt="">
+                            </div>
+                            <p>Product integrity at<br>higher temperatures.</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="disposal-photo">
+                    <img src="./images/watercoolers.png" alt="">
+                </div>
+            </div>
+
+            <!-- GLOBAL CUSTOMERS.-->
+            <div class="global-socket-wrap">
+                <div class="socket global-socket">
+                    <div class="global-s-row">
+                        <div class="global-s-col">
+                            <div>
+                                <h2 class="ttl-2 upper">Global <br> Customers.</h2>
+                                <span class="ttl-top">15</span>
+                                <span class="ttl-top">History Partners</span>
+                            </div>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "All Reviews",
+                            "href" : "#",
+                            "classes": "btn-g btn-arrow-a"
+                            })
+                        </div>
+                        <div class="global-s-col global-rewiew-wrap ">
+                            <div class="global-rewiew">
+                                <div class="global-logo"><img src="./images/c-5.png" alt="image"></div>
+                                <div class="global-inner-top">
+                                    <span>Jester Brewery</span>
+                                    <span class="gray"> Brewery</span>
+                                </div>
+                                <blockquote class="global-blq">
+                                    We have worked closely with Petainer and SIDE to develop a manufacturing operation which can produce a high-quality watercooler  with features that are superior to those of existing coolers, making it more visually appealing, easier to handle and, importantly, BPA-free.					
+                                </blockquote>
+                                <div class="author-block ml-layout">
+                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                    <div class="author-block-text">
+                                        <div class="author-name ttl-5">Johan Braekers
+                                            <span class="gray">Sales Director</span>
+                                        </div>
+    
+                                        <div class="city">
+                                            <span class="city-text">
+                                                New York
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div class="global-rewiew">
+                                <div class="global-logo"><img src="./images/c-1.png" alt="image"></div>
+                                <div class="global-inner-top">
+                                    <span>Crazy Carabao</span>
+                                    <span class="gray">Brewery</span>
+                                </div>
+                                <blockquote class="global-blq">
+                                   It was important we found a BPA-free water cooler to ensure we are ahead of any potential legislative changes as uncertainty coutries around the potential effects of BPA on health.<br>petainerCooler™ is the answer to this.
+                                </blockquote>
+                                <div class="author-block ml-layout">
+                                    <div class="avatar"><img src="images/av-9.png" alt=""></div>
+                                    <div class="author-block-text">
+                                        <div class="author-name ttl-5">George Boyd
+                                            <span class="gray">Sales</span>
+                                        </div>
+                                        <div class="city">
+                                            <span class="city-text">
+                                                New York
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support tools -->
+            <div class="media-stream--section socket solutions-socket">
+                <div class="media-stream--categories-ttl-f">
+                    <div class="ttl-top">
+                        <div>7 videos</div>
+                        <h2 class="ttl-2">Support tools</h2>
+                    </div>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Resources",
+                    "href" : "#",
+                    "classes": "btn-g btn-arrow-a"
+                    })
+                </div>
+    
+                <div class="media-stream--cols">
+                    <article class="media-stream--article has-video instruction">
+                        <div class="media-panel">
+                            <div class="num">01</div>
+                            <img class="media-img" src="images/st-1.png" alt="#">
+                                <a href="https://www.youtube.com/watch?v=oBZBLuqnGEo" target="_blank" rel="noopener noreferrer">
+                                    <div class="play-button-wrap">
+                                        <div class="play trans"></div>
+                                        <div class="text-b trans">2:21</div>
+                                    </div>
+                                </a>
+                            </div>
+                        <h4 class="instruction-ttl ttl-4">Petainer Hybrid.</h4>
+                    </article>
+    
+                    <article class="media-stream--article has-video instruction">
+                        <div class="media-panel">
+                            <div class="num">02</div>
+                            <img class="media-img" src="images/st-2.png" alt="#">
+                                <a href="https://www.youtube.com/watch?v=qv6mNlQba0M&t=13s" target="_blank" rel="noopener noreferrer">
+                                    <div class="play-button-wrap">
+                                        <div class="play trans"></div>
+                                        <div class="text-b trans">2:21</div>
+                                    </div>
+                                </a>
+                            </div>
+                        <h4 class="instruction-ttl ttl-4">Torque - how to prevent decoupling.</h4>
+                    </article>
+    
+                    <article class="media-stream--article has-video instruction">
+                        <div class="media-panel">
+                            <div class="num">03</div>
+                            <img class="media-img" src="images/st-3.png" alt="#">
+                                <a href="https://www.youtube.com/watch?v=0rowuIao45Y&t=6s" target="_blank" rel="noopener noreferrer">
+                                    <div class="play-button-wrap">
+                                        <div class="play trans"></div>
+                                        <div class="text-b trans">2:21</div>
+                                    </div>
+                                </a>
+                            </div>
+                        <h4 class="instruction-ttl ttl-4">A Type Fitting.</h4>
+                    </article>
+                </div>
+            </div>
+          
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="info-row layout-row socket">
+                    <div class="layout-col-l">
+                        <h3 class="ttl-4 upper">Becoming a customer</h3>
+                        @@include('./partials/elements/button-link.htm', { 
+                            "text": "Place an order", 
+                            "href" : "#", 
+                            "classes": "btn-g btn-arrow-a" 
+                        })
+                    </div>
+                    <div class="layout-col-r">
+                        <div class="layout-col-s-4">
+                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                        </div>
+                        <div class="layout-col-s-6">
+                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                            <div class="with-us">
+                                <h3 class="ttl-4 upper">Already with us</h3>
+                                @@include('./partials/elements/button-link.htm', { 
+                                    "text": "Tools & Resources", 
+                                    "href" : "#", 
+                                    "classes": "" 
+                                })
+                            </div>
+                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bg">
+                    @@include('./partials/footer-main.htm', { "classes": "" })
+                </div>
+            </footer>
+        </main>
+
+        @@include('./partials/_careers-popup.htm', { "classes": "" })
+    </body>
+
+    <script>
+        SystemJS.import('./js/app.js');
+        SystemJS.import('./js/solutions-open.js');
+    </script>
+</html>
