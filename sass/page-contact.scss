@@ -77,6 +77,10 @@
     .contact-select-block {
         address {
             margin-bottom: 90px;
+
+            a:hover {
+                color: $colorBorder;
+            }
         }
     }
 }
@@ -208,14 +212,14 @@
         }
     }
 
-    
+
 
     .contact-top-section,
     .contact-select-block {
         padding-left: 150px;
     }
 
-    .contact-tabs-container .contact-select-block address{
+    .contact-tabs-container .contact-select-block address {
         margin-bottom: 37px;
     }
 
@@ -236,6 +240,7 @@
 
     .contact-row {
         padding-top: 177px;
+
         .position-name {
             position: static;
             padding-left: 0;
@@ -253,6 +258,7 @@
             margin-left: -20px;
             margin-right: 104px;
             margin-bottom: 96px;
+
             // min-width: 167px;
             &:last-child {
                 margin-right: 107px;
@@ -291,6 +297,7 @@
             height: 40px;
             width: 95px;
             margin-top: -15px;
+
             .arrow {
                 top: 16px
             }
@@ -299,6 +306,7 @@
 
     .contact-ttl-row {
         margin-bottom: 50px;
+
         .ttl {
             font-size: 35px;
             margin-bottom: 38px;
@@ -311,10 +319,12 @@
 
     .contact-row {
         padding-top: 100px;
+
         .flag,
         .persone {
             margin-right: 73px;
         }
+
         .flag {
             margin-left: 5px;
         }
