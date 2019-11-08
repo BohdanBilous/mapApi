@@ -17,13 +17,13 @@
 // }
 
 .header {
-    position: fixed;
+    position: absolute;
     height: 55px;
     top: 0;
     left: 0;
     right: 0;
     text-align: left;
-    z-index: 100500;
+    z-index: 1001;
     transform: translateY(0);
     transition: ease-in-out transform 1s;
 
