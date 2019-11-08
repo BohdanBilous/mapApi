@@ -31,6 +31,7 @@
 
     &--buttons {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &--label {
@@ -39,11 +40,17 @@
     }
 
     &--button {
+        display: inline-block;
         min-width: 66px;
         height: 29px;
         cursor: pointer;
         text-align: center;
         margin: 0 17px 17px 0;
+
+        &.active span {
+            background-color: $colorGreen;
+            color: #fff;
+        }
 
         &:last-child {
             margin-right: 0;
@@ -1234,6 +1241,7 @@ $leftOffset: 270px;
         .prod-a-desc-list {
             position: static;
             width: auto;
+            padding-bottom: 25px;
             justify-content: flex-start;
 
             .prod-a-desc {
@@ -1533,6 +1541,7 @@ $leftOffset: 270px;
       .prod-a-desc {
         max-width: 33%;
         width: 189px;
+        padding-right: 50px;
         flex: 0 0 33%;
         margin-bottom: 77px;
       }
@@ -1579,6 +1588,11 @@ $leftOffset: 270px;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+
+    .prod-a-desc {
+        padding-right: 20px;
+    }
+    
   
       &>* {
         width: 163px;
@@ -1991,11 +2005,13 @@ $leftOffset: 270px;
         }
   
         .disposal-catagories-row>* {
-          width: 138;
+          width: 138px;
           flex: 0 0 50%;
           max-width: 50%;
           margin-bottom: 38px;
         }
+
+
       }
   
       .disposal-photo {
@@ -2051,3 +2067,257 @@ $leftOffset: 270px;
       }
     }
   }
+
+// Bottles
+.solution-open-page.bottle-ref {
+    .specs-section {
+        .spec-img {
+            bottom: -522px;
+
+            @include tablet {
+                bottom: -600px;
+            }
+
+            @include mobile {
+                bottom: -340px;
+            }
+        }
+    }
+
+    .tech-spec-wrap  {
+        margin-bottom: 70px;
+    }
+
+    .prod-anim-wrap {
+        min-height: 1300px;
+
+        @include mobile {
+            min-height: 1150px;
+        }
+
+        .object-image {
+            position: absolute;
+            width: 270px;
+            top: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include mobile {
+                width: 140px;
+                top: 520px;
+            }
+        }
+    }
+
+    .prod-animate-section {
+        opacity: 1;
+    }
+
+    .prod-animate-section-1 {
+        top: 700px;
+        left: 0;
+
+        .prod-a-desc {
+            left: 300px;
+        }
+    }
+
+    .prod-animate-section-2 {
+        top: 900px;
+        left: 0;
+
+        .prod-a-desc {
+            top: 0;
+            right: 270px;
+        }
+    }
+
+    .prod-review-wrap {
+        
+        .image {
+            width: 300px;
+            right: 20%;
+            bottom: -5px;
+
+            @media screen and (max-width: 1600px) {
+                width: 250px;
+                right: 200px;
+            }
+        }
+
+        .text-part p:last-child {
+            width: 160px;
+            margin-left: 60px;
+        }
+
+        @media screen and (max-width: 1280px) { // .prod-review-wrap
+
+            .image {
+                width: 180px;
+                right: 90px;
+            }
+        }
+
+        @include mobile {
+            .socket {
+                padding-bottom: 330px;
+            }
+
+            .text-part p:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .hbt-sys {
+        background-image: url('../images/hbt-sys-2.jpg');
+        
+        @include mobile {
+            padding-bottom: 90px;
+            background-position: 0 bottom;
+
+            &::before {
+                top: 623px;
+            }
+            
+            &::after {
+                bottom: -7px;
+            }
+        }
+    }
+
+    .disposal-photo {
+        width: 200px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .sys-catagories .sys-catagories-row .prod-a-desc {
+        padding-right: 15px;
+    }
+}
+
+.solution-open-page.bottle-oneway {
+    .specs-section {
+        .spec-img {
+            bottom: -1428px;
+
+            @media screen and (max-width: 1500px) {
+                bottom: -1128px;
+            }
+        }
+    }
+
+    .prod-anim-wrap {
+        min-height: 1300px;
+
+        @include mobile {
+            min-height: 1150px;
+        }
+
+        .object-image {
+            position: absolute;
+            width: 310px;
+            top: 180px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include mobile {
+                width: 140px;
+                top: 520px;
+            }
+        }
+    }
+
+    .prod-animate-section {
+        opacity: 1;
+    }
+
+    .prod-animate-section-1 {
+        top: 500px;
+        left: 0;
+
+        .prod-a-desc {
+            left: 300px;
+        }
+    }
+
+    .prod-animate-section-2 {
+        top: 800px;
+        left: 0;
+
+        .prod-anim-side.left {
+            top: -150px;
+        }
+
+        .prod-a-desc {
+            top: 0;
+            right: 270px;
+        }
+    }
+
+    .prod-review-wrap {
+        .image {
+            width: 800px;
+            right: 90px;
+
+            @media screen and (max-width: 1600px) {
+                right: 0;
+                width: 650px;
+            }
+
+            @media screen and (max-width: 1280px) {
+                width: 400px;
+            }
+        }
+
+        @include tablet {
+
+            .socket {
+                padding-bottom: 300px;
+            }
+            
+
+            .image {
+                width: 600px;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    .fader .slides {
+        height: 600px;
+    }
+
+    .hbt-sys {
+        background-image: url('../images/hbt-sys-2.jpg');
+    }
+
+    .disposal-photo {
+        width: 500px;
+
+        
+        img {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 1600px) {
+            width: 400px;
+        }
+
+        @include tablet {
+            // margin: 0;
+            // left: 50%;
+            // transform: translateX(-50%);
+        }
+    }
+
+    .disposal-socket {
+        padding-bottom: 50px;
+        margin-bottom: 0;
+    }
+}

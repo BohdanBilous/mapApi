@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+    @@include('./partials/scripts.htm')
+    <body>
+        @@include('./partials/preloader.htm')
+        @@include('./partials/header.htm', { "classes": "" })
+        @@include('./partials/menu.htm', {
+            "solution": "active",
+            "about": "",
+            "news-act": "",
+            "resources": "",
+            "events": "",
+            "cases": "",
+            "careers": "active",
+            "sites": "",
+            "contact": ""
+        })
+        
+        <main class="main solution-open-page bottle-oneway">
+
+            <!-- Top Screen -->
+            <div class="title-top socket layout-row">
+                <div class="layout-col-l">
+                    @@include('./partials/elements/button-link.htm', { 
+                        "text": "Back", 
+                        "href" : "javascript:history.back()", 
+                        "classes": "btn-back" 
+                    })
+                </div>
+
+                <div class="layout-col-r">
+                    <div class="col">
+                        <h1 class="ttl-1 ttl">Solutions.</h1>
+                        <div class="solution-p-filter-row">
+                            <div class="solution-p-filters">
+                                <div class="solution-p-filter">
+                                    <div class="solution-p-filter--label">Category:</div>
+                                    <div class="solution-p-filter--buttons">
+                                        <a class="solution-p-filter--button active" href="#">
+                                            <span>One-way</span>  
+                                        </a>
+                                        <a class="solution-p-filter--button" href="solution-bottle-ref.htm">
+                                            <span>Refillables</span>  
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="solution-p-filter">
+                                    <div class="solution-p-filter--label">Size :</div>
+                                    <div class="solution-p-filter--buttons">
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size" checked>
+                                            <span>0.25L</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size">
+                                            <span>0.33L</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size">
+                                            <span>0.35L</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size">
+                                            <span>0.5L</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size">
+                                            <span>0.7L</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size">
+                                            <span>0.75L</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size">
+                                            <span>1L</span>  
+                                        </label>
+                                        <label class="solution-p-filter--button">
+                                            <input type="radio" name="radio-size">
+                                            <span>1.5L</span>  
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="solution-p-select">
+                                <div class="select-custom with-shadow select-custom-ind">
+                                    <select>
+                                        <option>CSD</option>
+                                        <option>Cider</option>
+                                        <option>Beer</option>
+                                        <option>Juice</option>
+                                        <option>Food</option>
+                                        <option>Chemicals</option>
+                                        <option>Personal Care</option>
+                                        <option>Homecare</option>
+                                    </select>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Spec -->
+            <div class="specs-section">
+                <div class="socket layout-row align-right">
+                    <div class="hint hint-from-top with-arrow-left">One-way PET bottles</div>
+
+                    <div class="layout-col-r">
+                        <div class="ttl ttl-2">
+                            <!-- <span>20L</span> <br> -->
+                            One-way <br>PET bottles
+                        </div>
+
+                        <!-- <div class="spec-button-wrap">
+                            <div class="spec-button-label">Category :</div>
+                            <div class="spec-button">
+                                <i></i>
+                                Technical Specs
+                            </div>
+                        </div> -->
+
+                        <img class="spec-img" src="images/bottle-oneway.png" alt="">
+
+                        <!-- <ul class="spec-det-block">
+                            <li>
+                                <span> </span> CO2 andO2 barriers
+                            </li>
+                            <li>
+                                <span></span>Food-grade and BPAfree
+                            </li>
+                            <li>
+                                <span></span>Reinforced base design
+                            </li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Animate -->
+            <div class="prod-anim-wrap socket">
+                <img class="object-image" src="images/bottle-oneway.png" alt="">    
+                <aside class="prod-anim-side left">
+                    <div class="ttl ttl-3">High Quality, Clear <br> PET Bottles.</div>
+                    <p>High quality, clear PET bottles to increase on- shelf presence and brand awareness.</p>
+                    <p>Wemanufacturecustom-madedesignsand offer a wide range of stock bottles forwater, carbonated beverages, juices, beer, alcoholic drinks, food and household products</p>
+                </aside>
+
+                <aside class="prod-anim-side right">
+                    <p>Petainer is a leading manufacturer of PET bottles for carbonated beverages and waterproducts, trusted by global beverage brands.</p>
+                    <p>High-volume blow molding capacity with short lead timesand flexible service offering.</p>
+                    <p>Stock range bottles available on-demand, with low minimum order quantities.</p>
+                </aside>
+
+                <div id="section-1" class="prod-animate-section prod-animate-section-1">
+                    
+                    <aside class="prod-anim-side right">
+                        <div class="ttl ttl-3">Food grade and BPA free</div>
+                        <p>We can develop barriers to extend shelf life and provide other benefits relevant to your product needs.</p>
+                    </aside>
+                </div>
+
+                <div id="section-2" class="prod-animate-section prod-animate-section-2">
+                    <aside class="prod-anim-side left">
+                        <div class="ttl ttl-4">Light and shatter proof</div>
+                        <p>Recyclable PET bottles available in 100% virgin and post-consumer recyclate with 25,50 & 100% PCR content.</p>
+                    </aside>
+                    <div class="prod-a-desc">
+                        <!-- <div class="icon">
+                            <div class="index">2.</div>
+                            <img src="images/ind-1.svg" alt="">
+                        </div> -->
+                        <p>Clear and custom-coloured designs to match the identity ofyour brand.</p>
+                    </div>
+                </div>
+                
+                <!-- Parameters -->
+                <div id="parameters" class="prod-object-parameters">
+                    @@include('./partials/elements/par.htm', { 
+                        "classes": "par-item-1", 
+                        "textTitle" : "28mm, BPF/PCO 1810 neck finish <br> with enlarged support ring", 
+                        "textDesc": "" ,
+                        "dir": "from-top-left"
+                    })
+                    @@include('./partials/elements/par.htm', { 
+                        "classes": "par-item-2", 
+                        "textTitle" : "Base designed to avoidstress", 
+                        "textDesc": " cracking and deformation" ,
+                        "dir": "from-top-right"
+                    })
+                </div>
+            </div>
+
+            
+
+            <!-- Review -->
+            <div class="prod-review-wrap">
+                <div class="socket">
+                    <div class="text-part">
+                        <div class="ttl-wrap">
+                            <div class="pages">01 / 05</div>
+                            <div class="ttl-2">Custom-Made <br> Designs </div>
+                        </div>
+                        <p>We will guide you through every step of the packaging design process to get the best solution to meet your specific requirements and expectations.</p>
+                    </div>
+
+                    <div class="prod-a-desc-list">
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">1.</div>
+                                <img src="images/ind-2.svg" alt="">
+                            </div>
+                            <p>Color, shape and  size are adapted  to your visual identity guidelines.</p>
+                        </div>
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">2.</div>
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <p>We can produce 3D modelsand prototype samples to give you a feeling for the final shape of the product and its <br>ease-of-use.</p>
+                        </div>
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">3.</div>
+                                <img src="images/ind-4.svg" alt="">
+                            </div>
+                            <p>They are washed with 1.2-2.5% NaOH to ensure perfect sanitization and preserve food grade quality.</p>
+                        </div>
+                    </div>
+
+                    <div class="image">
+                        <img src="images/bottles.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="fader prod-fader layout-row socket">
+                <div class="ttl-5">Refpet bottles</div>
+                <div class="layout-col-l">
+                    <!-- <div class="slider-buttons slider-buttons-c">
+                        <button class="prev button-prev"></button>
+                        <button class="next button-next"></button>
+                    </div> -->
+                </div>
+                <div class="layout-col-r">
+                    <ul class="slider-dots">
+                        <li class="active">
+                            <div class="index">01.</div>
+                            <div class="text-main">Science.</div>
+                        </li>
+                        <!-- <li>
+                            <div class="index">02.</div>
+                            <div class="text-main">Support.</div>
+                        </li>
+                        <li>
+                            <div class="index">03.</div>
+                            <div class="text-main">Development.</div>
+                        </li> -->
+                    </ul>
+
+                    <div class="swipe-hint only-mobile"></div>
+
+                    <div class="slides">
+                        <div class="slide active">
+                            <div class="col-left">
+                                <div class="icon">
+                                    <img src="images/ind-1.svg" alt="">
+                                </div>
+                                <div class="ttl-3">Material <br> Science.</div>
+                                <p>Wehavebeenhelpingbrandsincorporate25-50%post- consumer recyclate (PCR) flakes in their bottles since the 1990s and have the capability to supply clear, high performance food grade products with up to 100% PCR.</p>
+                            </div>
+                            <div class="col-right">
+                                <p>
+                                    With our unique knowledge of processing of high quality contaminate-free PCR feedstock from Northern and Central Europe, we can provide world class sustainable preform solutions.
+                                </p>
+                                <p>
+                                    We have invested in production facilities to process responsibly sourced PCR flakes and pellets to guarantee consistent high quality products.
+                                </p>
+                                <p>
+                                        We help brands achieve and exceed the Europeanregulations targets to incorporate 25% of recycledplastic in PET bottles as from 2025 and 30% in allplastic bottles as from 2030.
+                                </p>
+                                @@include('./partials/elements/button-link.htm', { 
+                                    "text": "Contact Us", 
+                                    "href" : "news.html#news-innovations", 
+                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn" 
+                                })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THE HYBRID SYSTEM. -->
+            <div class="hbt-sys">
+                <div class="socket hbt-sys-socket">
+                    <div class="layout-row">
+                        <div class="layout-col-l">
+    
+                        </div>
+                        <div class="layout-col-r">
+                            <div class="sys-catagories">
+                                <div class="top">
+                                    <h2 class="ttl-2">Shelf <br> Presence.</h2>
+                                </div>
+                                <div class="sys-catagories-row">
+                                    <div class="prod-a-desc">
+                                        <div class="icon">
+                                            <img src="images/ind-1.svg" alt="">
+                                        </div>
+                                        <p>PET offers <br>a crystal clear finish <br> for a distinctive  look and <br> a lastingimpression.</p>
+                                    </div>
+                                    <div class="prod-a-desc">
+                                        <div class="icon">
+                                            <img src="images/ind-2.svg" alt="">
+                                        </div>
+                                        <p>Highly customizable <br>designs  to match <br>your brand identity</p>
+                                    </div>
+                                    <div class="prod-a-desc">
+                                        <div class="icon">
+                                            <img src="images/ind-3.svg" alt="">
+                                        </div>
+                                        <p>We help you stay flexible and meet your market’s needs: our bottles are easy to order and available on short notice. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- DISPOSAL & RECYCLING -->
+            <div class="socket disposal-socket">
+                <div class="disposal-catagories">
+                    <div class="ttl-top">
+                        <div>Details</div>
+                        <h2 class="ttl-2">Sustainable, <br>Zero Waste <br>Packaging</h2>
+                    </div>
+                    <div class="disposal-catagories-row">
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">1.</div><img src="images/ind-1.svg" alt="">
+                            </div>
+                            <p>Guiding brands through <br> the design and<br>material selection <br>process to use<br> the least amount <br>of material as possible<br> and ensure post-consumer <br>bottles are bottle <br>to bottlerecyclable.</p>
+                        </div>
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">2.</div><img src="images/ind-2.svg" alt="">
+                            </div>
+                            <p>We follow strict <br>guidelines for use <br>of additives<br> and colorants to protect<br> high-quality <br>plastics waste streams.</p>
+                        </div>
+                        <div class="prod-a-desc">
+                            <div class="icon">
+                                <div class="index">3.</div><img src="images/ind-3.svg" alt="">
+                            </div>
+                            <p>Efficient collaboration <br> between Petainer,<br> brand owners <br>and recyclers<br> ensures products<br> are suitable for <br>collection systems <br>to minimise plastics waste.</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="disposal-photo">
+                    <img src="./images/bottles2.png" alt="">
+                </div>
+            </div>
+
+            <!-- GLOBAL CUSTOMERS.-->
+            <div class="global-socket-wrap">
+                <div class="socket global-socket">
+                    <div class="global-s-row">
+                        <div class="global-s-col">
+                            <div>
+                                <h2 class="ttl-2">Global <br> Customers.</h2>
+                                <span class="ttl-top">15</span>
+                                <span class="ttl-top">History Partners</span>
+                            </div>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "All Reviews",
+                            "href" : "#",
+                            "classes": "btn-g btn-arrow-a"
+                            })
+                        </div>
+                        <div class="global-s-col global-rewiew-wrap">
+                            <div class="global-rewiew">
+                                <div class="global-logo"><img src="./images/c-5.png" alt="image"></div>
+                                <div class="global-inner-top">
+                                    <span>Jester Brewery</span>
+                                    <span class="gray"> Brewery</span>
+                                </div>
+                                <blockquote class="global-blq">
+                                    Using Petainer’s one—way kegs has turned a logistical nightmare into a straightforward
+                                    process,
+                                    ensuring we can send our beers across the region at lower cost.
+                                </blockquote>
+                                <div class="author-block ml-layout">
+                                    <div class="avatar"><img src="images/av-2.png" alt=""></div>
+                                    <div class="author-block-text">
+                                        <div class="author-name ttl-5">Brenda Arnold
+                                            <span class="gray">Sales</span>
+                                        </div>
+    
+                                        <div class="city">
+                                            <span class="city-text">
+                                                Sales
+                                            </span>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div class="global-rewiew">
+                                <div class="global-logo"><img src="./images/c-5.png" alt="image"></div>
+                                <div class="global-inner-top">
+                                    <span>Jester Brewery</span>
+                                    <span class="gray"> Brewery</span>
+                                </div>
+                                <blockquote class="global-blq">
+                                    We have partnered with Petainer because we recognise the growth opportunities for its
+                                    products. One-way kegs provide a much more cost-effective alternative to steel kegs
+                                    without any compromise on product
+                                    effective alternative to steel kegs without any compromise on product
+                                </blockquote>
+                                <div class="author-block ml-layout">
+                                    <div class="avatar"><img src="images/av-2.png" alt=""></div>
+                                    <div class="author-block-text">
+                                        <div class="author-name ttl-5">Brenda Arnold
+                                            <span class="gray">Sales</span>
+                                        </div>
+                                        <div class="city">
+                                            <span class="city-text">
+                                                Sales
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support tools -->
+            <div class="media-stream--section socket solutions-socket">
+                <div class="media-stream--categories-ttl-f">
+                    <div class="ttl-top">
+                        <div>3 videos</div>
+                        <h2 class="ttl-2">Support tools</h2>
+                    </div>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Learn More",
+                    "href" : "#",
+                    "classes": "btn-g btn-arrow-a"
+                    })
+                </div>
+    
+                <div class="media-stream--cols">
+                    <article class="media-stream--article has-video instruction">
+                        <a target="_blank" href="https://www.youtube.com/watch?v=0rowuIao45Y&t=6s">
+                            <div class="media-panel">
+                                <div class="num">01</div>
+                                <img class="media-img" src="images/res-4.jpg" alt="#">
+                                <div class="play-button-wrap">
+                                    <div class="play trans"></div>
+                                    <div class="text-b trans">1:01</div>
+                                </div>
+                            </div>
+                            <h4 class="instruction-ttl ttl-4">A Type Fitting.</h4>
+                        </a>
+                    </article>
+    
+                    <article class="media-stream--article has-video instruction">
+                        <a target="_blank" href="https://www.youtube.com/watch?v=0rowuIao45Y&t=6s">
+                            <div class="media-panel">
+                                <div class="num">01</div>
+                                <img class="media-img" src="images/res-1.jpg" alt="#">
+                                <div class="play-button-wrap">
+                                    <div class="play trans"></div>
+                                    <div class="text-b trans">2:01</div>
+                                </div>
+                            </div>
+                            <h4 class="instruction-ttl ttl-4">Petainer USD UK.</h4>
+                        </a>
+                    </article>
+    
+                    <article class="media-stream--article has-video instruction">
+                        <a target="_blank" href="https://www.youtube.com/watch?v=RBGaAf9yWfI&t=54s">
+                            <div class="media-panel">
+                                <div class="num">03</div>
+                                <img class="media-img" src="images/res-2.jpg" alt="#">
+                                <div class="play-button-wrap">
+                                    <div class="play trans"></div>
+                                    <div class="text-b trans">3:14</div>
+                                </div>
+                            </div>
+                            <h4 class="instruction-ttl ttl-4">Water Cooler Introduction.</h4>
+                        </a>
+                    </article>
+                </div>
+            </div>
+          
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="info-row layout-row socket">
+                    <div class="layout-col-l">
+                        <h3 class="ttl-4">Becoming a customer</h3>
+                        @@include('./partials/elements/button-link.htm', { 
+                            "text": "Place an order", 
+                            "href" : "#", 
+                            "classes": "btn-g btn-arrow-a" 
+                        })
+                    </div>
+                    <div class="layout-col-r">
+                        <div class="layout-col-s-4">
+                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                        </div>
+                        <div class="layout-col-s-6">
+                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                            <div class="with-us">
+                                <h3 class="ttl-4">Already with us</h3>
+                                @@include('./partials/elements/button-link.htm', { 
+                                    "text": "Tools & Resources", 
+                                    "href" : "#", 
+                                    "classes": "" 
+                                })
+                            </div>
+                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bg">
+                    @@include('./partials/footer-main.htm', { "classes": "" })
+                </div>
+            </footer>
+        </main>
+
+        @@include('./partials/_careers-popup.htm', { "classes": "" })
+    </body>
+
+    <script>
+        SystemJS.import('./js/app.js');
+        SystemJS.import('./js/solutions-open.js');
+    </script>
+</html>

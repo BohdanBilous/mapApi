@@ -30,14 +30,16 @@ window.addEventListener("load", function() {
   }
 
   // Spec
-  const specButton = document.querySelector(".spec-button");
+  if (exists(".spec-button")) {
+    const specButton = document.querySelector(".spec-button");
 
-  specButton.addEventListener("click", () => {
-    const specBlock = findParent(specButton, "specs-section");
-    console.log(specBlock);
-    specBlock.classList.toggle("open");
-    specButton.classList.toggle("active");
-  });
+    specButton.addEventListener("click", () => {
+      const specBlock = findParent(specButton, "specs-section");
+      console.log(specBlock);
+      specBlock.classList.toggle("open");
+      specButton.classList.toggle("active");
+    });
+  }
 
   // Select Custom
   if (exists(".select-custom")) customSelect();
@@ -49,7 +51,7 @@ window.addEventListener("load", function() {
   new SuperSlider(".prod-fader", "fader");
 
   // Tech Spec Drop
-  if (exists(".tech-spec-wrap")) {
+  if (exists(".btn-tech-spec-open")) {
     const btnTechOpen = document.querySelector(".btn-tech-spec-open");
     const btnTechHide = document.querySelector(".btn-tech-spec-hide");
     const techSpecDrop = document.querySelector(".tech-spec-drop");
