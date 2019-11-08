@@ -187,7 +187,7 @@
 
 @include tablet {
     .contact-top-section {
-        padding-top: 10px;
+        margin-top: 84px;
 
         .select-custom {
             .select-selected {
@@ -208,13 +208,19 @@
         }
     }
 
+    
+
     .contact-top-section,
     .contact-select-block {
-        padding-left: 175px;
+        padding-left: 150px;
+    }
+
+    .contact-tabs-container .contact-select-block address{
+        margin-bottom: 37px;
     }
 
     .contact-ttl-row {
-        padding-bottom: 20px;
+        padding-bottom: 44px;
 
         .ttl {
             width: 100%;
@@ -229,6 +235,7 @@
     }
 
     .contact-row {
+        padding-top: 177px;
         .position-name {
             position: static;
             padding-left: 0;
@@ -243,8 +250,9 @@
 
         .flag,
         .persone {
-            margin-right: 107px;
-
+            margin-left: -20px;
+            margin-right: 104px;
+            margin-bottom: 96px;
             // min-width: 167px;
             &:last-child {
                 margin-right: 107px;
@@ -255,6 +263,10 @@
 }
 
 @include mobile {
+
+    .contact-tabs-container .layout-col-r {
+        padding-top: 10px;
+    }
 
     .contact-top-section,
     .contact-select-block {
@@ -277,8 +289,8 @@
             cursor: pointer;
             display: block;
             height: 40px;
-
-
+            width: 95px;
+            margin-top: -15px;
             .arrow {
                 top: 16px
             }
@@ -287,8 +299,8 @@
 
     .contact-ttl-row {
         margin-bottom: 50px;
-
         .ttl {
+            font-size: 35px;
             margin-bottom: 38px;
 
             .icon {
@@ -298,12 +310,14 @@
     }
 
     .contact-row {
-
+        padding-top: 100px;
         .flag,
         .persone {
             margin-right: 73px;
         }
-
+        .flag {
+            margin-left: 5px;
+        }
 
     }
 

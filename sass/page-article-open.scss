@@ -26,6 +26,11 @@
         margin-left: 35%;
     }
 
+    .ml-layout.tbl-left{
+        font-family:" Circular Std";
+        font-weight: 400;
+    }
+
     .ml-layout-video {
         margin-left: 30%;
 
@@ -264,6 +269,10 @@
 
         .follow-us {
             right: 30px;
+            img{
+                height: 30px;
+                width: 30px;
+            }
         }
     }
 }
@@ -309,6 +318,9 @@
                 }
             }
         }
+    }
+    .scroll-top-btn {
+        color: #2a2a2a;
     }
 
     .event-article {
