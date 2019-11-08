@@ -264,6 +264,10 @@
 
         .follow-us {
             right: 30px;
+            img{
+                height: 30px;
+                width: 30px;
+            }
         }
     }
 }
@@ -309,6 +313,9 @@
                 }
             }
         }
+    }
+    .scroll-top-btn {
+        color: #2a2a2a;
     }
 
     .event-article {
