@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+@@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+@@include('./partials/scripts.htm')
+
+<body>
+    @@include('./partials/preloader.htm')
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "active",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "active",
+    "sites": "",
+    "contact": ""
+    })
+
+    <main class="main solution-open-page jars">
+
+        <!-- Top Screen -->
+        <div class="title-top socket layout-row">
+            <div class="layout-col-l">
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Back",
+                "href" : "index.html",
+                "classes": "btn-back"
+                })
+            </div>
+
+            <div class="layout-col-r">
+                <div class="col">
+                    <h1 class="ttl-1 ttl">Solutions.</h1>
+                    <div class="solution-p-filter-row">
+                        <div class="solution-p-filters">
+                            <!-- <div class="solution-p-filter">
+                                <div class="solution-p-filter--label">Category:</div>
+                                <div class="solution-p-filter--buttons">
+                                    <label class="solution-p-filter--button">
+                                        <input type="radio" name="radio-cat" checked>
+                                        <span>Jars</span>
+                                    </label>
+                                    <label class="solution-p-filter--button">
+                                        <input type="radio" name="radio-cat">
+                                        <span>Preforms</span>
+                                    </label>
+                                </div>
+                            </div> -->
+
+                            <div class="solution-p-filter">
+                                <div class="solution-p-filter--label">Size :</div>
+                                <div class="solution-p-filter--buttons">
+                                    <label class="solution-p-filter--button">
+                                        <input type="radio" name="radio-size" checked>
+                                        <span>1.25 L</span>
+                                    </label>
+                                    <label class="solution-p-filter--button">
+                                        <input type="radio" name="radio-size" checked>
+                                        <span>2 L</span>
+                                    </label>
+                                    <label class="solution-p-filter--button">
+                                        <input type="radio" name="radio-size" checked>
+                                        <span>2.5 L</span>
+                                    </label>
+                                    <label class="solution-p-filter--button">
+                                        <input type="radio" name="radio-size" checked>
+                                        <span>3 L </span>
+                                    </label>
+                                    <label class="solution-p-filter--button">
+                                        <input type="radio" name="radio-size" checked>
+                                        <span>6 L</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="solution-p-select">
+                            <div class="select-custom with-shadow select-custom-ind">
+                                <select>
+                                    <option>Beer</option>
+                                    <option>Vitamins and supplements</option>
+                                    <option>Sport Nutrition Powders</option>
+                                    <option>Food Products</option>
+                                </select>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Spec -->
+        <div class="specs-section">
+            <div class="socket layout-row align-right">
+                <div class="hint hint-from-top with-arrow-left">Jars</div>
+                <div class="layout-col-r">
+                    <div class="ttl ttl-2">
+                        <!-- <span>3L</span> <br> -->
+                        <h3 class=" ttl-3"> Highly Customizable <br>
+                            Wide-Mouth jars</span>
+                    </div>
+
+                    <div class="spec-button-wrap">
+                        <div class="spec-button-label">Category :</div>
+                        <div class="spec-button">
+                            <i></i>
+                            Technical Specs
+                        </div>
+                    </div>
+
+                    <img class="spec-img" src="images/jar.png" alt="">
+
+                    <ul class="spec-det-block">
+                        <li>
+                            <span>Bisphenol A (BPA) </span> Free; EU/NSF/FDA approved
+                        </li>
+                        <li>
+                            <span>Light and UV protection </span> (up tio 600nm)
+                        </li>
+                        <li>
+                            <span>Weight (g) </span> 143
+                        </li>
+                        <li>
+                            <span>Brimful Capacity (ml) </span> 3417
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Animate -->
+        <div class="prod-anim-wrap socket">
+            <img class="object-image" src="images/jar.png" alt="">    
+            <aside class="prod-anim-side left">
+                <div class="ttl ttl-3">Wide-Mouth jars.</div>
+                <p>The wide screw thread makes both filling and dispensing easier and is ideal for powdered products that require a scoop.</p>
+            </aside>
+
+            <aside class="prod-anim-side right">
+                <p>High quality, clear PET bottles to increase on- shelf presence and brand awareness.</p>
+                <p>They can be supplied in two formats: a fully blown wide-mouth jar ready to fill and wide-mouth preforms, ready to be blown onsite by manufacturers.</p>
+            </aside>
+
+            <div id="section-1" class="prod-animate-section prod-animate-section-1">
+                
+                <aside class="prod-anim-side right">
+                    <div class="ttl ttl-4">Product Protection</div>
+                    <p>Our jars are made of high-quality food grade PET and are BPA free.</p>
+                    <p>Stackable base design ideal for storage and transportation.</p>
+                
+                </aside>
+            </div>
+
+            <div id="section-2" class="prod-animate-section prod-animate-section-2">
+                <aside class="prod-anim-side left">
+                    <div class="ttl ttl-3">Neck.</div>
+                    <p>Smooth neck finish ideal for induction heat seal.</p>
+                    <p>Labelling: Recessed label area to avoid damage.</p>
+                </aside>
+            </div>
+            
+            <!-- Parameters -->
+            <div id="parameters" class="prod-object-parameters">
+                @@include('./partials/elements/par.htm', { 
+                    "classes": "par-item-1", 
+                    "textTitle" : "28mm, BPF/PCO 1810 neck finish <br> with enlarged support ring", 
+                    "textDesc": "" ,
+                    "dir": "from-top-left"
+                })
+                @@include('./partials/elements/par.htm', { 
+                    "classes": "par-item-2", 
+                    "textTitle" : "Base designed to avoidstress", 
+                    "textDesc": " cracking and deformation" ,
+                    "dir": "from-top-right"
+                })
+            </div>
+        </div>
+
+        <!-- Tech Spec -->
+        <div class="tech-spec-wrap socket">
+            <div class="swipe-hint only-mobile"></div>
+            <div class="ttl-5">Technical <br> Specifications :</div>
+            <div class="tech-spec-main">
+                <div class="tech-spec-main-inner">
+                    <ul class="tech-spec-parameters">
+                        <li class="par-desc-item">
+                            <div>Bisphenol A (BPA) </div>
+                            <span>Free; EU/NSF/FDA approved</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Light and UV protection </div>
+                            <span>(up tio 600nm)</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Weight (g)</div>
+                            <span> 143</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Brimful Capacity (ml)</div>
+                            <span>3417</span>
+                        </li>
+                    </ul>
+                    <div class="tech-spec-right-side">
+                        <!-- <div class="tech-spec-scale">
+                            <div class="scale-start">0</div>
+                            <div class="scale-end">254</div>
+                            <img width="226" height="32" src="images/scale.svg" alt="">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-spec-drop">
+                <div class="tech-spec-inner">
+                    <ul>
+                        <li class="par-desc-item">
+                            <div>Bisphenol A (BPA) </div>
+                            <span>Free; EU/NSF/FDA approved</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Light and UV protection </div>
+                            <span>(up tio 600nm)</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Weight (g)</div>
+                            <span> 143</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Brimful Capacity (ml)</div>
+                            <span>3417</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Review -->
+        <div class="prod-review-wrap">
+            <div class="socket">
+                <div class="text-part">
+                    <div class="ttl-wrap">
+                        <!-- <div class="pages">01 / 05</div> -->
+                        <div class="ttl-2">Sustainable Jar  <br> Solutions</div>
+                    </div>
+                    <p>We are dedicated to producing high quality, attractive and functional designs that meet your
+                        product protection and shelf life requirements.
+                        <br>
+                        Rethinking the overall approach of packaging design, we strive to improve our jar’s performance
+                        while reducing the volume of raw material used during the manufacturing process. Our reliable,
+                        economically viable, and environmentally friendly jars are also available with high quality,
+                        food grade, PCR inclusion.
+                    </p>
+                </div>
+
+                <div class="prod-a-desc-list">
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">1.</div>
+                            <img src="images/ind-2.svg" alt="">
+                        </div>
+                        <p>Impact resistance for safe <br> transportation of all <br>foodstuffs and liquids.
+                        </p>
+                    </div>
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">2.</div>
+                            <img src="images/ind-1.svg" alt="">
+                        </div>
+                        <p>Lightweight, cost effective <br> alternative to glass. </p>
+                    </div>
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">3.</div>
+                            <img src="images/ind-4.svg" alt="">
+                        </div>
+                        <p>Good top load and <br> perfectly stackable <br> design. )</p>
+                    </div>
+                </div>
+
+                <div class="image">
+                    <img src="images/tare-3.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="fader prod-fader layout-row socket">
+            <div class="ttl-5">Jars</div>
+            <div class="layout-col-l">
+                <div class="slider-buttons slider-buttons-c">
+                    <!-- <button class="prev button-prev"></button> -->
+                    <!-- <button class="next button-next"></button> -->
+                </div>
+            </div>
+            <div class="layout-col-r">
+                <ul class="slider-dots">
+                    <li class="active">
+                        <div class="index">01.</div>
+                        <div class="text-main">Innovation.</div>
+                    </li>
+                </ul>
+
+                <!-- <div class="swipe-hint only-mobile"></div> -->
+
+                <div class="slides">
+                    <div class="slide active">
+                        <div class="col-left">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <div class="ttl-3">Injection Stretch Blow <br> Moulding (ISBM)</div>
+                            <p>Our two-stage production process offers multiple benefits (versus Extrusion blow
+                                moulding: EBM). </p>
+                        </div>
+                        <div class="col-right">
+                            <p>
+                                We supply fully blown jars for short lead times or preforms for local blowing. Onsite
+                                production will greatly reduce your storage and transportation costs, while allowing you
+                                to blow jars on demand.
+                                <br>
+                                ISBM delivers a more consistent wall thickness and a smooth neck finish compared to EBM.
+                                <br>
+                                The versatility of blow molding onsite will deliver cost savings and offer more
+                                flexibility to your business.
+
+                            </p>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Contact Us",
+                            "href" : "news.html#news-innovations",
+                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
+                            })
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="col-left">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <div class="ttl-3">Science and testing.</div>
+                            <p>Independent tests show that the keg keeps the beer as fresh as other containers in the
+                                packaging mix</p>
+                        </div>
+                        <div class="col-right">
+                            <p>
+                                Our kegs are subject to exhaustive scientific testing, including but not limited to,
+                                organoleptic, logistics and heat tests by Petainer’s own accredited laboratories
+                                including our Innovation Centre at Cranfield University and by globally recognised
+                                independent institutions.
+                            </p>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Contact Us",
+                            "href" : "news.html#news-innovations",
+                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
+                            })
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="col-left">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <div class="ttl-3">Science and testing.</div>
+                            <p>Independent tests show that the keg keeps the beer as fresh as other containers in the
+                                packaging mix</p>
+                        </div>
+                        <div class="col-right">
+                            <p>
+                                Our kegs are subject to exhaustive scientific testing, including but not limited to,
+                                organoleptic, logistics and heat tests by Petainer’s own accredited laboratories
+                                including our Innovation Centre at Cranfield University and by globally recognised
+                                independent institutions.
+                            </p>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Contact Us",
+                            "href" : "news.html#news-innovations",
+                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
+                            })
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="col-left">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <div class="ttl-3">Science and testing.</div>
+                            <p>Independent tests show that the keg keeps the beer as fresh as other containers in the
+                                packaging mix</p>
+                        </div>
+                        <div class="col-right">
+                            <p>
+                                Our kegs are subject to exhaustive scientific testing, including but not limited to,
+                                organoleptic, logistics and heat tests by Petainer’s own accredited laboratories
+                                including our Innovation Centre at Cranfield University and by globally recognised
+                                independent institutions.
+                            </p>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Contact Us",
+                            "href" : "news.html#news-innovations",
+                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE HYBRID SYSTEM. -->
+        <div class="hbt-sys">
+            <div class="socket hbt-sys-socket">
+                <div class="layout-row">
+                    <div class="layout-col-l">
+
+                    </div>
+                    <div class="layout-col-r">
+                        <div class="sys-catagories">
+                            <div class="top">
+                                <h2 class="ttl-2">Solutions that <br> match your <br> brand’s needs</h2>
+                            </div>
+                            <div class="sys-catagories-row">
+                                <div class="prod-a-desc">
+                                    <div class="icon">
+                                        <img src="images/ind-1.svg" alt="">
+                                    </div>
+                                    <p><strong>Impact Resistance</strong>
+                                        <br>
+                                        Strong, lightweight, and<br> unbreakable.
+                                    </p>
+                                </div>
+                                <div class="prod-a-desc">
+                                    <div class="icon">
+                                        <img src="images/ind-2.svg" alt="">
+                                    </div>
+                                    <p><strong>Excellent clarity </strong>
+                                        <br>
+                                        Glass clear, shiny <br>appearance for on<br> shelf presence.
+                                    </p>
+                                </div>
+                                <div class="prod-a-desc">
+                                    <div class="icon">
+                                        <img src="images/ind-3.svg" alt="">
+                                    </div>
+                                    <p><strong>Branding</strong>
+                                        <br>
+                                        Excellent branding <br>opportunities on both<br> jars and
+                                        closures.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- DISPOSAL & RECYCLING -->
+        <div class="socket disposal-socket">
+            <div class="disposal-catagories">
+                <div class="ttl-top">
+                    <div>Details</div>
+                    <h2 class="ttl-2">Disposal & <br> Recycling</h2>
+                </div>
+                <div class="disposal-catagories-row">
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">1.</div><img src="images/ind-1.svg" alt="">
+                        </div>
+                        <p>Recyclability is part of our design process, as we strive to build high quality, sustainable
+                            solutions. All our PET jars are 100% recyclable and can be reprocessed into new containers
+                            <br> (recycling code 1). </p>
+                    </div>
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">2.</div><img src="images/ind-2.svg" alt="">
+                        </div>
+                        <p>Our Jars use less material and are significantly lighter than other HDPE & glass solutions on
+                            the market, reducing the carbon footprint of your products. .</p>
+                    </div>
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">3.</div><img src="images/ind-3.svg" alt="">
+                        </div>
+                        <p>Our PET jars are shatter proof, which makes them easier to handle and dispose compared to
+                            glass which is more dangerous when broken.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="disposal-photo">
+                <img src="./images/jar.png" alt="">
+            </div>
+        </div>
+
+        <!-- GLOBAL CUSTOMERS.-->
+        <div class="global-socket-wrap">
+            <div class="socket global-socket">
+                <div class="global-s-row">
+                    <div class="global-s-col">
+                        <div>
+                            <h2 class="ttl-2">Our customers <br> worldwide.</h2>
+                            <span class="ttl-top">15</span>
+                            <span class="ttl-top">History Partners</span>
+                        </div>
+                        @@include('./partials/elements/button-link.htm', {
+                        "text": "All Reviews",
+                        "href" : "#",
+                        "classes": "btn-g btn-arrow-a"
+                        })
+                    </div>
+                    <div class="global-s-col global-rewiew-wrap ">
+                        <div class="global-rewiew">
+                            <div class="global-logo"><img src="./images/c-5.png" alt="image"></div>
+                            <div class="global-inner-top">
+                                <span>Jester Brewery</span>
+                                <span class="gray"> Brewery</span>
+                            </div>
+                            <blockquote class="global-blq">
+                                No jar testimonials for now, please use quotes from other product categories.
+                            </blockquote>
+                            <div class="author-block ml-layout">
+                                <div class="avatar"><img src="images/ava-3.png" alt=""></div>
+                                <div class="author-block-text">
+                                    <div class="author-name ttl-5">Brenda Arnold
+                                        <span class="gray">(USA)</span>
+                                    </div>
+
+                                    <div class="city">
+                                        <span class="city-text">
+                                            New York
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Support tools -->
+        <div class="media-stream--section socket solutions-socket">
+            <div class="media-stream--categories-ttl-f">
+                <div class="ttl-top">
+                    <div>7 videos</div>
+                    <h2 class="ttl-2">Keg videos</h2>
+                </div>
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Learn More",
+                "href" : "/about-us.html",
+                "classes": "btn-g btn-arrow-a"
+                })
+            </div>
+
+            <div class="media-stream--cols">
+                <article class="media-stream--article has-video instruction">
+                    <div class="media-panel">
+                        <div class="num">01</div>
+                        <img class="media-img" src="images/st-1.png" alt="#">
+                        <a href="https://www.youtube.com/watch?v=oBZBLuqnGEo" target="_blank" rel="noopener noreferrer">
+                            <div class="play-button-wrap">
+                                <div class="play trans"></div>
+                                <div class="text-b trans">2:21</div>
+                            </div>
+                        </a>
+                    </div>
+                    <h4 class="instruction-ttl ttl-4">Petainer Hybrid.</h4>
+                </article>
+                <article class="media-stream--article has-video instruction">
+                    <div class="media-panel">
+                        <div class="num">02</div>
+                        <img class="media-img" src="images/st-2.png" alt="#">
+                        <a href="https://www.youtube.com/watch?v=qv6mNlQba0M&t=13s" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="play-button-wrap">
+                                <div class="play trans"></div>
+                                <div class="text-b trans">2:21</div>
+                            </div>
+                        </a>
+                    </div>
+                    <h4 class="instruction-ttl ttl-4">Torque - how to prevent decoupling.</h4>
+                </article>
+                <article class="media-stream--article has-video instruction">
+                    <div class="media-panel">
+                        <div class="num">03</div>
+                        <img class="media-img" src="images/st-3.png" alt="#">
+                        <a href="https://www.youtube.com/watch?v=0rowuIao45Y&t=6s" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="play-button-wrap">
+                                <div class="play trans"></div>
+                                <div class="text-b trans">2:21</div>
+                            </div>
+                        </a>
+                    </div>
+                    <h4 class="instruction-ttl ttl-4">A Type Fitting.</h4>
+                </article>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="info-row layout-row socket">
+                <div class="layout-col-l">
+                    <h3 class="ttl-4">Becoming a customer</h3>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Place an order",
+                    "href" : "/contact.html",
+                    "classes": "btn-g btn-arrow-a"
+                    })
+                </div>
+                <div class="layout-col-r">
+                    <div class="layout-col-s-4">
+                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                    </div>
+                    <div class="layout-col-s-6">
+                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                        <div class="with-us">
+                            <h3 class="ttl-4">Already with us</h3>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Tools & Resources",
+                            "href" : "/resources.html",
+                            "classes": ""
+                            })
+                        </div>
+                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bg">
+                @@include('./partials/footer-main.htm', { "classes": "" })
+            </div>
+        </footer>
+    </main>
+</body>
+
+<script>
+    SystemJS.import('./js/app.js');
+    SystemJS.import('./js/solutions-open.js');
+</script>
+
+</html>

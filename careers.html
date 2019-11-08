@@ -1,101 +1,104 @@
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
-    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
-    @@include('./partials/scripts.htm')
-    <body>
-        @@include('./partials/preloader.htm')
-        @@include('./partials/header.htm', { "classes": "" })
-        @@include('./partials/menu.htm', {
-            "solution": "",
-            "about": "",
-            "news-act": "",
-            "resources": "",
-            "events": "",
-            "cases": "",
-            "careers": "active",
-            "sites": "",
-            "contact": ""
-        })
-        
-        <main class="main">
+@@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+@@include('./partials/scripts.htm')
 
-            <div class="layout-row-content careers-tabs-container layout-row socket">
+<body>
+    @@include('./partials/preloader.htm')
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "active",
+    "sites": "",
+    "contact": ""
+    })
+
+    <main class="main">
+
+        <div class="layout-row-content careers-tabs-container layout-row socket">
+            <div class="layout-col-l">
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Back",
+                "href" : "javascript:history.back()",
+                "classes": "btn-back"
+                })
+            </div>
+
+            <div class="layout-col-r">
+                <div class="careers-top-section">
+                    <p class="text-top-s">
+                        Careers at Petainer are heading in a new direction—up.
+                    </p>
+
+                    <div class="careers-ttl-row">
+                        <h2 class="ttl-2 ttl">Opened Positions</h2>
+                        <div class="location-tab-wrap middle-right-col">
+                            <div class="tabs-label">Location :</div>
+                            <div class="location-tabs">
+                                <ul>
+                                    <li class="tab active" data-tab="loc-eng">England</li>
+                                    <li class="tab" data-tab="loc-rus">Russia</li>
+                                    <li class="tab" data-tab="loc-den">Denmark</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @@include('./partials/_careers-tab-1.htm', { "id": "loc-eng", "classes": "active" })
+                @@include('./partials/_careers-tab-2.htm', { "id": "loc-rus", "classes": "" })
+                @@include('./partials/_careers-tab-3.htm', { "id": "loc-den", "classes": "" })
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="info-row layout-row socket">
                 <div class="layout-col-l">
-                    @@include('./partials/elements/button-link.htm', { 
-                        "text": "Back", 
-                        "href" : "javascript:history.back()", 
-                        "classes": "btn-back" 
+                    <h3 class="ttl-4">Becoming a customer</h3>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Place an order",
+                    "href" : "/contact.html",
+                    "classes": "btn-g btn-arrow-a"
                     })
                 </div>
-
                 <div class="layout-col-r">
-                    <div class="careers-top-section">
-                        <p class="text-top-s">
-                            Careers at Petainer are heading in a new direction—up. 
-                        </p>
-
-                        <div class="careers-ttl-row">
-                            <h2 class="ttl-2 ttl">Opened Positions</h2>
-                            <div class="location-tab-wrap middle-right-col">
-                                <div class="tabs-label">Location :</div>
-                                <div class="location-tabs">
-                                    <ul>
-                                        <li class="tab active" data-tab="loc-eng">England</li>
-                                        <li class="tab" data-tab="loc-rus">Russia</li>
-                                        <li class="tab" data-tab="loc-den">Denmark</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="layout-col-s-4">
+                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
                     </div>
-
-                    @@include('./partials/_careers-tab-1.htm', { "id": "loc-eng", "classes": "active" })
-                    @@include('./partials/_careers-tab-2.htm', { "id": "loc-rus", "classes": "" })
-                    @@include('./partials/_careers-tab-3.htm', { "id": "loc-den", "classes": "" })
+                    <div class="layout-col-s-6">
+                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                        <div class="with-us">
+                            <h3 class="ttl-4">Already with us</h3>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Tools & Resources",
+                            "href" : "#",
+                            "classes": ""
+                            })
+                        </div>
+                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow.
+                        </p>
+                    </div>
                 </div>
             </div>
-          
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="info-row layout-row socket">
-                    <div class="layout-col-l">
-                        <h3 class="ttl-4">Becoming a customer</h3>
-                        @@include('./partials/elements/button-link.htm', { 
-                            "text": "Place an order", 
-                            "href" : "#", 
-                            "classes": "btn-g btn-arrow-a" 
-                        })
-                    </div>
-                    <div class="layout-col-r">
-                        <div class="layout-col-s-4">
-                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
-                        </div>
-                        <div class="layout-col-s-6">
-                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
-                            <div class="with-us">
-                                <h3 class="ttl-4">Already with us</h3>
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Tools & Resources", 
-                                    "href" : "#", 
-                                    "classes": "" 
-                                })
-                            </div>
-                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bg">
-                    @@include('./partials/footer-main.htm', { "classes": "" })
-                </div>
-            </footer>
-        </main>
+            <div class="footer-bg">
+                @@include('./partials/footer-main.htm', { "classes": "" })
+            </div>
+        </footer>
+    </main>
 
-        @@include('./partials/_careers-popup.htm', { "classes": "" })
-    </body>
+    @@include('./partials/_careers-popup.htm', { "classes": "" })
+</body>
 
-    <script>
-        SystemJS.import('./js/app.js');
-        SystemJS.import('./js/careers.js');
-    </script>
+<script>
+    SystemJS.import('./js/app.js');
+    SystemJS.import('./js/careers.js');
+</script>
+
 </html>
