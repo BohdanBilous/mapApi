@@ -83,7 +83,8 @@ function js() {
         "js/modules/contact.js",
         "js/modules/team.js",
         "js/modules/resources.js",
-        "js/modules/solutions-open.js"
+        "js/modules/solutions-open.js",
+        "js/modules/solutions-open-hybrid.js"
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,
@@ -132,7 +133,8 @@ function jsProd() {
         "js/modules/contact.js",
         "js/modules/team.js",
         "js/modules/resources.js",
-        "js/modules/solutions-open.js"
+        "js/modules/solutions-open.js",
+        "js/modules/solutions-open-hybrid.js"
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,
