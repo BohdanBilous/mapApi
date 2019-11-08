@@ -2107,7 +2107,11 @@ $leftOffset: 270px;
 .solution-open-page.bottle-ref {
     .specs-section {
         .spec-img {
-            bottom: -522px;
+            bottom: -722px;
+
+            @media screen and (max-width: 1500px) {
+                bottom: -522px;
+            }
 
             @include tablet {
                 bottom: -600px;
