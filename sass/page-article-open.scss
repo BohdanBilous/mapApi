@@ -26,8 +26,7 @@
         margin-left: 35%;
     }
 
-    .ml-layout.tbl-left{
-        font-family:" Circular Std";
+    .ml-layout.tbl-left {
         font-weight: 400;
     }
 
@@ -50,6 +49,10 @@
 
     .light-blue {
         color: #1c989c;
+
+        span {
+            color: inherit;
+        }
     }
 
     .underline {
@@ -58,6 +61,10 @@
 
     .gray {
         color: #949494;
+    }
+
+    .cls-gray {
+        color: #595a5a;
     }
 
 }
@@ -269,7 +276,8 @@
 
         .follow-us {
             right: 30px;
-            img{
+
+            img {
                 height: 30px;
                 width: 30px;
             }
@@ -319,6 +327,7 @@
             }
         }
     }
+
     .scroll-top-btn {
         color: #2a2a2a;
     }
@@ -377,11 +386,8 @@
         span {
             font-size: 14px;
             line-height: 19px;
-            font-weight: 600;
 
-            &.blue {
-                font-weight: 600
-            }
+
         }
 
         p,
@@ -692,6 +698,11 @@
 }
 
 @include tablet {
+    .article-open-header-main {
+        .header-content-inner {
+            width: 67%;
+        }
+    }
 
     .article-open,
     .article-open-top {
@@ -816,7 +827,8 @@
 
             .slider-dots {
                 display: block;
-                max-width: calc(100% - 60px);
+                // max-width: calc(100% - 60px);
+                max-width: 93%;
                 width: 100%;
 
                 li {
@@ -870,6 +882,11 @@
 
         .social-mobile {
             display: flex;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         .event-article {
@@ -922,6 +939,7 @@
 
         .article-open-slider {
             padding: 0;
+            padding-bottom: 30px;
         }
 
         .next-arcticle .next-arcticle-inner {
@@ -970,7 +988,7 @@
             .header-content-scroll {
                 position: absolute;
                 bottom: 0;
-                left: 15px;
+                left: 30px;
             }
         }
     }
