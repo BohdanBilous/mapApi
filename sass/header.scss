@@ -23,9 +23,9 @@
     left: 0;
     right: 0;
     text-align: left;
-    z-index: 1001;
     transform: translateY(0);
     transition: ease-in-out transform 1s;
+    z-index: 999;
 
     &::after {
         @extend .ps;
@@ -79,6 +79,7 @@
     }
 
     .header-right-elements {
+        padding-right: 45px;
         display: flex;
         height: 100%;
     }
@@ -111,7 +112,7 @@
 }
 
 .logo {
-    @extend .zIndex;
+    // @extend .zIndex;
     position: relative;
     display: block;
     width: 86px;
@@ -182,8 +183,34 @@
 }
 
 // Menu Switcher
+.menu-switcher-socket {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    height: 55px;
+
+    @media screen and (min-width: 1921px) {
+        width: 1860px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    @media (max-width: 1150px) {
+        left: 25px;
+        right: 25px;
+    }
+
+    @include mobile-min {
+        left: 20px;
+        right: 20px;
+    }
+}
+
 .menu-switcher {
     @extend .ctrVert;
+    position: absolute;
+    right: 0;
     cursor: pointer;
     width: 45px;
     height: 28px;
@@ -217,8 +244,12 @@
         transition: background-color 0.3s;
     }
 
-    .menu-open .color-w.header & i::before {
+    .menu-open .color-w & i::before {
         background-color: $colorText;
+    }
+
+    .color-w & i::before {
+        background-color: $colorBg;
     }
 
     .menu-open & i {

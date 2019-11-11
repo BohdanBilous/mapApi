@@ -1,6 +1,7 @@
 /* =========================
     News
    ========================= */
+
 .media-stream--news{
     .play-button-wrap{
         display: none; // temporary
@@ -1054,6 +1055,10 @@
     .media-stream--col-l,
     .media-stream--col-r {
         width: 100%;
+    }
+
+    .media-stream--col-r {
+        padding: 0;
     }
 
     .filter-sidebar {

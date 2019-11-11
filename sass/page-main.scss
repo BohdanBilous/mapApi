@@ -2027,6 +2027,10 @@ $animateDur: 0.30s;
                 letter-spacing: -1.23px;
             }
         }
+
+        .ttl-section {
+            padding-right: 150px;
+        }
     }
 
     .events-table-cell {
@@ -2091,10 +2095,7 @@ $animateDur: 0.30s;
 
         .ttl-section {
             width: 200px;
-
-            br {
-                display: none;
-            }
+            padding-right: 0;
         }
 
         >.layout-col-l {

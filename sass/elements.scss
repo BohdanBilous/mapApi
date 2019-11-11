@@ -1347,6 +1347,11 @@
         .file-item--size {
             color: $colorGreen;
         }
+
+        .file-item--btn::after {
+            background: url(../images/ico-file-h.svg) no-repeat;
+            background-size: 100% 100%;
+        }
     }
 }
 
