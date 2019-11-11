@@ -1013,7 +1013,11 @@ $leftOffset: 270px;
             bottom: 0;
 
             img {
-                transform: translateX(9vw) translateY(-70px);
+                transform: translateX(9vw) translateY(-120px);
+
+                @media screen and (max-width: 1800px) {
+                    transform: translateX(9vw) translateY(-70px);
+                }
             }
         }
 
