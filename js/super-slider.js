@@ -64,7 +64,9 @@
  * 
  **/
 
-import { getStyle } from "./generic-helpers";
+import {
+    getStyle
+} from "./generic-helpers";
 
 export class SuperSlider {
     constructor(sliderWrap, type, timer, sliderCallBack = null, swipe) {
@@ -96,7 +98,7 @@ export class SuperSlider {
         this.slides = this.sliderRow.querySelectorAll(".slide");
         this.slide = this.sliderRow.querySelector(".slide");
         this.slidesItems = this.slides.length;
-        this.slideWidth = 0; 
+        this.slideWidth = 0;
         this.moveWidth = 0;
 
         this.carouselReset();
@@ -110,7 +112,7 @@ export class SuperSlider {
     }
 
     carouselMove(width, dir) {
-        (dir == "next") ? this.slideIndex++ : this.slideIndex--; 
+        (dir == "next") ? this.slideIndex++: this.slideIndex--;
         this.sliderRow.setAttribute("style", "transform: translateX(" + width + "px);");
         this.setVisibleSlides();
     }
@@ -129,10 +131,14 @@ export class SuperSlider {
 
     touchHandler() {
         this.touchMove = this.touchMove.bind(this);
-        this.touchEnd  = this.touchEnd.bind(this);
+        this.touchEnd = this.touchEnd.bind(this);
 
-        this.sliderRow.addEventListener("mousedown", function(e) { this.touchStart(e) }.bind(this));
-        this.sliderRow.addEventListener("touchstart", function(e) { this.touchStart(e) }.bind(this));
+        this.sliderRow.addEventListener("mousedown", function (e) {
+            this.touchStart(e)
+        }.bind(this));
+        this.sliderRow.addEventListener("touchstart", function (e) {
+            this.touchStart(e)
+        }.bind(this));
     };
 
     touchStart(e) {
@@ -144,9 +150,9 @@ export class SuperSlider {
         if (!e.target.classList.contains(".view-all") && !supportsTouch) {
             e.preventDefault();
         }
-        
+
         if (e.type == 'touchstart') touch = e.targetTouches[0] || e.changedTouches[0];
-        
+
         this.startX = touch.pageX;
         this.startY = touch.pageY;
         this.sliderWrap.classList.add("move");
@@ -163,14 +169,14 @@ export class SuperSlider {
         let buttonPrevInactive = this.buttonPrev.classList.contains("inactive");
 
         if (e.type == 'touchmove') touch = e.targetTouches[0] || e.changedTouches[0];
-        
+
         this.moveX = touch.pageX;
         this.moveY = touch.pageY;
-        
+
         if (Math.abs(this.moveY - this.startY) < 80) return;
-        
+
         // e.preventDefault();
-        
+
         if (!buttonPrevInactive && !buttonNextInactive) {
             let moveValue = parseInt(curLeft + this.moveX - this.startX);
             this.sliderRow.setAttribute("style", "transform: translateX(" + moveValue + "px);");
@@ -180,22 +186,22 @@ export class SuperSlider {
     touchEnd(e) {
         let touch = e;
         let curLeft = this.moveWidth;
-        let stayAtCurrent = (curLeft == 0 && this.moveX > this.startX) 
-                             || (this.buttonNext.classList.contains("inactive") && this.moveX < this.startX)
-                             || Math.abs(this.moveX - this.startX) < 40 
-                             || typeof this.moveX === "undefined" ? true : false;
-                            
+        let stayAtCurrent = (curLeft == 0 && this.moveX > this.startX) ||
+            (this.buttonNext.classList.contains("inactive") && this.moveX < this.startX) ||
+            Math.abs(this.moveX - this.startX) < 40 ||
+            typeof this.moveX === "undefined" ? true : false;
+
         if (Math.abs(this.moveX - this.startX) === 0) return;
 
         if (!stayAtCurrent) {
-            (this.moveX > this.startX) ? this.carouselMovePrev() : this.carouselMoveNext();
+            (this.moveX > this.startX) ? this.carouselMovePrev(): this.carouselMoveNext();
         }
 
         delete this.startX;
         delete this.startY;
-        delete this.moveX;  
-        delete this.moveY;              
-        
+        delete this.moveX;
+        delete this.moveY;
+
         this.sliderWrap.classList.remove("move");
         this.sliderWrap.removeEventListener("mousemove", this.touchMove);
         this.sliderWrap.removeEventListener("touchmove", this.touchMove);
@@ -207,10 +213,10 @@ export class SuperSlider {
         if (this.buttonPrev.classList.contains("inactive")) this.buttonPrev.classList.remove("inactive");
         if (this.buttonNext.classList.contains("inactive")) this.buttonNext.classList.remove("inactive");
 
-        if (this.slideIndex >= this.slidesItems - this.getItemsInViewport()) { 
+        if (this.slideIndex >= this.slidesItems - this.getItemsInViewport()) {
             this.buttonNext.classList.add("inactive")
-        } 
-        
+        }
+
         if (this.slideIndex == 0) {
             this.buttonPrev.classList.add("inactive")
         }
@@ -226,15 +232,15 @@ export class SuperSlider {
 
     getMargin() { // get CSS margin-right of slide (need import 'getStyle' function)
         let marginRight = getStyle(this.slide, "margin-right");
-        return parseInt(marginRight); 
+        return parseInt(marginRight);
     }
 
     setVisibleSlides() {
         let lastVisibleSlideIndex = this.slideIndex + (this.getItemsInViewport() - 1);
-        
+
         Array.prototype.forEach.call(this.slides, (slide, index) => {
             slide.classList.remove("visible");
-            
+
             if (index >= this.slideIndex && index <= lastVisibleSlideIndex) slide.classList.add("visible");
         });
     }
@@ -255,11 +261,11 @@ export class SuperSlider {
     setTimer(startIndex, timerNumber) { // start from 'startIndex' through 'timerNumber'
         let slideIndex = startIndex;
 
-        this.timerInterval = setInterval( () => {
+        this.timerInterval = setInterval(() => {
             slideIndex = (slideIndex + 1) % this.slides.length;
             this.changeSlide(slideIndex);
             this.changeDots(slideIndex);
-        }, timerNumber); 
+        }, timerNumber);
     }
 
     clearTimer(slideIndex) { // clear interval and set new timer
@@ -270,18 +276,18 @@ export class SuperSlider {
 
     changeSlide(slideIndex) {
         this.slideIndex = slideIndex;
-        
+
         if (slideIndex != undefined) {
             this.sliderWrap.querySelector(".slide.active").classList.remove("active");
             this.slides[slideIndex].classList.add("active");
-        } 
+        }
 
         if (this.sliderCallBack) this.sliderCallBack();
         if (this.dots) this.changeDots(slideIndex);
     }
 
     changeDots(slideIndex) {
-        
+
         if (slideIndex != undefined && this.dots.length) {
             this.sliderWrap.querySelector(".slider-dots .active").classList.remove("active");
             this.dots[slideIndex].classList.add("active");
@@ -291,10 +297,10 @@ export class SuperSlider {
     dotsClickHandler() {
         Array.prototype.forEach.call(this.dots, (dot) => {
             dot.addEventListener("click", () => {
-                
+
                 if (!dot.classList.contains("active")) {
                     this.slideIndex = this.getIndex(dot);
-                   
+
                     this.changeSlide(this.slideIndex);
                     if (this.timerNumber) this.clearTimer(this.slideIndex);
                 }
@@ -304,19 +310,23 @@ export class SuperSlider {
 
     buttonsClickHandler() {
 
-        this.buttonNext.addEventListener("click", function(e) {
+        this.buttonNext.addEventListener("click", function (e) {
             if (!this.buttonNext.classList.contains("inactive")) {
                 if (this.fader) this.faderMoveNext();
                 if (this.carousel) this.carouselMoveNext();
             }
+            if (this.sliderCallBack) this.sliderCallBack('next');
         }.bind(this));
 
-        this.buttonPrev.addEventListener("click", function(e) {
+        this.buttonPrev.addEventListener("click", function (e) {
             if (!this.buttonPrev.classList.contains("inactive")) {
                 if (this.fader) this.faderMovePrev();
                 if (this.carousel) this.carouselMovePrev();
             }
+            if (this.sliderCallBack) this.sliderCallBack('prev');
         }.bind(this));
+
+
     }
 
     faderMoveNext() {
@@ -325,7 +335,7 @@ export class SuperSlider {
     }
 
     faderMovePrev() {
-        (this.slideIndex == 0) ? this.slideIndex = this.slides.length : this.slideIndex - 1;
+        (this.slideIndex == 0) ? this.slideIndex = this.slides.length: this.slideIndex - 1;
         this.changeSlide(this.slideIndex - 1);
     }
 
