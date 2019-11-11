@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class="article-open-container ">
-                <div class="article-open-article">
+                <div class="article-open-article event-a-wrap">
                     <article class="event-article">
                         <p class=" ml-layout">
 
@@ -125,74 +125,80 @@
                             (6 BAYFRONT AVE, SINGAPORE 018974)
                         </p>
                         <h2 class="ttl-2 ml-layout">Events</h2>
-                        <div class="events-container">
-                            <div class="media-stream--cols media-stream--bbox">
-                                <div class="media-stream--article has-img event">
-                                    <div class="media-panel">
-                                        <img class="media-img" src="images/events-0.jpg" alt="#">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="date-range">
-                                            <div class="date-start">02</div>
-                                            <div class="date-end">03</div>
-                                        </div>
 
-                                        <h4 class="ttl ttl-4 city">
-                                            <span>Melbourne (Australia)</span>
-                                            <a href="event-open.html">BrewCon</a>
-                                        </h4>
+                    </article>
 
-                                        <div class="year">2019</div>
-
-                                        <a href="event-open.html" class="button-next grey"></a>
-                                    </div>
+                </div>
+                <div class="events-container">
+                    <div class="media-stream--cols media-stream--bbox">
+                        <div class="media-stream--article has-img event">
+                            <div class="media-panel">
+                                <img class="media-img" src="images/events-0.jpg" alt="#">
+                            </div>
+                            <div class="media-content">
+                                <div class="date-range">
+                                    <div class="date-start">02</div>
+                                    <div class="date-end">03</div>
                                 </div>
 
-                                <div class="media-stream--article has-img event">
-                                    <div class="media-panel">
-                                        <img class="media-img" src="images/events-2.jpg" alt="#">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="date-range">
-                                            <div class="date-start">02</div>
-                                            <div class="date-end">01</div>
-                                        </div>
+                                <h4 class="ttl ttl-4 city">
+                                    <span>Melbourne (Australia)</span>
+                                    <a href="event-open.html">BrewCon</a>
+                                </h4>
 
-                                        <h4 class="ttl ttl-4 city">
-                                            <span>(Germany)</span>
-                                            <a href="event-open.html">America's Beer Distri</a>
-                                        </h4>
+                                <div class="year">2019</div>
 
-                                        <div class="year">2019</div>
-
-                                        <a href="event-open.html" class="button-next grey"></a>
-                                    </div>
-                                </div>
-                                <div class="media-stream--article has-img event">
-                                    <div class="media-panel">
-                                        <img class="media-img" src="images/events-3.jpg" alt="#">
-                                    </div>
-                                    <div class="media-content">
-                                        <div class="date-range">
-                                            <div class="date-start">02</div>
-                                            <div class="date-end">01</div>
-                                        </div>
-
-                                        <h4 class="ttl ttl-4 city">
-                                            <span>Moscow</span>
-                                            <a href="event-open.html">The AWC Vienna - In</a>
-                                        </h4>
-
-                                        <div class="year">2019</div>
-
-                                        <a href="event-open.html" class="button-next grey"></a>
-                                    </div>
-                                </div>
+                                <a href="event-open.html" class="button-next grey"></a>
                             </div>
                         </div>
-                    </article>
-                </div>
 
+                        <div class="media-stream--article has-img event">
+                            <div class="media-panel">
+                                <img class="media-img" src="images/events-2.jpg" alt="#">
+                            </div>
+                            <div class="media-content">
+                                <div class="date-range">
+                                    <div class="date-start">02</div>
+                                    <div class="date-end">01</div>
+                                </div>
+
+                                <h4 class="ttl ttl-4 city">
+                                    <span>(Germany)</span>
+                                    <a href="event-open.html">America's Beer Distri</a>
+                                </h4>
+
+                                <div class="year">2019</div>
+
+                                <a href="event-open.html" class="button-next grey"></a>
+                            </div>
+                        </div>
+                        <div class="media-stream--article has-img event">
+                            <div class="media-panel">
+                                <img class="media-img" src="images/events-3.jpg" alt="#">
+                            </div>
+                            <div class="media-content">
+                                <div class="date-range">
+                                    <div class="date-start">02</div>
+                                    <div class="date-end">01</div>
+                                </div>
+
+                                <h4 class="ttl ttl-4 city">
+                                    <span>Moscow</span>
+                                    <a href="event-open.html">The AWC Vienna - In</a>
+                                </h4>
+
+                                <div class="year">2019</div>
+
+                                <a href="event-open.html" class="button-next grey"></a>
+                            </div>
+                        </div>
+                    </div>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "All events",
+                    "href" : "/events.html",
+                    "classes": "btn-g btn-arrow-a"
+                    })
+                </div>
                 <!-- Footer -->
                 <footer class="footer footer-bg">
                     <div class="info-row layout-row socket">
