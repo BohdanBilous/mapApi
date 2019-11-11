@@ -114,6 +114,7 @@
         width: 106px;
 
         .flag-inner {
+            margin-left: -15px;
             text-align: center;
             width: 100%;
 
@@ -239,7 +240,7 @@
     }
 
     .contact-row {
-        padding-top: 177px;
+        padding-top: 110px;
 
         .position-name {
             position: static;
@@ -255,8 +256,8 @@
 
         .flag,
         .persone {
-            margin-left: -20px;
-            margin-right: 104px;
+            // margin-left: -20px;
+            margin-right: 130px;
             margin-bottom: 96px;
 
             // min-width: 167px;
