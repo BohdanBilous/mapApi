@@ -491,6 +491,35 @@ $dotsLiWidth: 250px;
     }
 }
 
+@keyframes nextFade {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        visibility: visible;
+    }
+}
+
+@keyframes prevFade {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        visibility: visible;
+    }
+}
+
+
 // Autofill Input
 @mixin autofill($bg, $textColor) {
     -webkit-box-shadow: 0 0 0 50px $bg inset;
@@ -571,7 +600,8 @@ $dotsLiWidth: 250px;
     display: block;
     border-radius: 50%;
 
-    &::before, &::after {
+    &::before,
+    &::after {
         @extend .ps;
         @extend .ctr;
         position: absolute;
