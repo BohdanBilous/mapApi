@@ -48,6 +48,7 @@ export class TabSwitcher {
     }
 
     changeTabBlock(tabCurrentName, tabBlockCurrent) {
+
         if (tabBlockCurrent) tabBlockCurrent.classList.remove("active");
         this.tabsContainer.querySelector(`${this.blockClassName}#${tabCurrentName}`).classList.add("active");
     }
