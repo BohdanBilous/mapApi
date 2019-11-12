@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+@@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+@@include('./partials/scripts.htm')
+
+<body>
+    @@include('./partials/preloader.htm')
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "",
+    "sites": "",
+    "contact": "active"
+    })
+
+    <main class="main">
+
+        <div class="layout-row-content contact-tabs-container layout-row socket">
+            <div class="layout-col-l">
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Back",
+                "href" : "javascript:history.back()",
+                "classes": "btn-back"
+                })
+            </div>
+
+
+        </div>
+        <div class="socket">
+
+        </div>
+        <!-- Footer -->
+        <footer class="footer footer-bg">
+            <div class="info-row layout-row socket">
+                <div class="layout-col-l">
+                    <h3 class="ttl-4">Becoming a customer</h3>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Place an order",
+                    "href" : "/contact.html",
+                    "classes": "btn-g btn-arrow-a"
+                    })
+                </div>
+                <div class="layout-col-r">
+                    <div class="layout-col-s-4">
+                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                    </div>
+                    <div class="layout-col-s-6">
+                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                        <div class="with-us">
+                            <h3 class="ttl-4">Already with us</h3>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Tools & Resources",
+                            "href" : "/resources.html",
+                            "classes": ""
+                            })
+                        </div>
+                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            @@include('./partials/footer-main.htm', { "classes": "" })
+        </footer>
+    </main>
+</body>
+
+<script>
+    SystemJS.import('./js/app.js');
+    SystemJS.import('./js/contact.js');
+</script>
+
+</html>
