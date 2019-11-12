@@ -272,6 +272,7 @@ div.border-rad-top {
     position: sticky;
     top: 0;
     left: 0;
+    transition: background-color 0.3s;
 }
 
 .events-cal {
@@ -458,6 +459,10 @@ div.border-rad-top {
         &:after {
             left: 25px;
             right: 25px;
+        }
+
+        &.fixed {
+            background-color: $colorPanel;
         }
     }
 
