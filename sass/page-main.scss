@@ -489,6 +489,10 @@ $animateDur: 0.30s;
     }
 }
 
+.no-touchevents .section-one.fixed .hover-mode .tare-item {
+    z-index: 0;
+}
+
 @include edge {
     .no-touchevents .hover-mode.tare-wrap-c {
         height: 800px;
@@ -526,6 +530,19 @@ $animateDur: 0.30s;
 
         @media screen and (max-width: 1800px) {
             top: calc(#{$tareHeight} - 100px);
+        }
+    }
+}
+
+@include laptop {
+    .solutions-main-block {
+        .indicators .indicator {
+            width: 35px;
+
+            .icon {
+                width: 35px;
+                height: 35px;
+            }
         }
     }
 }
@@ -1113,7 +1130,7 @@ $animateDur: 0.30s;
         }
 
         .slides {
-            height: 350px;
+            height: 450px;
         }
 
         .slide {
@@ -1188,6 +1205,8 @@ $animateDur: 0.30s;
         width: 100%;
         height: 100%;
         z-index: 1;
+
+        display: none; // Remove Button temporarily
 
         .prev,
         .next {
