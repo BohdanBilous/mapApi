@@ -489,6 +489,10 @@ $animateDur: 0.30s;
     }
 }
 
+.no-touchevents .section-one.fixed .hover-mode .tare-item {
+    z-index: 0;
+}
+
 @include edge {
     .no-touchevents .hover-mode.tare-wrap-c {
         height: 800px;
