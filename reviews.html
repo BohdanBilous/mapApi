@@ -1,30 +1,229 @@
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
-    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
-    @@include('./partials/scripts.htm')
-    <body>
-        @@include('./partials/preloader.htm')
-        @@include('./partials/header.htm', { "classes": "" })
-        @@include('./partials/menu.htm', {
-            "solution": "",
-            "about": "",
-            "news-act": "",
-            "resources": "",
-            "events": "",
-            "cases": "",
-            "careers": "active",
-            "sites": "",
-            "contact": ""
-        })
-        
-        <main class="main">
-            @@include('./partials/stub.htm')
-        </main>
+@@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+@@include('./partials/scripts.htm')
 
-    </body>
+<body>
+    @@include('./partials/preloader.htm')
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "active",
+    "sites": "",
+    "contact": ""
+    })
 
-    <script>
-        SystemJS.import('./js/app.js');
-    </script>
+    <main class="main">
+
+        <div class="layout-row-content  layout-row socket reviews-top-socket">
+            <div class="layout-col-l">
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Back",
+                "href" : "javascript:history.back()",
+                "classes": "btn-back"
+                })
+            </div>
+
+            <div class="layout-col-r">
+                <div class="reviews-ttl-row">
+                    <h2 class="ttl-2 ttl">Reviews</h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="socket reviews-socket">
+            <p class="reviews-opener">History Partners (15)</p>
+            <div class="reviews-wrap">
+                <div class="reviews-socket-wrap">
+                    <div class="reviews-socke-left">
+                        <img src="./images/review-1.jpg" alt="">
+                        <div class="text">
+                            <h5 class="ttl-5">Brewery</h5>
+                            <h2 class="ttl-2">House Beer</h2>
+                        </div>
+                    </div>
+                    <div class="reviews-socke-right">
+                        <div class="rewiew">
+                            <div class="reviews-logo"><img src="./images/c-5.png" alt="image"></div>
+                            <blockquote class="reviews-blq">
+                                Using Petainer’s one—way kegs has turned a logistical nightmare into a straightforward
+                                process, ensuring we can send our beers across the region at lower cost.
+                            </blockquote>
+                            <div class="author-block ml-layout">
+                                <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                <div class="author-block-text">
+                                    <div class="author-name ttl-5">George Boyd
+                                        <span class="gray">Sales</span>
+                                    </div>
+                                    <div class="city">
+                                        <span class="city-text">
+                                            Paris
+                                        </span>
+                                        <div class="country">
+                                            (France)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-socket-wrap">
+                    <div class="reviews-socke-left">
+                        <img src="./images/reviews-2.jpg" alt="">
+                        <div class="text">
+                            <h5 class="ttl-5">Brewery</h5>
+                            <h2 class="ttl-2">Jester Brewery</h2>
+                        </div>
+                    </div>
+                    <div class="reviews-socke-right">
+                        <div class="rewiew">
+                            <div class="reviews-logo"><img src="./images/c-4.png" alt="image"></div>
+                            <blockquote class="reviews-blq">
+                                We have partnered with Petainer because we recognise the growth opportunities for its
+                                products. One-way kegs provide a much more cost-effective alternative to steel kegs
+                                without any compromise on product quality and protection.
+                            </blockquote>
+                            <div class="author-block ml-layout">
+                                <div class="avatar"><img src="images/av-9.png" alt=""></div>
+                                <div class="author-block-text">
+                                    <div class="author-name ttl-5">Brenda Arnold
+                                        <span class="gray">CEO</span>
+                                    </div>
+                                    <div class="city">
+                                        <span class="city-text">
+                                            United Kingdom
+                                        </span>
+                                        <div class="country">
+                                            (London)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-socket-wrap">
+                    <div class="reviews-socke-left">
+                        <img src="./images/reviews-3.jpg" alt="">
+                        <div class="text">
+                            <h5 class="ttl-5">Brewery</h5>
+                            <h2 class="ttl-2">Calsberg</h2>
+                        </div>
+                    </div>
+                    <div class="reviews-socke-right">
+                        <div class="rewiew">
+                            <div class="reviews-logo"><img src="./images/c-5.png" alt="image"></div>
+                            <blockquote class="reviews-blq">
+                                We have partnered with Petainer because we recognise the growth opportunities for its
+                                products. One-way kegs provide a much more cost-effective alternative to steel kegs
+                                without any compromise on product quality and protection. We have partnered with
+                                Petainer because we recognise the growth opportunities for its products. One-way kegs
+                                provide a.
+                            </blockquote>
+                            <div class="author-block ml-layout">
+                                <div class="avatar"><img src="images/av-12.png" alt=""></div>
+                                <div class="author-block-text">
+                                    <div class="author-name ttl-5">George Boyd
+                                        <span class="gray">Sales</span>
+                                    </div>
+                                    <div class="city">
+                                        <span class="city-text">
+                                            New York
+                                        </span>
+                                        <div class="country">
+                                            (USA)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-socket-wrap">
+                    <div class="reviews-socke-left">
+                        <img src="./images/reviews-4.jpg" alt="">
+                        <div class="text">
+                            <h5 class="ttl-5">Brewery</h5>
+                            <h2 class="ttl-2">Heinekenr</h2>
+                        </div>
+                    </div>
+                    <div class="reviews-socke-right">
+                        <div class="rewiew">
+                            <div class="reviews-logo"><img src="./images/c-1.png" alt="image"></div>
+                            <blockquote class="reviews-blq">
+                                Using Petainer’s one—way kegs has turned a logistical nightmare into a straightforward
+                                process, ensuring we can send our beers across the region at lower cost.
+                            </blockquote>
+                            <div class="author-block ml-layout">
+                                <div class="avatar"><img src="images/av-13.png" alt=""></div>
+                                <div class="author-block-text">
+                                    <div class="author-name ttl-5">Brenda Arnold
+                                        <span class="gray">CEO</span>
+                                    </div>
+                                    <div class="city">
+                                        <span class="city-text">
+                                            Paris
+                                        </span>
+                                        <div class="country">
+                                            (France)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="info-row layout-row socket">
+                <div class="layout-col-l">
+                    <h3 class="ttl-4">Becoming a customer</h3>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Place an order",
+                    "href" : "/contact.html",
+                    "classes": "btn-g btn-arrow-a"
+                    })
+                </div>
+                <div class="layout-col-r">
+                    <div class="layout-col-s-4">
+                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                    </div>
+                    <div class="layout-col-s-6">
+                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                        <div class="with-us">
+                            <h3 class="ttl-4">Already with us</h3>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Tools & Resources",
+                            "href" : "#",
+                            "classes": ""
+                            })
+                        </div>
+                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bg">
+                @@include('./partials/footer-main.htm', { "classes": "" })
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+<script>
+    SystemJS.import('./js/app.js');
+    SystemJS.import('./js/reviews.js');
+</script>
+
 </html>
