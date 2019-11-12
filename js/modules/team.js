@@ -3,12 +3,8 @@
 /* MODULE IMPORTS */
 import {
   html,
-  desktop,
-  mobile,
   exists,
   scrollFromScreen,
-  findParent,
-  animateSwitch,
   loadContent
 } from "../generic-helpers";
 
@@ -31,7 +27,7 @@ window.addEventListener("load", function() {
     teamMember.addEventListener("click", () => {
       teamMemberId = teamMember.getAttribute("id");
       html.classList.add("popup-open");
-      html.classList.remove("btn-close");
+      html.classList.remove("popup-close");
 
       loadPopupInfo(teamMemberId);
     });
@@ -39,6 +35,6 @@ window.addEventListener("load", function() {
 
   popupClose.addEventListener("click", () => {
     html.classList.remove("popup-open");
-    html.classList.add("btn-close");
+    html.classList.add("popup-close");
   });
 });

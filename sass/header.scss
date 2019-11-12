@@ -193,7 +193,8 @@
         width: 1860px;
         left: 50%;
         right: auto;
-        transform: translateX(-50%);
+        margin-left: -930px;
+        // transform: translateX(-50%);
     }
 
     @media (max-width: 1150px) {
