@@ -72,26 +72,25 @@ window.addEventListener("load", function () {
     if (exists(".sites-tabs-container")) {
         new TabSwitcher(".sites-tabs-container");
     }
-
-    // Mission Fader
-    let sitesFader = new SuperSlider(".sites-fader", "fader");
-    let chartCarosuel = new SuperSlider(".chart-carosuel", "carousel", null, function (arg) {
-        const index = this.slideIndex;
-        // Tabs
-        if (exists(".carosuel-text-inner")) {
-            let elemetns = document.querySelectorAll('.sites-chart .carosuel-text-inner');
-            elemetns.forEach((item, i) => {
-                item.classList.remove('active', 'prevAnim', 'nextAnim');
-                if (item.getAttribute('data-index') == index) {
-                    item.classList.add('active');
-                    arg === 'next' ? item.classList.add('nextAnim') : item.classList.add('prevAnim')
-                }
-            })
-        }
-        return;
-
-
-    });
-
-
+    const allTabs = this.document.querySelectorAll('.sites-tabs-container .tab-block');
+    allTabs.forEach(item => {
+        const currentTab = item.getAttribute('id');
+        // Mission Fader
+        new SuperSlider(`#${currentTab} .sites-fader`, "fader");
+        new SuperSlider(`#${currentTab} .chart-carosuel`, "carousel", null, function (arg) {
+            const index = this.slideIndex;
+            // Tabs
+            if (exists(`#${currentTab} .carosuel-text-inner`)) {
+                let elemetns = document.querySelectorAll(`#${currentTab}  .sites-chart .carosuel-text-inner`);
+                elemetns.forEach((item, i) => {
+                    item.classList.remove('active', 'prevAnim', 'nextAnim');
+                    if (i == index) {
+                        item.classList.add('active');
+                        arg === 'next' ? item.classList.add('nextAnim') : item.classList.add('prevAnim')
+                    }
+                })
+            }
+            return;
+        });
+    })
 });

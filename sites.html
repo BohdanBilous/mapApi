@@ -14,8 +14,8 @@
     "resources": "",
     "events": "",
     "cases": "",
-    "careers": "active",
-    "sites": "",
+    "careers": "",
+    "sites": "active",
     "contact": ""
     })
 
@@ -39,8 +39,9 @@
                 <div class="layout-col-r">
                     <div class="screen-content">
                         <div class="screen-content--ttl-s">
+                            <p class="years-sites mob-d">1984 <span class="blc">------------</span> 2019</p>
                             <h1 class="ttl-1 ttl">PETAINER</h1>
-                            <p>AROUND THE WORLD</p>
+                            <p>AROUND THE WORLD </p>
                         </div>
                         <div class="screen-content--slog ttl-4">Going further to combat climate change.</div>
                     </div>
@@ -50,22 +51,24 @@
 
         <!-- Tabs -->
         <div class="sites-tabs-container">
-            <div class="socket sites-tab-top">
+            <!-- /socket -->
+            <div class=" sites-tab-top">
                 <div class="sites-ttl-row">
                     <div class=" country-tab-wrap">
-                        <div class="country-count">
-                            8 Countries
-                        </div>
                         <div class="country-tabs">
                             <ul>
                                 <li class="tab active" data-tab="site-fl-1">
-                                    <img src="./images/fl-1.png" alt="">
-                                    <span class="text">Canada</span>
+                                    <div class="tab-inner">
+                                        <img src="./images/fl-1.png" alt="">
+                                        <span class="text">Canada</span>
+                                    </div>
                                 </li>
                                 @@for (var i = 1; i < countryList.length; i++) { <li class="tab"
                                     data-tab="site-`+countryList[i].img+`">
-                                    <img src="./images/`+countryList[i].img+`.png" alt="">
-                                    <span class="text">`+countryList[i].country+`</span>
+                                    <div class="tab-inner">
+                                        <img src="./images/`+countryList[i].img+`.png" alt="">
+                                        <span class="text">`+countryList[i].country+`</span>
+                                    </div>
                                     </li>
                                     }
                             </ul>
@@ -73,265 +76,23 @@
                     </div>
                 </div>
             </div>
-            <div id='site-fl-1' class="sites-tab-block tab-block active">
-                <div class="st-top-title socket">
-                    <div class="st-top-country">
-                        <img src="./images/fl-1.png" alt="sw">
-                        <h1 class="ttl-1">SWEDEN <br>
-                            Lidköping</h1>
-                    </div>
-                    <div class="st-top-country-history">
-                        <p class="text">Site Activities: Preforms,
-                            One—way bottles, Refillable bottles, Jars.</p>
-                        <p class="years-sites">1984 ------------------ 2019</p>
-                    </div>
-                </div>
-
-                <div class="layout-row layout-row--minus-logo socket chart-wrap chart-carosuel">
-                    <div class="layout-col-l">
-                        <div class="slider-buttons slider-buttons-c">
-                            <button class="prev button-prev"></button>
-                            <button class="next button-next"></button>
-                        </div>
-                        <div class="chart-title">Sites key Facts</div>
-                    </div>
-                    <div class="layout-col-r">
-                        <div class="sites-chart">
-                            <div class="carosuel-text">
-                                <span class="carosuel-text-inner active" data-index="0">Company founded</span>
-                                <span class="carosuel-text-inner" data-index="1">Company founded</span>
-                                <span class="carosuel-text-inner" data-index="2">Company founded</span>
-                                <span class="carosuel-text-inner" data-index="3">Company founded</span>
-                                <span class="carosuel-text-inner" data-index="4">Company founded</span>
-                                <span class="carosuel-text-inner" data-index="5">Company founded</span>
-                                <span class="carosuel-text-inner" data-index="6">Company founded</span>
-                                <span class="carosuel-text-inner" data-index="7">Company founded</span>
-                            </div>
-                            <div class="carosuel">
-                                <div class="slider-row">
-                                    <div class="slide"><span class="year-slider">1992</span></div>
-                                    <div class="slide"><span class="year-slider">1995</span></div>
-                                    <div class="slide"><span class="year-slider">1996</span></div>
-                                    <div class="slide"><span class="year-slider">2000</span></div>
-                                    <div class="slide"><span class="year-slider">2010</span></div>
-                                    <div class="slide"><span class="year-slider">2016</span></div>
-                                    <div class="slide"><span class="year-slider">2018</span></div>
-                                    <div class="slide slide-without"><span class="year-slider">2020</span></div>
-                                    <div class="slide slide-empty"></div>
-                                    <div class="slide slide-empty"></div>
-                                    <div class="slide slide-empty"></div>
-
-                                    <div class="slide slide-empty"></div>
-                                    <div class="slide slide-empty"></div>
-
-
-
-                                </div>
-                            </div>
-                            <!-- <img src="./images/img-to-delete.png" alt=""> -->
-                        </div>
-                        <ol class="sites-chart-list">
-                            <li>
-                                <p>The Lidköping site is closely collaborating with both its customers and Swedish
-                                    authorities</p>
-                            </li>
-                            <li>
-                                <p>O support the creation of one of the most efficient deposit systems and promote
-                                    recycling and reuse.
-                                </p>
-                            </li>
-                            <li>
-                                <p>Expertise in Cleanpet (PCR)</p>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-                <!-- Video -->
-                <div class="video-sites">
-                    <img class="media-img" src="images/sites-1.png" alt="#">
-                    <div class="socket layout-row">
-                        <div class="layout-col-l"></div>
-                        <div class="video-site-panel layout-col-r">
-
-                            <div class="top-text">
-                                How Petainer is taking recycling to the next level.
-                            </div>
-                            <div class="play-button-wrap">
-                                <div class="play trans"></div>
-                                <div class="text-b trans">1:01</div>
-                            </div>
-                            <div class="bottom-text">
-                                <h5 class="ttl-5">Video</h5>
-                                <h3 class="ttl-3"> Closing the Loop</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Years -->
-            <div class="layout-row layout-row--minus-logo socket site-info">
-                <div class="layout-col-l">
-                    2018 years
-                </div>
-                <div class="layout-col-r" data-text='CSR Gold Rating'>
-                    <div class="site-info-icon">
-                        <img src="./images/v-icon.png" alt="">
-                    </div>
-                    <h2 class="ttl-2">
-                        EcoVadis <br>
-                        Gold Rating
-                    </h2>
-                    <p class="site-info-top-text">In Sweden, Petainer has achieved a CSR Gold Rating by EcoVadis, the
-                        global CSR ratings agency.
-                    </p>
-                    <div class="site-info-row">
-                        <div class="site-info-col">
-                            <img src="images/ind-1.svg" alt="">
-                            <p>
-                                EcoVadis analyses 21 factors across four themes—environment, fair labour practices,
-                                ethics and fair business practices, and supply chain.
-                            </p>
-                        </div>
-                        <div class="site-info-col">
-                            <img src="images/ind-1.svg" alt="">
-                            <p>Petainer has improved its overall score with a particularly strong performance in the
-                                environmental category and is now amongst the top 1% of all Plastics Manufacturers
-                                evaluated by EcoVadis.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cleanpet -->
-            <div class="sites-fader-wrap">
-                <div class="fader sites-fader layout-row socket">
-                    <div class="layout-col-l">
-                        <div class="slider-buttons slider-buttons-c">
-                            <button class="prev button-prev"></button>
-                            <button class="next button-next"></button>
-                        </div>
-                    </div>
-                    <div class="layout-col-r">
-                        <ul class="slider-dots">
-                            <li class="active">
-                                <div class="index">01.</div>
-                                <div class="text-main">Cleanpet</div>
-                            </li>
-                            <li>
-                                <div class="index">02.</div>
-                                <div class="text-main">50% Cleanpet.</div>
-                            </li>
-                            <li>
-                                <div class="index">03.</div>
-                                <div class="text-main">600 million</div>
-                            </li>
-                        </ul>
-
-                        <div class="swipe-hint only-mobile"></div>
-
-                        <div class="slides">
-                            <div class="slide active">
-                                <div class="col-left">
-                                    <h2 class="ttl-2">Cleanpet</h2>
-                                </div>
-                                <div class="col-right">
-                                    <div class="icon">
-                                        <img src="images/ind-1.svg" alt="">
-
-                                    </div>
-                                    <p>Petainer has improved its overall score with a particularly strong performance in
-                                        the
-                                        environmental category and is now amongst the top 1% of all Plastics
-                                        Manufacturers
-                                        evaluated by EcoVadis.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="slide ">
-                                <div class="col-left">
-                                    <h2 class="ttl-2">Cleanpet</h2>
-                                </div>
-                                <div class="col-right">
-                                    <div class="icon">
-                                        <img src="images/ind-1.svg" alt="">
-
-                                    </div>
-                                    <p>Petainer has improved its overall score with a particularly strong performance in
-                                        the
-                                        environmental category and is now amongst the top 1% of all Plastics
-                                        Manufacturers
-                                        evaluated by EcoVadis.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="slide ">
-                                <div class="col-left">
-                                    <h2 class="ttl-2">Cleanpet</h2>
-                                </div>
-                                <div class="col-right">
-                                    <div class="icon">
-                                        <img src="images/ind-1.svg" alt="">
-
-                                    </div>
-                                    <p>Petainer has improved its overall score with a particularly strong performance in
-                                        the
-                                        environmental category and is now amongst the top 1% of all Plastics
-                                        Manufacturers
-                                        evaluated by EcoVadis.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Menegment -->
-            <div class="layout-row layout-row--minus-logo socket menegment-wrap">
-                <div class="menegment-col">
-                    <h4 class="ttl-4">Management <br>
-                        Systems and <br>
-                        Quality Certations</h4>
-                    <div class="menegment-item">
-                        <h3 class="ttl-4"> <span class="menegment-icon">ISO</span>9001</h3>
-                        <div class="menegment-item-text">Quality Management System</div>
-                    </div>
-                </div>
-                <div class="menegment-col">
-                    <div class="menegment-item">
-                        <h3 class="ttl-4"> <span class="menegment-icon">ISO</span>9001</h3>
-                        <div class="menegment-item-text">Quality Management System</div>
-                    </div>
-                    <div class="menegment-item">
-                        <h3 class="ttl-4"> <span class="menegment-icon">ISO</span>9001</h3>
-                        <div class="menegment-item-text">Quality Management System</div>
-                    </div>
-                    <div class="menegment-item">
-                        <h3 class="ttl-4"> <span class="menegment-icon">ISO</span>9001</h3>
-                        <div class="menegment-item-text">Quality Management System</div>
-                    </div>
-                </div>
-                <div class="menegment-col">
-                    <div class="menegment-item">
-                        <h3 class="ttl-4"> <span class="menegment-icon">ISO</span>9001</h3>
-                        <div class="menegment-item-text">Quality Management System</div>
-                    </div>
-                    <p class="menegment-tx">Lidkoping was audited by LRQA and has obtained the following
-                        certifications </p>
-                </div>
-            </div>
-        </div>
-        <!-- @@include('./partials/sites-blocks/_sites-tab-0.htm', { "id": "site-fl-1", "classes": "active" }) -->
-        @@include('./partials/sites-blocks/_sites-tab-1.htm', { "id": "site-fl-2", "classes": "" })
-        @@include('./partials/sites-blocks/_sites-tab-1.htm', { "id": "site-fl-3", "classes": "" })
-        @@include('./partials/sites-blocks/_sites-tab-1.htm', { "id": "site-fl-4", "classes": "" })
-        @@include('./partials/sites-blocks/_sites-tab-1.htm', { "id": "site-fl-5", "classes": "" })
-        @@include('./partials/sites-blocks/_sites-tab-1.htm', { "id": "site-fl-5", "classes": "" })
-        @@include('./partials/sites-blocks/_sites-tab-1.htm', { "id": "site-fl-6", "classes": "" })
-        @@include('./partials/sites-blocks/_sites-tab-1.htm', { "id": "site-fl-7", "classes": "" })
-        @@include('./partials/sites-blocks/_sites-tab-1.htm', { "id": "site-fl-8", "classes": "" })
+            @@include('./partials/sites-blocks/_sites-tab-0.htm', {
+            "id":"site-fl-1","classes":"active","img":"fl-1","name":"Canada" })
+            @@include('./partials/sites-blocks/_sites-tab-1.htm', { "id":
+            "site-fl-2","classes":"","img":"fl-2","name":"US" })
+            @@include('./partials/sites-blocks/_sites-tab-2.htm', { "id":
+            "site-fl-3","classes":"","img":"fl-3","name":"Brazil" })
+            @@include('./partials/sites-blocks/_sites-tab-3.htm', { "id":
+            "site-fl-4","classes":"","img":"fl-4","name":"Czech Republic" })
+            @@include('./partials/sites-blocks/_sites-tab-4.htm', { "id":
+            "site-fl-5","classes":"","img":"fl-5","name":"SWEDEN <br> Lidköping"})
+            @@include('./partials/sites-blocks/_sites-tab-5.htm', { "id":
+            "site-fl-6","classes":"","img":"fl-6","name":"Russia" })
+            @@include('./partials/sites-blocks/_sites-tab-6.htm', { "id":
+            "site-fl-7","classes":"","img":"fl-7","name":"China" })
+            @@include('./partials/sites-blocks/_sites-tab-7.htm', { "id":
+            "site-fl-8","classes":"","img":"fl-8","name":"Australia"
+            })
         </div>
 
         <!-- Cases -->
@@ -359,7 +120,7 @@
                             <div class="case-item-pos">Steamworks:</div>
                             <div class="case-item-name ttl-2"> Janet Flores</div>
                         </div>
-                        <img class="lazy-img media-img" data-bg="images/case-1.jpg" data-bg="images/case-1-mob.jpg"
+                        <img class="lazy-img media-img" data-bg="images/case-1.jpg" data-bgmob="images/case-1-mob.jpg"
                             alt="image">
                     </div>
                     <div class="customers-item">

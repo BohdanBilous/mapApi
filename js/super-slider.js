@@ -121,12 +121,14 @@ export class SuperSlider {
         this.moveWidth += -(this.slide.clientWidth + this.getMargin());
         this.carouselMove(this.moveWidth, "next");
         this.setInactiveButtons();
+        if (this.sliderCallBack) this.sliderCallBack('next');
     }
 
     carouselMovePrev() {
         this.moveWidth -= -(this.slide.clientWidth + this.getMargin());
         this.carouselMove(this.moveWidth, "prev");
         this.setInactiveButtons();
+        if (this.sliderCallBack) this.sliderCallBack('prev');
     }
 
     touchHandler() {
@@ -315,7 +317,6 @@ export class SuperSlider {
                 if (this.fader) this.faderMoveNext();
                 if (this.carousel) this.carouselMoveNext();
             }
-            if (this.sliderCallBack) this.sliderCallBack('next');
         }.bind(this));
 
         this.buttonPrev.addEventListener("click", function (e) {
@@ -323,7 +324,6 @@ export class SuperSlider {
                 if (this.fader) this.faderMovePrev();
                 if (this.carousel) this.carouselMovePrev();
             }
-            if (this.sliderCallBack) this.sliderCallBack('prev');
         }.bind(this));
 
 
