@@ -8,6 +8,11 @@
 
     .ttl {
         margin-left: -5px;
+
+        @include laptop {
+            font-size: 50px;
+            line-height: 44px;
+        }
     }
 }
 
@@ -121,7 +126,6 @@ div.border-rad-top {
         padding-top: 95px;
 
         .ttl {
-            font-size: 50px;
             line-height: 47px;
             margin-bottom: 107px;
         }

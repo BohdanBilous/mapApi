@@ -210,6 +210,7 @@
     textarea {
         color: $colorTextG;
         padding-bottom: 7px;
+        padding-right: 65px;
         height: 86px;
         line-height: 18px;
         resize: none;
@@ -350,8 +351,14 @@
         }
     }
 
-    .input-line.textarea .max-length {
-        display: none;
+    .input-line.textarea {
+        textarea {
+            padding-right: 0;
+        }
+        
+        .max-length {
+            display: none;
+        }
     }
 
     .popup-form-bottom {
