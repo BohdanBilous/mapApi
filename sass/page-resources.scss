@@ -593,9 +593,9 @@
             border: none;
         }
 
-        &.align-right {
+        &.bottom {
             padding-top: 55px;
-            justify-content: flex-end;
+            padding-left: 25%;
         }
     }
 
@@ -716,6 +716,10 @@
 
         &--section {
             padding-top: 125px;
+
+            &.bottom {
+                padding-left: 0;
+            }
         }
 
         &--body-s {
@@ -789,9 +793,8 @@
             padding-top: 80px;
             padding-bottom: 30px;
 
-            &.align-right {
-                padding-left: 0;
-                padding-bottom: 70px;
+            &.bottom {
+                padding-bottom: 80px;
             }
         }
 

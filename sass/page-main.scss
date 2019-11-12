@@ -534,6 +534,19 @@ $animateDur: 0.30s;
     }
 }
 
+@include laptop {
+    .solutions-main-block {
+        .indicators .indicator {
+            width: 35px;
+
+            .icon {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
 @include tablet {
 
     .solutions-main-block,
