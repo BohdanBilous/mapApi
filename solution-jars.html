@@ -53,25 +53,28 @@
                             <div class="solution-p-filter">
                                 <div class="solution-p-filter--label">Size :</div>
                                 <div class="solution-p-filter--buttons">
-                                    <label class="solution-p-filter--button">
-                                        <input type="radio" name="radio-size" checked>
-                                        <span>1.25 L</span>
+                                    <input type="radio" id="radio1" checked data-switch="1.25L" class="solution-p-filter--radiobox" name="radio-size">
+                                    <label for="radio1" class="solution-p-filter--button btn-switch">
+                                        1.25L
                                     </label>
-                                    <label class="solution-p-filter--button">
-                                        <input type="radio" name="radio-size" checked>
-                                        <span>2 L</span>
+
+                                    <input type="radio" id="radio2" data-switch="2L" class="solution-p-filter--radiobox" name="radio-size">
+                                    <label for="radio2" class="solution-p-filter--button btn-switch" >
+                                        2L
                                     </label>
-                                    <label class="solution-p-filter--button">
-                                        <input type="radio" name="radio-size" checked>
-                                        <span>2.5 L</span>
+                                    <input type="radio" id="radio3" data-switch="2.5L" class="solution-p-filter--radiobox" name="radio-size">
+                                    <label for="radio3" class="solution-p-filter--button btn-switch">
+                                        2.5L
                                     </label>
-                                    <label class="solution-p-filter--button">
-                                        <input type="radio" name="radio-size" checked>
-                                        <span>3 L </span>
+
+                                    <input type="radio" id="radio4" data-switch="3L" class="solution-p-filter--radiobox" name="radio-size">
+                                    <label for="radio4" class="solution-p-filter--button btn-switch" >
+                                        3L
                                     </label>
-                                    <label class="solution-p-filter--button">
-                                        <input type="radio" name="radio-size" checked>
-                                        <span>6 L</span>
+
+                                    <input type="radio" id="radio5" data-switch="6L" class="solution-p-filter--radiobox" name="radio-size">
+                                    <label for="radio5" class="solution-p-filter--button btn-switch" >
+                                        6L
                                     </label>
                                 </div>
                             </div>
@@ -98,7 +101,12 @@
                 <div class="hint hint-from-top with-arrow-left">Jars</div>
                 <div class="layout-col-r">
                     <div class="ttl ttl-2">
-                        <!-- <span>3L</span> <br> -->
+                        <span data-switch-content="1.25L">1.25L</span> 
+                        <span data-switch-content="2L">2L</span> 
+                        <span data-switch-content="2.5L">2.5L</span> 
+                        <span data-switch-content="3L">3L</span> 
+                        <span data-switch-content="6L">6L</span> 
+                        <br> 
                         <h3 class=" ttl-3"> Highly Customizable <br>
                             Wide-Mouth jars</span>
                     </div>

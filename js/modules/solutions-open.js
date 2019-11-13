@@ -10,8 +10,12 @@ import {
 import { MediaLoader } from "../media-loader";
 import { customSelect } from "../custom-select";
 import { SuperSlider } from "../super-slider";
+import { ContentSwitcher } from "../content-switcher";
 
 window.addEventListener("load", function() {
+  // Content Switcher
+  new ContentSwitcher("data-switch");
+
   // Filter Mobile
   filterSidebarInit();
 

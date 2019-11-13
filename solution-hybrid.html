@@ -52,13 +52,14 @@
                                 <div class="solution-p-filter">
                                     <div class="solution-p-filter--label">Size :</div>
                                     <div class="solution-p-filter--buttons">
-                                        <label class="solution-p-filter--button btn-switch" data-switch="20L">
-                                            <input type="radio" name="radio-size" checked>
-                                            <span>20L</span>  
+                                        <input type="radio" id="radio1" checked data-switch="20L" class="solution-p-filter--radiobox" name="radio-size">
+                                        <label for="radio1" class="solution-p-filter--button btn-switch">
+                                            20L
                                         </label>
-                                        <label class="solution-p-filter--button btn-switch" data-switch="30L">
-                                            <input type="radio" name="radio-size">
-                                            <span>30L</span>
+
+                                        <input type="radio" id="radio2" data-switch="30L" class="solution-p-filter--radiobox" name="radio-size">
+                                        <label for="radio2" class="solution-p-filter--button btn-switch" >
+                                            30L
                                         </label>
                                     </div>
                                 </div>
@@ -90,8 +91,9 @@
 
                     <div class="layout-col-r">
                         <div class="ttl ttl-2">
-                            <span data-switch-content="20L">20L</span>
-                            <span data-switch-content="30L">30L</span> <br>
+                            <span data-switch-content="20L">20L</span> 
+                            <span data-switch-content="30L">30L</span> 
+                            <br>
                             Hybrid Keg.
                         </div>
 
@@ -104,7 +106,7 @@
                         </div>
 
                         <img class="spec-img" src="images/spec-img.png" alt="">
-
+                        
                         <ul class="spec-det-block">
                             <li>
                                 <span>Light and UV protection </span> 4,1 bar or 60 psig

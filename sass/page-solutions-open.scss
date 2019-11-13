@@ -39,6 +39,18 @@
         margin-bottom: 11px;
     }
 
+    &--radiobox {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .solution-p-filter--button {
+            background-color: $colorGreen;
+            color: #fff;
+        }
+    }
+
     &--button {
         display: inline-block;
         min-width: 66px;
@@ -46,36 +58,21 @@
         cursor: pointer;
         text-align: center;
         margin: 0 17px 17px 0;
-
-        &.active span {
-            background-color: $colorGreen;
-            color: #fff;
-        }
+        padding: 0 13px;
+        line-height: 31px;
+        border-radius: 4px;
+        background-color: #e5e5e5;
+        transition: background-color 0.2s;
 
         &:last-child {
             margin-right: 0;
         }
-
-        span {
-            display: block;
-            height: 100%;
-            padding: 0 13px;
-            line-height: 31px;
-            border-radius: 4px;
-            background-color: #e5e5e5;
-            transition: background-color 0.2s;
-        }
-
-        input {
-            position: absolute;
-            opacity: 0;
-
-            &:checked~span {
-                background-color: $colorGreen;
-                color: #fff;
-            }
-        }
     }
+}
+
+
+.content-hide {
+    display: none;
 }
 
 .select-custom-ind {
