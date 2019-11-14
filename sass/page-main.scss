@@ -970,6 +970,8 @@ $animateDur: 0.30s;
             background-color: $colorBorder;
         }
 
+
+
         li {
             min-width: $dotsLiWidth;
             display: inline-block;
@@ -989,6 +991,8 @@ $animateDur: 0.30s;
                 @extend .bold;
                 opacity: 0.4;
                 margin-bottom: 9px;
+                font-family: $fontMain;
+                font-size: 12px;
             }
 
             &:last-child {

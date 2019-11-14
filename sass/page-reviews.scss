@@ -41,9 +41,11 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
-&:last-child{
-  margin-bottom: 0;
-}
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   .reviews-socke-left {
     position: relative;
     display: flex;
@@ -241,16 +243,19 @@
     }
   }
 }
-@media screen and (min-width: 1921px){
-  .reviews-socket-wrap .reviews-socke-right .rewiew blockquote{
+
+@media screen and (min-width: 1920px) {
+  .reviews-socket-wrap .reviews-socke-right .rewiew blockquote {
     flex: 0 0 318px;
     width: 318px;
   }
-  .reviews-top-socket .ttl-2{
+
+  .reviews-top-socket .ttl-2 {
     font-size: 80px;
   }
 
 }
+
 @include tablet {
   .reviews-top-socket {
     .layout-col-l {
@@ -306,9 +311,11 @@
   .reviews-socket {
     margin: 0 0 105px;
   }
-  .reviews-opener{
+
+  .reviews-opener {
     margin-left: 25px;
   }
+
   .reviews-socket-wrap {
     position: relative;
     padding-bottom: 40px;

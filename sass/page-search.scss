@@ -1,0 +1,165 @@
+/* =========================
+    Search
+   ========================= */
+.search-socket {
+    flex-wrap: wrap;
+    padding-top: 332px;
+    margin-bottom: 206px;
+
+    .text-search {
+        display: block;
+        margin-top: 115px;
+        color: #949494;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .bottom-text {
+        display: flex;
+        width: 912px;
+        justify-content: space-between;
+
+        ul {
+            width: 313px;
+
+            li {
+                margin-bottom: 22px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            h4 {
+                color: #333333;
+                font-weight: 400;
+                padding-bottom: 12px;
+                border-bottom: 1px solid rgba(#949494, 0.3);
+            }
+
+            a {
+                color: #595a5a;
+                font-family: $fontMain;
+            }
+        }
+    }
+}
+
+.search-form {
+    margin-bottom: 164px;
+
+    .input-line input {
+        font-size: 80px;
+        letter-spacing: -2.8px;
+        line-height: 47px;
+        padding-bottom: 37px;
+        font-weight: 300;
+    }
+
+}
+
+@include macbook {
+    .search-socket {
+        .bottom-text {
+            width: 634px;
+
+            ul {
+                width: 208px;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .search {
+        .layout-col-r {
+            position: static;
+        }
+    }
+
+    .search-form {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 80px;
+
+        .input-line input {
+            font-size: 35px;
+            padding-bottom: 15px;
+        }
+
+    }
+
+    .search-socket {
+        margin-bottom: 176px;
+
+        .text-search {
+            display: none;
+        }
+
+        .bottom-text {
+            flex-wrap: wrap;
+            width: 100%;
+
+            ul {
+                width: 100%;
+                margin-bottom: 116px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                h4 {
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+
+                li {
+                    margin-bottom: 42px;
+
+                    &:first-child {
+                        margin-bottom: 58px;
+                    }
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        padding-bottom: 13px;
+                        border-bottom: 1px solid rgba(#707070, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .search-socket {
+        .layout-col-l {
+            display: none;
+        }
+
+        .layout-col-r {
+            width: 100%;
+
+        }
+    }
+
+    .search-form {
+        .input-line input {
+            padding-bottom: 9px;
+        }
+
+    }
+
+    .search-socket {
+        margin-bottom: 201px;
+
+        .bottom-text {
+
+            ul {
+                margin-bottom: 126px;
+            }
+        }
+    }
+}
