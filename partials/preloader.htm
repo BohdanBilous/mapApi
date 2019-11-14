@@ -1,7 +1,6 @@
 <div id="loader">
-    <div class="text-wrap">
-        <img width="60" height="60" src="images/loader.gif" alt="">
-    </div>
+    <div class="loader"></div>
+    <div class="text-wrap"></div>
 </div>
 <!-- Preloader script -->
 <script>
@@ -13,20 +12,20 @@
         console.log('== Document loaded ==');
         
         var preloader = document.getElementById("loader");
-        var delay = 300;
+        var delay = 1200;
         
-        if (sessionStorage.getItem("loaded")) delay = 0;
+        // if (sessionStorage.getItem("loaded")) delay = 0;
 
         var hidePreloader = function() {
             console.log('preloader animation ended');
             
-            setTimeoutFunction("up", 100, function () {
+            setTimeoutFunction("up", 1500, function () {
                 firstLoad = false;
                 console.log('hide preloader');
 
-                setTimeout(function() {
-                    document.body.classList.add("loaded");
-                }, 100);
+                // setTimeout(function() {
+                //     document.body.classList.add("loaded");
+                // }, 100);
                 
                 // for low power mode on iOS:
                 const isiOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);

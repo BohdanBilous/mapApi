@@ -10,6 +10,9 @@ import {
   buttonArrowAnimate
 } from "../generic-helpers";
 
+import lottie from "../../vendor/lottie";
+import { preloaderAnimation } from "../preloader-animation";
+
 console.log("== Begin executing app.js ==");
 
 document.documentElement.className = document.documentElement.className.replace(
@@ -19,14 +22,31 @@ document.documentElement.className = document.documentElement.className.replace(
 
 window.addEventListener("load", function() {
   /* ------------------
+      Preloader
+    --------------------- */
+  const preloader = document.querySelector("#loader .loader");
+
+  let preloaderAnimate = lottie.loadAnimation({
+    container: preloader,
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+    animationData: preloaderAnimation,
+
+    rendererSettings: {
+      className: "play-animation-svg"
+    }
+  });
+
+  /* ------------------
         Header
     --------------------- */
 
   // hide-activate header
   // let lastScrollTop = 0;
 
-  // window.addEventListener("scroll", function(){  
-  //   var st = window.pageYOffset || document.documentElement.scrollTop;  
+  // window.addEventListener("scroll", function(){
+  //   var st = window.pageYOffset || document.documentElement.scrollTop;
   //   if (st > lastScrollTop){
   //       document.querySelector(".header").classList.add("hide-header");
   //   } else {
@@ -96,13 +116,13 @@ window.addEventListener("load", function() {
   }
 
   // Links Locking
-  const hrefArray = ["case-open.html", "event-open.html"];
+  // const hrefArray = ["case-open.html", "event-open.html"];
 
-  document.querySelectorAll("a").forEach(link => {
-    if (hrefArray.includes(link.getAttribute("href"))) {
-      link.addEventListener("click", e => e.preventDefault());
-    }
-  });
+  // document.querySelectorAll("a").forEach(link => {
+  //   if (hrefArray.includes(link.getAttribute("href"))) {
+  //     link.addEventListener("click", e => e.preventDefault());
+  //   }
+  // });
 });
 
 Object.defineProperty(HTMLMediaElement.prototype, "playing", {
