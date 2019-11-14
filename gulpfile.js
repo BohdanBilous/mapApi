@@ -60,7 +60,7 @@ function html() {
                 img: "fl-1"
               },
               {
-                country: "US",
+                country: "USA",
                 img: "fl-2"
               },
               {
