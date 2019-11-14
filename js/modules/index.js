@@ -8,19 +8,36 @@ import {
   exists,
   scrollFromScreen
 } from "../generic-helpers";
-import { SolutionsInd } from "../solutions-ind";
-import { SuperSlider } from "../super-slider";
-import { CursorFader } from "../fader-cursor";
-import { SectionScroll } from "../section-scroll";
-import { ImageCursor } from "../image-cursor";
+import {
+  SolutionsInd
+} from "../solutions-ind";
+import {
+  SuperSlider
+} from "../super-slider";
+import {
+  CursorFader
+} from "../fader-cursor";
+import {
+  SectionScroll
+} from "../section-scroll";
+import {
+  ImageCursor
+} from "../image-cursor";
+import {
+  VideoLoad
+} from "../video-lazy-load";
 
-window.addEventListener("load", function() {
+
+
+window.addEventListener("load", function () {
+
+
   // Solutions
   let solutionInd = new SolutionsInd();
 
   // Scrolling
   let sectionScroll = new SectionScroll();
-
+ 
   // Mission Fader
   new SuperSlider(".mission-fader", "fader");
 
@@ -46,7 +63,7 @@ window.addEventListener("load", function() {
       let moveValue =
         left -
         ((mouseX - (parseInt(obj.offsetWidth) / 1 + left)) / containerWidth) *
-          speed;
+        speed;
 
       obj.style = "transform: translateX(" + moveValue + "px)";
     }
@@ -85,4 +102,6 @@ window.addEventListener("load", function() {
 
   // Scroll From Screen
   if (exists(".hint-from-top")) scrollFromScreen(".screen-top");
+
+  new VideoLoad(".screen-main .bg-img", false, true, null, false);
 });
