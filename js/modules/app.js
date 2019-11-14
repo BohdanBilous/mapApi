@@ -10,9 +10,6 @@ import {
   buttonArrowAnimate
 } from "../generic-helpers";
 
-import lottie from "../../vendor/lottie";
-import { preloaderAnimation } from "../preloader-animation";
-
 console.log("== Begin executing app.js ==");
 
 document.documentElement.className = document.documentElement.className.replace(
@@ -21,23 +18,6 @@ document.documentElement.className = document.documentElement.className.replace(
 );
 
 window.addEventListener("load", function() {
-  /* ------------------
-      Preloader
-    --------------------- */
-  const preloader = document.querySelector("#loader .loader");
-
-  let preloaderAnimate = lottie.loadAnimation({
-    container: preloader,
-    renderer: "svg",
-    loop: false,
-    autoplay: true,
-    animationData: preloaderAnimation,
-
-    rendererSettings: {
-      className: "play-animation-svg"
-    }
-  });
-
   /* ------------------
         Header
     --------------------- */

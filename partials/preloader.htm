@@ -4,7 +4,20 @@
 </div>
 <!-- Preloader script -->
 <script>
-    
+    const preloader = document.querySelector("#loader .loader");
+
+    let preloaderAnimate = lottie.loadAnimation({
+        container: preloader,
+        renderer: "svg",
+        loop: false,
+        autoplay: true,
+        // animationData: preloaderAnimation,
+        path: "./assets/preloader/preloader-animation.json",
+
+        rendererSettings: {
+            className: "play-animation-svg"
+        }
+    });
     // window.addEventListener("visibleloaded", function(event) {
 
     // document.addEventListener("DOMContentLoaded", function(event) {
