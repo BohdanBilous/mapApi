@@ -2,9 +2,6 @@
     Header
    ========================= */
 
-//    .main, .menu-wrap {
-//        display: none;
-//    }
 
 @include tablet-only {
     #loader {
@@ -12,9 +9,10 @@
     }
 }
 
-// .menu-inner {
-//     border: 1px solid #000;
+// #loader {
+//     display: none;
 // }
+
 
 .header {
     position: absolute;

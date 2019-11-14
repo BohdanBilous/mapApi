@@ -39,10 +39,10 @@
                                     <div class="solution-p-filter--label">Category:</div>
                                     <div class="solution-p-filter--buttons">
                                         <a class="solution-p-filter--button" href="solution-bottle-oneway.html">
-                                            <span>One-way</span>  
+                                            One-way
                                         </a>
                                         <a class="solution-p-filter--button active" href="#">
-                                            <span>Refillables</span>  
+                                            Refillables
                                         </a>
                                     </div>
                                 </div>
@@ -50,25 +50,28 @@
                                 <div class="solution-p-filter">
                                     <div class="solution-p-filter--label">Size :</div>
                                     <div class="solution-p-filter--buttons">
-                                        <label class="solution-p-filter--button">
-                                            <input type="radio" name="radio-size" checked>
-                                            <span>0.5L</span>  
+                                        <input type="radio" id="radio1" checked data-switch="0.5L" class="solution-p-filter--radiobox" name="radio-size">
+                                        <label for="radio1" class="solution-p-filter--button btn-switch">
+                                            0.5L
                                         </label>
-                                        <label class="solution-p-filter--button">
-                                            <input type="radio" name="radio-size">
-                                            <span>0.75L</span>  
+    
+                                        <input type="radio" id="radio2" data-switch="0.75L" class="solution-p-filter--radiobox" name="radio-size">
+                                        <label for="radio2" class="solution-p-filter--button btn-switch" >
+                                            0.75L
                                         </label>
-                                        <label class="solution-p-filter--button">
-                                            <input type="radio" name="radio-size">
-                                            <span>1L</span>  
+                                        <input type="radio" id="radio3" data-switch="1L" class="solution-p-filter--radiobox" name="radio-size">
+                                        <label for="radio3" class="solution-p-filter--button btn-switch">
+                                            1L
                                         </label>
-                                        <label class="solution-p-filter--button">
-                                            <input type="radio" name="radio-size">
-                                            <span>1.25L</span>  
+    
+                                        <input type="radio" id="radio4" data-switch="1.25L" class="solution-p-filter--radiobox" name="radio-size">
+                                        <label for="radio4" class="solution-p-filter--button btn-switch" >
+                                            1.25L
                                         </label>
-                                        <label class="solution-p-filter--button">
-                                            <input type="radio" name="radio-size">
-                                            <span>1.5L</span>  
+    
+                                        <input type="radio" id="radio5" data-switch="1.5L" class="solution-p-filter--radiobox" name="radio-size">
+                                        <label for="radio5" class="solution-p-filter--button btn-switch" >
+                                            1.5L
                                         </label>
                                     </div>
                                 </div>
@@ -100,7 +103,12 @@
 
                     <div class="layout-col-r">
                         <div class="ttl ttl-2">
-                            <!-- <span>20L</span> <br> -->
+                            <span data-switch-content="0.5L">0.5L</span> 
+                            <span data-switch-content="0.75L">0.75L</span> 
+                            <span data-switch-content="1L">1L</span> 
+                            <span data-switch-content="1.25L">1.25L</span> 
+                            <span data-switch-content="1.5L">1.5L</span>  
+                            <br>
                             Refillable <br>PET bottles
                         </div>
 

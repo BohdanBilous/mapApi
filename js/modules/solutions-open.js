@@ -10,8 +10,12 @@ import {
 import { MediaLoader } from "../media-loader";
 import { customSelect } from "../custom-select";
 import { SuperSlider } from "../super-slider";
+import { ContentSwitcher } from "../content-switcher";
 
 window.addEventListener("load", function() {
+  // Content Switcher
+  new ContentSwitcher("data-switch");
+
   // Filter Mobile
   filterSidebarInit();
 
@@ -35,7 +39,7 @@ window.addEventListener("load", function() {
 
     specButton.addEventListener("click", () => {
       const specBlock = findParent(specButton, "specs-section");
-      console.log(specBlock);
+
       specBlock.classList.toggle("open");
       specButton.classList.toggle("active");
     });
@@ -47,8 +51,22 @@ window.addEventListener("load", function() {
   // Scroll From Screen
   if (exists(".hint-from-top")) scrollFromScreen(".specs-section");
 
-  // Fader
+  // Fader Prod
   new SuperSlider(".prod-fader", "fader");
+
+  // Fader Par
+  if (exists(".fader-par")) {
+    const faderPar = new SuperSlider(".fader-par", "fader", null, change);
+    const slideCurrent = document.querySelector(".fader-par .slide-current");
+    const slideItems = document.querySelector(".fader-par .slide-items");
+
+    slideItems.innerHTML = `0${faderPar.slides.length}`;
+
+    function change() {
+      console.log(slideCurrent);
+      slideCurrent.innerHTML = `0${faderPar.slideIndex + 1}`;
+    }
+  }
 
   // Tech Spec Drop
   if (exists(".btn-tech-spec-open")) {
