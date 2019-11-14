@@ -8,39 +8,42 @@
 .reviews-wrap {
   max-height: fit-content;
   overflow: hidden;
-  transition: max-height 400ms ease;
+  // transition: max-height 400ms ease;
 }
 
 .reviews-opener {
   cursor: pointer;
   position: relative;
   margin-bottom: 43px;
-  margin-left: 21%;
+
+  // margin-left: 21%;
   color: $colorText2;
 
-  &::after {
-    @include tr-bottom(6px, 5px, 7px, $colorText2);
-    content: "";
-    position: absolute;
-    display: block;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -21px;
-    transition: transform 0.3s;
-  }
+  // &::after {
+  //   @include tr-bottom(6px, 5px, 7px, $colorText2);
+  //   content: "";
+  //   position: absolute;
+  //   display: block;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: -21px;
+  //   transition: transform 0.3s;
+  // }
 
-  &.active {
-    &::after {
-      transform: translateY(-50%) rotate(180deg);
-    }
-  }
+  // &.active {
+  //   &::after {
+  //     transform: translateY(-50%) rotate(180deg);
+  //   }
+  // }
 }
 
 .reviews-socket-wrap {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
-
+&:last-child{
+  margin-bottom: 0;
+}
   .reviews-socke-left {
     position: relative;
     display: flex;
@@ -113,7 +116,7 @@
       margin-bottom: 24px;
 
       img {
-        width: 110px;
+        max-width: 150px;
       }
     }
 
@@ -125,7 +128,7 @@
         width: 248px;
         flex: 0 0 248px;
         max-width: 100%;
-        height: 165px;
+        height: 170px;
         color: $colorText2;
         margin-bottom: 44px;
         line-height: 17px;
@@ -139,7 +142,7 @@
 
           color: $colorGreen;
           font-family: $fontMedium;
-          font-size: 35px;
+          font-size: 54px;
           font-weight: 400;
           letter-spacing: -1.23px;
           line-height: 36px;
@@ -238,7 +241,16 @@
     }
   }
 }
+@media screen and (min-width: 1921px){
+  .reviews-socket-wrap .reviews-socke-right .rewiew blockquote{
+    flex: 0 0 318px;
+    width: 318px;
+  }
+  .reviews-top-socket .ttl-2{
+    font-size: 80px;
+  }
 
+}
 @include tablet {
   .reviews-top-socket {
     .layout-col-l {
@@ -294,7 +306,9 @@
   .reviews-socket {
     margin: 0 0 105px;
   }
-
+  .reviews-opener{
+    margin-left: 25px;
+  }
   .reviews-socket-wrap {
     position: relative;
     padding-bottom: 40px;

@@ -34,7 +34,6 @@ export class VideoLoad {
         if (this.autoplay) this.videoElement.autoplay = true;
         if (this.muted) this.videoElement.muted = true;
         if (this.loop) this.videoElement.loop = true;
-        console.log(this.loop)
     }
 
     addPoster() {

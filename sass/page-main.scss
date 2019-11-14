@@ -411,8 +411,6 @@ $animateDur: 0.30s;
         }
     }
 
-    
-
     @media screen and (max-width: 1800px) {
         height: calc(#{$tareHeight} - 150px);
 
@@ -2189,19 +2187,39 @@ $animateDur: 0.30s;
     }
 }
 
+@mixin scrollingWithoutParallax {
+    .section-one {
+        position: static;
+        transform: none !important;
+
+        &.fixed {
+            position: relative;
+        }
+    }
+
+    .section-two {
+        top: auto !important;
+    }
+
+    .section-eclipse {
+        display: none;
+    }
+}
 
 @media screen and (min-width: 1151px) {
+
     .section-one {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
+        position: fixed;
 
-        &.fixed {
-            position: fixed;
-            top: auto;
-            bottom: 0;
-        }
+        // &.fixed {
+        //     position: fixed;
+        //     top: auto;
+        //     bottom: 0;
+        // }
     }
 
     .section-two {
@@ -2221,49 +2239,26 @@ $animateDur: 0.30s;
         opacity: 0;
         z-index: -1;
         transition: opacity 0.05s;
+        // animation: fadeOut-l 0.3s forwards;
 
         &.show {
+            // animation: fadeIn-l 0.3s forwards;
             z-index: 1;
         }
     }
 }
 
+
 .touchevents {
 
     // iPad Pro Land
-    @media screen and (max-width: 1366px) and (min-width: 1355px) {
-        .section-one {
-            position: static;
-
-            &.fixed {
-                position: relative;
-            }
-        }
-
-        .section-two {
-            top: auto !important;
-        }
-
-        .section-eclipse {
-            display: none;
-        }
+    // @media screen and (max-width: 1366px) and (min-width: 1355px) {
+    @media screen and (min-width: 1151px) {
+        @include scrollingWithoutParallax;
     }
 }
 
 @include edge {
-    .section-one {
-        position: static;
-
-        &.fixed {
-            position: relative;
-        }
-    }
-
-    .section-two {
-        top: auto !important;
-    }
-
-    .section-eclipse {
-        display: none;
-    }
+    @include scrollingWithoutParallax;
 }
+

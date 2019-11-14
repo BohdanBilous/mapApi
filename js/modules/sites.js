@@ -7,7 +7,8 @@ import {
     mobile,
     exists,
     findParent,
-    animateSwitch
+    animateSwitch,
+    scrollFromScreen
 } from '../generic-helpers';
 import {
     SuperSlider
@@ -31,6 +32,9 @@ window.addEventListener("load", function () {
     if (exists(".screen-head")) {
         new ParallaxScroll(".screen-head", ".screen-bg", 200);
     }
+
+    //ScrollFromScreen
+    if (exists(".hint-from-top")) scrollFromScreen(".screen-top");
 
     // Lazy Loader Images
     if (exists(".lazy-img")) {

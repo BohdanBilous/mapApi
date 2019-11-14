@@ -96,11 +96,12 @@
             padding-bottom: 16px;
             width: fit-content;
             transform: translateX(-50%);
+            font-family: $fontMedium;
 
             &::after {
                 position: absolute;
                 content: "";
-                top: 15px;
+                top: 25px;
                 left: 50%;
                 height: 15px;
                 width: 1px;
@@ -121,7 +122,17 @@
 }
 
 .sites-screen {
+    .screen-content h1.ttl {
+        font-size: 80px;
+        max-width: 429px;
+        line-height: 72px;
+    }
 
+    .screen-bg {
+        &::after {
+            background-image: linear-gradient(to top, rgba(#000000, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
 
     .layout-col-l {
         display: flex;
@@ -150,6 +161,8 @@
 
     .screen-content--slog {
         position: static;
+        // font-family: $fontMain;
+        color: $colorPanel;
     }
 
     .screen-content--ttl-s {
@@ -396,6 +409,10 @@
                 width: 38px;
                 height: 38px;
             }
+
+            p {
+                color: $colorText2
+            }
         }
     }
 }
@@ -427,7 +444,7 @@
         }
 
         .slides {
-            height: 165px;
+            height: 175px;
             min-height: fit-content;
         }
 
@@ -523,7 +540,7 @@
     .menegment-tx {
         width: 175px;
         max-width: 100%;
-        color: rgba(#2a2a2a, 0.8);
+        color: $colorText2;
         padding-top: 20px;
     }
 }
@@ -552,6 +569,13 @@
     .sites-tab-top {
         position: static;
 
+    }
+    .st-top-title{
+        margin-bottom: 118px;
+    }
+    .st-top-title .st-top-country h1 {
+        font-size: 35px;
+        font-weight: 400;
     }
 
     .sites-ttl-row {
@@ -625,7 +649,7 @@
 
             .chart-title {
                 font-weight: 500;
-                padding-top: 323px;
+                padding-top: 300px;
                 transform: translateX(100%);
             }
         }
@@ -636,7 +660,7 @@
 
         .sites-chart {
             position: relative;
-            margin-bottom: 169px;
+            margin-bottom: 130px;
 
             .swipe-hint {
                 right: auto;
@@ -707,6 +731,10 @@
                 .col-right {
                     width: 417px;
                     max-width: 100%;
+
+                    h2 {
+                        font-size: 35px;
+                    }
                 }
 
                 .col-left {
@@ -763,6 +791,28 @@
 }
 
 @include mobile {
+    .screen-bg {
+        background-position: 60% 0%;
+    }
+    .sites-tab-top{
+        margin-bottom: 28px;
+    }
+    .st-top-title{
+        margin-bottom: 48px;
+    }
+    .sites-ttl-row {
+        .country-tab-wrap .country-tabs ul li {
+            img {
+                width: 35px;
+                height: 35px;
+            }
+            &:first-child {
+                min-width: 115px;
+            }
+            min-width: 150px;
+        }
+    }
+
     .sites-screen {
         &.screen-head {
             .button-btm-right {
@@ -800,6 +850,12 @@
 
         .screen-content {
             margin-bottom: 0;
+
+            h1.ttl {
+                font-size: 50px;
+                max-width: 100%;
+                line-height: 47px;
+            }
         }
     }
 
@@ -834,7 +890,15 @@
             text-align: left;
         }
     }
-
+    .chart-wrap{
+        margin-bottom: 55px;
+    }
+    .site-info{
+        margin-bottom: 106px;
+    }
+    .sites-fader-wrap{
+        margin-bottom: 106px;
+    }
     .chart-carosuel {
         .layout-col-l {
             width: 0;
@@ -869,6 +933,9 @@
 
             &::after {
                 display: none;
+            }
+            h2{
+                font-size: 35px;
             }
         }
     }
