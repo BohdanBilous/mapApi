@@ -1,337 +1,359 @@
 <!DOCTYPE html>
 
 <html lang="en" class="home-page no-js">
-    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
-    @@include('./partials/scripts.htm')
-    <body>
-        @@include('./partials/preloader.htm')
-        @@include('./partials/header.htm', { "classes": "" })
-        @@include('./partials/menu.htm', {
-            "solution": "",
-            "about": "",
-            "news": "",
-            "resources": "",
-            "events": "",
-            "cases": "",
-            "careers": "",
-            "sites": "",
-            "contact": ""
-        })
-        
-        <main class="main">
+@@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+@@include('./partials/scripts.htm')
 
-            <!-- 
+<body>
+    @@include('./partials/preloader.htm')
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "",
+    "about": "",
+    "news": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "",
+    "sites": "",
+    "contact": ""
+    })
+
+    <main class="main">
+
+        <!-- 
                 =========== PART ONE ===========
             -->
 
-            <div class="section-one">
-                <div class="section-eclipse"></div>
-                <div class="screen screen-main screen-top">
-                    <div class="socket">
-                        <div class="col">
-                            <h1 class="ttl-1">Strong. <br> Safe. <br> Sustainable.</h1>  
-                            <p>The Hybrid keg is now available in 20 and 30 Litres and offers universal filling, excellent handling, safety, and sustainability benefits to help your business grow.</p>
-                            <p class="slog">
-                                The Hybrid System: <br> Fresher Beer, Better Business.
-                            </p>
-                            @@include('./partials/elements/button-link.htm', { 
-                                "text": "Learn More",
-                                "href" : "./solution-hybrid.html", 
-                                "classes": "btn-g btn-arrow-a" 
+        <div class="section-one">
+            <div class="section-eclipse"></div>
+            <div class="screen screen-main screen-top">
+                <div class="screen-main-video bg-img" data-src="images/keg.mp4"  data-poster="images/screen-bg.jpg" >
+                </div>
+                <div class="socket">
+                    <div class="col">
+                        <h1 class="ttl-1">Strong. <br> Safe. <br> Sustainable.</h1>
+                        <p>The Hybrid keg is now available in 20 and 30 Litres and offers universal filling, excellent
+                            handling, safety, and sustainability benefits to help your business grow.</p>
+                        <p class="slog">
+                            The Hybrid System: <br> Fresher Beer, Better Business.
+                        </p>
+                        @@include('./partials/elements/button-link.htm', {
+                        "text": "Learn More",
+                        "href" : "./solution-hybrid.html",
+                        "classes": "btn-g btn-arrow-a"
+                        })
+                    </div>
+                    <div class="hint with-arrow-left hint-from-top">Discover all industries</div>
+                </div>
+            </div>
+
+            <div class="solutions-main-wrap solutions-highlights socket">
+                <div class="solutions-main-block">
+                    <div class="hint">27 items</div>
+
+                    <div class="solutions-main-top">
+                        <h2 class="ttl-2 ttl">Solutions.</h2>
+
+                        <div class="right-elements">
+                            <p>There is a packaging <br> for every industry.</p>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Explore all solutions",
+                            "href" : "solutions.html",
+                            "classes": ""
                             })
                         </div>
-                        <div class="hint with-arrow-left hint-from-top">Discover all industries</div>
+                    </div>
+
+                    <div class="indicators indicators-hightlight">
+                        <div class="indicator" data-ind="beer">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <span>Beer</span>
+                        </div>
+                        <div class="indicator" data-ind="cider">
+                            <div class="icon">
+                                <img src="images/ind-2.svg" alt="">
+                            </div>
+                            <span>Cider</span>
+                        </div>
+                        <div class="indicator" data-ind="wine">
+                            <div class="icon">
+                                <img src="images/ind-3.svg" alt="">
+                            </div>
+                            <span>Wine</span>
+                        </div>
+                        <div class="indicator" data-ind="coffee">
+                            <div class="icon">
+                                <img src="images/ind-4.svg" alt="">
+                            </div>
+                            <span>Coffee</span>
+                        </div>
+                        <div class="indicator" data-ind="kombucha">
+                            <div class="icon">
+                                <img src="images/ind-5.svg" alt="">
+                            </div>
+                            <span>Kombucha</span>
+                        </div>
+                        <div class="indicator" data-ind="soft">
+                            <div class="icon">
+                                <img src="images/ind-6.svg" alt="">
+                            </div>
+                            <span>Soft Drinks</span>
+                        </div>
+                        <div class="indicator" data-ind="water">
+                            <div class="icon">
+                                <img src="images/ind-7.svg" alt="">
+                            </div>
+                            <span>Water</span>
+                        </div>
+                        <div class="indicator" data-ind="food">
+                            <div class="icon">
+                                <img src="images/ind-8.svg" alt="">
+                            </div>
+                            <span>Food <br> Products</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="solutions-main-wrap solutions-highlights socket">
-                    <div class="solutions-main-block">
-                        <div class="hint">27 items</div>
-                        
-                        <div class="solutions-main-top">
-                            <h2 class="ttl-2 ttl">Solutions.</h2>
-
-                            <div class="right-elements">
-                                <p>There is a packaging <br> for every industry.</p>
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Explore all solutions", 
-                                    "href" : "solutions.html", 
-                                    "classes": "" 
-                                })
-                            </div>
-                        </div>
-
-                        <div class="indicators indicators-hightlight">
-                            <div class="indicator" data-ind="beer">
-                                <div class="icon">
-                                    <img src="images/ind-1.svg" alt="">
-                                </div>
-                                <span>Beer</span>
-                            </div>
-                            <div class="indicator" data-ind="cider">
-                                <div class="icon">
-                                    <img src="images/ind-2.svg" alt="">
-                                </div>
-                                <span>Cider</span>
-                            </div>
-                            <div class="indicator" data-ind="wine">
-                                <div class="icon">
-                                    <img src="images/ind-3.svg" alt="">
-                                </div>
-                                <span>Wine</span>
-                            </div>
-                            <div class="indicator" data-ind="coffee">
-                                <div class="icon">
-                                    <img src="images/ind-4.svg" alt="">
-                                </div>
-                                <span>Coffee</span>
-                            </div>
-                            <div class="indicator" data-ind="kombucha">
-                                <div class="icon">
-                                    <img src="images/ind-5.svg" alt="">
-                                </div>
-                                <span>Kombucha</span>
-                            </div>
-                            <div class="indicator" data-ind="soft">
-                                <div class="icon">
-                                    <img src="images/ind-6.svg" alt="">
-                                </div>
-                                <span>Soft Drinks</span>
-                            </div>
-                            <div class="indicator" data-ind="water">
-                                <div class="icon">
-                                    <img src="images/ind-7.svg" alt="">
-                                </div>
-                                <span>Water</span>
-                            </div>
-                            <div class="indicator" data-ind="food">
-                                <div class="icon">
-                                    <img src="images/ind-8.svg" alt="">
-                                </div>
-                                <span>Food <br> Products</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tare-wrap hover-mode mobile-column-mode">
-                        <div class="tare-item" data-tare="coffee kombucha soft food">
-                            <a href="/solution-hybrid.html">
+                <div class="tare-wrap hover-mode mobile-column-mode">
+                    <div class="tare-item" data-tare="coffee kombucha soft food">
+                        <a href="/solution-hybrid.html">
                             <div class="tare-inner">
                                 <div class="text-main tare-name">Kegs.</div>
                                 <div class="text-main tare-number">1.</div>
                                 <div class="tare-img">
                                     <img src="images/tare-1.png" alt="">
                                 </div>
-                            </a>
-                        </div>
-
-                        <div class="tare-item" data-tare="beer cider wine kombucha soft water">
-                            <a href="./solution-bottle-ref.html">
-                                <div class="tare-inner">
-                                    <div class="text-main tare-name">Small Containers.</div>
-                                    <div class="text-main tare-number">2.</div>
-                                    <div class="tare-img">
-                                        <img src="images/tare-2.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="tare-item" data-tare="coffee kombucha water">
-                            <a href="./solution-jars.html">
-                                <div class="tare-inner">
-                                    <div class="text-main tare-name">Jars.</div>
-                                    <div class="text-main tare-number">3.</div>
-                                    <div class="tare-img">
-                                        <img src="images/tare-3.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="tare-item" data-tare="water">
-                            <a href="./solution-coolers.html">
-                                <div class="tare-inner">
-                                    <div class="text-main tare-name">Water Coolers.</div>
-                                    <div class="text-main tare-number">4.</div>
-                                    <div class="tare-img">
-                                        <img src="images/tare-4.png" alt="">
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        </a>
                     </div>
 
-                    <div class="info-row layout-row">
-                        <div class="layout-col-l">
-                            <h3 class="ttl-4">Becoming a customer</h3>
-                            @@include('./partials/elements/button-link.htm', { 
-                                "text": "Place an order", 
-                                "href" : "#", 
-                                "classes": "btn-g btn-arrow-a" 
+                    <div class="tare-item" data-tare="beer cider wine kombucha soft water">
+                        <a href="./solution-bottle-ref.html">
+                            <div class="tare-inner">
+                                <div class="text-main tare-name">Small Containers.</div>
+                                <div class="text-main tare-number">2.</div>
+                                <div class="tare-img">
+                                    <img src="images/tare-2.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tare-item" data-tare="coffee kombucha water">
+                        <a href="./solution-jars.html">
+                            <div class="tare-inner">
+                                <div class="text-main tare-name">Jars.</div>
+                                <div class="text-main tare-number">3.</div>
+                                <div class="tare-img">
+                                    <img src="images/tare-3.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="tare-item" data-tare="water">
+                        <a href="./solution-coolers.html">
+                            <div class="tare-inner">
+                                <div class="text-main tare-name">Water Coolers.</div>
+                                <div class="text-main tare-number">4.</div>
+                                <div class="tare-img">
+                                    <img src="images/tare-4.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="info-row layout-row">
+                    <div class="layout-col-l">
+                        <h3 class="ttl-4">Becoming a customer</h3>
+                        @@include('./partials/elements/button-link.htm', {
+                        "text": "Place an order",
+                        "href" : "#",
+                        "classes": "btn-g btn-arrow-a"
+                        })
+                    </div>
+                    <div class="layout-col-r">
+                        <div class="layout-col-s-4">
+                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                        </div>
+                        <div class="layout-col-s-6">
+                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                            <div class="with-us">
+                                <h3 class="ttl-4">Already with us</h3>
+                                @@include('./partials/elements/button-link.htm', {
+                                "text": "Tools & Resources",
+                                "href" : "#",
+                                "classes": ""
+                                })
+                            </div>
+                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business
+                                grow. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+                =========== PART TWO ===========
+            -->
+
+        <div class="section-two">
+
+            <!-- Mission Fader -->
+            <div class="fader mission-fader layout-row layout-row--minus-logo socket">
+                <div class="layout-col-l">
+                    <h2 class="ttl-2">Mission and Values.</h2>
+
+                    <div class="slider-buttons slider-buttons-c">
+                        <button class="prev button-prev"></button>
+                        <button class="next button-next"></button>
+                    </div>
+                </div>
+                <div class="layout-col-r">
+                    <ul class="slider-dots">
+                        <li class="active">
+                            <div class="index">01.</div>
+                            <div class="text-main">Innovation</div>
+                        </li>
+                        <li>
+                            <div class="index">02.</div>
+                            <div class="text-main">Sustainability</div>
+                        </li>
+                        <li>
+                            <div class="index">03.</div>
+                            <div class="text-main">Expertise</div>
+                        </li>
+                    </ul>
+
+                    <div class="swipe-hint only-mobile"></div>
+
+                    <div class="slides">
+                        <div class="slide active">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <h3 class="ttl-4">An innovation-driven <br> company.</h3>
+                            <div class="text-cols">
+                                <div class="text-col">
+                                    <p>With over 35 years of technical expertise, Petainer sets the benchmark in
+                                        high-performance, sustainable packaging and works with world-leading brands
+                                        across a wide range of food and beverage industries.</p>
+                                </div>
+                                <div class="text-col">
+                                    <p>We continuously strive to improve the functional and environmental performance of
+                                        our products. Our in-house scientists and development teams work with a
+                                        worldwide network of leading institutions and suppliers to produce new products
+                                        and barrier technologies. We strive to preserve and optimize resources by
+                                        creating circular designs and transforming waste into a valuable resource.</p>
+                                </div>
+                            </div>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Learn More",
+                            "href" : "news.html#news-innovations",
+                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
                             })
                         </div>
-                        <div class="layout-col-r">
-                            <div class="layout-col-s-4">
-                                <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                        <div class="slide">
+                            <div class="icon">
+                                <img src="images/ind-2.svg" alt="">
                             </div>
-                            <div class="layout-col-s-6">
-                                <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
-                                <div class="with-us">
-                                    <h3 class="ttl-4">Already with us</h3>
-                                    @@include('./partials/elements/button-link.htm', { 
-                                        "text": "Tools & Resources", 
-                                        "href" : "#", 
-                                        "classes": "" 
-                                    })
+                            <h3 class="ttl-4">High-performance, <br>sustainable solutions.</h3>
+                            <div class="text-cols">
+                                <div class="text-col">
+                                    <p>Globally, Petainer is one of the leaders in sustainable innovation for food grade
+                                        PET beverage containers and one of the largest users of Post-Consumer Recyclate
+                                        (PCR) in both refillable and single-use containers.</p>
                                 </div>
-                                <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
+                                <div class="text-col">
+                                    <p>Our teams are dedicated to developing high-performance, sustainable packaging
+                                        solutions in which we incorporate up to 100% recycled materials. Petainer is
+                                        also leading the way in refillable bottles for the beverage industry, reducing
+                                        the amount of virgin plastic material used per L.</p>
+                                </div>
                             </div>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Sustainable innovations",
+                            "href" : "news.html#news-innovations",
+                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
+                            })
+                        </div>
+                        <div class="slide">
+                            <div class="icon">
+                                <img src="images/ind-3.svg" alt="">
+                            </div>
+                            <h3 class="ttl-4">Unique in-house<br> expertise.</h3>
+                            <div class="text-cols">
+                                <div class="text-col">
+                                    <p>We offer a wide range of consulting and technical support services.</p>
+                                </div>
+                                <div class="text-col">
+                                    <p>Our team consists of over 20 dedicated technical specialists, including polymer
+                                        scientists, product designers, injection and blow molding specialists, as well
+                                        as brewmasters and filling and dispense experts. We guide you through material
+                                        selection, product design, and the blow molding process; providing training
+                                        sessions and technical support.</p>
+                                </div>
+                            </div>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Contact us",
+                            "href" : "./contact.html",
+                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
+                            })
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 
-                =========== PART TWO ===========
-            -->
-
-            <div class="section-two">
-
-                <!-- Mission Fader -->
-                <div class="fader mission-fader layout-row layout-row--minus-logo socket">
-                    <div class="layout-col-l">
-                        <h2 class="ttl-2">Mission and Values.</h2>
-    
-                        <div class="slider-buttons slider-buttons-c">
-                            <button class="prev button-prev"></button>
-                            <button class="next button-next"></button>
-                        </div>
+            <!-- Feedback Fader -->
+            <div class="feedback-fader">
+                <div class="slider-buttons">
+                    <div class="cursor-button button-prev">
+                        <span></span>
                     </div>
-                    <div class="layout-col-r">
-                        <ul class="slider-dots">
-                            <li class="active">
-                                <div class="index">01.</div>
-                                <div class="text-main">Innovation</div>
-                            </li>
-                            <li>
-                                <div class="index">02.</div>
-                                <div class="text-main">Sustainability</div>
-                            </li>
-                            <li>
-                                <div class="index">03.</div>
-                                <div class="text-main">Expertise</div>
-                            </li>
-                        </ul>
-
-                        <div class="swipe-hint only-mobile"></div>
-    
-                        <div class="slides">
-                            <div class="slide active">
-                                <div class="icon">
-                                    <img src="images/ind-1.svg" alt="">
-                                </div>
-                                <h3 class="ttl-4">An innovation-driven <br> company.</h3>
-                                <div class="text-cols">
-                                    <div class="text-col">
-                                        <p>With over 35 years of technical expertise, Petainer sets the benchmark in high-performance, sustainable packaging and works with world-leading brands across a wide range of food and beverage industries.</p>
-                                    </div>
-                                    <div class="text-col">
-                                        <p>We continuously strive to improve the functional and environmental performance of our products. Our in-house scientists and development teams work with a worldwide network of leading institutions and suppliers to produce new products and barrier technologies. We strive to preserve and optimize resources by creating circular designs and transforming waste into a valuable resource.</p>
-                                    </div>
-                                </div>
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Learn More", 
-                                    "href" : "news.html#news-innovations", 
-                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn" 
-                                })
-                            </div>
-                            <div class="slide">
-                                <div class="icon">
-                                    <img src="images/ind-2.svg" alt="">
-                                </div>
-                                <h3 class="ttl-4">High-performance, <br>sustainable solutions.</h3> 
-                                <div class="text-cols">
-                                    <div class="text-col">
-                                        <p>Globally, Petainer is one of the leaders in sustainable innovation for food grade PET beverage containers and one of the largest users of Post-Consumer Recyclate (PCR) in both refillable and single-use containers.</p>
-                                    </div>
-                                    <div class="text-col">
-                                        <p>Our teams are dedicated to developing high-performance, sustainable packaging solutions in which we incorporate up to 100% recycled materials. Petainer is also leading the way in refillable bottles for the beverage industry, reducing the amount of virgin plastic material used per L.</p>
-                                    </div>
-                                </div>
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Sustainable innovations", 
-                                    "href" : "news.html#news-innovations", 
-                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn" 
-                                })
-                            </div>
-                            <div class="slide">
-                                <div class="icon">
-                                    <img src="images/ind-3.svg" alt="">
-                                </div>
-                                <h3 class="ttl-4">Unique in-house<br> expertise.</h3>
-                                <div class="text-cols">
-                                    <div class="text-col">
-                                        <p>We offer a wide range of consulting and technical support services.</p>
-                                    </div>
-                                    <div class="text-col">
-                                        <p>Our team consists of over 20 dedicated technical specialists, including polymer scientists, product designers, injection and blow molding specialists, as well as brewmasters and filling and dispense experts. We guide you through material selection, product design, and the blow molding process; providing training sessions and technical support.</p>
-                                    </div>
-                                </div>
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Contact us", 
-                                    "href" : "./contact.html", 
-                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn" 
-                                })
-                            </div>
-                        </div>
-                    </div>
+                    <button class="prev button-prev"></button>
+                    <button class="next button-next"></button>
                 </div>
-    
-                <!-- Feedback Fader -->
-                <div class="feedback-fader">
-                    <div class="slider-buttons">
-                        <div class="cursor-button button-prev">
-                            <span></span>
-                        </div>
-                        <button class="prev button-prev"></button>
-                        <button class="next button-next"></button>
-                    </div>
-                    
-                    <div class="socket">
-                        <!-- <ul class="slider-dots">
+
+                <div class="socket">
+                    <!-- <ul class="slider-dots">
                             <li class="active"></li>
                             <li></li>
                             <li></li>
                             <li></li>
                         </ul> -->
-    
-                        <div class="slides">
-                            <div class="slide layout-row layout-row--minus-middle-left active">
-                                <div class="layout-col-l">
-                                    <div class="feedback-img">
-                                        <img src="images/feedback-photo.png">
-                                    </div>
+
+                    <div class="slides">
+                        <div class="slide layout-row layout-row--minus-middle-left active">
+                            <div class="layout-col-l">
+                                <div class="feedback-img">
+                                    <img src="images/feedback-photo.png">
                                 </div>
-                                <div class="layout-col-r">
-                                    <div class="col">
-                                        <div class="ttl-top-section">
-                                            <div class="ttl-top">Chief Executive Officer</div>
-                                            <h3 class="ttl-3">Hugh Ross</h3>
-                                        </div>
-    
-                                        <div class="quote-block">
-                                            <p>I am delighted to be at Petainer as CEO, leading a team committed to providing our customers with quality products, world class service and market changing solutions.</p>
-                                        </div>
-    
-                                        <div class="location">
-                                            <img src="images/ico-loc.svg" alt="">
-                                            <span>UK, London</span>
-                                        </div>
+                            </div>
+                            <div class="layout-col-r">
+                                <div class="col">
+                                    <div class="ttl-top-section">
+                                        <div class="ttl-top">Chief Executive Officer</div>
+                                        <h3 class="ttl-3">Hugh Ross</h3>
+                                    </div>
+
+                                    <div class="quote-block">
+                                        <p>I am delighted to be at Petainer as CEO, leading a team committed to
+                                            providing our customers with quality products, world class service and
+                                            market changing solutions.</p>
+                                    </div>
+
+                                    <div class="location">
+                                        <img src="images/ico-loc.svg" alt="">
+                                        <span>UK, London</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="slide layout-row layout-row--minus-middle-left">
+                        </div>
+                        <!-- <div class="slide layout-row layout-row--minus-middle-left">
                                 <div class="layout-col-l">
                                     <div class="feedback-img">
                                         <img src="images/feedback-photo-1.png">
@@ -403,268 +425,290 @@
                                     </div>
                                 </div>
                             </div> -->
-                        </div>
                     </div>
                 </div>
-    
-                <!-- About Us Section -->
-                <div class="about-section layout-row socket">
-                    <div class="layout-col-r">
-                        <div class="about-head">
-                            <div class="ttl-top-section">
-                                <div class="ttl-top">About us</div>
-                                <h3 class="ttl-3">Our Company</h3>
-                            </div>
-                            <div class="history-line">
-                                <span>1995</span>
-                                <span>2019</span>
-                            </div>
-                        </div>
-                        <div class="numbers-row">
-                            <div class="numbers-col">
-                                <div class="numbers-item">
-                                    <div class="ttl-3">13</div>
-                                    <p>We are present in 13 countries.</p>
-                                </div>
-                            </div>
-                            <div class="numbers-col">
-                                <div class="numbers-item">
-                                    <div class="ttl-3">Over 400</div>
-                                    <p>Global employees.</p>
-                                </div>
-    
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "About us", 
-                                    "href" : "about-us.html", 
-                                    "classes": "btn-about btn-g btn-arrow-a" 
-                                })
-                            </div>
-                            <div class="numbers-col">
-                                <div class="numbers-item">
-                                    <div class="ttl-3">8</div>
-                                    <p>Global production plants.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Video Section -->
-                <div class="video-section" style="background-image: url(images/video-bg.jpg)">
-                    <div class="socket layout-row">
-                        <div class="layout-col-r">
-                            <div class="content-w col">
-                                <p class="text-desc">
-                                        We produce a circular design that contains up to 100% post-consumer recycle (PCR) and can be reused, reprocessed or recycled.
-                                </p>
-    
-                                <div class="ttl-section">
-                                    <div class="ttl-top">Video</div>
-                                    <h3 class="ttl-3">Towards a Circular Economy.</h3>
-                                </div>
-    
-                                <div class="play-button-wrap">
-                                    <a href="https://www.youtube.com/watch?v=c3vNbAS4Dkk" target="_blank" rel="noopener noreferrer"><div class="play"></div></a>
-                                    <div class="text-b">2:21</div>
-                                </div>
-    
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Learn More", 
-                                    "href" : "about.html#sustainability", 
-                                    "classes": "btn-more btn-g btn-arrow-a" 
-                                })
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Recycle -->
-                <div class="graph-section socket">
-                    <div class="layout-row layout-row--minus-logo align-right">
-                        <div class="layout-col-r">
-                            <div class="layout-row">
-                                <div class="layout-col-s-3 graph-col-l">
-                                    <h2 class="ttl-3">% of Petainer Products with Post-Consumer Recycled Plastic (PCR) inclusion.</h2>
-                                </div>
-    
-                                <div class="layout-col-s-7 graph-col-r">
-                                    <div class="graph-block">
-                                        <div class="swipe-hint only-mobile"></div>
-                                        <ul class="legend">
-                                            <li>
-                                                <div style="background-color: #1c989c" class="legend-color"></div>
-                                                <span style="color: #1c989c">Total <br> Volume</span>  
-                                            </li>
-                                        </ul>
-                                        <div class="graph-scroll">
-                                            <div class="graph">
-                                                <img src="images/graph.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="layout-row graph-section-bottom">
-                                <div class="layout-col-s-3 graph-col-l">
-                                    @@include('./partials/elements/button-link.htm', { 
-                                        "text": "Sites", 
-                                        "href" : "/about-us.html", 
-                                        "classes": "btn-mini" 
-                                    })
-                                </div>
-    
-                                <div class="layout-col-s-7 graph-col-r">
-                                    <p>Including PCR in our one-way and refillable small containers has allowed us to reduce our customer’s carbon footprint by 20% in 2018. This was the equivalent of 600 million plastic bags.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Article Section -->
-                <div class="article-section" style="background-image: url(images/art-bg.jpg)">
-                    <div class="socket layout-row layout-row--minus-middle-left">
-                        <div class="layout-col-r">
-                            <div class="content-w col">
-                                <p class="text-main">
-                                    We are looking forward to meeting you.
-                                </p>
-    
-                                <div class="desc-row">
-                                    <h3 class="ttl-2">Brau Bievale.</h3>
-    
-                                    <div class="place">Nuremberg, Germany</div>
-                                    <div class="date">12.11 - 14.11</div>
-                                </div>
-    
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Details", 
-                                    "href" : "#", 
-                                    "classes": "btn-more btn-blur btn-arrow-a" 
-                                })
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Events -->
-                <div class="events-wrap socket layout-row layout-row--minus-logo">
-                    <div class="layout-col-l">
-                        <div class="ttl-section">
-                            <div class="ttl-top">Popular</div>
-                            <h2 class="ttl-2">Upcoming Conferences & Events</h2> 
-                        </div>
-                    </div>
-                    <div class="layout-col-r">
-                        <div class="hint">Calendar</div>
-                        <div class="events-table">
-                            
-                            <div class="events-table-row layout-row">    
-                                <div class="events-table-cell layout-col-s-3">
-                                    <div class="dates">11.11 — 13.11</div>
-                                </div>
-                                <div class="events-table-cell-m layout-col-s-7">
-                                    <div class="events-ttl-section">
-                                        <div class="ttl-top">Montreal, QB (Canada)</div>
-                                        <div class="ttl-4"><a href="./event-open.html">AMBQ (Association des Microbrasseries du Quebec)</a></div>
-
-                                        <div class="events-img">
-                                            <img src="" data-src="images/events-img.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    
-                                    @@include('./partials/elements/button-add.htm', { 
-                                        "text": "Add to Calendar", 
-                                        "classes": "" 
-                                    })
-                                </div>
-                            </div>
-    
-                            <div class="events-table-row layout-row">        
-                                <div class="events-table-cell layout-col-s-3">
-                                    <div class="dates">16.11 — 18.11</div>
-                                </div>
-                                <div class="events-table-cell-m layout-col-s-7">
-                                    <div class="events-ttl-section">
-                                        <div class="ttl-top">Beijing (China)</div>
-                                        <div class="ttl-4"><a href="./event-open.html">CBAC China Craft Beer Festival</a></div>
-
-                                        <div class="events-img">
-                                            <img src="" data-src="images/events-section.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    
-                                    @@include('./partials/elements/button-add.htm', { 
-                                        "text": "Add to Calendar", 
-                                        "classes": "" 
-                                    })
-                                </div>
-                            </div>
-
-                            <div class="events-table-row layout-row">
-                                <div class="events-table-cell layout-col-s-3">
-                                    <div class="dates">27.11 — 29.11</div>
-                                </div>
-                                <div class="events-table-cell-m layout-col-s-7">
-                                    <div class="events-ttl-section">
-                                        <div class="ttl-top">Tokyo (Japan)</div>
-                                        <div class="ttl-4"><a href="./event-open.html">Drink Japan</a></div>
-
-                                        <div class="events-img">
-                                            <img src="" data-src="images/events-section-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    
-                                    @@include('./partials/elements/button-add.htm', { 
-                                        "text": "Add to Calendar", 
-                                        "classes": "" 
-                                    })
-                                </div>
-                            </div>
-    
-                            
-    
-                            <div class="events-table-bottom layout-row">
-                                <div class="layout-col-s-7">
-                                    @@include('./partials/elements/button-link.htm', { 
-                                        "text": "View all dates", 
-                                        "href": "events.html",
-                                        "classes": "btn-g btn-arrow-a" 
-                                    })
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Footer -->
-                <footer class="footer">
-                    <div class="footer-bg">
-                        @@include('./partials/footer-main.htm', { 
-                            "classes": "" 
-                        })
-                    </div>
-                </footer>
             </div>
 
-        </main>
-    </body>
+            <!-- About Us Section -->
+            <div class="about-section layout-row socket">
+                <div class="layout-col-r">
+                    <div class="about-head">
+                        <div class="ttl-top-section">
+                            <div class="ttl-top">About us</div>
+                            <h3 class="ttl-3">Our Company</h3>
+                        </div>
+                        <div class="history-line">
+                            <span>1995</span>
+                            <span>2019</span>
+                        </div>
+                    </div>
+                    <div class="numbers-row">
+                        <div class="numbers-col">
+                            <div class="numbers-item">
+                                <div class="ttl-3">13</div>
+                                <p>We are present in 13 countries.</p>
+                            </div>
+                        </div>
+                        <div class="numbers-col">
+                            <div class="numbers-item">
+                                <div class="ttl-3">Over 400</div>
+                                <p>Global employees.</p>
+                            </div>
 
-    <script src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
-    <script>
-        window.addeventasync = function(){
-            addeventatc.settings({
-                outlook    : { show: true, text:"Outlook Calendar" },
-                appleical  : { show: true, text:"Apple Calendar"   },
-                google     : { show: true, text:"Google Calendar"  },
-                yahoo      : { show: true, text:"Yahoo Calendar"   }
-            });
-        };
-    </script>
-    <script>
-        SystemJS.import('./js/app.js');
-        SystemJS.import('./js/index.js');
-    </script>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "About us",
+                            "href" : "about-us.html",
+                            "classes": "btn-about btn-g btn-arrow-a"
+                            })
+                        </div>
+                        <div class="numbers-col">
+                            <div class="numbers-item">
+                                <div class="ttl-3">8</div>
+                                <p>Global production plants.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Section -->
+            <div class="video-section" style="background-image: url(images/video-bg.jpg)">
+                <div class="socket layout-row">
+                    <div class="layout-col-r">
+                        <div class="content-w col">
+                            <p class="text-desc">
+                                We produce a circular design that contains up to 100% post-consumer recycle (PCR) and
+                                can be reused, reprocessed or recycled.
+                            </p>
+
+                            <div class="ttl-section">
+                                <div class="ttl-top">Video</div>
+                                <h3 class="ttl-3">Towards a Circular Economy.</h3>
+                            </div>
+
+                            <div class="play-button-wrap">
+                                <a href="https://www.youtube.com/watch?v=c3vNbAS4Dkk" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <div class="play"></div>
+                                </a>
+                                <div class="text-b">2:21</div>
+                            </div>
+
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Learn More",
+                            "href" : "about.html#sustainability",
+                            "classes": "btn-more btn-g btn-arrow-a"
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recycle -->
+            <div class="graph-section socket">
+                <div class="layout-row layout-row--minus-logo align-right">
+                    <div class="layout-col-r">
+                        <div class="layout-row">
+                            <div class="layout-col-s-3 graph-col-l">
+                                <h2 class="ttl-3">% of Petainer Products with Post-Consumer Recycled Plastic (PCR)
+                                    inclusion.</h2>
+                            </div>
+
+                            <div class="layout-col-s-7 graph-col-r">
+                                <div class="graph-block">
+                                    <div class="swipe-hint only-mobile"></div>
+                                    <ul class="legend">
+                                        <li>
+                                            <div style="background-color: #1c989c" class="legend-color"></div>
+                                            <span style="color: #1c989c">Total <br> Volume</span>
+                                        </li>
+                                    </ul>
+                                    <div class="graph-scroll">
+                                        <div class="graph">
+                                            <img src="images/graph.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layout-row graph-section-bottom">
+                            <div class="layout-col-s-3 graph-col-l">
+                                @@include('./partials/elements/button-link.htm', {
+                                "text": "Sites",
+                                "href" : "/about-us.html",
+                                "classes": "btn-mini"
+                                })
+                            </div>
+
+                            <div class="layout-col-s-7 graph-col-r">
+                                <p>Including PCR in our one-way and refillable small containers has allowed us to reduce
+                                    our customer’s carbon footprint by 20% in 2018. This was the equivalent of 600
+                                    million plastic bags.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article Section -->
+            <div class="article-section" style="background-image: url(images/art-bg.jpg)">
+                <div class="socket layout-row layout-row--minus-middle-left">
+                    <div class="layout-col-r">
+                        <div class="content-w col">
+                            <p class="text-main">
+                                We are looking forward to meeting you.
+                            </p>
+
+                            <div class="desc-row">
+                                <h3 class="ttl-2">Brau Bievale.</h3>
+
+                                <div class="place">Nuremberg, Germany</div>
+                                <div class="date">12.11 - 14.11</div>
+                            </div>
+
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Details",
+                            "href" : "#",
+                            "classes": "btn-more btn-blur btn-arrow-a"
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Events -->
+            <div class="events-wrap socket layout-row layout-row--minus-logo">
+                <div class="layout-col-l">
+                    <div class="ttl-section">
+                        <div class="ttl-top">Popular</div>
+                        <h2 class="ttl-2">Upcoming Conferences & Events</h2>
+                    </div>
+                </div>
+                <div class="layout-col-r">
+                    <div class="hint">Calendar</div>
+                    <div class="events-table">
+
+                        <div class="events-table-row layout-row">
+                            <div class="events-table-cell layout-col-s-3">
+                                <div class="dates">11.11 — 13.11</div>
+                            </div>
+                            <div class="events-table-cell-m layout-col-s-7">
+                                <div class="events-ttl-section">
+                                    <div class="ttl-top">Montreal, QB (Canada)</div>
+                                    <div class="ttl-4"><a href="./event-open.html">AMBQ (Association des Microbrasseries
+                                            du Quebec)</a></div>
+
+                                    <div class="events-img">
+                                        <img src="" data-src="images/events-img.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                @@include('./partials/elements/button-add.htm', {
+                                "text": "Add to Calendar",
+                                "classes": ""
+                                })
+                            </div>
+                        </div>
+
+                        <div class="events-table-row layout-row">
+                            <div class="events-table-cell layout-col-s-3">
+                                <div class="dates">16.11 — 18.11</div>
+                            </div>
+                            <div class="events-table-cell-m layout-col-s-7">
+                                <div class="events-ttl-section">
+                                    <div class="ttl-top">Beijing (China)</div>
+                                    <div class="ttl-4"><a href="./event-open.html">CBAC China Craft Beer Festival</a>
+                                    </div>
+
+                                    <div class="events-img">
+                                        <img src="" data-src="images/events-section.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                @@include('./partials/elements/button-add.htm', {
+                                "text": "Add to Calendar",
+                                "classes": ""
+                                })
+                            </div>
+                        </div>
+
+                        <div class="events-table-row layout-row">
+                            <div class="events-table-cell layout-col-s-3">
+                                <div class="dates">27.11 — 29.11</div>
+                            </div>
+                            <div class="events-table-cell-m layout-col-s-7">
+                                <div class="events-ttl-section">
+                                    <div class="ttl-top">Tokyo (Japan)</div>
+                                    <div class="ttl-4"><a href="./event-open.html">Drink Japan</a></div>
+
+                                    <div class="events-img">
+                                        <img src="" data-src="images/events-section-2.jpg" alt="">
+                                    </div>
+                                </div>
+
+                                @@include('./partials/elements/button-add.htm', {
+                                "text": "Add to Calendar",
+                                "classes": ""
+                                })
+                            </div>
+                        </div>
+
+
+
+                        <div class="events-table-bottom layout-row">
+                            <div class="layout-col-s-7">
+                                @@include('./partials/elements/button-link.htm', {
+                                "text": "View all dates",
+                                "href": "events.html",
+                                "classes": "btn-g btn-arrow-a"
+                                })
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-bg">
+                    @@include('./partials/footer-main.htm', {
+                    "classes": ""
+                    })
+                </div>
+            </footer>
+        </div>
+
+    </main>
+</body>
+
+<script src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+<script>
+    window.addeventasync = function () {
+        addeventatc.settings({
+            outlook: {
+                show: true,
+                text: "Outlook Calendar"
+            },
+            appleical: {
+                show: true,
+                text: "Apple Calendar"
+            },
+            google: {
+                show: true,
+                text: "Google Calendar"
+            },
+            yahoo: {
+                show: true,
+                text: "Yahoo Calendar"
+            }
+        });
+    };
+</script>
+<script>
+    SystemJS.import('./js/app.js');
+    SystemJS.import('./js/index.js');
+</script>
+
 </html>

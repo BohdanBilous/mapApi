@@ -5,14 +5,14 @@
 
 export class VideoLoad {
 
-    constructor(videoWrapSelector, controls, autoplay, muted, loop) {
+    constructor(videoWrapSelector, controls, autoplay, muted, loop = true) {
         this.videoWrap = document.querySelector(videoWrapSelector);
         this.videoSrc = this.videoWrap.dataset.src;
         this.videoPoster = this.videoWrap.dataset.poster;
         this.controls = controls || false;
         this.autoplay = autoplay || false;
         this.muted = muted || true;
-        this.loop = loop || true;
+        this.loop = loop;
         this.videoElement = null;
         this.modalVideo = document.querySelector(".modal-video") || null;
 
@@ -34,6 +34,7 @@ export class VideoLoad {
         if (this.autoplay) this.videoElement.autoplay = true;
         if (this.muted) this.videoElement.muted = true;
         if (this.loop) this.videoElement.loop = true;
+        console.log(this.loop)
     }
 
     addPoster() {

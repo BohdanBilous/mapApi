@@ -35,6 +35,8 @@ export class SectionScroll {
 
     setSectionPosition() {
         if (desktop && html.classList.contains("no-touchevents")) this.sectionTwo.style = `top: ${this.sectionOneHeight}px`;
+        if (desktop && html.classList.contains("no-touchevents")) this.sectionOne.style = `padding-bottom: 65px`;
+
         // this.sectionTwo.querySelector(".ttl-2").innerHTML = this.sectionOneHeight;
     }
 }
