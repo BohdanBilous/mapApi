@@ -126,6 +126,7 @@
         font-size: 80px;
         max-width: 429px;
         line-height: 72px;
+        margin-bottom: 14px;
     }
 
     .screen-bg {
@@ -570,9 +571,11 @@
         position: static;
 
     }
-    .st-top-title{
+
+    .st-top-title {
         margin-bottom: 118px;
     }
+
     .st-top-title .st-top-country h1 {
         font-size: 35px;
         font-weight: 400;
@@ -794,21 +797,26 @@
     .screen-bg {
         background-position: 60% 0%;
     }
-    .sites-tab-top{
+
+    .sites-tab-top {
         margin-bottom: 28px;
     }
-    .st-top-title{
+
+    .st-top-title {
         margin-bottom: 48px;
     }
+
     .sites-ttl-row {
         .country-tab-wrap .country-tabs ul li {
             img {
                 width: 35px;
                 height: 35px;
             }
+
             &:first-child {
                 min-width: 115px;
             }
+
             min-width: 150px;
         }
     }
@@ -890,15 +898,19 @@
             text-align: left;
         }
     }
-    .chart-wrap{
+
+    .chart-wrap {
         margin-bottom: 55px;
     }
-    .site-info{
+
+    .site-info {
         margin-bottom: 106px;
     }
-    .sites-fader-wrap{
+
+    .sites-fader-wrap {
         margin-bottom: 106px;
     }
+
     .chart-carosuel {
         .layout-col-l {
             width: 0;
@@ -934,7 +946,8 @@
             &::after {
                 display: none;
             }
-            h2{
+
+            h2 {
                 font-size: 35px;
             }
         }
