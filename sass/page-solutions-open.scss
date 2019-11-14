@@ -1017,8 +1017,8 @@ $leftOffset: 270px;
         }
 
         .tare-img {
-            width: 271px;
-            height: 295px;
+            width: 363px;
+            height: 395px;
             bottom: 0;
 
             img {
@@ -1033,7 +1033,7 @@ $leftOffset: 270px;
         &.active {
             .tare-img img {
                 bottom: -50px;
-                transform: translateX(9vw) translateY(40px);
+                transform: translateX(9vw) translateY(55px);
             }
         }
     }
@@ -1158,7 +1158,7 @@ $leftOffset: 270px;
             }
 
             &.active .tare-img img {
-                transform: translateX(30vw) translateY(40px);
+                transform: translateX(30vw) translateY(45px);
             }
         }
     }
