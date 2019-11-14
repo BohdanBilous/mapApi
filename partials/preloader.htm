@@ -1,74 +1,75 @@
-<div id="loader">
-    <div class="loader"></div>
-    <div class="text-wrap"></div>
-</div>
-<!-- Preloader script -->
-<script>
-    
-    // window.addEventListener("visibleloaded", function(event) {
+ <div id="loader">
+     <div class="loader"></div>
+     <div class="text-wrap"></div>
+ </div>
+ <!-- Preloader script -->
+ <script>
+     // window.addEventListener("visibleloaded", function(event) {
 
-    // document.addEventListener("DOMContentLoaded", function(event) {
-    window.addEventListener("load", function(event) {
-        console.log('== Document loaded ==');
-        
-        var preloader = document.getElementById("loader");
-        var delay = 1200;
-        
-        // if (sessionStorage.getItem("loaded")) delay = 0;
+     // document.addEventListener("DOMContentLoaded", function(event) {
+     window.addEventListener("load", function (event) {
+         console.log('== Document loaded ==');
 
-        var hidePreloader = function() {
-            console.log('preloader animation ended');
-            
-            setTimeoutFunction("up", 1500, function () {
-                firstLoad = false;
-                console.log('hide preloader');
+         var preloader = document.getElementById("loader");
+         var delay = 1200;
 
-                // setTimeout(function() {
-                //     document.body.classList.add("loaded");
-                // }, 100);
-                
-                // for low power mode on iOS:
-                const isiOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-                const html = document.body;
+         // if (sessionStorage.getItem("loaded")) delay = 0;
 
-                isiOS ? html.classList.add("iOS") : true;
+         var hidePreloader = function () {
+             console.log('preloader animation ended');
 
-                html.classList.contains("iOS")
-                    ? preloader.querySelector(".text-wrap p").classList.add("low-power-msg")
-                    : true;
+             setTimeoutFunction("up", 1500, function () {
+                 firstLoad = false;
+                 console.log('hide preloader');
 
-                document.dispatchEvent(preloaderFinishedEvent);
-                
-                if (document.querySelector(".section-top") != null) {
-                    setTimeout(function() {
-                        document.querySelector(".section-top").classList.add("active");
-                    }, 100);
-                }
+                 // setTimeout(function() {
+                 //     document.body.classList.add("loaded");
+                 // }, 100);
 
-                setTimeout(function() { preloader.style.display = "none" }, 500);
+                 // for low power mode on iOS:
+                 const isiOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+                 const html = document.body;
 
-                sessionStorage.setItem("loaded", true);
-            });
+                 isiOS ? html.classList.add("iOS") : true;
 
-            // document.addEventListener('DOMContentLoaded', function () {
-            //     // remove menu-fade-in class from mobile menu
-            //     const menuContainer = document.querySelector(".menu-soc.menu-fade-in");
-            //     console.log("CONTAINER MENU: ", menuContainer);
-            //     menuContainer.classList.remove('menu-fade-in');
-            // });
-        };
+                 html.classList.contains("iOS") ?
+                     preloader.querySelector(".text-wrap p").classList.add("low-power-msg") :
+                     true;
 
-        
-        setTimeoutFunction("finished", delay, hidePreloader);
-            
+                 document.dispatchEvent(preloaderFinishedEvent);
 
-        function setTimeoutFunction(className, duration, callback){
-            setTimeout(function(){
-                preloader.classList.add(className);
-                if (callback) {
-                    callback(); 
-                } 
-            }, duration);
-        }
-    });
-</script>
+                 if (document.querySelector(".section-top") != null) {
+                     setTimeout(function () {
+                         document.querySelector(".section-top").classList.add("active");
+                     }, 100);
+                 }
+
+                 setTimeout(function () {
+                     preloader.style.display = "none"
+                 }, 500);
+
+                 sessionStorage.setItem("loaded", true);
+             });
+
+             // document.addEventListener('DOMContentLoaded', function () {
+             //     // remove menu-fade-in class from mobile menu
+             //     const menuContainer = document.querySelector(".menu-soc.menu-fade-in");
+             //     console.log("CONTAINER MENU: ", menuContainer);
+             //     menuContainer.classList.remove('menu-fade-in');
+             // });
+         };
+
+
+         setTimeoutFunction("finished", delay, hidePreloader);
+
+
+         function setTimeoutFunction(className, duration, callback) {
+             setTimeout(function () {
+                 preloader.classList.add(className);
+                 if (callback) {
+                     callback();
+                 }
+             }, duration);
+         }
+     });
+ </script>
