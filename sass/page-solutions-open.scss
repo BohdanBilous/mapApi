@@ -1743,6 +1743,7 @@ $leftOffset: 270px;
     }
 }
 
+
 @media screen and (max-width: 1024px) {
     .fader-par {
         padding-bottom: 35px;
@@ -1760,6 +1761,37 @@ $leftOffset: 270px;
         }
     }
 } 
+
+@include mobile {
+    .fader-par {
+        .slide-image {
+            transform: scale(0.67);
+        }
+
+        .slides {
+            height: 720px;
+        }
+
+        .slider-buttons {
+            top: 440px;
+            left: -20px;
+            right: -20px;
+        }
+
+        .slide-content {
+            padding-bottom: 107px;
+
+            .cols-par {
+                display: block;
+
+                .par {
+                    padding-top: 35px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
 
 // HBT SYSTEM
 .hbt-sys {
