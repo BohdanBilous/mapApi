@@ -1567,6 +1567,7 @@ $animateDur: 0.30s;
 // Video Section
 .video-section,
 .article-section {
+    display:block;
     position: relative;
     height: 480px;
     background-repeat: no-repeat;
@@ -1592,6 +1593,22 @@ $animateDur: 0.30s;
     .col {
         position: relative;
         z-index: 1;
+    }
+
+    .play-button-wrap > a {
+        position: relative;
+
+        &::after {
+            @extend .ps;
+            left: -100px;
+            right: -100px;
+            bottom: -100px;
+            top: -100px;
+
+            @include mobile {
+                right: -250px;
+            }
+        }
     }
 }
 
