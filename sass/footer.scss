@@ -173,12 +173,24 @@
         }
     }
 
-
-
     .copyright,
-    .terms {
+    .terms,
+    .dev {
         align-self: flex-start;
         font-size: 12px;
+    }
+
+    .dev {
+        margin: 0 65px 0 auto;
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+                color: $colorGreen;
+            }
+        }
     }
 
     .hint {
@@ -187,35 +199,14 @@
     }
 }
 
-.copyright {
+.copyright, .dev, .dev a {
     color: $colorTextG;
 }
 
+
 @include mobile {
 
-    .footer-main-bottom {
-        .terms {
-            align-self: flex-start;
-            // border-bottom: 1px solid $colorTextG;
-        }
-    }
-
-    .email-form {
-        width: 100%;
-
-        input[type="email"] {
-            font-size: 14px;
-            padding-right: 0;
-            margin-bottom: 40px;
-        }
-
-        .btn {
-            position: relative;
-            width: 100%;
-            height: 62px;
-            text-align: left;
-        }
-    }
+    
 }
 
 @include tablet {
@@ -310,6 +301,10 @@
             display: none;
         }
 
+        .dev {
+            margin: 0;
+        }
+
         .layout-col-s-4 {
             padding-bottom: 28px;
         }
@@ -323,6 +318,24 @@
 }
 
 @include mobile {
+
+    .email-form {
+        width: 100%;
+
+        input[type="email"] {
+            font-size: 14px;
+            padding-right: 0;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            position: relative;
+            width: 100%;
+            height: 62px;
+            text-align: left;
+        }
+    }
+
     .footer-main {
 
         .layout-col-l,
@@ -333,15 +346,7 @@
         .layout-row {
             display: block;
         }
-    }
 
-    .footer-main-top {
-        .layout-col-l {
-            padding-bottom: 72px;
-        }
-    }
-
-    .footer-main {
         li {
             margin-bottom: 40px;
 
@@ -349,6 +354,12 @@
                 color: $colorText2;
                 font-family: $fontMedium;
             }
+        }
+    }
+
+    .footer-main-top {
+        .layout-col-l {
+            padding-bottom: 72px;
         }
     }
 
@@ -363,7 +374,19 @@
             font-size: 18px;
             line-height: 21px;
             letter-spacing: -0.36px;
-            margin-bottom: 32px;
+            margin-bottom: 55px;
+            align-self: flex-start;
+        }
+
+        .copyright {
+            align-self: stretch;
+            padding-bottom: 21px;
+            margin-bottom: 21px;
+            border-bottom: 1px solid $colorBorder;
+        }
+
+        .dev {
+            order: 4;
         }
 
         .social {
@@ -387,7 +410,7 @@
         }
 
         .layout-col-s-4 {
-            padding-bottom: 85px;
+            padding-bottom: 65px;
         }
 
         .layout-col-s-6 {

@@ -1901,6 +1901,14 @@ $leftOffset: 270px;
     }
 }
 
+.disposal-photo {
+    margin-left: 25px;
+
+    @include tablet {
+        margin-left: 0;
+    }
+}
+
 
 .global-socket-wrap {
     position: relative;
@@ -2605,7 +2613,6 @@ $leftOffset: 270px;
 
     .disposal-photo {
         width: 500px;
-
 
         img {
             width: 100%;
