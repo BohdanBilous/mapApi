@@ -8,18 +8,18 @@
     @@include('./partials/preloader.htm')
     @@include('./partials/header.htm', { "classes": "" })
     @@include('./partials/menu.htm', {
-        "solution": "",
-        "about": "",
-        "news-act": "",
-        "resources": "",
-        "events": "",
-        "cases": "",
-        "careers": "",
-        "sites": "",
-        "contact": "active",
-        "reviews": "",
-        "team": "",
-        "faq": ""
+    "solution": "",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "",
+    "sites": "",
+    "contact": "active",
+    "reviews": "",
+    "team": "",
+    "faq": ""
     })
     @@include('./partials/search.htm')
     <main class="main">
@@ -36,40 +36,42 @@
 
         </div>
         <div class="socket">
+            <div id="map"></div>
+            <div class="countrys">
+                <ul>
+                    <li data-lat=' 43.651070' data-long='-79.347015'>
+                        <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
+                    </li>
+                    <li>
+                        <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
+                    </li>
+                    <li>
+                        <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
+                    </li>
+                    <li>
+                        <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
+                    </li>
+                    <li>
+                        <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
 
-        </div>
-        <!-- Footer -->
-        <footer class="footer footer-bg">
-            <div class="info-row layout-row socket">
-                <div class="layout-col-l">
-                    <h3 class="ttl-4">Becoming a customer</h3>
-                    @@include('./partials/elements/button-link.htm', {
-                    "text": "Place an order",
-                    "href" : "/contact.html",
-                    "classes": "btn-g btn-arrow-a"
-                    })
-                </div>
-                <div class="layout-col-r">
-                    <div class="layout-col-s-4">
-                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
-                    </div>
-                    <div class="layout-col-s-6">
-                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
-                        <div class="with-us">
-                            <h3 class="ttl-4">Already with us</h3>
-                            @@include('./partials/elements/button-link.htm', {
-                            "text": "Tools & Resources",
-                            "href" : "/resources.html",
-                            "classes": ""
-                            })
-                        </div>
-                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow.
-                        </p>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <img src="./images/fl-6.svg" alt=""> <span class="text">Russia</span>
+
+                    </li>
+                    <li>
+                        <img src="./images/fl-7.svg" alt=""> <span class="text">China</span>
+
+                    </li>
+                    <li>
+                        <img src="./images/fl-8.svg" alt=""> <span class="text">Australia</span>
+                    </li>
+
+
+                </ul>
             </div>
-            @@include('./partials/footer-main.htm', { "classes": "" })
-        </footer>
+        </div>
+
     </main>
 </body>
 
@@ -77,5 +79,6 @@
     SystemJS.import('./js/app.js');
     SystemJS.import('./js/contact.js');
 </script>
+<script src="//www.webglearth.com/v2/api.js"></script>
 
 </html>
