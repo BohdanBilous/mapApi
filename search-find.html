@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" class="no-js">
+<html lang="en" class="no-js ">
 @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
 @@include('./partials/scripts.htm')
 
@@ -21,189 +21,197 @@
         "team": "",
         "faq": ""
     })
-
-    <main class="main">
-        <div class="search search-socket socket layout-row">
+    <div class="search-modal ">
+        <div class="search search-socket socket layout-row ">
+            <div class="search-close">
+                <span></span>
+                <span></span>
+            </div>
             <div class="layout-col-l">
                 <span class="text-search">
                     Search Page
                 </span>
+                <span class="text-search text-search-find">
+                    Result
+                    «<span class="green">Keg</span>»
+                </span>
+                <span class="text-search text-search-not-find">
+                    Result
+                </span>
             </div>
             <div class="layout-col-r">
-                <form class="search-form">
+                <form class="search-form" action="javascript:void(0);">
                     <div class="input-line">
-                        <input autocomplete="none" placeholder="Search" type="text" required>
+                        <input id="serach-input-form" autocomplete="none" placeholder="Search" type="text" value="Keg">
+                        <div class="clear-input">
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </form>
-            </div>
-            <div class="media-stream--col-l">
-
-                <div class="media-stream--section">
-
-                    <div class="media-stream--cols">
-                        <article class="media-stream--article has-img">
-                            <div class="media-panel">
-                                <img class="media-img" src="images/123.jpg" alt="#">
-                                <div class="author-block">
-                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
-                                    <div class="author-name ttl-5">George Boyd</div>
-                                </div>
-                            </div>
-                            <div class="media-content">
-                                <div class="date">27.10.2019</div>
-                                <h4 class="ttl ttl-4"><a href="news-open.html">Brewer Talks, our new brewing Podcast, is
-                                        now
-                                        LIVE!</a></h4>
-
-                                <div class="tags-list">
-                                    <a href="page-tag.html" class="tag">Petainer News</a>
-
-                                    <div class="tags-more">
-                                        <div class="tags-more--btn">
-                                            <i></i><i></i><i></i>
-                                        </div>
-                                        <div class="tags-more--drop">
-                                            <a href="page-tag.html" class="tag">Sustainability</a>
-                                            <a href="page-tag.html" class="tag">Construction Art</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <a href="news-open.html" class="button-next grey"></a>
-                            </div>
-                        </article>
-
-                        <article class="media-stream--article has-img">
-                            <div class="media-panel">
-                                <img class="media-img" src="images/news-2.jpg" alt="#">
-                                <div class="author-block">
-                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
-                                    <div class="author-name ttl-5">George Boyd</div>
-                                </div>
-                            </div>
-                            <div class="media-content">
-                                <div class="date">21.06.2019</div>
-                                <h4 class="ttl ttl-4"><a href="news-open.html">Ready for BevExpo 2019: the ‘go-to’ event
-                                        for
-                                        beverage industry professionals</a></h4>
-
-                                <div class="tags-list">
-                                    <a href="page-tag.html" class="tag">Petainer News</a>
-                                </div>
-
-                                <a href="news-open.html" class="button-next grey"></a>
-                            </div>
-                        </article>
-
-                        <article class="media-stream--article has-img">
-                            <div class="media-panel">
-                                <img class="media-img" src="images/news-3.jpg" alt="#">
-                            </div>
-                            <div class="media-content">
-                                <div class="date">04.06.2019</div>
-                                <h4 class="ttl ttl-4"><a href="news-open.html">Royal Unibrew partner with Petainer to
-                                        achieve 50% recycled plastic bottle objective</a></h4>
-
-                                <div class="tags-list">
-                                    <a href="page-tag.html" class="tag">Petainer News</a>
-
-                                    <div class="tags-more">
-                                        <div class="tags-more--btn">
-                                            <i></i><i></i><i></i>
-                                        </div>
-                                        <div class="tags-more--drop">
-                                            <a href="page-tag.html" class="tag">Sustainability</a>
-                                            <a href="page-tag.html" class="tag">Construction Art</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <a href="news-open.html" class="button-next grey"></a>
-                            </div>
-                        </article>
-
-                        <article class="media-stream--article has-img">
-                            <div class="media-panel">
-                                <img class="media-img" src="images/news-4.jpg" alt="#">
-                            </div>
-                            <div class="media-content">
-                                <div class="date">03.06.2019</div>
-                                <h4 class="ttl ttl-4"><a href="news-open.html">Come meet us at the Brewers of Europe
-                                        Forum
-                                        in Antwerp!</a></h4>
-                                <div class="author-block">
-                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
-                                    <div class="author-name ttl-5">George Boyd</div>
-                                </div>
-                                <div class="tags-list">
-                                    <a href="page-tag.html" class="tag">Sustainability</a>
-                                    <div class="tags-more">
-                                        <div class="tags-more--btn">
-                                            <i></i><i></i><i></i>
-                                        </div>
-                                        <div class="tags-more--drop">
-                                            <a href="page-tag.html" class="tag">Sustainability</a>
-                                            <a href="page-tag.html" class="tag">Construction Art</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="media-stream--article has-img">
-                            <div class="media-panel">
-                                <img class="media-img" src="images/news-5.jpg" alt="#">
-                            </div>
-                            <div class="media-content">
-                                <div class="date">03.06.2019</div>
-                                <h4 class="ttl ttl-4"><a href="news-open.html">Indianapolis Coffee Fest: Petainer wins
-                                        Second Prize at the Best New Product Awards!</a></h4>
-                                <div class="author-block">
-                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
-                                    <div class="author-name ttl-5">George Boyd</div>
-                                </div>
-                                <div class="tags-list">
-                                    <a href="page-tag.html" class="tag">Sustainability</a>
-                                </div>
-                            </div>
-                        </article>
-
-
-                        <article class="media-stream--article has-img">
-                            <div class="media-panel">
-                                <img class="media-img" src="images/news-6.jpg" alt="#">
-                                <div class="author-block">
-                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
-                                    <div class="author-name ttl-5">George Boyd</div>
-                                </div>
-                            </div>
-                            <div class="media-content">
-                                <div class="date">04.13.2018</div>
-                                <h4 class="ttl ttl-4"><a href="news-open.html">Petainer at the International Beer
-                                        Strategies
-                                        Conference in Dublin</a></h4>
-
-                                <div class="tags-list">
-                                    <a href="page-tag.html" class="tag">Petainer News</a>
-
-                                    <div class="tags-more">
-                                        <div class="tags-more--btn">
-                                            <i></i><i></i><i></i>
-                                        </div>
-                                        <div class="tags-more--drop">
-                                            <a href="page-tag.html" class="tag">Sustainability</a>
-                                            <a href="page-tag.html" class="tag">Construction Art</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a href="news-open.html" class="button-next grey"></a>
-                            </div>
-                        </article>
+                <div class="not-found-text">
+                    <div class="icon">
+                        <img src="images/not-found-icon.svg" alt="">
                     </div>
+                    <h3 class="ttl-3">Sorry, no result found</h3>
+                </div>
+                <div class="bottom-text">
+                    <ul class="popular-search">
+                        <li>
+                            <h4 class="ttl-4">Popular search</h4>
+                        </li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Hybrid System</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Studies</a></li>
+                    </ul>
+                    <ul class="recent-search">
+                        <li>
+                            <h4 class="ttl-4">Your recent searches </h4>
+                        </li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Hybrid System</a></li>
+                    </ul>
                 </div>
             </div>
 
+            <div class="media-stream--col-l">
+                <div class="media-stream--section">
+                    <div class="media-stream--cols">
+                        <article class="media-stream--article has-img">
+                            <div class="media-panel">
+                                <img class="media-img" src="images/search-1.jpg" alt="#">
+                                <div class="author-block">
+                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                    <div class="author-name ttl-5">George Boyd</div>
+                                </div>
+                            </div>
+                            <div class="media-content">
+                                <div class="date">17.05</div>
+                                <h4 class="ttl ttl-4"><a href="news-open.html">How petainer<span
+                                            class="finded-text">Keg</span> is helping breweries.</a>
+                                </h4>
+
+                                <div class="tags-list">
+                                    <a href="page-tag.html" class="tag">Petainer News</a>
+
+                                    <div class="tags-more">
+                                        <div class="tags-more--btn">
+                                            <i></i><i></i><i></i>
+                                        </div>
+                                        <div class="tags-more--drop">
+                                            <a href="page-tag.html" class="tag">Sustainability</a>
+                                            <a href="page-tag.html" class="tag">Construction Art</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="news-open.html" class="button-next grey"></a>
+                            </div>
+                        </article>
+                        <article class="media-stream--article has-img">
+                            <div class="media-panel">
+                                <img class="media-img" src="images/search-2.jpg" alt="#">
+                                <div class="author-block">
+                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                    <div class="author-name ttl-5">George Boyd</div>
+                                </div>
+                            </div>
+                            <div class="media-content">
+                                <div class="date">16.05</div>
+                                <h4 class="ttl ttl-4"><a href="news-open.html">Petainer launches new
+                                        Hybrid <span class="finded-text">kegs.</span></a>
+                                </h4>
+
+                                <div class="tags-list">
+                                    <a href="page-tag.html" class="tag">Petainer News</a>
+
+                                    <div class="tags-more">
+                                        <div class="tags-more--btn">
+                                            <i></i><i></i><i></i>
+                                        </div>
+                                        <div class="tags-more--drop">
+                                            <a href="page-tag.html" class="tag">Sustainability</a>
+                                            <a href="page-tag.html" class="tag">Construction Art</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="news-open.html" class="button-next grey"></a>
+                            </div>
+                        </article>
+                        <article class="media-stream--article has-video">
+                            <div class="media-panel">
+                                <img class="media-img" src="images/search-3.jpg" alt="#">
+                                <div class="play-button-wrap">
+                                    <div class="play trans"></div>
+                                    <div class="text-b trans">1:54</div>
+                                </div>
+                            </div>
+                            <div class="media-content">
+                                <div class="date">17.05</div>
+                                <h4 class="ttl ttl-4"><a href="news-open.html">How petainer<span
+                                            class="finded-text">Keg</span> is helping breweries.</a>
+                                </h4>
+
+                                <div class="tags-list">
+                                    <a href="page-tag.html" class="tag">Export markets</a>
+
+                                    <div class="tags-more">
+                                        <div class="tags-more--btn">
+                                            <i></i><i></i><i></i>
+                                        </div>
+                                        <div class="tags-more--drop">
+                                            <a href="page-tag.html" class="tag">Sustainability</a>
+                                            <a href="page-tag.html" class="tag">Construction Art</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="news-open.html" class="button-next grey"></a>
+                            </div>
+                        </article>
+                        <article class="media-stream--article has-img">
+                            <div class="media-panel">
+                                <img class="media-img" src="images/search-4.jpg" alt="#">
+                                <div class="author-block">
+                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                    <div class="author-name ttl-5">George Boyd</div>
+                                </div>
+                            </div>
+                            <div class="media-content">
+                                <div class="date">16.05</div>
+                                <h4 class="ttl ttl-4"><a href="news-open.html">Petainer launches new Hybrid <span
+                                            class="finded-text">kegs.</span></a>
+                                </h4>
+
+                                <div class="tags-list">
+                                    <a href="page-tag.html" class="tag">Export markets</a>
+
+                                    <div class="tags-more">
+                                        <div class="tags-more--btn">
+                                            <i></i><i></i><i></i>
+                                        </div>
+                                        <div class="tags-more--drop">
+                                            <a href="page-tag.html" class="tag">Sustainability</a>
+                                            <a href="page-tag.html" class="tag">Construction Art</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <a href="news-open.html" class="button-next grey"></a>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
         </div>
+    </div>
+
+    <main class="main">
+
         <!-- Footer -->
         <footer class="footer footer-bg">
             <div class="info-row layout-row socket">
@@ -242,6 +250,7 @@
 
 <script>
     SystemJS.import('./js/app.js');
+    SystemJS.import('./js/search.js');
 </script>
 
 </html>
