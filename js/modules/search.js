@@ -16,6 +16,7 @@ window.addEventListener("load", function () {
   let searchForm = document.querySelector('.search-form');
   let clearInput = inputSearch.parentNode.querySelector('.clear-input');
   inputSearch.focus();
+  clearInput.style.left = `${inputSearch.value.length*40+40}px`
   inputSearch.selectionStart = inputSearch.selectionEnd = inputSearch.value.length;
   (inputSearch.value.length === 0) && clearInput.classList.add('hide');
 
@@ -25,7 +26,14 @@ window.addEventListener("load", function () {
     inputSearch.focus();
     clearInput.classList.add('hide');
   })
-  inputSearch.addEventListener('input', () => (inputSearch.value.length === 0) ? clearInput.classList.add('hide') : clearInput.classList.remove('hide'))
+  inputSearch.addEventListener('input', () => {
+    let hiddenElement = document.querySelector('.hidden-width');
+    (inputSearch.value.length === 0) ? clearInput.classList.add('hide'): clearInput.classList.remove('hide');
+    hiddenElement.innerHTML = inputSearch.value;
+    let hiddenElementWidth = hiddenElement.offsetWidth;
+    clearInput.style.left = `${hiddenElementWidth + 15}px`;
+  })
+
 
 
 

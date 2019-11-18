@@ -84,10 +84,12 @@
 
     .search-switcher {
         @extend .zIndex;
+        cursor: pointer;
         position: relative;
         margin-right: 25px;
     }
 }
+// pr40    
 
 .header.hide-header {
     transform: translateY(-55px);

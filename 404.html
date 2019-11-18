@@ -18,25 +18,37 @@
     "sites": "",
     "contact": ""
     })
+    @@include('./partials/search.htm')
 
     <main class="main">
-        <div class="search search-socket socket layout-row">
-            <div class="layout-col-l">
-                <span class="text-search">
-                    Search Page
-                </span>
-            </div>
-            <div class="layout-col-r">
-                <form class="search-form">
-                    <div class="input-line">
-                        <input autocomplete="none" placeholder="Search" type="text" required>
-                    </div>
-                </form>
 
+        <div class=" socket socket-404">
+            <div class="layout-row-404">
+                <div class="layout-col-l">
+                    <h1 class="not-found-page-404">404</h1>
+                </div>
+                <div class="layout-col-r">
+                    <h3>
+                        Error :(
+                        <br>
+                        Sorry, page not foung
+                    </h3>
+                </div>
+            </div>
+            <div class="layout-row-404">
+                <div class="layout-col-l">
+                </div>
+                <div class="layout-col-r">
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Home Page",
+                    "href" : "/index.html",
+                    "classes": ""
+                    })
+                </div>
             </div>
         </div>
         <!-- Footer -->
-        <footer class="footer footer-bg">
+        <footer class="footer  footer-bg">
             <div class="info-row layout-row socket">
                 <div class="layout-col-l">
                     <h3 class="ttl-4">Becoming a customer</h3>
@@ -56,7 +68,7 @@
                             <h3 class="ttl-4">Already with us</h3>
                             @@include('./partials/elements/button-link.htm', {
                             "text": "Tools & Resources",
-                            "href" : "/resources.html",
+                            "href" : "#",
                             "classes": ""
                             })
                         </div>
@@ -65,7 +77,9 @@
                     </div>
                 </div>
             </div>
-            @@include('./partials/footer-main.htm', { "classes": "" })
+            <div class="footer-bg">
+                @@include('./partials/footer-main.htm', { "classes": "" })
+            </div>
         </footer>
     </main>
 
@@ -73,6 +87,7 @@
 
 <script>
     SystemJS.import('./js/app.js');
+    SystemJS.import('./js/reviews.js');
 </script>
 
 </html>
