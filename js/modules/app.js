@@ -120,8 +120,9 @@ clearInput.addEventListener('click', () => {
 inputSearch.addEventListener('input', () => {
   let hiddenElement = document.querySelector('.hidden-width');
   (inputSearch.value.length === 0) ? clearInput.classList.add('hide'): clearInput.classList.remove('hide');
-  hiddenElement.innerHTML = inputSearch.value;
-  let hiddenElementWidth = hiddenElement.offsetWidth;
+  let valyeInput  = inputSearch.value.replace(/\s/g, '|');
+  hiddenElement.innerHTML = valyeInput;
+  let hiddenElementWidth = hiddenElement.offsetWidth; 
   clearInput.style.left = `${hiddenElementWidth + 15}px`;
 })
 searchForm.addEventListener('submit', (e) => {

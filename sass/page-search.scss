@@ -232,16 +232,23 @@
 
 .search-form {
     margin-bottom: 164px;
-    .input-line{
+
+    .input-line {
         position: relative;
     }
-    .input-line input  , .hidden-width{
+
+    .input-line input,
+    .hidden-width {
         position: relative;
         font-size: 80px;
         letter-spacing: -2.8px;
         line-height: 47px;
         padding-bottom: 19px;
         font-weight: 300;
+    }
+
+    .input-line input {
+        padding-right: 40px;
     }
 
     .clear-input {
@@ -281,11 +288,12 @@
     }
 }
 
-.hidden-width{
+.hidden-width {
     position: absolute !important;
     display: inline-block;
-    opacity:0;
-    overflow:auto;
+    opacity: 0;
+    overflow: auto;
+    white-space: nowrap;
     width: auto;
     height: 0 !important;
     min-height: 0px !important;
@@ -293,7 +301,7 @@
     max-width: calc(100% - 60px);
     padding-bottom: 0 !important;
     visibility: hidden;
-  }
+}
 
 @include macbook {
     .search-socket {
@@ -314,6 +322,7 @@
         width: 24px;
         height: 24px;
     }
+
     .search {
         .layout-col-r {
             position: static;
@@ -330,11 +339,15 @@
             position: relative;
         }
 
-        .input-line input, .hidden-width {
+        .input-line input,
+        .hidden-width {
             font-size: 35px;
             padding-bottom: 15px;
         }
 
+        .clear-input {
+            display: none;
+        }
     }
 
     .search-socket {
@@ -382,9 +395,10 @@
 }
 
 @include mobile {
-    .search-close{
+    .search-close {
         top: 47px;
     }
+
     .search-socket {
         .layout-col-l {
             display: none;
@@ -397,8 +411,16 @@
     }
 
     .search-form {
-   top: 21px;
-        .input-line input, .hidden-width  {
+        top: 21px;
+
+        .input-line input {
+            padding-right: 0;
+            border-right: 1px solid #cdcdcd;
+            width: 90%;
+        }
+
+        .input-line input,
+        .hidden-width {
             padding-bottom: 9px;
         }
 
@@ -406,7 +428,9 @@
 
     .search-socket {
         margin-bottom: 201px;
-
+        .bottom-text {
+            padding-bottom: 100px;
+        }
         .bottom-text {
 
             ul {
