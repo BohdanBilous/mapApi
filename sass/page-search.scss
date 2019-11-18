@@ -333,10 +333,11 @@
         position: absolute;
         left: 0;
         width: 100%;
-        top: 30px;
+        top: 80px;
 
         .input-line {
             position: relative;
+            padding-right: 0;
         }
 
         .input-line input,
@@ -411,12 +412,12 @@
     }
 
     .search-form {
-        top: 21px;
+        top: 71px;
 
         .input-line input {
             padding-right: 0;
-            border-right: 1px solid #cdcdcd;
-            width: 90%;
+            // border-right: 1px solid #cdcdcd;
+            // width: 90%;
         }
 
         .input-line input,
