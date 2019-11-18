@@ -9,6 +9,10 @@
     max-width: 100%;
     margin: 0 auto;
 
+    .media-stream--container {
+        margin: 0 30px;
+    }
+
     .fag-question.active .fag-q-body {
         padding-left: 0;
     }
@@ -20,6 +24,7 @@
 
     .fag-row {
         margin-bottom: 67px;
+
         .terms-ans {
             width: 100%;
             flex: 0 0 100%;
@@ -38,7 +43,8 @@
 
     .filter-sidebar-section {
         padding-top: 37px;
-        .file-list.scroll{
+
+        .file-list.scroll {
             margin-bottom: 31px;
         }
     }
@@ -52,9 +58,10 @@
             width: auto;
             margin: 0 30px;
         }
-        .fag-row .terms-ans .fag-question .fag-q-body>p{
+
+        .fag-row .terms-ans .fag-question .fag-q-body>p {
             width: 100%;
-margin-bottom: 50px
+            margin-bottom: 50px
         }
     }
 }
@@ -62,6 +69,7 @@ margin-bottom: 50px
 @include tablet {
     .content-terms {
         padding-top: 50px;
+
         .media-stream--container {
             width: auto;
             margin: 0 25px;
