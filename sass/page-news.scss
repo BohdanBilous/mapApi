@@ -457,10 +457,13 @@
             .media-panel {
                 border-radius: 12px;
                 overflow: hidden;
+                backface-visibility: hidden;
+                transform: translate3d(0px, 0px, 0px);
+
                 &:hover {
 
                     .media-img {
-                        border-radius: 12px;
+                        // border-radius: 12px;
                         transform: scale(1.05);
                     }
 
