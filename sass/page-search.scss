@@ -162,6 +162,10 @@
             a {
                 color: #595a5a;
                 font-family: $fontMain;
+
+                &:hover {
+                    color: $colorGreen;
+                }
             }
         }
     }
