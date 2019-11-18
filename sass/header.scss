@@ -693,7 +693,7 @@
 }
 
 @include desktop-only {
-    @media screen and (max-height: 720px) {
+    @media screen and (max-height: 790px) {
         .menu-inner {
             padding-top: 70px;
         }
@@ -701,9 +701,7 @@
         .menu .hint-more {
             margin-bottom: 20px;
         }
-    }
 
-    @media screen and (max-height: 660px) {
         .menu-main {
             .fig {
                 top: 15px;
@@ -721,7 +719,8 @@
         }
     }
 
-    @media screen and (max-height: 570px) {
+
+    @media screen and (max-height: 680px) {
         .menu-inner {
             padding-top: 20px;
         }
@@ -732,12 +731,16 @@
             }
         }
 
+        .menu-more {
+            margin-bottom: 15px;
+        }
+
         .follow-us {
             bottom: 20px;
         }
     }
 
-    @media screen and (max-height: 520px) {
+    @media screen and (max-height: 590px) {
         .menu .hint-more {
             display: none;
         }
@@ -745,9 +748,7 @@
         .menu-main {
             margin-bottom: 25px;
         }
-    }
 
-    @media screen and (max-height: 520px) {
         .menu-inner {
             padding-bottom: 20px;
         }
