@@ -122,7 +122,8 @@ function js() {
         "js/modules/solutions-open.js",
         "js/modules/solutions-open-hybrid.js",
         "js/modules/solutions-open-coolers.js",
-        "js/modules/sites.js"
+        "js/modules/sites.js",
+        "js/modules/terms.js"
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,
@@ -175,7 +176,8 @@ function jsProd() {
         "js/modules/solutions-open.js",
         "js/modules/solutions-open-hybrid.js",
         "js/modules/solutions-open-coolers.js",
-        "js/modules/sites.js"
+        "js/modules/sites.js",
+        "js/modules/terms.js"
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,

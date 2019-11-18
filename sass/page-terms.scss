@@ -1,0 +1,70 @@
+/* =========================
+    Terms 
+   ========================= */
+
+.content-terms {
+    position: relative;
+    height: 100%;
+    width: 1920px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .fag-question.active .fag-q-body {
+        padding-left: 0;
+    }
+
+    .fag-question .fag-q-open {
+        top: auto;
+        bottom: 20px;
+    }
+
+    .fag-row {
+        margin-bottom: 67px;
+        .terms-ans {
+            width: 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            .fag-question .fag-q-body>p {
+                width: 71%;
+            }
+        }
+    }
+
+    .media-stream--col-r {
+        width: 24%;
+        padding-top: 15px;
+    }
+
+    .filter-sidebar-section {
+        padding-top: 37px;
+        .file-list.scroll{
+            margin-bottom: 31px;
+        }
+    }
+}
+
+
+
+@include macbook {
+    .content-terms {
+        .media-stream--container {
+            width: auto;
+            margin: 0 30px;
+        }
+        .fag-row .terms-ans .fag-question .fag-q-body>p{
+            width: 100%;
+margin-bottom: 50px
+        }
+    }
+}
+
+@include tablet {
+    .content-terms {
+        padding-top: 50px;
+        .media-stream--container {
+            width: auto;
+            margin: 0 25px;
+        }
+    }
+}
