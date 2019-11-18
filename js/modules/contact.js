@@ -67,17 +67,15 @@ window.addEventListener("load", function () {
             scrollWheelZoom: true
         });
 
-        var baselayer = WE.tileLayer('https://webglearth.github.io/webglearth2-offline/{z}/{x}/{y}.jpg', {
-            tileSize: 256,
-            bounds: [
-                [-85, -180],
-                [85, 180]
-            ],
-            minZoom: 0,
-            maxZoom: 16,
+        var baselayer = WE.tileLayer('https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz', {
+            // tileSize: 256,
+            // bounds: [[-85, -180], [85, 180]],
+            // minZoom: 0,
+            // maxZoom: 16,
             attribution: 'WebGLEarth example',
-            tms: true
-        }).addTo(map);
+            style: 'https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz',
+            // tms: true
+          }).addTo(map);
 
         //Add TileJSON layer
         var json = {
@@ -138,8 +136,8 @@ window.addEventListener("load", function () {
             [22, 122],
             [48, 154]
         ], {
-            heading: 90,
-            tilt: 25,
+            heading: 0,
+            tilt: 0,
             duration: 1
         });
     }
