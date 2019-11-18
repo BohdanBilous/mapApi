@@ -1,0 +1,131 @@
+/* =========================
+    404
+   ========================= */
+.socket-404 {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    .not-found-page {
+        width: 100%;
+    }
+
+    .not-found-page-inner {
+        display: flex;
+    }
+
+    h1 {
+        color: #1c989c;
+        font-size: 241px;
+        font-weight: 500;
+        letter-spacing: -8.44px;
+        line-height: 170px;
+    }
+
+    h3 {
+        width: 100%;
+        font-family: $fontMedium;
+        font-weight: 400;
+        letter-spacing: -0.4px;
+        line-height: 34px;
+        align-self: flex-end;
+    }
+
+    .layout-row-404 {
+        display: flex;
+        width: 100%;
+
+        &:nth-child(1) {
+            border-bottom: 1px solid rgba(#707070, 0.2);
+            padding-bottom: 20px;
+            margin-bottom: 33px;
+        }
+    }
+
+    .layout-col-l {
+        display: flex;
+        width: calc(20% + ((.16 + 0.23) * (100% - 17%))) !important;
+    }
+
+    .layout-col-r,
+    .layout-col-r-only {
+        display: flex;
+        position: relative;
+        width: calc(100% - 20% - ((0.16 + 0.22) * (100% - 17%))) !important;
+    }
+}
+
+@include tablet {
+    .socket-404 {
+        h1 {
+            font-size: 154px;
+            line-height: 106px;
+        }
+
+        h3 {
+            width: fit-content;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    .layout-row-404 {
+        &:last-child {
+            .layout-col-l {
+                display: none;
+            }
+
+            .layout-col-r {
+                a {
+                    display: flex;
+                    align-items: center;
+                    height: 40px;
+
+                    .arrow {
+                        top: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .socket-404  {
+        min-height: fit-content ;
+        padding: 123px 0 100px;
+        .layout-row-404 {
+            flex-wrap: wrap;
+            .layout-col-r,
+            .layout-col-l{
+                width: 100% !important;
+                h1{
+                   margin:  0 auto;
+                    margin-bottom: 131px;
+                }
+                h3{
+                    margin: auto 0 0 0 ;
+                }
+            }
+    
+            &:first-child{
+                padding-top: 10px;
+                margin-bottom: 36px;
+            }
+            &:last-child {
+                .layout-col-r {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        height: 62px;
+    
+                        .arrow {
+                            top: 26px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
