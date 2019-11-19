@@ -11,6 +11,9 @@
 
     .media-stream--container {
         margin: 0 30px;
+        .media-stream--col-l{
+            padding-bottom: 60px;
+        }
     }
 
     .fag-question.active .fag-q-body {
@@ -67,6 +70,9 @@
 }
 
 @include tablet {
+    .content-terms .fag-row {
+        margin-bottom: 68px;
+    }
     .content-terms {
         padding-top: 50px;
 

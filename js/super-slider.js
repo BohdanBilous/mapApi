@@ -64,7 +64,9 @@
  *
  **/
 
-import { getStyle } from "./generic-helpers";
+import {
+  getStyle
+} from "./generic-helpers";
 
 export class SuperSlider {
   constructor(sliderWrap, type, timer, sliderCallBack = null, swipe) {
@@ -78,6 +80,7 @@ export class SuperSlider {
     this.sliderCallBack = sliderCallBack;
     this.buttonNext = this.sliderWrap.querySelector(".next");
     this.buttonPrev = this.sliderWrap.querySelector(".prev");
+
 
     if (type == "fader") {
       this.fader = true;
@@ -103,6 +106,7 @@ export class SuperSlider {
     this.setVisibleSlides();
     this.setInactiveButtons();
     this.touchHandler();
+    this.goTo();
   }
 
   carouselReset() {
@@ -138,13 +142,13 @@ export class SuperSlider {
 
     this.sliderRow.addEventListener(
       "mousedown",
-      function(e) {
+      function (e) {
         this.touchStart(e);
       }.bind(this)
     );
     this.sliderRow.addEventListener(
       "touchstart",
-      function(e) {
+      function (e) {
         this.touchStart(e);
       }.bind(this)
     );
@@ -171,7 +175,34 @@ export class SuperSlider {
     this.body.addEventListener("mouseup", this.touchEnd);
     this.body.addEventListener("touchend", this.touchEnd);
   }
+  goTo() {
+    // let lastIndex;
+    // this.slides.forEach((slide, i) => {
+    //   lastIndex = this.slideIndex;
+    //   slide.addEventListener('click', () => {
+    //     // for (let j = 0; j < this.slides.length; j++) {
+    //     //   if(this.slides[j].classList.contains('visible')){
+    //     //     lastIndex = j
+    //     //     break;
+    //     //   }
+    //     // }
+    //     // let lastVisibleSlideIndex =
+    //     //   this.slideIndex + (this.getItemsInViewport() - 1);
 
+      
+    //     // console.log(i);
+    //     console.log(lastIndex)
+
+
+
+    //     this.moveWidth += -((this.slide.clientWidth * (i - this.slideIndex  )) + this.getMargin());
+    //     this.carouselMove(this.moveWidth, "next");
+    //   }) 
+
+
+    // })
+
+  }
   touchMove(e) {
     let touch = e;
     let curLeft = this.moveWidth;
@@ -205,16 +236,16 @@ export class SuperSlider {
       (this.buttonNext.classList.contains("inactive") &&
         this.moveX < this.startX) ||
       Math.abs(this.moveX - this.startX) < 40 ||
-      typeof this.moveX === "undefined"
-        ? true
-        : false;
+      typeof this.moveX === "undefined" ?
+      true :
+      false;
 
     if (Math.abs(this.moveX - this.startX) === 0) return;
 
     if (!stayAtCurrent) {
-      this.moveX > this.startX
-        ? this.carouselMovePrev()
-        : this.carouselMoveNext();
+      this.moveX > this.startX ?
+        this.carouselMovePrev() :
+        this.carouselMoveNext();
     }
 
     delete this.startX;
@@ -339,7 +370,7 @@ export class SuperSlider {
   buttonsClickHandler() {
     this.buttonNext.addEventListener(
       "click",
-      function(e) {
+      function (e) {
         if (!this.buttonNext.classList.contains("inactive")) {
           if (this.fader) this.faderMoveNext();
           if (this.carousel) this.carouselMoveNext();
@@ -349,7 +380,7 @@ export class SuperSlider {
 
     this.buttonPrev.addEventListener(
       "click",
-      function(e) {
+      function (e) {
         if (!this.buttonPrev.classList.contains("inactive")) {
           if (this.fader) this.faderMovePrev();
           if (this.carousel) this.carouselMovePrev();
@@ -364,9 +395,9 @@ export class SuperSlider {
   }
 
   faderMovePrev() {
-    this.slideIndex == 0
-      ? (this.slideIndex = this.slides.length)
-      : this.slideIndex - 1;
+    this.slideIndex == 0 ?
+      (this.slideIndex = this.slides.length) :
+      this.slideIndex - 1;
     this.changeSlide(this.slideIndex - 1);
   }
 
