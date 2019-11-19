@@ -1,15 +1,332 @@
 /* =========================
     Contact 
    ========================= */
+.contact-main {
+    overflow: hidden;
+}
 
-   .countrys{
-       display: flex;
-ul{
-    width: 100%;
+.contact-back-container {
+    position: absolute;
+    z-index: 1;
+
+    a.btn::after {
+        background-color: #f5f5f5;
+    }
+}
+
+.countrys {
+    position: absolute;
     display: flex;
     justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 34px 21px 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: 3;
+
+    .countrys-list {
+        width: 47%;
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: opacity 330ms ease;
+
+            &.not-active {
+                opacity: 0.4;
+            }
+
+            &.active,&:hover {
+                opacity: 1;
+            }
+
+            img {
+                width: 33px;
+                height: 33px;
+                margin-bottom: 7px;
+            }
+        }
+    }
+
+    .select-country-wrap {
+        width: 21%;
+    }
 }
-   } 
-   .cesium-credit-textContainer{
-       display: none !important;
-   }
+
+.contacts-list {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 159px;
+    left: 21%;
+    max-width: calc(100% - 21%);
+    z-index: 3;
+
+    .contacts-item {
+        max-width: 187px;
+        cursor: pointer;
+        display: none;
+
+        img {
+            width: 51px;
+            height: 51px;
+            margin-right: 17px;
+        }
+
+        .text {
+            font-family: $fontMain;
+            font-size: 14px;
+            font-weight: 400;
+
+            .top {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: #505050;
+
+            }
+
+            .bottom {
+                color: #1c989c;
+            }
+        }
+
+        &.active {
+            display: flex;
+        }
+    }
+}
+
+.cesium-credit-textContainer {
+    display: none !important;
+}
+
+.contact-main {
+    position: relative;
+    height: 100vh;
+    background-color: #e6e6e6;
+
+    #map {
+        height: 100%;
+        z-index: 0;
+    }
+
+    .we-pm-icon {
+        background-image: url(../images/point-map.svg);
+        margin: 0;
+        width: 17px !important;
+        height: 17px !important;
+        margin-left: -10px !important;
+    }
+}
+
+div.searchable {
+    width: 21%;
+    position: relative;
+
+    .searcheble-list {
+        padding: 26px 21px 0 27px;
+        width: 348px;
+        position: absolute;
+        display: none;
+        top: -70px;
+        left: 50%;
+        transform: translateY(-100%) translateX(-50%);
+        border-radius: 10px;
+        background-color: #f5f5f5;
+    }
+
+    ul {
+        display: none;
+        @extend .scroll-custom;
+        background-color: #f5f5f5;
+        width: 100%;
+        padding-right: 19px;
+        max-height: 545px;
+        overflow-y: scroll;
+
+        li {
+            cursor: pointer;
+            align-items: center;
+            border-bottom: 1px solid rgba(#949494, 0.3);
+            padding-bottom: 16px;
+            margin-bottom: 14px;
+
+            &.active {
+                display: flex;
+            }
+
+            &.not-active {
+                display: none;
+            }
+
+            img {
+                width: 32px;
+                height: 32px;
+                margin-right: 16px;
+            }
+
+            span {
+                color: #333333;
+                font-family: $fontMain;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.searchable {
+    display: flex;
+    align-items: center;
+
+    input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgba(#949494, 0.3);
+        color: #333333;
+        font-family: $fontMain;
+        font-size: 14px;
+        font-weight: 400;
+        padding-bottom: 8px;
+        padding-right: 15px;
+    }
+
+    .searcheble-close {
+        cursor: pointer;
+        position: absolute;
+        top: calc(50% - 10px);
+        right: 0;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        transform: rotate(45deg) translateY(-50%);
+
+        span {
+            width: 53%;
+            height: 2px;
+            position: absolute;
+            background-color: #2a2a2a;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            &:first-child {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+    }
+
+    .notFound {
+        position: absolute;
+        top: 7px;
+        left: 27px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.contact-form-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0%;
+    padding: 0 30px;
+    padding-top: 160px;
+    background-color: #f5f5f5;
+    transform: translateY(100%);
+    transition: transform 400ms ease;
+    z-index: 2;
+
+    &.active {
+        transform: translateY(0);
+
+    }
+
+    .btn-close {
+        top: 81px;
+    }
+
+    form {
+        display: flex;
+        justify-content: space-between;
+
+        .input-line {
+            margin-bottom: 28px;
+        }
+
+        .contact-form-left {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 38%;
+
+            .input-line {
+                width: 100%;
+
+                input {
+                    padding-bottom: 9px;
+                }
+            }
+
+            .w-50 {
+                width: 49%;
+            }
+        }
+
+        .contact-form-right {
+            width: 60%;
+
+            .textarea {
+                margin-bottom: 24px;
+
+                textarea {
+                    &::placeholder {
+                        color: #333;
+                    }
+                }
+            }
+
+            .lines {
+                background-image: linear-gradient(#f5f5f5, #f5f5f5 27px, #ccc 27px, #ccc 28px, #f5f5f5 28px);
+                background-size: 100% 28px;
+                line-height: 28px;
+                height: 137px;
+                overflow: hidden;
+                color: #333;
+            }
+
+
+            .select-form-wrap {
+                width: 49%;
+
+                .select-custom {
+                    .select-selected {
+                        background: none;
+                        border-bottom: 1px solid #cdcdcd;
+                        border-radius: 0;
+                    }
+
+                    .select-items {
+                        background: none;
+
+                    }
+                }
+            }
+        }
+
+        .btn {
+            position: absolute;
+            right: 0;
+            bottom: 159px;
+        }
+    }
+
+}

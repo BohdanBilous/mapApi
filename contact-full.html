@@ -22,9 +22,8 @@
     "faq": ""
     })
     @@include('./partials/search.htm')
-    <main class="main">
-
-        <div class="layout-row-content contact-tabs-container layout-row socket">
+    <main class="main contact-main">
+        <div class="layout-row-content contact-back-container layout-row socket">
             <div class="layout-col-l">
                 @@include('./partials/elements/button-link.htm', {
                 "text": "Back",
@@ -32,30 +31,28 @@
                 "classes": "btn-back"
                 })
             </div>
-
-
         </div>
-        <div class="socket">
-            <div id="map"></div>
-            <div class="countrys">
-                <ul>
-                    <li data-lat=' 43.651070' data-long='-79.347015'>
-                        <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
-                    </li>
-                    <li>
-                        <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
-                    </li>
-                    <li>
-                        <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
-                    </li>
-                    <li>
-                        <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
-                    </li>
-                    <li>
-                        <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
+        <div id="map"></div>
+        <div class="countrys">
+            <ul class="countrys-list">
+                <li data-lat=' 43.651070' data-long='-79.347015'>
+                    <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
+                </li>
+                <li data-lat=' 41.651070' data-long='-71.347015'>
+                    <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
+                </li>
+                <li>
+                    <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
+                </li>
+                <li>
+                    <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
+                </li>
+                <li>
+                    <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
 
-                    </li>
-                    <li>
+                </li>
+            </ul>
+              <!-- <li>
                         <img src="./images/fl-6.svg" alt=""> <span class="text">Russia</span>
 
                     </li>
@@ -65,13 +62,105 @@
                     </li>
                     <li>
                         <img src="./images/fl-8.svg" alt=""> <span class="text">Australia</span>
-                    </li>
+                    </li> -->
+            <div class="searchable">
+                <input type="text" placeholder="search countries">
+                <div class="searcheble-list">
+                    <ul>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                    </ul>
+                    <div class="notFound">EMPTY</div>
+                </div>
+                <div class="searcheble-close">
+                    <span></span>
+                    <span></span>
 
-
-                </ul>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="prev button-prev"></button>
+                <button class="next button-next"></button>
             </div>
         </div>
+        <ul class="contacts-list">
+            <li class="contacts-item">
+                <img src="./images/av-12.png" alt="">
+                <div class="text">
+                    <div class="top">
+                        USA (Mid—West)
+                        Territory Manager
+                    </div>
+                    <div class="bottom">
+                        David Thennes
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="layout-row-content contact-form-container layout-row socket">
+            <div class="btn-close"></div>
+            <div class="layout-col-l">
 
+            </div>
+            <div class="layout-col-r">
+                <form action="">
+                    <div class="contact-form-left">
+                        <div class="input-line">
+                            <input autocomplete="none" placeholder="Company Name" type="text" required>
+                        </div>
+                        <div class="input-line">
+                            <input autocomplete="none" placeholder="Name" type="text" required>
+                        </div>
+
+                        <div class="input-line w-50">
+                            <input autocomplete="none" placeholder="Email" type="email" required>
+                        </div>
+                        <div class="input-line w-50">
+                            <input autocomplete="none" placeholder=" Phone" type="text" required>
+                        </div>
+                        <div class="input-line">
+                            <input autocomplete="none" placeholder="Country" type="text" required>
+                        </div>
+                    </div>
+                    <div class="contact-form-right">
+                        <div class="input-line textarea">
+                            <!-- <div class="max-length">(max.476)</div> -->
+                            <textarea class="lines" maxlength="276" placeholder="Question" cols="30"
+                                rows="10"></textarea>
+                        </div>
+                        <div class="select-form-wrap">
+                            <div class="select-custom ">
+                                <select>
+                                    <option data-icon="images/ind-0.svg" value="0">All Industries</option>
+                                    <option data-icon="images/ind-1.svg" value="1">Beer</option>
+                                    <option data-icon="images/ind-2.svg" value="2">Cider</option>
+                                    <option data-icon="images/ind-3.svg" value="3">Wine</option>
+                                    <option data-icon="images/ind-4.svg" value="4">Coffee</option>
+                                    <option data-icon="images/ind-5.svg" value="5">Kombucha</option>
+                                    <option data-icon="images/ind-6.svg" value="6">Soft Drinks</option>
+                                    <option data-icon="images/ind-7.svg" value="7">Water</option>
+                                    <option data-icon="images/ind-8.svg" value="8">Food Products</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    @@include('./partials/elements/button.htm', {
+                    "text": "Send",
+                    "submit" : "true",
+                    "classes": ""
+                    })
+            </div>
+        </div>
     </main>
 </body>
 
