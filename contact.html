@@ -8,23 +8,22 @@
     @@include('./partials/preloader.htm')
     @@include('./partials/header.htm', { "classes": "" })
     @@include('./partials/menu.htm', {
-        "solution": "",
-        "about": "",
-        "news-act": "",
-        "resources": "",
-        "events": "",
-        "cases": "",
-        "careers": "",
-        "sites": "",
-        "contact": "active",
-        "reviews": "",
-        "team": "",
-        "faq": ""
+    "solution": "",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "",
+    "sites": "",
+    "contact": "active",
+    "reviews": "",
+    "team": "",
+    "faq": ""
     })
     @@include('./partials/search.htm')
-    <main class="main">
-
-        <div class="layout-row-content contact-tabs-container layout-row socket">
+    <main class="main contact-main">
+        <div class="layout-row-content contact-back-container layout-row socket">
             <div class="layout-col-l">
                 @@include('./partials/elements/button-link.htm', {
                 "text": "Back",
@@ -32,70 +31,136 @@
                 "classes": "btn-back"
                 })
             </div>
+        </div>
+        <div id="map"></div>
+        <div class="countrys">
+            <ul class="countrys-list">
+                <li data-lat=' 43.651070' data-long='-79.347015'>
+                    <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
+                </li>
+                <li data-lat=' 41.651070' data-long='-71.347015'>
+                    <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
+                </li>
+                <li>
+                    <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
+                </li>
+                <li>
+                    <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
+                </li>
+                <li>
+                    <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
 
-            <div class="layout-col-r">
-                <div class="contact-top-section">
-                    <div class="contact-ttl-row">
-                        <h2 class="ttl-2 ttl">Contact
-                            <span class="icon">
-                            </span>
-                        </h2>
-                        <!-- <div class="select-wrap">
-                            <div class="select-label">Country: </div>
-                            <div class="select-custom">
-                                <select>
-                                    <option value="all">All</option>
-                                    <option value="cn">Canada </option>
-                                    <option value="usa">US</option>
-                                    <option value="sw">Sweden</option>
-                                    <option value="br">Brazil</option>
-                                    <option value="cr">Czech Republic</option>
-                                </select>
-                            </div>
-                        </div> -->
+                </li>
+            </ul>
+              <!-- <li>
+                        <img src="./images/fl-6.svg" alt=""> <span class="text">Russia</span>
 
-                    </div>
+                    </li>
+                    <li>
+                        <img src="./images/fl-7.svg" alt=""> <span class="text">China</span>
+
+                    </li>
+                    <li>
+                        <img src="./images/fl-8.svg" alt=""> <span class="text">Australia</span>
+                    </li> -->
+            <div class="searchable">
+                <input type="text" placeholder="search countries">
+                <div class="searcheble-list">
+                    <ul>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                        <li> <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span></li>
+                    </ul>
+                    <div class="notFound">EMPTY</div>
                 </div>
-                @@include('./partials/contact-blocks/_contact-select-0.htm', { "id": "all", "classes": "active" })
-                @@include('./partials/contact-blocks/_contact-select-1.htm', { "id": "cn", "classes": "" })
-                @@include('./partials/contact-blocks/_contact-select-2.htm', { "id": "usa", "classes": "" })
-                @@include('./partials/contact-blocks/_contact-select-3.htm', { "id": "br", "classes": "" })
-                @@include('./partials/contact-blocks/_contact-select-4.htm', { "id": "cr", "classes": "" })
-                @@include('./partials/contact-blocks/_contact-select-5.htm', { "id": "sw", "classes": "" })
+                <div class="searcheble-close">
+                    <span></span>
+                    <span></span>
+
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="prev button-prev"></button>
+                <button class="next button-next"></button>
             </div>
         </div>
-        <!-- Footer -->
-        <footer class="footer footer-bg">
-            <div class="info-row layout-row socket">
-                <div class="layout-col-l">
-                    <h3 class="ttl-4">Becoming a customer</h3>
-                    @@include('./partials/elements/button-link.htm', {
-                    "text": "Place an order",
-                    "href" : "/contact.html",
-                    "classes": "btn-g btn-arrow-a"
-                    })
-                </div>
-                <div class="layout-col-r">
-                    <div class="layout-col-s-4">
-                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+        <ul class="contacts-list">
+            <li class="contacts-item">
+                <img src="./images/av-12.png" alt="">
+                <div class="text">
+                    <div class="top">
+                        USA (Mid—West)
+                        Territory Manager
                     </div>
-                    <div class="layout-col-s-6">
-                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
-                        <div class="with-us">
-                            <h3 class="ttl-4">Already with us</h3>
-                            @@include('./partials/elements/button-link.htm', {
-                            "text": "Tools & Resources",
-                            "href" : "/resources.html",
-                            "classes": ""
-                            })
-                        </div>
-                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow.
-                        </p>
+                    <div class="bottom">
+                        David Thennes
                     </div>
                 </div>
+            </li>
+        </ul>
+        <div class="layout-row-content contact-form-container layout-row socket">
+            <div class="btn-close"></div>
+            <div class="layout-col-l">
+
             </div>
-            @@include('./partials/footer-main.htm', { "classes": "" })
-        </footer>
+            <div class="layout-col-r">
+                <form action="">
+                    <div class="contact-form-left">
+                        <div class="input-line">
+                            <input autocomplete="none" placeholder="Company Name" type="text" required>
+                        </div>
+                        <div class="input-line">
+                            <input autocomplete="none" placeholder="Name" type="text" required>
+                        </div>
+
+                        <div class="input-line w-50">
+                            <input autocomplete="none" placeholder="Email" type="email" required>
+                        </div>
+                        <div class="input-line w-50">
+                            <input autocomplete="none" placeholder=" Phone" type="text" required>
+                        </div>
+                        <div class="input-line">
+                            <input autocomplete="none" placeholder="Country" type="text" required>
+                        </div>
+                    </div>
+                    <div class="contact-form-right">
+                        <div class="input-line textarea">
+                            <!-- <div class="max-length">(max.476)</div> -->
+                            <textarea class="lines" maxlength="276" placeholder="Question" cols="30"
+                                rows="10"></textarea>
+                        </div>
+                        <div class="select-form-wrap">
+                            <div class="select-custom ">
+                                <select>
+                                    <option data-icon="images/ind-0.svg" value="0">All Industries</option>
+                                    <option data-icon="images/ind-1.svg" value="1">Beer</option>
+                                    <option data-icon="images/ind-2.svg" value="2">Cider</option>
+                                    <option data-icon="images/ind-3.svg" value="3">Wine</option>
+                                    <option data-icon="images/ind-4.svg" value="4">Coffee</option>
+                                    <option data-icon="images/ind-5.svg" value="5">Kombucha</option>
+                                    <option data-icon="images/ind-6.svg" value="6">Soft Drinks</option>
+                                    <option data-icon="images/ind-7.svg" value="7">Water</option>
+                                    <option data-icon="images/ind-8.svg" value="8">Food Products</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    @@include('./partials/elements/button.htm', {
+                    "text": "Send",
+                    "submit" : "true",
+                    "classes": ""
+                    })
+            </div>
+        </div>
     </main>
 </body>
 
@@ -103,5 +168,6 @@
     SystemJS.import('./js/app.js');
     SystemJS.import('./js/contact.js');
 </script>
+<script src="//www.webglearth.com/v2/api.js"></script>
 
 </html>
