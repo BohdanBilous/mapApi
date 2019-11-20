@@ -17,97 +17,43 @@
     overflow: hidden;
 }
 
-.carosuel-text {
-    position: absolute;
-    padding-left: 21px;
-    left: 0;
-    top: 0;
 
-    &::after,
-    &::before {
-        position: absolute;
-        content: "";
-        left: 0;
+.chart-wrap{
+    .slide-empty {
+        display: none !important;
     }
-
-    &::after {
-
-        top: 0;
-        width: 1px;
-        height: 132px;
-        background: #dadada;
+    
+    .slide-without {
+        border-bottom: none !important;
     }
-
-    &::before {
-        top: 132px;
-        width: 13px;
-        height: 13px;
-        background-color: #1c989c;
-        border-radius: 50%;
-        transform: translateX(-50%);
-    }
-
-    .carosuel-text-inner {
-        position: absolute;
-        visibility: hidden;
-        color: #333333;
-        font-family: $fontMain;
+    
+    .slider-row {
+        transition: transform 0.4s;
         white-space: nowrap;
-
-        &.active {
-            visibility: visible;
-
-        }
-
-        &.nextAnim {
-            animation: nextFade 0.4s forwards;
-        }
-
-        &.prevAnim {
-            animation: prevFade 0.4s forwards;
-        }
-
-    }
-}
-
-.carosuel {
-    padding-top: 163px;
-}
-
-.slide-empty {
-    display: none !important;
-}
-
-.slide-without {
-    border-bottom: none !important;
-}
-
-.slider-row {
-    transition: transform 0.4s;
-    white-space: nowrap;
-
-    .slide {
-        display: inline-block;
-        width: 25%;
-        border-bottom: 1px solid rgba(#949494, 0.3);
-     
-
-        .year-slider {
-            cursor: pointer;
-            display: block;
-            padding-bottom: 16px;
-            width: fit-content;
-            transform: translateX(-50%);
-            font-family: $fontMedium;
-
-            &::after {
-                position: absolute;
-                content: "";
-                top: 25px;
-                left: 50%;
-                height: 15px;
-                width: 1px;
-                background: #dadada;
+    
+        .slide {
+            display: inline-block;
+            width: 25%;
+            border-bottom: 1px solid rgba(#949494, 0.3);
+         
+    
+            .year-slider {
+                cursor: pointer;
+                display: block;
+                padding-bottom: 16px;
+                width: fit-content;
+                transform: translateX(-50%);
+                font-family: $fontMedium;
+    
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 25px;
+                    left: 50%;
+                    height: 15px;
+                    width: 1px;
+                    background: #dadada;
+                }
             }
         }
     }
@@ -268,6 +214,63 @@
 .sites-chart {
     // overflow: scroll;
     margin-bottom: 92px;
+    .carosuel-text {
+        position: absolute;
+        padding-left: 21px;
+        left: 0;
+        top: 0;
+    
+        &::after,
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+        }
+    
+        &::after {
+    
+            top: 0;
+            width: 1px;
+            height: 132px;
+            background: #dadada;
+        }
+    
+        &::before {
+            top: 132px;
+            width: 13px;
+            height: 13px;
+            background-color: #1c989c;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+    
+        .carosuel-text-inner {
+            position: absolute;
+            visibility: hidden;
+            color: #333333;
+            font-family: $fontMain;
+            white-space: nowrap;
+    
+            &.active {
+                visibility: visible;
+    
+            }
+    
+            &.nextAnim {
+                animation: nextFade 0.4s forwards;
+            }
+    
+            &.prevAnim {
+                animation: prevFade 0.4s forwards;
+            }
+    
+        }
+    }
+    
+    .carosuel {
+        padding-top: 163px;
+    }
+    
 }
 
 .chart-wrap {

@@ -141,11 +141,10 @@ const arrayOfCountrys = {
             [47.5877, 12.0782]
         ],
         contactListItems: [{
-                img: './images/av-1.png',
-                topText: 'Sales Manager CEE',
-                bottomText: 'Zuzana Richterova'
-            }
-        ],
+            img: './images/av-1.png',
+            topText: 'Sales Manager CEE',
+            bottomText: 'Zuzana Richterova'
+        }],
         countryPoints: [{
             lat: 49.817493,
             long: 15.472962,
@@ -158,11 +157,10 @@ const arrayOfCountrys = {
             [50.08, 11.91]
         ],
         contactListItems: [{
-                img: './images/av-12.png',
-                topText: ' Business Development Director - Nordics',
-                bottomText: 'Helen Öjerson'
-            }
-        ],
+            img: './images/av-12.png',
+            topText: ' Business Development Director - Nordics',
+            bottomText: 'Helen Öjerson'
+        }],
         countryPoints: [{
             lat: 59.297098,
             long: 18.135426,
@@ -171,29 +169,58 @@ const arrayOfCountrys = {
     },
     russia: {
         countryBound: [
-            [70.1, -164.3],
-            [20.5, 49.5]
+            [73.9, 95.3],
+            [42.0, 30.3]
         ],
         contactListItems: [{
-                img: './images/av-1.png',
-                topText: ' USA (Mid—West) Territory Manager',
-                bottomText: 'David Thennes'
-            },
-            {
                 img: './images/av-2.png',
-                topText: ' USA (Mid—West) Territory Manager',
-                bottomText: 'David Thennes'
+                topText: 'Key Account Manager',
+                bottomText: 'Denis Abramov'
             }, {
-                img: './images/av-3.png',
-                topText: ' USA (Mid—West) Territory Manager',
-                bottomText: 'David Thennes'
+                img: './images/ava-3.png',
+                topText: 'Sales Manager',
+                bottomText: 'Anna Klimova'
+            }, {
+                img: './images/ava-4.png',
+                topText: 'New Products Sales Manager',
+                bottomText: 'Ludmila Stepanchikova'
+            }, {
+                img: './images/ava-2.png',
+                topText: 'Quality Specialist',
+                bottomText: 'Roksana Filatova'
+            }, {
+                img: './images/ava-5.png',
+                topText: 'Office',
+                bottomText: '115114, г. Москва, ул. Летниковская, д. 2, стр. 1, офис 453'
             }
+
         ],
         countryPoints: [{
-            lat: 43.651070,
-            long: -79.347015,
-            pointText: 'PointText'
-        }]
+                lat: 61.971234,
+                long: 56.794679,
+                pointText: 'Russia'
+            },
+            {
+                lat: 59.879290,
+                long: 30.444284,
+                pointText: 'Russia'
+            },
+            {
+                lat: 56.847658,
+                long: 35.897066,
+                pointText: 'Russia'
+            },
+            {
+                lat: 57.121705,
+                long: 37.690830,
+                pointText: 'Russia'
+            },
+            {
+                lat: 55.728230,
+                long: 37.644810,
+                pointText: 'Office'
+            }
+        ]
     },
     china: {
         countryBound: [
@@ -201,23 +228,14 @@ const arrayOfCountrys = {
             [21.1, 76.8]
         ],
         contactListItems: [{
-                img: './images/av-12.png',
-                topText: ' USA (Mid—West) Territory Manager',
-                bottomText: 'David Thennes'
-            },
-            {
-                img: './images/av-12.png',
-                topText: ' USA (Mid—West) Territory Manager',
-                bottomText: 'David Thennes'
-            }, {
-                img: './images/av-12.png',
-                topText: ' USA (Mid—West) Territory Manager',
-                bottomText: 'David Thennes'
-            }
-        ],
+            img: './images/ava-8.png',
+            topText: 'Head of Sales - China',
+            bottomText: 'Grayson Liu'
+        }],
         countryPoints: [{
-            lat: 43.651070,
-            long: -79.347015
+            lat: 35.861660,
+            long: 104.195396,
+            pointText: 'China'
         }]
     },
     australia: {
@@ -226,24 +244,14 @@ const arrayOfCountrys = {
             [-45.2, 113.0]
         ],
         contactListItems: [{
-                img: './images/av-1.png',
-                topText: ' USA (Mid—West) Territory Manager',
-                bottomText: 'David Thennes'
-            },
-            {
-                img: './images/av-2.png',
-                topText: ' USA (Mid—West) Territory Manager',
-                bottomText: 'David Thennes'
-            }, {
-                img: './images/av-3.png',
-                topText: ' USA (Mid—West) Territory Manager',
-                bottomText: 'David Thennes'
-            }
-        ],
+            img: './images/av-1.png',
+            topText: 'Head of Sales Australia, New Zealand and Oceania',
+            bottomText: 'Troy Pixley'
+        }],
         countryPoints: [{
-            lat: 43.651070,
-            long: -79.347015,
-            pointText: 'PointText'
+            lat: -20.375527,
+            long: 129.414827,
+            pointText: 'Australia'
         }]
     }
 }
@@ -334,10 +342,7 @@ window.addEventListener("load", function () {
 
     const animateToMap = () => {
         countysFly.forEach((item, i) => {
-
             const contactList = document.querySelector('.contacts-list');
-
-
             item.addEventListener('click', () => {
                 let countryName = item.getAttribute('data-country');
                 if (countryName) {
