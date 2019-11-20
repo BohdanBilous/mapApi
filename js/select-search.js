@@ -30,12 +30,19 @@ export class selectSearch {
         });
     }
     clickHandler() {
+        // document.querySelectorAll('div').forEach( el => {
+        //     el.addEventListener('click', e => {
+        //         alert(`Hiciste click en el id ${e.target.id}`);
+        //         e.stopPropagation();
+        //     });
+        // });
         this.selectsContainer.querySelector('input').addEventListener('click', (e) => {
             this.showWraper();
             const  notActive =document.querySelectorAll(`${this.selectedContainerElement} li.not-active`);
             this.activeElements.length === notActive.length ? this.empltyElement.classList.add('active'): this.empltyElement.classList.remove('active');
         })
         this.selectClose.addEventListener('click', (e) => {
+            this.selectsContainer.querySelector("input").value ='';
             this.hideWraper();
         });
         

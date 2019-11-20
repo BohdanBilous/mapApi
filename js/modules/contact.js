@@ -20,40 +20,234 @@ import {
 import {
     selectSwitcher
 } from '../select-switch';
-const arrayOfBoundys = [
-    [
-        [33, -53.59],
-        [58.32, -140.9]
-    ],
-    [
-        [23, -71.59],
-        [44.32, -123]
-    ],
-    [
-        [-3.38, -31.94],
-        [-29.6, -70.43]
-    ],
-    [
-        [46.0536, 18.8568],
-        [43.5877, 12.0782]
-    ],
-    [
-        [64.83, 23.83],
-        [50.08, 11.91]
-    ],
-    [
-        [70.1, -164.3],
-        [20.5, 49.5]
-    ],
-    [
-        [46.8, 134.6],
-        [21.1, 76.8]
-    ],
-    [
-        [-16.9, 156.3, ],
-        [-45.2, 113.0]
-    ]
-];
+
+const arrayOfCountrys = {
+    canada: {
+        countryBound: [
+            [33, -53.59],
+            [58.32, -140.9]
+        ],
+        contactListItems: [{
+            img: './images/av-12.png',
+            topText: 'Canada Consultant ',
+            bottomText: 'Andres Jensen'
+        }],
+        countryPoints: [{
+            lat: 43.651070,
+            long: -79.347015,
+            pointText: 'Canada '
+        }]
+    },
+    usa: {
+        countryBound: [
+            [19, -71.59],
+            [36.32, -123]
+        ],
+        contactListItems: [{
+                img: './images/av-1.png',
+                topText: 'USA: Florida President - Americas',
+                bottomText: 'Chris McEwan'
+            },
+            {
+                img: './images/av-2.png',
+                topText: 'USA (North-East) Territory Manager',
+                bottomText: 'Dan Moss'
+            }, {
+                img: './images/av-4.png',
+                topText: 'USA (Mid-West)  Territory Manager',
+                bottomText: 'David Thenness'
+            }, {
+                img: './images/ava-3.png',
+                topText: 'USA (South-East)  Territory Manager',
+                bottomText: 'Kelly Thompson'
+            }, {
+                img: './images/ava-4.png',
+                topText: 'USA (South) Sales and Marketing Specialist ',
+                bottomText: 'Tammy Duhaime'
+            }, {
+                img: './images/ava-5.png',
+                topText: 'USA (West) Senior Sales Manager ',
+                bottomText: 'Scott Fore'
+            }
+        ],
+        countryPoints: [{
+                lat: 27.6648,
+                long: -81.5158,
+                pointText: 'Florida'
+            },
+            {
+                lat: 21.4691,
+                long: -78.6569,
+                pointText: 'Caribbean '
+            },
+            {
+                lat: 40.7128,
+                long: -74.0060,
+                pointText: 'USA (North-East)'
+            },
+            {
+                lat: 42.3148,
+                long: -85.6024,
+                pointText: 'USA (Mid-West)'
+            },
+            {
+                lat: 40.4173,
+                long: -82.9071,
+                pointText: 'USA (South-East)'
+            },
+            {
+                lat: 31.9686,
+                long: -99.9018,
+                pointText: 'USA (South)'
+            },
+            {
+                lat: 36.7783,
+                long: -119.4179,
+                pointText: 'USA (West)'
+            }
+        ]
+    },
+    brazil: {
+        countryBound: [
+            [-10.38, -31.94],
+            [-48.6, -70.43]
+        ],
+        contactListItems: [{
+            img: './images/av-1.png',
+            topText: 'General Manager Brazil',
+            bottomText: 'Ricardo Vieira'
+        }],
+        countryPoints: [{
+            lat: -14.235004,
+            long: -51.9253,
+            pointText: 'Brazil'
+        }, {
+            lat: -34.920345,
+            long: -57.969559,
+            pointText: 'Argentina'
+        }, {
+            lat: -32.522778,
+            long: -55.765835,
+            pointText: 'Uruguay'
+        }, {
+            lat: -23.442503,
+            long: -58.443832,
+            pointText: 'Paraguay'
+        }]
+    },
+    czech: {
+        countryBound: [
+            [50.0536, 18.8568],
+            [47.5877, 12.0782]
+        ],
+        contactListItems: [{
+                img: './images/av-1.png',
+                topText: 'Sales Manager CEE',
+                bottomText: 'Zuzana Richterova'
+            }
+        ],
+        countryPoints: [{
+            lat: 49.817493,
+            long: 15.472962,
+            pointText: 'Czech Republic'
+        }]
+    },
+    sweden: {
+        countryBound: [
+            [64.83, 23.83],
+            [50.08, 11.91]
+        ],
+        contactListItems: [{
+                img: './images/av-12.png',
+                topText: ' Business Development Director - Nordics',
+                bottomText: 'Helen Öjerson'
+            }
+        ],
+        countryPoints: [{
+            lat: 59.297098,
+            long: 18.135426,
+            pointText: 'Sweden'
+        }]
+    },
+    russia: {
+        countryBound: [
+            [70.1, -164.3],
+            [20.5, 49.5]
+        ],
+        contactListItems: [{
+                img: './images/av-1.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            },
+            {
+                img: './images/av-2.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }, {
+                img: './images/av-3.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }
+        ],
+        countryPoints: [{
+            lat: 43.651070,
+            long: -79.347015,
+            pointText: 'PointText'
+        }]
+    },
+    china: {
+        countryBound: [
+            [46.8, 134.6],
+            [21.1, 76.8]
+        ],
+        contactListItems: [{
+                img: './images/av-12.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            },
+            {
+                img: './images/av-12.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }, {
+                img: './images/av-12.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }
+        ],
+        countryPoints: [{
+            lat: 43.651070,
+            long: -79.347015
+        }]
+    },
+    australia: {
+        countryBound: [
+            [-16.9, 156.3, ],
+            [-45.2, 113.0]
+        ],
+        contactListItems: [{
+                img: './images/av-1.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            },
+            {
+                img: './images/av-2.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }, {
+                img: './images/av-3.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }
+        ],
+        countryPoints: [{
+            lat: 43.651070,
+            long: -79.347015,
+            pointText: 'PointText'
+        }]
+    }
+}
+
 window.addEventListener("load", function () {
     //Variables
     const form = document.querySelector('.contact-form-container');
@@ -62,8 +256,16 @@ window.addEventListener("load", function () {
     let map;
 
 
-    const openForm = () => form.classList.add('active');
-    const closeForm = () => form.classList.remove('active');
+    const openForm = () => {
+        form.classList.add('active');
+        document.body.classList.add('form-active');
+    };
+    const closeForm = () => {
+        const persone = document.querySelectorAll('.contacts-item');
+        form.classList.remove('active');
+        document.body.classList.remove('form-active');
+        persone.forEach(item => item.classList.remove('active'));
+    };
 
     // Select Custom
 
@@ -117,7 +319,10 @@ window.addEventListener("load", function () {
             style: 'https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz',
         }).addTo(map);
         animateToMap();
-        addBounds(arrayOfBoundys[0]);
+        addBounds([
+            [33, -53.59],
+            [58.32, -140.9]
+        ]);
     }
     const addBounds = (bounds) => {
         map.panInsideBounds(bounds, {
@@ -129,25 +334,80 @@ window.addEventListener("load", function () {
 
     const animateToMap = () => {
         countysFly.forEach((item, i) => {
-            const persone = document.querySelectorAll('.contacts-item')[0];
+
+            const contactList = document.querySelector('.contacts-list');
+
+
             item.addEventListener('click', () => {
-                let lat = item.getAttribute('data-lat');
-                let long = item.getAttribute('data-long');
-                toogleActive(item);
-                addBounds(arrayOfBoundys[i]);
-                addPoint(`<b>${item.querySelector('span').innerHTML}</b>`, [lat, long])
-                persone.classList.add('active');
+                let countryName = item.getAttribute('data-country');
+                if (countryName) {
+                    const {
+                        countryBound,
+                        countryPoints,
+                        contactListItems
+                    } = arrayOfCountrys[countryName];
+                    contactList.classList.remove('active');
+                    contactList.innerHTML = '';
+                    deletePoints();
+                    toogleActive(item);
+                    countryBound && addBounds(countryBound);
+                    countryPoints && countryPoints.map(point => addPoint(point.pointText, [point.lat, point.long]));
+                    contactListItems && contactListItems.map(item => {
+                        let newPersone = createPersones(item.img, item.topText, item.bottomText);
+                        appendHtml(contactList, newPersone)
+                    });
+                    animatePersons();
+                    closeForm();
+                }
             })
-            persone.addEventListener('click', () => openForm());
+
         });
     }
-
+    const animatePersons = () => {
+        const contactList = document.querySelector('.contacts-list');
+        const contactHelp = document.querySelector('.contact-help');
+        const persone = document.querySelectorAll('.contacts-item');
+        persone.forEach(item => {
+            item.addEventListener('click', (e) => {
+                openForm();
+                item.classList.add('active');
+                contactList.scroll(0, 0);
+            });
+        });
+        setTimeout(function () {
+            contactList.classList.add('active');
+            contactHelp.classList.add('active');
+        }, 500)
+    }
+    const appendHtml = (el, str) => {
+        let element = document.createElement('li');
+        element.innerHTML = str;
+        element.classList.add('contacts-item');
+        while (element.children.length > 0) {
+            el.appendChild(element.children[0]);
+        }
+    }
+    const createPersones = (img, top, bottom) => {
+        return `
+                <li class="contacts-item">
+                <img src="${img}" alt="">
+                <div class="text">
+                    <div class="top">
+                        ${top}
+                    </div>
+                    <div class="bottom">
+                        ${bottom}
+                    </div>
+                </div>
+            </li>
+                `
+    }
     const deletePoints = () => {
         const markers = document.querySelectorAll('.we-pm-icon');
         markers.forEach(item => item.parentNode.remove());
     }
     const addPoint = (text, position) => {
-        deletePoints();
+
         let marker = WE.marker(position).addTo(map);
         marker.bindPopup(text, {
             maxWidth: 150,
@@ -160,10 +420,10 @@ window.addEventListener("load", function () {
     const toogleActive = (country) => {
         let countrys = country.parentNode.childNodes;
         countrys.forEach(item => {
-            item.classList.add('not-active');
+            item.classList.add('not_active');
             item.classList.remove('active');
         })
-        country.classList.remove('not-active');
+        country.classList.remove('not_active');
         country.classList.add('active');
     }
     clickHandle();
