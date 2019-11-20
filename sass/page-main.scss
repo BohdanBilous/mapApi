@@ -636,16 +636,16 @@ $animateDur: 0.30s;
                 padding: 30px 0 0;
                 justify-content: flex-start;
 
-                &::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    bottom: 0;
-                    left: 25px;
-                    right: 25px;
-                    height: 1px;
-                    background-color: $colorBorder;
-                }
+                // &::after {
+                //     content: "";
+                //     display: block;
+                //     position: absolute;
+                //     bottom: 0;
+                //     left: 25px;
+                //     right: 25px;
+                //     height: 1px;
+                //     background-color: $colorBorder;
+                // }
 
                 .indicator {
                     width: 35px;
