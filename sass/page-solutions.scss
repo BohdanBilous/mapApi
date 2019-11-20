@@ -282,9 +282,15 @@
 
 @include mobile {
     .fader-s {
+        padding-top: 25px;
+
         .slides {
             height: 430px;
         }
+    }
+
+    .customers-wrap {
+        margin-bottom: 50px;
     }
 
     .customers-top {

@@ -8,20 +8,20 @@
     @@include('./partials/preloader.htm')
     @@include('./partials/header.htm', { "classes": "" })
     @@include('./partials/menu.htm', {
-    "solution": "active",
-    "about": "",
-    "news-act": "",
-    "resources": "",
-    "events": "",
-    "cases": "",
-    "careers": "",
-    "sites": "",
-    "contact": "",
-    "reviews": "",
-    "team": "",
-    "faq": ""
+        "solution": "active",
+        "about": "",
+        "news-act": "",
+        "resources": "",
+        "events": "",
+        "cases": "",
+        "careers": "",
+        "sites": "",
+        "contact": "",
+        "reviews": "",
+        "team": "",
+        "faq": ""
     })
-    @@include('./partials/search.htm')
+    
     <main class="main solution-open-page jars">
 
         <!-- Top Screen -->
@@ -144,7 +144,6 @@
 
         <!-- Product Animate -->
         <div class="prod-anim-wrap socket">
-            <img class="object-image" src="images/jar.png" alt="">    
             <aside class="prod-anim-side left">
                 <div class="ttl ttl-3">Wide-Mouth jars.</div>
                 <p>The wide screw thread makes both filling and dispensing easier and is ideal for powdered products that require a scoop.</p>
@@ -161,7 +160,6 @@
                     <div class="ttl ttl-4">Product Protection</div>
                     <p>Our jars are made of high-quality food grade PET and are BPA free.</p>
                     <p>Stackable base design ideal for storage and transportation.</p>
-                
                 </aside>
             </div>
 
@@ -172,21 +170,17 @@
                     <p>Labelling: Recessed label area to avoid damage.</p>
                 </aside>
             </div>
-            
-            <!-- Parameters -->
-            <div id="parameters" class="prod-object-parameters">
-                @@include('./partials/elements/par.htm', { 
-                    "classes": "par-item-1", 
-                    "textTitle" : "28mm, BPF/PCO 1810 neck finish <br> with enlarged support ring", 
-                    "textDesc": "" ,
-                    "dir": "from-top-left"
-                })
-                @@include('./partials/elements/par.htm', { 
-                    "classes": "par-item-2", 
-                    "textTitle" : "Base designed to avoidstress", 
-                    "textDesc": " cracking and deformation" ,
-                    "dir": "from-top-right"
-                })
+
+            <!-- Object -->
+            <div class="prod-object-socket">
+                <div id="jars-top" class="prod-object-el"></div>
+                <div id="jars-bottle" class="prod-object-el"></div>
+            </div>
+
+            <!-- Buttons Mobile -->
+            <div class="prod-object-buttons">
+                <button class="btn-dir up"></button>
+                <button class="btn-dir down"></button>
             </div>
         </div>
 
@@ -646,11 +640,13 @@
             </div>
         </footer>
     </main>
+    @@include('./partials/search.htm')
 </body>
 
 <script>
     SystemJS.import('./js/app.js');
     SystemJS.import('./js/solutions-open.js');
+    SystemJS.import('./js/solutions-open-jars.js');
 </script>
 
 </html>

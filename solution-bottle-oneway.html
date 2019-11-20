@@ -21,7 +21,7 @@
         "team": "",
         "faq": ""
     })
-    @@include('./partials/search.htm')
+    
     <main class="main solution-open-page bottle-oneway">
 
         <!-- Top Screen -->
@@ -566,12 +566,13 @@
         </footer>
     </main>
 
-    @@include('./partials/_careers-popup.htm', { "classes": "" })
+    @@include('./partials/search.htm')
 </body>
 
 <script>
     SystemJS.import('./js/app.js');
     SystemJS.import('./js/solutions-open.js');
+    
 </script>
 
 </html>

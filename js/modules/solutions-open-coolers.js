@@ -1,14 +1,18 @@
-import { desktop } from "../generic-helpers";
+import { desktop, html } from "../generic-helpers";
 import ScrollMagic from "scrollmagic";
-import { TweenMax, TimelineMax, Cubic } from "gsap";
+import { TweenMax, TimelineMax } from "gsap";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators";
-import { Back } from "gsap/EasePack";
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 window.addEventListener("load", function() {
-  if (desktop) {
+  const iPadProLand =
+    window.matchMedia(
+      "(min-width: 1365px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)"
+    ).matches && html.classList.contains("touchevents");
+
+  if (desktop && !iPadProLand) {
     let controller = new ScrollMagic.Controller();
     const bottle = "#cooler-bottle";
     const box = "#cooler-box";
@@ -89,7 +93,7 @@ window.addEventListener("load", function() {
     // Bubbles
     new ScrollMagic.Scene({
       triggerElement: box,
-      duration: 500,
+      duration: 700,
       offset: -100
     })
       .setClassToggle(bottle, "show-bubbles")
@@ -116,40 +120,28 @@ window.addEventListener("load", function() {
       .addTo(controller);
   } else {
     const distFromTop = 121;
-    // const distFromBtm = 134;
     const steps = 3;
     const btnDir = document.querySelectorAll(".btn-dir");
     const elementTop = document.querySelector("#cooler-bottle");
-    // const elementBtm = document.querySelector("#hybrid-btm");
     let stepCount = 0;
     let distCurTop = 0;
-    // let distCurBtm = 0;
 
     btnDir.forEach(btn => {
       btn.addEventListener("click", e => {
         const target = e.target;
         const stepFromTop = distFromTop / steps;
-        // const stepFromBtm = distFromBtm / steps;
 
         if (target.classList.contains("down")) {
           if (stepCount < 3) {
             stepCount++;
-            // From Top
             distCurTop = distCurTop + stepFromTop;
             elementTop.style.transform = `translateY(${distCurTop}px) rotate(180deg)`;
-            // From Bottom
-            // distCurBtm = distCurBtm - stepFromBtm;
-            // elementBtm.style.transform = `translateY(${distCurBtm}px)`;
           }
         } else if (target.classList.contains("up")) {
           if (stepCount != 0) {
             stepCount--;
-            // To Top
             distCurTop = distCurTop - stepFromTop;
             elementTop.style.transform = `translateY(${distCurTop}px) rotate(180deg)`;
-            // To Bottom
-            // distCurBtm = distCurBtm + stepFromBtm;
-            // elementBtm.style.transform = `translateY(${distCurBtm}px)`;
           }
         }
       });

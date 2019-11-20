@@ -411,7 +411,7 @@ $scaleCoef: 0.66;
     position: absolute;
     transition: transform 0.2s $easing;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100% !important;
 
     svg {
         width: 100%;
@@ -463,6 +463,10 @@ $scaleCoef: 0.66;
     width: 300px;
     height: 348px;
     background-image: url(../images/obj-hybrid-btm.svg);
+
+    @include mobile {
+        left: 13%;
+    }
 }
 
 .prod-object-parameters {
@@ -682,7 +686,7 @@ $leftOffset: 270px;
     }
 }
 
-@include tablet {
+@include tablet--ipadPro {
     .prod-anim-wrap {
         padding-bottom: 100px;
     }
@@ -764,6 +768,11 @@ $leftOffset: 270px;
         width: auto;
         transform: none;
     }
+
+    #hybrid-top-2 {
+        top: -7px;
+        left: 26px;
+    }
 }
 
 // TECHNICAL SPEC
@@ -782,6 +791,7 @@ $leftOffset: 270px;
 .tech-spec-main-inner {
     display: flex;
     padding: 24px 0 26px;
+    background-color: $colorBg;
 
     &.hide {
         display: none;
@@ -933,6 +943,7 @@ $leftOffset: 270px;
     }
 
     .tech-spec-drop {
+        @include hideScrollbar;
         overflow-x: auto;
 
         ul li {
@@ -1091,6 +1102,7 @@ $leftOffset: 270px;
     }
 
     .tare-scroll-wrap {
+        @include hideScrollbar;
         overflow-x: auto;
         margin-right: -25px;
     }
@@ -2331,8 +2343,9 @@ $leftOffset: 270px;
         }
 
         .global-s-row .global-rewiew-wrap {
+            @include hideScrollbar;
             width: 100%;
-            overflow: scroll;
+            overflow-x: scroll;
 
             .global-rewiew {
                 width: 100%;
@@ -2637,6 +2650,25 @@ $leftOffset: 270px;
 }
 
 
+// JARS
+#jars-top {
+    top: 150px;
+    left: 61px;
+    width: 248px; 
+    height: 187px;
+    z-index: 1;
+    background-image: url(../images/jar_1.svg);
+}
+
+#jars-bottle {
+    top: 151px;
+    left: 0;
+    width: 363px; 
+    height: 519px;
+    background-image: url(../images/jar_2.svg);
+    background-size: 100% auto !important;
+}
+
 .solution-open-page.jars .prod-review-wrap .image {
     width: 435px;
     height: auto;
@@ -2647,27 +2679,25 @@ $leftOffset: 270px;
 .jars {
 
     .prod-anim-wrap {
+        overflow: hidden;
         min-height: 1050px;
+        margin-bottom: -58px;
 
-        .object-image {
-            position: absolute;
-            width: 500px;
-            top: 180px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            @include mobile {
-                top: 300px;
-            }
+        @media screen and (max-width: 1280px) {
+            min-height: 1350px;
         }
     }
 
-    .prod-animate-section {
-        opacity: 1;
+    .prod-object-el {
+        transform-origin: top;
     }
 
+    .prod-object-socket {
+        width: 363px;
+        height: 100px;
+    }
     .prod-animate-section-1 {
-        top: 400px;
+        top: 450px;
         left: 0;
 
         .prod-a-desc {
@@ -2676,7 +2706,7 @@ $leftOffset: 270px;
     }
 
     .prod-animate-section-2 {
-        top: 600px;
+        top: 630px;
         left: 0;
 
         .prod-a-desc {
@@ -2697,6 +2727,16 @@ $leftOffset: 270px;
 
     .tech-spec-wrap {
         margin-bottom: 85px;
+
+        &::after {
+            @extend .ps;
+            width: 100%;
+            height: 85px;
+            top: auto;
+            bottom: -85px;
+            left: 0;
+            background-color: $colorBg;
+        }
     }
 
     .prod-review-wrap .prod-a-desc-list {
@@ -2728,17 +2768,43 @@ $leftOffset: 270px;
     }
 }
 
-@include tablet {
+@include tablet--ipadPro {
     .solution-open-page.jars .prod-review-wrap .image {
         position: relative;
         margin: 0 auto;
         width: 440px;
         max-width: 90%;
+    }
 
+    #jars-top {
+        top: 0;
+        left: 33px;
+        width: 136px;
+        height: 103px;
+    }
 
+    #jars-bottle {
+        width: 200px;
+        height: 286px;
+        top: auto;
+        bottom: 0;
     }
 
     .jars {
+
+        .prod-anim-wrap {
+            min-height: auto;
+        }
+
+        .prod-object-socket {
+            width: 200px;
+            height: 541px;
+        }
+
+        .prod-object-buttons {
+            top: 500px;
+        }
+        
         .solution-p-filter--buttons {
             flex-wrap: wrap;
         }
@@ -2755,7 +2821,6 @@ $leftOffset: 270px;
             }
         }
     }
-
 }
 
 @include mobile {
@@ -2928,10 +2993,6 @@ $leftOffset: 270px;
         display: none;
     }
 
-    .prod-review-wrap .text-part .ttl-wrap .pages {
-        display: block;
-    }
-
     .safety-img {
         position: absolute;
         bottom: -5px;
@@ -2973,17 +3034,6 @@ $leftOffset: 270px;
         }
     }
 
-    // @media screen and (max-width: 1290px) {
-    //     .tech-spec-wrap {
-    //         // display: none;
-
-    //         // height: auto;
-    //         // display: flex;
-    //         // flex-direction: row;
-    //         // justify-content: flex-start;
-    //     }
-    // }
-
     @media screen and (max-width: 1255px) {
         .safety-img {
             position: relative;
@@ -3007,9 +3057,6 @@ $leftOffset: 270px;
     }
 
     @media screen and (max-width: 660px) {
-        // .tech-spec-wrap {
-        //     display: none;
-        // }
 
         .safety-img {
             position: static;
@@ -3029,7 +3076,22 @@ $leftOffset: 270px;
     }
 }
 
-@include tablet {
+@include tablet--ipadPro {
+    #cooler-bottle {
+        top: 0;
+        width: 155px;
+        height: 326px;
+        transform: rotate(180deg);
+    }
+
+    #cooler-box {
+        top: auto;
+        bottom: 0;
+        left: -9px;
+        width: 175px;
+        height: 220px;
+    }
+
     .solution-open-page.cooler {
         .prod-anim-wrap {
             min-height: auto;
@@ -3038,21 +3100,6 @@ $leftOffset: 270px;
         .prod-object-socket {
             width: 155px;
             height: 550px;
-        }
-
-        #cooler-bottle {
-            top: 0;
-            width: 155px;
-            height: 326px;
-            transform: rotate(180deg);
-        }
-
-        #cooler-box {
-            top: auto;
-            bottom: 0;
-            left: -9px;
-            width: 175px;
-            height: 220px;
         }
     }
 }

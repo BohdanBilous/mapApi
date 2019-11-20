@@ -22,7 +22,6 @@ $dotsLiWidth: 250px;
 
 // Media Query
 @mixin mobile {
-
     @media screen and (max-width: 767px),
     screen and (max-width: 825px) and (orientation: landscape) {
         @content;
@@ -46,6 +45,25 @@ $dotsLiWidth: 250px;
         @content;
     }
 }
+
+@mixin tablet--ipadPro {
+    @media screen and (max-width: 1150px),
+           only screen 
+           and (min-width: 1365px) 
+           and (max-width: 1366px) 
+           and (orientation: landscape) 
+           and (-webkit-min-device-pixel-ratio: 1.5) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 767px),
+    screen and (max-width: 825px) and (orientation: landscape) {
+        @content;
+    }
+}
+
 
 @mixin tablet-only {
 
@@ -628,5 +646,15 @@ $dotsLiWidth: 250px;
     &::after {
         width: 1px;
         height: 7px;
+    }
+}
+
+@mixin hideScrollbar {
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        background-color: transparent;
     }
 }
