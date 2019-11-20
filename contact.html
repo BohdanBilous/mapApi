@@ -8,23 +8,22 @@
     @@include('./partials/preloader.htm')
     @@include('./partials/header.htm', { "classes": "" })
     @@include('./partials/menu.htm', {
-        "solution": "",
-        "about": "",
-        "news-act": "",
-        "resources": "",
-        "events": "",
-        "cases": "",
-        "careers": "",
-        "sites": "",
-        "contact": "active",
-        "reviews": "",
-        "team": "",
-        "faq": ""
+    "solution": "",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "",
+    "sites": "",
+    "contact": "active",
+    "reviews": "",
+    "team": "",
+    "faq": ""
     })
     @@include('./partials/search.htm')
-    <main class="main">
-
-        <div class="layout-row-content contact-tabs-container layout-row socket">
+    <main class="main contact-main">
+        <div class="layout-row-content contact-back-container layout-row socket">
             <div class="layout-col-l">
                 @@include('./partials/elements/button-link.htm', {
                 "text": "Back",
@@ -32,70 +31,159 @@
                 "classes": "btn-back"
                 })
             </div>
+        </div>
+        <div id="map"></div>
+        <div class="countrys">
+            <ul class="countrys-list">
+                <li data-country="canada">
+                    <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
+                </li>
+                <li data-country="usa">
+                    <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
+                </li>
+                <li data-country="brazil">
+                    <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
+                </li>
+                <li data-country="czech">
+                    <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
+                </li>
+                <li  data-country="sweden">
+                    <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
 
-            <div class="layout-col-r">
-                <div class="contact-top-section">
-                    <div class="contact-ttl-row">
-                        <h2 class="ttl-2 ttl">Contact
-                            <span class="icon">
-                            </span>
-                        </h2>
-                        <!-- <div class="select-wrap">
-                            <div class="select-label">Country: </div>
-                            <div class="select-custom">
-                                <select>
-                                    <option value="all">All</option>
-                                    <option value="cn">Canada </option>
-                                    <option value="usa">US</option>
-                                    <option value="sw">Sweden</option>
-                                    <option value="br">Brazil</option>
-                                    <option value="cr">Czech Republic</option>
-                                </select>
-                            </div>
-                        </div> -->
-
-                    </div>
+                </li>
+            </ul>
+           
+            <div class="searchable">
+                <input type="text" placeholder="search countries">
+                <div class="searcheble-list">
+                    <ul>
+                        <li data-country="russia">
+                            <img src="./images/fl-6.svg" alt=""> <span class="text">Russia</span>
+    
+                        </li>
+                        <li data-country="china">
+                            <img src="./images/fl-7.svg" alt=""> <span class="text">China</span>
+    
+                        </li>
+                        <li data-country="australia">
+                            <img src="./images/fl-8.svg" alt=""> <span class="text">Australia</span>
+                        </li>
+                    </ul>
+                    <div class="notFound">EMPTY</div>
                 </div>
-                @@include('./partials/contact-blocks/_contact-select-0.htm', { "id": "all", "classes": "active" })
-                @@include('./partials/contact-blocks/_contact-select-1.htm', { "id": "cn", "classes": "" })
-                @@include('./partials/contact-blocks/_contact-select-2.htm', { "id": "usa", "classes": "" })
-                @@include('./partials/contact-blocks/_contact-select-3.htm', { "id": "br", "classes": "" })
-                @@include('./partials/contact-blocks/_contact-select-4.htm', { "id": "cr", "classes": "" })
-                @@include('./partials/contact-blocks/_contact-select-5.htm', { "id": "sw", "classes": "" })
+                <div class="searcheble-close">
+                    <span></span>
+                    <span></span>
+
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="prev button-prev"></button>
+                <button class="next button-next"></button>
             </div>
         </div>
-        <!-- Footer -->
-        <footer class="footer footer-bg">
-            <div class="info-row layout-row socket">
-                <div class="layout-col-l">
-                    <h3 class="ttl-4">Becoming a customer</h3>
-                    @@include('./partials/elements/button-link.htm', {
-                    "text": "Place an order",
-                    "href" : "/contact.html",
-                    "classes": "btn-g btn-arrow-a"
-                    })
-                </div>
-                <div class="layout-col-r">
-                    <div class="layout-col-s-4">
-                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+        <div class="contact-help">
+            <span>County</span>
+            <span>Contact </span>
+        </div>
+        <ul class="contacts-list">
+            <li class="contacts-item">
+                <img src="./images/av-12.png" alt="">
+                <div class="text">
+                    <div class="top">
+                        USA (Mid—West)
+                        Territory Manager
                     </div>
-                    <div class="layout-col-s-6">
-                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
-                        <div class="with-us">
-                            <h3 class="ttl-4">Already with us</h3>
-                            @@include('./partials/elements/button-link.htm', {
-                            "text": "Tools & Resources",
-                            "href" : "/resources.html",
-                            "classes": ""
-                            })
-                        </div>
-                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow.
-                        </p>
+                    <div class="bottom">
+                        David Thennes
                     </div>
                 </div>
+            </li>
+            <li class="contacts-item">
+                <img src="./images/av-12.png" alt="">
+                <div class="text">
+                    <div class="top">
+                        USA (Mid—West)
+                        Territory Manager
+                    </div>
+                    <div class="bottom">
+                        David Thennes
+                    </div>
+                </div>
+            </li>
+            <li class="contacts-item">
+                <img src="./images/av-12.png" alt="">
+                <div class="text">
+                    <div class="top">
+                        USA (Mid—West)
+                        Territory Manager
+                    </div>
+                    <div class="bottom">
+                        David Thennes
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="layout-row-content contact-form-container layout-row socket">
+            <div class="btn-close"></div>
+            <div class="layout-col-l">
+
             </div>
-            @@include('./partials/footer-main.htm', { "classes": "" })
-        </footer>
+            <div class="layout-col-r">
+                <form action="">
+                    <div class="contact-form-left">
+                        <div class="input-line">
+                            <input autocomplete="none" placeholder="Company Name" type="text" required>
+                        </div>
+                        <div class="input-line">
+                            <input autocomplete="none" placeholder="Name" type="text" required>
+                        </div>
+
+                        <div class="input-line w-50">
+                            <input autocomplete="none" placeholder="Email" type="email" required>
+                        </div>
+                        <div class="input-line w-50">
+                            <input autocomplete="none" placeholder=" Phone" type="text" required>
+                        </div>
+                        <div class="input-line">
+                            <input autocomplete="none" placeholder="Country" type="text" required>
+                        </div>
+                        <div class="attach-file">
+                            <input type="file" name="file" id="file" class="inputfile" required />
+                            <label for="file">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 11 14">
+                                    <path fill="#a4a4a4"
+                                        d="M9.943 11.64a.522.522 0 0 1-.52.52h-7.45a.522.522 0 0 1-.52-.52V2.443c0-.288.233-.521.52-.521h1.564v-.495a.522.522 0 0 1 1.042 0V5.1a.522.522 0 0 1-1.042 0V2.964H2.495V5.1c0 .862.7 1.563 1.563 1.563.862 0 1.563-.7 1.563-1.563V1.922h3.801c.287 0 .521.233.521.52zM5.522.88A1.566 1.566 0 0 0 4.058-.138c-.67 0-1.242.423-1.464 1.016h-.62C1.11.88.41 1.581.41 2.443v9.197c0 .862.701 1.563 1.563 1.563h7.45c.861 0 1.562-.701 1.562-1.563V2.443c0-.862-.701-1.564-1.563-1.564z" />
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="contact-form-right">
+                        <div class="input-line textarea">
+                            <!-- <div class="max-length">(max.476)</div> -->
+                            <textarea class="lines" maxlength="276" placeholder="Question" cols="30"
+                                rows="10"></textarea>
+                        </div>
+                        <div class="select-form-wrap w-50">
+                            <div class="select-custom ">
+                                <select>
+                                    <option data-icon="images/ind-0.svg" value="0">All Industries</option>
+                                    <option data-icon="images/ind-1.svg" value="1">Beer</option>
+                                    <option data-icon="images/ind-2.svg" value="2">Cider</option>
+                                    <option data-icon="images/ind-3.svg" value="3">Wine</option>
+                                    <option data-icon="images/ind-4.svg" value="4">Coffee</option>
+                                </select>
+                            </div>
+                        </div>
+                   
+                    </div>
+                    @@include('./partials/elements/button.htm', {
+                    "text": "Send",
+                    "submit" : "true",
+                    "classes": ""
+                    })
+            </div>
+        </div>
     </main>
 </body>
 
@@ -103,5 +191,6 @@
     SystemJS.import('./js/app.js');
     SystemJS.import('./js/contact.js');
 </script>
+<script src="//www.webglearth.com/v2/api.js"></script>
 
 </html>

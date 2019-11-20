@@ -606,7 +606,18 @@ $dotsLiWidth: 250px;
         background-color: $colorGreen;
     }
 }
-
+.scroll-custom-x {
+  
+    &::-webkit-scrollbar{
+        height: 4px;
+        width: 4px;
+        background:transparent;
+    }
+    &::-webkit-scrollbar-thumb:horizontal{
+        background: $colorGreen;;
+        border-radius: 10px;
+    }
+}
 .bold {
     font-family: $fontMedium;
 }

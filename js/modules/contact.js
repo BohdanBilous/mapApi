@@ -12,197 +12,420 @@ import {
 import {
     customSelect
 } from '../custom-select';
+
+import {
+    selectSearch
+} from '../select-search';
+
 import {
     selectSwitcher
 } from '../select-switch';
 
-window.addEventListener("load", function () {
-    // Select Custom
-
-    if (exists(".select-custom")) {
-        customSelect();
-        const selectCoutry = document.querySelector(".select-custom select");
-        const changeTitle = document.querySelector(".contact-ttl-row h2 .icon");
-        selectCoutry.addEventListener("change", () => {
-            const index = selectCoutry.value;
-            setTimeout(() => {
-                const parentEl = selectCoutry.parentElement;
-                const value = parentEl.querySelector('.select-selected').innerHTML;
-                const newElement = createCoutry(index, value);
-                changeTitle.innerHTML = newElement;
-            }, 1)
-        });
-
-
-        // Tabs
-        if (exists(".contact-tabs-container")) {
-            new selectSwitcher(".contact-tabs-container");
-        }
-
-
-
-
-        function createCoutry(image, value) {
-            return image !== "all" ? `/ <img src="./images/flag-${image}.png"/>${value}` : null;
-        };
-
-
-
-
-
-    }
-
-
-
-
-
-
-    var map;
-
-    function init() {
-        map = WE.map('map', {
-            center: [36.057944835, -112.18688965],
-            zoom: 0,
-            dragging: true,
-            scrollWheelZoom: true
-        });
-
-        var baselayer = WE.tileLayer('https://webglearth.github.io/webglearth2-offline/{z}/{x}/{y}.jpg', {
-            tileSize: 256,
-            bounds: [
-                [-85, -180],
-                [85, 180]
-            ],
-            minZoom: 0,
-            maxZoom: 16,
-            attribution: 'WebGLEarth example',
-            tms: true
-        }).addTo(map);
-
-        //Add TileJSON layer
-        var json = {
-            "profile": "mercator",
-            "name": "Grand Canyon USGS",
-            "format": "png",
-            "bounds": [-112.26379395, 35.98245136, -112.10998535, 36.13343831],
-            "minzoom": 10,
-            "version": "1.0.0",
-            "maxzoom": 16,
-            "center": [-112.18688965, 36.057944835, 13],
-            "type": "overlay",
-            "description": "",
-            "basename": "grandcanyon",
-            "tilejson": "2.0.0",
-            "sheme": "xyz",
-            "tiles": ["http://tileserver.maptiler.com/cassini-terrestrial/{z}/{x}/{y}.jpg'"]
-        };
-        var grandcanyon = WE.tileLayerJSON(json);
-        grandcanyon.addTo(map);
-
-        grandcanyon.setOpacity(0.7);
-        document.getElementById('opacity2').addEventListener('change', function (e) {
-            grandcanyon.setOpacity(e.target.value);
-        });
-        WE.marker([json.center[1], json.center[0]]).addTo(map);
-
-
-        //Print coordinates of the mouse
-        map.on('mousemove', function (e) {
-            document.getElementById('coords').innerHTML = e.latlng.lat + ', ' + e.latlng.lng;
-        });
-    }
-
-
-    function setZoom(zoom) {
-        map.setZoom(zoom);
-    }
-
-    function getZoomLevel() {
-        alert('Current zoom is: ' + Math.round(map.getZoom()));
-    }
-
-    function setPositionToEverest() {
-        map.setView([27.988056, 86.925278]);
-    }
-
-    function getCurrentCenter() {
-        alert(map.getCenter());
-    }
-
-    function flyToJapan() {
-        map.fitBounds([
-            [22, 122],
-            [48, 154]
-        ]);
-        map.panInsideBounds([
-            [22, 122],
-            [48, 154]
-        ], {
-            heading: 90,
-            tilt: 25,
-            duration: 1
-        });
-    }
-
-    function panTo(coords) {
-        map.panTo(coords);
-    }
-
-
-    const countysFly = document.querySelectorAll('.countrys ul li');
-
-    const arrayOfBoundys = [
-        [
+const arrayOfCountrys = {
+    canada: {
+        countryBound: [
             [33, -53.59],
             [58.32, -140.9]
         ],
-        [
-            [23, -71.59],
-            [44.32, -123]
+        contactListItems: [{
+            img: './images/av-12.png',
+            topText: 'Canada Consultant ',
+            bottomText: 'Andres Jensen'
+        }],
+        countryPoints: [{
+            lat: 43.651070,
+            long: -79.347015,
+            pointText: 'Canada '
+        }]
+    },
+    usa: {
+        countryBound: [
+            [19, -71.59],
+            [36.32, -123]
         ],
-        [
-            [-3.38, -31.94],
-            [-29.6, -70.43]
+        contactListItems: [{
+                img: './images/av-1.png',
+                topText: 'USA: Florida President - Americas',
+                bottomText: 'Chris McEwan'
+            },
+            {
+                img: './images/av-2.png',
+                topText: 'USA (North-East) Territory Manager',
+                bottomText: 'Dan Moss'
+            }, {
+                img: './images/av-4.png',
+                topText: 'USA (Mid-West)  Territory Manager',
+                bottomText: 'David Thenness'
+            }, {
+                img: './images/ava-3.png',
+                topText: 'USA (South-East)  Territory Manager',
+                bottomText: 'Kelly Thompson'
+            }, {
+                img: './images/ava-4.png',
+                topText: 'USA (South) Sales and Marketing Specialist ',
+                bottomText: 'Tammy Duhaime'
+            }, {
+                img: './images/ava-5.png',
+                topText: 'USA (West) Senior Sales Manager ',
+                bottomText: 'Scott Fore'
+            }
         ],
-        [
-            [46.0536, 18.8568],
-            [43.5877, 12.0782]
+        countryPoints: [{
+                lat: 27.6648,
+                long: -81.5158,
+                pointText: 'Florida'
+            },
+            {
+                lat: 21.4691,
+                long: -78.6569,
+                pointText: 'Caribbean '
+            },
+            {
+                lat: 40.7128,
+                long: -74.0060,
+                pointText: 'USA (North-East)'
+            },
+            {
+                lat: 42.3148,
+                long: -85.6024,
+                pointText: 'USA (Mid-West)'
+            },
+            {
+                lat: 40.4173,
+                long: -82.9071,
+                pointText: 'USA (South-East)'
+            },
+            {
+                lat: 31.9686,
+                long: -99.9018,
+                pointText: 'USA (South)'
+            },
+            {
+                lat: 36.7783,
+                long: -119.4179,
+                pointText: 'USA (West)'
+            }
+        ]
+    },
+    brazil: {
+        countryBound: [
+            [-10.38, -31.94],
+            [-48.6, -70.43]
         ],
-        [
+        contactListItems: [{
+            img: './images/av-1.png',
+            topText: 'General Manager Brazil',
+            bottomText: 'Ricardo Vieira'
+        }],
+        countryPoints: [{
+            lat: -14.235004,
+            long: -51.9253,
+            pointText: 'Brazil'
+        }, {
+            lat: -34.920345,
+            long: -57.969559,
+            pointText: 'Argentina'
+        }, {
+            lat: -32.522778,
+            long: -55.765835,
+            pointText: 'Uruguay'
+        }, {
+            lat: -23.442503,
+            long: -58.443832,
+            pointText: 'Paraguay'
+        }]
+    },
+    czech: {
+        countryBound: [
+            [50.0536, 18.8568],
+            [47.5877, 12.0782]
+        ],
+        contactListItems: [{
+                img: './images/av-1.png',
+                topText: 'Sales Manager CEE',
+                bottomText: 'Zuzana Richterova'
+            }
+        ],
+        countryPoints: [{
+            lat: 49.817493,
+            long: 15.472962,
+            pointText: 'Czech Republic'
+        }]
+    },
+    sweden: {
+        countryBound: [
             [64.83, 23.83],
             [50.08, 11.91]
         ],
-        [
+        contactListItems: [{
+                img: './images/av-12.png',
+                topText: ' Business Development Director - Nordics',
+                bottomText: 'Helen Öjerson'
+            }
+        ],
+        countryPoints: [{
+            lat: 59.297098,
+            long: 18.135426,
+            pointText: 'Sweden'
+        }]
+    },
+    russia: {
+        countryBound: [
             [70.1, -164.3],
             [20.5, 49.5]
         ],
-        [
+        contactListItems: [{
+                img: './images/av-1.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            },
+            {
+                img: './images/av-2.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }, {
+                img: './images/av-3.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }
+        ],
+        countryPoints: [{
+            lat: 43.651070,
+            long: -79.347015,
+            pointText: 'PointText'
+        }]
+    },
+    china: {
+        countryBound: [
             [46.8, 134.6],
             [21.1, 76.8]
         ],
-        [
+        contactListItems: [{
+                img: './images/av-12.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            },
+            {
+                img: './images/av-12.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }, {
+                img: './images/av-12.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }
+        ],
+        countryPoints: [{
+            lat: 43.651070,
+            long: -79.347015
+        }]
+    },
+    australia: {
+        countryBound: [
             [-16.9, 156.3, ],
             [-45.2, 113.0]
-        ]
-    ]
-    countysFly.forEach((item, i) => {
-        item.addEventListener('click', () => {
-            let lat = item.getAttribute('data-lat');
-            let long = item.getAttribute('data-long');
-            map.panInsideBounds(arrayOfBoundys[i], {
-                heading: 0,
-                tilt: 15, 
-                duration: 2
+        ],
+        contactListItems: [{
+                img: './images/av-1.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            },
+            {
+                img: './images/av-2.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }, {
+                img: './images/av-3.png',
+                topText: ' USA (Mid—West) Territory Manager',
+                bottomText: 'David Thennes'
+            }
+        ],
+        countryPoints: [{
+            lat: 43.651070,
+            long: -79.347015,
+            pointText: 'PointText'
+        }]
+    }
+}
+
+window.addEventListener("load", function () {
+    //Variables
+    const form = document.querySelector('.contact-form-container');
+    const formClose = document.querySelector('.contact-form-container .btn-close');
+    const countysFly = document.querySelectorAll('.countrys ul li');
+    let map;
+
+
+    const openForm = () => {
+        form.classList.add('active');
+        document.body.classList.add('form-active');
+    };
+    const closeForm = () => {
+        const persone = document.querySelectorAll('.contacts-item');
+        form.classList.remove('active');
+        document.body.classList.remove('form-active');
+        persone.forEach(item => item.classList.remove('active'));
+    };
+
+    // Select Custom
+
+    // if (exists(".select-custom")) {
+    //     customSelect();
+    //     const selectCoutry = document.querySelector(".select-custom select");
+    //     const changeTitle = document.querySelector(".contact-ttl-row h2 .icon");
+    //     selectCoutry.addEventListener("change", () => {
+    //         const index = selectCoutry.value;
+    //         setTimeout(() => {
+    //             const parentEl = selectCoutry.parentElement;
+    //             const value = parentEl.querySelector('.select-selected').innerHTML;
+    //             const newElement = createCoutry(index, value);
+    //             changeTitle.innerHTML = newElement;
+    //         }, 1)
+    //     });
+
+
+    //     // Tabs
+    //     if (exists(".contact-tabs-container")) {
+    //         new selectSwitcher(".contact-tabs-container");
+    //     }
+
+
+
+
+    //     function createCoutry(image, value) {
+    //         return image !== "all" ? `/ <img src="./images/flag-${image}.png"/>${value}` : null;
+    //     };
+    // }
+
+
+    if (exists(".searchable")) {
+        new selectSearch('.searchable', '.searchable .searcheble-close', '.notFound');
+    }
+
+    if (exists(".select-custom")) {
+        customSelect();
+    }
+
+
+    const init = () => {
+        map = WE.map('map', {
+            center: [36.057944835, -112.18688965],
+            zoom: 3,
+            dragging: true,
+            scrollWheelZoom: false
+        });
+
+        WE.tileLayer('https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz', {
+            style: 'https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz',
+        }).addTo(map);
+        animateToMap();
+        addBounds([
+            [33, -53.59],
+            [58.32, -140.9]
+        ]);
+    }
+    const addBounds = (bounds) => {
+        map.panInsideBounds(bounds, {
+            heading: 0,
+            tilt: 15,
+            duration: 2
+        });
+    }
+
+    const animateToMap = () => {
+        countysFly.forEach((item, i) => {
+
+            const contactList = document.querySelector('.contacts-list');
+
+
+            item.addEventListener('click', () => {
+                let countryName = item.getAttribute('data-country');
+                if (countryName) {
+                    const {
+                        countryBound,
+                        countryPoints,
+                        contactListItems
+                    } = arrayOfCountrys[countryName];
+                    contactList.classList.remove('active');
+                    contactList.innerHTML = '';
+                    deletePoints();
+                    toogleActive(item);
+                    countryBound && addBounds(countryBound);
+                    countryPoints && countryPoints.map(point => addPoint(point.pointText, [point.lat, point.long]));
+                    contactListItems && contactListItems.map(item => {
+                        let newPersone = createPersones(item.img, item.topText, item.bottomText);
+                        appendHtml(contactList, newPersone)
+                    });
+                    animatePersons();
+                    closeForm();
+                }
+            })
+
+        });
+    }
+    const animatePersons = () => {
+        const contactList = document.querySelector('.contacts-list');
+        const contactHelp = document.querySelector('.contact-help');
+        const persone = document.querySelectorAll('.contacts-item');
+        persone.forEach(item => {
+            item.addEventListener('click', (e) => {
+                openForm();
+                item.classList.add('active');
+                contactList.scroll(0, 0);
             });
-            // map.setView([lat,long],1)
-            var marker = WE.marker([lat, long]).addTo(map);
-            marker.bindPopup("<b>Hello world!</b><br>I am a popup.<br /><span style='font-size:10px;color:#999'>Tip: Another popup is hidden in Cairo..</span>", {
-                maxWidth: 150,
-                closeButton: true
-            }).openPopup();
+        });
+        setTimeout(function () {
+            contactList.classList.add('active');
+            contactHelp.classList.add('active');
+        }, 500)
+    }
+    const appendHtml = (el, str) => {
+        let element = document.createElement('li');
+        element.innerHTML = str;
+        element.classList.add('contacts-item');
+        while (element.children.length > 0) {
+            el.appendChild(element.children[0]);
+        }
+    }
+    const createPersones = (img, top, bottom) => {
+        return `
+                <li class="contacts-item">
+                <img src="${img}" alt="">
+                <div class="text">
+                    <div class="top">
+                        ${top}
+                    </div>
+                    <div class="bottom">
+                        ${bottom}
+                    </div>
+                </div>
+            </li>
+                `
+    }
+    const deletePoints = () => {
+        const markers = document.querySelectorAll('.we-pm-icon');
+        markers.forEach(item => item.parentNode.remove());
+    }
+    const addPoint = (text, position) => {
+
+        let marker = WE.marker(position).addTo(map);
+        marker.bindPopup(text, {
+            maxWidth: 150,
+            closeButton: true
+        });
+    }
+    const clickHandle = () => {
+        formClose.addEventListener('click', () => closeForm());
+    }
+    const toogleActive = (country) => {
+        let countrys = country.parentNode.childNodes;
+        countrys.forEach(item => {
+            item.classList.add('not_active');
+            item.classList.remove('active');
         })
-    });
-
-
+        country.classList.remove('not_active');
+        country.classList.add('active');
+    }
+    clickHandle();
     init();
 });
