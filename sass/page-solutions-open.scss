@@ -2527,6 +2527,13 @@ $leftOffset: 270px;
     }
 }
 
+// Bottle One Way
+#bottle-oneway {
+    top: 300px; 
+    width: 178px; // coef 3.7
+    height: 660px;
+}
+
 .solution-open-page.bottle-oneway {
     .specs-section {
         .spec-img {
@@ -2539,28 +2546,15 @@ $leftOffset: 270px;
     }
 
     .prod-anim-wrap {
-        min-height: 1300px;
+        min-height: 1500px;
 
         @include mobile {
             min-height: 1150px;
         }
-
-        .object-image {
-            position: absolute;
-            width: 310px;
-            top: 180px;
-            left: 50%;
-            transform: translateX(-50%);
-
-            @include mobile {
-                width: 140px;
-                top: 520px;
-            }
-        }
     }
 
-    .prod-animate-section {
-        opacity: 1;
+    .prod-object-socket {
+        width: 149px;
     }
 
     .prod-animate-section-1 {
@@ -2573,15 +2567,15 @@ $leftOffset: 270px;
     }
 
     .prod-animate-section-2 {
-        top: 800px;
+        top: 750px;
         left: 0;
 
         .prod-anim-side.left {
-            top: -150px;
+            top: 0;
         }
 
         .prod-a-desc {
-            top: 0;
+            top: 250px;
             right: 270px;
         }
     }
@@ -2606,7 +2600,6 @@ $leftOffset: 270px;
             .socket {
                 padding-bottom: 300px;
             }
-
 
             .image {
                 width: 600px;
@@ -2649,6 +2642,79 @@ $leftOffset: 270px;
     }
 }
 
+@include tablet {
+    .solution-open-page.bottle-oneway {
+        .specs-section .spec-img {
+            width: 430px;
+            bottom: -950px;
+            left: 11%;
+            transform: none;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .solution-open-page.bottle-oneway {
+        .specs-section .spec-img {
+            left: 0;
+        }
+    }
+}
+
+
+@include tablet--ipadPro {
+    #bottle-oneway {
+        top: 0; 
+        width: 135px;
+        height: 500px;
+    }
+
+    #mask {
+        display: none;
+    }
+
+    .solution-open-page.bottle-oneway {
+        .prod-anim-wrap {
+            min-height: 900px;
+        }
+
+        .prod-object-socket {
+            position: absolute;
+            width: 135px;
+            top: 250px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .prod-object-buttons {
+            display: none;
+        }
+    }
+}
+
+@include mobile {
+    .solution-open-page.bottle-oneway {
+
+        .specs-section .spec-img {
+            width: 200px;
+            left: 50%;
+            bottom: -420px;
+            transform: translateX(-50%);
+        }
+
+        .prod-anim-wrap {
+            min-height: auto;
+        }
+
+        .prod-object-socket {
+            position: relative;
+            top: 30px;
+            left: auto;
+            height: 500px;
+            transform: none;
+        }
+    }
+}
 
 // JARS
 #jars-top {
