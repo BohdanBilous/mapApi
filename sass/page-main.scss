@@ -1836,7 +1836,31 @@ $animateDur: 0.30s;
     }
 
     .ttl-3 {
+        position: relative;
+        padding-top: 45px;
         width: 220px;
+        align-self: flex-end;
+
+        sup {
+            position: relative;
+            top: -10px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        &::before {
+            @extend .ps;
+            left: 0;
+            top: 0;
+            width: 31px;
+            height: 31px;
+            background-image: url(../images/ico-rec.svg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+    }
+
+    .btn {
         align-self: flex-end;
     }
 }
@@ -1880,7 +1904,7 @@ $animateDur: 0.30s;
     padding-top: 80px;
 
     p {
-        width: 195px;
+        width: 270px;
     }
 }
 
