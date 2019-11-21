@@ -124,6 +124,7 @@ function js() {
         "js/modules/solutions-open-hybrid.js",
         "js/modules/solutions-open-coolers.js",
         "js/modules/solutions-open-jars.js",
+        "js/modules/solutions-open-bottle.js",
         "js/modules/sites.js",
         "js/modules/terms.js",
         "js/modules/about-us.js"
@@ -181,6 +182,7 @@ function jsProd() {
         "js/modules/solutions-open-hybrid.js",
         "js/modules/solutions-open-coolers.js",
         "js/modules/solutions-open-jars.js",
+        "js/modules/solutions-open-bottle.js",
         "js/modules/sites.js",
         "js/modules/terms.js",
         "js/modules/about-us.js"

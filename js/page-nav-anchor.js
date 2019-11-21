@@ -68,7 +68,6 @@ export class PageNav {
   }
 
   onScreenHandler() {
-    console.log(this.block);
     this.block.forEach(block => {
       let id = block.getAttribute("id");
 
