@@ -1,34 +1,306 @@
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
-    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
-    @@include('./partials/scripts.htm')
-    <body>
-        @@include('./partials/preloader.htm')
-        @@include('./partials/header.htm', { "classes": "" })
-        @@include('./partials/menu.htm', {
-            "solution": "",
-            "about": "active",
-            "news-act": "",
-            "resources": "",
-            "events": "",
-            "cases": "",
-            "careers": "",
-            "sites": "",
-            "contact": "",
-            "reviews": "",
-            "team": "",
-            "faq": ""
-        })
-        @@include('./partials/search.htm')
-        
-        <main class="main">
-            @@include('./partials/stub.htm')
-        </main>
+@@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+@@include('./partials/scripts.htm')
 
-    </body>
+<body>
+    @@include('./partials/preloader.htm')
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "",
+    "about": "active",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "",
+    "sites": "",
+    "contact": "",
+    "reviews": "",
+    "team": "",
+    "faq": ""
+    })
+    @@include('./partials/search.htm')
 
-    <script>
-        SystemJS.import('./js/app.js');
-    </script>
+    <main class="main">
+        <div class="screen screen-main screen-top screen-about-us">
+            <div class="socket layout-row ">
+                <div class="layout-col-l">
+                    <span class="top-info">27 items</span>
+                </div>
+                <div class="layout-col-r">
+                    <div class="about-top-inner">
+                        <div class="about-top-text">
+                            <h1 class="ttl-1">
+                                About Us.
+                            </h1>
+                            <h5 class="ttl-5">There is a packaging <br>
+                                for every industry.</h5>
+                        </div>
+                        @@include('./partials/elements/button-link.htm', {
+                        "text": "Solutions",
+                        "href" : "./solution-hybrid.html",
+                        "classes": "btn-g btn-arrow-a"
+                        })
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Global business -->
+        <div class="socket gb-socket">
+            <div class="gb-socket-inner">
+                <div class="gb-socket-inner-top">
+                    <h2 class="ttl-2">Global business</h2>
+                    <h5 class="ttl-5">We bring our supply <br> chain closer to your <br> business. </h5>
+                </div>
+                <div class="gb-socket-inner-bottom">
+                    <h5 class="ttl-5">8 Countries</h5>
+                    <ul>
+                        <li class="purpure">Core Manufacturing Sites (IM & BM)</li>
+                        <li class="blue">PetainerKeg Blow Hub Operations (BM only)</li>
+                        <li class="green">Planned PetainerKeg Blow Hub</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="svg-map">
+                <img src="./images/svg-map.svg" alt="">
+            </div>
+        </div>
+        <!-- Cleanpet -->
+        <div class="about-us-fader-wrap">
+            <div class="fader about-us-fader layout-row socket">
+                <div class="layout-col-l">
+                    <div class="slider-buttons slider-buttons-c">
+                        <button class="prev button-prev"></button>
+                        <button class="next button-next"></button>
+                    </div>
+                </div>
+                <div class="layout-col-r">
+                    <ul class="slider-dots">
+                        <li class="active">
+                            <div class="index">01.</div>
+                            <div class="text-main">local expertise</div>
+                        </li>
+                        <li>
+                            <div class="index">02.</div>
+                            <div class="text-main">Green Manufacturing</div>
+                        </li>
+                        <li>
+                            <div class="index">03.</div>
+                            <div class="text-main">circular economy</div>
+                        </li>
+                    </ul>
+
+                    <div class="swipe-hint only-mobile only-tablet"></div>
+
+                    <div class="slides">
+                        <div class="slide active">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <h4 class="ttl-4">A global business
+                                with a local expertise:</h4>
+                            <div class="row">
+                                <div class="left">
+                                    <p class="col-gap">
+                                        Petainer has eight manufacturing sites around the world to ensure we can produce
+                                        and
+                                        supply products as efficiently and sustainably as possible. We take a
+                                        regionalised
+                                        approach to our key markets in Europe, Russia, the Americas and Asia to ensure
+                                        that
+                                        our customers are supported as closely as possible with commercial, product and
+                                        technical expertise.
+                                    </p>
+                                </div>
+                                <div class="right">
+                                    <p>
+                                        We help businesses grow by increasing their flexibility, reducing their
+                                        transportation and infrastructure costs, which ultimately results in a lower
+                                        price
+                                        pack per L.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        We provide ready-to-use packaging solutions to regional and global brands or
+                                        support
+                                        them through our regional development and technical teams in setting up a local
+                                        manufacture to blow our preform kits.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide ">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <h4 class="ttl-4">A global business
+                                with a local expertise:</h4>
+                            <div class="row">
+                                <div class="left">
+                                    <p class="col-gap">
+                                        Petainer has eight manufacturing sites around the world to ensure we can produce
+                                        and
+                                        supply products as efficiently and sustainably as possible. We take a
+                                        regionalised
+                                        approach to our key markets in Europe, Russia, the Americas and Asia to ensure
+                                        that
+                                        our customers are supported as closely as possible with commercial, product and
+                                        technical expertise.
+                                    </p>
+                                </div>
+                                <div class="right">
+                                    <p>
+                                        We help businesses grow by increasing their flexibility, reducing their
+                                        transportation and infrastructure costs, which ultimately results in a lower
+                                        price
+                                        pack per L.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        We provide ready-to-use packaging solutions to regional and global brands or
+                                        support
+                                        them through our regional development and technical teams in setting up a local
+                                        manufacture to blow our preform kits.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide ">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <h4 class="ttl-4">A global business
+                                with a local expertise:</h4>
+                            <div class="row">
+                                <div class="left">
+                                    <p class="col-gap">
+                                        Petainer has eight manufacturing sites around the world to ensure we can produce
+                                        and
+                                        supply products as efficiently and sustainably as possible. We take a
+                                        regionalised
+                                        approach to our key markets in Europe, Russia, the Americas and Asia to ensure
+                                        that
+                                        our customers are supported as closely as possible with commercial, product and
+                                        technical expertise.
+                                    </p>
+                                </div>
+                                <div class="right">
+                                    <p>
+                                        We help businesses grow by increasing their flexibility, reducing their
+                                        transportation and infrastructure costs, which ultimately results in a lower
+                                        price
+                                        pack per L.
+                                    </p>
+                                    <br>
+                                    <p>
+                                        We provide ready-to-use packaging solutions to regional and global brands or
+                                        support
+                                        them through our regional development and technical teams in setting up a local
+                                        manufacture to blow our preform kits.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Teams -->
+        <div class="media-stream--section socket solutions-socket team-carosuel">
+            <div class="media-stream--categories-ttl-f">
+                <div class="ttl-top">
+                    <div>People</div>
+                    <h2 class="ttl-2">Meet Our Team</h2>
+                </div>
+                <div class="slider-buttons slider-buttons-c">
+                    <button class="prev button-prev"></button>
+                    <button class="next button-next"></button>
+                </div>
+            </div>
+
+            <div class="media-stream--cols carosuel">
+                <div class="slider-row">
+                    <article class="media-stream--article   slide">
+                        <div class="media-panel">
+                            <img class="media-img" src="images/persone-1.jpg" alt="#">
+                        </div>
+                        <h4 class="instruction-ttl ttl-4">Petainer Hybrid.</h4>
+                        <h5 class="ttl-5">Chief Executive Officer </h5>
+                        <div class="city green ">London</div>
+                    </article>
+                    <article class="media-stream--article   slide">
+                        <div class="media-panel">
+                            <img class="media-img" src="images/persone-2.jpg" alt="#">
+                        </div>
+                        <h4 class="instruction-ttl ttl-4">Petainer Hybrid.</h4>
+                        <h5 class="ttl-5">Chief Executive Officer </h5>
+                        <div class="city green ">London</div>
+                    </article>
+                    <article class="media-stream--article   slide">
+                        <div class="media-panel">
+                            <img class="media-img" src="images/persone-3.jpg" alt="#">
+                        </div>
+                        <h4 class="instruction-ttl ttl-4">Petainer Hybrid.</h4>
+                        <h5 class="ttl-5">Chief Executive Officer </h5>
+                        <div class="city green ">London</div>
+                    </article>
+                    <article class="media-stream--article   slide">
+                        <div class="media-panel">
+                            <img class="media-img" src="images/persone-1.jpg" alt="#">
+                        </div>
+                        <h4 class="instruction-ttl ttl-4">Petainer Hybrid.</h4>
+                        <h5 class="ttl-5">Chief Executive Officer </h5>
+                        <div class="city green ">London</div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer footer-bg">
+            <div class="info-row layout-row socket">
+                <div class="layout-col-l">
+                    <h3 class="ttl-4">Becoming a customer</h3>
+                    @@include('./partials/elements/button-link.htm', {
+                    "text": "Place an order",
+                    "href" : "/contact.html",
+                    "classes": "btn-g btn-arrow-a"
+                    })
+                </div>
+                <div class="layout-col-r">
+                    <div class="layout-col-s-4">
+                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                    </div>
+                    <div class="layout-col-s-6">
+                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                        <div class="with-us">
+                            <h3 class="ttl-4">Already with us</h3>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Tools & Resources",
+                            "href" : "/resources.html",
+                            "classes": ""
+                            })
+                        </div>
+                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            @@include('./partials/footer-main.htm', { "classes": "" })
+        </footer>
+    </main>
+
+</body>
+
+<script>
+    SystemJS.import('./js/app.js');
+    SystemJS.import('./js/about-us.js');
+</script>
+
 </html>

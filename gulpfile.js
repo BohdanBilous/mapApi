@@ -126,7 +126,9 @@ function js() {
         "js/modules/solutions-open-jars.js",
         "js/modules/solutions-open-bottle.js",
         "js/modules/sites.js",
-        "js/modules/terms.js"
+        "js/modules/terms.js",
+        "js/modules/about-us.js"
+
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,
@@ -182,7 +184,8 @@ function jsProd() {
         "js/modules/solutions-open-jars.js",
         "js/modules/solutions-open-bottle.js",
         "js/modules/sites.js",
-        "js/modules/terms.js"
+        "js/modules/terms.js",
+        "js/modules/about-us.js"
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,
