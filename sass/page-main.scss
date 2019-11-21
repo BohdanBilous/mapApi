@@ -1569,17 +1569,29 @@ $animateDur: 0.30s;
 }
 
 // Video Section
-.video-section,
-.article-section {
-    display:block;
-    position: relative;
-    height: 480px;
+.section-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 0;
+    transition: transform 0.25s $easing;
+}
+
+.video-section,
+.article-section {
+    display: block;
+    position: relative;
+    height: 480px;
     border-radius: 25px;
     overflow: hidden;
-    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
 
     &::after {
         @extend .ps;
@@ -1614,7 +1626,15 @@ $animateDur: 0.30s;
             }
         }
     }
+
+    &:hover {
+        .section-bg {
+            transform: scale(1.05);
+        }
+    }
 }
+
+
 
 .video-section {
     .col {

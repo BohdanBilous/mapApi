@@ -29,7 +29,9 @@ window.addEventListener("load", function() {
 
   // Lazy Top Section Background
   if (exists(".event-section-main")) {
-    const topSection = document.querySelector(".event-section-main");
+    const topSection = document.querySelector(
+      ".event-section-main .section-bg"
+    );
     const mediaQueryBackgrounds = [
       { media: "screen and (min-width: 768px)", src: topSection.dataset.bg },
       { media: "screen and (max-width: 767px)", src: topSection.dataset.bgmob }

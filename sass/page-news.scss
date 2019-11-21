@@ -639,6 +639,10 @@
     display: block;
     margin-bottom: 53px;
 
+    .media-img {
+        transition: transform 0.25s $easing;
+    }
+
     .media-panel {
         border-radius: 12px;
         height: 310px;
@@ -698,6 +702,12 @@
             p {
                 color: $colorText2;
             }
+        }
+    }
+
+    &:hover {
+        .media-img {
+            transform: scale(1.05);
         }
     }
 }
