@@ -1,21 +1,12 @@
 import { desktop, html } from "../generic-helpers";
 import ScrollMagic from "scrollmagic";
 import { TweenMax, TimelineMax } from "gsap";
-import { wavify } from "../wavify";
 import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
 import "scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators";
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 window.addEventListener("load", function() {
-  // Waves
-  // var wave = wavify(document.querySelector("#wave"), {
-  //   height: 30,
-  //   bones: 4,
-  //   amplitude: 15,
-  //   speed: 0.25
-  // });
-
   const iPadProLand =
     window.matchMedia(
       "(min-width: 1365px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)"
