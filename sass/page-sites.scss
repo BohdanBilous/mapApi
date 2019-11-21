@@ -292,7 +292,7 @@
     }
 }
 
-.sites-tab-block .video-section {
+.chart-wrap .video-section {
     margin-bottom: 85px;
 }
 
@@ -610,7 +610,7 @@
 
             .country-tabs ul {
                 padding: 25px 25px;
-                overflow: scroll;
+                overflow-x: scroll;
 
                 li {
                     width: 140px;
