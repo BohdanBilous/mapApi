@@ -80,7 +80,7 @@ export class SuperSlider {
     this.sliderCallBack = sliderCallBack;
     this.buttonNext = this.sliderWrap.querySelector(".next");
     this.buttonPrev = this.sliderWrap.querySelector(".prev");
-
+    this.pages = document.querySelector(`${sliderWrap} .pages`);
 
     if (type == "fader") {
       this.fader = true;
@@ -189,7 +189,7 @@ export class SuperSlider {
     //     // let lastVisibleSlideIndex =
     //     //   this.slideIndex + (this.getItemsInViewport() - 1);
 
-      
+
     //     // console.log(i);
     //     console.log(lastIndex)
 
@@ -340,8 +340,8 @@ export class SuperSlider {
       this.sliderWrap.querySelector(".slide.active").classList.remove("active");
       this.slides[slideIndex].classList.add("active");
     }
-
-    if (this.sliderCallBack) this.sliderCallBack();
+    if (this.pages) this.pages.querySelector('.slide-current').innerHTML = `0${slideIndex+1}`;
+    if (this.sliderCallBack) this.sliderCallBack(this);
     if (this.dots) this.changeDots(slideIndex);
   }
 
