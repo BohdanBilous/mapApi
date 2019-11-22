@@ -52,6 +52,10 @@
     .hint {
         color: $colorText2;
     }
+
+    @include tablet {
+        padding-left: 33px;
+    }
 }
 
 .btn-close {
@@ -399,7 +403,7 @@
 }
 
 .team-member-desc {
-    margin-top: 50px;
+    margin-top: 32px;
     margin-bottom: 45px;
 
     .photo {
