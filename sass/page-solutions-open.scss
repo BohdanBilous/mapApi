@@ -943,7 +943,7 @@ $leftOffset: 270px;
     }
 
     .tech-spec-drop {
-        @include hideScrollbar;
+        // @include hideScrollbar;
         overflow-x: auto;
 
         ul li {
@@ -1102,7 +1102,7 @@ $leftOffset: 270px;
     }
 
     .tare-scroll-wrap {
-        @include hideScrollbar;
+        // @include hideScrollbar;
         overflow-x: auto;
         margin-right: -25px;
     }
@@ -2343,7 +2343,7 @@ $leftOffset: 270px;
         }
 
         .global-s-row .global-rewiew-wrap {
-            @include hideScrollbar;
+            // @include hideScrollbar;
             width: 100%;
             overflow-x: scroll;
 
@@ -2787,6 +2787,10 @@ $leftOffset: 270px;
 
             @media screen and (max-width: 1600px) {
                 right: 0;
+            }
+
+            @include mobile {
+                bottom: -200px;
             }
         }
     }
