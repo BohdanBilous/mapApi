@@ -11,7 +11,8 @@
 
     .media-stream--container {
         margin: 0 30px;
-        .media-stream--col-l{
+
+        .media-stream--col-l {
             padding-bottom: 60px;
         }
     }
@@ -22,7 +23,7 @@
 
     .fag-question .fag-q-open {
         top: auto;
-        bottom: 20px;
+        bottom: 18px;
     }
 
     .fag-row {
@@ -32,9 +33,15 @@
             width: 100%;
             flex: 0 0 100%;
             max-width: 100%;
+            margin-bottom: 12px;
+
+            .fag-question {
+                padding-bottom: 18px;
+            }
 
             .fag-question .fag-q-body>p {
                 width: 71%;
+                margin-bottom: 54px;
             }
         }
     }
@@ -56,6 +63,7 @@
 
 
 @include macbook {
+
     .content-terms {
         .media-stream--container {
             width: auto;
@@ -64,7 +72,7 @@
 
         .fag-row .terms-ans .fag-question .fag-q-body>p {
             width: 100%;
-            margin-bottom: 50px
+            margin-bottom: 35px
         }
     }
 }
@@ -72,13 +80,38 @@
 @include tablet {
     .content-terms .fag-row {
         margin-bottom: 68px;
+        .terms-ans{
+            margin-bottom: 44px;
+            .fag-question .fag-q-body>p {
+                margin-bottom: 82px;
+            }
+        }
     }
+
     .content-terms {
         padding-top: 50px;
 
         .media-stream--container {
             width: auto;
             margin: 0 25px;
+        }
+    }
+}
+@include mobile{
+    .content-terms .fag-row .terms-ans{
+        margin-bottom: 48px;
+    .fag-question{
+            padding-bottom: 42px;
+            .fag-q-open{
+            
+                bottom: 42px;
+            }
+            &.active{
+                .fag-q-open{ width: 53px;
+                height: 53px;
+                bottom: 20px;
+                }
+            }
         }
     }
 }
