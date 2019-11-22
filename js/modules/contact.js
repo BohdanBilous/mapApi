@@ -307,6 +307,21 @@ window.addEventListener("load", function () {
         customSelect();
     }
 
+    //Only for Local test 
+    let pos;
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition)
+    }
+
+    function showPosition(position) {
+        pos = [position.coords.latitude, position.coords.longitude];
+        setTimeout(function () {
+            map.flyTo(pos[0], pos[1]); // NEED TO GET IP LOCATION 
+        }, 1000);
+    };
+
+    //Only for Local test 
+
 
     const init = () => {
         map = WE.map('map', {
@@ -315,14 +330,10 @@ window.addEventListener("load", function () {
             dragging: true,
             scrollWheelZoom: false
         });
-      
-
         WE.tileLayer('https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz', {
             style: 'https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz',
         }).addTo(map);
         animateToMap();
-       
-        map.flyTo(49.83826, 24.02324)
     }
     const addBounds = (bounds) => {
         map.panInsideBounds(bounds, {
@@ -413,8 +424,8 @@ window.addEventListener("load", function () {
     const deletePoints = () => {
         const markers = document.querySelectorAll('.we-pm-icon');
         markers.forEach(item => item.parentNode.remove());
-        map.da.P.O={};
-        map.da.P.m=[];
+        map.da.P.O = {};
+        map.da.P.m = [];
     }
     const addPoint = (text, position) => {
 
@@ -423,11 +434,10 @@ window.addEventListener("load", function () {
             maxWidth: 150,
             closeButton: true
         });
-        console.log(map)
     }
     const clickHandle = () => {
         formClose.addEventListener('click', () => closeForm());
-    
+
     }
     const toogleActive = (country) => {
         let countrys = country.parentNode.childNodes;
