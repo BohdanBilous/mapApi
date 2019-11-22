@@ -32,7 +32,7 @@ export class VideoLoad {
     this.videoElement.setAttribute("src", this.videoSrc);
     this.videoWrap.appendChild(this.videoElement);
     this.videoElement.load();
-    if (this.callback) this.callback();
+    if (this.callback) this.callback(this);
   }
 
   videoSetAttr() {

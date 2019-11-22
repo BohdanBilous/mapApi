@@ -264,16 +264,9 @@ window.addEventListener("load", function () {
     let map;
 
 
-    const openForm = () => {
-        form.classList.add('active');
-        document.body.classList.add('form-active');
-    };
-    const closeForm = () => {
-        const persone = document.querySelectorAll('.contacts-item');
-        form.classList.remove('active');
-        document.body.classList.remove('form-active');
-        persone.forEach(item => item.classList.remove('active'));
-    };
+
+
+
 
     // Select Custom
 
@@ -322,15 +315,14 @@ window.addEventListener("load", function () {
             dragging: true,
             scrollWheelZoom: false
         });
+      
 
         WE.tileLayer('https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz', {
             style: 'https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz',
         }).addTo(map);
         animateToMap();
-        addBounds([
-            [33, -53.59],
-            [58.32, -140.9]
-        ]);
+       
+        map.flyTo(49.83826, 24.02324)
     }
     const addBounds = (bounds) => {
         map.panInsideBounds(bounds, {
@@ -407,9 +399,22 @@ window.addEventListener("load", function () {
             </li>
                 `
     }
+    const openForm = () => {
+        form.classList.add('active');
+        document.body.classList.add('form-active');
+    };
+    const closeForm = () => {
+        const persone = document.querySelectorAll('.contacts-item');
+        form.classList.remove('active');
+        document.body.classList.remove('form-active');
+        persone.forEach(item => item.classList.remove('active'));
+        map.removeMarker(51.507222, -0.1275)
+    };
     const deletePoints = () => {
         const markers = document.querySelectorAll('.we-pm-icon');
         markers.forEach(item => item.parentNode.remove());
+        map.da.P.O={};
+        map.da.P.m=[];
     }
     const addPoint = (text, position) => {
 
@@ -418,9 +423,11 @@ window.addEventListener("load", function () {
             maxWidth: 150,
             closeButton: true
         });
+        console.log(map)
     }
     const clickHandle = () => {
         formClose.addEventListener('click', () => closeForm());
+    
     }
     const toogleActive = (country) => {
         let countrys = country.parentNode.childNodes;
