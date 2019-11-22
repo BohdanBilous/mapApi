@@ -105,7 +105,7 @@ export class SuperSlider {
     this.carouselReset();
     this.setVisibleSlides();
     this.setInactiveButtons();
-    this.touchHandler();
+    this.touchHandler(this.sliderRow);
     this.goTo();
   }
 
@@ -136,17 +136,17 @@ export class SuperSlider {
     if (this.sliderCallBack) this.sliderCallBack("prev");
   }
 
-  touchHandler() {
+  touchHandler(container) {
     this.touchMove = this.touchMove.bind(this);
     this.touchEnd = this.touchEnd.bind(this);
 
-    this.sliderRow.addEventListener(
+    container.addEventListener(
       "mousedown",
       function (e) {
         this.touchStart(e);
       }.bind(this)
     );
-    this.sliderRow.addEventListener(
+    container.addEventListener(
       "touchstart",
       function (e) {
         this.touchStart(e);
@@ -229,6 +229,9 @@ export class SuperSlider {
   }
 
   touchEnd(e) {
+    const {
+      fader
+    } = this;
     let touch = e;
     let curLeft = this.moveWidth;
     let stayAtCurrent =
@@ -242,12 +245,15 @@ export class SuperSlider {
 
     if (Math.abs(this.moveX - this.startX) === 0) return;
 
-    if (!stayAtCurrent) {
-      this.moveX > this.startX ?
-        this.carouselMovePrev() :
-        this.carouselMoveNext();
+    if (fader) {
+      (!stayAtCurrent) && this.moveX > this.startX ?
+        this.faderMovePrev() :
+        this.faderMoveNext();
+    } else {
+      (!stayAtCurrent) && this.moveX > this.startX ?
+          this.carouselMovePrev() :
+          this.carouselMoveNext();
     }
-
     delete this.startX;
     delete this.startY;
     delete this.moveX;
@@ -309,7 +315,7 @@ export class SuperSlider {
       this.slidesContainer = this.sliderWrap.querySelector(".slides");
       this.slides = this.slidesContainer.querySelectorAll(".slide");
       this.dots = this.sliderWrap.querySelectorAll(".slider-dots > li") || null;
-
+      this.touchHandler(this.slidesContainer);
       if (this.timerNumber) this.setTimer(0, this.timerNumber);
       if (this.dots) this.dotsClickHandler();
     }
