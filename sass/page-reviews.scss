@@ -83,6 +83,7 @@
       height: 100%;
       object-fit: cover;
       transition: transform .4s cubic-bezier(.11,0,.45,1),-webkit-transform .4s cubic-bezier(.11,0,.45,1);
+      border-radius: 10px;
     }
 
     .text {
