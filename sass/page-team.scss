@@ -5,6 +5,11 @@
 .team-grid {
     @extend .flex-sb;
     padding-top: 12px;
+
+    @include tablet {
+        padding-top: 0;
+        margin-top: -5px;
+    }
 }
 
 .team-item {
