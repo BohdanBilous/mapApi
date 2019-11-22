@@ -43,7 +43,7 @@ h5 {
 .ttl-3,
 .ttl-4,
 .ttl-5 {
-    // @extend .bold;
+    font-family: $fontMedium;
 
     span {
         color: $colorTextG;
