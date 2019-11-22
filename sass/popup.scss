@@ -391,6 +391,10 @@
         .hint {
             display: block;
         }
+
+        .follow-us .link-l, .hint {
+            color: $colorTextG;
+        }
     }
 }
 

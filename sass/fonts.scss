@@ -43,7 +43,7 @@ h5 {
 .ttl-3,
 .ttl-4,
 .ttl-5 {
-    @extend .bold;
+    // @extend .bold;
 
     span {
         color: $colorTextG;
@@ -94,7 +94,7 @@ h5 {
 }
 
 .ttl-top {
-    @extend .bold;
+    // @extend .bold;
     color: $colorText2;
     margin-bottom: 10px;
     line-height: 20px;
