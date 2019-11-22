@@ -693,7 +693,7 @@
     line-height: 19px;
     color: #fff;
     font-size: 12px;
-    font-family: $fontMedium;
+    // font-family: $fontMedium;
     border: 2px solid #dad9d8;
     align-self: center;
 
@@ -849,7 +849,7 @@
     }
 
     p {
-        font-family: $fontMedium;
+        // font-family: $fontMedium;
         color: #535353;
     }
 }
@@ -921,7 +921,7 @@
         margin-right: 14px;
         padding-left: 13px;
         text-decoration: underline;
-        font-family: $fontMedium;
+        // font-family: $fontMedium;
 
         &:last-child {
             margin-right: 0;
