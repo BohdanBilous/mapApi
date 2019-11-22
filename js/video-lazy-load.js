@@ -24,7 +24,6 @@ export class VideoLoad {
     this.videoInit();
     this.addPoster();
     this.videoSetAttr();
-    console.log(this.videoWrap);
   }
 
   videoInit() {

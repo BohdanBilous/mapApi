@@ -1588,15 +1588,16 @@ $animateDur: 0.30s;
 
 .video-section,
 .article-section {
+    @extend .trans-safari-fix;
     display: block;
     position: relative;
     height: 480px;
     border-radius: 25px;
     overflow: hidden;
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 0;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: 50% 0;
 
     &::after {
         @extend .ps;
@@ -1638,8 +1639,6 @@ $animateDur: 0.30s;
         }
     }
 }
-
-
 
 .video-section {
     .col {

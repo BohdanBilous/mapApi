@@ -570,6 +570,7 @@
 }
 
 .media-panel {
+    @extend .trans-safari-fix;
     position: relative;
     overflow: hidden;
     height: 345px;
