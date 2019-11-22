@@ -1,6 +1,9 @@
 /* =========================
     About us 
    ========================= */
+   .about-main{
+     overflow: hidden;
+   }
 .screen-about-us {
   background-image: url('../images/about-us.jpg');
   background-position: 100% 100%;
@@ -390,7 +393,7 @@
     width: 89%;
 
     .year-slider-item {
-      margin-bottom: 54px;
+      margin-bottom: 37px;
       width: 25%;
 
       h3 {
@@ -414,11 +417,11 @@
       }
 
       &:nth-child(4) {
-        width: 38%;
+        width: 32%;
       }
 
       &:nth-child(5) {
-        width: 16%;
+        width: 22%;
       }
 
       &:nth-child(6) {
@@ -478,7 +481,7 @@
       }
 
       &:nth-child(2) {
-        width: 38%;
+        width: 32%;
 
         .workwu-inner {
           width: 178px;
@@ -486,7 +489,7 @@
       }
 
       &:nth-child(3) {
-        width: 16%;
+        width: 12%;
 
         .workwu-inner {
           width: 178px;
@@ -555,6 +558,28 @@
 
   .fader {
     padding-top: 0;
+
+    &-recycling {
+      .fader-recycling-text {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 32px;
+
+        ul {
+          margin-bottom: 0;
+        }
+
+      }
+
+      ul li,
+      p {
+        color: #595a5a;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+    }
+
   }
 
   .fader-recycling-row {
@@ -572,16 +597,15 @@
         margin-bottom: 19px;
       }
     }
-
-
   }
 }
 
 .socket-recycling {
   .slides {
     margin-top: 36px;
-    width: 202px;
-    height: 272px;
+    width: 602px;
+    height: 298px;
+    max-width: 42%;
 
     ul {
       margin-bottom: 32px;
@@ -673,8 +697,12 @@
 @include laptop {
   .gb-socket {
     height: 515px;
+    // overflow: hidden;
   }
-
+  // .gb-socket .svg-map img{
+  //   width: 1031px;
+  //   max-width: 100vw;
+  // }
   .about-us-fader-wrap .slides {
     max-width: 72%;
   }
@@ -837,7 +865,7 @@
         left: 50%;
         width: 100vw;
         transform: translateX(-50%);
-        height: 40px;
+        height: 60px;
         overflow-x: scroll;
 
       }
@@ -887,7 +915,8 @@
 
       .workwu-row {
         flex-wrap: wrap;
-
+        padding-bottom: 44px;
+        border-bottom: 1px solid rgba(#707070 ,0.2);
         .workwu-inner {
           min-height: auto
         }
@@ -923,23 +952,41 @@
       display: block;
     }
 
+    .fader-recycling,
+    .fader-saving {
+      width: 100%;
+    }
+
     .fader-recycling-row {
       .recycling-left {
-        width: 50%;
+        width: calc(100% / 3);
       }
 
       .slides {
-        width: 50%;
+        width: calc((100% / 3)*2);
 
         .slide {
           padding-left: 0;
         }
       }
     }
+
+    .fader-saving {
+      p {
+        margin-bottom: 20px;
+      }
+    }
   }
 
-  .team-carosuel .slider-row .slide {
-    width: 50%;
+  .socket-recycling .slides {
+    height: 308px;
+  }
+
+  .team-carosuel {
+    padding-bottom: 77px;
+    .slider-row .slide {
+      width: 50%;
+    }
   }
 }
 
@@ -1107,7 +1154,12 @@
         .year-slider-item {
           width: 50%;
           margin: 0 0 58px;
-
+          &:nth-last-child(2){
+            order: 2;
+          }
+&:last-child{
+  order: 1;
+}
           h5 {
             white-space: initial;
           }
@@ -1160,6 +1212,8 @@
     }
 
     .layout-col-r .workwu-row {
+      padding-bottom: 0;
+      border-bottom: none;
       .workwu-col {
         width: 100%;
         margin-bottom: 58px;
@@ -1174,7 +1228,8 @@
         .icon {
           margin-bottom: 13px;
         }
-        h4{
+
+        h4 {
           margin-bottom: 45px;
         }
       }
@@ -1207,12 +1262,52 @@
     }
 
     .slides {
-      p {
-        margin-bottom: 40px;
+      h4 {
+        padding-left: 0;
       }
 
       a {
         width: 100%;
+      }
+    }
+  }
+
+  .socket-recycling .fader .fader-recycling-row {
+    .slides {
+      height: 342px;
+      max-width: 100%;
+
+      .ttl-4 {
+        margin-bottom: 15px;
+      }
+
+      .fader-recycling-text {
+        flex-wrap: wrap;
+
+        ul {
+          width: 100%;
+          margin-bottom: 15px;
+        }
+      }
+
+      p {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .socket-saving .fader {
+    .fader-recycling-row {
+      .slides {
+  .slide{
+    padding-top: 56px;
+  }
+  h4{
+    margin-bottom: 23px;
+  }
+        p {
+          margin-bottom: 40px;
+        }
       }
     }
   }
