@@ -23,7 +23,7 @@
     })
     @@include('./partials/search.htm')
 
-    <main class="main">
+    <main class="main about-main">
         <div class="screen screen-main screen-top screen-about-us">
             <div class="socket layout-row ">
                 <div class="layout-col-l">
@@ -59,11 +59,11 @@
                     <h5 class="ttl-5">8 Countries</h5>
                     <ul class="only-mobile country-list">
                         <li class="blue">As, Czech Rep.</li>
-                        <li class="blue">Lidköping, SWEDEN  </li>
+                        <li class="blue">Lidköping, SWEDEN </li>
                         <li class="green">Modesto, US</li>
                         <li class="green">Tijucas, Brazil</li>
                         <li class="purpure">Klin, Russia</li>
-                        <li class="purpure">Novokuznetsk, Russia   </li>
+                        <li class="purpure">Novokuznetsk, Russia </li>
                         <li class="green">Beijing, China</li>
                         <li class="blue">Mumbai, India</li>
                         <li class="purpure">Melbourne, Australia</li>
@@ -74,11 +74,11 @@
                         <li class="green">Planned PetainerKeg Blow Hub</li>
                     </ul>
                 </div>
-                    @@include('./partials/elements/button-link.htm', {
-                    "text": "Contact",
-                    "href" : "./contact.html",
-                    "classes": "btn-g btn-arrow-a only-mobile"
-                    })
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Contact",
+                "href" : "./contact.html",
+                "classes": "btn-g btn-arrow-a only-mobile"
+                })
             </div>
             <div class="svg-map">
                 <img src="./images/svg-map.svg" alt="">
@@ -250,40 +250,12 @@
                 </div>
                 <div class="years-slider-fader">
                     <div class="slides">
-                        <div class="slide active">
-                            <div class="year-slider-inner">
-                                <div class="year-slider-item">
-                                    <h3 class="ttl-3">1996</h3>
-                                    <h5 class="ttl-5">Site build by PLM</h5>
-                                </div>
-                                <div class="year-slider-item">
-                                    <h3 class="ttl-3">1996</h3>
-                                    <h5 class="ttl-5">Site build by PLM</h5>
-                                </div>
-                                <div class="year-slider-item">
-                                    <h3 class="ttl-3">1996</h3>
-                                    <h5 class="ttl-5">Site build by PLM</h5>
-                                </div>
-                                <div class="year-slider-item">
-                                    <h3 class="ttl-3">1996</h3>
-                                    <h5 class="ttl-5">Site build by PLM</h5>
-                                </div>
-                                <div class="year-slider-item">
-                                    <h3 class="ttl-3">1996</h3>
-                                    <h5 class="ttl-5">Site build by PLM</h5>
-                                </div>
-                                <div class="year-slider-item">
-                                    <h3 class="ttl-3">1996</h3>
-                                    <h5 class="ttl-5">Site build by PLM</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide ">
+                    
+                        <div class="slide active ">
                             <div class="year-slider-inner">
                                 <div class="year-slider-item">
                                     <h3 class="ttl-3">1983</h3>
                                     <h5 class="ttl-5">The company, founded <br> in the late 50s</h5>
-
                                 </div>
                                 <div class="year-slider-item">
                                     <h3 class="ttl-3">1996</h3>
@@ -364,6 +336,34 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="slide ">
+                                <div class="year-slider-inner">
+                                    <div class="year-slider-item">
+                                        <h3 class="ttl-3">2018</h3>
+                                        <h5 class="ttl-5">Petainer launches <br> Hybrid 20L</h5>
+                                    </div>
+                                    <div class="year-slider-item">
+                                        <h3 class="ttl-3">2018</h3>
+                                        <h5 class="ttl-5">Manufacturing <br> in Brazil</h5>
+                                    </div>
+                                    <div class="year-slider-item">
+                                        <h3 class="ttl-3">2018</h3>
+                                        <h5 class="ttl-5">Clean Energy-Lidkoping</h5>
+                                    </div>
+                                    <div class="year-slider-item">
+                                        <h3 class="ttl-3">2019</h3>
+                                        <h5 class="ttl-5">Clean Energy-Aš</h5>
+                                    </div>
+                                    <div class="year-slider-item">
+                                        <h3 class="ttl-3">2019</h3>
+                                        <h5 class="ttl-5">Manufacturing in China</h5>
+                                    </div>
+                                    <div class="year-slider-item">
+                                        <h3 class="ttl-3">2019</h3>
+                                        <h5 class="ttl-5">Hybrid 30L, <br> Generation 4 Fittings</h5>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                     <div class="swipe-hint only-mobile only-tablet"></div>
 
@@ -371,22 +371,11 @@
                         <ul class="slider-dots">
                             <li class="active">
                                 <span>1996</span>
-
                                 <span>2006</span>
-
                             </li>
-                            <li>
-
-                                <span>2014</span>
-                            </li>
-                            <li>
-
-                                <span>2018</span>
-                            </li>
-                            <li>
-
-                                <span>2019</span>
-                            </li>
+                            <li><span>2014</span></li>
+                            <li><span>2018</span></li>
+                            <li><span>2019</span></li>
                             <div class="line"></div>
                         </ul>
                     </div>
@@ -394,9 +383,7 @@
             </div>
             <div class="layout-col-l">
                 <h1 class="ttl-1 only-tablet only-mobile">
-                    <span class="green">
-                        35
-                    </span>
+                    <span class="green"> 35 </span>
                     <br>
                     Years
                 </h1>
@@ -404,24 +391,25 @@
             <div class="layout-col-r">
                 <div class="years-slide-text">
                     <h4 class="ttl-4">Around the World.</h4>
-                    <p>Petainer has seven manufacturing sites around the world to ensure we can produce and supply
-                        products as efficiently and sustainably as possible.</p>
-                    <p>We take a regionalised approach to our key markets in Europe, Russia, the Americas and Asia to
+                    <p>
+                        Petainer has seven manufacturing sites around the world to ensure we can produce and supply
+                        products as efficiently and sustainably as possible.
+                    </p>
+                    <p>
+                        We take a regionalised approach to our key markets in Europe, Russia, the Americas and Asia to
                         ensure that our customers are supported as closely as possible with commercial, product and
-                        technical expertise.</p>
+                        technical expertise.
+                    </p>
                 </div>
             </div>
         </div>
         <!-- Why work with us? -->
         <div class="socket layout-row workwu-socket">
-            <div class="layout-col-l">
-
-            </div>
+            <div class="layout-col-l"> </div>
             <div class="layout-col-r">
                 <div class="ttl-top">
                     <div>Your First Order:</div>
-                    <h2 class="ttl-2">Why work <br>
-                        with us?</h2>
+                    <h2 class="ttl-2">Why work <br> with us?</h2>
                 </div>
                 <div class="workwu-row">
                     <div class="workwu-col">
@@ -492,9 +480,7 @@
         </div>
         <!-- Fader Recycling  -->
         <div class="socket socket-recycling">
-            <div class="layout-col-l">
-
-            </div>
+            <div class="layout-col-l"> </div>
             <div class="layout-col-r fader fader-recycling">
                 <div class="fader-recycling-row">
                     <div class="recycling-left">
@@ -504,8 +490,7 @@
                                 /
                                 <span class="slide-items">06</span>
                             </div>
-                            <div class="ttl ttl-3">Recycling and<br>
-                                Dispensing. </div>
+                            <div class="ttl ttl-3">The Hybrid <br>System </div>
                         </div>
 
                         <div class="slider-buttons slider-buttons-c">
@@ -515,13 +500,16 @@
                     </div>
                     <div class="slides">
                         <div class="slide active">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
+                            <h4 class="ttl-4">A Global Business <br> With A Local Expertise</h4>
+                            <div class="fader-recycling-text">
+                                <ul>
+                                    <li>- 1 Innovation Centre in the UK</li>
+                                    <li>- Global Operations in: Canada, <br> US, Brazil, Sweden, Czech Rep., <br>
+                                        Russia, China, Australia </li>
+                                </ul>
+                                <p>Up To 40% <br> Savings On Logistics <br> (versus steel kegs) </p>
+                            </div>
+
                             @@include('./partials/elements/button-link.htm', {
                             "text": "Learn More",
                             "href" : "./solution-hybrid.html",
@@ -529,13 +517,16 @@
                             })
                         </div>
                         <div class="slide ">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
+                            <h4 class="ttl-4">Recycling And <br> Dispensing</h4>
+                            <div class="fader-recycling-text">
+                                <ul>
+                                    <li>- Zero maintenance or cleaning <br> (no water, no chemicals);</li>
+                                    <li>- Easy to disassemble after use;</li>
+                                    <li>- Recyclable kegs and chimes;</li>
+                                    <li>- Reusable chimes;</li>
+                                    <li>- No keg losses!</li>
+                                </ul>
+                            </div>
                             @@include('./partials/elements/button-link.htm', {
                             "text": "Learn More",
                             "href" : "./solution-hybrid.html",
@@ -543,13 +534,26 @@
                             })
                         </div>
                         <div class="slide ">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
+                            <h4 class="ttl-4">Petainer Sites Powered By <br> Clean Energy Sources</h4>
+                            <div class="fader-recycling-text">
+                                <ul>
+                                    <li>- Petainer in the top 1% of <br> suppliers in the Manufacture of <br> Plastics
+                                        Products</li>
+                                    <li>- Lidkoping (100% clean energy) <br> has achieved a CSR Gold Rating <br> by
+                                        EcoVadis </li>
+                                    <li>- As using 100% clean energy <br> from Q1 2019 </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="slide ">
+                            <h4 class="ttl-4">On Trade </h4>
+                            <div class="fader-recycling-text">
+                                <ul>
+                                    <li>- Compatible with all existing <br> dispense equipment</li>
+                                    <li>- Reconnectable for cleaning.</li>
+                                    <li>- Stackable and easy to store </li>
+                                </ul>
+                            </div>
                             @@include('./partials/elements/button-link.htm', {
                             "text": "Learn More",
                             "href" : "./solution-hybrid.html",
@@ -557,13 +561,14 @@
                             })
                         </div>
                         <div class="slide ">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
+                            <h4 class="ttl-4">Superior Product <br> Protection </h4>
+                            <div class="fader-recycling-text">
+                                <ul>
+                                    <li>- 1 Innovation Centre in the UK </li>
+                                    <li>- Global Operations in: Canada, <br> US, Brazil, Sweden, Czech Rep., <br>
+                                        Russia, China, Australia.</li>
+                                </ul>
+                            </div>
                             @@include('./partials/elements/button-link.htm', {
                             "text": "Learn More",
                             "href" : "./solution-hybrid.html",
@@ -571,27 +576,19 @@
                             })
                         </div>
                         <div class="slide ">
+                            <h4 class="ttl-4">Transport </h4>
                             <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
+                                <li>- Lower transportation costs </li>
+                                <li>- Reduced carbon footprint .</li>
                             </ul>
-                            @@include('./partials/elements/button-link.htm', {
-                            "text": "Learn More",
-                            "href" : "./solution-hybrid.html",
-                            "classes": "btn-g btn-arrow-a"
-                            })
-                        </div>
-                        <div class="slide ">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
+                            <div class="fader-recycling-text">
+                                <p>
+                                    Petainer kegs being lighter than metal <br> kegs,more kegs can be tted onto <br>
+                                    outbound vehicles.
+                                </p>
+                                <p>Lower transportation costs: <br> our kegs weigh 10% the <br> weight of steel kegs.
+                                </p>
+                            </div>
                             @@include('./partials/elements/button-link.htm', {
                             "text": "Learn More",
                             "href" : "./solution-hybrid.html",
@@ -618,12 +615,10 @@
                             <div class="pages">
                                 <span class="slide-current">01</span>
                                 /
-                                <span class="slide-items">06</span>
+                                <span class="slide-items">03</span>
                             </div>
-                            <div class="ttl ttl-3">Recycling and<br>
-                                Dispensing. </div>
+                            <div class="ttl ttl-3">Savings <br> On Logistics </div>
                         </div>
-
                         <div class="slider-buttons slider-buttons-c">
                             <button class="prev button-prev"></button>
                             <button class="next button-next"></button>
@@ -636,81 +631,37 @@
                             </div>
                             <h4 class="ttl-4">Test conducted by an <br> independent expert. </h4>
                             <hr>
-                            <p>After 12 months, no difference in taste profile between Petainer Kegs, Steel Kegs, and
+                            <p>After 12 months, no difference in <br> taste profile between <br> Petainer Kegs, Steel Kegs, and
                                 Glass Bottles.</p>
                             @@include('./partials/elements/button-link.htm', {
                             "text": "Solutions",
-                            "href" : "./solution-hybrid.html",
+                            "href" : "./solutions.html",
                             "classes": "btn-g btn-arrow-a"
                             })
                         </div>
                         <div class="slide ">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
+                            <div class="icon">
+                                <img src="images/ab-1.svg" alt="">
+                            </div>
+                            <h4 class="ttl-4">Up to 40% Savings <br> On Logistics </h4>
+                            <hr>
+                            <p>Our Kegs Weigh 10% The Weight Of <br> Steel Kegs</p>
                             @@include('./partials/elements/button-link.htm', {
-                            "text": "Learn More",
-                            "href" : "./solution-hybrid.html",
+                            "text": "Solutions",
+                            "href" : "./solutions.html",
                             "classes": "btn-g btn-arrow-a"
                             })
                         </div>
                         <div class="slide ">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
+                            <div class="icon">
+                                <img src="images/ab-1.svg" alt="">
+                            </div>
+                            <h4 class="ttl-4">Up to 40% Savings <br> On Logistics </h4>
+                            <hr>
+                            <p>After 12 Months,  No Dierence In <br> Taste Prole Between Petainer Kegs, <br> Steel Kegs, And Glass Bottles.</p>
                             @@include('./partials/elements/button-link.htm', {
-                            "text": "Learn More",
-                            "href" : "./solution-hybrid.html",
-                            "classes": "btn-g btn-arrow-a"
-                            })
-                        </div>
-                        <div class="slide ">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
-                            @@include('./partials/elements/button-link.htm', {
-                            "text": "Learn More",
-                            "href" : "./solution-hybrid.html",
-                            "classes": "btn-g btn-arrow-a"
-                            })
-                        </div>
-                        <div class="slide ">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
-                            @@include('./partials/elements/button-link.htm', {
-                            "text": "Learn More",
-                            "href" : "./solution-hybrid.html",
-                            "classes": "btn-g btn-arrow-a"
-                            })
-                        </div>
-                        <div class="slide ">
-                            <ul>
-                                <li>- Zero maintenance or cleaning (no water, no chemicals);</li>
-                                <li>- Easy to disassemble after use;</li>
-                                <li>- Recyclable kegs and chimes;</li>
-                                <li>- Reusable chimes;</li>
-                                <li>- No keg losses!</li>
-                            </ul>
-                            @@include('./partials/elements/button-link.htm', {
-                            "text": "Learn More",
-                            "href" : "./solution-hybrid.html",
+                            "text": "Solutions",
+                            "href" : "./solutions.html",
                             "classes": "btn-g btn-arrow-a"
                             })
                         </div>
