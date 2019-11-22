@@ -509,7 +509,9 @@
             padding-top: 120px;
 
             >.hint {
-                display: none;
+                position: absolute;
+                left: 25px;
+                top: 30px;
             }
         }
     }
