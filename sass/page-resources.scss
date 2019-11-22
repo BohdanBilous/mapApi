@@ -2,6 +2,13 @@
     Resources
    ========================= */
 
+.screen-resources {
+    .screen-content--help {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
 .indicators-tabs-wrap {
     position: relative;
     padding: 35px 0 12px 170px;
@@ -524,7 +531,7 @@
 
         .screen-content {
             height: 100%;
-            padding-bottom: 65px;
+            padding-bottom: 85px;
         }
 
         .screen-inner.screen-inner--with-pad-btns {
