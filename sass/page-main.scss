@@ -237,7 +237,12 @@
         }
     }
 }
-
+.pages{
+    .slide-current{
+        display: inline-block;
+        min-width: 17px;
+    }
+}
 .indicators-min {
     .indicator {
         width: 35px;

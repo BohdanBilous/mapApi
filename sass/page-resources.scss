@@ -193,6 +193,7 @@
         @extend .scroll-custom;
         padding-right: 10px;
         max-height: 110px;
+        min-height: 19px;
         overflow-y: auto;
     }
 }
