@@ -648,12 +648,13 @@
 
         .fig {
             left: -20px;
-            top: 8px;
+            top: 9px;
         }
 
         a {
             @extend .bold;
-            font-size: 27px;
+            // font-size: 27px;
+            font-size: 21px;
             line-height: 33px;
             transition-duration: 0.5s;
             letter-spacing: -0.5px;
@@ -714,10 +715,10 @@
             }
         }
 
-        .menu-more li a {
-            font-size: 21px;
-            line-height: 27px;
-        }
+        // .menu-more li a {
+        //     font-size: 21px;
+        //     line-height: 27px;
+        // }
     }
 
 
@@ -756,6 +757,19 @@
 
         .menu .follow-us {
             display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1151px) {
+    .menu-more li {
+        a {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        .fig {
+            top: 5px;
         }
     }
 }
