@@ -143,6 +143,7 @@
         padding-right: 80px;
         margin-bottom: 10px;
         transition: left 300ms linear;
+
         img {
             display: block;
             width: 51px;
@@ -168,12 +169,13 @@
                 color: #1c989c;
             }
         }
-      
+
         @for $i from 0 through 20 {
             &:nth-child(#{$i}) {
                 left: calc(#{$i} * 21%);
             }
         }
+
         &.active {
             left: 21% !important;
         }
@@ -202,6 +204,7 @@
 
             }
         }
+
         &.active {
             overflow: hidden;
         }
@@ -392,115 +395,119 @@ div.searchable {
             .attach-file {
                 input {
                     display: none;
+                    
                 }
-
+                svg {
+                    width: 30px;
+                    height: 70%;
+                    margin-right: 10px;
+                }
                 .inputfile+label {
                     cursor: pointer;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 33px;
                     height: 33px;
-                    border-radius: 50%;
-                    border: 2px solid #d4d4d4;
                 }
 
                 .inputfile:focus+label,
                 .inputfile+label:hover,
                 .inputfile:valid+label {
-                    border-color: $colorGreen;
-
-                    svg path {
-                        fill: $colorGreen;
-                    }
-                }
-            }
-        }
-
-        .contact-form-right {
-            width: 60%;
-            display: flex;
-            justify-content: space-between;
-            align-content: flex-start;
-            flex-wrap: wrap;
-
-            .w-50 {
-                width: 49%;
-            }
-
-            .textarea {
-                width: 100%;
-                margin-bottom: 24px;
-
-                textarea {
-                    &::placeholder {
-                        color: #333;
+                    color: $colorGreen;
+                    svg {
+                    
+                            path {
+                                fill: $colorGreen;
+                            }
+                        }
                     }
                 }
             }
 
-            .lines {
-                background-image: linear-gradient(#f5f5f5, #f5f5f5 27px, #ccc 27px, #ccc 28px, #f5f5f5 28px);
-                background-size: 100% 28px;
-                line-height: 28px;
-                height: 137px;
-                overflow: hidden;
-                color: #333;
-            }
+            .contact-form-right {
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
+                align-content: flex-start;
+                flex-wrap: wrap;
 
+                .w-50 {
+                    width: 49%;
+                }
 
-            .select-form-wrap {
-                width: 49%;
+                .textarea {
+                    width: 100%;
+                    margin-bottom: 24px;
 
-                .select-custom {
-                    .select-selected {
-                        background: none;
-                        border-bottom: 1px solid #cdcdcd;
-                        border-radius: 0;
-                        padding-left: 0;
-
-                        &::after {
-                            right: 0;
-                        }
-
-                        &.select-arrow-active {
-                            border-bottom: none;
+                    textarea {
+                        &::placeholder {
+                            color: #333;
                         }
                     }
+                }
 
-                    .select-items {
-                        background: none;
-                        border-radius: 0;
-                        border-bottom: 1px solid #cdcdcd;
+                .lines {
+                    background-image: linear-gradient(#f5f5f5, #f5f5f5 27px, #ccc 27px, #ccc 28px, #f5f5f5 28px);
+                    background-size: 100% 28px;
+                    line-height: 28px;
+                    height: 137px;
+                    overflow: hidden;
+                    color: #333;
+                }
 
-                        .select-inner {
-                            padding: 0;
-                        }
 
-                        .select-item {
-                            color: #949494;
-                            font-family: $fontMain;
-                            font-size: 14px;
-                            font-weight: 400;
-                            transition: color 300ms ease;
+                .select-form-wrap {
+                    width: 49%;
+
+                    .select-custom {
+                        .select-selected {
+                            background: none;
                             border-bottom: 1px solid #cdcdcd;
-                            margin-bottom: 16px;
+                            border-radius: 0;
+                            padding-left: 0;
 
-                            &:hover {
-                                color: $colorGreen;
+                            &::after {
+                                right: 0;
+                            }
+
+                            &.select-arrow-active {
+                                border-bottom: none;
                             }
                         }
 
+                        .select-items {
+                            background: none;
+                            border-radius: 0;
+                            border-bottom: 1px solid #cdcdcd;
+
+                            .select-inner {
+                                padding: 0;
+                            }
+
+                            .select-item {
+                                color: #949494;
+                                font-family: $fontMain;
+                                font-size: 14px;
+                                font-weight: 400;
+                                transition: color 300ms ease;
+                                border-bottom: 1px solid #cdcdcd;
+                                margin-bottom: 16px;
+
+                                &:hover {
+                                    color: $colorGreen;
+                                }
+                            }
+
+                        }
                     }
                 }
             }
+
+            .btn {
+                position: absolute;
+                right: 0;
+                bottom: 159px;
+            }
         }
 
-        .btn {
-            position: absolute;
-            right: 0;
-            bottom: 159px;
-        }
     }
-
-}
