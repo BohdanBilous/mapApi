@@ -483,7 +483,6 @@ color: rgba(#595a5a,0.8);
 
     h2 {
       color: #333333;
-      font-weight: 500;
     }
   }
 
@@ -710,19 +709,28 @@ color: rgba(#595a5a,0.8);
 }
 
 @include laptop {
-  .screen-about-us .socket{
-    .layout-col-l{
-      width: 12%;
-
+  .screen-about-us {
+    .about-top-inner h1{
+      font-size: 50px;
     }
-    .layout-col-r{
-      width: calc(100% - 12%);
-      
+    .socket{
+      .layout-col-l{
+        width: 12%;
+  
+      }
+      .layout-col-r{
+        width: calc(100% - 12%);
+        
+      }
     }
   }
   .gb-socket {
     height: 515px;
     // overflow: hidden;
+ .gb-socket-inner h2{
+font-size: 35px;
+line-height: 35px;
+    }
     .svg-map {
       bottom: -48px;
   }
@@ -745,12 +753,15 @@ color: rgba(#595a5a,0.8);
   }
 
   .years-slider-socket {
+    .layout-col-l h1{
+      font-size: 50px;
+      line-height: 46px;
+    }
     .year-slider-inner {
 
       .year-slider-item {
         margin-bottom: 37px;
         width: 25%;
-
         h3 {
           margin-bottom: 10px;
         }
@@ -790,6 +801,10 @@ color: rgba(#595a5a,0.8);
     &>div{
       margin-bottom: 15px;
     }
+  }
+  .workwu-socket .ttl-top h2{
+    font-size: 35px;
+    line-height: 35px;
   }
   .workwu-socket .workwu-row .workwu-col{
     &:nth-child(1){
@@ -1029,7 +1044,6 @@ color: rgba(#595a5a,0.8);
         }
 
         h4 {
-          font-weight: 500;
           margin-bottom: 32px;
         }
 
@@ -1471,16 +1485,22 @@ color: rgba(#595a5a,0.8);
   }
 
   .team-carosuel {
+    .ttl-2 {
+      font-size: 35px;
+      line-height: 35px;
+    }
     .carosuel {
       overflow: hidden;
     }
-
+    .slider-buttons-c{
+      flex-wrap: nowrap;
+    }
     .slider-row .slide {
       width: 100%;
     }
 
     .media-panel .media-img {
-      object-position: 0%;
+      object-position: top;
     }
 
     .media-stream--cols article .media-panel {

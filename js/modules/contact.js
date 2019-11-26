@@ -293,7 +293,7 @@ window.addEventListener("load", function () {
     const contactHelp = document.querySelector('.contact-help');
     const contactInput = document.querySelector('.countrys .searchable input');
     const searchClose = document.querySelector('.countrys .searcheble-close');
-    let markerList = [];
+
 
     let before = null;
     let map;
@@ -320,7 +320,7 @@ window.addEventListener("load", function () {
             console.log(map);
             map.setTilt(5);
             map.flyTo(pos[0], pos[1]); // NEED TO GET IP LOCATION 
-
+           
 
         };
         //Only for Local test 
@@ -333,14 +333,14 @@ window.addEventListener("load", function () {
             center: [36.057944835, -112.18688965],
             zoom: 3,
             dragging: true,
-            tilting: true,
+            tilting:true,
             scrollWheelZoom: true
         });
 
         WE.tileLayer('https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz', {
             style: 'https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz',
         }).addTo(map);
-
+      
         animateToMap();
         initialPoins();
         getCountryPosition();
@@ -363,7 +363,7 @@ window.addEventListener("load", function () {
     };
 
     const animateToMap = () => {
-
+   
         countysFly.forEach((item, i) => {
             const contactList = document.querySelector('.contacts-list');
             item.addEventListener('click', () => {
@@ -382,7 +382,7 @@ window.addEventListener("load", function () {
                     countryBound && addBounds(countryBound);
                     countryPoints && countryPoints.map(point => addPoint(point.pointText, [point.lat, point.long]));
                     contactListItems && contactListItems.map(item => appendHtml(contactList, createPersones(item.img, item.topText, item.bottomText)));
-
+                    
                     animatePersons();
                     closeForm();
                 }
@@ -391,9 +391,9 @@ window.addEventListener("load", function () {
         });
     }
     const animatePersons = () => {
-        const persone = document.querySelectorAll('.contacts-item');
+        const persone = document.querySelectorAll('.contacts-item');    
         contactList.classList.remove('non_active');
-
+    
         persone.forEach(item => {
             item.addEventListener('click', (e) => {
                 openForm();
@@ -449,21 +449,17 @@ window.addEventListener("load", function () {
         document.body.classList.remove('form-active');
         persone.forEach(item => item.classList.remove('active'));
         contactInput.parentNode.classList.remove('with-icon');
-        contactInput.value = "";
+        contactInput.value=""
     };
 
     const deletePoints = () => {
         const markers = document.querySelectorAll('.we-pm-icon');
         markers.forEach(item => item.parentNode.remove());
-        markerList = [];
         map.da.P.O = {};
         map.da.P.m = [];
     };
 
-    const addBounds = (bounds) => map.panInsideBounds(bounds, {
-        tilt: 10,
-        duration: 2
-    });
+    const addBounds = (bounds) => map.panInsideBounds(bounds, { tilt: 10, duration: 2});
 
     const addPoint = (text, position) => {
         let marker = WE.marker(position).addTo(map);
@@ -471,23 +467,13 @@ window.addEventListener("load", function () {
             maxWidth: 150,
             closeButton: true
         });
-        markerList.push(marker);
     };
     const clickHandle = () => {
         formClose.addEventListener('click', () => closeForm());
-        mapWrap.addEventListener('click', (e) => {
-            e.stopPropagation();
+        mapWrap.addEventListener('click', () => {
             closeForm();
-            // markerList.map(itemS => itemS.closePopup())
         });
-        // markerList.map(item => {
-        //     item.element.addEventListener('click', function (e) {
-        //         markerList.map(itemS => itemS.closePopup())
-        //         e.stopPropagation();
-        //         item.openPopup();
-        //     })
-        // })
-        toStart.forEach(start => {
+        toStart.forEach(start=>{
             start.addEventListener('click', () => {
                 map.setZoom(3);
                 initialPoins();
@@ -496,8 +482,12 @@ window.addEventListener("load", function () {
                 closePersones();
             })
         });
-        contactInput.addEventListener('input', closePersones());
-        searchClose.addEventListener('click', closePersones());
+        contactInput.addEventListener('input',()=>{
+            closePersones(); 
+        });
+        searchClose.addEventListener('click',()=>{
+            closePersones(); 
+        });
     };
     const toogleActive = (country) => {
         let countrys = country.parentNode.childNodes;
@@ -508,7 +498,6 @@ window.addEventListener("load", function () {
         country.classList.remove('not_active');
         country.classList.add('active');
     };
-    init();
     clickHandle();
-
+    init();
 });
