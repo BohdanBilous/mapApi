@@ -2202,11 +2202,18 @@ $leftOffset: 270px;
             width: 100%;
         }
 
-        .sys-catagories .sys-catagories-row .prod-a-desc {
-            width: 49%;
-            max-width: 49%;
-            flex: 0 0 49%;
+        .sys-catagories .sys-catagories-row {
+            justify-content: space-between;
 
+            .prod-a-desc {
+                width: 47%;
+                max-width: 100%;
+                flex: 0 0 47%;
+
+                p br {
+                    display: none;
+                }
+            }
         }
     }
 
