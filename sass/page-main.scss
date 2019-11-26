@@ -1238,6 +1238,7 @@ $animateDur: 0.30s;
         bottom: 0;
         opacity: 0.5;
         background-image: linear-gradient(to top, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0) 100%);
+        border-radius: 0 0 25px 25px;
     }
 
     .slider-buttons {
@@ -1384,6 +1385,19 @@ $animateDur: 0.30s;
         }
 
         .slide {
+            // Fix Bug With Border-radius
+            visibility: visible;
+            animation: none !important;
+            transition: opacity 0.3s;
+            z-index: -1;
+            
+            &.active {
+                opacity: 1;
+                z-index: 1;
+            }
+            
+            // End Fix Bug With Border-radius
+
             .layout-col-r {
                 padding-top: 115px;
                 padding-bottom: 30px;
@@ -1405,6 +1419,8 @@ $animateDur: 0.30s;
 
         .slider-buttons {
             left: 25px;
+            height: auto;
+            z-index: 100;
         }
 
         .slider-dots {
