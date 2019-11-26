@@ -1,13 +1,7 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import {
-  html,
-  desktop,
-  mobile,
-  exists,
-  scrollFromScreen
-} from "../generic-helpers";
+import { desktop, mobile, exists, scrollFromScreen } from "../generic-helpers";
 import { SolutionsInd } from "../solutions-ind";
 import { SuperSlider } from "../super-slider";
 import { CursorFader } from "../fader-cursor";

@@ -77,7 +77,7 @@ export class SolutionsInd {
     });
   }
 
-  appendHTML(container, element) {
+  appendHTML(container) {
     const indicatorsHTML = document.createElement("div");
 
     indicatorsHTML.classList.add("indicators");

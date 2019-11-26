@@ -128,7 +128,6 @@ function js() {
         "js/modules/sites.js",
         "js/modules/terms.js",
         "js/modules/about-us.js"
-
       ],
       experimentalCodeSplitting: true,
       optimizeChunks: true,

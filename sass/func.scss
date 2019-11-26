@@ -23,7 +23,7 @@ $dotsLiWidth: 250px;
 // Media Query
 @mixin mobile {
     @media screen and (max-width: 767px),
-    screen and (max-width: 825px) and (orientation: landscape) {
+           screen and (max-width: 825px) and (orientation: landscape) {
         @content;
     }
 }

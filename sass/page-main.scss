@@ -299,18 +299,23 @@
         animation: fadeIn-l 0.3s linear forwards;
 
         .indicator {
+            display: none;
+
+            .icon {
+                animation: scaleOut 0.1s linear forwards;
+            }
 
             &:not(.eclipse) {
                 display: block;
+
+                .icon {
+                    animation: scaleIn 0.3s linear forwards;
+                }
             }
 
             span {
                 transition-delay: 0.3s;
                 opacity: 1;
-            }
-
-            .icon {
-                animation: scaleIn 0.3s linear forwards;
             }
 
             @for $i from 1 to 12 {
