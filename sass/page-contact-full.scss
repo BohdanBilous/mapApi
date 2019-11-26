@@ -21,16 +21,28 @@
     justify-content: space-between;
     bottom: 0;
     width: 100%;
-    background: white;
-    padding: 34px 21px 30px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+
+
     z-index: 4;
 
-    .countrys-list {
-        width: 47%;
+    .countrys-wrap {
+        position: relative;
         display: flex;
         justify-content: space-between;
+        width: 100%;
+        background: white;
+        padding: 34px 21px 30px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        z-index: 4;
+        transition: all 300ms ease;
+    }
+
+    .countrys-list {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
 
         li {
             cursor: pointer;
@@ -222,9 +234,10 @@
     height: 100vh;
     background-color: #e6e6e6;
 
-    #map {
-        height: 100%;
+    #map { 
+        height: calc(100% - 118px);
         z-index: 0;
+        touch-action: none;
     }
 
     .we-pm-icon {
@@ -239,6 +252,7 @@
 div.searchable {
     width: 21%;
     position: relative;
+    margin-right: 50px;
 
     .searcheble-list {
         padding: 26px 21px 0 27px;
@@ -268,7 +282,10 @@ div.searchable {
             border-bottom: 1px solid rgba(#949494, 0.3);
             padding-bottom: 16px;
             margin-bottom: 14px;
-
+&:first-child{
+    border-top: 1px solid rgba(#949494, 0.3); 
+    padding-top: 14px;
+}
             &.active {
                 display: flex;
             }
@@ -308,15 +325,38 @@ div.searchable {
         padding-right: 15px;
     }
 
+    &.search-active {
+        .searcheble-find {
+            opacity: 0;
+        }
+
+        .searcheble-close {
+            opacity: 1;
+        }
+    }
+
+    .searcheble-find {
+        position: absolute;
+        top: 11px;
+        right: 0;
+        width: 23px;
+        height: 22px;
+        opacity: 1;
+        transition: opacity 150ms ease;
+
+    }
+
     .searcheble-close {
         cursor: pointer;
         position: absolute;
-        top: calc(50% - 10px);
+        top: 20px;
         right: 0;
         width: 31px;
         height: 31px;
         border-radius: 50%;
         transform: rotate(45deg) translateY(-50%);
+        opacity: 0;
+        transition: opacity 150ms ease;
 
         span {
             width: 53%;
@@ -347,6 +387,7 @@ div.searchable {
 
 .contact-form-container {
     position: absolute;
+    height: 100vh;
     top: 0;
     width: 100%;
     margin: 0%;
@@ -358,8 +399,7 @@ div.searchable {
     z-index: 2;
 
     &.active {
-        transform: translateY(0);
-
+        transform: translateY(-88vh);
     }
 
     .btn-close {
@@ -395,13 +435,15 @@ div.searchable {
             .attach-file {
                 input {
                     display: none;
-                    
+
                 }
+
                 svg {
                     width: 30px;
                     height: 70%;
                     margin-right: 10px;
                 }
+
                 .inputfile+label {
                     cursor: pointer;
                     display: flex;
@@ -414,100 +456,386 @@ div.searchable {
                 .inputfile+label:hover,
                 .inputfile:valid+label {
                     color: $colorGreen;
+
                     svg {
-                    
-                            path {
-                                fill: $colorGreen;
-                            }
+
+                        path {
+                            fill: $colorGreen;
                         }
                     }
                 }
             }
+        }
 
-            .contact-form-right {
-                width: 60%;
+        .contact-form-right {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-content: flex-start;
+            flex-wrap: wrap;
+
+            .w-50 {
+                width: 49%;
+            }
+
+            .textarea {
+                width: 100%;
+                margin-bottom: 24px;
+
+                textarea {
+                    &::placeholder {
+                        color: #333;
+                    }
+                }
+            }
+
+            .lines {
+                background-image: linear-gradient(#f5f5f5, #f5f5f5 27px, #ccc 27px, #ccc 28px, #f5f5f5 28px);
+                background-size: 100% 28px;
+                line-height: 28px;
+                height: 137px;
+                overflow: hidden;
+                color: #333;
+            }
+
+
+            .select-form-wrap {
+                width: 49%;
+
+                .select-custom {
+                    .select-selected {
+                        background: none;
+                        border-bottom: 1px solid #cdcdcd;
+                        border-radius: 0;
+                        padding-left: 0;
+
+                        &::after {
+                            right: 0;
+                        }
+
+                        &.select-arrow-active {
+                            border-bottom: none;
+                        }
+                    }
+
+                    .select-items {
+                        background: none;
+                        border-radius: 0;
+                        border-bottom: 1px solid #cdcdcd;
+
+                        .select-inner {
+                            padding: 0;
+                        }
+
+                        .select-item {
+                            color: #949494;
+                            font-family: $fontMain;
+                            font-size: 14px;
+                            font-weight: 400;
+                            transition: color 300ms ease;
+                            border-bottom: 1px solid #cdcdcd;
+                            margin-bottom: 16px;
+
+                            &:hover {
+                                color: $colorGreen;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .btn {
+            position: absolute;
+            right: 0;
+            bottom: 159px;
+        }
+    }
+
+}
+
+@include tablet {
+    .contact-main {
+        min-height: 100vh;
+        height: auto;
+        overflow: initial;
+
+        #map {
+            height: 100vh
+        }
+    }
+
+
+
+    .countrys .countrys-list,
+    .countrys .buttons,
+    .contact-help {
+        display: none;
+    }
+
+
+    .countrys {
+        display: flex;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        max-height: 33vh;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        background-color: #f5f5f5;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: all 380ms ease;
+
+        .countrys-wrap {
+            background-color: #f5f5f5;
+
+            .searchable {
+                margin-right: 0;
+            }
+        }
+
+        .searchable {
+            position: relative;
+            flex-wrap: wrap;
+            width: 100%;
+
+
+            .searcheble-find{
+                top: 0px;
+            }
+            .searcheble-close{
+                top: 5px;
+            }
+            &.with-icon {
+                input {
+                    padding-left: 45px;
+                }
+
+                .image-icon {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 33px;
+                    height: 33px;
+                    background-size: contain;
+                    border-radius: 50%;
+                }
+            }
+
+            input {
+                background-color: #f5f5f5;
+                padding-top: 7px;
+                margin-bottom: 42px;
+                padding-bottom: 23px;
+                transition: padding 200ms ease;
+            }
+
+            ul {
+                background: none;
+                max-height: initial;
+                overflow: initial;
+            }
+
+            .notFound {
+                position: static;
+            }
+        }
+
+        &.active-mob {
+            height: 50vh;
+            overflow: scroll;
+            // transform: translateY(-50vh);
+        }
+
+        .contacts-list {
+            position: static;
+            display: none;
+            background: white;
+            flex-wrap: wrap;
+            padding: 0 21px;
+            height: auto;
+            background-color: #f5f5f5;
+
+            &.active {
                 display: flex;
-                justify-content: space-between;
-                align-content: flex-start;
-                flex-wrap: wrap;
+                transform: translateY(-1px);
+            }
 
-                .w-50 {
-                    width: 49%;
+            &.active.non_active {
+                li {
+                    display: none;
                 }
 
-                .textarea {
+                .active {
                     width: 100%;
-                    margin-bottom: 24px;
-
-                    textarea {
-                        &::placeholder {
-                            color: #333;
-                        }
-                    }
-                }
-
-                .lines {
-                    background-image: linear-gradient(#f5f5f5, #f5f5f5 27px, #ccc 27px, #ccc 28px, #f5f5f5 28px);
-                    background-size: 100% 28px;
-                    line-height: 28px;
-                    height: 137px;
-                    overflow: hidden;
-                    color: #333;
-                }
-
-
-                .select-form-wrap {
-                    width: 49%;
-
-                    .select-custom {
-                        .select-selected {
-                            background: none;
-                            border-bottom: 1px solid #cdcdcd;
-                            border-radius: 0;
-                            padding-left: 0;
-
-                            &::after {
-                                right: 0;
-                            }
-
-                            &.select-arrow-active {
-                                border-bottom: none;
-                            }
-                        }
-
-                        .select-items {
-                            background: none;
-                            border-radius: 0;
-                            border-bottom: 1px solid #cdcdcd;
-
-                            .select-inner {
-                                padding: 0;
-                            }
-
-                            .select-item {
-                                color: #949494;
-                                font-family: $fontMain;
-                                font-size: 14px;
-                                font-weight: 400;
-                                transition: color 300ms ease;
-                                border-bottom: 1px solid #cdcdcd;
-                                margin-bottom: 16px;
-
-                                &:hover {
-                                    color: $colorGreen;
-                                }
-                            }
-
-                        }
-                    }
+                    display: flex;
+                    border-bottom: none;
+                    padding-bottom: 0;
                 }
             }
 
-            .btn {
-                position: absolute;
-                right: 0;
-                bottom: 159px;
+            .contacts-item {
+                position: static;
+                width: 50%;
+                max-width: 50%;
+                margin-bottom: 33px;
             }
         }
 
     }
+
+    .contact-form-container {
+        position: relative;
+        display: none;
+        height: auto;
+        max-height: 70%;
+        z-index: 5;
+
+        &.active {
+            display: block;
+            transform: translateY(-1px);
+        }
+
+        form {
+            flex-wrap: wrap;
+
+            .contact-form-right {
+                width: 100%;
+            }
+
+            .contact-form-left {
+                width: 100%;
+            }
+        }
+        .btn-close {
+            top: -119px;
+            right: 20px;
+        }
+    }
+
+   
+
+    div.searchable .searcheble-list {
+        position: static;
+        transform: none;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+        background: none;
+
+        .searchable-result {
+            position: relative;
+            width: 100%;
+            margin-bottom: 29px;
+            &::after {
+                @include tr-bottom(3px, 3px, 3px, $colorText);
+                content: "";
+                position: absolute;
+                left: 50px;
+                top: 5px;
+                display: block;
+            }
+        }
+    }
+
+    .form-active {
+        .countrys {
+            min-height: 83vh;
+
+            .searchable {
+                display: none;
+            }
+
+            .countrys-wrap {
+                padding-top: 40px;
+                padding-bottom: 0;
+            }
+        }
+
+        .contacts-list .contacts-item img {
+            width: 65px;
+            height: 65px;
+            min-width: 65px;
+            min-height: 65px;
+        }
+
+        .contact-form-container {
+            padding-top: 50px;
+            padding-bottom: 234px;
+
+            .select-custom .select-items {
+                position: static;
+            }
+
+            form {
+                .input-line {
+                    margin-bottom: 58px;
+                }
+
+                .attach-file {
+                    position: absolute;
+                    bottom: -58px;
+                    transform: translateY(100%);
+
+                    svg {
+                        width: 24px;
+                        height: 30px;
+                        margin-right: 10px;
+                    }
+                }
+
+                .contact-form-right .lines {
+                    height: 140px;
+                }
+
+                .contact-form-right .w-50 {
+                    width: 100%;
+                }
+
+                .btn {
+                    bottom: -203px;
+
+                    .arrow {
+                        border-color: transparent transparent transparent #f5f5f5;
+                    }
+
+                    span {
+                        color: #f5f5f5;
+                    }
+
+                    &::after {
+                        background-color: #0b989d;
+
+                    }
+                }
+            }
+
+            &.active {}
+        }
+    }
+}
+
+@include mobile {
+    .contact-form-container form .contact-form-left .w-50 {
+        width: 100%;
+    }
+
+    .form-active .contact-form-container form .contact-form-right .lines {
+        height: 336px;
+    }
+
+    .countrys .contacts-list .contacts-item {
+        width: 100%;
+        max-width: 100%;
+
+        .text {
+            width: 70%;
+            max-width: 70%;
+        }
+
+        padding-bottom: 33px;
+        border-bottom: 1px solid rgba(#707070, 0.2);
+    }
+}

@@ -34,157 +34,187 @@
         </div>
         <div id="map"></div>
         <div class="countrys">
-            <ul class="countrys-list">
-                <li data-country="canada">
-                    <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
-                </li>
-                <li data-country="usa">
-                    <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
-                </li>
-                <li data-country="brazil">
-                    <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
-                </li>
-                <li data-country="czech">
-                    <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
-                </li>
-                <li  data-country="sweden">
-                    <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
+            <div class="countrys-wrap">
+                <ul class="countrys-list">
+                    <li data-country="all" class=" addMarkers active">
+                        <img src="./images/wrld-ic.svg" alt=""> <span class="text">All</span>
+                    </li>
+                    <li data-country="canada" class="not_active">
+                        <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
+                    </li>
+                    <li data-country="usa" class="not_active">
+                        <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
+                    </li>
+                    <li data-country="brazil" class="not_active">
+                        <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
+                    </li>
+                    <li data-country="czech" class="not_active">
+                        <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
+                    </li>
+                    <li data-country="sweden" class="not_active">
+                        <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
+                    </li>
+                </ul>
 
+                <div class="searchable">
+                    <input type="text" placeholder="Search countries">
+                    <div class="image-icon only-mobile only-tablet-mobile"></div>
+                    <div class="searcheble-list">
+                        <div class="only-mobile only-tablet-mobile searchable-result">
+                            Result
+                        </div>
+                        <ul>
+                            <li  data-country="all" class="active addMarkers">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">All</span>
+                            </li>
+                            <li data-country="canada">
+                                <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
+                            </li>
+                            <li data-country="usa">
+                                <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
+                            </li>
+                            <li data-country="brazil">
+                                <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
+                            </li>
+                            <li data-country="czech">
+                                <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
+                            </li>
+                            <li data-country="sweden">
+                                <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
+                            </li>
+                            <li data-country="russia">
+                                <img src="./images/fl-6.svg" alt=""> <span class="text">Russia</span>
+
+                            </li>
+                            <li data-country="china">
+                                <img src="./images/fl-7.svg" alt=""> <span class="text">China</span>
+
+                            </li>
+                            <li data-country="australia">
+                                <img src="./images/fl-8.svg" alt=""> <span class="text">Australia</span>
+                            </li>
+                        </ul>
+                        <div class="notFound">EMPTY</div>
+                    </div>
+                    <div class="searcheble-find active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                            <path fill="#2a2a2a"
+                                d="M2.897 8.9a6.675 6.675 0 1 1 13.35 0 6.675 6.675 0 0 1-13.35 0zm15.575 0a8.9 8.9 0 1 0-3.442 7.031l5.611 5.612 1.574-1.573-5.612-5.612a8.862 8.862 0 0 0 1.87-5.458z" />
+                        </svg>
+                    </div>
+                    <div class="searcheble-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- <div class="buttons">
+                    <button class="prev button-prev"></button>
+                    <button class="next button-next"></button>
+                </div> -->
+            </div>
+
+            <ul class="contacts-list">
+                <li class="contacts-item">
+                    <img src="./images/av-12.png" alt="">
+                    <div class="text">
+                        <div class="top">
+                            USA (Mid—West)
+                            Territory Manager
+                        </div>
+                        <div class="bottom">
+                            David Thennes
+                        </div>
+                    </div>
+                </li>
+                <li class="contacts-item">
+                    <img src="./images/av-12.png" alt="">
+                    <div class="text">
+                        <div class="top">
+                            USA (Mid—West)
+                            Territory Manager
+                        </div>
+                        <div class="bottom">
+                            David Thennes
+                        </div>
+                    </div>
+                </li>
+                <li class="contacts-item">
+                    <img src="./images/av-12.png" alt="">
+                    <div class="text">
+                        <div class="top">
+                            USA (Mid—West)
+                            Territory Manager
+                        </div>
+                        <div class="bottom">
+                            David Thennes
+                        </div>
+                    </div>
                 </li>
             </ul>
-           
-            <div class="searchable">
-                <input type="text" placeholder="search countries">
-                <div class="searcheble-list">
-                    <ul>
-                        <li data-country="russia">
-                            <img src="./images/fl-6.svg" alt=""> <span class="text">Russia</span>
-    
-                        </li>
-                        <li data-country="china">
-                            <img src="./images/fl-7.svg" alt=""> <span class="text">China</span>
-    
-                        </li>
-                        <li data-country="australia">
-                            <img src="./images/fl-8.svg" alt=""> <span class="text">Australia</span>
-                        </li>
-                    </ul>
-                    <div class="notFound">EMPTY</div>
-                </div>
-                <div class="searcheble-close">
-                    <span></span>
-                    <span></span>
 
+            <div class="layout-row-content contact-form-container layout-row socket">
+                <div class="btn-close"></div>
+                <div class="layout-col-l"> </div>
+                <div class="layout-col-r">
+                    <form action="">
+                        <div class="contact-form-left">
+                            <div class="input-line">
+                                <input autocomplete="none" placeholder="Company Name" type="text" required>
+                            </div>
+                            <div class="input-line">
+                                <input autocomplete="none" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="input-line w-50">
+                                <input autocomplete="none" placeholder="Email" type="email" required>
+                            </div>
+                            <div class="input-line w-50">
+                                <input autocomplete="none" placeholder=" Phone" type="text" required>
+                            </div>
+                            <div class="input-line">
+                                <input autocomplete="none" placeholder="Country" type="text" required>
+                            </div>
+                            <div class="attach-file">
+                                <input type="file" name="file" id="file" class="inputfile" required />
+                                <label for="file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 11 14">
+                                        <path fill="#a4a4a4"
+                                            d="M9.943 11.64a.522.522 0 0 1-.52.52h-7.45a.522.522 0 0 1-.52-.52V2.443c0-.288.233-.521.52-.521h1.564v-.495a.522.522 0 0 1 1.042 0V5.1a.522.522 0 0 1-1.042 0V2.964H2.495V5.1c0 .862.7 1.563 1.563 1.563.862 0 1.563-.7 1.563-1.563V1.922h3.801c.287 0 .521.233.521.52zM5.522.88A1.566 1.566 0 0 0 4.058-.138c-.67 0-1.242.423-1.464 1.016h-.62C1.11.88.41 1.581.41 2.443v9.197c0 .862.701 1.563 1.563 1.563h7.45c.861 0 1.562-.701 1.562-1.563V2.443c0-.862-.701-1.564-1.563-1.564z" />
+                                    </svg>
+                                    attach file
+                                </label>
+                            </div>
+                        </div>
+                        <div class="contact-form-right">
+                            <div class="input-line textarea">
+                                <!-- <div class="max-length">(max.476)</div> -->
+                                <textarea class="lines" maxlength="276" placeholder="Question" cols="30"
+                                    rows="10"></textarea>
+                            </div>
+                            <div class="select-form-wrap w-50">
+                                <div class="select-custom ">
+                                    <select>
+                                        <option data-icon="images/ind-0.svg" value="0">All Industries</option>
+                                        <option data-icon="images/ind-1.svg" value="1">Beer</option>
+                                        <option data-icon="images/ind-2.svg" value="2">Cider</option>
+                                        <option data-icon="images/ind-3.svg" value="3">Wine</option>
+                                        <option data-icon="images/ind-4.svg" value="4">Coffee</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        @@include('./partials/elements/button.htm', {
+                        "text": "Send",
+                        "submit" : "true",
+                        "classes": ""
+                        })
                 </div>
-            </div>
-            <div class="buttons">
-                <button class="prev button-prev"></button>
-                <button class="next button-next"></button>
             </div>
         </div>
         <div class="contact-help">
             <span>County</span>
             <span>Contact </span>
         </div>
-        <ul class="contacts-list">
-            <li class="contacts-item">
-                <img src="./images/av-12.png" alt="">
-                <div class="text">
-                    <div class="top">
-                        USA (Mid—West)
-                        Territory Manager
-                    </div>
-                    <div class="bottom">
-                        David Thennes
-                    </div>
-                </div>
-            </li>
-            <li class="contacts-item">
-                <img src="./images/av-12.png" alt="">
-                <div class="text">
-                    <div class="top">
-                        USA (Mid—West)
-                        Territory Manager
-                    </div>
-                    <div class="bottom">
-                        David Thennes
-                    </div>
-                </div>
-            </li>
-            <li class="contacts-item">
-                <img src="./images/av-12.png" alt="">
-                <div class="text">
-                    <div class="top">
-                        USA (Mid—West)
-                        Territory Manager
-                    </div>
-                    <div class="bottom">
-                        David Thennes
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <div class="layout-row-content contact-form-container layout-row socket">
-            <div class="btn-close"></div>
-            <div class="layout-col-l">
 
-            </div>
-            <div class="layout-col-r">
-                <form action="">
-                    <div class="contact-form-left">
-                        <div class="input-line">
-                            <input autocomplete="none" placeholder="Company Name" type="text" required>
-                        </div>
-                        <div class="input-line">
-                            <input autocomplete="none" placeholder="Name" type="text" required>
-                        </div>
-
-                        <div class="input-line w-50">
-                            <input autocomplete="none" placeholder="Email" type="email" required>
-                        </div>
-                        <div class="input-line w-50">
-                            <input autocomplete="none" placeholder=" Phone" type="text" required>
-                        </div>
-                        <div class="input-line">
-                            <input autocomplete="none" placeholder="Country" type="text" required>
-                        </div>
-                        <div class="attach-file">
-                            <input type="file" name="file" id="file" class="inputfile" required />
-                            <label for="file">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 11 14">
-                                    <path fill="#a4a4a4"
-                                        d="M9.943 11.64a.522.522 0 0 1-.52.52h-7.45a.522.522 0 0 1-.52-.52V2.443c0-.288.233-.521.52-.521h1.564v-.495a.522.522 0 0 1 1.042 0V5.1a.522.522 0 0 1-1.042 0V2.964H2.495V5.1c0 .862.7 1.563 1.563 1.563.862 0 1.563-.7 1.563-1.563V1.922h3.801c.287 0 .521.233.521.52zM5.522.88A1.566 1.566 0 0 0 4.058-.138c-.67 0-1.242.423-1.464 1.016h-.62C1.11.88.41 1.581.41 2.443v9.197c0 .862.701 1.563 1.563 1.563h7.45c.861 0 1.562-.701 1.562-1.563V2.443c0-.862-.701-1.564-1.563-1.564z" />
-                                </svg>
-                                attach file
-                            </label>
-                        </div>
-                    </div>
-                    <div class="contact-form-right">
-                        <div class="input-line textarea">
-                            <!-- <div class="max-length">(max.476)</div> -->
-                            <textarea class="lines" maxlength="276" placeholder="Question" cols="30"
-                                rows="10"></textarea>
-                        </div>
-                        <div class="select-form-wrap w-50">
-                            <div class="select-custom ">
-                                <select>
-                                    <option data-icon="images/ind-0.svg" value="0">All Industries</option>
-                                    <option data-icon="images/ind-1.svg" value="1">Beer</option>
-                                    <option data-icon="images/ind-2.svg" value="2">Cider</option>
-                                    <option data-icon="images/ind-3.svg" value="3">Wine</option>
-                                    <option data-icon="images/ind-4.svg" value="4">Coffee</option>
-                                </select>
-                            </div>
-                        </div>
-                   
-                    </div>
-                    @@include('./partials/elements/button.htm', {
-                    "text": "Send",
-                    "submit" : "true",
-                    "classes": ""
-                    })
-            </div>
-        </div>
     </main>
 </body>
 

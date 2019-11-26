@@ -9,7 +9,8 @@ export class VideoLoad {
     autoplay = false,
     muted,
     loop = true,
-    callback = null
+    loadMobile = true,
+    callback = null,
   ) {
     this.videoWrap = document.querySelector(videoWrapSelector);
     this.videoSrc = this.videoWrap.dataset.src;
@@ -18,9 +19,11 @@ export class VideoLoad {
     this.autoplay = autoplay;
     this.muted = muted || true;
     this.loop = loop;
+    this.loadMobile = loadMobile;
     this.videoElement = null;
     this.modalVideo = document.querySelector(".modal-video") || null;
     this.callback = callback;
+    this.width = window.innerWidth;
     this.videoInit();
     this.addPoster();
     this.videoSetAttr();
@@ -32,10 +35,17 @@ export class VideoLoad {
     this.videoElement.setAttribute("src", this.videoSrc);
     this.videoWrap.appendChild(this.videoElement);
     this.videoElement.load();
+
     if (this.callback) this.callback(this);
   }
 
   videoSetAttr() {
+
+    if (this.width <= 768 && !this.loadMobile) {
+      this.videoElement.autoplay = false;
+      this.videoElement.load();
+      return
+    }
     if (this.controls) this.videoElement.controls = true;
     if (this.autoplay) this.videoElement.autoplay = true;
     if (this.muted) this.videoElement.muted = true;
@@ -46,5 +56,6 @@ export class VideoLoad {
     if (this.videoPoster) {
       this.videoElement.setAttribute("poster", this.videoPoster);
     }
+
   }
 }
