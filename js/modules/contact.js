@@ -318,9 +318,10 @@ window.addEventListener("load", function () {
         function showPosition(position) {
             pos = [position.coords.latitude, position.coords.longitude];
             console.log(map);
-            map.setTilt(5);
+            map.setTilt(10);
+            map.setZoom(4);
             map.flyTo(pos[0], pos[1]); // NEED TO GET IP LOCATION 
-           
+            map.setTilt(10);
 
         };
         //Only for Local test 
@@ -334,7 +335,8 @@ window.addEventListener("load", function () {
             zoom: 3,
             dragging: true,
             tilting:true,
-            scrollWheelZoom: true
+            zooming:false,
+            scrollWheelZoom: true,
         });
 
         WE.tileLayer('https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz', {
@@ -488,6 +490,7 @@ window.addEventListener("load", function () {
         searchClose.addEventListener('click',()=>{
             closePersones(); 
         });
+  
     };
     const toogleActive = (country) => {
         let countrys = country.parentNode.childNodes;
@@ -497,6 +500,7 @@ window.addEventListener("load", function () {
         })
         country.classList.remove('not_active');
         country.classList.add('active');
+        
     };
     clickHandle();
     init();
