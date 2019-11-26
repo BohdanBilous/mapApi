@@ -81,5 +81,6 @@ window.addEventListener("load", function() {
   // Scroll From Screen
   if (exists(".hint-from-top")) scrollFromScreen(".screen-top");
 
-  new VideoLoad(".screen-main .bg-img", false, true, false, false);
+  new VideoLoad(".screen-main .bg-img", false, true, false, false,false);
+
 });

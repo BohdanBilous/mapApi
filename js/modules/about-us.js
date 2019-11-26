@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
     new SuperSlider(`.fader-saving`, "fader");
     new SuperSlider(`.team-carosuel`, "carousel");
 
-    new VideoLoad(".recycling-video.bg-img", false, false, null, false, function (props) {
+    new VideoLoad(".recycling-video.bg-img", false, false, null, false, true, function (props) {
         const {
             videoElement
         } = props
