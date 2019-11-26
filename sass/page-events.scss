@@ -772,8 +772,6 @@ div.border-rad-top {
 
     .media-stream {
 
-
-
         &--bbox {
             margin-bottom: 0;
             border: none;
@@ -794,6 +792,14 @@ div.border-rad-top {
 
             .media-content {
                 padding-left: 30%;
+            }
+        }
+
+        &--article.has-not-img {
+            .media-content {
+                .ttl {
+                    text-align: right;
+                }
             }
         }
     }

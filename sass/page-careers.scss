@@ -51,9 +51,13 @@
             min-width: 95px;
         }
 
-        &.active, &:hover {
+        &.active {
             background-color: $colorGreen;
             color: #fff;
+        }
+
+        &:hover:not(.active) {
+            color: $colorGreen;
         }
     }
 }

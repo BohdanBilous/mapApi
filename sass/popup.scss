@@ -439,6 +439,7 @@
 
 .team-member-text {
     width: 45%;
+    color: $colorText2;
 
     @include macbook {
         width: 57%;
