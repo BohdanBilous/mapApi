@@ -640,7 +640,7 @@
         padding-right: 8%;
 
         .text-top {
-            padding-top: 56px;
+            // padding-top: 56px; // With Icons
             margin-bottom: 60px;
         }
 
@@ -733,6 +733,10 @@
 
         &--body-s {
             padding-right: 0;
+
+            .text-top {
+                padding-top: 37px;
+            }
         }
     }
 }
