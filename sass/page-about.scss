@@ -1228,7 +1228,9 @@ line-height: 35px;
       right: auto;
       bottom: 50px;
     }
-
+.fader .slider-dots{
+  width: calc(100% - 25px);
+}
     .slides {
       max-width: 87%;
       height: min-content;
