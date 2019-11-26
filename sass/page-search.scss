@@ -264,14 +264,14 @@ transform: translateY(-100%);
             z-index: -1;
         }
 
-
+ 
         span {
             width: 50%;
             height: 2px;
             position: absolute;
             background-color: #2a2a2a;
             top: calc(50% - 1px);
-            left: 7.8px;
+            left: 8.8px;
             // transform: translate(-50%, -50%);
 
             &:first-child {
