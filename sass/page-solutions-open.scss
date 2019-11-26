@@ -64,6 +64,10 @@
         background-color: #e5e5e5;
         transition: background-color 0.2s;
 
+        @include mobile {
+            margin: 0 7px 10px 0;
+        }
+
         &.active {
             background-color: $colorGreen;
             color: #fff;
@@ -2833,7 +2837,7 @@ $leftOffset: 270px;
     .disposal-photo {
         img {
             width: 440px;
-            max-width: 90%;
+            max-width: 100%;
         }
     }
 
