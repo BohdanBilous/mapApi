@@ -98,7 +98,6 @@ window.addEventListener("load", function() {
 
   // Links Locking
   // const hrefArray = ["case-open.html", "event-open.html"];
-
   // document.querySelectorAll("a").forEach(link => {
   //   if (hrefArray.includes(link.getAttribute("href"))) {
   //     link.addEventListener("click", e => e.preventDefault());
