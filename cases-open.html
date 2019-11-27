@@ -10,25 +10,25 @@
         <div class="article-open-header-main">
             @@include('./partials/header.htm')
             @@include('./partials/menu.htm', {
-                "solution": "",
-                "about": "",
-                "news": "",
-                "resources": "",
-                "events": "",
-                "cases": "active",
-                "careers": "",
-                "sites": "",
-                "contact": "",
-                "reviews": "",
-                "team": "",
-                "faq": ""
+            "solution": "",
+            "about": "",
+            "news": "",
+            "resources": "",
+            "events": "",
+            "cases": "active",
+            "careers": "",
+            "sites": "",
+            "contact": "",
+            "reviews": "",
+            "team": "",
+            "faq": ""
             })
             @@include('./partials/search.htm')
             <div class="header-content">
-                <div class="header-content-inner ml-layout">
+                <div class="header-content-inner ml-layout case-title">
                     <div class="inner-left">
                         <p class="header-content-time">6 min read</p>
-                        <h2 class="ttl-3">Petainer launches new Hybrid kegs.</h2>
+                        <h2 class="ttl-2">Petainer launches new Hybrid kegs.</h2>
                         <a href="#main" class="header-content-scroll">
                             <span class="text">Scroll</span>
                         </a>
@@ -110,7 +110,7 @@
                         </p>
                         <div class="article-open-info ml-layout">
                             <span class="blue">4 photos</span>
-                            <span class="gray">Closing the loop. </span>
+                            <span class="gray cls-gray">Closing the loop. </span>
                         </div>
                         <div class="fader article-open-slider">
                             <div class="slider-buttons slider-buttons-c">
@@ -177,10 +177,10 @@
                                 </button>
                             </form>
                         </div>
-                        <h2 class="ttl-2 ml-layout">Next Case Studies</h2>
+                        <h2 class="ttl-2 ml-layout case-ttl">Next Case Studies</h2>
                     </article>
                     <div class="cases-container">
-                        <a class="case-item" href="case-open.html">
+                        <a class="case-item" href="cases-open.html">
                             <div class="media-panel">
                                 <div class="case-item-text">
                                     <div class="case-item-pos">Chief Marketing Officer</div>
@@ -206,7 +206,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="case-item" href="case-open.html">
+                        <a class="case-item" href="cases-open.html">
                             <div class="media-panel">
                                 <div class="case-item-text">
                                     <div class="case-item-pos">Product Manager</div>
@@ -234,15 +234,14 @@
                             </div>
                         </a>
                         @@include('./partials/elements/button-link.htm', {
-                        "text": "Place an order",
-                        "href" : "#",
+                        "text": "All Case Studies",
+                        "href" : "/case-studies.html",
                         "classes": "btn-g btn-arrow-a"
                         })
                     </div>
                 </div>
-
                 <!-- Footer -->
-                <footer class="footer footer-bg">
+                <footer class="footer">
                     <div class="info-row layout-row socket">
                         <div class="layout-col-l">
                             <h3 class="ttl-4">Becoming a customer</h3>
@@ -267,12 +266,15 @@
                                     })
                                 </div>
                                 <p class="text-chunk-2">Best practices and technical resources <br> to help your
-                                    business grow.
+                                    business
+                                    grow.
                                 </p>
                             </div>
                         </div>
                     </div>
-                    @@include('./partials/footer-main.htm', { "classes": "" })
+                    <div class="footer-bg">
+                        @@include('./partials/footer-main.htm', { "classes": "" })
+                    </div>
                 </footer>
                 @@include('./partials/elements/scroll-top.htm', {
                 "href" : "#"
