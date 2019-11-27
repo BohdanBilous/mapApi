@@ -454,7 +454,6 @@
         margin-bottom: 0;
       }
     }
-
   }
 
   .years-slide-text {
@@ -1000,8 +999,7 @@
       padding-top: 138px;
 
       .slides {
-        height: 471px;
-
+        height: 502px;
       }
 
       .year-slider-inner .year-slider-item {
@@ -1029,8 +1027,7 @@
         width: 100vw;
         transform: translateX(-50%);
         height: 60px;
-        overflow-x: scroll;
-
+        overflow-x: auto;
       }
 
       .slider-dots {

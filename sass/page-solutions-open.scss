@@ -2746,12 +2746,6 @@ $leftOffset: 270px;
     background-size: 100% auto !important;
 }
 
-.solution-open-page.jars  {
-    
-
-    
-}
-
 .jars {
 
     .prod-review-wrap .image {
@@ -2926,6 +2920,12 @@ $leftOffset: 270px;
 
     .jars .prod-fader .slides {
         height: 510px;
+    }
+}
+
+@include mobile-min {
+    .prod-object-socket {
+        transform: scale(0.8);
     }
 }
 
