@@ -59,7 +59,6 @@ export class selectSearch {
         this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
 
 
-
     }
     hideWraper() {
         this.selectsContainer.querySelector("ul").style.display = 'none';
@@ -78,14 +77,15 @@ export class selectSearch {
         })
         let listElements = this.selectsContainer.querySelectorAll('.searcheble-list li');
         listElements.forEach(item => {
-            item.addEventListener('click', () => {
-                this.selectsContainer.querySelector("input").value = item.querySelector('span').innerHTML;
+            item.addEventListener('click', (e) => {
+                const searchInput = this.selectsContainer.querySelector("input");
+                searchInput.value = item.querySelector('span').innerHTML;
                 if (this.imageIcon) {
                     let attribute = item.querySelector('img').getAttribute('src');
                     this.selectsContainer.classList.add('with-icon');
                     this.selectsContainer.querySelector('.image-icon').style.backgroundImage = `url('${attribute}')`;
                 }
-                (this.selectsContainer.querySelector("input").value.length >= 1) ? this.selectsContainer.classList.add('search-active'): this.selectsContainer.classList.remove('search-active');
+                (searchInput.value.length >= 1) ? this.selectsContainer.classList.add('search-active'): this.selectsContainer.classList.remove('search-active');
                 this.hideWraper();
             })
         })

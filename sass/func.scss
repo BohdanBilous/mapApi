@@ -614,9 +614,8 @@ $dotsLiWidth: 250px;
     }
 }
 .scroll-custom-x {
-  
     &::-webkit-scrollbar{
-        height: 4px;
+        height: 6px;
         width: 4px;
         background:transparent;
     }

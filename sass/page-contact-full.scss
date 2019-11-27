@@ -185,6 +185,7 @@
         @for $i from 0 through 20 {
             &:nth-child(#{$i}) {
                 left: calc(#{$i} * 21%);
+                transition: left #{$i * 100}ms linear;
             }
         }
 
@@ -234,7 +235,7 @@
     height: 100vh;
     background-color: #e6e6e6;
 
-    #map { 
+    #map {
         height: calc(100% - 118px);
         z-index: 0;
         touch-action: none;
@@ -282,10 +283,12 @@ div.searchable {
             border-bottom: 1px solid rgba(#949494, 0.3);
             padding-bottom: 16px;
             margin-bottom: 14px;
-&:first-child{
-    border-top: 1px solid rgba(#949494, 0.3); 
-    padding-top: 14px;
-}
+
+            &:first-child {
+                border-top: 1px solid rgba(#949494, 0.3);
+                padding-top: 14px;
+            }
+
             &.active {
                 display: flex;
             }
@@ -354,10 +357,10 @@ div.searchable {
         width: 31px;
         height: 31px;
         opacity: 0;
-        transform:  translateY(-50%);
+        transform: translateY(-50%);
         transition: opacity 150 ease;
 
-   
+
         span {
             width: 50%;
             height: 2px;
@@ -369,11 +372,12 @@ div.searchable {
             &:first-child {
                 transform: rotate(45deg);
             }
-            &:last-child{
+
+            &:last-child {
                 transform: rotate(-45deg);
             }
         }
-       
+
     }
 
     .notFound {
@@ -590,9 +594,11 @@ div.searchable {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         transition: all 380ms ease;
-&.active-mob-p{
-    max-height: 70vh;
-}
+
+        &.active-mob-p {
+            max-height: 85vh;
+        }
+
         .countrys-wrap {
             background-color: #f5f5f5;
 
@@ -607,12 +613,14 @@ div.searchable {
             width: 100%;
 
 
-            .searcheble-find{
+            .searcheble-find {
                 top: 0px;
             }
-            .searcheble-close{
+
+            .searcheble-close {
                 top: 15px;
             }
+
             &.with-icon {
                 input {
                     padding-left: 45px;
@@ -714,13 +722,14 @@ div.searchable {
                 width: 100%;
             }
         }
+
         .btn-close {
             top: -119px;
             right: 20px;
         }
     }
 
-   
+
 
     div.searchable .searcheble-list {
         position: static;
@@ -734,6 +743,7 @@ div.searchable {
             position: relative;
             width: 100%;
             margin-bottom: 29px;
+
             &::after {
                 @include tr-bottom(3px, 3px, 3px, $colorText);
                 content: "";
