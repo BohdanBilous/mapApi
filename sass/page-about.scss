@@ -743,7 +743,9 @@ line-height: 35px;
   .about-us-fader-wrap .slides {
     max-width: 71%;
   }
-
+  .about-us-fader-wrap .fader .slider-dots{
+    display: flex;
+  }
   .years-slider-socket .year-slider-inner,
   .years-slider-socket .years-slide-text,
   .workwu-socket .workwu-row,
