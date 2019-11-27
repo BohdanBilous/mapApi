@@ -1225,7 +1225,7 @@
       display: none;
     }
   }
-
+ 
   .gb-socket {
     height: auto;
 
@@ -1252,7 +1252,15 @@
         }
 
         .ab-coountry-dots {
+  
           margin-bottom: 59px;
+          li{
+            padding-left: 31px;
+            &::before{
+              width: 13px;
+              height: 13px;
+            }
+          }
         }
 
         ul li {
