@@ -420,10 +420,11 @@
                                 <p>
                                     Our watercoolers are subject to exhaustive scientific testing, including but not limited to, organoleptic, logistics and heat tests by Petainer’s own accredited laboratories including our Innovation Centre at Cranfield University and by globally recognized independent institutions. 
                                 </p>
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Contact Us", 
-                                    "href" : "news.html#news-innovations", 
-                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn" 
+                                @@include('./partials/elements/button-link-hash.htm', {
+                                    "text": "Contact Us",
+                                    "href" : "./news.html",
+                                    "hash" : "#sustainability",
+                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
                                 })
                             </div>
                         </div>
@@ -660,7 +661,7 @@
                         <h3 class="ttl-4">Becoming a customer</h3>
                         @@include('./partials/elements/button-link.htm', { 
                             "text": "Place an order", 
-                            "href" : "#", 
+                            "href" : "./contact.html", 
                             "classes": "btn-g btn-arrow-a" 
                         })
                     </div>
@@ -674,7 +675,7 @@
                                 <h3 class="ttl-4">Already with us</h3>
                                 @@include('./partials/elements/button-link.htm', { 
                                     "text": "Tools & Resources", 
-                                    "href" : "#", 
+                                    "href" : "./resources.html",
                                     "classes": "" 
                                 })
                             </div>

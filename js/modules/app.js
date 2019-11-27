@@ -7,7 +7,8 @@ import {
   desktop,
   exists,
   animateSwitch,
-  buttonArrowAnimate
+  buttonArrowAnimate,
+  ssHashLink
 } from "../generic-helpers";
 
 console.log("== Begin executing app.js ==");
@@ -97,12 +98,14 @@ window.addEventListener("load", function() {
 
   // Links Locking
   // const hrefArray = ["case-open.html", "event-open.html"];
-
   // document.querySelectorAll("a").forEach(link => {
   //   if (hrefArray.includes(link.getAttribute("href"))) {
   //     link.addEventListener("click", e => e.preventDefault());
   //   }
   // });
+
+  // Links Hash Redirect
+  ssHashLink(document.querySelectorAll(".btn-hash"));
 
   //SEARCH
   let inputSearch = document.getElementById("serach-input-form");

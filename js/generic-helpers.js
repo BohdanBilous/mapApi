@@ -554,25 +554,6 @@ export const observer = new IntersectionObserver(
   }
 );
 
-// The checker
-export const isInView = el => {
-  const scroll = window.scrollY || window.pageYOffset
-  const boundsTop = el.getBoundingClientRect().top + scroll
-
-  const viewport = {
-    top: scroll,
-    bottom: scroll + window.innerHeight,
-  }
-
-  const bounds = {
-    top: boundsTop,
-    bottom: boundsTop + el.clientHeight,
-  }
-
-  return (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
-    (bounds.top <= viewport.bottom && bounds.top >= viewport.top);
-}
-
 
 export const scrollXHorizontal = (el,wrapper) => {
   let  element = document.querySelector(el);
@@ -582,3 +563,48 @@ export const scrollXHorizontal = (el,wrapper) => {
     else wrap.scrollLeft -= 25;
   });
 }
+// In View
+export const isInView = el => {
+  const scroll = window.scrollY || window.pageYOffset;
+  const boundsTop = el.getBoundingClientRect().top + scroll;
+
+  const viewport = {
+    top: scroll,
+    bottom: scroll + window.innerHeight
+  };
+
+  const bounds = {
+    top: boundsTop,
+    bottom: boundsTop + el.clientHeight
+  };
+
+  return (
+    (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
+    (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
+  );
+};
+
+// Hash Link Redirect
+export const ssHashLink = links => {
+  const hashFromStorage = sessionStorage.getItem("hash");
+  let hashName = "";
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      hashName = link.dataset.hash;
+      sessionStorage.setItem("hash", hashName);
+    });
+  });
+
+  if (document.querySelector(`${hashFromStorage}`)) {
+    const blockOffsetTop =
+      document.querySelector(`${hashFromStorage}`).getBoundingClientRect().top +
+      window.scrollY;
+
+    document.documentElement.scrollTop = blockOffsetTop;
+    document.body.scrollTop = blockOffsetTop; // For IE
+    sessionStorage.removeItem("hash");
+  } else {
+    sessionStorage.removeItem("hash");
+  }
+};
