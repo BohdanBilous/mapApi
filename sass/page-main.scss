@@ -1199,16 +1199,24 @@ $animateDur: 0.30s;
                     width: 100%;
 
                     p {
+                        width: 100%;
                         margin-bottom: 18px;
                     }
                 }
             }
         }
 
+
         .btn-contact-us,
         .btn-about-us {
             width: 100%;
             margin-left: 0;
+        }
+    }
+
+    .mission-fader {
+        .slides .slide {
+            padding-right: 25px;
         }
     }
 }
