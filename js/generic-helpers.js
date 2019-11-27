@@ -566,29 +566,6 @@ export const isInView = el => {
 
 // Hash Link Redirect
 export const ssHashLink = links => {
-  let hashName = "";
-  const hashFromStorage = sessionStorage.getItem("hash");
-
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      hashName = link.dataset.hash;
-      sessionStorage.setItem("hash", hashName);
-    });
-  });
-
-  if (document.querySelector(`${hashFromStorage}`)) {
-    const toBlock = document.querySelector(`${hashFromStorage}`);
-    const blockOffsetTop = toBlock.getBoundingClientRect().top + window.scrollY;
-
-    document.documentElement.scrollTop = blockOffsetTop;
-    document.body.scrollTop = blockOffsetTop; // For IE
-
-    sessionStorage.removeItem("hash");
-  }
-};
-
-// Hash Link Redirect
-export const ssHashLink = links => {
   const hashFromStorage = sessionStorage.getItem("hash");
   let hashName = "";
 
@@ -606,6 +583,8 @@ export const ssHashLink = links => {
 
     document.documentElement.scrollTop = blockOffsetTop;
     document.body.scrollTop = blockOffsetTop; // For IE
+    sessionStorage.removeItem("hash");
+  } else {
     sessionStorage.removeItem("hash");
   }
 };
