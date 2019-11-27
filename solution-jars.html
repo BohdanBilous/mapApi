@@ -294,9 +294,9 @@
         <div class="fader prod-fader layout-row socket">
             <div class="ttl-5">Jars</div>
             <div class="layout-col-l">
-                <div class="slider-buttons slider-buttons-c">
-                    <!-- <button class="prev button-prev"></button> -->
-                    <!-- <button class="next button-next"></button> -->
+                <div class="slider-buttons slider-buttons-c hidden">
+                    <button class="prev button-prev"></button>
+                    <button class="next button-next"></button>
                 </div>
             </div>
             <div class="layout-col-r">
@@ -331,15 +331,17 @@
                                 flexibility to your business.
 
                             </p>
-                            @@include('./partials/elements/button-link.htm', {
-                            "text": "Contact Us",
-                            "href" : "news.html#news-innovations",
-                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
+                            @@include('./partials/elements/button-link-hash.htm', {
+                                "text": "Contact Us",
+                                "href" : "./news.html",
+                                "hash" : "#sustainability",
+                                "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
                             })
+
                         </div>
                     </div>
 
-                    <div class="slide">
+                    <!-- <div class="slide">
                         <div class="col-left">
                             <div class="icon">
                                 <img src="images/ind-1.svg" alt="">
@@ -409,7 +411,7 @@
                             "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
                             })
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -511,9 +513,9 @@
                             <span class="ttl-top">History Partners</span>
                         </div>
                         @@include('./partials/elements/button-link.htm', {
-                        "text": "All Reviews",
-                        "href" : "./reviews.html",
-                        "classes": "btn-g btn-arrow-a"
+                            "text": "All Reviews",
+                            "href" : "./reviews.html",
+                            "classes": "btn-g btn-arrow-a"
                         })
                     </div>
                     <div class="global-s-col global-rewiew-wrap ">
@@ -555,9 +557,9 @@
                     <h2 class="ttl-2">Keg videos</h2>
                 </div>
                 @@include('./partials/elements/button-link.htm', {
-                "text": "Learn More",
-                "href" : "/about-us.html",
-                "classes": "btn-g btn-arrow-a"
+                    "text": "Learn More",
+                    "href" : "/about-us.html",
+                    "classes": "btn-g btn-arrow-a"
                 })
             </div>
 

@@ -543,21 +543,69 @@ export const observer = new IntersectionObserver(
   { threshold: [0, 1] }
 );
 
-   // The checker
-   export const isInView = el => {
-    const scroll = window.scrollY || window.pageYOffset
-    const boundsTop = el.getBoundingClientRect().top + scroll
+// In View
+export const isInView = el => {
+  const scroll = window.scrollY || window.pageYOffset;
+  const boundsTop = el.getBoundingClientRect().top + scroll;
 
-    const viewport = {
-        top: scroll,
-        bottom: scroll + window.innerHeight,
-    }
+  const viewport = {
+    top: scroll,
+    bottom: scroll + window.innerHeight
+  };
 
-    const bounds = {
-        top: boundsTop,
-        bottom: boundsTop + el.clientHeight,
-    }
+  const bounds = {
+    top: boundsTop,
+    bottom: boundsTop + el.clientHeight
+  };
 
-    return (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
-        (bounds.top <= viewport.bottom && bounds.top >= viewport.top);
-}
+  return (
+    (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
+    (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
+  );
+};
+
+// Hash Link Redirect
+export const ssHashLink = links => {
+  let hashName = "";
+  const hashFromStorage = sessionStorage.getItem("hash");
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      hashName = link.dataset.hash;
+      sessionStorage.setItem("hash", hashName);
+    });
+  });
+
+  if (document.querySelector(`${hashFromStorage}`)) {
+    const toBlock = document.querySelector(`${hashFromStorage}`);
+    const blockOffsetTop = toBlock.getBoundingClientRect().top + window.scrollY;
+
+    document.documentElement.scrollTop = blockOffsetTop;
+    document.body.scrollTop = blockOffsetTop; // For IE
+
+    sessionStorage.removeItem("hash");
+  }
+};
+
+// Hash Link Redirect
+export const ssHashLink = links => {
+  const hashFromStorage = sessionStorage.getItem("hash");
+  let hashName = "";
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      hashName = link.dataset.hash;
+      sessionStorage.setItem("hash", hashName);
+    });
+  });
+
+  if (document.querySelector(`${hashFromStorage}`)) {
+    const blockOffsetTop =
+      document.querySelector(`${hashFromStorage}`).getBoundingClientRect().top +
+      window.scrollY;
+
+    document.documentElement.scrollTop = blockOffsetTop;
+    document.body.scrollTop = blockOffsetTop; // For IE
+    sessionStorage.removeItem("hash");
+  }
+};
