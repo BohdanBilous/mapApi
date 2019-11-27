@@ -135,10 +135,11 @@
             content: attr(data-number);
             position: absolute;
             left: 0;
-            top: -19px;
+            top: -21px;
             color: #949494;
             font-size: 12px;
             font-weight: 500;
+            font-family: $fontMain;
         }
     }
 

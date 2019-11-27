@@ -755,6 +755,10 @@
 // City
 .city {
 
+    &.ttl {
+        font-family: $fontMain;
+    }
+
     .ttl-5 {
         margin-bottom: 3px;
     }
@@ -775,7 +779,6 @@
 
 .month,
 .year {
-    @extend .bold;
     @extend .text-g;
 }
 
@@ -856,7 +859,6 @@
 
 // Items
 .items {
-    @extend .bold;
     color: $colorTextG;
     font-size: 12px;
     line-height: 14px;
@@ -903,6 +905,7 @@
 
     .author-name {
         align-self: center;
+        font-family: $fontMain;
     }
 }
 

@@ -1730,6 +1730,7 @@ $animateDur: 0.30s;
     }
 
     .text-main {
+        @extend .bold;
         width: 145px;
         text-align: right;
     }
