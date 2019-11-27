@@ -2,12 +2,8 @@
 
 /* MODULE IMPORTS */
 import {
-    html,
-    desktop,
-    mobile,
     exists,
-    findParent,
-    animateSwitch
+    scrollXHorizontal
 } from "../generic-helpers";
 import {
     customSelect
@@ -535,7 +531,7 @@ window.addEventListener("load", function () {
         });
 
         //Toogle Popups 
-        markersList.map(item => item.on('click', (e) => {
+        markersList.map(item => item.on('click', (e) => { 
             markersList.map(items => items.closePopup());
             item.openPopup();
         }));
@@ -552,4 +548,5 @@ window.addEventListener("load", function () {
     };
     init();
     clickHandle();
+    scrollXHorizontal('.contacts-list','.scroll-x-block')
 });

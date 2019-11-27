@@ -426,6 +426,7 @@ div.searchable {
             justify-content: space-between;
             flex-wrap: wrap;
             width: 38%;
+            align-content: flex-start;
 
             .input-line {
                 width: 100%;
@@ -526,6 +527,7 @@ div.searchable {
                     }
 
                     .select-items {
+                        position: relative;
                         background: none;
                         border-radius: 0;
                         border-bottom: 1px solid #cdcdcd;
@@ -553,15 +555,27 @@ div.searchable {
             }
         }
 
-        .btn {
-            position: absolute;
-            right: 0;
-            bottom: 159px;
+        .submit-wrap {
+            margin-top: 24px;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+            .btn {
+                position: relative;
+
+            }
         }
+
+
     }
 
 }
-
+@include laptop{
+    .contacts-list .contacts-item{
+        width: 33%;
+    }
+}
 @include tablet {
     .contact-main {
         min-height: 100vh;

@@ -64,7 +64,7 @@
                             Result
                         </div>
                         <ul>
-                            <li  data-country="all" class="active addMarkers">
+                            <li data-country="all" class="active addMarkers">
                                 <img src="./images/wrld-ic.svg" alt=""> <span class="text">All</span>
                             </li>
                             <li data-country="canada">
@@ -113,7 +113,7 @@
                 </div> -->
             </div>
 
-            <ul class="contacts-list">
+            <ul class="contacts-list scroll-x-block">
                 <li class="contacts-item">
                     <img src="./images/av-12.png" alt="">
                     <div class="text">
@@ -201,12 +201,15 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="submit-wrap">
+                                @@include('./partials/elements/button.htm', {
+                                "text": "Send",
+                                "submit" : "true",
+                                "classes": ""
+                                })
+                            </div>
                         </div>
-                        @@include('./partials/elements/button.htm', {
-                        "text": "Send",
-                        "submit" : "true",
-                        "classes": ""
-                        })
+
                 </div>
             </div>
         </div>

@@ -218,7 +218,7 @@ function jsProd() {
 
 gulp.task("images", function() {
   return gulp
-    .src(["images/**/*.gif", "images/**/*.jpg", "images/**/*.svg"])
+    .src(["images/**/*.gif", "images/**/*.jpg", "images/**/*.svg", "images/**/*.pdf"])
     .pipe(
       imagemin(
         [
