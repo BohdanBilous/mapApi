@@ -468,8 +468,11 @@
         ul {
             padding-left: 25px;
 
-            li:last-child {
-                margin-right: 30px;
+            &::after {
+                content: "&";
+                display: inline-block;
+                width: 1px;
+                color: $colorBg;
             }
         }
     }
