@@ -2746,14 +2746,18 @@ $leftOffset: 270px;
     background-size: 100% auto !important;
 }
 
-.solution-open-page.jars .prod-review-wrap .image {
-    width: 435px;
-    height: auto;
-    right: 0%;
-    bottom: -5px;
-}
-
 .jars {
+
+    .prod-review-wrap .image {
+        width: 435px;
+        height: auto;
+        right: 140px;
+        bottom: -5px;
+
+        @media screen and (max-width: 1280px) {
+            right: 0;
+        }
+    }
 
     .prod-anim-wrap {
         overflow: hidden;
@@ -2773,6 +2777,7 @@ $leftOffset: 270px;
         width: 363px;
         height: 100px;
     }
+
     .prod-animate-section-1 {
         top: 450px;
         left: 0;
@@ -2915,6 +2920,12 @@ $leftOffset: 270px;
 
     .jars .prod-fader .slides {
         height: 510px;
+    }
+}
+
+@include mobile-min {
+    .prod-object-socket {
+        transform: scale(0.8);
     }
 }
 
@@ -3090,11 +3101,6 @@ $leftOffset: 270px;
         padding-top: 159px;
         padding-bottom: 1000px;
         margin-bottom: 100px;
-    }
-
-    .index {
-        width: 38px;
-        height: 38px;
     }
 
     .slider-buttons-c {

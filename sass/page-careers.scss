@@ -238,7 +238,6 @@
         margin-bottom: 60px;
 
         li {
-            @extend .bold;
             position: relative;
             padding-left: 20px;
             list-style: none;
@@ -468,8 +467,11 @@
         ul {
             padding-left: 25px;
 
-            li:last-child {
-                margin-right: 30px;
+            &::after {
+                content: "&";
+                display: inline-block;
+                width: 1px;
+                color: $colorBg;
             }
         }
     }

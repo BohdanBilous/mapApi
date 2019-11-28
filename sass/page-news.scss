@@ -116,7 +116,8 @@
 
     &--help {
         width: 190px;
-        font-family: $fontMain;
+        // font-family: $fontMain;
+        font-family: $fontMedium;
         opacity: 0.8;
     }
 
@@ -671,6 +672,18 @@
         left: 20px;
         bottom: 15px;
         z-index: 1;
+
+        @include mobile {
+            right: 25px;
+
+            .case-item-name br {
+                content: ' ';
+
+                &::after {
+                    content: ' ';
+                }
+            }
+        }
     }
 
     .case-item-pos {

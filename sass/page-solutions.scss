@@ -117,14 +117,16 @@
     .fader-s {
 
         .slide {
+            padding-right: 25px;
+            
             .ttl-3 {
                 padding-left: 58px;
                 font-size: 20px;
                 line-height: 23px;
             }
 
-            .btn-about-us {
-
+            .text-col {
+                width: 100%;
             }
         }
     }
