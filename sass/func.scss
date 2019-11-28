@@ -664,3 +664,19 @@ $dotsLiWidth: 250px;
         background-color: transparent;
     }
 }
+
+@mixin brRemove {
+    content: " ";
+
+    &:after {
+        content: " ";
+    }
+}
+
+.br-remove {
+    content: " ";
+
+    &:after {
+        content: " ";
+    }
+}

@@ -366,11 +366,8 @@
     padding-top: 67px;
 
     .prod-a-desc {
-        width: 150px;
-    }
-
-    .prod-a-desc {
         position: absolute;
+        width: 150px;
     }
 
     p {
@@ -2210,12 +2207,12 @@ $leftOffset: 270px;
             justify-content: space-between;
 
             .prod-a-desc {
-                width: 47%;
-                max-width: 100%;
-                flex: 0 0 47%;
+                // width: 47%;
+                // max-width: 100%;
+                // flex: 0 0 47%;
 
                 p br {
-                    display: none;
+                    @include brRemove;
                 }
             }
         }
