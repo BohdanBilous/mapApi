@@ -552,10 +552,9 @@ window.addEventListener("load", function () {
         let label = input.querySelector('label'),
             inputExist = input.querySelector('input');
         inputExist.addEventListener('change', function (e) {
-            e.target.files[0] && label.querySelector('span').innerHTML =  e.target.files[0].name;;
+            if(e.target.files[0] ) label.querySelector('span').innerHTML = e.target.files[0].name;
         });
     });
-
 
     init();
     clickHandle();
