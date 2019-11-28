@@ -45,7 +45,7 @@
         width: 0;
         height: 0;
 
-        &:checked + .solution-p-filter--button {
+        &:checked+.solution-p-filter--button {
             background-color: $colorGreen;
             color: #fff;
         }
@@ -1554,7 +1554,7 @@ $leftOffset: 270px;
 }
 
 // FADER PARAMETERS
-.fader-par {    
+.fader-par {
     height: 686px;
     padding: 40px 0 45px;
     border-radius: 25px;
@@ -1645,7 +1645,7 @@ $leftOffset: 270px;
 .par {
     padding: 19px 0 5px;
     font-size: 12px;
-    border-bottom: 1px solid $colorBorder; 
+    border-bottom: 1px solid $colorBorder;
 }
 
 @include laptop {
@@ -1774,7 +1774,7 @@ $leftOffset: 270px;
             }
         }
     }
-} 
+}
 
 @include mobile {
     .fader-par {
@@ -1811,33 +1811,10 @@ $leftOffset: 270px;
 .hbt-sys {
     position: relative;
     background-color: #f5f5f5;
-    background-image: url('../images/img-sys.jpg');
-    background-size: cover;
-    background-position: center 100%;
-    background-repeat: no-repeat;
     padding-top: 159px;
     padding-bottom: 1000px;
     margin-bottom: 100px;
 
-
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        height: 600px;
-        right: 0;
-        left: 0;
-        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #f5f5f5 100%);
-    }
-
-    &::before {
-        top: 0;
-        transform: rotate(180deg);
-    }
-
-    &::after {
-        bottom: 0;
-    }
 }
 
 .sys-catagories {
@@ -1855,6 +1832,10 @@ $leftOffset: 270px;
             width: 189px;
             flex: 0 0 33%;
             margin-bottom: 77px;
+            p{
+                width: 189px;
+                max-width: 100%;
+            }
         }
     }
 }
@@ -2144,9 +2125,6 @@ $leftOffset: 270px;
 @include laptop {
 
     .hbt-sys {
-        // padding-top: 0;
-        padding-bottom: 655px;
-
         .sys-catagories-row {
             margin-bottom: 184px;
         }
@@ -2179,21 +2157,6 @@ $leftOffset: 270px;
 
 @include tablet {
     .hbt-sys {
-        padding-bottom: 317px;
-        background-position: 0 397px;
-        background-size: contain;
-
-        &::after,
-        &::before {
-            height: 189px;
-
-            // display: none;
-        }
-
-        &::before {
-            top: 380px;
-        }
-
         .layout-col-l {
             display: none;
         }
@@ -2302,22 +2265,7 @@ $leftOffset: 270px;
 
 @include mobile {
     .hbt-sys {
-        padding-bottom: 0;
-        background-position: 0px 497px;
         margin-bottom: 66px;
-
-        &::before,
-        &::after {
-            height: 92px;
-        }
-
-        &::before {
-            top: 480px;
-        }
-
-        &::after {
-            bottom: -40px;
-        }
     }
 
     .disposal-socket {
@@ -2507,22 +2455,6 @@ $leftOffset: 270px;
         }
     }
 
-    .hbt-sys {
-        background-image: url('../images/hbt-sys-2.jpg');
-
-        @include mobile {
-            padding-bottom: 90px;
-            background-position: 0 bottom;
-
-            &::before {
-                top: 623px;
-            }
-
-            &::after {
-                bottom: -7px;
-            }
-        }
-    }
 
     .disposal-photo {
         width: 200px;
@@ -2539,7 +2471,7 @@ $leftOffset: 270px;
 
 // Bottle One Way
 #bottle-oneway {
-    top: 300px; 
+    top: 300px;
     width: 178px; // coef 3.7
     height: 660px;
 }
@@ -2624,9 +2556,6 @@ $leftOffset: 270px;
         height: 600px;
     }
 
-    .hbt-sys {
-        background-image: url('../images/hbt-sys-2.jpg');
-    }
 
     .disposal-photo {
         width: 500px;
@@ -2674,7 +2603,7 @@ $leftOffset: 270px;
 
 @include tablet--ipadPro {
     #bottle-oneway {
-        top: 0; 
+        top: 0;
         width: 135px;
         height: 500px;
     }
@@ -2730,7 +2659,7 @@ $leftOffset: 270px;
 #jars-top {
     top: 150px;
     left: 61px;
-    width: 248px; 
+    width: 248px;
     height: 187px;
     z-index: 1;
     background-image: url(../images/jar_1.svg);
@@ -2739,7 +2668,7 @@ $leftOffset: 270px;
 #jars-bottle {
     top: 151px;
     left: 0;
-    width: 363px; 
+    width: 363px;
     height: 519px;
     background-image: url(../images/jar_2.svg);
     background-size: 100% auto !important;
@@ -2846,10 +2775,7 @@ $leftOffset: 270px;
     }
 
     .hbt-sys {
-        background-image: url(../images/image8.jpg);
-        background-position: center 30%;
         margin-bottom: 100px;
-
     }
 }
 
@@ -2889,38 +2815,112 @@ $leftOffset: 270px;
         .prod-object-buttons {
             top: 500px;
         }
-        
+
         .solution-p-filter--buttons {
             flex-wrap: wrap;
         }
 
-        .hbt-sys {
-            background-position: 0 480px;
 
-            &::before {
-                top: 476px;
-            }
+    }
+}
 
-            &::after {
-                bottom: 0px;
-            }
+
+.hbt-sys-socket {
+    position: relative;
+    z-index: 2;
+}
+
+.htb-sys-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 600px;
+        right: 0;
+        left: 0;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #f5f5f5 100%);
+    }
+
+    &::before {
+        top: -1px;
+        transform: rotate(180deg);
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-position: cover;
+        object-fit: cover;
+    }
+
+
+}
+
+@include tablet {
+    .hbt-sys {
+        padding-bottom: 0 !important;
+
+        .sys-catagories-row {
+            margin-bottom: -160px;
+        }
+    }
+
+    .htb-sys-bg {
+        position: relative;
+
+        &::after,
+        &::before {
+            height: 320px;
         }
     }
 }
 
 @include mobile {
-    .jars .hbt-sys {
-        background-position: 0 480px;
-
-        &::after {
-            bottom: 0px;
-        }
-    }
-
     .jars .prod-fader .slides {
         height: 510px;
     }
+
+    .jars,
+    .bottle-oneway,
+    .solution-open-page.cooler.cooler  {
+        .hbt-sys {
+            padding-top: 0;
+        }
+    }
+
+    .htb-sys-bg {
+
+        &::after,
+        &::before {
+            height: 150px;
+        }
+    }
+
+    .jars,
+    .cooler {
+        .hbt-sys .sys-catagories-row {
+            margin-bottom: -60px;
+        }
+    }
+    .sys-catagories .sys-catagories-row .prod-a-desc{
+        max-width: 47%;
+        flex: 0 0 47%;
+    }
 }
+
+
+
 
 @include mobile-min {
     .prod-object-socket {
@@ -2992,7 +2992,7 @@ $leftOffset: 270px;
 
         @media screen and (max-width: 1280px) {
             min-height: 1700px;
-        } 
+        }
 
         @include mobile {
             min-height: 1150px;
@@ -3093,10 +3093,6 @@ $leftOffset: 270px;
     .hbt-sys {
         position: relative;
         background-color: #f5f5f5;
-        background-image: url(../images/Office-coolers.png);
-        background-size: cover;
-        background-position: center 100%;
-        background-repeat: no-repeat;
         padding-top: 159px;
         padding-bottom: 1000px;
         margin-bottom: 100px;
@@ -3148,13 +3144,6 @@ $leftOffset: 270px;
             height: 277px;
         }
 
-        .hbt-sys {
-            padding-bottom: 0;
-
-            &::before {
-                top: 0px;
-            }
-        }
     }
 }
 

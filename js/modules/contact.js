@@ -500,6 +500,10 @@ window.addEventListener("load", function () {
                 form.classList.remove("active");
                 document.body.classList.remove("form-active");
                 persone.forEach(item => item.classList.remove("active"));
+                form.querySelectorAll('input , textarea, select').forEach(item=> {item.value=""});
+                form.querySelector('.attach-file span').innerHTML = "Attach file"
+                form.querySelectorAll('.select-custom').forEach(item=> {item.querySelector('.select-selected').innerText= item.querySelector('select option').innerText});
+                
                 // contactInput.parentNode.classList.remove("with-icon");
                 // contactInput.value = "";
             };

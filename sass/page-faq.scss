@@ -105,8 +105,14 @@
             }
 
             .input-line.textarea {
+                color: #333;
+
                 .max-length {
                     top: -14px;
+                }
+
+                textarea {
+                    color: #333;
                 }
 
                 textarea::placeholder {
@@ -160,7 +166,7 @@
             color: #595a5a;
             font-weight: 500;
             font-size: 17px;
-            line-height: 27px;
+            line-height: 1.2;
         }
 
         .fag-is-help p {

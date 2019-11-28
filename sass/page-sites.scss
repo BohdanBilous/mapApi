@@ -703,7 +703,33 @@
     //         height: 482px;
     //     }
     // }
-
+    .sites-tabs-container{
+        .video-section {
+            .col {
+              justify-content: space-between;
+            }
+      
+            .text-desc {
+              position: static;
+              left: 0;
+              text-align: left;
+              right: auto;
+            }
+      
+            .ttl-section {
+              position: static;
+              margin-top: 0;
+              margin-bottom: 0;
+              order: 3;
+            }
+      
+            .play-button-wrap {
+              position: static;
+              order: 2;
+              margin-bottom: 0;
+            }
+          }
+    }
     .site-info {
         margin-bottom: 144px;
 
