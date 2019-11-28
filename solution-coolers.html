@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 
 <html lang="en" class="no-js">
-    @@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
-    @@include('./partials/scripts.htm')
-    <body>
-        @@include('./partials/preloader.htm')
-        @@include('./partials/header.htm', { "classes": "" })
-        @@include('./partials/menu.htm', {
-            "solution": "active",
-            "about": "",
-            "news-act": "",
-            "resources": "",
-            "events": "",
-            "cases": "",
-            "careers": "",
-            "sites": "",
-            "contact": "",
-            "reviews": "",
-            "team": "",
-            "faq": ""
-        })
-        <main class="main solution-open-page cooler">
+@@include('./partials/head.htm', {"title": "petainer", "styles": "css/main.css"})
+@@include('./partials/scripts.htm')
 
-            <!-- Top Screen -->
-            <div class="title-top socket layout-row">
-                <div class="layout-col-l">
-                    @@include('./partials/elements/button-link.htm', { 
-                        "text": "Back", 
-                        "href" : "javascript:history.back()", 
-                        "classes": "btn-back" 
-                    })
-                </div>
+<body>
+    @@include('./partials/preloader.htm')
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "active",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "",
+    "sites": "",
+    "contact": "",
+    "reviews": "",
+    "team": "",
+    "faq": ""
+    })
+    <main class="main solution-open-page cooler">
 
-                <div class="layout-col-r">
-                    <div class="col">
-                        <h1 class="ttl-1 ttl">Solutions.</h1>
-                        <div class="solution-p-filter-row">
-                            <div class="solution-p-filters">
-                                <div class="solution-p-filter">
-                                    <div class="solution-p-filter--label">Category:</div>
-                                    <div class="solution-p-filter--buttons">
-                                        <input type="radio" id="radio1" checked data-switch="Blown" class="solution-p-filter--radiobox" name="radio-size">
-                                        <label for="radio1" class="solution-p-filter--button btn-switch">
-                                            Blown
-                                        </label>
+        <!-- Top Screen -->
+        <div class="title-top socket layout-row">
+            <div class="layout-col-l">
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Back",
+                "href" : "javascript:history.back()",
+                "classes": "btn-back"
+                })
+            </div>
 
-                                        <input type="radio" id="radio1" data-switch="Preforms" class="solution-p-filter--radiobox" name="radio-size">
-                                        <label for="radio1" class="solution-p-filter--button btn-switch">
-                                            Preforms
-                                        </label>
-                                    </div>
+            <div class="layout-col-r">
+                <div class="col">
+                    <h1 class="ttl-1 ttl">Solutions.</h1>
+                    <div class="solution-p-filter-row">
+                        <div class="solution-p-filters">
+                            <div class="solution-p-filter">
+                                <div class="solution-p-filter--label">Category:</div>
+                                <div class="solution-p-filter--buttons">
+                                    <input type="radio" id="radio1" checked data-switch="Blown"
+                                        class="solution-p-filter--radiobox" name="radio-size">
+                                    <label for="radio1" class="solution-p-filter--button btn-switch">
+                                        Blown
+                                    </label>
+
+                                    <input type="radio" id="radio1" data-switch="Preforms"
+                                        class="solution-p-filter--radiobox" name="radio-size">
+                                    <label for="radio1" class="solution-p-filter--button btn-switch">
+                                        Preforms
+                                    </label>
                                 </div>
+                            </div>
 
-                                <!-- <div class="solution-p-filter">
+                            <!-- <div class="solution-p-filter">
                                     <div class="solution-p-filter--label">Size :</div>
                                     <div class="solution-p-filter--buttons">
                                         <input type="radio" id="radio11" checked data-switch="20L" class="solution-p-filter--radiobox" name="radio-size">
@@ -61,337 +64,392 @@
                                         </label>
                                     </div>
                                 </div> -->
-                            </div>
+                        </div>
 
-                            <!-- <div class="solution-p-select">
+                        <!-- <div class="solution-p-select">
                                 <div class="select-custom with-shadow select-custom-ind">
                                     <select>
                                         <option>Water</option>
                                     </select>
                                 </div>
                             </div> -->
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Product Spec -->
-            <div class="specs-section">
-                <div class="socket layout-row align-right">
-                    <div class="hint hint-from-top with-arrow-left">Coolers</div>
+        <!-- Product Spec -->
+        <div class="specs-section">
+            <div class="socket layout-row align-right">
+                <div class="hint hint-from-top with-arrow-left">Coolers</div>
 
-                    <div class="layout-col-r">
-                        <div class="ttl ttl-2">
-                            <span>18.95L</span> 
-                            <br>
-                            Water coolers.
-                        </div>
-
-                        <div class="spec-button-wrap">
-                            <div class="spec-button-label">Category :</div>
-                            <div class="spec-button">
-                                <i></i>
-                                Technical Specs
-                            </div>
-                        </div>
-
-                        <img class="spec-img" src="images/tare-4.png" alt="">
-
-                        <ul class="spec-det-block">
-                            <li>
-                                <span>Light and UV protection </span> (up to 500 nm)
-                            </li>
-                            <li>
-                                <span>Bisphenol A (BPA) </span> Free; EU/NSF/FDA approved
-                            </li>
-                            <li>
-                                <span>Volume 18.95L (Brim-full 20.16L) </span> or 5 US gallon
-                            </li>
-                            <li>
-                                <span>Empty weight:   </span> 639g
-                            </li>
-                        </ul>
+                <div class="layout-col-r">
+                    <div class="ttl ttl-2">
+                        <span>18.95L</span>
+                        <br>
+                        Water coolers.
                     </div>
+
+                    <div class="spec-button-wrap">
+                        <div class="spec-button-label">Category :</div>
+                        <div class="spec-button">
+                            <i></i>
+                            Technical Specs
+                        </div>
+                    </div>
+
+                    <img class="spec-img" src="images/tare-4.png" alt="">
+
+                    <ul class="spec-det-block">
+                        <li>
+                            <span>Light and UV protection </span> (up to 500 nm)
+                        </li>
+                        <li>
+                            <span>Bisphenol A (BPA) </span> Free; EU/NSF/FDA approved
+                        </li>
+                        <li>
+                            <span>Volume 18.95L (Brim-full 20.16L) </span> or 5 US gallon
+                        </li>
+                        <li>
+                            <span>Empty weight: </span> 639g
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </div>
 
-            <!-- Product Animate -->
-            <div class="prod-anim-wrap socket">
-                <!-- <img class="object-image" src="images/coller-st.svg" alt="">     -->
-                <aside class="prod-anim-side left">
-                    <div class="ttl ttl-3">Safe. <br> Strong. <br>Sustainable.</div>
-                    <p>Available blown or as a preform: blowing containers onsite can reduce logistics costs by up to 90%.</p>
-                </aside>
+        <!-- Product Animate -->
+        <div class="prod-anim-wrap socket">
+            <!-- <img class="object-image" src="images/coller-st.svg" alt="">     -->
+            <aside class="prod-anim-side left">
+                <div class="ttl ttl-3">Safe. <br> Strong. <br>Sustainable.</div>
+                <p>Available blown or as a preform: blowing containers onsite can reduce logistics costs by up to 90%.
+                </p>
+            </aside>
 
+            <aside class="prod-anim-side right">
+                <p>Petainer Water Cooler is a fully recyclable, reusable water cooler with market-leading durability and
+                    strength.</p>
+                <p>Outperforming other Polycarbonate and PET water coolers in visual appearance, ergonomics and drop
+                    tests, the Petainer Water Cooler is compatible with existing filling equipment, washing lines and
+                    standard dispensers, helping you avoid any extra capital investment to switch to using the product..
+                </p>
+            </aside>
+
+            <div id="section-1" class="prod-animate-section">
+                <div class="prod-a-desc">
+                    <div class="icon">
+                        <div class="index">1.</div>
+                        <img src="images/ind-2.svg" alt="">
+                    </div>
+                    <p>Clearly Better: <br> The Petainer Cooler maintains a high level of gloss when exposed to UV.</p>
+                </div>
                 <aside class="prod-anim-side right">
-                    <p>Petainer Water Cooler is a fully recyclable, reusable water cooler with market-leading durability and strength.</p>
-                    <p>Outperforming other Polycarbonate and PET water coolers in visual appearance, ergonomics and drop tests, the Petainer Water Cooler is compatible with existing filling equipment, washing lines and standard dispensers, helping you avoid any extra capital investment to switch to using the product..</p>
+                    <div class="ttl ttl-3">Product Protection</div>
+                    <p>Blown from a heavier weight preform, the Hybrid provides improved performance, removes the need
+                        for an additional inside bag or outer packaging, and takes product protection one step further.
+                    </p>
+                    <p>Fresh and perfectly <br> carbonated beer with <br> every pour.</p>
                 </aside>
+                <aside class="prod-anim-side left">
+                    <p>Pressure Relief Tool (PRT)<br> supplied with every keg.</p>
+                    <p>With or without<br> support ring</p>
+                </aside>
+            </div>
 
-                <div id="section-1" class="prod-animate-section">
+            <div id="section-2" class="prod-animate-section">
+                <aside class="prod-anim-side left">
+                    <div class="ttl ttl-4">Reusable and Refillable –</div>
+                    <p>high trip rate for a lower cost per litre (up to 3 times the trip rate of other plastics)</p>
+                </aside>
+                <div class="prod-a-desc">
+                    <div class="icon">
+                        <div class="index">2.</div>
+                        <img src="images/ind-1.svg" alt="">
+                    </div>
+                    <p>A more robust container: <br> Drop tests indicate that the Petainer Cooler is more robust than
+                        standard PET containers.</p>
+                </div>
+            </div>
+
+            <!-- Parameters -->
+            <div id="parameters" class="prod-object-parameters">
+                @@include('./partials/elements/par.htm', {
+                "classes": "par-item-1",
+                "textTitle" : "Neck size: ",
+                "textDesc": "55mm" ,
+                "dir": "from-top-left"
+                })
+                @@include('./partials/elements/par.htm', {
+                "classes": "par-item-2",
+                "textTitle" : "Colour: ",
+                "textDesc": "Blue" ,
+                "dir": "from-top-right"
+                })
+                @@include('./partials/elements/par.htm', {
+                "classes": "par-item-3",
+                "textTitle" : "Height: ",
+                "textDesc": "488mm" ,
+                "dir": "from-top-left"
+                })
+                @@include('./partials/elements/par.htm', {
+                "classes": "par-item-4",
+                "textTitle" : "Outer diameter:",
+                "textDesc": "272mm" ,
+                "dir": "from-top-right"
+                })
+            </div>
+
+            <!-- Object -->
+            <div class="prod-object-socket">
+
+                <div id="cooler-bottle" class="prod-object-el">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 536 1111">
+                        <defs>
+                            <style>
+                                .bb10e949-7690-43e5-b661-825f70878d77 {
+                                    stroke: #000;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 0.5px;
+                                    fill: url(#b5c8e0a1-42d9-49c9-ac0a-6748e497da0a);
+                                }
+
+                                .e30b93f2-39e7-4f67-8fc2-42365b4b229f,
+                                .f7c9418e-1a2f-47b8-9b02-8013bb419c2e {
+                                    fill: #fff;
+                                }
+
+                                .e30b93f2-39e7-4f67-8fc2-42365b4b229f {
+                                    opacity: 0;
+                                }
+
+                                .f7c9418e-1a2f-47b8-9b02-8013bb419c2e {
+                                    stroke: #000;
+                                    stroke-miterlimit: 10;
+                                    stroke-width: 0.5px;
+                                }
+                            </style>
+                            <linearGradient id="b5c8e0a1-42d9-49c9-ac0a-6748e497da0a" x1="6119.68" y1="2587.01"
+                                x2="6124.96" y2="3391.75" gradientTransform="translate(-5854.35 -2334.5)"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#29a7de" />
+                                <stop offset="0.52" stop-color="#0071b8" />
+                                <stop offset="1" stop-color="#2e318e" />
+                            </linearGradient>
+                        </defs>
+                        <title>Asset 5</title>
+                        <g id="fe2613ad-28e9-4ef5-9305-7b217983394d" data-name="Layer 2">
+                            <g id="b72da17a-c637-45f5-883f-7e505cb4c89e" data-name="Layer 1">
+                                <path class="bb10e949-7690-43e5-b661-825f70878d77"
+                                    d="M184.51,228.9c-40.51,21.2-108.33,53.43-134.76,81-25,26-28.95,37.18-28.95,71,0,11.95-10,17.14-10,31,0,13,11,20,11,31v22c0,13-10,11-10,27,0,17,10,14,10,33V836.62c0,10-7,11-7,24s7,16,7,24v46c0,11-8.29,20.82-5,44,3.5,24.49,61.93,122.94,258.55,119s240.58-83,245.57-127c0-24-7-23-7-43,0-10.18,0-21.9-.09-34.91,0-5.92,6.08-14.06,6.08-23.06,0-15-5.94-18-6-27-.57-90.22-2-209.07-2-312.86,0-25,10-25,10-40,0-13-9-15-9-23,0-14.34-1-12.44-1-25,0-6.41,10-14,10-26,0-16-10-20.52-10-27,0-27-11-60-32.94-79-43.93-38-88.85-56-127.78-76S228.43,205.91,184.51,228.9Z" />
+                                <path
+                                    d="M265.61,2.56c30.81,0,55.87,13.3,55.87,29.65C321.48,48.34,297,61,265.69,61s-55.95-12.63-55.95-28.76C209.74,15.86,234.81,2.56,265.61,2.56ZM265.69,60c30.72,0,54.79-12.19,54.79-27.76,0-15.8-24.61-28.65-54.87-28.65s-54.87,12.85-54.87,28.65C210.74,47.78,234.88,60,265.69,60Z" />
+                                <path
+                                    d="M320,295.62a6,6,0,0,1,5.51,5.2c1.53,6.63,12.63,25.65,24.39,45.79,10.87,18.62,22.11,37.88,25.51,47.13h0c5.06,13.75,7,29.47,7.69,37.63a4.76,4.76,0,0,1-4.25,5.12,6.06,6.06,0,0,1-6.61-5.19A195.48,195.48,0,0,0,365,398.9c-2.68-8-12.44-25.29-22.77-43.55-12.59-22.24-25.6-45.24-26.16-52.47-.62-6.19,2.51-7.1,3.48-7.23A4,4,0,0,1,320,295.62Zm54.94,98.29c-3.38-9.21-14.61-28.45-25.48-47.05-11.77-20.17-22.89-39.22-24.44-45.94-.53-3.18-3.31-5.07-5.44-4.77-2.3.3-3.44,2.8-3.05,6.69.55,7.12,13.53,30.07,26.09,52.27,10.35,18.28,20.12,35.54,22.81,43.63a195,195,0,0,1,7.3,32.49A5.55,5.55,0,0,0,378.8,436a4.27,4.27,0,0,0,3.81-4.58C381.91,423.28,380,407.6,374.94,393.91Z" />
+                                <path
+                                    d="M211.56,293.62a4.07,4.07,0,0,1,.5,0c1,.13,4.11,1,3.49,7.24-.66,8.59-12.49,28.82-25,50.25-10.15,17.36-20.64,35.32-24.13,45.76a195.08,195.08,0,0,0-7.31,32.4,6.08,6.08,0,0,1-6.64,5.19,4.78,4.78,0,0,1-4.27-5.12c.71-8.15,2.64-23.88,7.72-37.63,4.15-11.21,15.13-29.18,25.75-46.56,12.21-20,23.73-38.83,24.36-46.34A6.06,6.06,0,0,1,211.56,293.62ZM153.09,434a5.58,5.58,0,0,0,5.53-4.79A194.35,194.35,0,0,1,166,396.74c3.5-10.49,14-28.47,24.17-45.85,11.93-20.44,24.28-41.57,24.93-50.05.39-3.88-.75-6.38-3.05-6.69s-4.95,1.59-5.47,4.76c-.64,7.6-12.2,26.51-24.43,46.53-10.61,17.36-21.58,35.31-25.71,46.47h0c-5.06,13.7-7,29.37-7.69,37.5a4.27,4.27,0,0,0,3.82,4.58Z" />
+                                <path
+                                    d="M3.36,423a79,79,0,0,0,4,8.93v23.38h0c0,1.08.11,2.17.23,3.25l-.1-.12C-1.74,466.64-1.13,495.6,2.37,504a67.08,67.08,0,0,0,4.89,9.42V810.13h.07a85.91,85.91,0,0,0,1.29,14.38l-.22-.15c-7.22,11.36-7.14,37.09-4,45.42a83.35,83.35,0,0,0,4,9v29.82a78.52,78.52,0,0,0,1.62,15.94c-8.52,10.41-9.57,34-9.61,35-.14,83.24,118.75,151.17,265,151.43h1.09c71.42,0,134.35-12.38,182-35.81,48.55-23.86,78.59-57.93,86.91-98.58,3.65-34.77-10.38-50.62-12.79-53.06.06-.63.12-1.26.16-1.9l-.33-37.87a80.55,80.55,0,0,0,4.94-11c3.18-8.83,2.85-26.67-4-42.35l-.25.1a66.18,66.18,0,0,0,1.25-11.4h0v-1.49h0l-.06-307.36h-.07a78.14,78.14,0,0,0,4.09-9.33c2.24-6.21,3.2-19.9,0-35.25a18.87,18.87,0,0,0-2.43-6,34.3,34.3,0,0,1-1.59-3.11l-.08,0c0-.45.06-.89.08-1.34h0V433.51c.33-.84,14.15-33.87.93-55.94,0,0,.07-5.7.07-8.74,0-28.23-12.24-52.9-37.4-75.41-22.13-19.79-51-35.35-78.93-50.4-41.34-22.27-80.38-43.31-88.31-74.15a24.82,24.82,0,0,0,3-11.94h-.13a16.65,16.65,0,0,0,.13-2,18.21,18.21,0,0,0-3.94-11l-.05,0V133.45a19.22,19.22,0,0,0,4.34-10.81h0V122c0-.12,0-.23,0-.34h0l-.27-36c.91-3.37.76-10-2.8-11.93l0,.06L321.83,51,325.46,38a18.22,18.22,0,0,0,.8-5.28c0-18-27.2-32.68-60.65-32.68S205,14.66,205,32.68a18.34,18.34,0,0,0,1,6l-.13,0,4.57,15.55h0l.05.12.1.36h0c.07.2.14.41.22.62h-.08l.53,18.95c-2.36,2-3.06,5.59-3.24,8.07h-.11c0,.38,0,.76.05,1.14l-.31,38.25h0v.15h0a17.66,17.66,0,0,0,2.37,8.56H210v12.21c-3.31,3.87-5,8-5,12.28,0,.33,0,.67.05,1H205a24.57,24.57,0,0,0,4.31,13.95l-.31-.08c-8.37,32.54-49.11,55.24-92.24,79.28C62.29,279.41,6,310.78,5.34,365.84h0c0,.13,0,.26,0,.4s0,.39,0,.59h0a73.56,73.56,0,0,0,1.27,12.86l-.21-.15C-2.92,393.05.41,415,3.36,423Zm6,485.61V880.66C23.8,907.51,54.13,932,96.19,950.37c48.13,21.08,108.21,32.69,169.18,32.69,61.49,0,121.84-11.09,169.92-31.23,41.55-17.41,71.54-40.6,86.16-66.29l.32,36.08c-2,33.27-30.74,64.22-80.82,87.16-47.66,21.84-111.39,34.5-174.85,34.75h-1.84c-93.72,0-182.23-28-225.86-71.5C23.74,957.41,14.57,941.57,11,924.79l0,0-.05,0A77.42,77.42,0,0,1,9.32,908.59Zm513.17,16.29c3.41,3.78,15.3,19.45,11.92,51.58-8.24,40.28-38.1,74.11-86.36,97.83C400.5,1097.66,337.73,1110,266.46,1110h-1.09c-70.3-.12-136.56-15.87-186.58-44.35S1.26,999.5,1.33,959.59c0-.24,1-23.3,8.88-33.79,3.71,16.67,12.91,32.4,27.48,46.94,43.82,43.69,132.59,71.79,226.57,71.79h1.85c63.59-.25,127.47-13,175.26-34.84C490.18,987.33,518.83,957.33,522.49,924.88Zm4-52.44a79.85,79.85,0,0,1-5,11h0v.11c-14.18,26.09-44.37,49.7-86.54,67.37-48,20.08-108.17,31.15-169.53,31.15-118.48,0-225.51-43.89-256-103.51v-.24H9.19a84.6,84.6,0,0,1-3.9-8.88c-2.9-7.81-3-32.59,3.55-43.86,2.68,14,8.92,27.29,18.7,39.65,12.81,16.19,31.36,30.45,55.13,42.38,46.93,23.56,111.72,36.54,182.43,36.54,69.5,0,134.56-12.94,183.2-36.44,42.28-20.43,68.18-47,74.55-75.92C529.21,847,529.49,864,526.44,872.44ZM447.87,906.8c-48.52,23.43-113.42,36.34-182.77,36.34-70.56,0-135.19-12.94-182-36.43-23.64-11.87-42.07-26-54.8-42.12-13.27-16.77-20-35.26-20-55H8.26V515c32.91,50.3,141.66,88.27,258.11,88.27,62.54,0,122.76-9.67,169.56-27.23,43.39-16.27,73.31-38.23,87.43-64l.06,305.61C523.41,851.6,496.58,883.26,447.87,906.8ZM525.1,460.19a17.68,17.68,0,0,1,2.32,5.7c3.14,15.17,2.21,28.63,0,34.72-10.88,30.25-42.64,56-91.86,74.46-46.69,17.51-106.79,27.16-169.21,27.16-124.42,0-240-43.33-263.08-98.65-3.27-7.83-3.88-35.65,4.44-44C14.89,512.54,119,569.09,266.1,569.09c70.43,0,136.93-13.88,187.26-39.08,41.83-21,67.81-47.39,70.77-71.62C524.46,459,524.78,459.62,525.1,460.19ZM8.32,453.8v-20c14.49,26.52,45.17,50.46,87.88,68.29,48.19,20.1,108.62,31.18,170.17,31.18,62.66,0,122.46-9.67,168.4-27.23,45.66-17.44,76.16-41.62,88.65-70.15V453.8c0,25.05-26.36,53.2-70.51,75.31-50.19,25.14-116.53,39-186.81,39-71.13,0-137.56-13.31-187-37.48C34.76,509,8.32,480.26,8.32,453.8ZM206,32.68C206,15.21,232.72,1,265.61,1s59.66,14.21,59.66,31.68a17.3,17.3,0,0,1-.69,4.8h0l-.12.42c-4.71,15-29.29,26.45-58.83,26.45C232.72,64.35,206,50.14,206,32.68Zm59.65,32.67c26.52,0,49.1-9.21,57.32-22L320,53.93C315.74,68,292.87,78.25,265.61,78.25c-26.41,0-49.67-10.4-54.19-24.22l-3.17-10.76C216.44,56.1,239.05,65.35,265.61,65.35Zm54.88-9.81L320,76h0c0,15.1-24.25,27.39-54.07,27.39-30,0-53.59-12.43-53.59-28.3h0l-.49-17.67c6.8,12.82,28.53,21.82,53.81,21.82C292.45,79.25,315.14,69.36,320.49,55.54ZM211.3,75.6V76h.05c.88,16,24.51,28.38,54.54,28.38,29.76,0,54.07-12.24,55-27.46h0l0-2.08c2.42,1.8,2.67,7,2,10.11h-.14v.53a3.57,3.57,0,0,1-.1.35l-.16.68c-3.86,14.59-27.63,25.19-56.5,25.19-31.31,0-56-12.3-57.15-28.21C209,81.52,209.37,77.77,211.3,75.6Zm-2.64,46.15.27-33.66c5,14.19,28.33,24.63,57.19,24.63,28,0,51.26-9.94,56.79-23.92l.24,33.19c-.34,16.31-25.26,29-57,29C233.91,151,208.68,138.17,208.66,121.75Zm110.12,12.89v16.29c0,16.24-22.53,28.49-52.41,28.49-30.55,0-55.41-12.33-55.41-27.49V132C218.89,143.77,240.3,152,266.12,152,289.74,152,309.63,145,318.78,134.64ZM210,144.25v8.18h0c.25,7.79,6.38,14.94,17.36,20.16,10.46,5,24.68,7.83,39,7.83,30.14,0,52.93-12.43,53.38-29h0v-5.8a16.69,16.69,0,0,1,3,9.3c0,16.81-25.3,30.49-56.4,30.49-32.17,0-60.4-14.25-60.4-30.49A17.3,17.3,0,0,1,210,144.25Zm-3.23,17.83c6.69,13.59,31.69,24.34,59.63,24.34,27.09,0,49.84-10.36,55.84-24.22-3.65,16.7-24.88,27.21-56.18,27.21C238.93,189.41,211.61,180.91,206.74,162.08ZM6.33,366.24c.41-54.72,56.57-86,110.9-116.29,43.08-24,83.78-46.7,92.57-79.37,8.84,12.27,29.26,19.83,56.23,19.83,26.78,0,46.31-7.66,54.06-20.34,8.58,30.74,47.41,51.68,88.52,73.83,27.88,15,56.71,30.55,78.75,50.27,24.93,22.3,37.06,46.73,37.06,74.66,0,36.49-26.76,69.95-75.35,94.22-47.88,23.9-112.86,37.07-183,37.07C120.69,500.12,6.74,441.34,6.33,366.24Zm.5,14.49C20.7,449.33,129.59,501.12,266.1,501.12c70.26,0,135.4-13.21,183.41-37.18,44.6-22.27,70.93-52.29,75.26-85.35,12.46,21.64-1,53.84-1.34,54.71h0v0c-11.76,29.21-42.45,54-89,71.77-45.83,17.51-105.51,27.16-168,27.16-61.42,0-121.71-11-169.79-31.11s-81-48-92.29-78.51C1.12,414.09-1.29,393.25,6.83,380.73Z" />
+                            </g>
+                        </g>
+                        <g id="bubbles" data-name="Layer 2">
+                            <g id="f5af540b-9c55-40b8-aa4d-731a04f4d848" data-name="grid">
+                                <rect class="e30b93f2-39e7-4f67-8fc2-42365b4b229f" width="530" height="1110"></rect>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="238.5" cy="707.5" r="8">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="190.5" cy="570.5" r="8">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="368.5" cy="479.5" r="8">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="148.5" cy="498.5" r="5.66">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="211.5" cy="404.5" r="5.66">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="285.5" cy="767.5" r="5.66">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="328.5" cy="406.5" r="8">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="223.5" cy="479.5" r="8">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="316.5" cy="649.5" r="4">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="308.5" cy="597.5" r="4">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="253.5" cy="808.5" r="3">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="285.5" cy="524.5" r="3">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="276.5" cy="826.5" r="4">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="281.5" cy="445.5" r="4">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="277.5" cy="310.5" r="4">
+                                </circle>
+                                <circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="266.5" cy="642.5" r="4">
+                                </circle>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div id="cooler-box" class="prod-object-el"></div>
+            </div>
+
+            <!-- Buttons Mobile -->
+            <div class="prod-object-buttons">
+                <button class="btn-dir up"></button>
+                <button class="btn-dir down"></button>
+            </div>
+        </div>
+
+        <!-- Tech Spec -->
+        <div class="tech-spec-wrap socket">
+            <div class="swipe-hint only-mobile hide"></div>
+            <div class="ttl-5">Technical <br> Specifications :</div>
+            <div class="tech-spec-main">
+                <div class="tech-spec-main-inner">
+                    <ul class="tech-spec-parameters">
+                        <li class="par-desc-item">
+                            <div>Light and UV protection </div>
+                            <span>(up to 500 nm)</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Bisphenol A (BPA) </div>
+                            <span>Free; EU/NSF/FDA approveds</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Volume 18.95L (Brim-full 20.16L)</div>
+                            <span>or 5 US gallon</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Empty weight:</div>
+                            <span>639g</span>
+                        </li>
+                    </ul>
+                    <div class="tech-spec-right-side">
+                        <div class="tech-spec-scale">
+                            <div class="scale-start">0</div>
+                            <div class="scale-end">254</div>
+                            <img width="226" height="32" src="images/scale.svg" alt="">
+                        </div>
+                        <!-- <button class="btn-toggle btn-tech-spec-open">
+                                <i></i>
+                                More Tech.Specs
+                            </button> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-spec-drop">
+                <div class="tech-spec-inner">
+                    <ul>
+                        <li class="par-desc-item">
+                            <div>Size</div>
+                            <span>18.95L</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Light and UV protection </div>
+                            <span>(up to 500 nm)</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Full kegs per pallet (recommended height 3 layers)</div>
+                            <span>60</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Diameter</div>
+                            <span>243 mm</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>CO2 Barrier (after 9 months)</div>
+                            <span>&lt;15% CO2 Loss</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Manual, semi-automatic and filling capability</div>
+                            <span><i class="ico-check"></i></span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Top load (Recommended height: 3 layers)</div>
+                            <span>3 Layers</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>O2 Barrier (after 12 months):</div>
+                            <span>&lt;200 ppb</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Empty Kegs per standard size pallet (1200 x 1000 mm)</div>
+                            <span>80</span>
+                        </li>
+                        <li class="par-desc-item">
+                            <div>Max operating pressure:</div>
+                            <span>4,1 bar or 60 psig</span>
+                        </li>
+                    </ul>
+                    <button class="btn-toggle hide-mode btn-tech-spec-hide">
+                        <i></i>
+                        More Tech.Specs
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review -->
+        <div class="prod-review-wrap">
+            <div class="socket">
+                <div class="text-part">
+                    <div class="ttl-wrap">
+                        <div class="pages">01 / 05</div>
+                        <div class="ttl-2">Safety <br> And <br> Handling</div>
+                    </div>
+                    <p>Our watercoolers are can be filled using a range of different methods, from hand filling,
+                        semi-automatic and fully automatic filling, through to existing steel keg lines. Click below for
+                        technical information about how to fill and use our kegs.</p>
+                </div>
+
+                <div class="prod-a-desc-list">
                     <div class="prod-a-desc">
                         <div class="icon">
                             <div class="index">1.</div>
                             <img src="images/ind-2.svg" alt="">
                         </div>
-                        <p>Clearly Better: <br> The Petainer Cooler maintains a high level of gloss when exposed to UV.</p>
+                        <p>Fully compatible with market standard dispensers, closures and detergents </p>
                     </div>
-                    <aside class="prod-anim-side right">
-                        <div class="ttl ttl-3">Product Protection</div>
-                        <p>Blown from a heavier weight preform, the Hybrid provides improved performance, removes the need for an additional inside bag or outer packaging, and takes product protection one step further.</p>
-                        <p>Fresh and perfectly <br> carbonated beer with <br> every pour.</p>
-                    </aside>
-                    <aside class="prod-anim-side left">
-                        <p>Pressure Relief Tool (PRT)<br> supplied with every keg.</p>
-                        <p>With or without<br> support ring</p>
-                    </aside>
-                </div>
-
-                <div id="section-2" class="prod-animate-section">
-                    <aside class="prod-anim-side left">
-                        <div class="ttl ttl-4">Reusable and Refillable –</div>
-                        <p>high trip rate for a lower cost per litre (up to 3 times the trip rate of other plastics)</p>
-                    </aside>
                     <div class="prod-a-desc">
                         <div class="icon">
                             <div class="index">2.</div>
                             <img src="images/ind-1.svg" alt="">
                         </div>
-                        <p>A more robust container: <br> Drop tests indicate that the Petainer Cooler is more robust than standard PET containers.</p>
+                        <p>Lightweight structure, with smooth sealing surface</p>
+                    </div>
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">3.</div>
+                            <img src="images/ind-4.svg" alt="">
+                        </div>
+                        <p>Robust and Shrink resistant up to 63 degrees for over 40 washing cycles</p>
                     </div>
                 </div>
-                
-                <!-- Parameters -->
-                <div id="parameters" class="prod-object-parameters">
-                    @@include('./partials/elements/par.htm', { 
-                        "classes": "par-item-1", 
-                        "textTitle" : "Neck size: ", 
-                        "textDesc": "55mm" ,
-                        "dir": "from-top-left"
-                    })
-                    @@include('./partials/elements/par.htm', { 
-                        "classes": "par-item-2", 
-                        "textTitle" : "Colour: ", 
-                        "textDesc": "Blue" ,
-                        "dir": "from-top-right"
-                    })
-                    @@include('./partials/elements/par.htm', { 
-                        "classes": "par-item-3", 
-                        "textTitle" : "Height: ", 
-                        "textDesc": "488mm" ,
-                        "dir": "from-top-left"
-                    })
-                    @@include('./partials/elements/par.htm', { 
-                        "classes": "par-item-4", 
-                        "textTitle" : "Outer diameter:", 
-                        "textDesc": "272mm" ,
-                        "dir": "from-top-right"
-                    })
-                </div>
 
-                <!-- Object -->
-                <div class="prod-object-socket">
-                    
-                    <div id="cooler-bottle" class="prod-object-el">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 536 1111">
-                            <defs>
-                                <style>
-                                    .bb10e949-7690-43e5-b661-825f70878d77 {
-                                        stroke: #000;
-                                        stroke-miterlimit: 10;
-                                        stroke-width: 0.5px;
-                                        fill: url(#b5c8e0a1-42d9-49c9-ac0a-6748e497da0a);
-                                    }
-                                    .e30b93f2-39e7-4f67-8fc2-42365b4b229f,
-                                    .f7c9418e-1a2f-47b8-9b02-8013bb419c2e {
-                                        fill: #fff;
-                                    }
-                                    
-                                    .e30b93f2-39e7-4f67-8fc2-42365b4b229f {
-                                        opacity: 0;
-                                    }
-                                    
-                                    .f7c9418e-1a2f-47b8-9b02-8013bb419c2e {
-                                        stroke: #000;
-                                        stroke-miterlimit: 10;
-                                        stroke-width: 0.5px;
-                                    }
-                                </style>
-                                <linearGradient id="b5c8e0a1-42d9-49c9-ac0a-6748e497da0a" x1="6119.68" y1="2587.01" x2="6124.96" y2="3391.75" gradientTransform="translate(-5854.35 -2334.5)" gradientUnits="userSpaceOnUse">
-                                    <stop offset="0" stop-color="#29a7de" />
-                                    <stop offset="0.52" stop-color="#0071b8" />
-                                    <stop offset="1" stop-color="#2e318e" />
-                                </linearGradient>
-                            </defs>
-                            <title>Asset 5</title>
-                            <g id="fe2613ad-28e9-4ef5-9305-7b217983394d" data-name="Layer 2">
-                                <g id="b72da17a-c637-45f5-883f-7e505cb4c89e" data-name="Layer 1">
-                                    <path class="bb10e949-7690-43e5-b661-825f70878d77" d="M184.51,228.9c-40.51,21.2-108.33,53.43-134.76,81-25,26-28.95,37.18-28.95,71,0,11.95-10,17.14-10,31,0,13,11,20,11,31v22c0,13-10,11-10,27,0,17,10,14,10,33V836.62c0,10-7,11-7,24s7,16,7,24v46c0,11-8.29,20.82-5,44,3.5,24.49,61.93,122.94,258.55,119s240.58-83,245.57-127c0-24-7-23-7-43,0-10.18,0-21.9-.09-34.91,0-5.92,6.08-14.06,6.08-23.06,0-15-5.94-18-6-27-.57-90.22-2-209.07-2-312.86,0-25,10-25,10-40,0-13-9-15-9-23,0-14.34-1-12.44-1-25,0-6.41,10-14,10-26,0-16-10-20.52-10-27,0-27-11-60-32.94-79-43.93-38-88.85-56-127.78-76S228.43,205.91,184.51,228.9Z" />
-                                    <path d="M265.61,2.56c30.81,0,55.87,13.3,55.87,29.65C321.48,48.34,297,61,265.69,61s-55.95-12.63-55.95-28.76C209.74,15.86,234.81,2.56,265.61,2.56ZM265.69,60c30.72,0,54.79-12.19,54.79-27.76,0-15.8-24.61-28.65-54.87-28.65s-54.87,12.85-54.87,28.65C210.74,47.78,234.88,60,265.69,60Z" />
-                                    <path d="M320,295.62a6,6,0,0,1,5.51,5.2c1.53,6.63,12.63,25.65,24.39,45.79,10.87,18.62,22.11,37.88,25.51,47.13h0c5.06,13.75,7,29.47,7.69,37.63a4.76,4.76,0,0,1-4.25,5.12,6.06,6.06,0,0,1-6.61-5.19A195.48,195.48,0,0,0,365,398.9c-2.68-8-12.44-25.29-22.77-43.55-12.59-22.24-25.6-45.24-26.16-52.47-.62-6.19,2.51-7.1,3.48-7.23A4,4,0,0,1,320,295.62Zm54.94,98.29c-3.38-9.21-14.61-28.45-25.48-47.05-11.77-20.17-22.89-39.22-24.44-45.94-.53-3.18-3.31-5.07-5.44-4.77-2.3.3-3.44,2.8-3.05,6.69.55,7.12,13.53,30.07,26.09,52.27,10.35,18.28,20.12,35.54,22.81,43.63a195,195,0,0,1,7.3,32.49A5.55,5.55,0,0,0,378.8,436a4.27,4.27,0,0,0,3.81-4.58C381.91,423.28,380,407.6,374.94,393.91Z" />
-                                    <path d="M211.56,293.62a4.07,4.07,0,0,1,.5,0c1,.13,4.11,1,3.49,7.24-.66,8.59-12.49,28.82-25,50.25-10.15,17.36-20.64,35.32-24.13,45.76a195.08,195.08,0,0,0-7.31,32.4,6.08,6.08,0,0,1-6.64,5.19,4.78,4.78,0,0,1-4.27-5.12c.71-8.15,2.64-23.88,7.72-37.63,4.15-11.21,15.13-29.18,25.75-46.56,12.21-20,23.73-38.83,24.36-46.34A6.06,6.06,0,0,1,211.56,293.62ZM153.09,434a5.58,5.58,0,0,0,5.53-4.79A194.35,194.35,0,0,1,166,396.74c3.5-10.49,14-28.47,24.17-45.85,11.93-20.44,24.28-41.57,24.93-50.05.39-3.88-.75-6.38-3.05-6.69s-4.95,1.59-5.47,4.76c-.64,7.6-12.2,26.51-24.43,46.53-10.61,17.36-21.58,35.31-25.71,46.47h0c-5.06,13.7-7,29.37-7.69,37.5a4.27,4.27,0,0,0,3.82,4.58Z" />
-                                    <path d="M3.36,423a79,79,0,0,0,4,8.93v23.38h0c0,1.08.11,2.17.23,3.25l-.1-.12C-1.74,466.64-1.13,495.6,2.37,504a67.08,67.08,0,0,0,4.89,9.42V810.13h.07a85.91,85.91,0,0,0,1.29,14.38l-.22-.15c-7.22,11.36-7.14,37.09-4,45.42a83.35,83.35,0,0,0,4,9v29.82a78.52,78.52,0,0,0,1.62,15.94c-8.52,10.41-9.57,34-9.61,35-.14,83.24,118.75,151.17,265,151.43h1.09c71.42,0,134.35-12.38,182-35.81,48.55-23.86,78.59-57.93,86.91-98.58,3.65-34.77-10.38-50.62-12.79-53.06.06-.63.12-1.26.16-1.9l-.33-37.87a80.55,80.55,0,0,0,4.94-11c3.18-8.83,2.85-26.67-4-42.35l-.25.1a66.18,66.18,0,0,0,1.25-11.4h0v-1.49h0l-.06-307.36h-.07a78.14,78.14,0,0,0,4.09-9.33c2.24-6.21,3.2-19.9,0-35.25a18.87,18.87,0,0,0-2.43-6,34.3,34.3,0,0,1-1.59-3.11l-.08,0c0-.45.06-.89.08-1.34h0V433.51c.33-.84,14.15-33.87.93-55.94,0,0,.07-5.7.07-8.74,0-28.23-12.24-52.9-37.4-75.41-22.13-19.79-51-35.35-78.93-50.4-41.34-22.27-80.38-43.31-88.31-74.15a24.82,24.82,0,0,0,3-11.94h-.13a16.65,16.65,0,0,0,.13-2,18.21,18.21,0,0,0-3.94-11l-.05,0V133.45a19.22,19.22,0,0,0,4.34-10.81h0V122c0-.12,0-.23,0-.34h0l-.27-36c.91-3.37.76-10-2.8-11.93l0,.06L321.83,51,325.46,38a18.22,18.22,0,0,0,.8-5.28c0-18-27.2-32.68-60.65-32.68S205,14.66,205,32.68a18.34,18.34,0,0,0,1,6l-.13,0,4.57,15.55h0l.05.12.1.36h0c.07.2.14.41.22.62h-.08l.53,18.95c-2.36,2-3.06,5.59-3.24,8.07h-.11c0,.38,0,.76.05,1.14l-.31,38.25h0v.15h0a17.66,17.66,0,0,0,2.37,8.56H210v12.21c-3.31,3.87-5,8-5,12.28,0,.33,0,.67.05,1H205a24.57,24.57,0,0,0,4.31,13.95l-.31-.08c-8.37,32.54-49.11,55.24-92.24,79.28C62.29,279.41,6,310.78,5.34,365.84h0c0,.13,0,.26,0,.4s0,.39,0,.59h0a73.56,73.56,0,0,0,1.27,12.86l-.21-.15C-2.92,393.05.41,415,3.36,423Zm6,485.61V880.66C23.8,907.51,54.13,932,96.19,950.37c48.13,21.08,108.21,32.69,169.18,32.69,61.49,0,121.84-11.09,169.92-31.23,41.55-17.41,71.54-40.6,86.16-66.29l.32,36.08c-2,33.27-30.74,64.22-80.82,87.16-47.66,21.84-111.39,34.5-174.85,34.75h-1.84c-93.72,0-182.23-28-225.86-71.5C23.74,957.41,14.57,941.57,11,924.79l0,0-.05,0A77.42,77.42,0,0,1,9.32,908.59Zm513.17,16.29c3.41,3.78,15.3,19.45,11.92,51.58-8.24,40.28-38.1,74.11-86.36,97.83C400.5,1097.66,337.73,1110,266.46,1110h-1.09c-70.3-.12-136.56-15.87-186.58-44.35S1.26,999.5,1.33,959.59c0-.24,1-23.3,8.88-33.79,3.71,16.67,12.91,32.4,27.48,46.94,43.82,43.69,132.59,71.79,226.57,71.79h1.85c63.59-.25,127.47-13,175.26-34.84C490.18,987.33,518.83,957.33,522.49,924.88Zm4-52.44a79.85,79.85,0,0,1-5,11h0v.11c-14.18,26.09-44.37,49.7-86.54,67.37-48,20.08-108.17,31.15-169.53,31.15-118.48,0-225.51-43.89-256-103.51v-.24H9.19a84.6,84.6,0,0,1-3.9-8.88c-2.9-7.81-3-32.59,3.55-43.86,2.68,14,8.92,27.29,18.7,39.65,12.81,16.19,31.36,30.45,55.13,42.38,46.93,23.56,111.72,36.54,182.43,36.54,69.5,0,134.56-12.94,183.2-36.44,42.28-20.43,68.18-47,74.55-75.92C529.21,847,529.49,864,526.44,872.44ZM447.87,906.8c-48.52,23.43-113.42,36.34-182.77,36.34-70.56,0-135.19-12.94-182-36.43-23.64-11.87-42.07-26-54.8-42.12-13.27-16.77-20-35.26-20-55H8.26V515c32.91,50.3,141.66,88.27,258.11,88.27,62.54,0,122.76-9.67,169.56-27.23,43.39-16.27,73.31-38.23,87.43-64l.06,305.61C523.41,851.6,496.58,883.26,447.87,906.8ZM525.1,460.19a17.68,17.68,0,0,1,2.32,5.7c3.14,15.17,2.21,28.63,0,34.72-10.88,30.25-42.64,56-91.86,74.46-46.69,17.51-106.79,27.16-169.21,27.16-124.42,0-240-43.33-263.08-98.65-3.27-7.83-3.88-35.65,4.44-44C14.89,512.54,119,569.09,266.1,569.09c70.43,0,136.93-13.88,187.26-39.08,41.83-21,67.81-47.39,70.77-71.62C524.46,459,524.78,459.62,525.1,460.19ZM8.32,453.8v-20c14.49,26.52,45.17,50.46,87.88,68.29,48.19,20.1,108.62,31.18,170.17,31.18,62.66,0,122.46-9.67,168.4-27.23,45.66-17.44,76.16-41.62,88.65-70.15V453.8c0,25.05-26.36,53.2-70.51,75.31-50.19,25.14-116.53,39-186.81,39-71.13,0-137.56-13.31-187-37.48C34.76,509,8.32,480.26,8.32,453.8ZM206,32.68C206,15.21,232.72,1,265.61,1s59.66,14.21,59.66,31.68a17.3,17.3,0,0,1-.69,4.8h0l-.12.42c-4.71,15-29.29,26.45-58.83,26.45C232.72,64.35,206,50.14,206,32.68Zm59.65,32.67c26.52,0,49.1-9.21,57.32-22L320,53.93C315.74,68,292.87,78.25,265.61,78.25c-26.41,0-49.67-10.4-54.19-24.22l-3.17-10.76C216.44,56.1,239.05,65.35,265.61,65.35Zm54.88-9.81L320,76h0c0,15.1-24.25,27.39-54.07,27.39-30,0-53.59-12.43-53.59-28.3h0l-.49-17.67c6.8,12.82,28.53,21.82,53.81,21.82C292.45,79.25,315.14,69.36,320.49,55.54ZM211.3,75.6V76h.05c.88,16,24.51,28.38,54.54,28.38,29.76,0,54.07-12.24,55-27.46h0l0-2.08c2.42,1.8,2.67,7,2,10.11h-.14v.53a3.57,3.57,0,0,1-.1.35l-.16.68c-3.86,14.59-27.63,25.19-56.5,25.19-31.31,0-56-12.3-57.15-28.21C209,81.52,209.37,77.77,211.3,75.6Zm-2.64,46.15.27-33.66c5,14.19,28.33,24.63,57.19,24.63,28,0,51.26-9.94,56.79-23.92l.24,33.19c-.34,16.31-25.26,29-57,29C233.91,151,208.68,138.17,208.66,121.75Zm110.12,12.89v16.29c0,16.24-22.53,28.49-52.41,28.49-30.55,0-55.41-12.33-55.41-27.49V132C218.89,143.77,240.3,152,266.12,152,289.74,152,309.63,145,318.78,134.64ZM210,144.25v8.18h0c.25,7.79,6.38,14.94,17.36,20.16,10.46,5,24.68,7.83,39,7.83,30.14,0,52.93-12.43,53.38-29h0v-5.8a16.69,16.69,0,0,1,3,9.3c0,16.81-25.3,30.49-56.4,30.49-32.17,0-60.4-14.25-60.4-30.49A17.3,17.3,0,0,1,210,144.25Zm-3.23,17.83c6.69,13.59,31.69,24.34,59.63,24.34,27.09,0,49.84-10.36,55.84-24.22-3.65,16.7-24.88,27.21-56.18,27.21C238.93,189.41,211.61,180.91,206.74,162.08ZM6.33,366.24c.41-54.72,56.57-86,110.9-116.29,43.08-24,83.78-46.7,92.57-79.37,8.84,12.27,29.26,19.83,56.23,19.83,26.78,0,46.31-7.66,54.06-20.34,8.58,30.74,47.41,51.68,88.52,73.83,27.88,15,56.71,30.55,78.75,50.27,24.93,22.3,37.06,46.73,37.06,74.66,0,36.49-26.76,69.95-75.35,94.22-47.88,23.9-112.86,37.07-183,37.07C120.69,500.12,6.74,441.34,6.33,366.24Zm.5,14.49C20.7,449.33,129.59,501.12,266.1,501.12c70.26,0,135.4-13.21,183.41-37.18,44.6-22.27,70.93-52.29,75.26-85.35,12.46,21.64-1,53.84-1.34,54.71h0v0c-11.76,29.21-42.45,54-89,71.77-45.83,17.51-105.51,27.16-168,27.16-61.42,0-121.71-11-169.79-31.11s-81-48-92.29-78.51C1.12,414.09-1.29,393.25,6.83,380.73Z" />
-                                </g>
-                            </g>
-                            <g id="bubbles" data-name="Layer 2"><g id="f5af540b-9c55-40b8-aa4d-731a04f4d848" data-name="grid"><rect class="e30b93f2-39e7-4f67-8fc2-42365b4b229f" width="530" height="1110"></rect><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="238.5" cy="707.5" r="8"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="190.5" cy="570.5" r="8"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="368.5" cy="479.5" r="8"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="148.5" cy="498.5" r="5.66"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="211.5" cy="404.5" r="5.66"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="285.5" cy="767.5" r="5.66"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="328.5" cy="406.5" r="8"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="223.5" cy="479.5" r="8"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="316.5" cy="649.5" r="4"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="308.5" cy="597.5" r="4"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="253.5" cy="808.5" r="3"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="285.5" cy="524.5" r="3"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="276.5" cy="826.5" r="4"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="281.5" cy="445.5" r="4"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="277.5" cy="310.5" r="4"></circle><circle class="f7c9418e-1a2f-47b8-9b02-8013bb419c2e" cx="266.5" cy="642.5" r="4"></circle></g></g>
-                        </svg>
-                    </div>
-                    <div id="cooler-box" class="prod-object-el"></div>
-                </div>
-
-                <!-- Buttons Mobile -->
-                <div class="prod-object-buttons">
-                    <button class="btn-dir up"></button>
-                    <button class="btn-dir down"></button>
+                <div class="image safety-img">
+                    <img src="images/tare-4.png" alt="">
                 </div>
             </div>
+        </div>
 
-            <!-- Tech Spec -->
-            <div class="tech-spec-wrap socket">
-                <div class="swipe-hint only-mobile hide"></div>
-                <div class="ttl-5">Technical <br> Specifications :</div>
-                <div class="tech-spec-main">
-                    <div class="tech-spec-main-inner">
-                        <ul class="tech-spec-parameters">
-                            <li class="par-desc-item">
-                                <div>Light and UV protection </div>
-                                <span>(up to 500 nm)</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Bisphenol A (BPA) </div>
-                                <span>Free; EU/NSF/FDA approveds</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Volume 18.95L (Brim-full 20.16L)</div>
-                                <span>or 5 US gallon</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Empty weight:</div>
-                                <span>639g</span>
-                            </li>
-                        </ul>
-                        <div class="tech-spec-right-side">
-                            <div class="tech-spec-scale">
-                                <div class="scale-start">0</div>
-                                <div class="scale-end">254</div>
-                                <img width="226" height="32" src="images/scale.svg" alt="">
-                            </div>
-                            <!-- <button class="btn-toggle btn-tech-spec-open">
-                                <i></i>
-                                More Tech.Specs
-                            </button> -->
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tech-spec-drop">
-                    <div class="tech-spec-inner">
-                        <ul>
-                            <li class="par-desc-item">
-                                <div>Size</div>
-                                <span>18.95L</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Light and UV protection </div>
-                                <span>(up to 500 nm)</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Full kegs per pallet (recommended height 3 layers)</div>
-                                <span>60</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Diameter</div>
-                                <span>243 mm</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>CO2 Barrier (after 9 months)</div>
-                                <span>&lt;15% CO2 Loss</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Manual, semi-automatic and filling capability</div>
-                                <span><i class="ico-check"></i></span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Top load (Recommended height: 3 layers)</div>
-                                <span>3 Layers</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>O2 Barrier (after 12 months):</div>
-                                <span>&lt;200 ppb</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Empty Kegs per standard size pallet (1200 x 1000 mm)</div>
-                                <span>80</span>
-                            </li>
-                            <li class="par-desc-item">
-                                <div>Max operating pressure:</div>
-                                <span>4,1 bar or 60 psig</span>
-                            </li>
-                        </ul>
-                        <button class="btn-toggle hide-mode btn-tech-spec-hide">
-                            <i></i>
-                            More Tech.Specs
-                        </button>
-                    </div>
+        <div class="fader prod-fader layout-row socket">
+            <div class="ttl-5">Coolers</div>
+            <div class="layout-col-l">
+                <div class="slider-buttons slider-buttons-c">
+                    <button class="prev button-prev"></button>
+                    <button class="next button-next"></button>
                 </div>
             </div>
-
-            <!-- Review -->
-            <div class="prod-review-wrap">
-                <div class="socket">
-                    <div class="text-part">
-                        <div class="ttl-wrap">
-                            <div class="pages">01 / 05</div>
-                            <div class="ttl-2">Safety <br> And <br> Handling</div>
-                        </div>
-                        <p>Our watercoolers are can be filled using a range of different methods, from hand filling, semi-automatic and fully automatic filling, through to existing steel keg lines. Click below for technical information about how to fill and use our kegs.</p>
-                    </div>
-
-                    <div class="prod-a-desc-list">
-                        <div class="prod-a-desc">
-                            <div class="icon">
-                                <div class="index">1.</div>
-                                <img src="images/ind-2.svg" alt="">
-                            </div>
-                            <p>Fully compatible with market standard dispensers, closures and detergents </p>
-                        </div>
-                        <div class="prod-a-desc">
-                            <div class="icon">
-                                <div class="index">2.</div>
-                                <img src="images/ind-1.svg" alt="">
-                            </div>
-                            <p>Lightweight structure, with smooth sealing surface</p>
-                        </div>
-                        <div class="prod-a-desc">
-                            <div class="icon">
-                                <div class="index">3.</div>
-                                <img src="images/ind-4.svg" alt="">
-                            </div>
-                            <p>Robust and Shrink resistant up to 63 degrees for over 40 washing cycles</p>
-                        </div>
-                    </div>
-
-                    <div class="image safety-img">
-                        <img src="images/tare-4.png" alt="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="fader prod-fader layout-row socket">
-                <div class="ttl-5">Coolers</div>
-                <div class="layout-col-l">
-                    <div class="slider-buttons slider-buttons-c">
-                        <button class="prev button-prev"></button>
-                        <button class="next button-next"></button>
-                    </div>
-                </div>
-                <div class="layout-col-r">
-                    <ul class="slider-dots">
-                        <li class="active">
-                            <div class="index">01.</div>
-                            <div class="text-main">Science.</div>
-                        </li>
-                        <!-- <li>
+            <div class="layout-col-r">
+                <ul class="slider-dots">
+                    <li class="active">
+                        <div class="index">01.</div>
+                        <div class="text-main">Science.</div>
+                    </li>
+                    <!-- <li>
                             <div class="index">02.</div>
                             <div class="text-main">Innovation.</div>
                         </li>
@@ -403,190 +461,207 @@
                             <div class="index">04.</div>
                             <div class="text-main">Development.</div>
                         </li> -->
-                    </ul>
+                </ul>
 
-                    <div class="swipe-hint only-mobile hide"></div>
+                <div class="swipe-hint only-mobile hide"></div>
 
-                    <div class="slides">
-                        <div class="slide active">
-                            <div class="col-left">
-                                <div class="icon">
-                                    <img src="images/ind-10.svg" alt="">
-                                </div>
-                                <div class="ttl-3">Science and testing.</div>
-                                <p>Independent tests show that the keg keeps the beer as fresh as other containers in the packaging mix</p>
-                            </div>
-                            <div class="col-right">
-                                <p>
-                                    Our watercoolers are subject to exhaustive scientific testing, including but not limited to, organoleptic, logistics and heat tests by Petainer’s own accredited laboratories including our Innovation Centre at Cranfield University and by globally recognized independent institutions. 
-                                </p>
-                                @@include('./partials/elements/button-link-hash.htm', {
-                                    "text": "Contact Us",
-                                    "href" : "./news.html",
-                                    "hash" : "#sustainability",
-                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
-                                })
-                            </div>
-                        </div>
-
-                        <div class="slide">
-                            <div class="col-left">
-                                <div class="icon">
-                                    <img src="images/ind-1.svg" alt="">
-                                </div>
-                                <div class="ttl-3">Science and testing.</div>
-                                <p>Independent tests show that the keg keeps the beer as fresh as other containers in the packaging mix</p>
-                            </div>
-                            <div class="col-right">
-                                <p>
-                                    Our kegs are subject to exhaustive scientific testing, including but not limited to, organoleptic, logistics and heat tests by Petainer’s own accredited laboratories including our Innovation Centre at Cranfield University and by globally recognized independent institutions. 
-                                </p>
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Contact Us", 
-                                    "href" : "news.html#news-innovations", 
-                                    "classes": "btn-g btn-arrow-a btn-contact-us slide-btn" 
-                                })
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- THE HYBRID SYSTEM -->
-            <div class="hbt-sys">
-                <div class="socket hbt-sys-socket">
-                    <div class="layout-row">
-                        <div class="layout-col-l">
-    
-                        </div>
-                        <div class="layout-col-r">
-                            <div class="sys-catagories">
-                                <div class="top">
-                                    <h2 class="ttl-2">We provide a <br> Complete System <br>Solution</h2>
-                                </div>
-                                <div class="sys-catagories-row">
-                                    <div class="prod-a-desc">
-                                        <div class="icon">
-                                            <img src="images/ind-10.svg" alt="">
-                                        </div>
-                                        <p>Ready-to-use water <br>cooler. </p>
-                                    </div>
-                                    <div class="prod-a-desc">
-                                        <div class="icon">
-                                            <img src="images/ind-4.svg" alt="">
-                                        </div>
-                                        <p>Label design for extra<br> branding opportunity</p>
-                                    </div>
-                                    <div class="prod-a-desc">
-                                        <div class="icon">
-                                            <img src="images/ind-4.svg" alt="">
-                                        </div>
-                                        <p>Compatible with <br>standard dispensers</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                </div>
-            </div>
-    
-            <!-- DISPOSAL & RECYCLING -->
-            <div class="socket disposal-socket">
-                <div class="disposal-catagories">
-                    <div class="ttl-top">
-                        <div>Details</div>
-                        <h2 class="ttl-2">Disposal & <br> Recycling</h2>
-                    </div>
-                    <div class="disposal-catagories-row">
-                        <div class="prod-a-desc">
+                <div class="slides">
+                    <div class="slide active">
+                        <div class="col-left">
                             <div class="icon">
-                                <div class="index">1.</div><img src="images/ind-2.svg" alt="">
+                                <img src="images/ind-10.svg" alt="">
                             </div>
-                            <p>Environmentally friendly:<br> up to half the carbon <br>emissions of <br>polycarbonate bottles.</p>
+                            <div class="ttl-3">Science and testing.</div>
+                            <p>Independent tests show that the keg keeps the beer as fresh as other containers in the
+                                packaging mix</p>
                         </div>
-                        <div class="prod-a-desc">
-                            <div class="icon">
-                                <div class="index">2.</div><img src="images/ind-1.svg" alt="">
-                            </div>
-                            <p>Fully recyclable PET <br>(versus PC that requires <br> specialist recycling <br> facilities).</p>
-                        </div>
-                        <div class="prod-a-desc">
-                            <div class="icon">
-                                <div class="index">3.</div><img src="images/ind-4.svg" alt="">
-                            </div>
-                            <p>Product integrity at<br>higher temperatures.</p>
-                        </div>
-                    </div>
-    
-                </div>
-                <div class="disposal-photo">
-                    <img src="./images/tare-4.png" alt="">
-                </div>
-            </div>
-
-            <!-- GLOBAL CUSTOMERS.-->
-            <div class="global-socket-wrap">
-                <div class="socket global-socket">
-                    <div class="global-s-row">
-                        <div class="global-s-col">
-                            <div>
-                                <h2 class="ttl-2">Global <br> Customers.</h2>
-                                <span class="ttl-top">15</span>
-                                <span class="ttl-top">History Partners</span>
-                            </div>
-                            @@include('./partials/elements/button-link.htm', {
-                            "text": "All Reviews",
-                            "href" : "./reviews.html",
-                            "classes": "btn-g btn-arrow-a"
+                        <div class="col-right">
+                            <p>
+                                Our watercoolers are subject to exhaustive scientific testing, including but not limited
+                                to, organoleptic, logistics and heat tests by Petainer’s own accredited laboratories
+                                including our Innovation Centre at Cranfield University and by globally recognized
+                                independent institutions.
+                            </p>
+                            @@include('./partials/elements/button-link-hash.htm', {
+                            "text": "Contact Us",
+                            "href" : "./news.html",
+                            "hash" : "#sustainability",
+                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
                             })
                         </div>
-                        <div class="global-s-col global-rewiew-wrap ">
-                            <div class="global-rewiew">
-                                <div class="global-logo"><img src="./images/c-5.png" alt="image"></div>
-                                <div class="global-inner-top">
-                                    <span>Jester Brewery</span>
-                                    <span class="gray"> Brewery</span>
-                                </div>
-                                <blockquote class="global-blq">
-                                    We have worked closely with Petainer and SIDE to develop a manufacturing operation which can produce a high-quality watercooler  with features that are superior to those of existing coolers, making it more visually appealing, easier to handle and, importantly, BPA-free.					
-                                </blockquote>
-                                <div class="author-block ml-layout">
-                                    <div class="avatar"><img src="images/avatar.png" alt=""></div>
-                                    <div class="author-block-text">
-                                        <div class="author-name ttl-5">Johan Braekers
-                                            <span class="gray">Sales Director</span>
-                                        </div>
-    
-                                        <div class="city">
-                                            <span class="city-text">
-                                                New York
-                                            </span>
-                                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="col-left">
+                            <div class="icon">
+                                <img src="images/ind-1.svg" alt="">
+                            </div>
+                            <div class="ttl-3">Science and testing.</div>
+                            <p>Independent tests show that the keg keeps the beer as fresh as other containers in the
+                                packaging mix</p>
+                        </div>
+                        <div class="col-right">
+                            <p>
+                                Our kegs are subject to exhaustive scientific testing, including but not limited to,
+                                organoleptic, logistics and heat tests by Petainer’s own accredited laboratories
+                                including our Innovation Centre at Cranfield University and by globally recognized
+                                independent institutions.
+                            </p>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Contact Us",
+                            "href" : "news.html#news-innovations",
+                            "classes": "btn-g btn-arrow-a btn-contact-us slide-btn"
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- THE HYBRID SYSTEM -->
+        <div class="hbt-sys">
+            <div class="socket hbt-sys-socket">
+                <div class="layout-row">
+                    <div class="layout-col-l">
+
+                    </div>
+                    <div class="layout-col-r">
+                        <div class="sys-catagories">
+                            <div class="top">
+                                <h2 class="ttl-2">We provide a <br> Complete System <br>Solution</h2>
+                            </div>
+                            <div class="sys-catagories-row">
+                                <div class="prod-a-desc">
+                                    <div class="icon">
+                                        <img src="images/ind-10.svg" alt="">
                                     </div>
-    
+                                    <p>Ready-to-use water <br>cooler. </p>
+                                </div>
+                                <div class="prod-a-desc">
+                                    <div class="icon">
+                                        <img src="images/ind-4.svg" alt="">
+                                    </div>
+                                    <p>Label design for extra<br> branding opportunity</p>
+                                </div>
+                                <div class="prod-a-desc">
+                                    <div class="icon">
+                                        <img src="images/ind-4.svg" alt="">
+                                    </div>
+                                    <p>Compatible with <br>standard dispensers</p>
                                 </div>
                             </div>
-                            <div class="global-rewiew">
-                                <div class="global-logo"><img src="./images/c-1.png" alt="image"></div>
-                                <div class="global-inner-top">
-                                    <span>Crazy Carabao</span>
-                                    <span class="gray">Brewery</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="htb-sys-bg">
+                <img src="./images/Office-coolers.png" alt="">
+            </div>
+        </div>
+
+        <!-- DISPOSAL & RECYCLING -->
+        <div class="socket disposal-socket">
+            <div class="disposal-catagories">
+                <div class="ttl-top">
+                    <div>Details</div>
+                    <h2 class="ttl-2">Disposal & <br> Recycling</h2>
+                </div>
+                <div class="disposal-catagories-row">
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">1.</div><img src="images/ind-2.svg" alt="">
+                        </div>
+                        <p>Environmentally friendly:<br> up to half the carbon <br>emissions of <br>polycarbonate
+                            bottles.</p>
+                    </div>
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">2.</div><img src="images/ind-1.svg" alt="">
+                        </div>
+                        <p>Fully recyclable PET <br>(versus PC that requires <br> specialist recycling <br> facilities).
+                        </p>
+                    </div>
+                    <div class="prod-a-desc">
+                        <div class="icon">
+                            <div class="index">3.</div><img src="images/ind-4.svg" alt="">
+                        </div>
+                        <p>Product integrity at<br>higher temperatures.</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="disposal-photo">
+                <img src="./images/tare-4.png" alt="">
+            </div>
+        </div>
+
+        <!-- GLOBAL CUSTOMERS.-->
+        <div class="global-socket-wrap">
+            <div class="socket global-socket">
+                <div class="global-s-row">
+                    <div class="global-s-col">
+                        <div>
+                            <h2 class="ttl-2">Global <br> Customers.</h2>
+                            <span class="ttl-top">15</span>
+                            <span class="ttl-top">History Partners</span>
+                        </div>
+                        @@include('./partials/elements/button-link.htm', {
+                        "text": "All Reviews",
+                        "href" : "./reviews.html",
+                        "classes": "btn-g btn-arrow-a"
+                        })
+                    </div>
+                    <div class="global-s-col global-rewiew-wrap ">
+                        <div class="global-rewiew">
+                            <div class="global-logo"><img src="./images/c-5.png" alt="image"></div>
+                            <div class="global-inner-top">
+                                <span>Jester Brewery</span>
+                                <span class="gray"> Brewery</span>
+                            </div>
+                            <blockquote class="global-blq">
+                                We have worked closely with Petainer and SIDE to develop a manufacturing operation which
+                                can produce a high-quality watercooler with features that are superior to those of
+                                existing coolers, making it more visually appealing, easier to handle and, importantly,
+                                BPA-free.
+                            </blockquote>
+                            <div class="author-block ml-layout">
+                                <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                <div class="author-block-text">
+                                    <div class="author-name ttl-5">Johan Braekers
+                                        <span class="gray">Sales Director</span>
+                                    </div>
+
+                                    <div class="city">
+                                        <span class="city-text">
+                                            New York
+                                        </span>
+                                    </div>
                                 </div>
-                                <blockquote class="global-blq">
-                                   It was important we found a BPA-free water cooler to ensure we are ahead of any potential legislative changes as uncertainty countries around the potential effects of BPA on health.<br>petainerCooler™ is the answer to this.
-                                </blockquote>
-                                <div class="author-block ml-layout">
-                                    <div class="avatar"><img src="images/av-9.png" alt=""></div>
-                                    <div class="author-block-text">
-                                        <div class="author-name ttl-5">George Boyd
-                                            <span class="gray">Sales</span>
-                                        </div>
-                                        <div class="city">
-                                            <span class="city-text">
-                                                New York
-                                            </span>
-                                        </div>
+
+                            </div>
+                        </div>
+                        <div class="global-rewiew">
+                            <div class="global-logo"><img src="./images/c-1.png" alt="image"></div>
+                            <div class="global-inner-top">
+                                <span>Crazy Carabao</span>
+                                <span class="gray">Brewery</span>
+                            </div>
+                            <blockquote class="global-blq">
+                                It was important we found a BPA-free water cooler to ensure we are ahead of any
+                                potential legislative changes as uncertainty countries around the potential effects of
+                                BPA on health.<br>petainerCooler™ is the answer to this.
+                            </blockquote>
+                            <div class="author-block ml-layout">
+                                <div class="avatar"><img src="images/av-9.png" alt=""></div>
+                                <div class="author-block-text">
+                                    <div class="author-name ttl-5">George Boyd
+                                        <span class="gray">Sales</span>
+                                    </div>
+                                    <div class="city">
+                                        <span class="city-text">
+                                            New York
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -594,107 +669,112 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Support tools -->
-            <div class="media-stream--section socket solutions-socket">
-                <div class="media-stream--categories-ttl-f">
-                    <div class="ttl-wrap">
-                        <div class="ttl-top">3 videos</div>
-                        <h2 class="ttl-2">Support tools</h2>
-                    </div>
+        <!-- Support tools -->
+        <div class="media-stream--section socket solutions-socket">
+            <div class="media-stream--categories-ttl-f">
+                <div class="ttl-wrap">
+                    <div class="ttl-top">3 videos</div>
+                    <h2 class="ttl-2">Support tools</h2>
+                </div>
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Resources",
+                "href" : "#",
+                "classes": "btn-g btn-arrow-a"
+                })
+            </div>
+
+            <div class="media-stream--cols">
+                <article class="media-stream--article has-video instruction">
+                    <a href="https://www.youtube.com/watch?v=oBZBLuqnGEo" target="_blank" rel="noopener noreferrer">
+                        <div class="media-panel">
+                            <div class="num">01</div>
+                            <img class="media-img" src="images/st-1.png" alt="#">
+                            <div class="play-button-wrap">
+                                <div class="play trans"></div>
+                                <div class="text-b trans">1:59</div>
+                            </div>
+                        </div>
+                        <h4 class="instruction-ttl ttl-4">Petainer Hybrid.</h4>
+                    </a>
+                </article>
+
+                <article class="media-stream--article has-video instruction">
+                    <a href="https://www.youtube.com/watch?v=qv6mNlQba0M&t=13s" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="media-panel">
+                            <div class="num">02</div>
+                            <img class="media-img" src="images/st-2.png" alt="#">
+                            <div class="play-button-wrap">
+                                <div class="play trans"></div>
+                                <div class="text-b trans">1:42</div>
+                            </div>
+                        </div>
+                        <h4 class="instruction-ttl ttl-4">Torque - how to prevent decoupling.</h4>
+                    </a>
+                </article>
+
+                <article class="media-stream--article has-video instruction">
+                    <a href="https://www.youtube.com/watch?v=0rowuIao45Y&t=6s" target="_blank"
+                        rel="noopener noreferrer">
+                        <div class="media-panel">
+                            <div class="num">03</div>
+                            <img class="media-img" src="images/st-3.png" alt="#">
+                            <div class="play-button-wrap">
+                                <div class="play trans"></div>
+                                <div class="text-b trans">2:10</div>
+                            </div>
+                        </div>
+                        <h4 class="instruction-ttl ttl-4">A Type Fitting.</h4>
+                    </a>
+                </article>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="info-row layout-row socket">
+                <div class="layout-col-l">
+                    <h3 class="ttl-4">Becoming a customer</h3>
                     @@include('./partials/elements/button-link.htm', {
-                    "text": "Resources",
-                    "href" : "#",
+                    "text": "Place an order",
+                    "href" : "./contact.html",
                     "classes": "btn-g btn-arrow-a"
                     })
                 </div>
-    
-                <div class="media-stream--cols">
-                    <article class="media-stream--article has-video instruction">
-                        <a href="https://www.youtube.com/watch?v=oBZBLuqnGEo" target="_blank" rel="noopener noreferrer">
-                            <div class="media-panel">
-                                <div class="num">01</div>
-                                <img class="media-img" src="images/st-1.png" alt="#">
-                                    <div class="play-button-wrap">
-                                        <div class="play trans"></div>
-                                        <div class="text-b trans">1:59</div>
-                                    </div>
-                                </div>
-                            <h4 class="instruction-ttl ttl-4">Petainer Hybrid.</h4>
-                        </a>
-                    </article>
-    
-                    <article class="media-stream--article has-video instruction">
-                        <a href="https://www.youtube.com/watch?v=qv6mNlQba0M&t=13s" target="_blank" rel="noopener noreferrer">
-                            <div class="media-panel">
-                                <div class="num">02</div>
-                                <img class="media-img" src="images/st-2.png" alt="#"> 
-                                    <div class="play-button-wrap">
-                                        <div class="play trans"></div>
-                                        <div class="text-b trans">1:42</div>
-                                    </div>
-                                </div>
-                            <h4 class="instruction-ttl ttl-4">Torque - how to prevent decoupling.</h4>
-                        </a>
-                    </article>
-    
-                    <article class="media-stream--article has-video instruction">
-                        <a href="https://www.youtube.com/watch?v=0rowuIao45Y&t=6s" target="_blank" rel="noopener noreferrer">
-                            <div class="media-panel">
-                                <div class="num">03</div>
-                                <img class="media-img" src="images/st-3.png" alt="#">
-                                    <div class="play-button-wrap">
-                                        <div class="play trans"></div>
-                                        <div class="text-b trans">2:10</div>
-                                    </div>
-                                </div>
-                            <h4 class="instruction-ttl ttl-4">A Type Fitting.</h4>
-                        </a>
-                    </article>
+                <div class="layout-col-r">
+                    <div class="layout-col-s-4">
+                        <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
+                    </div>
+                    <div class="layout-col-s-6">
+                        <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
+                        <div class="with-us">
+                            <h3 class="ttl-4">Already with us</h3>
+                            @@include('./partials/elements/button-link.htm', {
+                            "text": "Tools & Resources",
+                            "href" : "./resources.html",
+                            "classes": ""
+                            })
+                        </div>
+                        <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow.
+                        </p>
+                    </div>
                 </div>
             </div>
-          
-            <!-- Footer -->
-            <footer class="footer">
-                <div class="info-row layout-row socket">
-                    <div class="layout-col-l">
-                        <h3 class="ttl-4">Becoming a customer</h3>
-                        @@include('./partials/elements/button-link.htm', { 
-                            "text": "Place an order", 
-                            "href" : "./contact.html", 
-                            "classes": "btn-g btn-arrow-a" 
-                        })
-                    </div>
-                    <div class="layout-col-r">
-                        <div class="layout-col-s-4">
-                            <p class="text-chunk-1">Solutions tailored to every <br> business. </p>
-                        </div>
-                        <div class="layout-col-s-6">
-                            <a href="tel:+4402073874294" class="tel">+44 (0) 207 387 4294</a>
-                            <div class="with-us">
-                                <h3 class="ttl-4">Already with us</h3>
-                                @@include('./partials/elements/button-link.htm', { 
-                                    "text": "Tools & Resources", 
-                                    "href" : "./resources.html",
-                                    "classes": "" 
-                                })
-                            </div>
-                            <p class="text-chunk-2">Best practices and technical resources <br> to help your business grow. </p>                        
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bg">
-                    @@include('./partials/footer-main.htm', { "classes": "" })
-                </div>
-            </footer>
-        </main>
+            <div class="footer-bg">
+                @@include('./partials/footer-main.htm', { "classes": "" })
+            </div>
+        </footer>
+    </main>
 
-        @@include('./partials/search.htm')
-    </body>
+    @@include('./partials/search.htm')
+</body>
 
-    <script>
-        SystemJS.import('./js/app.js');
-        SystemJS.import('./js/solutions-open.js');
-        SystemJS.import('./js/solutions-open-coolers.js');
-    </script>
+<script>
+    SystemJS.import('./js/app.js');
+    SystemJS.import('./js/solutions-open.js');
+    SystemJS.import('./js/solutions-open-coolers.js');
+</script>
+
 </html>
