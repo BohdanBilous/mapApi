@@ -189,7 +189,8 @@
     left: 30px;
     right: 30px;
     height: 55px;
-    z-index: 9999;
+    z-index: 99999;
+    border: 1px solid #000;
 
     @media screen and (min-width: 1921px) {
         width: 1860px;
