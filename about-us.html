@@ -475,20 +475,18 @@
                                 /
                                 <span class="slide-items">06</span>
                             </div>
-                            <div class="ttl ttl-3">The Hybrid <br>System </div>
+                            <div class="ttl ttl-3">The Hybrid <br>System </div> 
                         </div>
 
                         <div class="slider-buttons slider-buttons-c">
-                            <button class="prev button-prev"></button>
+                            <button class="prev button-prev"></button> 
                             <button class="next button-next"></button>
                         </div>
-
-                        @@include('./partials/elements/button-link.htm', {
-                        "text": "Open PDF",
-                        "href" : "./images/pdf.pdf",
-                        "classes": "btn-g btn-arrow-a",
-                        "target":"_blank"
-                        })
+                        @@include('./partials/elements/button-link-target.htm', {
+                            "text": "Open PDF",
+                            "href" : "./images/pdf.pdf",
+                            "classes": "btn-g btn-arrow-a"
+                            })
                     </div>
                     <div class="slides">
                         <div class="slide active">
@@ -721,7 +719,6 @@
             @@include('./partials/footer-main.htm', { "classes": "" })
         </footer>
     </main>
-
 </body>
 
 <script>
