@@ -1,6 +1,6 @@
 export class selectSearch {
 
-    constructor(selectsContainer, selectClose, emptyElement, imageIcon = false, callBackOnSelectChange) {
+    constructor(selectsContainer, selectClose, emptyElement, imageIcon = false, secondList = false, callBackOnSelectChange) {
         this.selectedContainerElement = selectsContainer;
         this.selectsContainer = document.querySelector(selectsContainer);
         this.selectClose = document.querySelector(selectClose);
@@ -8,6 +8,7 @@ export class selectSearch {
         this.callBackOnSelectChange = callBackOnSelectChange;
         this.empltyElement = document.querySelector(emptyElement);
         this.imageIcon = imageIcon;
+        this.secondList = secondList && document.querySelector(secondList);
         this.selectHandler();
         this.clickHandler();
 
@@ -15,8 +16,8 @@ export class selectSearch {
 
     }
 
-    filterFunction(that, event) {
-        let container, founded, li, input_val;
+    filterFunction(that) {
+        let container,  li, input_val;
         container = that.selectsContainer;
         input_val = container.querySelector("input").value.toUpperCase();
         li = container.querySelectorAll("ul li");
@@ -37,7 +38,6 @@ export class selectSearch {
         });
         this.selectsContainer.addEventListener('click', e => {
             e.stopPropagation();
-
         });
         this.selectsContainer.querySelector('input').addEventListener('click', (e) => {
             this.showWraper();
@@ -78,6 +78,12 @@ export class selectSearch {
         let listElements = this.selectsContainer.querySelectorAll('.searcheble-list li');
         listElements.forEach(item => {
             item.addEventListener('click', (e) => {
+                if (this.secondList) {
+                    const activeCountry = this.secondList.querySelector('li.active');
+                    activeCountry && activeCountry.classList.remove('active');
+                    activeCountry && activeCountry.classList.add('not_active');
+                }
+
                 const searchInput = this.selectsContainer.querySelector("input");
                 searchInput.value = item.querySelector('span').innerHTML;
                 if (this.imageIcon) {

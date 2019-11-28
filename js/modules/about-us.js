@@ -2,7 +2,7 @@
 
 /* MODULE IMPORTS */
 import {
-    isInView
+    isInView    
 } from '../generic-helpers';
 import {
     SuperSlider
@@ -40,4 +40,6 @@ window.addEventListener("load", function () {
         } = props
         window.addEventListener('scroll', () => (isInView(videoElement)) ? videoElement.play() : videoElement.pause())
     });
+
+
 });

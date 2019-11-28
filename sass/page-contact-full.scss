@@ -254,6 +254,21 @@ div.searchable {
     width: 21%;
     position: relative;
     margin-right: 50px;
+    &.with-icon {
+        input {
+            padding-left: 45px;
+        }
+
+        .image-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 33px;
+            height: 33px;
+            background-size: contain;
+            border-radius: 50%;
+        }
+    }
 
     .searcheble-list {
         padding: 26px 21px 0 27px;
@@ -516,7 +531,6 @@ div.searchable {
 
             .select-form-wrap {
                 width: 49%;
-
                 .select-custom {
                     .select-selected {
                         background: none;
@@ -557,6 +571,12 @@ div.searchable {
                             }
                         }
 
+                    }
+                }
+                &.office-close{
+                    display: none;
+                    &.active{
+                        display: block;
                     }
                 }
             }
@@ -644,22 +664,7 @@ div.searchable {
                 top: 15px;
             }
 
-            &.with-icon {
-                input {
-                    padding-left: 45px;
-                }
-
-                .image-icon {
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                    width: 33px;
-                    height: 33px;
-                    background-size: contain;
-                    border-radius: 50%;
-                }
-            }
-
+           
             input {
                 background-color: #f5f5f5;
                 padding-top: 7px;
