@@ -295,11 +295,12 @@ window.addEventListener("load", function () {
     const countysFly = document.querySelectorAll(".countrys ul li");
     const pageHeader = document.querySelector("header");
     const toStart = document.querySelectorAll(".addMarkers");
-    const mapWrap = document.getElementById("map");
     const contactList = document.querySelector(".contacts-list");
     const contactHelp = document.querySelector(".contact-help");
     const contactInput = document.querySelector(".countrys .searchable input");
     const searchClose = document.querySelector(".countrys .searcheble-close");
+    const inputFiles = document.querySelectorAll('.attach-file');
+
     let markersList = [];
     let map;
 
@@ -531,7 +532,7 @@ window.addEventListener("load", function () {
         });
 
         //Toogle Popups 
-        markersList.map(item => item.on('click', (e) => { 
+        markersList.map(item => item.on('click', (e) => {
             markersList.map(items => items.closePopup());
             item.openPopup();
         }));
@@ -546,7 +547,16 @@ window.addEventListener("load", function () {
         country.classList.remove("not_active");
         country.classList.add("active");
     };
+    //Change input file name 
+    inputFiles.forEach(input => {
+        let label = input.querySelector('label'),
+            inputExist = input.querySelector('input');
+        inputExist.addEventListener('change', function (e) {
+            if(e.target.files[0] ) label.querySelector('span').innerHTML = e.target.files[0].name;
+        });
+    });
+
     init();
     clickHandle();
-    scrollXHorizontal('.contacts-list','.scroll-x-block')
+    scrollXHorizontal('.contacts-list', '.scroll-x-block')
 });
