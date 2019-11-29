@@ -9,7 +9,7 @@ import {
 //   // animateSwitch,
 //   // buttonArrowAnimate,
 //   // ssHashLink
-} from "../accord";
+} from "../generic-helpers";
  
 document.querySelector(".screen-main .ttl-1").innerHTML = "asdas";
 console.log("== Begin executing app.js ==");

@@ -584,27 +584,27 @@ export const isInView = el => {
   );
 };
 
-// Hash Link Redirect
-export const ssHashLink = links => {
-  const hashFromStorage = sessionStorage.getItem("hash");
-  let hashName = "";
+// // Hash Link Redirect
+// export const ssHashLink = links => {
+//   const hashFromStorage = sessionStorage.getItem("hash");
+//   let hashName = "";
 
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      hashName = link.dataset.hash;
-      sessionStorage.setItem("hash", hashName);
-    });
-  });
+//   links.forEach(link => {
+//     link.addEventListener("click", () => {
+//       hashName = link.dataset.hash;
+//       sessionStorage.setItem("hash", hashName);
+//     });
+//   });
 
-  if (document.querySelector(`${hashFromStorage}`)) {
-    const blockOffsetTop =
-      document.querySelector(`${hashFromStorage}`).getBoundingClientRect().top +
-      window.scrollY;
+//   if (document.querySelector(`${hashFromStorage}`)) {
+//     const blockOffsetTop =
+//       document.querySelector(`${hashFromStorage}`).getBoundingClientRect().top +
+//       window.scrollY;
 
-    document.documentElement.scrollTop = blockOffsetTop;
-    document.body.scrollTop = blockOffsetTop; // For IE
-    sessionStorage.removeItem("hash");
-  } else {
-    sessionStorage.removeItem("hash");
-  }
-};
+//     document.documentElement.scrollTop = blockOffsetTop;
+//     document.body.scrollTop = blockOffsetTop; // For IE
+//     sessionStorage.removeItem("hash");
+//   } else {
+//     sessionStorage.removeItem("hash");
+//   }
+// };
