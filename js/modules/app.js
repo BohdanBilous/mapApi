@@ -3,12 +3,12 @@
 /* MODULE IMPORTS */
 import "../../vendor/modernizr-custom";
 import {
-  html,
-  desktop,
-  exists,
-  animateSwitch,
-  buttonArrowAnimate,
-  ssHashLink
+  // html,
+  // desktop,
+  // exists,
+  // animateSwitch,
+  // buttonArrowAnimate,
+  // ssHashLink
 } from "../generic-helpers";
 
 document.querySelector(".screen-main .ttl-1").innerHTML = "------";
