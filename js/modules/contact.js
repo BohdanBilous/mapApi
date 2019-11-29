@@ -3,7 +3,7 @@
 /* MODULE IMPORTS */
 import {
     exists,
-    // scrollXHorizontal
+    scrollXHorizontal
 } from "../generic-helpers";
 import {
     customSelect
@@ -590,5 +590,5 @@ window.addEventListener("load", function () {
 
                 init();
                 clickHandle();
-                // scrollXHorizontal('.contacts-list', '.scroll-x-block')
+                scrollXHorizontal('.contacts-list', '.scroll-x-block')
             });

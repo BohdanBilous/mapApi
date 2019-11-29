@@ -539,72 +539,72 @@ export let loadContent = (blockForLoad, getFile) => {
 };
 
 // Observer Sticky Element
-export const observer = new IntersectionObserver(
-  function (element) {
-    if (element[0].intersectionRatio === 0)
-      document
-      .querySelector(".media-stream--categories-ttl-sticky")
-      .classList.add("fixed");
-    else if (element[0].intersectionRatio === 1)
-      document
-      .querySelector(".media-stream--categories-ttl-sticky")
-      .classList.remove("fixed");
-  }, {
-    threshold: [0, 1]
-  }
-);
-
-
-// export const scrollXHorizontal = (el,wrapper) => {
-//   let  element = document.querySelector(el);
-//   let  wrap = document.querySelector(wrapper);
-//   element.addEventListener('wheel', function (e) {
-//     if (e.deltaY > 0) wrap.scrollLeft += 25;
-//     else wrap.scrollLeft -= 25;
-//   });
-// }
-// // In View
-// export const isInView = el => {
-//   const scroll = window.scrollY || window.pageYOffset;
-//   const boundsTop = el.getBoundingClientRect().top + scroll;
-
-//   const viewport = {
-//     top: scroll,
-//     bottom: scroll + window.innerHeight
-//   };
-
-//   const bounds = {
-//     top: boundsTop,
-//     bottom: boundsTop + el.clientHeight
-//   };
-
-//   return (
-//     (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
-//     (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
-//   );
-// };
-
-// // Hash Link Redirect
-// export const ssHashLink = links => {
-//   const hashFromStorage = sessionStorage.getItem("hash");
-//   let hashName = "";
-
-//   links.forEach(link => {
-//     link.addEventListener("click", () => {
-//       hashName = link.dataset.hash;
-//       sessionStorage.setItem("hash", hashName);
-//     });
-//   });
-
-//   if (document.querySelector(`${hashFromStorage}`)) {
-//     const blockOffsetTop =
-//       document.querySelector(`${hashFromStorage}`).getBoundingClientRect().top +
-//       window.scrollY;
-
-//     document.documentElement.scrollTop = blockOffsetTop;
-//     document.body.scrollTop = blockOffsetTop; // For IE
-//     sessionStorage.removeItem("hash");
-//   } else {
-//     sessionStorage.removeItem("hash");
+// export const observer = new IntersectionObserver(
+//   function (element) {
+//     if (element[0].intersectionRatio === 0)
+//       document
+//       .querySelector(".media-stream--categories-ttl-sticky")
+//       .classList.add("fixed");
+//     else if (element[0].intersectionRatio === 1)
+//       document
+//       .querySelector(".media-stream--categories-ttl-sticky")
+//       .classList.remove("fixed");
+//   }, {
+//     threshold: [0, 1]
 //   }
-// };
+// );
+
+
+export const scrollXHorizontal = (el,wrapper) => {
+  let  element = document.querySelector(el);
+  let  wrap = document.querySelector(wrapper);
+  element.addEventListener('wheel', function (e) {
+    if (e.deltaY > 0) wrap.scrollLeft += 25;
+    else wrap.scrollLeft -= 25;
+  });
+}
+// In View
+export const isInView = el => {
+  const scroll = window.scrollY || window.pageYOffset;
+  const boundsTop = el.getBoundingClientRect().top + scroll;
+
+  const viewport = {
+    top: scroll,
+    bottom: scroll + window.innerHeight
+  };
+
+  const bounds = {
+    top: boundsTop,
+    bottom: boundsTop + el.clientHeight
+  };
+
+  return (
+    (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
+    (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
+  );
+};
+
+// Hash Link Redirect
+export const ssHashLink = links => {
+  const hashFromStorage = sessionStorage.getItem("hash");
+  let hashName = "";
+
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      hashName = link.dataset.hash;
+      sessionStorage.setItem("hash", hashName);
+    });
+  });
+
+  if (document.querySelector(`${hashFromStorage}`)) {
+    const blockOffsetTop =
+      document.querySelector(`${hashFromStorage}`).getBoundingClientRect().top +
+      window.scrollY;
+
+    document.documentElement.scrollTop = blockOffsetTop;
+    document.body.scrollTop = blockOffsetTop; // For IE
+    sessionStorage.removeItem("hash");
+  } else {
+    sessionStorage.removeItem("hash");
+  }
+};
