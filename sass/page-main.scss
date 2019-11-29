@@ -705,6 +705,10 @@ $animateDur: 0.30s;
     }
 }
 
+@media screen and (max-width: 1024px) and (min-width: 1023px) and (orientation: landscape) {
+    
+}
+
 @include mobile {
     .screen-main .screen-main-video video {
         object-position: 71% 50%;

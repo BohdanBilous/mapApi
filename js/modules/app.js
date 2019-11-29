@@ -169,9 +169,9 @@ window.addEventListener("load", function() {
   // Debugger
   debuggerPanel();
 
-  window.addEventListener("scroll", () => {
-    document.querySelector(".debugger-panel").innerHTML = window.innerHeight;
-  });
+  // window.addEventListener("scroll", () => {
+  //   document.querySelector(".debugger-panel").innerHTML = window.innerHeight;
+  // });
 });
 
 Object.defineProperty(HTMLMediaElement.prototype, "playing", {
