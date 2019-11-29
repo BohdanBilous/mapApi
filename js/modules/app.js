@@ -11,7 +11,7 @@ import {
   // ssHashLink
 } from "../generic-helpers";
 
-document.querySelector(".screen-main .ttl-1").innerHTML = html;
+document.querySelector(".screen-main .ttl-1").innerHTML = "html";
 console.log("== Begin executing app.js ==");
 
 document.documentElement.className = document.documentElement.className.replace(
