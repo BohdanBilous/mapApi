@@ -14,7 +14,6 @@ export const desktop = window.matchMedia("(min-width: 1151px)").matches;
 export const html = document.querySelector("html");
 export const body = document.querySelector("body");
 
-
 // forEach for IE
 (function() {
   if (typeof NodeList.prototype.forEach !== "function") {
@@ -109,18 +108,30 @@ export function animateSwitch(
   let delay = delayStart || 0;
 
   elements.forEach(element => {
-    if (switchFlag === "on") {
-      element.classList.add("animated");
+    try {
+      if (switchFlag === "on") {
+        element.classList.add("animated");
 
-      if (delayInterval) {
-        delay = parseInt(delay + delayInterval, 10);
-        element.style = `transition-delay: ${delay / 1000}s`;
+        if (delayInterval) {
+          delay = parseInt(delay + delayInterval, 10);
+          element.style = `transition-delay: ${delay / 1000}s`;
+        }
+      } else if (switchFlag === "off") {
+        element.classList.remove("animated");
+        element.style = "";
       }
-    } else if (switchFlag === "off") {
-      element.classList.remove("animated");
-      element.style = "";
+    } catch (error) {
+      console.log(error);
+      document.querySelector(".debugger-panel").innerHTML = error;
     }
   });
+}
+
+// Debager Panel
+export function debuggerPanel() {
+  const panel = document.createElement("div");
+  panel.classList.add("debugger-panel");
+  body.appendChild(panel);
 }
 
 /**
@@ -323,7 +334,6 @@ export function inputFocus(input) {
 }
 
 //this function turns vertical scroll into horizontal
-
 
 export function googleMapsExists() {
   return (
