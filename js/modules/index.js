@@ -19,9 +19,7 @@ import { MediaLoader } from "../media-loader";
 window.addEventListener("load", function() {
   // Main Screen Height Tablet
   if (tablet && exists(".screen-main")) {
-    document.querySelector(
-      ".screen-main"
-    ).style.height = `${window.innerHeight}px`;
+    setScreenHeight()ж
 
     window.addEventListener("orientationchange", function() {
       setScreenHeight();
