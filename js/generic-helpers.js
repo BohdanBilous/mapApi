@@ -109,7 +109,7 @@ export function animateSwitch(
   const elements = document.querySelectorAll(elementSelector);
   let delay = delayStart || 0;
 
-  elements.forEach((element, index) => {
+  elements.forEach(element => {
     if (switchFlag === "on") {
       element.classList.add("animated");
 
