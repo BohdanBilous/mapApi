@@ -19,17 +19,17 @@ import { MediaLoader } from "../media-loader";
 window.addEventListener("load", function() {
   // Main Screen Height Tablet
   if (tablet && exists(".screen-main")) {
-    setScreenHeight()ж
-
-    window.addEventListener("orientationchange", function() {
-      setScreenHeight();
-    });
-
     const setScreenHeight = () => {
       document.querySelector(
         ".screen-main"
       ).style.height = `${window.innerHeight}px`;
     };
+
+    setScreenHeight();
+
+    window.addEventListener("orientationchange", function() {
+      setScreenHeight();
+    });
   }
 
   // Solutions
