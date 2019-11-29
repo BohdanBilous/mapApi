@@ -122,7 +122,6 @@ export function animateSwitch(
       }
     } catch (error) {
       console.log(error);
-      document.querySelector(".debugger-panel").innerHTML = error;
     }
   });
 }

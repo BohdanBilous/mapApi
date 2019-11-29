@@ -60,8 +60,6 @@ window.addEventListener("load", function() {
     });
   }
 
-  debuggerPanel();
-
   // Menu
   const menuSwitcher = document.querySelector(".menu-switcher");
 
@@ -167,6 +165,9 @@ window.addEventListener("load", function() {
     animateSwitch(".search .fade-in", "on", 1, 800);
     animateSwitch(".search .move-from-right", "on", 65, 250);
   });
+
+  // Debugger
+  debuggerPanel();
 });
 
 Object.defineProperty(HTMLMediaElement.prototype, "playing", {
