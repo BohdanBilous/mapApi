@@ -8,6 +8,7 @@ import { CursorFader } from "../fader-cursor";
 import { SectionScroll } from "../section-scroll";
 import { ImageCursor } from "../image-cursor";
 import { VideoLoad } from "../video-lazy-load";
+import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
   // Solutions
@@ -82,5 +83,25 @@ window.addEventListener("load", function() {
   if (exists(".hint-from-top")) scrollFromScreen(".screen-top");
 
   new VideoLoad(".screen-main .bg-img", false, true, false, false,false);
+
+
+  // Lazy Loader Images
+  if (exists(".lazy-img")) {
+    const images = document.querySelectorAll(".lazy-img");
+
+    images.forEach(image => {
+        const mediaQueryImages = [{
+                media: "screen and (min-width: 768px)",
+                src: image.dataset.src
+            },
+            {
+                media: "screen and (max-width: 767px)",
+                src: image.dataset.srcmob
+            }
+        ];
+
+        new MediaLoader(image, "image", mediaQueryImages);
+    });
+}
 
 });
