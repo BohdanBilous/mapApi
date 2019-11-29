@@ -19,6 +19,10 @@ document.documentElement.className = document.documentElement.className.replace(
 );
 
 window.addEventListener("load", function() {
+  const consoleRow = document.createElement("div");
+  consoleRow.classList.add("console-row");
+  document.body.appendChild(consoleRow);
+
   /* ------------------
         Header
     --------------------- */
