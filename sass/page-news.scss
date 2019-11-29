@@ -15,6 +15,11 @@
 }
 
 .screen-head, .event-section-main {
+
+    .layout-col-r {
+        height: 100%;
+    }
+    
     .hint-from-top {
         position: absolute;
         left: 0;
