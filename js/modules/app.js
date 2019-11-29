@@ -11,6 +11,7 @@
 //   ssHashLink
 // } from "../generic-helpers";
 
+document.querySelector(".link-main.resources").innerHTML = "------";
 console.log("== Begin executing app.js ==");
 
 document.documentElement.className = document.documentElement.className.replace(
