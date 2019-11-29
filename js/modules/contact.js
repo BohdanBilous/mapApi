@@ -199,8 +199,8 @@ const arrayOfCountrys = [{
         name: "russia",
         body: {
             countryBound: [
-                [73.9, 95.3],
-                [42.0, 30.3]
+                [69.9, 55.3],
+                [42.0, 20.3]
             ],
             contactListItems: [{
                     img: "./images/av-2.png",
@@ -234,8 +234,8 @@ const arrayOfCountrys = [{
                 }
             ],
             countryPoints: [{
-                    lat: 61.971234,
-                    long: 56.794679,
+                    lat: 46.971234,
+                    long: 26.794679,
                     pointText: "Russia"
                 },
                 {
@@ -348,7 +348,6 @@ window.addEventListener("load", function () {
 
                 function showPosition(position) {
                     pos = [position.coords.latitude, position.coords.longitude];
-                    console.log(map);
                     map.flyTo(pos[0], pos[1], 8000000, 0, 10, 1000, 1); // NEED TO GET IP LOCATION
                 }
 
@@ -358,7 +357,7 @@ window.addEventListener("load", function () {
             const init = () => {
                 map = WE.map("map", {
                     center: [36.057944835, -112.18688965],
-                    zoom: 3,
+                    zoom: 2,
                     dragging: true,
                     tilting: true,
                     zooming: false,

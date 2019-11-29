@@ -726,7 +726,12 @@ top: 0;
         }
 
     }
-
+    .form-active .contact-form-container form .contact-form-right .select-form-wrap{
+        margin-bottom: 58px;
+        &:nth-last-child(2){
+            margin-bottom: 0;
+        }
+    }
     .contact-form-container {
         position: relative;
         display: none;
