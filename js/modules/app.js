@@ -2,15 +2,15 @@
 
 /* MODULE IMPORTS */
 // import "../../vendor/modernizr-custom";
-// import {
+import {
   html,
 //   // desktop,
 //   // exists,
 //   // animateSwitch,
 //   // buttonArrowAnimate,
 //   // ssHashLink
-// } from "../generic-helpers";
-
+} from "../generic-helpers";
+ 
 document.querySelector(".screen-main .ttl-1").innerHTML = html;
 console.log("== Begin executing app.js ==");
 
