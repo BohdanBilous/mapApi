@@ -14,7 +14,6 @@ export const desktop = window.matchMedia("(min-width: 1151px)").matches;
 export const html = document.querySelector("html");
 export const body = document.querySelector("body");
 
-import { TweenMax } from "gsap/TweenMax";
 
 // forEach for IE
 (function() {
@@ -325,38 +324,6 @@ export function inputFocus(input) {
 
 //this function turns vertical scroll into horizontal
 
-//TODO think of how to remove dependency from generic helpers
-export function makeScrollEvtHorizontal(
-  element,
-  scrolledElm,
-  step = 100,
-  callback
-) {
-  scrolledElm.scrollLeft = 0;
-  let event = "mousewheel";
-  if (isFF() === true) {
-    event = "wheel";
-  }
-  //works for all but FF
-  element.addEventListener(event, function(event) {
-    if (event.deltaY > 0) {
-      // moving wheel down
-      //scrolledElm.scrollLeft += 60;
-      TweenMax.to(scrolledElm, 0.3, {
-        scrollLeft: scrolledElm.scrollLeft + step
-      });
-    } else {
-      // scrolledElm.scrollLeft -= 60;
-      TweenMax.to(scrolledElm, 0.3, {
-        scrollLeft: scrolledElm.scrollLeft - step
-      });
-    }
-    if (callback) {
-      callback();
-    }
-    event.preventDefault();
-  });
-}
 
 export function googleMapsExists() {
   return (
