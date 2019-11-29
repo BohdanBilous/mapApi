@@ -4,14 +4,14 @@
    ========================= */
 
 .move-from-right {
-    // opacity: 0;
-    // transition: transform 0.25s $easing, opacity 0.35s;
-    // transform: translateX(150px);
+    opacity: 0;
+    transition: transform 0.25s $easing, opacity 0.35s;
+    transform: translateX(150px);
 
-    // &.animated {
-    //     opacity: 1;
-    //     transform: translateX(0);
-    // }
+    &.animated {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .fade-in {
