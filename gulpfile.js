@@ -219,7 +219,7 @@ function jsProd() {
 
 gulp.task("images", function() {
   return gulp
-    .src(["images/**/*.gif", "images/**/*.jpg", "images/**/*.svg", "images/**/*.pdf"])
+    .src(["images/**/*.gif", "images/**/*.jpg", "images/**/*.svg", "images/**/*.pdf", "images/**/*.webp"])
     .pipe(
       imagemin(
         [
@@ -341,7 +341,7 @@ exports.html = html;
 exports.js = js;
 exports.watch = watch;
 
-const media = gulp.parallel("images", "png", "webp", "video", "pdf", "fonts", "assets");
+const media = gulp.parallel("images", "png", "video", "pdf", "fonts", "assets");
 gulp.task("media", media);
 
 const build = gulp.series(
