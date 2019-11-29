@@ -16,6 +16,7 @@ export class SolutionsInd {
 
   hoverHandler() {
     let tareCompList = [];
+    let timeOut;
 
     this.tares.forEach((tare, index) => {
       tare.addEventListener("mouseover", () => {
@@ -28,16 +29,18 @@ export class SolutionsInd {
 
         this.indicators.forEach(ind => {
           let nameInd = ind.dataset.ind;
+          timeOut = setTimeout(() => {
+            ind.classList.add("eclipse"); // Show all
 
-          if (!tareCompList.includes(nameInd)) {
-            ind.classList.add("eclipse");
-          }
+            if (tareCompList.includes(nameInd)) ind.classList.remove("eclipse"); // Hide Non Filtered
+          }, 100);
         });
       });
 
       tare.addEventListener("mouseleave", () => {
+        clearTimeout(timeOut);
         this.indicators.forEach(ind => {
-          ind.classList.remove("eclipse");
+          ind.classList.add("eclipse"); // Hide All
         });
 
         this.removeInactiveTare();

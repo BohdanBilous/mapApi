@@ -2159,7 +2159,6 @@ $leftOffset: 270px;
     .hbt-sys {
         .layout-col-l {
             display: none;
-
         }
 
         .layout-col-r {
@@ -2170,6 +2169,9 @@ $leftOffset: 270px;
             justify-content: space-between;
 
             .prod-a-desc {
+                flex: none;
+                width: 200px;
+                max-width: 100%;
                 // width: 47%;
                 // max-width: 100%;
                 // flex: 0 0 47%;
