@@ -9,10 +9,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    .screen-main-video {
-        display: none;
-    }
-
     @media screen and (max-width: 768px) and (orientation: portrait) {
         background-image: url(../images/screen-bg-tablet.jpg);
     }
