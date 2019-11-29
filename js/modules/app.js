@@ -1,15 +1,15 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import "../../vendor/modernizr-custom";
-import {
-  html,
-  // desktop,
-  // exists,
-  // animateSwitch,
-  // buttonArrowAnimate,
-  // ssHashLink
-} from "../generic-helpers";
+// import "../../vendor/modernizr-custom";
+// import {
+//   html,
+//   // desktop,
+//   // exists,
+//   // animateSwitch,
+//   // buttonArrowAnimate,
+//   // ssHashLink
+// } from "../generic-helpers";
 
 document.querySelector(".screen-main .ttl-1").innerHTML = "html";
 console.log("== Begin executing app.js ==");
