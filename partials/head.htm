@@ -38,14 +38,11 @@
 
         document.addEventListener('cssloaded', visibleContentLoaded);
 
-        if (document.readyState !== 'loading' ) {
-            console.info('== readyState DOM loaded ==');
-        } 
-        // document.addEventListener("DOMContentLoaded", function(event) {
-        //     console.info('== DOM loaded ==');
-        //     document.domloaded = true;
-        //     visibleContentLoaded();
-        // });
+        document.addEventListener("DOMContentLoaded", function(event) {
+            console.info('== DOM loaded ==');
+            document.domloaded = true;
+            visibleContentLoaded();
+        });
 
         document.addEventListener('criticalloaded', function(event) {
             console.info('== critical resources loaded ==');

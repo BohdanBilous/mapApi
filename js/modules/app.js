@@ -24,7 +24,7 @@ window.addEventListener("load", function() {
   document.body.appendChild(consoleRow);
 
   /* ------------------
-        Header
+      Header
     --------------------- */
 
   // hide-activate header
