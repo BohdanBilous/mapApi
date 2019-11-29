@@ -2,7 +2,7 @@
 
 /* MODULE IMPORTS */
 import {
-  observer,
+  // observer,
   exists,
   scrollFromScreen,
   filterSidebarInit
@@ -61,5 +61,5 @@ window.addEventListener("load", function() {
   filterSidebarInit();
 
   // Sticky Block
-  observer.observe(document.querySelector(".sticky-indicator"));
+  // observer.observe(document.querySelector(".sticky-indicator"));
 });

@@ -538,21 +538,21 @@ export let loadContent = (blockForLoad, getFile) => {
   xhttp.send();
 };
 
-// Observer Sticky Element
-export const observer = new IntersectionObserver(
-  function (element) {
-    if (element[0].intersectionRatio === 0)
-      document
-      .querySelector(".media-stream--categories-ttl-sticky")
-      .classList.add("fixed");
-    else if (element[0].intersectionRatio === 1)
-      document
-      .querySelector(".media-stream--categories-ttl-sticky")
-      .classList.remove("fixed");
-  }, {
-    threshold: [0, 1]
-  }
-);
+// // Observer Sticky Element
+// export const observer = new IntersectionObserver(
+//   function (element) {
+//     if (element[0].intersectionRatio === 0)
+//       document
+//       .querySelector(".media-stream--categories-ttl-sticky")
+//       .classList.add("fixed");
+//     else if (element[0].intersectionRatio === 1)
+//       document
+//       .querySelector(".media-stream--categories-ttl-sticky")
+//       .classList.remove("fixed");
+//   }, {
+//     threshold: [0, 1]
+//   }
+// );
 
 
 // export const scrollXHorizontal = (el,wrapper) => {
