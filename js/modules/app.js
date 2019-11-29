@@ -108,40 +108,40 @@ window.addEventListener("load", function() {
   ssHashLink(document.querySelectorAll(".btn-hash"));
 
   //SEARCH
-  let inputSearch = document.getElementById("serach-input-form");
-  let searchForm = document.querySelector(".search-form");
-  let clearInput = inputSearch.parentNode.querySelector(".clear-input");
-  inputSearch.focus();
-  clearInput.style.left = `${inputSearch.value.length * 40 + 40}px`;
-  inputSearch.selectionStart = inputSearch.selectionEnd =
-    inputSearch.value.length;
-  inputSearch.value.length === 0 && clearInput.classList.add("hide");
-  clearInput.addEventListener("click", () => {
-    inputSearch.value = "";
-    inputSearch.focus();
-    clearInput.classList.add("hide");
-  });
-  inputSearch.addEventListener("input", () => {
-    let hiddenElement = document.querySelector(".hidden-width");
-    inputSearch.value.length === 0
-      ? clearInput.classList.add("hide")
-      : clearInput.classList.remove("hide");
-    let valyeInput = inputSearch.value.replace(/\s/g, "|");
-    hiddenElement.innerHTML = valyeInput;
-    let hiddenElementWidth = hiddenElement.offsetWidth;
-    clearInput.style.left = `${hiddenElementWidth + 15}px`;
-  });
-  searchForm.addEventListener("submit", e => {
-    const data = e.target.querySelector("input").value;
-    document
-      .querySelector(".search-socket")
-      .classList.remove("search-find", "search-not-find");
-    if (data.length > 0) {
-      document.querySelector(".search-socket").classList.add("search-find");
-    } else {
-      document.querySelector(".search-socket").classList.add("search-not-find");
-    }
-  });
+  // let inputSearch = document.getElementById("serach-input-form");
+  // let searchForm = document.querySelector(".search-form");
+  // let clearInput = inputSearch.parentNode.querySelector(".clear-input");
+  // inputSearch.focus();
+  // clearInput.style.left = `${inputSearch.value.length * 40 + 40}px`;
+  // inputSearch.selectionStart = inputSearch.selectionEnd =
+  //   inputSearch.value.length;
+  // inputSearch.value.length === 0 && clearInput.classList.add("hide");
+  // clearInput.addEventListener("click", () => {
+  //   inputSearch.value = "";
+  //   inputSearch.focus();
+  //   clearInput.classList.add("hide");
+  // });
+  // inputSearch.addEventListener("input", () => {
+  //   let hiddenElement = document.querySelector(".hidden-width");
+  //   inputSearch.value.length === 0
+  //     ? clearInput.classList.add("hide")
+  //     : clearInput.classList.remove("hide");
+  //   let valyeInput = inputSearch.value.replace(/\s/g, "|");
+  //   hiddenElement.innerHTML = valyeInput;
+  //   let hiddenElementWidth = hiddenElement.offsetWidth;
+  //   clearInput.style.left = `${hiddenElementWidth + 15}px`;
+  // });
+  // searchForm.addEventListener("submit", e => {
+  //   const data = e.target.querySelector("input").value;
+  //   document
+  //     .querySelector(".search-socket")
+  //     .classList.remove("search-find", "search-not-find");
+  //   if (data.length > 0) {
+  //     document.querySelector(".search-socket").classList.add("search-find");
+  //   } else {
+  //     document.querySelector(".search-socket").classList.add("search-not-find");
+  //   }
+  // });
   //search-find
   // Seach Modal
 
