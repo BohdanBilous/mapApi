@@ -2,14 +2,14 @@
 
 /* MODULE IMPORTS */
 // import "../../vendor/modernizr-custom";
-// import {
+import {
 //   html,
 //   // desktop,
 //   // exists,
 //   // animateSwitch,
 //   // buttonArrowAnimate,
 //   // ssHashLink
-// } from "../generic-helpers";
+} from "../accord";
  
 document.querySelector(".screen-main .ttl-1").innerHTML = "asdas";
 console.log("== Begin executing app.js ==");
