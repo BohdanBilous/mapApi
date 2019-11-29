@@ -2,7 +2,7 @@
 
 /* MODULE IMPORTS */
 import {
-  observer,
+  // observer,
   exists,
   scrollFromScreen,
   tags,
