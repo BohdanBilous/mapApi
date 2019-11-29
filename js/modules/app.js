@@ -145,21 +145,21 @@ window.addEventListener("load", function() {
   //search-find
   // Seach Modal
 
-  const searchOpen = document.querySelector(".search-switcher");
-  const searchClose = document.querySelector(".search-close");
-  const searchModal = document.querySelector(".search-modal");
-  searchClose.addEventListener("click", () => {
-    html.classList.remove("search-open");
-    searchModal.classList.remove("open");
-    animateSwitch(".search .fade-in", "off");
-    animateSwitch(".search .move-from-right", "off");
-  });
-  searchOpen.addEventListener("click", () => {
-    html.classList.add("search-open");
-    searchModal.classList.add("open");
-    animateSwitch(".search .fade-in", "on", 1, 800);
-    animateSwitch(".search .move-from-right", "on", 65, 250);
-  });
+  // const searchOpen = document.querySelector(".search-switcher");
+  // const searchClose = document.querySelector(".search-close");
+  // const searchModal = document.querySelector(".search-modal");
+  // searchClose.addEventListener("click", () => {
+  //   html.classList.remove("search-open");
+  //   searchModal.classList.remove("open");
+  //   animateSwitch(".search .fade-in", "off");
+  //   animateSwitch(".search .move-from-right", "off");
+  // });
+  // searchOpen.addEventListener("click", () => {
+  //   html.classList.add("search-open");
+  //   searchModal.classList.add("open");
+  //   animateSwitch(".search .fade-in", "on", 1, 800);
+  //   animateSwitch(".search .move-from-right", "on", 65, 250);
+  // });
 });
 
 Object.defineProperty(HTMLMediaElement.prototype, "playing", {
