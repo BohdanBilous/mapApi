@@ -109,19 +109,17 @@ export function animateSwitch(
 
   elements.forEach(element => {
     try {
-      fake();
-      console.log("fa");
-      // if (switchFlag === "on") {
-      //   element.classList.add("animated");
+      if (switchFlag === "on") {
+        element.classList.add("animated");
 
-      //   if (delayInterval) {
-      //     delay = parseInt(delay + delayInterval, 10);
-      //     element.style = `transition-delay: ${delay / 1000}s`;
-      //   }
-      // } else if (switchFlag === "off") {
-      //   element.classList.remove("animated");
-      //   element.style = "";
-      // }
+        if (delayInterval) {
+          delay = parseInt(delay + delayInterval, 10);
+          element.style = `transition-delay: ${delay / 1000}s`;
+        }
+      } else if (switchFlag === "off") {
+        element.classList.remove("animated");
+        element.style = "";
+      }
     } catch (error) {
       console.log(error);
       document.querySelector(".debugger-panel").innerHTML = error;
