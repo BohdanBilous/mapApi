@@ -11,7 +11,6 @@ import {
   ssHashLink
 } from "../generic-helpers";
 
-document.querySelector(".screen-main .ttl-1").innerHTML = "------";
 console.log("== Begin executing app.js ==");
 
 document.documentElement.className = document.documentElement.className.replace(
@@ -20,10 +19,6 @@ document.documentElement.className = document.documentElement.className.replace(
 );
 
 window.addEventListener("load", function() {
-  const consoleRow = document.createElement("div");
-  consoleRow.classList.add("console-row");
-  document.body.appendChild(consoleRow);
-
   /* ------------------
       Header
     --------------------- */
@@ -31,15 +26,19 @@ window.addEventListener("load", function() {
   // hide-activate header
   let lastScrollTop = 0;
 
-  window.addEventListener("scroll", function(){
-    var st = window.pageYOffset || document.documentElement.scrollTop;
-    if (st > lastScrollTop){
+  window.addEventListener(
+    "scroll",
+    function() {
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop) {
         document.querySelector(".header").classList.add("hide-header");
-    } else {
+      } else {
         document.querySelector(".header").classList.remove("hide-header");
-    }
-    lastScrollTop = st;
-  }, false);
+      }
+      lastScrollTop = st;
+    },
+    false
+  );
 
   // Drop Down
   if (exists(".drop-down-element")) {
