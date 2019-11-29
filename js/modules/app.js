@@ -8,7 +8,8 @@ import {
   exists,
   animateSwitch,
   buttonArrowAnimate,
-  ssHashLink
+  ssHashLink,
+  debuggerPanel
 } from "../generic-helpers";
 
 console.log("== Begin executing app.js ==");
@@ -58,6 +59,8 @@ window.addEventListener("load", function() {
         });
     });
   }
+
+  debuggerPanel();
 
   // Menu
   const menuSwitcher = document.querySelector(".menu-switcher");

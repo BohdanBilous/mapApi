@@ -14,8 +14,6 @@ export const desktop = window.matchMedia("(min-width: 1151px)").matches;
 export const html = document.querySelector("html");
 export const body = document.querySelector("body");
 
-import { TweenMax } from "gsap/TweenMax";
-
 // forEach for IE
 (function() {
   if (typeof NodeList.prototype.forEach !== "function") {
@@ -110,18 +108,32 @@ export function animateSwitch(
   let delay = delayStart || 0;
 
   elements.forEach(element => {
-    if (switchFlag === "on") {
-      element.classList.add("animated");
+    try {
+      fake();
+      console.log("fa");
+      // if (switchFlag === "on") {
+      //   element.classList.add("animated");
 
-      if (delayInterval) {
-        delay = parseInt(delay + delayInterval, 10);
-        element.style = `transition-delay: ${delay / 1000}s`;
-      }
-    } else if (switchFlag === "off") {
-      element.classList.remove("animated");
-      element.style = "";
+      //   if (delayInterval) {
+      //     delay = parseInt(delay + delayInterval, 10);
+      //     element.style = `transition-delay: ${delay / 1000}s`;
+      //   }
+      // } else if (switchFlag === "off") {
+      //   element.classList.remove("animated");
+      //   element.style = "";
+      // }
+    } catch (error) {
+      console.log(error);
+      document.querySelector(".debugger-panel").innerHTML = error;
     }
   });
+}
+
+// Debager Panel
+export function debuggerPanel() {
+  const panel = document.createElement("div");
+  panel.classList.add("debugger-panel");
+  body.appendChild(panel);
 }
 
 /**
@@ -324,39 +336,6 @@ export function inputFocus(input) {
 }
 
 //this function turns vertical scroll into horizontal
-
-//TODO think of how to remove dependency from generic helpers
-export function makeScrollEvtHorizontal(
-  element,
-  scrolledElm,
-  step = 100,
-  callback
-) {
-  scrolledElm.scrollLeft = 0;
-  let event = "mousewheel";
-  if (isFF() === true) {
-    event = "wheel";
-  }
-  //works for all but FF
-  element.addEventListener(event, function(event) {
-    if (event.deltaY > 0) {
-      // moving wheel down
-      //scrolledElm.scrollLeft += 60;
-      TweenMax.to(scrolledElm, 0.3, {
-        scrollLeft: scrolledElm.scrollLeft + step
-      });
-    } else {
-      // scrolledElm.scrollLeft -= 60;
-      TweenMax.to(scrolledElm, 0.3, {
-        scrollLeft: scrolledElm.scrollLeft - step
-      });
-    }
-    if (callback) {
-      callback();
-    }
-    event.preventDefault();
-  });
-}
 
 export function googleMapsExists() {
   return (
