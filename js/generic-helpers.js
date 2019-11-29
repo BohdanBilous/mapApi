@@ -114,7 +114,7 @@ export function animateSwitch(
       element.classList.add("animated");
 
       if (delayInterval) {
-        delay = parseInt(delay + delayInterval);
+        delay = parseInt(delay + delayInterval, 10);
         element.style = `transition-delay: ${delay / 1000}s`;
       }
     } else if (switchFlag === "off") {
