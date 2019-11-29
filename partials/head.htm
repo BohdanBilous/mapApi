@@ -61,6 +61,12 @@
     </script>
 
     <style>
+        body,
+        html {
+            max-width: 100vh;
+            overflow-x: hidden;
+        }
+
         @-webkit-keyframes fadeLoaderOut {
             0% {
                 opacity: 1
@@ -151,38 +157,34 @@
             0% {
                 transform: matrix(1, 0, 0, 1, 221.5, -75)
             }
-
             10% {
                 transform: matrix(1, 0, 0, 1, 221.5, -15)
             }
-
             20% {
-                transform: matrix(1, 0, 0, 1, 221.5, 15)
+                transform: matrix(1, 0, 0, 1, 221.5, 20)
             }
-
             30% {
-                transform: matrix(1, 0, 0, 1, 221.5, 100)
+                transform: matrix(1, 0, 0, 1, 221.5, 60)
             }
-
             40% {
-                transform: matrix(1, 0, 0, 1, 221.5, 200)
+                transform: matrix(1, 0, 0, 1, 221.5, 160)
             }
-
+          
             50% {
                 transform: matrix(1, 0, 0, 1, 221.5, 240)
             }
-
+          
             60% {
-                transform: matrix(1, 0, 0, 1, 221.5, 160)
+                transform: matrix(1, 0, 0, 1, 221.5, 200)
             }
-
             70% {
-                transform: matrix(1, 0, 0, 1, 221.5, 60)
+                transform: matrix(1, 0, 0, 1, 221.5, 100)
             }
-
+            
             80% {
-                transform: matrix(1, 0, 0, 1, 221.5, 20)
+                transform: matrix(1, 0, 0, 1, 221.5, 15)
             }
+            
             90% {
                 transform: matrix(1, 0, 0, 1, 221.5, -15)
             }
@@ -201,12 +203,12 @@
             z-index: 100500;
             max-width: 100vw;
             max-height: 100vh;
-
+            overflow: hidden;
         }
 
         #loader svg .toDownAnimate>g {
-            transform: matrix(1, 0, 0, 1, 221.5, 134);
-            animation: loopTransfrom 2.4s linear infinite forwards;
+            transform: matrix(1, 0, 0, 1, 221.5, 240);
+            animation: loopTransfrom 5s linear infinite forwards; 
         }
 
         #loader .loader {
