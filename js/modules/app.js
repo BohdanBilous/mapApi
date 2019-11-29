@@ -15,7 +15,7 @@ document.querySelector(".screen-main .ttl-1").innerHTML = "asdas";
 console.log("== Begin executing app.js ==");
 
 document.documentElement.className = document.documentElement.className.replace(
-  /\bno-js\b/g,
+  /\bno-js\b/g, 
   ""
 );
 

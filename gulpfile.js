@@ -144,7 +144,8 @@ function js() {
         resolveNodeModules(),
         commonJs(),
         babel({
-          plugins: ["@babel/plugin-transform-arrow-functions"]
+          plugins: ["@babel/plugin-transform-arrow-functions"],
+          presets: [['@babel/preset-env', {targets: {browsers: ['last 2 versions', 'ie >= 7']}}]],
         })
       ]
     })
@@ -155,7 +156,7 @@ function js() {
         //name: 'scripts',
         sourcemap: true
       });
-    });
+    }); 
 }
 
 function jsProd() {
