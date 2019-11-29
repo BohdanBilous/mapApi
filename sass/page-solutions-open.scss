@@ -2780,12 +2780,6 @@ $leftOffset: 270px;
 }
 
 @include tablet--ipadPro {
-    .solution-open-page.jars .prod-review-wrap .image {
-        position: relative;
-        margin: 0 auto;
-        width: 440px;
-        max-width: 90%;
-    }
 
     #jars-top {
         top: 0;
@@ -2819,11 +2813,17 @@ $leftOffset: 270px;
         .solution-p-filter--buttons {
             flex-wrap: wrap;
         }
-
-
     }
 }
 
+@include tablet {
+    .solution-open-page.jars .prod-review-wrap .image {
+        position: relative;
+        margin: 0 auto;
+        width: 440px;
+        max-width: 90%;
+    }
+}
 
 .hbt-sys-socket {
     position: relative;
@@ -2863,8 +2863,6 @@ $leftOffset: 270px;
         object-position: cover;
         object-fit: cover;
     }
-
-
 }
 
 @include tablet {
@@ -2918,8 +2916,6 @@ $leftOffset: 270px;
         flex: 0 0 47%;
     }
 }
-
-
 
 
 @include mobile-min {
