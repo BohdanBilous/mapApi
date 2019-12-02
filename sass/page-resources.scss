@@ -324,7 +324,7 @@
                 width: 35px;
                 height: 35px;
                 background-size: 100% 100%;
-                transition: opacity 0.2s;
+                transition: opacity 0.35s;
             }
 
             &::after {
@@ -449,7 +449,7 @@
             .select-item {
                 padding-left: 50px;
 
-                &::before {
+                &::before, &::after {
                     left: 0;
                 }
             }
