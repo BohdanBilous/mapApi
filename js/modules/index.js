@@ -33,7 +33,7 @@ window.addEventListener("load", function() {
   }
 
   // Solutions
-  let solutionInd = new SolutionsInd();
+  new SolutionsInd();
 
   // Scrolling
   let sectionScroll = new SectionScroll();

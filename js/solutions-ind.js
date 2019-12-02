@@ -1,7 +1,7 @@
 import { tablet } from "./generic-helpers";
 
 export class SolutionsInd {
-  constructor(typeImg) {
+  constructor(typeImg, hoverDelay) {
     this.wrap = document.querySelector(".solutions-highlights");
     this.indicators = this.wrap.querySelectorAll(
       ".indicators-hightlight .indicator"
@@ -9,6 +9,7 @@ export class SolutionsInd {
     this.tares = this.wrap.querySelectorAll(".hover-mode .tare-item");
     this.typeImg = typeImg;
     this.taresArray = [];
+    this.hoverDelay = hoverDelay || 0;
 
     this.hoverHandler();
     if (tablet) this.setIndicators();
@@ -33,14 +34,16 @@ export class SolutionsInd {
             ind.classList.add("eclipse"); // Show all
 
             if (tareCompList.includes(nameInd)) ind.classList.remove("eclipse"); // Hide Non Filtered
-          }, 100);
+          }, this.hoverDelay);
         });
       });
 
       tare.addEventListener("mouseleave", () => {
         clearTimeout(timeOut);
         this.indicators.forEach(ind => {
-          ind.classList.add("eclipse"); // Hide All
+          this.hoverDelay === 0
+            ? ind.classList.remove("eclipse") // Show All
+            : ind.classList.add("eclipse"); // Hide All
         });
 
         this.removeInactiveTare();
