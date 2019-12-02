@@ -1,7 +1,13 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import { desktop, mobile, exists, scrollFromScreen } from "../generic-helpers";
+import {
+  desktop,
+  tablet,
+  mobile,
+  exists,
+  scrollFromScreen
+} from "../generic-helpers";
 import { SolutionsInd } from "../solutions-ind";
 import { SuperSlider } from "../super-slider";
 import { CursorFader } from "../fader-cursor";
@@ -11,6 +17,21 @@ import { VideoLoad } from "../video-lazy-load";
 import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
+  // Main Screen Height Tablet
+  if (tablet && exists(".screen-main")) {
+    const setScreenHeight = () => {
+      document.querySelector(
+        ".screen-main"
+      ).style.height = `${window.innerHeight}px`;
+    };
+
+    setScreenHeight();
+
+    // window.addEventListener("orientationchange", function() {
+    //   setScreenHeight();
+    // });
+  }
+
   // Solutions
   let solutionInd = new SolutionsInd();
 
@@ -82,26 +103,25 @@ window.addEventListener("load", function() {
   // Scroll From Screen
   if (exists(".hint-from-top")) scrollFromScreen(".screen-top");
 
-  new VideoLoad(".screen-main .bg-img", false, true, false, false,false);
-
+  new VideoLoad(".screen-main .bg-img", false, true, false, false, false);
 
   // Lazy Loader Images
   if (exists(".lazy-img")) {
     const images = document.querySelectorAll(".lazy-img");
 
     images.forEach(image => {
-        const mediaQueryImages = [{
-                media: "screen and (min-width: 768px)",
-                src: image.dataset.src
-            },
-            {
-                media: "screen and (max-width: 767px)",
-                src: image.dataset.srcmob
-            }
-        ];
+      const mediaQueryImages = [
+        {
+          media: "screen and (min-width: 768px)",
+          src: image.dataset.src
+        },
+        {
+          media: "screen and (max-width: 767px)",
+          src: image.dataset.srcmob
+        }
+      ];
 
-        new MediaLoader(image, "image", mediaQueryImages);
+      new MediaLoader(image, "image", mediaQueryImages);
     });
-}
-
+  }
 });
