@@ -18,33 +18,51 @@
 }
 
 
-.chart-wrap{
+.chart-wrap {
     .slide-empty {
         display: none !important;
     }
-    
+
     .slide-without {
         border-bottom: none !important;
     }
-    
+
     .slider-row {
+        cursor: move;
+        cursor: grab;
+
+        &:active {
+            cursor: grabbing;
+        }
         transition: transform 0.4s;
         white-space: nowrap;
-    
+
         .slide {
+            cursor: move;
+            cursor: grab;
+
+            &:active {
+                cursor: grabbing;
+            }
             display: inline-block;
             width: 25%;
             border-bottom: 1px solid rgba(#949494, 0.3);
-         
-    
+
+
             .year-slider {
-                cursor: pointer;
+                cursor: move;
+                cursor: grab;
+
+                &:active {
+                    cursor: grabbing;
+                }
+
                 display: block;
                 padding-bottom: 16px;
                 width: fit-content;
                 transform: translateX(-50%);
                 font-family: $fontMedium;
-    
+
                 &::after {
                     position: absolute;
                     content: "";
@@ -214,27 +232,28 @@
 .sites-chart {
     // overflow: scroll;
     margin-bottom: 92px;
+
     .carosuel-text {
         position: absolute;
         padding-left: 21px;
         left: 0;
         top: 0;
-    
+
         &::after,
         &::before {
             position: absolute;
             content: "";
             left: 0;
         }
-    
+
         &::after {
-    
+
             top: 0;
             width: 1px;
             height: 132px;
             background: #dadada;
         }
-    
+
         &::before {
             top: 132px;
             width: 13px;
@@ -243,34 +262,34 @@
             border-radius: 50%;
             transform: translateX(-50%);
         }
-    
+
         .carosuel-text-inner {
             position: absolute;
             visibility: hidden;
             color: #333333;
             font-family: $fontMain;
             white-space: nowrap;
-    
+
             &.active {
                 visibility: visible;
-    
+
             }
-    
+
             &.nextAnim {
                 animation: nextFade 0.4s forwards;
             }
-    
+
             &.prevAnim {
                 animation: prevFade 0.4s forwards;
             }
-    
+
         }
     }
-    
+
     .carosuel {
         padding-top: 163px;
     }
-    
+
 }
 
 .chart-wrap {
@@ -703,33 +722,34 @@
     //         height: 482px;
     //     }
     // }
-    .sites-tabs-container{
+    .sites-tabs-container {
         .video-section {
             .col {
-              justify-content: space-between;
+                justify-content: space-between;
             }
-      
+
             .text-desc {
-              position: static;
-              left: 0;
-              text-align: left;
-              right: auto;
+                position: static;
+                left: 0;
+                text-align: left;
+                right: auto;
             }
-      
+
             .ttl-section {
-              position: static;
-              margin-top: 0;
-              margin-bottom: 0;
-              order: 3;
+                position: static;
+                margin-top: 0;
+                margin-bottom: 0;
+                order: 3;
             }
-      
+
             .play-button-wrap {
-              position: static;
-              order: 2;
-              margin-bottom: 0;
+                position: static;
+                order: 2;
+                margin-bottom: 0;
             }
-          }
+        }
     }
+
     .site-info {
         margin-bottom: 144px;
 
