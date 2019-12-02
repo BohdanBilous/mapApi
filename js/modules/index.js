@@ -124,4 +124,18 @@ window.addEventListener("load", function() {
       new MediaLoader(image, "image", mediaQueryImages);
     });
   }
+  
+  // Lazy Background Loader
+  if (exists(".lazy-bg")) {
+    const bgs = document.querySelectorAll(".lazy-bg");
+
+    bgs.forEach(bg => {
+      const mediaQueryBackgrounds = [
+        { media: "screen and (min-width: 768px)", src: bg.dataset.bg },
+        { media: "screen and (max-width: 767px)", src: bg.dataset.bgmob }
+      ];
+
+      new MediaLoader(bg, "background", mediaQueryBackgrounds);
+    });
+  }
 });

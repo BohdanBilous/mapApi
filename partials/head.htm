@@ -6,9 +6,6 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
 
-    <link rel="preload" href="/css/fonts/CircularStd-Book.woff" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/css/fonts/CircularStd-Medium.woff" as="font" type="font/woff2" crossorigin>
-
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=0">
@@ -67,6 +64,7 @@
         body,
         html {
             max-width: 100vw;
+            overflow-x: hidden;
         }
 
         @-webkit-keyframes fadeLoaderOut {
@@ -159,37 +157,43 @@
             0% {
                 transform: matrix(1, 0, 0, 1, 221.5, -75)
             }
+
             10% {
                 transform: matrix(1, 0, 0, 1, 221.5, -15)
             }
+
             20% {
                 transform: matrix(1, 0, 0, 1, 221.5, 20)
             }
+
             30% {
                 transform: matrix(1, 0, 0, 1, 221.5, 60)
             }
+
             40% {
                 transform: matrix(1, 0, 0, 1, 221.5, 160)
             }
-          
+
             50% {
                 transform: matrix(1, 0, 0, 1, 221.5, 240)
             }
-          
+
             60% {
                 transform: matrix(1, 0, 0, 1, 221.5, 200)
             }
+
             70% {
                 transform: matrix(1, 0, 0, 1, 221.5, 100)
             }
-            
+
             80% {
                 transform: matrix(1, 0, 0, 1, 221.5, 15)
             }
-            
+
             90% {
                 transform: matrix(1, 0, 0, 1, 221.5, -15)
             }
+
             100% {
                 transform: matrix(1, 0, 0, 1, 221.5, -75)
             }
@@ -210,7 +214,7 @@
 
         #loader svg .toDownAnimate>g {
             transform: matrix(1, 0, 0, 1, 221.5, 240);
-            animation: loopTransfrom 5s linear infinite forwards; 
+            animation: loopTransfrom 5s linear infinite forwards;
         }
 
         #loader .loader {
@@ -267,7 +271,7 @@
 
     <!-- <link type="text/css" rel="stylesheet" href="css/main.css" /> -->
     <!-- async css loading -->
-    <link rel="stylesheet" href="@@styles" media="none" onload="if(media!='all')media='all';styleLoaded();"><noscript>
-        <link rel="stylesheet" href="css/main.css"></noscript>
+    <link rel="stylesheet" href="@@styles" media="none" onload="if(media!='all')media='all';styleLoaded();">
+    <noscript><link rel="stylesheet" href="css/main.css"></noscript>
 
 </head>
