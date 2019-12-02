@@ -159,8 +159,8 @@ const arrayOfCountrys = [{
         name: "czech",
         body: {
             countryBound: [
-                [50.0536, 18.8568],
-                [47.5877, 12.0782]
+                [51.5536, 16.8568],
+                [48.0877, 14.0782]
             ],
             contactListItems: [{
                 img: "./images/av-1.png",
@@ -359,12 +359,14 @@ window.addEventListener("load", function () {
             zoom: 4,
             dragging: true,
             tilting: true,
-            zooming: false,
+            zooming: true,
             scrollWheelZoom: true
         });
         map.setTilt(15);
         WE.tileLayer(
             "https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz", {
+                minZoom: 0,
+                maxZoom: 16,
                 style: "https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz"
             }
         ).addTo(map);
