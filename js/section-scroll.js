@@ -22,11 +22,11 @@ export class SectionScroll {
           1 - this.scrollTop / (this.sectionOneHeight - window.innerHeight)
         );
 
-        // this.sectionOne.classList.add("fixed");
+        this.sectionOne.classList.add("fixed");
         this.sectionEclipse.classList.add("show");
         this.sectionEclipse.style = `opacity: ${this.eclipseValue}`;
       } else {
-        // this.sectionOne.classList.remove("fixed");
+        this.sectionOne.classList.remove("fixed");
         this.sectionEclipse.classList.remove("show");
         this.sectionEclipse.style = "";
 

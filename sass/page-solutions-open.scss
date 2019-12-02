@@ -1248,7 +1248,6 @@ $leftOffset: 270px;
     }
 }
 
-
 @include macbook {
     .prod-review-wrap {
         .text-part {
@@ -1350,8 +1349,7 @@ $leftOffset: 270px;
             border-bottom: 1px solid $colorBorder;
             margin-bottom: 43px;
 
-            .ttl-wrap,
-            p {
+            .ttl-wrap, p {
                 width: 100%;
             }
 
@@ -1815,6 +1813,9 @@ $leftOffset: 270px;
     padding-bottom: 1000px;
     margin-bottom: 100px;
 
+    @include mobile {
+        padding-top: 0;
+    }
 }
 
 .sys-catagories {
@@ -2398,7 +2399,7 @@ $leftOffset: 270px;
 
     .prod-fader {
         .slides {
-            height: 485px;
+            height: 495px;
         }
     }
 
