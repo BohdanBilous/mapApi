@@ -304,175 +304,174 @@ const arrayOfCountrys = [{
 ];
 
 window.addEventListener("load", function () {
-            //Variables
-            const form = document.querySelector(".contact-form-container");
-            const formClose = document.querySelector(
-                ".contact-form-container .btn-close"
-            );
-            const countysFly = document.querySelectorAll(".countrys ul li");
-            const pageHeader = document.querySelector("header");
-            const toStart = document.querySelectorAll(".addMarkers");
-            const contactList = document.querySelector(".contacts-list");
-            const countysList = document.querySelectorAll(".countrys .countrys-list li");
-            const contactHelp = document.querySelector(".contact-help");
-            const contactInput = document.querySelector(".countrys .searchable input");
-            const searchClose = document.querySelector(".countrys .searcheble-close");
-            const inputFiles = document.querySelectorAll('.attach-file');
+    //Variables
+    const form = document.querySelector(".contact-form-container");
+    const formClose = document.querySelector(
+        ".contact-form-container .btn-close"
+    );
+    const countysFly = document.querySelectorAll(".countrys ul li");
+    const pageHeader = document.querySelector("header");
+    const toStart = document.querySelectorAll(".addMarkers");
+    const contactList = document.querySelector(".contacts-list");
+    const countysList = document.querySelectorAll(".countrys .countrys-list li");
+    const contactHelp = document.querySelector(".contact-help");
+    const contactInput = document.querySelector(".countrys .searchable input");
+    const searchClose = document.querySelector(".countrys .searcheble-close");
+    const inputFiles = document.querySelectorAll('.attach-file');
 
-            let markersList = [];
-            let map;
+    let markersList = [];
+    let map;
 
-            let before = null;
 
-            if (exists(".searchable")) {
-                new selectSearch(
-                    ".searchable",
-                    ".searchable .searcheble-close",
-                    ".notFound",
-                    true,
-                    '.countrys-list'
+    if (exists(".searchable")) {
+        new selectSearch(
+            ".searchable",
+            ".searchable .searcheble-close",
+            ".notFound",
+            true,
+            '.countrys-list'
+        );
+    }
+
+    if (exists(".select-custom")) {
+        customSelect();
+    }
+
+    //Only for Local test
+    const getCountryPosition = () => {
+
+        let pos;
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+
+        function showPosition(position) {
+            pos = [position.coords.latitude, position.coords.longitude];
+            map.flyTo(pos[0], pos[1], 8000000, 0, 10, 1000, 1); // NEED TO GET IP LOCATION
+        }
+
+    };
+
+    // Init map , styles for map and initital animations 
+    const init = () => {
+        map = WE.map("map", {
+            center: [36.057944835, -112.18688965],
+            zoom: 4,
+            dragging: true,
+            tilting: true,
+            zooming: false,
+            scrollWheelZoom: true
+        });
+        map.setTilt(15);
+        WE.tileLayer(
+            "https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz", {
+                style: "https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz"
+            }
+        ).addTo(map);
+
+        animateToMap();
+        initialPoins();
+        getCountryPosition();
+        // requestAnimationFrame(function animate(now) {
+        //     let c = map.getPosition();
+        //     let elapsed = before? now - before: 0;
+        //     before = now;
+        //     map.setCenter([c[0], c[1] + 0.1*(elapsed/30)]);
+        //     requestAnimationFrame(animate);
+        // });
+    };
+
+    // Add all point to map 
+    const initialPoins = () => {
+        deletePoints();
+        arrayOfCountrys.map(item => {
+            const {
+                countryPoints
+            } = item.body;
+            countryPoints &&
+                countryPoints.map(point =>
+                    addPoint(point.pointText, [point.lat, point.long])
                 );
-            }
+        });
+    };
 
-            if (exists(".select-custom")) {
-                customSelect();
-            }
-
-            //Only for Local test
-            const getCountryPosition = () => {
-
-                let pos;
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(showPosition);
-                }
-
-                function showPosition(position) {
-                    pos = [position.coords.latitude, position.coords.longitude];
-                    map.flyTo(pos[0], pos[1], 8000000, 0, 10, 1000, 1); // NEED TO GET IP LOCATION
-                }
-
-            };
-
-            // Init map , styles for map and initital animations 
-            const init = () => {
-                map = WE.map("map", {
-                    center: [36.057944835, -112.18688965],
-                    zoom: 2,
-                    dragging: true,
-                    tilting: true,
-                    zooming: false,
-                    scrollWheelZoom: true
-                });
-
-                WE.tileLayer(
-                    "https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz", {
-                        style: "https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz"
-                    }
-                ).addTo(map);
-
-                animateToMap();
-                initialPoins();
-                getCountryPosition();
-                // requestAnimationFrame(function animate(now) {
-                //     let c = map.getPosition();
-                //     let elapsed = before? now - before: 0;
-                //     before = now;
-                //     map.setCenter([c[0], c[1] + 0.1*(elapsed/30)]);
-                //     requestAnimationFrame(animate);
-                // });
-            };
-
-            // Add all point to map 
-            const initialPoins = () => {
-                deletePoints();
-                arrayOfCountrys.map(item => {
+    const animateToMap = () => {
+        // countysFly - Wrapper for list of items in ".countrys-list"  and ".searcheble-list" 
+        countysFly.forEach((item, i) => {
+            const contactList = document.querySelector(".contacts-list");
+            item.addEventListener("click", () => {
+                let countryName = item.getAttribute("data-country");
+                let arrayOfCountrysExist = arrayOfCountrys.find(
+                    obj => obj.name === countryName
+                );
+                if (arrayOfCountrysExist) {
                     const {
-                        countryPoints
-                    } = item.body;
+                        countryBound,
+                        countryPoints,
+                        contactListItems
+                    } = arrayOfCountrysExist.body;
+                    contactList.classList.remove("active");
+                    contactList.innerHTML = "";
+
+                    deletePoints();
+                    toogleActive(item);
+                    addBounds(countryBound);
                     countryPoints &&
                         countryPoints.map(point =>
                             addPoint(point.pointText, [point.lat, point.long])
                         );
-                });
-            };
-
-            const animateToMap = () => {
-                // countysFly - Wrapper for list of items in ".countrys-list"  and ".searcheble-list" 
-                countysFly.forEach((item, i) => {
-                    const contactList = document.querySelector(".contacts-list");
-                    item.addEventListener("click", () => {
-                        let countryName = item.getAttribute("data-country");
-                        let arrayOfCountrysExist = arrayOfCountrys.find(
-                            obj => obj.name === countryName
+                    contactListItems &&
+                        contactListItems.map(item =>
+                            appendHtml(
+                                contactList,
+                                createPersones(item.img, item.topText, item.bottomText)
+                            )
                         );
-                        if (arrayOfCountrysExist) {
-                            const {
-                                countryBound,
-                                countryPoints,
-                                contactListItems
-                            } = arrayOfCountrysExist.body;
-                            contactList.classList.remove("active");
-                            contactList.innerHTML = "";
-
-                            deletePoints();
-                            toogleActive(item);
-                            addBounds(countryBound);
-                            countryPoints &&
-                                countryPoints.map(point =>
-                                    addPoint(point.pointText, [point.lat, point.long])
-                                );
-                            contactListItems &&
-                                contactListItems.map(item =>
-                                    appendHtml(
-                                        contactList,
-                                        createPersones(item.img, item.topText, item.bottomText)
-                                    )
-                                );
-                            animatePersons(contactListItems);
-                            closeForm();
-                        }
-                    });
-                });
-            };
-            const animatePersons = (list) => {
-                const persone = document.querySelectorAll(".contacts-item");
-                contactList.classList.remove("non_active");
-
-                persone.forEach((item, i) => {
-                    item.addEventListener("click", e => {
-                        const {
-                            office
-                        } = list[i];
-                        openForm(office);
-                        item.classList.add("active");
-                        contactList.scroll(0, 0);
-                        pageHeader.scrollIntoView();
-                    });
-                });
-                setTimeout(function () {
-                    persone.forEach(item => {
-                        item.addEventListener("click", () => {
-                            contactList.classList.add("non_active");
-                        });
-                    });
-                    contactList.classList.add("active");
-                    contactHelp.classList.add("active");
-                }, 250);
-            };
-
-            // Add templete to exist block 
-            const appendHtml = (el, str) => {
-                let element = document.createElement("li");
-                element.innerHTML = str;
-                element.classList.add("contacts-item");
-                while (element.children.length > 0) {
-                    el.appendChild(element.children[0]);
+                    animatePersons(contactListItems);
+                    closeForm();
                 }
-            };
+            });
+        });
+    };
+    const animatePersons = (list) => {
+        const persone = document.querySelectorAll(".contacts-item");
+        contactList.classList.remove("non_active");
 
-            // Templete for persones which get from arrayOfCountrys -> body -> contactListItems -> [0]
-            const createPersones = (img, top, bottom) => {
-                return `
+        persone.forEach((item, i) => {
+            item.addEventListener("click", e => {
+                const {
+                    office
+                } = list[i];
+                openForm(office);
+                item.classList.add("active");
+                contactList.scroll(0, 0);
+                pageHeader.scrollIntoView();
+            });
+        });
+        setTimeout(function () {
+            persone.forEach(item => {
+                item.addEventListener("click", () => {
+                    contactList.classList.add("non_active");
+                });
+            });
+            contactList.classList.add("active");
+            contactHelp.classList.add("active");
+        }, 250);
+    };
+
+    // Add templete to exist block 
+    const appendHtml = (el, str) => {
+        let element = document.createElement("li");
+        element.innerHTML = str;
+        element.classList.add("contacts-item");
+        while (element.children.length > 0) {
+            el.appendChild(element.children[0]);
+        }
+    };
+
+    // Templete for persones which get from arrayOfCountrys -> body -> contactListItems -> [0]
+    const createPersones = (img, top, bottom) => {
+        return `
                 <li class="contacts-item">
                 <img src="${img}" alt="">
                 <div class="text">
@@ -485,110 +484,114 @@ window.addEventListener("load", function () {
                 </div>
             </li>
                 `;
-            };
+    };
 
-            // openForm and closeForm toogle active form
-            const openForm = (office) => {
-                const officeList = form.querySelector('.office-close');
-                form.classList.add("active");
-                office ? officeList.classList.add('active') : officeList.classList.remove('active');
-                document.body.classList.add("form-active");
-            };
-            const closeForm = () => {
-                const persone = document.querySelectorAll(".contacts-item");
-                form.classList.remove("active");
-                document.body.classList.remove("form-active");
-                persone.forEach(item => item.classList.remove("active"));
-                form.querySelectorAll('input , textarea, select').forEach(item=> {item.value=""});
-                form.querySelector('.attach-file span').innerHTML = "Attach file"
-                form.querySelectorAll('.select-custom').forEach(item=> {item.querySelector('.select-selected').innerText= item.querySelector('select option').innerText});
-                
-                // contactInput.parentNode.classList.remove("with-icon");
-                // contactInput.value = "";
-            };
+    // openForm and closeForm toogle active form
+    const openForm = (office) => {
+        const officeList = form.querySelector('.office-close');
+        form.classList.add("active");
+        office ? officeList.classList.add('active') : officeList.classList.remove('active');
+        document.body.classList.add("form-active");
+    };
+    const closeForm = () => {
+        const persone = document.querySelectorAll(".contacts-item");
+        form.classList.remove("active");
+        document.body.classList.remove("form-active");
+        persone.forEach(item => item.classList.remove("active"));
+        form.querySelectorAll('input , textarea, select').forEach(item => {
+            item.value = ""
+        });
+        form.querySelector('.attach-file span').innerHTML = "Attach file"
+        form.querySelectorAll('.select-custom').forEach(item => {
+            item.querySelector('.select-selected').innerText = item.querySelector('select option').innerText
+        });
 
-            // Hide all persones
-            const closePersones = () => {
-                const contactList = document.querySelector(".contacts-list");
-                contactList.classList.remove("active");
-            };
-            // Remove all markers
-            const deletePoints = () => {
-                markersList.forEach(marker => map.removeMarker(marker));
-                markersList = [];
-            };
+        // contactInput.parentNode.classList.remove("with-icon");
+        // contactInput.value = "";
+    };
 
-            // Create Bounds add fly to that bound 
-            const addBounds = bounds =>
-                bounds && map.panInsideBounds(bounds, {
-                    tilt: 10,
-                    duration: 2
-                });
+    // Hide all persones
+    const closePersones = () => {
+        const contactList = document.querySelector(".contacts-list");
+        contactList.classList.remove("active");
+    };
+    // Remove all markers
+    const deletePoints = () => {
+        markersList.forEach(marker => map.removeMarker(marker));
+        markersList = [];
+    };
 
-            // Create markers
-            const addPoint = (text, position) => {
-                let marker = WE.marker(position).addTo(map);
-                marker.bindPopup(text, {
-                    maxWidth: 150,
-                    closeButton: true
-                });
-                markersList.push(marker);
-            };
-            const clickHandle = () => {
+    // Create Bounds add fly to that bound 
+    const addBounds = bounds =>
+        bounds && map.panInsideBounds(bounds, {
+            tilt: 10,
+            duration: 2
+        });
 
-                // Button for close form 
-                formClose.addEventListener("click", () => closeForm());
-                contactInput.addEventListener("click", () => closePersones());
-                searchClose.addEventListener("click", () => closePersones());
+    // Create markers
+    const addPoint = (text, position) => {
+        let marker = WE.marker(position).addTo(map);
+        marker.bindPopup(text, {
+            maxWidth: 150,
+            closeButton: true
+        });
+        markersList.push(marker);
+    };
+    const clickHandle = () => {
 
-                // Button All countrys to started position 
-                toStart.forEach(start => {
-                    start.addEventListener("click", () => {
-                        initialPoins();
-                        closeForm();
-                        getCountryPosition();
-                        toogleActive(countysFly[0]);
-                        contactHelp.classList.remove("active");
-                        closePersones();
-                    });
-                });
+        // Button for close form 
+        formClose.addEventListener("click", () => closeForm());
+        contactInput.addEventListener("click", () => closePersones());
+        searchClose.addEventListener("click", () => closePersones());
 
-                //Close all opened Popups 
-                map.on('click', () => {
-                    closeForm();
-                    markersList.map(item => item.closePopup());
-                });
-
-                //Toogle Popups 
-                markersList.map(item => item.on('click', (e) => {
-                    markersList.map(items => items.closePopup());
-                    item.openPopup();
-                }));
-                countysList.forEach(item => item.addEventListener('click', ()=>{
-                    contactInput.parentNode.classList.remove("with-icon");
-                    contactInput.value="";
-                }));
-                };
-                // Toogle styles for countrys block 
-                const toogleActive = country => {
-                    let countrys = country.parentNode.childNodes;
-                    countrys.forEach(item => {
-                        item.classList.add("not_active");
-                        item.classList.remove("active");
-                    });
-                    country.classList.remove("not_active");
-                    country.classList.add("active");
-                };
-                //Change input file name 
-                inputFiles.forEach(input => {
-                    let label = input.querySelector('label'),
-                        inputExist = input.querySelector('input');
-                    inputExist.addEventListener('change', function (e) {
-                        if (e.target.files[0]) label.querySelector('span').innerHTML = e.target.files[0].name;
-                    });
-                });
-
-                init();
-                clickHandle();
-                scrollXHorizontal('.contacts-list', '.scroll-x-block')
+        // Button All countrys to started position 
+        toStart.forEach(start => {
+            start.addEventListener("click", () => {
+                initialPoins();
+                closeForm();
+                getCountryPosition();
+                toogleActive(countysFly[0]);
+                contactHelp.classList.remove("active");
+                closePersones();
             });
+        });
+
+        //Close all opened Popups 
+        map.on('click', () => {
+            closeForm();
+            markersList.map(item => item.closePopup());
+        });
+
+        //Toogle Popups 
+        markersList.map(item => item.on('click', (e) => {
+            markersList.map(items => items.closePopup());
+            item.openPopup();
+        }));
+        countysList.forEach(item => item.addEventListener('click', () => {
+            contactInput.parentNode.classList.remove("with-icon");
+            contactInput.value = "";
+        }));
+    };
+    // Toogle styles for countrys block 
+    const toogleActive = country => {
+        let countrys = country.parentNode.childNodes;
+        countrys.forEach(item => {
+            item.classList.add("not_active");
+            item.classList.remove("active");
+        });
+        country.classList.remove("not_active");
+        country.classList.add("active");
+    };
+    //Change input file name 
+    inputFiles.forEach(input => {
+        let label = input.querySelector('label'),
+            inputExist = input.querySelector('input');
+        inputExist.addEventListener('change', function (e) {
+            if (e.target.files[0]) label.querySelector('span').innerHTML = e.target.files[0].name;
+        });
+    });
+
+    init();
+    clickHandle();
+    scrollXHorizontal('.contacts-list', '.scroll-x-block')
+});
