@@ -364,14 +364,12 @@ $animateDur: 0.30s;
         overflow: hidden;
         border-radius: 10px;
         transition: clip-path $animateDur $easing;
-        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         clip-path: inset(0 0 0 0 round 10px);
 
         &::after {
             @extend .ps;
             width: 100%;
             height: 100%;
-            // border-radius: 10px;
             background-color: $colorPanel;
             transition: height $animateDur $easing;
         }
@@ -518,10 +516,6 @@ $animateDur: 0.30s;
 
 .no-touchevents .section-one.fixed .hover-mode .tare-item {
     z-index: 0;
-}
-
-.section-one {
-    padding-bottom: 60;
 }
 
 @include edge {
@@ -723,7 +717,7 @@ $animateDur: 0.30s;
     .solutions-main-block {
         padding-left: 0;
 
-        >.hint {
+        > .hint {
             display: none;
         }
     }
