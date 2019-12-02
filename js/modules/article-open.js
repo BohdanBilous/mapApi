@@ -2,11 +2,7 @@
 
 /* MODULE IMPORTS */
 import {
-  html,
-  desktop,
-  mobile,
-  exists,
-  scrollFromScreen
+  exists
 } from '../generic-helpers';
 import {
   SuperSlider
