@@ -366,7 +366,7 @@ window.addEventListener("load", function () {
         });
         map.setTilt(15);
         WE.tileLayer(
-            "https://api.maptiler.com/maps/positron/256/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz", {
+            "https://api.maptiler.com/maps/positron/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz", {
                 minZoom: 0,
                 maxZoom: 16,
                 style: "https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz"
