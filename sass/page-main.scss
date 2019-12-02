@@ -706,7 +706,9 @@ $animateDur: 0.30s;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 1023px) and (orientation: landscape) {
-    
+    .screen-main .screen-main-video video {
+        
+    }
 }
 
 @include mobile {
