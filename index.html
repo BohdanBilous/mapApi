@@ -476,7 +476,7 @@
 
             <!-- Video Section -->
             <div class="video-section">
-                <div class="section-bg  lazy-bg"  data-bg="url(images/video-bg.jpg)"></div>
+                <div class="section-bg lazy-bg" data-src="url(images/video-bg.jpg)"></div>
                 <div class="socket layout-row">
                     <div class="layout-col-r">
                         <div class="content-w col">
@@ -544,9 +544,11 @@
                             </div>
 
                             <div class="layout-col-s-7 graph-col-r">
-                                <p>Including PCR in our one-way and refillable small containers has allowed us to reduce
+                                <p>
+                                    Including PCR in our one-way and refillable small containers has allowed us to reduce
                                     our customer’s carbon footprint by 20% in 2018. This was the equivalent of 600
-                                    million plastic bags.</p>
+                                    million plastic bags.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -555,7 +557,7 @@
 
             <!-- Article Section -->
             <div class="article-section">
-                <div class="section-bg lazy-bg"  data-bg="url(images/art-bg.jpg)"></div>
+                <div class="section-bg lazy-bg" data-src="url(images/art-bg.jpg)"></div>
                 <div class="socket layout-row layout-row--minus-middle-left">
                     <div class="layout-col-r">
                         <div class="content-w col">
@@ -571,9 +573,9 @@
                             </div>
 
                             @@include('./partials/elements/button-link.htm', {
-                            "text": "Details",
-                            "href" : "#",
-                            "classes": "btn-more btn-blur btn-arrow-a"
+                                "text": "Details",
+                                "href" : "#",
+                                "classes": "btn-more btn-blur btn-arrow-a"
                             })
                         </div>
                     </div>
@@ -599,11 +601,12 @@
                             <div class="events-table-cell-m layout-col-s-7">
                                 <div class="events-ttl-section">
                                     <div class="ttl-top">Montreal, QB (Canada)</div>
-                                    <div class="ttl-4"><a href="./event-open.html">AMBQ (Association des Microbrasseries
-                                            du Quebec)</a></div>
+                                    <div class="ttl-4">
+                                        <a href="./event-open.html">AMBQ (Association des Microbrasseries du Quebec)</a>
+                                    </div>
 
                                     <div class="events-img">
-                                        <img   data-src="images/events-img.jpg" alt="">
+                                        <img  data-src="images/events-img.jpg" alt="">
                                     </div>
                                 </div>
 
@@ -621,17 +624,18 @@
                             <div class="events-table-cell-m layout-col-s-7">
                                 <div class="events-ttl-section">
                                     <div class="ttl-top">Beijing (China)</div>
-                                    <div class="ttl-4"><a href="./event-open.html">CBAC China Craft Beer Festival</a>
+                                    <div class="ttl-4">
+                                        <a href="./event-open.html">CBAC China Craft Beer Festival</a>
                                     </div>
 
                                     <div class="events-img">
-                                        <img src="" data-src="images/events-section.jpg" alt="">
+                                        <img data-src="images/events-section.jpg" alt="">
                                     </div>
                                 </div>
 
                                 @@include('./partials/elements/button-add.htm', {
-                                "text": "Add to Calendar",
-                                "classes": ""
+                                    "text": "Add to Calendar",
+                                    "classes": ""
                                 })
                             </div>
                         </div>
@@ -651,20 +655,18 @@
                                 </div>
 
                                 @@include('./partials/elements/button-add.htm', {
-                                "text": "Add to Calendar",
-                                "classes": ""
+                                    "text": "Add to Calendar",
+                                    "classes": ""
                                 })
                             </div>
                         </div>
 
-
-
                         <div class="events-table-bottom layout-row">
                             <div class="layout-col-s-7">
                                 @@include('./partials/elements/button-link.htm', {
-                                "text": "View all dates",
-                                "href": "events.html",
-                                "classes": "btn-g btn-arrow-a"
+                                    "text": "View all dates",
+                                    "href": "events.html",
+                                    "classes": "btn-g btn-arrow-a"
                                 })
                             </div>
                         </div>
@@ -677,7 +679,7 @@
             <footer class="footer">
                 <div class="footer-bg">
                     @@include('./partials/footer-main.htm', {
-                    "classes": ""
+                        "classes": ""
                     })
                 </div>
             </footer>

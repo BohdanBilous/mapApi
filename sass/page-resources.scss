@@ -317,13 +317,18 @@
             padding: 24px 0 24px 70px;
             border-bottom: 1px solid $colorBorder;
 
-            &::before {
+            &::before, &::after {
                 @extend .ps;
                 left: 5px;
                 top: 25px;
                 width: 35px;
                 height: 35px;
                 background-size: 100% 100%;
+                transition: opacity 0.2s;
+            }
+
+            &::after {
+                opacity: 0;
             }
 
             &:last-child {
@@ -339,77 +344,95 @@
             }
 
             &:nth-child(1)::before {
+                background: url(../images/ind-0-h.svg);
                 background: url(../images/ind-0.svg);
             }
 
             &:nth-child(2)::before {
                 background: url(../images/ind-1.svg);
+                background: url(../images/ind-1.svg);
             }
 
             &:nth-child(3)::before {
+                background: url(../images/ind-2-h.svg);
                 background: url(../images/ind-2.svg);
             }
 
             &:nth-child(4)::before {
+                background: url(../images/ind-3-h.svg);
                 background: url(../images/ind-3.svg);
             }
 
             &:nth-child(5)::before {
+                background: url(../images/ind-4-h.svg);
                 background: url(../images/ind-4.svg);
             }
 
             &:nth-child(6)::before {
+                background: url(../images/ind-5-h.svg);
                 background: url(../images/ind-5.svg);
             }
 
             &:nth-child(7)::before {
+                background: url(../images/ind-6-h.svg);
                 background: url(../images/ind-6.svg);
             }
 
             &:nth-child(8)::before {
+                background: url(../images/ind-7-h.svg);
                 background: url(../images/ind-7.svg);
             }
 
             &:nth-child(9)::before {
+                background: url(../images/ind-8-h.svg);
                 background: url(../images/ind-8.svg);
             }
 
-            &:nth-child(1):hover::before {
+            &:nth-child(1)::after {
                 background: url(../images/ind-0-h.svg);
             }
 
-            &:nth-child(2):hover::before {
+            &:nth-child(2)::after {
                 background: url(../images/ind-1-h.svg);
             }
 
-            &:nth-child(3):hover::before {
+            &:nth-child(3)::after {
                 background: url(../images/ind-2-h.svg);
             }
 
-            &:nth-child(4):hover::before {
+            &:nth-child(4)::after {
                 background: url(../images/ind-3-h.svg);
             }
 
-            &:nth-child(5):hover::before {
+            &:nth-child(5)::after {
                 background: url(../images/ind-4-h.svg);
             }
 
-            &:nth-child(6):hover::before {
+            &:nth-child(6)::after {
                 background: url(../images/ind-5-h.svg);
             }
 
-            &:nth-child(7):hover::before {
+            &:nth-child(7)::after {
                 background: url(../images/ind-6-h.svg);
             }
 
-            &:nth-child(8):hover::before {
+            &:nth-child(8)::after {
                 background: url(../images/ind-7-h.svg);
             }
 
-            &:nth-child(9):hover::before {
+            &:nth-child(9)::after {
                 background: url(../images/ind-8-h.svg);
             }
 
+            .no-touchevents &:hover {
+                &::before {
+                    opacity: 0;
+                }
+
+                &::after {
+                    opacity: 1;
+                }
+            }
         }
     }
 }

@@ -26,7 +26,7 @@ window.addEventListener("load", function() {
     };
 
     setScreenHeight();
- 
+
     // window.addEventListener("orientationchange", function() {
     //   setScreenHeight();
     // });
@@ -69,8 +69,10 @@ window.addEventListener("load", function() {
     }
 
     new SuperSlider(".feedback-fader", "fader");
-    if (desktop)
+
+    if (desktop) {
       new CursorFader(".feedback-fader", sectionScroll.sectionOneHeight);
+    }
   }
 
   // Graph
@@ -110,32 +112,16 @@ window.addEventListener("load", function() {
     const images = document.querySelectorAll(".lazy-img");
 
     images.forEach(image => {
-      const mediaQueryImages = [
-        {
-          media: "screen and (min-width: 768px)",
-          src: image.dataset.src
-        },
-        {
-          media: "screen and (max-width: 767px)",
-          src: image.dataset.srcmob
-        }
-      ];
-
-      new MediaLoader(image, "image", mediaQueryImages);
+      new MediaLoader(image, "image");
     });
   }
-  
+
   // Lazy Background Loader
   if (exists(".lazy-bg")) {
     const bgs = document.querySelectorAll(".lazy-bg");
 
     bgs.forEach(bg => {
-      const mediaQueryBackgrounds = [
-        { media: "screen and (min-width: 768px)", src: bg.dataset.bg },
-        { media: "screen and (max-width: 767px)", src: bg.dataset.bgmob }
-      ];
-
-      new MediaLoader(bg, "background", mediaQueryBackgrounds);
+      new MediaLoader(bg, "background");
     });
   }
 });
