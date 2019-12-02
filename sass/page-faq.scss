@@ -368,10 +368,21 @@
         padding: 0;
     }
 
+    .fag-question.active .fag-q-open {
+        width: 53px;
+        height: 53px;
+        bottom: 20px;
+        top: auto;
+    }
 }
 
 @include mobile-min {
     .fag-top-section {
         padding-top: 0;
+    }
+
+    .fag-question.active .fag-q-open {
+        width: 40px;
+        height: 40px;
     }
 }
