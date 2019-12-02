@@ -26,7 +26,7 @@ window.addEventListener("load", function() {
     };
 
     setScreenHeight();
-
+ 
     // window.addEventListener("orientationchange", function() {
     //   setScreenHeight();
     // });
