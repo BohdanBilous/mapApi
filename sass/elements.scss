@@ -170,7 +170,10 @@
     min-width: 170px;
     overflow: hidden;
     align-self: flex-start;
-    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
     .blur-bg {
         display: none;
     }

@@ -357,6 +357,8 @@ window.addEventListener("load", function () {
         map = WE.map("map", {
             center: [36.057944835, -112.18688965],
             zoom: 4,
+            minAltitude:5000,
+            maxAltitude:8000000,
             dragging: true,
             tilting: true,
             zooming: true,
@@ -592,7 +594,7 @@ window.addEventListener("load", function () {
             if (e.target.files[0]) label.querySelector('span').innerHTML = e.target.files[0].name;
         });
     });
-
+   
     init();
     clickHandle();
     scrollXHorizontal('.contacts-list', '.scroll-x-block')
