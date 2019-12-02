@@ -2015,22 +2015,7 @@ $leftOffset: 270px;
                 transform: translateY(-100%);
             }
 
-            &::before {
-                position: absolute;
-                content: "";
-                left: 0;
-                right: 0;
-                bottom: 0;
-                height: 35px;
-                background-image: linear-gradient(180deg, rgba(232, 229, 229, 0) 0%, #e6e6e6 100%);
-                transition: opacity 350ms ease;
-            }
-
-            &:hover {
-                &::before {
-                    opacity: 0;
-                }
-            }
+           
         }
 
         .author-block {

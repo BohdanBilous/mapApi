@@ -280,6 +280,7 @@ div.searchable {
         transform: translateY(-100%) translateX(-50%);
         border-radius: 10px;
         background-color: #f5f5f5;
+        max-height: 60vh    ;
     }
 
     ul {
@@ -421,11 +422,12 @@ div.searchable {
     z-index: 2;
 
     &.active {
-        transform: translateY(-88vh);
+        transform: translateY(calc(-100vh + 118px));
     }
 
     .btn-close {
-        top: 81px;
+        top: 71px;
+        transform: translateY(100%);
     }
 
     form {
@@ -600,6 +602,12 @@ top: 0;
 }
 
 @include laptop {
+    .contact-form-container{
+        padding-top: 110px;
+        .btn-close{
+            top: 50px;
+        }
+    }
     .contacts-list .contacts-item {
         width: 33%;
     }

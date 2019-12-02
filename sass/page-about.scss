@@ -411,6 +411,11 @@
   }
 
   .year-slider-inner {
+    cursor: move;
+    cursor: grab;
+    &:active {
+        cursor: grabbing;
+    }
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
