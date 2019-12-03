@@ -234,8 +234,8 @@ const arrayOfCountrys = [{
                 }
             ],
             countryPoints: [{
-                    lat: 46.971234,
-                    long: 26.794679,
+                    lat: 53.971234,
+                    long: 36.794679,
                     pointText: "Russia"
                 },
                 {
@@ -357,18 +357,20 @@ window.addEventListener("load", function () {
         map = WE.map("map", {
             center: [36.057944835, -112.18688965],
             zoom: 4,
-            minAltitude:5000,
+            minAltitude:100000,
             maxAltitude:8000000,
             dragging: true,
             tilting: true,
             zooming: true,
-            scrollWheelZoom: true
+            scrollWheelZoom: true,
+            // unconstrainedRotation:true
         });
         map.setTilt(15);
         WE.tileLayer(
             "https://api.maptiler.com/maps/positron/{z}/{x}/{y}.png?key=DV0Wcpnxa5xR0MwfweYz", {
                 minZoom: 0,
                 maxZoom: 16,
+                tileSize:512,
                 style: "https://api.maptiler.com/maps/683bb469-f461-4f7b-a52e-ff4aad94b3fd/style.json?key=DV0Wcpnxa5xR0MwfweYz"
             }
         ).addTo(map);
@@ -540,6 +542,7 @@ window.addEventListener("load", function () {
             closeButton: true
         });
         markersList.push(marker);
+
     };
     const clickHandle = () => {
 
@@ -564,6 +567,7 @@ window.addEventListener("load", function () {
         map.on('click', () => {
             closeForm();
             markersList.map(item => item.closePopup());
+            console.log(map)
         });
 
         //Toogle Popups 
