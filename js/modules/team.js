@@ -15,6 +15,7 @@ window.addEventListener("load", function() {
   // Popup Team Open
   const teamMembers = document.querySelectorAll(".team-item");
   const popupClose = document.querySelector(".popup .btn-close");
+  const popupBg = document.querySelector(".popup .popup-bg");
   const popupLoadBlock = document.querySelector(".popup .team-member-load");
   let teamMemberId;
 
@@ -33,8 +34,15 @@ window.addEventListener("load", function() {
     });
   });
 
-  popupClose.addEventListener("click", () => {
+  const closePopup = ()=>{
     html.classList.remove("popup-open");
     html.classList.add("popup-close");
+  }
+  popupClose.addEventListener("click", () => {
+    closePopup();
   });
+  popupBg.addEventListener("click", () => {
+    closePopup();
+  });
+
 });

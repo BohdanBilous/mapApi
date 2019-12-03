@@ -62,7 +62,16 @@ window.addEventListener("load", function() {
 
   // Menu
   const menuSwitcher = document.querySelector(".menu-switcher");
+  const menuBg = document.querySelector(".menu-bg");
 
+  menuBg.addEventListener("click", () => {
+    if (html.classList.contains("menu-open")) {
+      html.classList.remove("menu-open");
+      html.classList.add("menu-close");
+      animateSwitch(".menu .fade-in", "off");
+      animateSwitch(".menu .move-from-right", "off");
+    }
+  });
   menuSwitcher.addEventListener("click", () => {
     if (html.classList.contains("menu-open")) {
       html.classList.remove("menu-open");
