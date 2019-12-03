@@ -1029,7 +1029,7 @@ $animateDur: 0.30s;
     }
 
     .slides {
-        height: 425px;
+        height: 515px;
         overflow: hidden;
         cursor: move;
         cursor: grab;
@@ -1102,6 +1102,10 @@ $animateDur: 0.30s;
 
         .layout-col-l .ttl-2 {
             margin-bottom: 80px;
+        }
+
+        .btn-contact-us {
+            margin-left: 250px;
         }
 
         .slide {
@@ -1237,6 +1241,8 @@ $animateDur: 0.30s;
     }
 
     .mission-fader {
+        padding-bottom: 12px;
+        
         .slides .slide {
             padding-right: 25px;
         }

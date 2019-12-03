@@ -1823,7 +1823,7 @@ $leftOffset: 270px;
     margin-bottom: 100px;
 
     @include mobile {
-        padding-top: 0;
+        padding-top: 90px;
     }
 }
 
@@ -2448,7 +2448,6 @@ $leftOffset: 270px;
         }
     }
 
-
     .disposal-photo {
         width: 200px;
 
@@ -2459,6 +2458,12 @@ $leftOffset: 270px;
 
     .sys-catagories .sys-catagories-row .prod-a-desc {
         padding-right: 15px;
+    }
+
+    .hbt-sys {
+        @include mobile {
+            padding-top: 0;
+        }
     }
 }
 
@@ -3078,7 +3083,7 @@ $leftOffset: 270px;
     .hbt-sys {
         position: relative;
         background-color: #f5f5f5;
-        padding-top: 159px;
+        padding-top: 0;
         padding-bottom: 1000px;
         margin-bottom: 100px;
     }
