@@ -450,14 +450,41 @@
         padding-left: 0;
     }
 
+    .careers-top-section {
+        position: relative;
+
+        .swipe-hint {
+            top: auto;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
     .careers-ttl-row {
         margin-bottom: 70px;
+        padding-bottom: 60px;
         border-bottom: none;
 
         .ttl {
             font-size: 35px;
             line-height: 35px;
             margin-bottom: 38px;    
+        }
+    }
+
+    .location-tab-wrap {
+        position: relative;
+        height: 1px;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: -25px;
+            height: 1px;
+            background-color: $colorBorder;
         }
     }
 
@@ -562,6 +589,10 @@
 @include mobile-min {
     .careers-top-section {
         padding-top: 0;
+    }
+
+    .location-tab-wrap::after {
+        right: -20px;
     }
 
     .location-tabs {
