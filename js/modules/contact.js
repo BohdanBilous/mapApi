@@ -17,6 +17,8 @@ import {
     selectSwitcher
 } from "../select-switch";
 
+
+
 const arrayOfCountrys = [{
         name: "canada",
         body: {
@@ -537,11 +539,7 @@ window.addEventListener("load", function () {
 
     // Create Bounds add fly to that bound 
     const addBounds = bounds =>{
-        // bounds && map.panInsideBounds(bounds, {
-        //     tilt: 10,
-        //     duration: 2
-        // });
-        map.flyTo(bounds.lat, bounds.long, bounds.allatitude, 0, 10, 1000, 1); // NEED TO GET IP LOCATION
+        map.flyTo(bounds.lat, bounds.long, bounds.allatitude, 0, 10, 1000, 2); 
     }
 
     // Create markers

@@ -292,6 +292,11 @@
           order: 2;
           width: 100px;
           flex: 0 0 100px;
+          img{
+            object-fit: contain;
+            display: block;
+            width: 100%;
+          }
         }
 
         .reviews-blq {
