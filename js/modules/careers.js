@@ -40,6 +40,7 @@ window.addEventListener("load", function() {
   // Popup Open
   const popupButtons = document.querySelectorAll(".btn-touch");
   const popupClose = document.querySelector(".popup .btn-close");
+  const popupBg = document.querySelector(".popup .popup-bg");
 
   popupButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -52,12 +53,19 @@ window.addEventListener("load", function() {
     });
   });
 
-  popupClose.addEventListener("click", () => {
+
+  const closePopup = ()=>{
     html.classList.remove("popup-open");
     html.classList.add("popup-close");
     animateSwitch(".popup .fade-in", "off");
     animateSwitch(".popup .move-from-right", "off");
-  });
+   }
+   popupClose.addEventListener("click", () => {
+     closePopup();
+   });
+   popupBg.addEventListener("click", () => {
+     closePopup();
+   });
 
   let loadInfoInPopup = button => {
     const block = findParent(button, "drop-block");

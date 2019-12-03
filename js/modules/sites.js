@@ -2,12 +2,7 @@
 
 /* MODULE IMPORTS */
 import {
-    html,
-    desktop,
-    mobile,
     exists,
-    findParent,
-    animateSwitch,
     scrollFromScreen
 } from '../generic-helpers';
 import {
@@ -28,6 +23,27 @@ import {
     MediaLoader
 } from "../media-loader";
 window.addEventListener("load", function () {
+    //Add empty slide
+    const w = window.innerWidth;
+    if (exists(".chart-wrap")) {
+        const charts = document.querySelectorAll('.chart-wrap .slider-row');
+        const createChild = () => {
+            const cliseEl = document.createElement("div");
+            cliseEl.classList.add("slide", "slide-empty");
+            return cliseEl
+        }
+        charts.forEach(item => {
+            let n = 0;
+            while (n < 5) {
+                if (n > 3 && w < 768) break
+                item.appendChild(createChild());
+                n++;
+            }
+        })
+    }
+
+
+
     // Parallax Scroll
     if (exists(".screen-head")) {
         new ParallaxScroll(".screen-head", ".screen-bg", 200);

@@ -17,13 +17,16 @@ import {
     selectSwitcher
 } from "../select-switch";
 
+
+
 const arrayOfCountrys = [{
         name: "canada",
         body: {
-            countryBound: [
-                [33, -53.59],
-                [58.32, -140.9]
-            ],
+            countryBound: {
+                lat: 43.65107,
+                long: -79.347015,
+                allatitude:6000000
+            },
             contactListItems: [{
                 img: "./images/av-12.png",
                 topText: "Canada Consultant ",
@@ -40,10 +43,11 @@ const arrayOfCountrys = [{
     {
         name: "usa",
         body: {
-            countryBound: [
-                [19, -71.59],
-                [36.32, -123]
-            ],
+            countryBound: {
+                lat: 31.9686,
+                long: -99.9018,
+                allatitude:6000000
+            },
             contactListItems: [{
                     img: "./images/av-1.png",
                     topText: "USA: Florida President - Americas",
@@ -122,10 +126,11 @@ const arrayOfCountrys = [{
     {
         name: "brazil",
         body: {
-            countryBound: [
-                [-10.38, -31.94],
-                [-48.6, -70.43]
-            ],
+            countryBound: {
+                lat: -23.442503,
+                long: -58.443832,
+                allatitude:6000000
+            },
             contactListItems: [{
                 img: "./images/av-1.png",
                 topText: "General Manager Brazil",
@@ -158,10 +163,11 @@ const arrayOfCountrys = [{
     {
         name: "czech",
         body: {
-            countryBound: [
-                [51.5536, 16.8568],
-                [48.0877, 14.0782]
-            ],
+            countryBound: {
+                lat: 49.817493,
+                long: 15.472962,
+                allatitude:600000
+            },
             contactListItems: [{
                 img: "./images/av-1.png",
                 topText: "Sales Manager CEE",
@@ -178,10 +184,11 @@ const arrayOfCountrys = [{
     {
         name: "sweden",
         body: {
-            countryBound: [
-                [64.83, 23.83],
-                [50.08, 11.91]
-            ],
+            countryBound: {
+                lat: 59.297098,
+                long: 18.135426,
+                allatitude:1200000
+            },
             contactListItems: [{
                 img: "./images/av-12.png",
                 topText: " Business Development Director - Nordics",
@@ -198,10 +205,11 @@ const arrayOfCountrys = [{
     {
         name: "russia",
         body: {
-            countryBound: [
-                [69.9, 55.3],
-                [42.0, 20.3]
-            ],
+            countryBound: {
+                lat: 55.72823,
+                long: 37.64481,
+                allatitude:2400000
+            },
             contactListItems: [{
                     img: "./images/av-2.png",
                     topText: "Key Account Manager",
@@ -264,10 +272,11 @@ const arrayOfCountrys = [{
     {
         name: "china",
         body: {
-            countryBound: [
-                [46.8, 134.6],
-                [21.1, 76.8]
-            ],
+            countryBound: {
+                lat: 35.86166,
+                long: 104.195396,
+                allatitude:9000000
+            },
             contactListItems: [{
                 img: "./images/ava-8.png",
                 topText: "Head of Sales - China",
@@ -284,10 +293,11 @@ const arrayOfCountrys = [{
     {
         name: "australia",
         body: {
-            countryBound: [
-                [-16.9, 156.3],
-                [-45.2, 113.0]
-            ],
+            countryBound: {
+                lat: -20.375527,
+                long: 129.414827,
+                allatitude:7000000
+            },
             contactListItems: [{
                 img: "./images/av-1.png",
                 topText: "Head of Sales Australia, New Zealand and Oceania",
@@ -528,11 +538,9 @@ window.addEventListener("load", function () {
     };
 
     // Create Bounds add fly to that bound 
-    const addBounds = bounds =>
-        bounds && map.panInsideBounds(bounds, {
-            tilt: 10,
-            duration: 2
-        });
+    const addBounds = bounds =>{
+        map.flyTo(bounds.lat, bounds.long, bounds.allatitude, 0, 10, 1000, 2); 
+    }
 
     // Create markers
     const addPoint = (text, position) => {
