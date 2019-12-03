@@ -11,7 +11,7 @@ import {
   ssHashLink,
   debuggerPanel
 } from "../generic-helpers";
-
+import { MediaLoader } from "../media-loader";
 console.log("== Begin executing app.js ==");
 
 document.documentElement.className = document.documentElement.className.replace(
@@ -174,6 +174,14 @@ window.addEventListener("load", function() {
     animateSwitch(".search .fade-in", "on", 1, 800);
     animateSwitch(".search .move-from-right", "on", 65, 250);
   });
+
+  if (exists(".search .lazy-img")) {
+    const images = document.querySelectorAll(".lazy-img");
+
+    images.forEach(image => {
+      new MediaLoader(image, "image");
+    });
+  }
 
   // Debugger
   debuggerPanel();

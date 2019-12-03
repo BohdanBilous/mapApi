@@ -19,24 +19,24 @@ import {
 
 
 
-const arrayOfCountrys = [{
-        name: "canada",
-        body: {
-            countryBound: {
+const arrayOfCountrys = [{ // List off all countrys 
+        name: "canada", // Name of country must be similar with " <li data-country="canada" class="not_active">"
+        body: { 
+            countryBound: { // Set center of map when changed country 
                 lat: 43.65107,
                 long: -79.347015,
-                allatitude:6000000
+                allatitude:6000000 // how far from the planet in meters
             },
-            contactListItems: [{
-                img: "./images/av-12.png",
+            contactListItems: [{ // Percone block 
+                img: "./images/av-12.png", 
                 topText: "Canada Consultant ",
                 bottomText: "Andres Jensen",
-                office: false
+                office: false // When true must be 2 selects 
             }],
-            countryPoints: [{
-                lat: 43.65107,
+            countryPoints: [{ // List of markers 
+                lat: 43.65107, 
                 long: -79.347015,
-                pointText: "Canada "
+                pointText: "Canada " // Text in marker popup
             }]
         }
     },
@@ -206,9 +206,9 @@ const arrayOfCountrys = [{
         name: "russia",
         body: {
             countryBound: {
-                lat: 55.72823,
-                long: 37.64481,
-                allatitude:2400000
+                lat: 63.920473,
+                long: 78.801193,
+                allatitude:7200000
             },
             contactListItems: [{
                     img: "./images/av-2.png",

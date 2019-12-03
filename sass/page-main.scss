@@ -4,11 +4,12 @@
 
 .screen-main {
     position: relative;
-    // background-image: url(../images/screen-bg.jpg);
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
-
+@include tablet{
+       background-image: url(../images/screen-bg.jpg);
+}
     @media screen and (max-width: 768px) and (orientation: portrait) {
         background-image: url(../images/screen-bg-tablet.jpg);
     }
@@ -69,7 +70,9 @@
         height: 100%;
         width: 100%;
         margin: -55px 0 0 0;
-
+        @include tablet {
+            display: none;
+        }
         video {
             width: 100%;
             height: 100%;
@@ -2153,8 +2156,9 @@ $animateDur: 0.30s;
     width: 230px;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     transition: clip-path 0.2s $easing;
-
+pointer-events: none;
     &.show {
+        cursor: none !important;
         animation: fadeIn-l 0.2s forwards;
         transition-duration: 0.3s;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -2191,7 +2195,10 @@ $animateDur: 0.30s;
     @extend .flex-sb;
 
     .events-ttl-section {
-        cursor: pointer;
+        cursor: none;
+        & *{
+            cursor: none;
+        }
     }
 
     .btn-add {

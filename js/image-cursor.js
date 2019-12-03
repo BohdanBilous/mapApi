@@ -31,14 +31,15 @@ export class ImageCursor {
 
     cursorMove() {
         this.hoverArea.addEventListener("mousemove", e => {
-            let rect = e.target.getBoundingClientRect();
-            let offsetTopOfParent = this.getElementRelativeBoundsTop(this.hoverArea, document.querySelector(".events-table"));
-            let x = e.pageX - this.imageWidth - this.correctionX - 65;
-            let y = e.pageY - this.hoverArea.offsetTop - this.correctionY + offsetTopOfParent + 50;
+       
+            // console.log(e.layerX)
+            // let rect = e.target.getBoundingClientRect();
+            // let offsetTopOfParent = this.getElementRelativeBoundsTop(this.hoverArea, document.querySelector(".events-table"));
+            // let x = e.pageX - this.imageWidth - this.correctionX - 65;
+            // let y = e.pageY - this.hoverArea.offsetTop - this.correctionY + offsetTopOfParent + 50;
+            // console.log(this.imageWidth);
             
-            console.log(this.imageWidth);
-            
-            this.imageWrap.style = `top: ${y}px; left: ${x}px`;
+            this.imageWrap.style = `top: ${e.layerY + 50 }px; left: ${e.layerX  - 65}px`;
         });
     }
 
