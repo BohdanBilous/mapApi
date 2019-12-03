@@ -157,7 +157,11 @@
   }
 
   .slides {
-    max-width: 61%;
+    max-width: calc(50px + 61%);
+
+    .slide {
+      padding-right: 50px;
+    }
 
     .row {
       display: flex;
@@ -643,8 +647,11 @@
     margin-top: 36px;
     width: 602px;
     height: 298px;
-    max-width: 53%;
-
+    max-width: calc(53% - 50px);
+  
+.slide{
+  padding-right: 50px;
+}
     ul {
       margin-bottom: 32px;
 
@@ -668,7 +675,9 @@
     width: 383px;
 
     .slide {
+      padding-right: 50px;
       &>* {
+     
         width: 256px;
       }
 
@@ -778,7 +787,7 @@
     margin-bottom: 50px;
 
     .slides {
-      max-width: 71%;
+      max-width: calc(50px + 71%);
     }
   }
 
@@ -1557,6 +1566,7 @@
     .fader-recycling-row {
       .slides {
         .slide {
+          padding-right: 0;
           padding-top: 56px;
         }
 

@@ -237,13 +237,16 @@
         }
     }
 }
-.pages{
+
+.pages {
     font-size: 12px;
-    .slide-current{
+
+    .slide-current {
         display: inline-block;
         min-width: 17px;
     }
 }
+
 .indicators-min {
     .indicator {
         width: 35px;
@@ -700,9 +703,7 @@ $animateDur: 0.30s;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 1023px) and (orientation: landscape) {
-    .screen-main .screen-main-video video {
-        
-    }
+    .screen-main .screen-main-video video {}
 }
 
 @include mobile {
@@ -717,7 +718,7 @@ $animateDur: 0.30s;
     .solutions-main-block {
         padding-left: 0;
 
-        > .hint {
+        >.hint {
             display: none;
         }
     }
@@ -943,6 +944,17 @@ $animateDur: 0.30s;
     }
 }
 
+.carosuel {
+    .slider-row {
+        cursor: move;
+        cursor: grab;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
+}
+
 // Mission
 .fader {
     padding-top: 105px;
@@ -1015,6 +1027,12 @@ $animateDur: 0.30s;
     .slides {
         height: 425px;
         overflow: hidden;
+        cursor: move;
+        cursor: grab;
+
+        &:active {
+            cursor: grabbing;
+        }
     }
 
     .slide {
@@ -1398,12 +1416,12 @@ $animateDur: 0.30s;
             animation: none !important;
             transition: opacity 0.3s;
             z-index: -1;
-            
+
             &.active {
                 opacity: 1;
                 z-index: 1;
             }
-            
+
             // End Fix Bug With Border-radius
 
             .layout-col-r {
@@ -1647,7 +1665,7 @@ $animateDur: 0.30s;
         z-index: 1;
     }
 
-    .play-button-wrap > a {
+    .play-button-wrap>a {
         position: relative;
 
         &::after {
