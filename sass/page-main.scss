@@ -1368,6 +1368,15 @@ $animateDur: 0.30s;
             margin-bottom: 15%;
         }
     }
+
+    .reviews-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        right: 30px;
+        bottom: 40px;
+    }
 }
 
 .no-touchevents {
@@ -1429,6 +1438,10 @@ $animateDur: 0.30s;
                 padding-bottom: 30px;
             }
         }
+        .reviews-btn {
+            right: 25px; 
+            bottom: 20px;
+        }
     }
 }
 
@@ -1480,6 +1493,13 @@ $animateDur: 0.30s;
             .quote-block {
                 margin-bottom: auto;
             }
+        }
+        .reviews-btn {
+            width: 100%;
+            left: 0;
+            right: 0;
+            padding: 0 25px;
+            bottom: 20px;
         }
     }
 }
