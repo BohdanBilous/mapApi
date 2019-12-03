@@ -21,10 +21,16 @@
 .chart-wrap {
     .slide-empty {
         display: none !important;
+        &::after{
+            display: none;
+        }
     }
-
+    .slider-buttons-c{
+        z-index: 100;
+    }
     .slide-without {
         border-bottom: none !important;
+        pointer-events: none;
     }
 
     .slider-row {
@@ -34,24 +40,35 @@
         &:active {
             cursor: grabbing;
         }
+
         transition: transform 0.4s;
         white-space: nowrap;
 
         .slide {
+            position: relative;
             cursor: move;
             cursor: grab;
 
             &:active {
                 cursor: grabbing;
             }
+
             display: inline-block;
-            width: 25%;
+            width: 25% !important;
             border-bottom: 1px solid rgba(#949494, 0.3);
 
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 204px;
+                transform: translateY(-100%);
+            }
 
             .year-slider {
                 cursor: move;
                 cursor: grab;
+                user-select: none;
 
                 &:active {
                     cursor: grabbing;
@@ -862,6 +879,11 @@
 }
 
 @include mobile {
+    .chart-wrap .slider-row .slide{
+        .year-slider{
+            pointer-events: none;
+        }
+    }
     .screen-bg {
         background-position: 60% 0%;
     }

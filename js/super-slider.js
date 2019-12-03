@@ -47,7 +47,7 @@
         white-space: nowrap;
 
         .slide {
-            display: inline-block;
+            display: inline-block; 
             width: 24.5%;
             margin-right: 0.667%;
         }
