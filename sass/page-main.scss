@@ -7,9 +7,11 @@
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
-@include tablet{
-       background-image: url(../images/screen-bg.jpg);
-}
+
+    @include tablet {
+        background-image: url(../images/screen-bg.jpg);
+    }
+
     @media screen and (max-width: 768px) and (orientation: portrait) {
         background-image: url(../images/screen-bg-tablet.jpg);
     }
@@ -70,14 +72,20 @@
         height: 100%;
         width: 100%;
         margin: -55px 0 0 0;
+
         @include tablet {
             display: none;
         }
+
         video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: 100% 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: auto;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
         }
     }
 }
@@ -1442,8 +1450,9 @@ $animateDur: 0.30s;
                 padding-bottom: 30px;
             }
         }
+
         .reviews-btn {
-            right: 25px; 
+            right: 25px;
             bottom: 20px;
         }
     }
@@ -1498,6 +1507,7 @@ $animateDur: 0.30s;
                 margin-bottom: auto;
             }
         }
+
         .reviews-btn {
             width: 100%;
             left: 0;
@@ -2157,7 +2167,8 @@ $animateDur: 0.30s;
     width: 230px;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
     transition: clip-path 0.2s $easing;
-pointer-events: none;
+    pointer-events: none;
+
     &.show {
         cursor: none !important;
         animation: fadeIn-l 0.2s forwards;
@@ -2197,7 +2208,8 @@ pointer-events: none;
 
     .events-ttl-section {
         cursor: none;
-        & *{
+
+        & * {
             cursor: none;
         }
     }
