@@ -86,26 +86,22 @@ window.addEventListener("load", function() {
     }
   });
 
-  document.body.addEventListener(
-    "touchmove",
-    e => {
-      // if (e.target.classList.contains("menu-open")) e.preventDefault();
+  // document.body.addEventListener("touchmove", e => {
+  //     // if (e.target.classList.contains("menu-open")) e.preventDefault();
 
-      e = e || window.event;
-      var target = e.target || e.srcElement;
-      if (!target.className.match(/\bmenu-inner\b/)) {
-        e.returnValue = false;
-        e.cancelBubble = true;
+  //     e = e || window.event;
+  //     var target = e.target || e.srcElement;
+  //     if (!target.className.match(/\bmenu-inner\b/)) {
+  //       e.returnValue = false;
+  //       e.cancelBubble = true;
 
-        if (e.preventDefault) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
-        return false;
-      }
-    },
-    false
-  );
+  //       if (e.preventDefault) {
+  //         e.preventDefault();
+  //         e.stopPropagation();
+  //       }
+  //       return false;
+  //     }
+  // }, false);
 
   /* ------------------
       Buttons
