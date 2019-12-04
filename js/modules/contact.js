@@ -382,10 +382,11 @@ window.addEventListener("load", function () {
         });
         map.setTilt(15);
         WE.tileLayer(
-            "https://api.maptiler.com/maps/a57f8d1f-5d8b-40b8-84e6-b2eb2eadcc52/256/{z}/{x}/{y}@2x.jpg?key=8wff5LXJUubraQE9wuIp", {
+            "https://api.maptiler.com/maps/707355ad-2c2c-4201-bf7f-5147f89cd9c0/{z}/{x}/{y}@2x.jpg?key=8wff5LXJUubraQE9wuIp", {
                 minZoom: 0,
                 maxZoom: 16,
-                tileSize:256,
+                tileSize:512,
+                style: "https://api.maptiler.com/maps/707355ad-2c2c-4201-bf7f-5147f89cd9c0/tiles.json?key=8wff5LXJUubraQE9wuIp"
             } 
         ).addTo(map);
 
