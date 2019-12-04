@@ -206,7 +206,7 @@
 
                 }
 
-                &:hover {
+                &:hover,&.active,&:active {
                     border-color: $colorGreen;
 
                     svg path {
@@ -216,7 +216,7 @@
             }
 
             .button-dislike {
-                &:hover {
+                &:hover,&.active,&:active {
                     border-color: red;
 
                     svg path {

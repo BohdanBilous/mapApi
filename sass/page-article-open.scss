@@ -203,8 +203,11 @@
 }
 
 .content-article-open {
-    .article-open-header {
+    @include ie10 {
         overflow: hidden;
+    }
+    .article-open-header {
+            overflow: hidden;
     }
 }
 
