@@ -482,7 +482,7 @@
             bottom: 75px;
         }
 
-        >span {
+        > span {
             color: $colorTextG;
             filter: grayscale(100%);
             padding-left: 47px;
@@ -513,6 +513,10 @@
                 filter: grayscale(0);
                 font-size: 12px;
             }
+        }
+
+        .copyx {
+            display: none; // Copyright
         }
     }
 }

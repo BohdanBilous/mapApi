@@ -26,12 +26,7 @@ export const body = document.querySelector("body");
 if (isMac) html.classList.add("mac-os");
 if (isiOS) html.classList.add("iOS");
 if (isAndroid) html.classList.add("android");
-if (isFF) html.classList.add("firefox");
-if (isiPad) html.classList.add("iPad");
-
-function isFF() {
-  return navigator.userAgent.indexOf("Firefox") > 0;
-}
+if (isiPad && isiOS) html.classList.add("iPad");
 
 export function detectIE() {
   let ua = window.navigator.userAgent;
