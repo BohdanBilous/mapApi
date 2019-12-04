@@ -3,7 +3,8 @@
 /* MODULE IMPORTS */
 import {
     exists,
-    scrollXHorizontal
+    scrollXHorizontal,
+    detectIE
 } from "../generic-helpers";
 import {
     customSelect
@@ -331,6 +332,10 @@ window.addEventListener("load", function () {
 
     let markersList = [];
     let map;
+    if(detectIE() == "11"){
+        console.log('sa')
+        document.querySelector('.contact-main').appendChild(document.querySelector('.countrys .contact-form-container'));
+    }
 
 
     if (exists(".searchable")) {
@@ -377,24 +382,16 @@ window.addEventListener("load", function () {
         });
         map.setTilt(15);
         WE.tileLayer(
-            "https://api.maptiler.com/maps/positron/{z}/{x}/{y}.png?key=NzQio9NpiDQUAEBOdvJL", {
+            "https://api.maptiler.com/maps/a57f8d1f-5d8b-40b8-84e6-b2eb2eadcc52/256/{z}/{x}/{y}@2x.jpg?key=8wff5LXJUubraQE9wuIp", {
                 minZoom: 0,
                 maxZoom: 16,
-                tileSize:512,
-                style: "https://api.maptiler.com/maps/positron/style.json?key=NzQio9NpiDQUAEBOdvJL"
-            }
+                tileSize:256,
+            } 
         ).addTo(map);
 
         animateToMap();
         initialPoins();
         getCountryPosition();
-        // requestAnimationFrame(function animate(now) {
-        //     let c = map.getPosition();
-        //     let elapsed = before? now - before: 0;
-        //     before = now;
-        //     map.setCenter([c[0], c[1] + 0.1*(elapsed/30)]);
-        //     requestAnimationFrame(animate);
-        // });
     };
 
     // Add all point to map 
@@ -460,7 +457,7 @@ window.addEventListener("load", function () {
                 } = list[i];
                 openForm(office);
                 item.classList.add("active");
-                contactList.scroll(0, 0);
+                // contactList.scroll(0, 0);
                 pageHeader.scrollIntoView();
             });
         });

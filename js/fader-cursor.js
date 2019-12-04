@@ -44,7 +44,7 @@ export class CursorFader {
             let x = e.pageX;
             let y = e.pageY - this.wrap.offsetTop - this.correctionY;
             
-            this.cursorButton.style = `top: ${y}px; left: ${x}px`;
+            this.cursorButton.style.cssText = `top: ${y}px; left: ${x}px`;
         });
     }
 }

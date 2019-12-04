@@ -432,8 +432,13 @@ div.searchable {
     transition: transform 400ms ease;
     z-index: 2;
 
+  
     &.active {
         transform: translateY(calc(-100vh + 118px));
+        @include ie10{
+            transform: 0;
+            top: -100vh;
+        }
     }
 
     .btn-close {

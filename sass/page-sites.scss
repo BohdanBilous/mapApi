@@ -76,7 +76,8 @@
 
                 display: block;
                 padding-bottom: 16px;
-                width: fit-content;
+                min-width: min-content;
+                width: 95px;
                 transform: translateX(-50%);
                 font-family: $fontMedium;
 
@@ -531,10 +532,9 @@
 }
 
 .menegment-wrap {
-    // justify-content: space-between;
-    // margin-bottom: 125px;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: column;
     grid-column-gap: 170px;
     padding-bottom: 30px;
@@ -548,14 +548,6 @@
         grid-column: 3;
     }
 
-    /*     .menegment-col {
-        width: 452px;
-        max-width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
- */
     .menegment-item {
         width: 100%;
         max-width: 100%;
@@ -603,7 +595,19 @@
         padding-top: 20px;
     }
 }
-
+@media screen and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .menegment-wrap {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+  }
+  
+  @supports (-ms-ime-align: auto) {
+    .menegment-wrap {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+  }
 .sites-cases {
     margin-bottom: 65px;
 

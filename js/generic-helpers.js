@@ -428,7 +428,7 @@ export let buttonArrowAnimate = () => {
     });
 
     btn.addEventListener("mouseleave", () => {
-      if (arrow) arrow.style = "";
+      if (arrow) arrow.style.cssText = "";
     });
   });
 };

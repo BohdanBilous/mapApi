@@ -24,14 +24,14 @@ export class SectionScroll {
 
         this.sectionOne.classList.add("fixed");
         this.sectionEclipse.classList.add("show");
-        this.sectionEclipse.style = `opacity: ${this.eclipseValue}`;
+        this.sectionEclipse.style.cssText = `opacity: ${this.eclipseValue}`;
       } else {
         this.sectionOne.classList.remove("fixed");
         this.sectionEclipse.classList.remove("show");
-        this.sectionEclipse.style = "";
+        this.sectionEclipse.style.cssText = "";
 
         if (desktop && html.classList.contains("no-touchevents")) {
-          this.sectionOne.style = `transform: translateY(-${this.scrollTop}px)`; // Move Section One
+          this.sectionOne.style.cssText = `transform: translateY(-${this.scrollTop}px)`; // Move Section One
         }
       }
     });
@@ -39,7 +39,7 @@ export class SectionScroll {
 
   setSectionPosition() {
     if (desktop && html.classList.contains("no-touchevents"))
-      this.sectionTwo.style = `top: ${this.sectionOneHeight}px`;
+      this.sectionTwo.style.cssText = `top: ${this.sectionOneHeight}px`;
     // this.sectionTwo.querySelector(".ttl-2").innerHTML = this.sectionOneHeight;
   }
 }
