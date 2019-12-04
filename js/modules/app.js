@@ -87,7 +87,7 @@ window.addEventListener("load", function() {
   });
 
   document.addEventListener("touchmove", e => {
-    if (html.classList.contains("menu-open")) e.preventDefault();
+    if (e.target.classList.contains("menu-open")) e.preventDefault();
   });
 
   /* ------------------
