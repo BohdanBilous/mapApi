@@ -1140,7 +1140,7 @@
         display: block;
         height: 2px;
         background-color: $colorText;
-        transform-origin: left;
+        transform-origin: left center;
 
         &:nth-child(1) {
             width: 26px;
