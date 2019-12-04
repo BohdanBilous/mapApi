@@ -70,7 +70,7 @@ input { line-height: normal; }
 
 input::-ms-clear { display: none; }
 
-textarea:focus, input:focus { outline: none; }
+textarea:focus, input:focus ,textarea,input{ outline: none; }
 
 input:required {
     box-shadow: none;
