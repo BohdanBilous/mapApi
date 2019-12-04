@@ -382,10 +382,10 @@ window.addEventListener("load", function () {
         });
         map.setTilt(15);
         WE.tileLayer(
-            "https://api.maptiler.com/maps/positron/{z}/{x}/{y}.png?key=NzQio9NpiDQUAEBOdvJL", {
+            "https://api.maptiler.com/maps/707355ad-2c2c-4201-bf7f-5147f89cd9c0/256/{z}/{x}/{y}@2x.jpg?key=8wff5LXJUubraQE9wuIp", {
                 minZoom: 0,
                 maxZoom: 16,
-                tileSize:512,
+                tileSize:256,
                 style: "https://api.maptiler.com/maps/positron/style.json?key=NzQio9NpiDQUAEBOdvJL"
             }
         ).addTo(map);
