@@ -93,7 +93,10 @@ window.addEventListener("load", function() {
 
       e = e || window.event;
       var target = e.target || e.srcElement;
-      if (!target.className.match(/\bmenu-inner\b/)) {
+      if (
+        !target.className.match(/\bmenu-inner\b/) &&
+        html.classList.contains("menu-open")
+      ) {
         e.returnValue = false;
         e.cancelBubble = true;
 
