@@ -1008,7 +1008,19 @@
     100% {
         width: 21px;
         transform: rotate(45deg) translateX(-28%) translateY(5px);
-        // transform: rotate(45deg) translateX(-23%) translateY(2px);
+    }
+}
+
+.iPad {
+    @keyframes filterLineTop {
+        50% {
+            width: 21px;
+            transform: translateX(-50%) translateY(7px);
+        }
+        100% {
+            width: 21px;
+            transform: rotate(45deg) translateX(-23%) translateY(2px);
+        }
     }
 }
 
