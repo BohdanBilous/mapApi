@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 export const isMac = navigator.platform.match("Mac") !== null;
+export const isiPad = navigator.userAgent.match(/iPad/i) != null;
 export const isiOS =
   !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 export const isAndroid = /(android)/i.test(navigator.userAgent);
@@ -26,6 +27,7 @@ if (isMac) html.classList.add("mac-os");
 if (isiOS) html.classList.add("iOS");
 if (isAndroid) html.classList.add("android");
 if (isFF) html.classList.add("firefox");
+if (isiPad) html.classList.add("iPad");
 
 function isFF() {
   return navigator.userAgent.indexOf("Firefox") > 0;
