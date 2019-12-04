@@ -86,6 +86,10 @@ window.addEventListener("load", function() {
     }
   });
 
+  document.addEventListener("touchmove", e => {
+    if (html.classList.contains("menu-open")) e.preventDefault();
+  });
+
   /* ------------------
         Buttons
     --------------------- */
