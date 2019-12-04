@@ -189,6 +189,7 @@
         border: none;
         border-bottom: 1px solid $colorBorder;
         transition: border-color 0.2s;
+        color: $colorText;
 
         @include ph {
             opacity: 1 !important;
@@ -205,7 +206,6 @@
 
     input {
         padding-bottom: 31px;
-        color: $colorText;
 
         @include ph {
             color: $colorText;
@@ -213,7 +213,6 @@
     }
 
     textarea {
-        color: $colorTextG;
         padding-bottom: 7px;
         padding-right: 65px;
         height: 86px;
