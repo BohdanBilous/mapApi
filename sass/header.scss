@@ -862,6 +862,7 @@
         overflow-y: auto;
         display: block;
         padding: 130px 25px 25px 45px;
+        -webkit-overflow-scrolling: touch;
     }
 
     .menu-main li:not(.fig),

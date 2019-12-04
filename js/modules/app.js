@@ -91,7 +91,7 @@ window.addEventListener("load", function() {
   });
 
   /* ------------------
-        Buttons
+      Buttons
     --------------------- */
 
   // Button Animate
