@@ -3,7 +3,8 @@
 /* MODULE IMPORTS */
 import {
     exists,
-    scrollXHorizontal
+    scrollXHorizontal,
+    detectIE
 } from "../generic-helpers";
 import {
     customSelect
@@ -331,6 +332,10 @@ window.addEventListener("load", function () {
 
     let markersList = [];
     let map;
+    if(detectIE() == "11"){
+        console.log('sa')
+        document.querySelector('.contact-main').appendChild(document.querySelector('.countrys .contact-form-container'));
+    }
 
 
     if (exists(".searchable")) {
@@ -460,7 +465,7 @@ window.addEventListener("load", function () {
                 } = list[i];
                 openForm(office);
                 item.classList.add("active");
-                contactList.scroll(0, 0);
+                // contactList.scroll(0, 0);
                 pageHeader.scrollIntoView();
             });
         });

@@ -39,7 +39,7 @@ export class ImageCursor {
             // let y = e.pageY - this.hoverArea.offsetTop - this.correctionY + offsetTopOfParent + 50;
             // console.log(this.imageWidth);
             
-            this.imageWrap.style = `top: ${e.layerY + 50 }px; left: ${e.layerX  - 65}px`;
+            this.imageWrap.style.cssText = `top: ${e.layerY + 50 }px; left: ${e.layerX  - 65}px`;
         });
     }
 

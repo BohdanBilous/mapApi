@@ -79,7 +79,7 @@ window.addEventListener("load", function () {
         ((mouseX - (parseInt(obj.offsetWidth) / 1 + left)) / containerWidth) *
         speed;
 
-      obj.style = "transform: translateX(" + moveValue + "px)";
+      obj.style.cssText = "transform: translateX(" + moveValue + "px)";
     }
 
     new SuperSlider(".feedback-fader", "fader");
