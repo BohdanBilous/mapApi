@@ -1008,7 +1008,7 @@
     100% {
         width: 21px;
         transform: rotate(45deg) translateX(-28%) translateY(5px);
-        // transform: rotate(45deg) translateX(-28%) translateY(8px);
+        transform: rotate(45deg) translateX(-28%) translateY(8px);
     }
 }
 
@@ -1025,6 +1025,10 @@
         width: 26px;
         transform: rotate(0) translateX(-50%) translateY(0);
     }
+}
+
+.btn-filter {
+    border: 1px solid #ccc;
 }
 
 @keyframes filterLineBtm {
