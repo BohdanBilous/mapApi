@@ -576,6 +576,9 @@ window.addEventListener("load", function() {
     formClose.addEventListener("click", () => closeForm());
     contactInput.addEventListener("click", () => {
         window.scrollTo(0,0);
+        setTimeout(function(){
+            window.scrollTo(0,0);
+        },1000)
         closePersones();
     });
     searchClose.addEventListener("click", () => closePersones());
@@ -596,7 +599,6 @@ window.addEventListener("load", function() {
     map.on("click", () => {
       closeForm();
       markersList.map(item => item.closePopup());
-      console.log(map);
     });
 
     //Toogle Popups
