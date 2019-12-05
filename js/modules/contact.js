@@ -575,6 +575,7 @@ window.addEventListener("load", function() {
     // Button for close form
     formClose.addEventListener("click", () => closeForm());
     contactInput.addEventListener("click", (e) => {
+        e.preventDefault();
         // pageHeader.scrollIntoView({ 
         //     alignToTop:true,
         //     behavior: 'smooth' 
