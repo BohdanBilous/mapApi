@@ -22,8 +22,9 @@ $dotsLiWidth: 250px;
 
 // Media Query
 @mixin mobile {
+
     @media screen and (max-width: 767px),
-           screen and (max-width: 825px) and (orientation: landscape) {
+    screen and (max-width: 825px) and (orientation: landscape) {
         @content;
     }
 }
@@ -47,17 +48,15 @@ $dotsLiWidth: 250px;
 }
 
 @mixin tablet--ipadPro {
+
     @media screen and (max-width: 1150px),
-           only screen 
-           and (min-width: 1365px) 
-           and (max-width: 1366px) 
-           and (orientation: landscape) 
-           and (-webkit-min-device-pixel-ratio: 1.5) {
+    only screen and (min-width: 1365px) and (max-width: 1366px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
         @content;
     }
 }
 
 @mixin mobile {
+
     @media screen and (max-width: 767px),
     screen and (max-width: 825px) and (orientation: landscape) {
         @content;
@@ -122,6 +121,27 @@ $dotsLiWidth: 250px;
     }
 }
 
+/* iPhone X and Xs Max */
+@mixin iphoneX {
+    @media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin iphoneXS {
+    @media only screen and (min-device-width: 414px) and (min-device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+        @content;
+    }
+}
+
+@mixin iphoneXMax {
+@media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 3) { 
+        @content;
+    }
+}
 @mixin land {
     @media screen and (orientation: landscape) {
         @content;
@@ -613,17 +633,21 @@ $dotsLiWidth: 250px;
         background-color: $colorGreen;
     }
 }
+
 .scroll-custom-x {
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
         height: 6px;
         width: 4px;
-        background:transparent;
+        background: transparent;
     }
-    &::-webkit-scrollbar-thumb:horizontal{
-        background: $colorGreen;;
+
+    &::-webkit-scrollbar-thumb:horizontal {
+        background: $colorGreen;
+        ;
         border-radius: 10px;
     }
 }
+
 .bold {
     font-family: $fontMedium;
 }

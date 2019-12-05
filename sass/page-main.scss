@@ -22,6 +22,7 @@
 
     @media screen and (max-width: 550px) and (orientation: portrait) {
         background-image: url(../images/screen-bg-mobile.jpg);
+        background-size: auto 90%;
     }
 
     .col {
@@ -483,6 +484,17 @@ $animateDur: 0.30s;
             transform: translateX(0) translateY(0) scale(0.80);
         }
     }
+    @include ie10 {
+        .tare-inner {
+            &::after {
+                height: 100%;
+            }
+        }
+
+        .tare-img img {
+            transform: translateX(0) translateY(0) scale(0.80);
+        }
+    }
 }
 
 .no-touchevents .hover-mode.tare-wrap-c {
@@ -533,6 +545,7 @@ $animateDur: 0.30s;
     z-index: 0;
 }
 
+
 @include edge {
     .no-touchevents .hover-mode.tare-wrap-c {
         height: 800px;
@@ -572,7 +585,10 @@ $animateDur: 0.30s;
             top: calc(#{$tareHeight} - 100px);
         }
     }
+
 }
+
+
 
 @include laptop {
     .solutions-main-block {
@@ -753,6 +769,7 @@ $animateDur: 0.30s;
 
     .tare-wrap.mobile-column-mode {
         .tare-item {
+            position: relative;
 
             .tare-inner {
                 height: 390px;
@@ -772,6 +789,24 @@ $animateDur: 0.30s;
             .tare-img {
                 width: 300px;
                 bottom: -25px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: calc(100% - 50px);
+                bottom: 0;
+                left: 50%;
+                right: 0;
+                background: $colorBorder;
+                transform: translateX(-50%);
+            }
+
+            &:last-child {
+                &::before {
+                    display: none;
+                }
             }
         }
 
@@ -1250,7 +1285,7 @@ $animateDur: 0.30s;
 
     .mission-fader {
         padding-bottom: 12px;
-        
+
         .slides .slide {
             padding-right: 25px;
         }
@@ -1263,7 +1298,10 @@ $animateDur: 0.30s;
     height: 600px;
     border-radius: 25px;
     overflow: hidden;
-
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
     &::before,
     &::after {
         @extend .ps;
@@ -1494,14 +1532,14 @@ $animateDur: 0.30s;
             flex-direction: column;
 
             .layout-col-l {
-                height: 325px;
+                height: 395px;
                 order: 2;
             }
 
             .layout-col-r {
                 order: 1;
-                padding: 105px 0 0;
-                height: 440px;
+                padding: 35px 0 0;
+                height: 370px;
             }
 
             .ttl-top-section {
@@ -2083,7 +2121,8 @@ $animateDur: 0.30s;
     .graph-block {
 
         .swipe-hint {
-            top: 7px;
+            bottom: 381px;
+            top: auto;
         }
 
         .legend {

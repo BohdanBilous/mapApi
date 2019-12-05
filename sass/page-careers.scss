@@ -1,7 +1,15 @@
 /* =========================
     Careers
    ========================= */
-
+.layout-row-content.careers-tabs-container{
+    padding-bottom: 180px;
+    @include macbook{
+        padding-bottom: 210px;
+    }
+    @include tablet{
+        padding-bottom: 88px;
+    }
+}
 .text-top-s {
     width: 205px;
     margin-bottom: 65px;

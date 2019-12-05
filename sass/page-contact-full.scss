@@ -432,10 +432,11 @@ div.searchable {
     transition: transform 400ms ease;
     z-index: 2;
 
-  
+
     &.active {
         transform: translateY(calc(-100vh + 118px));
-        @include ie10{
+
+        @include ie10 {
             transform: 0;
             top: -100vh;
         }
@@ -674,6 +675,18 @@ div.searchable {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         transition: all 380ms ease;
+
+        @include iphoneX {
+            padding-bottom:  calc(50px + env(safe-area-inset-bottom)) ;
+        }
+
+        @include iphoneXS {
+            padding-bottom:  calc(50px + env(safe-area-inset-bottom)) ;
+        }
+
+        @include iphoneXMax {
+            padding-bottom:  calc(50px + env(safe-area-inset-bottom)) ;
+        } 
 
         &.active-mob-p {
             max-height: 85vh;

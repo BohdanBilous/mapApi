@@ -101,6 +101,10 @@
 .popup-open {
     overflow: hidden;
 
+    &.popup-open-about {
+        overflow: unset;
+    }
+
     body {
         overflow: hidden;
     }
@@ -359,7 +363,7 @@
         textarea {
             padding-right: 0;
         }
-        
+
         .max-length {
             display: none;
         }
@@ -396,7 +400,8 @@
             display: block;
         }
 
-        .follow-us .link-l, .hint {
+        .follow-us .link-l,
+        .hint {
             color: $colorTextG;
         }
     }
