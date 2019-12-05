@@ -947,6 +947,7 @@
 @include mobile {
     .menu {
         width: 100%;
+        width: 50%;
 
         &::before {
             left: 25px;
