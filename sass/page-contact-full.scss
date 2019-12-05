@@ -677,15 +677,15 @@ div.searchable {
         transition: all 380ms ease;
 
         @include iphoneX {
-            padding-bottom:  calc(50px + env(safe-area-inset-bottom)) ;
+            padding-bottom:  calc(55px + env(safe-area-inset-bottom)) ;
         }
 
         @include iphoneXS {
-            padding-bottom:  calc(50px + env(safe-area-inset-bottom)) ;
+            padding-bottom:  calc(55px + env(safe-area-inset-bottom)) ;
         }
 
         @include iphoneXMax {
-            padding-bottom:  calc(50px + env(safe-area-inset-bottom)) ;
+            padding-bottom:  calc(55px + env(safe-area-inset-bottom)) ;
         } 
 
         &.active-mob-p {

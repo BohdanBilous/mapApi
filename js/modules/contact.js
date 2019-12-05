@@ -478,6 +478,7 @@ window.addEventListener("load", function() {
         item.classList.add("active");
         contactList.scroll(0, 0);
         pageHeader.scrollIntoView();
+        window.scrollTo( 0,0);
       });
     });
     setTimeout(function() {
