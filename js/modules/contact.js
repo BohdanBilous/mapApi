@@ -582,8 +582,7 @@ window.addEventListener("load", function() {
                 alignToTop:true,
                 behavior: 'smooth' 
               });
-            window.scrollTo(0,0);
-        },150)
+        },300)
         closePersones();
     });
     searchClose.addEventListener("click", () => closePersones());
