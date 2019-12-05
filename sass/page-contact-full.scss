@@ -693,7 +693,7 @@ div.searchable {
 
         &.active-mob-p {
             max-height: 85vh;
-            min-height: 75vh;
+            min-height: 65vh;
         }
 
         .countrys-wrap {
@@ -730,8 +730,7 @@ div.searchable {
             ul {
                 background: none;
                 max-height: initial;
-                overflow-y: scroll;
-                max-height: 43vh;
+                overflow: initial;
             }
 
             .notFound {

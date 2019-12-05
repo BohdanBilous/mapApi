@@ -575,8 +575,13 @@ window.addEventListener("load", function() {
     // Button for close form
     formClose.addEventListener("click", () => closeForm());
     contactInput.addEventListener("click", () => {
+        console.log(window.screenY);
         window.scrollTo(0,0);
         setTimeout(function(){
+            pageHeader.scrollIntoView({ 
+                alignToTop:true,
+                behavior: 'smooth' 
+              });
             window.scrollTo(0,0);
         },150)
         closePersones();
