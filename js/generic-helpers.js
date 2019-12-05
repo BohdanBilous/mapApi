@@ -583,25 +583,25 @@ export const ssHashLink = links => {
 
 // Animate scroll
 
-export const animateScroll = (elem, style, unit, from, to, time, prop) => {
+export const animateScroll = (elem, style, unit, from, to, time, prop,e) => {
   if (!elem) {
     return;
   }
+  console.log(e) 
   var start = new Date().getTime(),
-    timer = setInterval(function () {
+    timer = setInterval(function (e) {
       var step = Math.min(1, (new Date().getTime() - start) / time);
       let toTop  = (from + step * (to - from));
-document.querySelector('.drop-down-sel').innerHTML = toTop;
-      if(toTop< 0){
+      if(toTop < 0){
         toTop = 0;
       }
-      
+
       if (prop) {
-        elem[style] = toTop+ unit;
+        elem[style] = toTop + unit;
       } else {
         elem.style[style] = toTop + unit;
       }
-      console.log( (from + step * (to - from)) + unit);
+
       if (step === 1) {
         clearInterval(timer);
       }

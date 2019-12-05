@@ -574,12 +574,12 @@ window.addEventListener("load", function() {
   const clickHandle = () => {
     // Button for close form
     formClose.addEventListener("click", () => closeForm());
-    contactInput.addEventListener("click", () => {
-        pageHeader.scrollIntoView({ 
-            alignToTop:true,
-            behavior: 'smooth' 
-          });
-          animateScroll(document.scrollingElement || document.documentElement, "scrollTop", "", 0, 0, 300, true);
+    contactInput.addEventListener("click", (e) => {
+        // pageHeader.scrollIntoView({ 
+        //     alignToTop:true,
+        //     behavior: 'smooth' 
+        //   });
+          animateScroll(document.scrollingElement || document.documentElement, "scrollTop", "", 0, 0, 300, true,e);
         // setTimeout(function(){
         //     pageHeader.scrollIntoView({ 
         //         alignToTop:true,
