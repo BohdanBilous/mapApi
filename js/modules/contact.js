@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import { exists, scrollXHorizontal, detectIE } from "../generic-helpers";
+import { exists, scrollXHorizontal, detectIE,animateScroll } from "../generic-helpers";
 import { customSelect } from "../custom-select";
 
 import { selectSearch } from "../select-search";
@@ -579,12 +579,13 @@ window.addEventListener("load", function() {
             alignToTop:true,
             behavior: 'smooth' 
           });
-        setTimeout(function(){
-            pageHeader.scrollIntoView({ 
-                alignToTop:true,
-                behavior: 'smooth' 
-              });
-        },150)
+          animateScroll(document.scrollingElement || document.documentElement, "scrollTop", "", 0, 0, 800, true);
+        // setTimeout(function(){
+        //     pageHeader.scrollIntoView({ 
+        //         alignToTop:true,
+        //         behavior: 'smooth' 
+        //       });
+        // },150)
         closePersones();
     });
     searchClose.addEventListener("click", () => closePersones());
