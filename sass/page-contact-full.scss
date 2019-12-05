@@ -231,7 +231,9 @@
 .cesium-credit-textContainer {
     display: none !important;
 }
-
+html,body{
+    overscroll-behavior-y: contain;
+}
 .contact-main {
     position: relative;
     height: 100vh;
