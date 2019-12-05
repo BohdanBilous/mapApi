@@ -1287,7 +1287,10 @@ $animateDur: 0.30s;
     height: 600px;
     border-radius: 25px;
     overflow: hidden;
-
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
     &::before,
     &::after {
         @extend .ps;
@@ -1518,7 +1521,7 @@ $animateDur: 0.30s;
             flex-direction: column;
 
             .layout-col-l {
-                height: 325px;
+                height: 395px;
                 order: 2;
             }
 
