@@ -94,7 +94,7 @@ window.addEventListener("load", function() {
       e = e || window.event;
       let target = e.target || e.srcElement;
       if (
-        !target.className.match(/\bmenu-inner\b/) &&
+        !target.className.match(/\bmenu\b/) &&
         html.classList.contains("menu-open")
       ) {
         e.returnValue = false;
