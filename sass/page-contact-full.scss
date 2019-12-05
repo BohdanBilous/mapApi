@@ -676,7 +676,7 @@ div.searchable {
         border-top-right-radius: 10px;
         transition: all 380ms ease;
         @supports (-webkit-overflow-scrolling: touch) {
-            padding-bottom:  20px
+            padding-bottom:  20px;
           }
 
         @include iphoneX {
@@ -693,7 +693,7 @@ div.searchable {
 
         &.active-mob-p {
             max-height: 85vh;
-            min-height: 60vh;
+            min-height: 75vh;
         }
 
         .countrys-wrap {
@@ -730,7 +730,8 @@ div.searchable {
             ul {
                 background: none;
                 max-height: initial;
-                overflow: initial;
+                overflow-y: scroll;
+                max-height: 43vh;
             }
 
             .notFound {
