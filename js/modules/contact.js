@@ -576,13 +576,10 @@ window.addEventListener("load", function() {
     formClose.addEventListener("click", () => closeForm());
     contactInput.addEventListener("click", () => {
         console.log(window.screenY);
-        window.scrollTo(0,0);
-        setTimeout(function(){
-            pageHeader.scrollIntoView({ 
-                alignToTop:true,
-                behavior: 'smooth' 
-              });
-        },300)
+        // window.scrollTo(0,0);
+        // setTimeout(function(){
+         
+        // },150)
         closePersones();
     });
     searchClose.addEventListener("click", () => closePersones());
