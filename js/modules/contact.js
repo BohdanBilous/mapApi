@@ -579,7 +579,7 @@ window.addEventListener("load", function() {
             alignToTop:true,
             behavior: 'smooth' 
           });
-          animateScroll(document.scrollingElement || document.documentElement, "scrollTop", "", 0, 0, 800, true);
+          animateScroll(document.scrollingElement || document.documentElement, "scrollTop", "", 0, 0, 300, true);
         // setTimeout(function(){
         //     pageHeader.scrollIntoView({ 
         //         alignToTop:true,
