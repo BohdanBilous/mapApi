@@ -476,9 +476,8 @@ window.addEventListener("load", function() {
         const { office } = list[i];
         openForm(office);
         item.classList.add("active");
-        contactList.scroll(0, 0);
+        // contactList.scroll(0, 0);
         pageHeader.scrollIntoView();
-        window.scrollTo( 0,0);
       });
     });
     setTimeout(function() {
@@ -575,7 +574,10 @@ window.addEventListener("load", function() {
   const clickHandle = () => {
     // Button for close form
     formClose.addEventListener("click", () => closeForm());
-    contactInput.addEventListener("click", () => closePersones());
+    contactInput.addEventListener("click", () => {
+        window.scrollTo(0,0);
+        closePersones();
+    });
     searchClose.addEventListener("click", () => closePersones());
 
     // Button All countrys to started position
