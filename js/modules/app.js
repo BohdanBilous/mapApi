@@ -34,7 +34,6 @@ document.documentElement.className = document.documentElement.className.replace(
 // }
 
 window.addEventListener("load", function() {
-  // sessionStorage.setItem("loaded", true);
   /* ------------------
       Header
     --------------------- */
