@@ -125,19 +125,6 @@ window.addEventListener("load", function() {
   //   false
   // );
 
-  window.addEventListener(
-    "touchmove",
-    touchEvent => {
-      /** touch scroll block */
-      const sBlock = ".menu-inner";
-      const { target } = touchEvent;
-      if (target && target.closest && !target.closest(sBlock)) {
-        touchEvent.preventDefault();
-      }
-    },
-    false
-  );
-
   /* ------------------
       Buttons
     --------------------- */
