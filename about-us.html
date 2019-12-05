@@ -94,7 +94,7 @@
                         <button class="prev button-prev"></button>
                         <button class="next button-next"></button>
                     </div>
-                </div> 
+                </div>
                 <div class="layout-col-r">
                     <ul class="slider-dots">
                         <li class="active">
@@ -475,18 +475,18 @@
                                 /
                                 <span class="slide-items">06</span>
                             </div>
-                            <div class="ttl ttl-3">The Hybrid <br>System </div> 
+                            <div class="ttl ttl-3">The Hybrid <br>System </div>
                         </div>
 
                         <div class="slider-buttons slider-buttons-c">
-                            <button class="prev button-prev"></button> 
+                            <button class="prev button-prev"></button>
                             <button class="next button-next"></button>
                         </div>
                         @@include('./partials/elements/button-link-target.htm', {
-                            "text": "Open PDF",
-                            "href" : "./images/pdf.pdf",
-                            "classes": "btn-g btn-arrow-a"
-                            })
+                        "text": "Open PDF",
+                        "href" : "./images/pdf.pdf",
+                        "classes": "btn-g btn-arrow-a"
+                        })
                     </div>
                     <div class="slides">
                         <div class="slide active">
@@ -649,33 +649,41 @@
                         <div class="media-panel">
                             <img class="media-img" src="images/team-7.jpg" alt="#">
                         </div>
-                        <h4 class="instruction-ttl ttl-4">Karen Gardner</h4>
-                        <h5 class="ttl-5">Chief Executive Officer </h5>
-                        <div class="city green ">London</div>
+                        <div class="team-item">
+                            <h4 class="instruction-ttl ttl-4">Karen Gardner</h4>
+                            <h5 class="ttl-5">Chief Executive Officer </h5>
+                            <div class="city green ">London</div>
+                        </div>
                     </article>
                     <article class="media-stream--article   slide">
                         <div class="media-panel">
                             <img class="media-img" src="images/team-8.jpg" alt="#">
                         </div>
-                        <h4 class="instruction-ttl ttl-4">Maria Burke</h4>
-                        <h5 class="ttl-5">Chief Executive Officer </h5>
-                        <div class="city green ">London</div>
+                        <div class="team-item">
+                            <h4 class="instruction-ttl ttl-4">Maria Burke</h4>
+                            <h5 class="ttl-5">Chief Executive Officer </h5>
+                            <div class="city green ">London</div>
+                        </div>
                     </article>
                     <article class="media-stream--article   slide">
                         <div class="media-panel">
                             <img class="media-img" src="images/team-9.jpg" alt="#">
                         </div>
-                        <h4 class="instruction-ttl ttl-4">Randy Boyd</h4>
-                        <h5 class="ttl-5">Chief Executive Officer </h5>
-                        <div class="city green ">London</div>
+                        <div class="team-item">
+                            <h4 class="instruction-ttl ttl-4">Randy Boyd</h4>
+                            <h5 class="ttl-5">Chief Executive Officer </h5>
+                            <div class="city green ">London</div>
+                        </div>
                     </article>
                     <article class="media-stream--article   slide">
                         <div class="media-panel">
                             <img class="media-img" src="images/team-1.jpg" alt="#">
                         </div>
-                        <h4 class="instruction-ttl ttl-4">Sandra Nelson</h4>
-                        <h5 class="ttl-5">Chief Executive Officer </h5>
-                        <div class="city green ">London</div>
+                        <div class="team-item">
+                            <h4 class="instruction-ttl ttl-4">Sandra Nelson</h4>
+                            <h5 class="ttl-5">Chief Executive Officer </h5>
+                            <div class="city green ">London</div>
+                        </div>
                     </article>
                 </div>
                 @@include('./partials/elements/button-link.htm', {
@@ -719,6 +727,7 @@
             @@include('./partials/footer-main.htm', { "classes": "" })
         </footer>
     </main>
+    @@include('./partials/_team-popup.htm', { "classes": "" })
 </body>
 
 <script>

@@ -181,6 +181,12 @@
 }
 
 .team-carosuel {
+  .team-item{
+    width: 100% !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+  }
   a {
     margin: 0 0 0 auto;
   }
