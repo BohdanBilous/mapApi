@@ -53,20 +53,10 @@ export class selectSearch {
 
     }
     showWraper() {
-        const that  =this ;
         this.selectsContainer.querySelector("ul").style.display = 'block';
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'flex';
         this.selectsContainer.parentNode.classList.add('active-mob');
-        setTimeout(function(){
-            that.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
-            document.querySelector('header').scrollIntoView({ 
-                alignToTop:true,
-                behavior: 'smooth' 
-              }); 
-        },50)
-  
-
-
+        this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
     }
     hideWraper() {
         this.selectsContainer.querySelector("ul").style.display = 'none';

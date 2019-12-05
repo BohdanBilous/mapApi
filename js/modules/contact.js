@@ -575,11 +575,16 @@ window.addEventListener("load", function() {
     // Button for close form
     formClose.addEventListener("click", () => closeForm());
     contactInput.addEventListener("click", () => {
-        console.log(window.screenY);
-        // window.scrollTo(0,0);
-        // setTimeout(function(){
-         
-        // },150)
+        pageHeader.scrollIntoView({ 
+            alignToTop:true,
+            behavior: 'smooth' 
+          });
+        setTimeout(function(){
+            pageHeader.scrollIntoView({ 
+                alignToTop:true,
+                behavior: 'smooth' 
+              });
+        },150)
         closePersones();
     });
     searchClose.addEventListener("click", () => closePersones());
