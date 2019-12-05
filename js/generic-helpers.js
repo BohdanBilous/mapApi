@@ -597,9 +597,9 @@ export const animateScroll = (elem, style, unit, from, to, time, prop,e) => {
       }
 
       if (prop) {
-        elem[style] = toTop + unit;
+        elem[style] =0;
       } else {
-        elem.style[style] = toTop + unit;
+        elem.style[style] = 0;
       }
 
       if (step === 1) {
@@ -609,8 +609,8 @@ export const animateScroll = (elem, style, unit, from, to, time, prop,e) => {
     }, 25);
 
   if (prop) {
-    elem[style] = from + unit;
+    elem[style] = 0;
   } else {
-    elem.style[style] = from + unit;
+    elem.style[style] =0;
   }
 }
