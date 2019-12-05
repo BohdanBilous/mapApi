@@ -77,6 +77,7 @@
     }
 
     .header-right-elements {
+        @extend .zIndex;
         padding-right: 45px;
         display: flex;
         height: 100%;
@@ -307,7 +308,7 @@
 // Search
 .search-switcher {
     width: 17px;
-    height: 17px;
+    height: 18px;
     background: url(../images/ico-search.svg);
     background-size: 100% 100%;
 
@@ -398,6 +399,7 @@
 .menu {
     position: absolute;
     z-index: 2;
+
     width: 50%;
     right: 0;
     top: 0;
