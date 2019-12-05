@@ -802,12 +802,6 @@ $animateDur: 0.30s;
                 background: $colorBorder;
                 transform: translateX(-50%);
             }
-
-            &:last-child {
-                &::before {
-                    display: none;
-                }
-            }
         }
 
         &.tare-wrap-c {
