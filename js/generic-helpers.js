@@ -591,7 +591,7 @@ export const animateScroll = (elem, style, unit, from, to, time, prop) => {
     timer = setInterval(function () {
       var step = Math.min(1, (new Date().getTime() - start) / time);
       let toTop  = (from + step * (to - from));
-
+document.querySelector('.drop-down-sel').innerHTML = toTop;
       if(toTop< 0){
         toTop = 0;
       }

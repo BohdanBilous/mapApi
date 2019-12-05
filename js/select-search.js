@@ -63,8 +63,6 @@ export class selectSearch {
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'none';
         this.selectsContainer.parentNode.classList.remove('active-mob');
         this.selectsContainer.parentNode.parentNode.classList.remove('active-mob-p');
-
-
     }
     selectHandler() {
         this.selectsContainer.querySelector('input').addEventListener('input', (e) => {
