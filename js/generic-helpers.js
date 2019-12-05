@@ -599,7 +599,7 @@ document.querySelector('.drop-down-sel').innerHTML = toTop;
       if (prop) {
         elem[style] = toTop+ unit;
       } else {
-        elem.style[style] = (from + step * (to - from)) + unit;
+        elem.style[style] = toTop + unit;
       }
       console.log( (from + step * (to - from)) + unit);
       if (step === 1) {
@@ -608,9 +608,9 @@ document.querySelector('.drop-down-sel').innerHTML = toTop;
     
     }, 25);
 
-  // if (prop) {
-  //   elem[style] = from + unit;
-  // } else {
-  //   elem.style[style] = from + unit;
-  // }
+  if (prop) {
+    elem[style] = from + unit;
+  } else {
+    elem.style[style] = from + unit;
+  }
 }
