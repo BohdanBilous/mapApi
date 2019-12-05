@@ -608,9 +608,9 @@ document.querySelector('.drop-down-sel').innerHTML = toTop;
     
     }, 25);
 
-  if (prop) {
-    elem[style] = from + unit;
-  } else {
-    elem.style[style] = from + unit;
-  }
+  // if (prop) {
+  //   elem[style] = from + unit;
+  // } else {
+  //   elem.style[style] = from + unit;
+  // }
 }
