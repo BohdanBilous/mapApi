@@ -484,6 +484,17 @@ $animateDur: 0.30s;
             transform: translateX(0) translateY(0) scale(0.80);
         }
     }
+    @include ie10 {
+        .tare-inner {
+            &::after {
+                height: 100%;
+            }
+        }
+
+        .tare-img img {
+            transform: translateX(0) translateY(0) scale(0.80);
+        }
+    }
 }
 
 .no-touchevents .hover-mode.tare-wrap-c {

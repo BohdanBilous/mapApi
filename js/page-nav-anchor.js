@@ -40,10 +40,7 @@ export class PageNav {
 
   scrollToBlock(hash) {
     let toBlock = document.getElementById(hash);
-    let blockOffsetTop = toBlock.getBoundingClientRect().top + window.scrollY;
-
-    document.documentElement.scrollTop = blockOffsetTop - this.stickyTopMargin;
-    document.body.scrollTop = blockOffsetTop - this.stickyTopMargin; // For IE
+    toBlock.scrollIntoView();
   }
 
   changeActiveButton(element) {
@@ -62,9 +59,9 @@ export class PageNav {
   }
 
   stickyNav(stickyHeight) {
-    window.pageYOffset > stickyHeight
-      ? this.navWrap.classList.add("sticky")
-      : this.navWrap.classList.remove("sticky");
+    window.pageYOffset > stickyHeight ?
+      this.navWrap.classList.add("sticky") :
+      this.navWrap.classList.remove("sticky");
   }
 
   onScreenHandler() {
@@ -92,10 +89,10 @@ export class PageNav {
 
   onScreenDetect(element) {
     let scrollingElement =
-        document.scrollingElement || document.documentElement,
+      document.scrollingElement || document.documentElement,
       viewTop = scrollingElement.scrollTop,
       _top =
-        element.getBoundingClientRect().top + viewTop - window.innerHeight / 2;
+      element.getBoundingClientRect().top + viewTop - window.innerHeight / 2;
 
     return viewTop >= _top;
   }
