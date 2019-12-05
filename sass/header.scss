@@ -454,6 +454,11 @@
 
 .menu-open {
     overflow: hidden;
+    -webkit-overflow-scrolling: auto;  
+
+    .menu-wrap {
+        -webkit-overflow-scrolling: auto;  
+    }
     
     body {
         overflow: hidden;
