@@ -580,7 +580,7 @@ window.addEventListener("load", function() {
         //     alignToTop:true,
         //     behavior: 'smooth' 
         //   });
-          animateScroll(document.scrollingElement || document.documentElement, "scrollTop", "", 0, 0, 300, true,e);
+          animateScroll(document.scrollingElement || document.documentElement, "scrollTop", "", 0, 0, 3000, true,e);
         // setTimeout(function(){
         //     pageHeader.scrollIntoView({ 
         //         alignToTop:true,
