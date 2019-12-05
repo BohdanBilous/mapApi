@@ -232,6 +232,7 @@
     display: none !important;
 }
 html,body{
+    -webkit-overflow-scrolling: touch; /* enables “momentum” (smooth) scrolling */
     overscroll-behavior-y: contain;
 }
 .contact-main {
