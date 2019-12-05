@@ -590,15 +590,22 @@ export const animateScroll = (elem, style, unit, from, to, time, prop) => {
   var start = new Date().getTime(),
     timer = setInterval(function () {
       var step = Math.min(1, (new Date().getTime() - start) / time);
+      if(prop<0 || unit < 0 ){
+        prop=0;
+        unit=0;
+      }
       if (prop) {
         elem[style] = (from + step * (to - from)) + unit;
       } else {
         elem.style[style] = (from + step * (to - from)) + unit;
       }
+      console.log( unit);
       if (step === 1) {
         clearInterval(timer);
       }
+    
     }, 25);
+
   if (prop) {
     elem[style] = from + unit;
   } else {
