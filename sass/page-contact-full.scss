@@ -684,7 +684,7 @@ div.searchable {
             padding-bottom:  calc(50px + env(safe-area-inset-bottom)) ;
         }
 
-        @include iphoniphoneXMaxeX {
+        @include iphoneXMax {
             padding-bottom:  calc(50px + env(safe-area-inset-bottom)) ;
         } 
 

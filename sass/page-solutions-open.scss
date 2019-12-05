@@ -2105,9 +2105,21 @@ $leftOffset: 270px;
     }
 }
 
+.solutions-socket.socket {
+    padding-bottom: 160px;
+
+    @include tablet {
+        padding-bottom: 100px;
+
+    }
+
+    @include mobile {
+        padding-bottom: 70px;
+
+    }
+}
+
 .solutions-socket {
-
-
     .media-stream--more {
         border-bottom: none;
     }
