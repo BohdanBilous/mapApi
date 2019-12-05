@@ -675,6 +675,9 @@ div.searchable {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         transition: all 380ms ease;
+        @supports (-webkit-overflow-scrolling: touch) {
+            padding-bottom:  20px
+          }
 
         @include iphoneX {
             padding-bottom:  calc(55px + env(safe-area-inset-bottom)) ;
