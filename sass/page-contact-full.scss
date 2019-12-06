@@ -372,6 +372,7 @@ div.searchable {
 
     .searcheble-find {
         position: absolute;
+        pointer-events: none;
         top: 11px;
         right: 0;
         width: 23px;

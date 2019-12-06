@@ -563,28 +563,31 @@ window.addEventListener("load", function () {
         inputContact.addEventListener('click', () => {
 
             function fireEvents() {
-                return new Promise(function(resolve, reject) {
-                  setTimeout((function() {
+                return new Promise(function (resolve, reject) {
                     inputContact.parentNode.parentNode.classList.add('active-mob-p');
                     inputContact.parentNode.classList.add('active-mob');
-                 }), 400);
-             });
-             }
-             function second() {
+                    setTimeout((function () {
+                        resolve();
+                    }), 500);
+                });
+            }
+
+            function second() {
                 pageHeader.scrollIntoView({
                     alignToTop: true,
-                    behavior: 'smooth' 
+                    behavior: 'smooth'
                 });
-             }
-        
-     
+
+            }
+
+
 
             var userAgent = window.navigator.userAgent;
-            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-                // window.scrollTo(0, 0);
-                // document.body.scrollTop = 0;
-                fireEvents().then(second);
-            }
+            // if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+            // window.scrollTo(0, 0);
+            // document.body.scrollTop = 0;
+            fireEvents().then(second);
+            // }
         });
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();
