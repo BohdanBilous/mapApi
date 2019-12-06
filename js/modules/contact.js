@@ -577,11 +577,11 @@ window.addEventListener("load", function () {
                     pageHeader.scrollIntoView();
                 }), 200);
                 setTimeout((function () {
-                    inputContact.parentNode.parentNode.classList.remove('active-mob-p-load');
-                    inputContact.parentNode.classList.remove('active-mob-load');
                     pageHeader.scrollIntoView();
                 }), 300);
                 setTimeout((function () {
+                    inputContact.parentNode.parentNode.classList.remove('active-mob-p-load');
+                    inputContact.parentNode.classList.remove('active-mob-load');
                     pageHeader.scrollIntoView();
                 }), 400);
                 setTimeout((function () {
