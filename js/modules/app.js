@@ -100,30 +100,30 @@ window.addEventListener("load", function() {
     }
   });
 
-  document.body.addEventListener(
-    "touchmove",
-    e => {
-      // if (e.target.classList.contains("menu-open")) e.preventDefault();
+  // document.body.addEventListener(
+  //   "touchmove",
+  //   e => {
+  //     // if (e.target.classList.contains("menu-open")) e.preventDefault();
 
-      e = e || window.event;
-      let target = e.target || e.srcElement;
-      if (
-        !target.className.match(/\bmenu-inner\b/) &&
-        html.classList.contains("menu-open")
-      ) {
-        e.returnValue = false;
-        e.cancelBubble = true;
+  //     e = e || window.event;
+  //     let target = e.target || e.srcElement;
+  //     if (
+  //       !target.className.match(/\bmenu-inner\b/) &&
+  //       html.classList.contains("menu-open")
+  //     ) {
+  //       e.returnValue = false;
+  //       e.cancelBubble = true;
 
-        if (e.preventDefault) {
-          e.preventDefault();
-          e.stopPropagation();
-        }
+  //       if (e.preventDefault) {
+  //         e.preventDefault();
+  //         e.stopPropagation();
+  //       }
 
-        return false;
-      }
-    },
-    false
-  );
+  //       return false;
+  //     }
+  //   },
+  //   false
+  // );
 
   /* ------------------
       Buttons
