@@ -304,7 +304,7 @@ export class SuperSlider {
       this.slidesContainer = this.sliderWrap.querySelector(".slides");
       this.slides = this.slidesContainer.querySelectorAll(".slide");
       this.dots = this.sliderWrap.querySelectorAll(".slider-dots > li") || null;
-      this.touchHandler(this.slidesContainer);
+      if (this.slides.length > 1) this.touchHandler(this.slidesContainer);
       if (this.timerNumber) this.setTimer(0, this.timerNumber);
       if (this.dots) this.dotsClickHandler();
     }
