@@ -308,9 +308,10 @@
 // Search
 .search-switcher {
     width: 17px;
-    height: 17px;
+    height: 18px;
     background: url(../images/ico-search.svg);
     background-size: 100% 100%;
+    background-repeat: no-repeat !important;
 
     .header.color-w & {
         background: url(../images/ico-search-w.svg);
@@ -454,13 +455,11 @@
 }
 
 .menu-open {
-    overflow: hidden;
     touch-action: none;
     overscroll-behavior: none;
     -webkit-overflow-scrolling: auto;
     
     body {
-        overflow: hidden;
         touch-action: none;
         overscroll-behavior: none;
     }
