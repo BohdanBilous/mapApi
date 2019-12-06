@@ -53,15 +53,10 @@ export class selectSearch {
 
     }
     showWraper() {
-        let that= this;
         this.selectsContainer.querySelector("ul").style.display = 'block';
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'flex';
         this.selectsContainer.parentNode.classList.add('active-mob');
         this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
-        this.selectsContainer.parentNode.parentNode.parentNode.classList.add('active-mob-p-d');
-        setTimeout(function(){
-            that.selectsContainer.parentNode.parentNode.parentNode.classList.remove('active-mob-p-d');
-        },300)
 
 
     }
@@ -70,6 +65,8 @@ export class selectSearch {
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'none';
         this.selectsContainer.parentNode.classList.remove('active-mob');
         this.selectsContainer.parentNode.parentNode.classList.remove('active-mob-p');
+
+
     }
     selectHandler() {
         this.selectsContainer.querySelector('input').addEventListener('input', (e) => {
