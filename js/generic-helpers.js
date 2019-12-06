@@ -583,35 +583,35 @@ export const ssHashLink = links => {
 
 // Animate scroll
 
-export const animateScroll = (elem, style, unit, from, to, time, prop,e) => {
-  if (!elem) {
-    return;
-  }
-  console.log(e) 
-  var start = new Date().getTime(),
-    timer = setInterval(function (e) {
-      var step = Math.min(1, (new Date().getTime() - start) / time);
-      let toTop  = (from + step * (to - from));
-      if(toTop < 0){
-        toTop = 0;
-      }
+// export const animateScroll = (elem, style, unit, from, to, time, prop,e) => {
+//   if (!elem) {
+//     return;
+//   }
+//   console.log(e) 
+//   var start = new Date().getTime(),
+//     timer = setInterval(function (e) {
+//       var step = Math.min(1, (new Date().getTime() - start) / time);
+//       let toTop  = (from + step * (to - from));
+//       if(toTop < 0){
+//         toTop = 0;
+//       }
 
-      if (prop) {
-        elem.scrollTo(0,0)
-      } else {
-        elem.scrollTo(0,0)
-      }
+//       if (prop) {
+//         elem.scrollTo(0,0)
+//       } else {
+//         elem.scrollTo(0,0)
+//       }
 
-      if (step === 1) {
-        clearInterval(timer);
-      }
+//       if (step === 1) {
+//         clearInterval(timer);
+//       }
     
-    }, 25);
+//     }, 25);
 
-  if (prop) {
-    elem.scrollTo(0,0)
-  } else {
-    elem.scrollTo(0,0)
-  }
-}
+//   if (prop) {
+//     elem.scrollTo(0,0)
+//   } else {
+//     elem.scrollTo(0,0)
+//   }
+// }
 

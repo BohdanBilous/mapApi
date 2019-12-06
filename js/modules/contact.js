@@ -576,10 +576,10 @@ window.addEventListener("load", function() {
     formClose.addEventListener("click", () => closeForm());
     contactInput.addEventListener("click", (e) => {
         e.preventDefault();
-        pageHeader.scrollIntoView({ 
-            alignToTop:true,
-            behavior: 'smooth' 
-          });
+        // pageHeader.scrollIntoView({ 
+        //     alignToTop:true,
+        //     behavior: 'smooth' 
+        //   });
         //   animateScroll(document.scrollingElement || document.documentElement, "scrollTop", "", 0, 0, 3000, true,e);
         // setTimeout(function(){
         //     pageHeader.scrollIntoView({ 
