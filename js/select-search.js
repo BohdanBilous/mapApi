@@ -74,7 +74,7 @@ export class selectSearch {
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'none';
         this.selectsContainer.parentNode.classList.remove('active-mob');
         this.selectsContainer.parentNode.parentNode.classList.remove('active-mob-p');
-
+        this.selectsContainer.querySelector('input').blur();
 
 
     }

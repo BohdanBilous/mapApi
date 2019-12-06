@@ -564,6 +564,8 @@ window.addEventListener("load", function () {
 
             function fireEvents() {
                 return new Promise(function (resolve, reject) {
+                    inputContact.parentNode.parentNode.classList.add('active-mob-p-load');
+                    inputContact.parentNode.classList.add('active-mob-load');
                     inputContact.parentNode.parentNode.classList.add('active-mob-p');
                     inputContact.parentNode.classList.add('active-mob');
                     resolve();
@@ -571,7 +573,6 @@ window.addEventListener("load", function () {
             }
 
             function second() {
-                pageHeader.scrollIntoView();
                 setTimeout((function () {
                     pageHeader.scrollIntoView();
                 }), 200);
@@ -579,6 +580,8 @@ window.addEventListener("load", function () {
                     pageHeader.scrollIntoView();
                 }), 300);
                 setTimeout((function () {
+                    inputContact.parentNode.parentNode.classList.remove('active-mob-p-load');
+                    inputContact.parentNode.classList.remove('active-mob-load');
                     pageHeader.scrollIntoView();
                 }), 400);
                 setTimeout((function () {
@@ -589,11 +592,11 @@ window.addEventListener("load", function () {
 
 
             var userAgent = window.navigator.userAgent;
-            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+            // if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
             // window.scrollTo(0, 0);
             // document.body.scrollTop = 0;
             fireEvents().then(second);
-            }
+            // }
         });
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();
