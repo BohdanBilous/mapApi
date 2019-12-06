@@ -31,7 +31,7 @@ window.addEventListener("load", function() {
       teamMemberId = teamMember.getAttribute("id");
       html.classList.add("popup-open");
       html.classList.remove("popup-close");
-      if (tablet) disableBodyScroll(true, ".popup-side");
+      disableBodyScroll(true, ".popup-side");
       loadPopupInfo(teamMemberId);
     });
   });
