@@ -657,6 +657,12 @@ div.searchable {
         #map {
             height: 100vh
         }
+
+        &.active-mob-p-top {
+            position: fixed;
+            overflow: hidden;
+            max-height: 100vh;
+        }
     }
 
 
@@ -701,18 +707,20 @@ div.searchable {
             position: fixed;
             max-height: 75vh;
             min-height: 70vh;
-            top: 30vh; 
+            top: 30vh;
             bottom: auto;
         }
 
         .countrys-wrap {
             background-color: #f5f5f5;
+
             .searchable {
                 margin-right: 0;
-               .searcheble-list{
-                border-radius: 0;
 
-               }
+                .searcheble-list {
+                    border-radius: 0;
+
+                }
             }
         }
 
@@ -803,6 +811,7 @@ div.searchable {
         }
 
     }
+
     .form-active .contact-form-container form .contact-form-right .select-form-wrap {
         margin-bottom: 58px;
 
