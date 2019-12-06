@@ -329,6 +329,7 @@ window.addEventListener("load", function () {
     const contactList = document.querySelector(".contacts-list");
     const countysList = document.querySelectorAll(".countrys .countrys-list li");
     const contactHelp = document.querySelector(".contact-help");
+    const inputContact = document.querySelector(".countrys .searchable");
     const contactInput = document.querySelector(".countrys .searchable input");
     const searchClose = document.querySelector(".countrys .searcheble-close");
     const inputFiles = document.querySelectorAll(".attach-file");
@@ -559,7 +560,23 @@ window.addEventListener("load", function () {
     const clickHandle = () => {
         // Button for close form
         formClose.addEventListener("click", () => closeForm());
-        contactInput.addEventListener("focus", (e) => {
+        inputContact.addEventListener('click', () => {
+            var userAgent = window.navigator.userAgent;
+            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {}
+            inputContact.parentNode.parentNode.classList.remove('active-mob-p');
+            inputContact.parentNode.classList.remove('active-mob');
+            setTimeout(function () {
+                window.scrollTo(0, 0);
+                document.body.scrollTop = 0;
+                inputContact.parentNode.parentNode.classList.add('active-mob-p');
+                inputContact.parentNode.classList.add('active-mob');
+                // pageHeader.scrollIntoView({
+                //     alignToTop: true,
+                //     behavior: 'smooth'
+                // });
+            },400);
+        })
+        contactInput.addEventListener("click", (e) => {
             e.preventDefault();
             // pageHeader.scrollIntoView({ 
             //     alignToTop:true,
@@ -571,23 +588,8 @@ window.addEventListener("load", function () {
             //     alignToTop: true,
             //     behavior: 'smooth'
             // });
-            var userAgent = window.navigator.userAgent;
-
-            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-                contactInput.parentNode.parentNode.parentNode.classList.remove('active-mob-p');
-                contactInput.parentNode.parentNode.classList.add('active-mob');
-                setTimeout(function () {
-                    window.scrollTo(0, 0);
-                    document.body.scrollTop = 0;
-                    contactInput.parentNode.parentNode.parentNode.classList.add('active-mob-p');
-                    contactInput.parentNode.classList.add('active-mob');
-                    // pageHeader.scrollIntoView({
-                    //     alignToTop: true,
-                    //     behavior: 'smooth'
-                    // });
-                },400);
-            }
-            // setTimeout(function(){
+    
+                // setTimeout(function(){
             //     pageHeader.scrollIntoView({ 
             //         alignToTop:true,
             //         behavior: 'smooth' 
