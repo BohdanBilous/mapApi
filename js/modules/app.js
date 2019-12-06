@@ -84,7 +84,7 @@ window.addEventListener("load", function() {
       html.classList.add("menu-close");
       animateSwitch(".menu .fade-in", "off");
       animateSwitch(".menu .move-from-right", "off");
-      disableBodyScroll(false, ".menu-wrap");
+      disableBodyScroll(false, ".menu-inner");
     }
   });
   menuSwitcher.addEventListener("click", () => {
@@ -93,13 +93,13 @@ window.addEventListener("load", function() {
       html.classList.add("menu-close");
       animateSwitch(".menu .fade-in", "off");
       animateSwitch(".menu .move-from-right", "off");
-      disableBodyScroll(false, ".menu-wrap");
+      disableBodyScroll(false, ".menu-inner");
     } else {
       html.classList.add("menu-open");
       html.classList.remove("menu-close");
       animateSwitch(".menu .fade-in", "on", 1, 800);
       animateSwitch(".menu .move-from-right", "on", 65, 250);
-      disableBodyScroll(true, ".menu-wrap");
+      disableBodyScroll(true, ".menu-inner");
     }
   });
 
