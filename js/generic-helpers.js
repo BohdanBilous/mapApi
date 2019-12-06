@@ -593,7 +593,6 @@ export const animateScroll = () => {
     } else {
       i = i + 50;
       window.scrollTo(0, 0);
-      console.log(i)
     }
   }
 }
