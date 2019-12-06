@@ -1122,6 +1122,15 @@ $leftOffset: 270px;
         // @include hideScrollbar;
         overflow-x: auto;
         margin-right: -25px;
+
+        &::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, .35);
+        }
     }
 
     .mobile-scroll-mode.tare-wrap {
