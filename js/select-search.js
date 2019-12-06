@@ -61,6 +61,8 @@ export class selectSearch {
         this.selectsContainer.querySelector("ul").style.display = 'block';
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'flex';
         this.selectsContainer.parentNode.classList.add('active-mob');
+        this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
+
         // animateScroll();
     }
     hideWraper() {

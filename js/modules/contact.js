@@ -565,7 +565,8 @@ window.addEventListener("load", function () {
             //     alignToTop:true,
             //     behavior: 'smooth' 
             //   });
-            contactInput.parentNode.parentNode.classList.add('active-mob-p');
+            // console.log(contactInput.parentNode.parentNode.parentNode)
+            // contactInput.parentNode.parentNode.parentNode.classList.add('active-mob-p');
             // pageHeader.scrollIntoView({
             //     alignToTop: true,
             //     behavior: 'smooth'
@@ -573,13 +574,15 @@ window.addEventListener("load", function () {
             var userAgent = window.navigator.userAgent;
 
             if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-                window.scrollTo(0, 0);
-                document.body.scrollTop = 0;
+                contactInput.parentNode.parentNode.parentNode.classList.remove('active-mob-p');
                 setTimeout(function () {
-                    pageHeader.scrollIntoView({
-                        alignToTop: true,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo(0, 0);
+                    document.body.scrollTop = 0;
+                    contactInput.parentNode.parentNode.parentNode.classList.add('active-mob-p');
+                    // pageHeader.scrollIntoView({
+                    //     alignToTop: true,
+                    //     behavior: 'smooth'
+                    // });
                 });
             }
             // setTimeout(function(){
