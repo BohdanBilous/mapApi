@@ -60,8 +60,7 @@ export class selectSearch {
         this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
         this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p-d');
         setTimeout(function(){
-            that.selectsContainer.parentNode.parentNode.classList.remove('active-mob-p-d');
-
+            that.selectsContainer.parentNode.parentNode.parentNode.classList.remove('active-mob-p-d');
         },200)
 
 
