@@ -783,7 +783,7 @@ div.searchable {
             padding: 0 21px;
             height: auto;
             background-color: #f5f5f5;
-            padding-top: 42px;
+            // padding-top: 42px;
 
             &.active {
                 display: flex;
@@ -888,6 +888,9 @@ div.searchable {
             .countrys-wrap {
                 padding-top: 0;
                 padding-bottom: 0;
+            }
+            .contacts-list{
+                padding-top: 42px;
             }
         }
 
