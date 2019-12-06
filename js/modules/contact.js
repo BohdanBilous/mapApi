@@ -559,7 +559,7 @@ window.addEventListener("load", function () {
     const clickHandle = () => {
         // Button for close form
         formClose.addEventListener("click", () => closeForm());
-        contactInput.addEventListener("focus", (e) => {
+        contactInput.addEventListener("click", (e) => {
             e.preventDefault();
             // pageHeader.scrollIntoView({ 
             //     alignToTop:true,
