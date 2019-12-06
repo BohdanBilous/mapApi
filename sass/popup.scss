@@ -104,6 +104,12 @@
     &.popup-open-about {
         overflow: unset;
     }
+   
+    body { 
+        @include tablet {
+            overflow: hidden;
+        }
+    }
 
     .popup {
         // z-index: 1001;
