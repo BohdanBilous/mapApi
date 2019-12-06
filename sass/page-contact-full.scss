@@ -700,7 +700,6 @@ div.searchable {
         }
 
         &.active-mob-p {
-            position: fixed;
             max-height: 82vh;
             height: 82vh;
             min-height: 82vh;
@@ -750,14 +749,13 @@ div.searchable {
 
             .searcheble-list {
                 padding-top: 42px;
-                overflow: scroll;
-                height: calc(100% - 48px);
             }
 
             ul {
                 background: none;
                 max-height: initial;
                 overflow: initial;
+                padding-bottom: 60px;
             }
 
             .notFound {

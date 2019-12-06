@@ -559,17 +559,29 @@ window.addEventListener("load", function () {
     const clickHandle = () => {
         // Button for close form
         formClose.addEventListener("click", () => closeForm());
-        contactInput.addEventListener("blur", (e) => {
+        contactInput.addEventListener("focus", (e) => {
             e.preventDefault();
             // pageHeader.scrollIntoView({ 
             //     alignToTop:true,
             //     behavior: 'smooth' 
             //   });
-              setTimeout(function() {
-                if (!document.activeElement.getAttribute('type')=== 'text') {
-                  window.scrollTo(0,0);
-                }
-              }, 0);
+            contactInput.parentNode.parentNode.classList.add('active-mob-p');
+            // pageHeader.scrollIntoView({
+            //     alignToTop: true,
+            //     behavior: 'smooth'
+            // });
+            var userAgent = window.navigator.userAgent;
+
+            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+                window.scrollTo(0, 0);
+                document.body.scrollTop = 0;
+                setTimeout(function () {
+                    pageHeader.scrollIntoView({
+                        alignToTop: true,
+                        behavior: 'smooth'
+                    });
+                });
+            }
             // setTimeout(function(){
             //     pageHeader.scrollIntoView({ 
             //         alignToTop:true,
@@ -582,8 +594,8 @@ window.addEventListener("load", function () {
         });
         searchClose.addEventListener("click", () => closePersones());
 
-        
-        
+
+
         // Button All countrys to started position
         toStart.forEach(start => {
             start.addEventListener("click", () => {
