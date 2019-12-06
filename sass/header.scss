@@ -456,11 +456,12 @@
 .menu-open {
     overflow: hidden;
     touch-action: none;
-    position: fixed;
+    overscroll-behavior: contain;
     
     body {
         overflow: hidden;
         touch-action: none;
+        overscroll-behavior: contain;
     }
 
     .menu-wrap {
