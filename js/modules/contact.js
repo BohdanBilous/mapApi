@@ -333,7 +333,7 @@ window.addEventListener("load", function () {
     const contactInput = document.querySelector(".countrys .searchable input");
     const searchClose = document.querySelector(".countrys .searcheble-close");
     const inputFiles = document.querySelectorAll(".attach-file");
-
+    const countrys = document.querySelector(".countrys");
     let markersList = [];
     let map;
     if (detectIE() == "11") {
@@ -561,21 +561,40 @@ window.addEventListener("load", function () {
         // Button for close form
         formClose.addEventListener("click", () => closeForm());
         inputContact.addEventListener('click', () => {
+
+            function fireEvents() {
+                return new Promise(function (resolve, reject) {
+                    inputContact.parentNode.parentNode.classList.add('active-mob-p');
+                    inputContact.parentNode.classList.add('active-mob');
+                    setTimeout((function () {
+                        resolve();
+                    }), 100);
+                });
+            }
+            function second() {
+                setTimeout((function () {
+                    pageHeader.scrollIntoView();
+                }), 200);
+                setTimeout((function () {
+                    pageHeader.scrollIntoView();
+                }), 300);
+                setTimeout((function () {
+                    pageHeader.scrollIntoView();
+                }), 400);
+                setTimeout((function () {
+                    pageHeader.scrollIntoView();
+                }), 500);
+            }
+
+
+
             var userAgent = window.navigator.userAgent;
-            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {}
-            inputContact.parentNode.parentNode.classList.remove('active-mob-p');
-            inputContact.parentNode.classList.remove('active-mob');
-            setTimeout(function () {
-                window.scrollTo(0, 0);
-                document.body.scrollTop = 0;
-                inputContact.parentNode.parentNode.classList.add('active-mob-p');
-                inputContact.parentNode.classList.add('active-mob');
-                // pageHeader.scrollIntoView({
-                //     alignToTop: true,
-                //     behavior: 'smooth'
-                // });
-            },400);
-        })
+            // if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+            // window.scrollTo(0, 0);
+            // document.body.scrollTop = 0;
+            fireEvents().then(second);
+            // }
+        });
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();
             // pageHeader.scrollIntoView({ 
@@ -588,8 +607,8 @@ window.addEventListener("load", function () {
             //     alignToTop: true,
             //     behavior: 'smooth'
             // });
-    
-                // setTimeout(function(){
+
+            // setTimeout(function(){
             //     pageHeader.scrollIntoView({ 
             //         alignToTop:true,
             //         behavior: 'smooth' 

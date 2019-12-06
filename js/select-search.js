@@ -22,7 +22,7 @@ export class selectSearch {
     }
 
     filterFunction(that) {
-        let container,  li, input_val;
+        let container, li, input_val;
         container = that.selectsContainer;
         input_val = container.querySelector("input").value.toUpperCase();
         li = container.querySelectorAll("ul li");
@@ -60,8 +60,12 @@ export class selectSearch {
     showWraper() {
         this.selectsContainer.querySelector("ul").style.display = 'block';
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'flex';
-        this.selectsContainer.parentNode.classList.add('active-mob');
-        this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
+        var userAgent = window.navigator.userAgent;
+        if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {}
+        else{
+            this.selectsContainer.parentNode.classList.add('active-mob');
+            this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
+        }
 
         // animateScroll();
     }
