@@ -367,6 +367,7 @@ div.searchable {
 
         .searcheble-close {
             opacity: 1;
+            pointer-events: unset;
         }
     }
 
@@ -385,6 +386,7 @@ div.searchable {
     .searcheble-close {
         cursor: pointer;
         position: absolute;
+        pointer-events: none;
         top: 22px;
         right: 0;
         width: 31px;
