@@ -698,6 +698,7 @@ div.searchable {
         }
 
         &.active-mob-p {
+            position: fixed;
             max-height: 85vh;
             min-height: 70vh;
         }
@@ -800,7 +801,6 @@ div.searchable {
         }
 
     }
-
     .form-active .contact-form-container form .contact-form-right .select-form-wrap {
         margin-bottom: 58px;
 
@@ -874,7 +874,7 @@ div.searchable {
             }
 
             .countrys-wrap {
-                padding-top: 40px;
+                padding-top: 0;
                 padding-bottom: 0;
             }
         }
