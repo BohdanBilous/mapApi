@@ -568,28 +568,22 @@ window.addEventListener("load", function () {
                     inputContact.parentNode.classList.add('active-mob');
                     setTimeout((function () {
                         resolve();
-                    }), 200);
-                    console.log('done1')
+                    }), 100);
                 });
-            }
-
-            function third() {
-                setTimeout((function () {
-                pageHeader.scrollIntoView({
-                    alignToTop: true,
-                    behavior: 'smooth'
-                });
-                console.log('done2')
-            }), 500);
-
             }
             function second() {
-                pageHeader.scrollIntoView({
-                    alignToTop: true,
-                    behavior: 'smooth'
-                });
-
-                console.log('done3')
+                setTimeout((function () {
+                    pageHeader.scrollIntoView();
+                }), 200);
+                setTimeout((function () {
+                    pageHeader.scrollIntoView();
+                }), 300);
+                setTimeout((function () {
+                    pageHeader.scrollIntoView();
+                }), 400);
+                setTimeout((function () {
+                    pageHeader.scrollIntoView();
+                }), 500);
             }
 
 
@@ -598,7 +592,7 @@ window.addEventListener("load", function () {
             // if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
             // window.scrollTo(0, 0);
             // document.body.scrollTop = 0;
-            fireEvents().then(second).then(third);
+            fireEvents().then(second);
             // }
         });
         contactInput.addEventListener("click", (e) => {
