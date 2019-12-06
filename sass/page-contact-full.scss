@@ -705,7 +705,7 @@ div.searchable {
 
         &.active-mob-p {
             max-height: 82vh;
-
+            min-height: 82vh;
         }
 
         .active-mob {
@@ -892,7 +892,8 @@ div.searchable {
                 padding-top: 0;
                 padding-bottom: 0;
             }
-            .contacts-list{
+
+            .contacts-list {
                 padding-top: 42px;
             }
         }
