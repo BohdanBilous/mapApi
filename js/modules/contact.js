@@ -565,7 +565,7 @@ window.addEventListener("load", function () {
 
             if ((userAgent.match(/iPad/i) || userAgent.match(/iPhone/i))) {
                 window.scrollTo(0, 0);
-                    document.body.scrollTop = 0;
+                document.body.scrollTop = 0;
                 setTimeout(function () {
                     inputContact.parentNode.parentNode.classList.add('active-mob-p');
                     inputContact.parentNode.classList.add('active-mob');
@@ -575,7 +575,7 @@ window.addEventListener("load", function () {
                     // });
                 }, 350);
             }
-           
+
         });
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();

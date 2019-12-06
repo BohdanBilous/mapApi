@@ -61,7 +61,9 @@ export class selectSearch {
         this.selectsContainer.querySelector("ul").style.display = 'block';
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'flex';
         var userAgent = window.navigator.userAgent;
-        if (!userAgent.match(/iPad/i) || !userAgent.match(/iPhone/i)) {
+        if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+          
+        }else{
             this.selectsContainer.parentNode.classList.add('active-mob');
             this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
         }
