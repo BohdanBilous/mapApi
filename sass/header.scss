@@ -382,6 +382,7 @@
     bottom: 0;
     text-align: left;
     visibility: hidden;
+    overflow: hidden;
 }
 
 .menu-bg {
@@ -454,11 +455,6 @@
 
 .menu-open {
     overflow: hidden;
-    -webkit-overflow-scrolling: auto;  
-
-    .menu-wrap {
-        -webkit-overflow-scrolling: auto;  
-    }
     
     body {
         overflow: hidden;
