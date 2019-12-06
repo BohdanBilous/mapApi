@@ -608,7 +608,7 @@ export const disableBodyScroll = function() {
     _element = false,
     _clientY;
 
-  document.querySelector(".header").style.border = "1px solid #111111";
+  // document.querySelector(".header").style.border = "1px solid #111111";
 
   if (!Element.prototype.matches)
     Element.prototype.matches =
