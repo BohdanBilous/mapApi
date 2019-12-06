@@ -567,9 +567,10 @@ window.addEventListener("load", function () {
             }
 
             async function fireEvents() {
-                await timeout(400);
                 inputContact.parentNode.parentNode.classList.add('active-mob-p');
                 inputContact.parentNode.classList.add('active-mob');
+                await timeout(400);
+
             }
 
 
