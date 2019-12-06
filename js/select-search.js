@@ -57,12 +57,16 @@ export class selectSearch {
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'flex';
         this.selectsContainer.parentNode.classList.add('active-mob');
         this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
+
+
     }
     hideWraper() {
         this.selectsContainer.querySelector("ul").style.display = 'none';
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'none';
         this.selectsContainer.parentNode.classList.remove('active-mob');
         this.selectsContainer.parentNode.parentNode.classList.remove('active-mob-p');
+
+
     }
     selectHandler() {
         this.selectsContainer.querySelector('input').addEventListener('input', (e) => {
