@@ -495,10 +495,9 @@
             height: 100%;
             max-width: 100%;
         }
-.play-button-wrap{
-    display: block;
-}
+
         .play-button-wrap {
+            display: block;
             position: absolute;
             @extend .ctr;
         }
@@ -679,7 +678,6 @@
                 }
 
                 h4 {
-                    text-decoration: underline;
                     margin-bottom: 18px;
                     color: #333333;
                 }
@@ -978,9 +976,9 @@ margin-bottom: 110px;
         }
 
         .ml-layout-video {
-            width: 100%;
+            // width: 100%;
             max-width: 100%;
-            // width: min-content;
+            width: min-content;
 
         }
 
