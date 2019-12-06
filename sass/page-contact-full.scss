@@ -658,7 +658,7 @@ div.searchable {
             height: 100vh
         }
 
-       
+
     }
 
 
@@ -682,6 +682,7 @@ div.searchable {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         padding-bottom: 40px;
+        transition: max-height 300ms ease;
 
         @supports (-webkit-overflow-scrolling: touch) {
             padding-bottom: 30px;
@@ -703,7 +704,7 @@ div.searchable {
             max-height: 82vh;
             height: 82vh;
             min-height: 82vh;
-   
+
         }
 
         .countrys-wrap {
