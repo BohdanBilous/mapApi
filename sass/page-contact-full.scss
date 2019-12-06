@@ -672,7 +672,7 @@ div.searchable {
         position: absolute;
         top: auto;
         bottom: 0;
-        max-height: 33vh;
+        // max-height: 33vh;
         flex-wrap: wrap;
         align-items: flex-start;
         background-color: #f5f5f5;
@@ -696,10 +696,18 @@ div.searchable {
         }
 
         &.active-mob-p {
-            max-height: 85vh;
-            min-height: 70vh;
+            top: 0;
+            bottom: auto;
+            min-height: inherit;
+            top: 15vh;
+            // max-height: 85vh;
+            // min-height: 70vh;
         }
-
+        &.active-mob {
+            // height: 50vh;
+            overflow: scroll;
+            // transform: translateY(-50vh);
+        }
         .countrys-wrap {
             background-color: #f5f5f5;
 
@@ -742,11 +750,7 @@ div.searchable {
             }
         }
 
-        &.active-mob {
-            height: 50vh;
-            overflow: scroll;
-            // transform: translateY(-50vh);
-        }
+        
 
         .contacts-list {
             position: static;
@@ -792,7 +796,12 @@ div.searchable {
             margin-bottom: 0;
         }
     }
-
+    .form-active{
+        .countrys{
+            top: 15vh;
+            bottom: auto;
+        }
+    }
     .contact-form-container {
         position: relative;
         display: none;
@@ -851,7 +860,7 @@ div.searchable {
 
     .form-active {
         .countrys {
-            min-height: 83vh;
+            // min-height: 83vh;
 
             .searchable {
                 display: none;
