@@ -186,6 +186,12 @@
     margin-bottom: 0;
     padding-bottom: 0;
     border: none;
+    transition: color 300ms ease;
+    &:hover{
+&>*{
+  color: $colorGreen;
+}
+    }
   }
   a {
     margin: 0 0 0 auto;
