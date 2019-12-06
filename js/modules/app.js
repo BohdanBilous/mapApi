@@ -23,6 +23,7 @@ document.documentElement.className = document.documentElement.className.replace(
 );
 
 // For IE 11 ONLoad not work corectly
+document.querySelector('.logo').innerHTML= detectIE();
 // if (detectIE() == "11") {
 //   (function () {
 //     if (window.localStorage) {

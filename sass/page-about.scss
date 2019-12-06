@@ -181,18 +181,20 @@
 }
 
 .team-carosuel {
-  .team-item{
+  .team-item {
     width: 100% !important;
     margin-bottom: 0;
     padding-bottom: 0;
     border: none;
     transition: color 300ms ease;
-    &:hover{
-&>*{
-  color: $colorGreen;
-}
+
+    &:hover {
+      &>* {
+        color: $colorGreen;
+      }
     }
   }
+
   a {
     margin: 0 0 0 auto;
   }
@@ -660,10 +662,11 @@
     width: 602px;
     height: 298px;
     max-width: calc(53% - 50px);
-  
-.slide{
-  padding-right: 50px;
-}
+
+    .slide {
+      padding-right: 50px;
+    }
+
     ul {
       margin-bottom: 32px;
 
@@ -688,8 +691,9 @@
 
     .slide {
       padding-right: 50px;
+
       &>* {
-     
+
         width: 256px;
       }
 
