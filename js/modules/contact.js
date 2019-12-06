@@ -564,6 +564,8 @@ window.addEventListener("load", function () {
             var userAgent = window.navigator.userAgent;
 
             if ((userAgent.match(/iPad/i) || userAgent.match(/iPhone/i))) {
+                window.scrollTo(0, 0);
+                    document.body.scrollTop = 0;
                 setTimeout(function () {
                     inputContact.parentNode.parentNode.classList.add('active-mob-p');
                     inputContact.parentNode.classList.add('active-mob');
