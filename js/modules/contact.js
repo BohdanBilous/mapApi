@@ -563,7 +563,7 @@ window.addEventListener("load", function () {
         inputContact.addEventListener('click', () => {
             var userAgent = window.navigator.userAgent;
 
-            if ((userAgent.match(/iPad/i) || userAgent.match(/iPhone/i))) {
+            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
                 window.scrollTo(0, 0);
                 document.body.scrollTop = 0;
                 setTimeout(function () {
