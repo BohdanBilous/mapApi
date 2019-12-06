@@ -495,7 +495,9 @@
             height: 100%;
             max-width: 100%;
         }
-
+.play-button-wrap{
+    display: block;
+}
         .play-button-wrap {
             position: absolute;
             @extend .ctr;
@@ -976,9 +978,9 @@ margin-bottom: 110px;
         }
 
         .ml-layout-video {
-            // width: 100%;
+            width: 100%;
             max-width: 100%;
-            width: min-content;
+            // width: min-content;
 
         }
 
