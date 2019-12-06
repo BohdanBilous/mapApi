@@ -692,15 +692,15 @@ div.searchable {
         }
 
         @include iphoneX {
-            padding-bottom: calc(65px + env(safe-area-inset-bottom));
+            padding-bottom: calc(60pt + env(safe-area-inset-bottom));
         }
 
         @include iphoneXS {
-            padding-bottom: calc(65px + env(safe-area-inset-bottom));
+            padding-bottom: calc(60pt + env(safe-area-inset-bottom));
         }
 
         @include iphoneXMax {
-            padding-bottom: calc(65px + env(safe-area-inset-bottom));
+            padding-bottom: calc(60pt + env(safe-area-inset-bottom));
         }
 
         &.active-mob-p {
