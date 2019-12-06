@@ -3,10 +3,10 @@
 /* MODULE IMPORTS */
 import {
   html,
-  desktop,
-  mobile,
   exists,
+  tablet,
   findParent,
+  disableBodyScroll,
   animateSwitch
 } from "../generic-helpers";
 import { TabSwitcher } from "../tab-switcher";
@@ -48,24 +48,27 @@ window.addEventListener("load", function() {
       html.classList.remove("popup-close");
       animateSwitch(".popup .fade-in", "on", 1, 800);
       animateSwitch(".popup .move-from-right", "on", 65, 250);
+      if (tablet) disableBodyScroll(true, ".popup-side");
 
       loadInfoInPopup(button);
     });
   });
 
-
-  const closePopup = ()=>{
+  const closePopup = () => {
     html.classList.remove("popup-open");
     html.classList.add("popup-close");
     animateSwitch(".popup .fade-in", "off");
     animateSwitch(".popup .move-from-right", "off");
-   }
-   popupClose.addEventListener("click", () => {
-     closePopup();
-   });
-   popupBg.addEventListener("click", () => {
-     closePopup();
-   });
+    if (tablet) disableBodyScroll(false, ".popup-side");
+  };
+
+  popupClose.addEventListener("click", () => {
+    closePopup();
+  });
+
+  popupBg.addEventListener("click", () => {
+    closePopup();
+  });
 
   let loadInfoInPopup = button => {
     const block = findParent(button, "drop-block");

@@ -99,14 +99,9 @@
 
 // Popup Open / Close
 .popup-open {
-    overflow: hidden;
     
     &.popup-open-about {
         overflow: unset;
-    }
-
-    body {
-        overflow: hidden;
     }
 
     .popup {
