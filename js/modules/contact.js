@@ -564,18 +564,21 @@ window.addEventListener("load", function () {
 
             function fireEvents() {
                 return new Promise(function (resolve, reject) {
-                    inputContact.parentNode.parentNode.classList.add('active-mob-p');
-                    inputContact.parentNode.classList.add('active-mob');
+                    inputContact.parentNode.parentNode.classList.add('active-mob-p-load');
+                    inputContact.parentNode.classList.add('active-mob-load');
+                    inputContact.parentNode.parentNode.classList.add('active-mob-p-load');
+                    inputContact.parentNode.classList.add('active-mob-load');
                     resolve();
                 });
             }
 
             function second() {
-                pageHeader.scrollIntoView();
                 setTimeout((function () {
                     pageHeader.scrollIntoView();
                 }), 200);
                 setTimeout((function () {
+                    inputContact.parentNode.parentNode.classList.remove('active-mob-p-load');
+                    inputContact.parentNode.classList.remove('active-mob-load');
                     pageHeader.scrollIntoView();
                 }), 300);
                 setTimeout((function () {
