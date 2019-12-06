@@ -592,14 +592,11 @@ export const animateScroll = (elem, style, unit, from, to, time, prop,e) => {
     timer = setInterval(function (e) {
       var step = Math.min(1, (new Date().getTime() - start) / time);
       let toTop  = (from + step * (to - from));
-      if(toTop < 0){
-        toTop = 0;
-      }
 
       if (prop) {
-        elem.scrollTo(0,0)
+        elem[style] = toTop + unit;
       } else {
-        elem.scrollTo(0,0)
+        elem.style[style] = toTop + unit;
       }
 
       if (step === 1) {
@@ -609,9 +606,9 @@ export const animateScroll = (elem, style, unit, from, to, time, prop,e) => {
     }, 25);
 
   if (prop) {
-    elem.scrollTo(0,0)
+    elem[style] = from + unit;
   } else {
-    elem.scrollTo(0,0)
+    elem.style[style] = from + unit;
   }
 }
 
