@@ -566,8 +566,8 @@ window.addEventListener("load", function () {
                 return new Promise(function (resolve, reject) {
                     inputContact.parentNode.parentNode.classList.add('active-mob-p-load');
                     inputContact.parentNode.classList.add('active-mob-load');
-                    inputContact.parentNode.parentNode.classList.add('active-mob-p-load');
-                    inputContact.parentNode.classList.add('active-mob-load');
+                    inputContact.parentNode.parentNode.classList.add('active-mob-p');
+                    inputContact.parentNode.classList.add('active-mob');
                     resolve();
                 });
             }
@@ -592,11 +592,11 @@ window.addEventListener("load", function () {
 
 
             var userAgent = window.navigator.userAgent;
-            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+            // if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
             // window.scrollTo(0, 0);
             // document.body.scrollTop = 0;
             fireEvents().then(second);
-            }
+            // }
         });
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();
