@@ -108,7 +108,7 @@ window.addEventListener("load", function() {
       e = e || window.event;
       let target = e.target || e.srcElement;
       if (
-        !target.className.match(/\bmenu\b/) &&
+        !target.className.match(/\bmenu-wrap\b/) &&
         html.classList.contains("menu-open")
       ) {
         e.returnValue = false;
