@@ -457,6 +457,7 @@
     overflow: hidden;
     touch-action: none;
     overscroll-behavior: none;
+    -webkit-overflow-scrolling: auto;
     
     body {
         overflow: hidden;
