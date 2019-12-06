@@ -62,7 +62,6 @@ export class selectSearch {
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'flex';
         this.selectsContainer.parentNode.classList.add('active-mob');
         this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
-        this.selectsContainer.parentNode.parentNode.parentNode.classList.add('active-mob-p-top');
 
         // animateScroll();
     }
@@ -71,7 +70,6 @@ export class selectSearch {
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'none';
         this.selectsContainer.parentNode.classList.remove('active-mob');
         this.selectsContainer.parentNode.parentNode.classList.remove('active-mob-p');
-        this.selectsContainer.parentNode.parentNode.parentNode.remove.add('active-mob-p-top');
 
 
 
