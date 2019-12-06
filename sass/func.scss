@@ -703,3 +703,14 @@ $dotsLiWidth: 250px;
         content: " ";
     }
 }
+
+@mixin scrollbarVis {
+    &::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: rgba(0, 0, 0, .3);
+    }
+}

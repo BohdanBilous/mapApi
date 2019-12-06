@@ -945,6 +945,7 @@ $leftOffset: 270px;
 
     .tech-spec-drop {
         // @include hideScrollbar;
+        @include scrollbarVis;
         overflow-x: auto;
 
         ul li {
@@ -1123,14 +1124,7 @@ $leftOffset: 270px;
         overflow-x: auto;
         margin-right: -25px;
 
-        &::-webkit-scrollbar {
-            height: 4px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            border-radius: 3px;
-            background-color: rgba(0, 0, 0, .35);
-        }
+        @include scrollbarVis;
     }
 
     .mobile-scroll-mode.tare-wrap {
@@ -2338,6 +2332,7 @@ $leftOffset: 270px;
 
         .global-s-row .global-rewiew-wrap {
             // @include hideScrollbar;
+            @include scrollbarVis;
             width: 100%;
             overflow-x: scroll;
 
