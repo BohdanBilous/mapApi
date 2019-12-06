@@ -653,12 +653,12 @@ div.searchable {
     }
 
     .contact-main {
-        min-height: 100vh;
-        height: auto;
-        overflow: initial;
+        // min-height: 100vh;
+        // height: auto;
+        // overflow: initial;
 
         #map {
-            height: 100vh
+            height: 90vh
         }
 
 
@@ -686,6 +686,8 @@ div.searchable {
         border-top-right-radius: 10px;
         padding-bottom: 30px;
         // transition: max-height 300ms ease;
+.countrys-wrap{
+
 
         @supports (-webkit-overflow-scrolling: touch) {
             padding-bottom: 30px;
@@ -702,7 +704,7 @@ div.searchable {
         @include iphoneXMax {
             padding-bottom: calc(65px + env(safe-area-inset-bottom));
         }
-
+    }
         &.active-mob-p {
             max-height: 82vh;
             min-height: 82vh;
