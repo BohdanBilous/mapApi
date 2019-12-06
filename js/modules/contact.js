@@ -560,12 +560,9 @@ window.addEventListener("load", function () {
     const clickHandle = () => {
         // Button for close form
         formClose.addEventListener("click", () => closeForm());
-        inputContact.addEventListener('click', () => {
-
+        contactInput.addEventListener('click', () => {
             function fireEvents() {
                 return new Promise(function (resolve, reject) {
-                    inputContact.parentNode.parentNode.classList.add('active-mob-p-load');
-                    inputContact.parentNode.classList.add('active-mob-load');
                     inputContact.parentNode.parentNode.classList.add('active-mob-p');
                     inputContact.parentNode.classList.add('active-mob');
                     resolve();
@@ -580,17 +577,12 @@ window.addEventListener("load", function () {
                     pageHeader.scrollIntoView();
                 }), 300);
                 setTimeout((function () {
-                    inputContact.parentNode.parentNode.classList.remove('active-mob-p-load');
-                    inputContact.parentNode.classList.remove('active-mob-load');
                     pageHeader.scrollIntoView();
                 }), 400);
                 setTimeout((function () {
                     pageHeader.scrollIntoView();
                 }), 500);
             }
-
-
-
             var userAgent = window.navigator.userAgent;
             // if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
             // window.scrollTo(0, 0);

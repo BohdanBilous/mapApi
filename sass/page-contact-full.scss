@@ -708,10 +708,6 @@ div.searchable {
             min-height: 82vh;
         }
 
-        .active-mob-load.active-mob {
-     
-            opacity: 0;
-        }
 
         .active-mob {
             .searcheble-list {
@@ -721,7 +717,6 @@ div.searchable {
         }
 
         .searcheble-list {
-            opacity: 0;
             transition: opacity 200ms  ease;
             display: none !important;
         }
@@ -777,7 +772,6 @@ div.searchable {
                 background: none;
                 max-height: initial;
                 overflow: initial;
-                padding-bottom: 60px;
             }
 
             .notFound {
