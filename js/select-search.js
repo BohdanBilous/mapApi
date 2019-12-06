@@ -1,3 +1,8 @@
+/* MODULE IMPORTS */
+import {
+    animateScroll
+} from "./generic-helpers";
+
 export class selectSearch {
 
     constructor(selectsContainer, selectClose, emptyElement, imageIcon = false, secondList = false, callBackOnSelectChange) {
@@ -57,8 +62,7 @@ export class selectSearch {
         this.selectsContainer.querySelector(".searcheble-list").style.display = 'flex';
         this.selectsContainer.parentNode.classList.add('active-mob');
         this.selectsContainer.parentNode.parentNode.classList.add('active-mob-p');
-
-
+        animateScroll();
     }
     hideWraper() {
         this.selectsContainer.querySelector("ul").style.display = 'none';

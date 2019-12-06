@@ -585,14 +585,16 @@ export const ssHashLink = links => {
 
 export const animateScroll = () => {
   let i = 0;
-  let id = setInterval(frame, 50);
+  let id = setInterval(frame, 300);
 
   function frame() {
-    if (i == 400) {
+    if (i == 300) {
       clearInterval(id);
     } else {
-      i = i + 50;
+      i = i + 300;
       window.scrollTo(0, 0);
+      console.log(i)
     }
   }
+
 }

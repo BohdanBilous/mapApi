@@ -559,7 +559,7 @@ window.addEventListener("load", function () {
     const clickHandle = () => {
         // Button for close form
         formClose.addEventListener("click", () => closeForm());
-        contactInput.addEventListener("click", (e) => {
+        contactInput.addEventListener("focus", (e) => {
             e.preventDefault();
             // pageHeader.scrollIntoView({ 
             //     alignToTop:true,
@@ -573,7 +573,7 @@ window.addEventListener("load", function () {
             //       });
             // },150)
             closePersones();
-            animateScroll() ;
+            // animateScroll() ;
             return false;
 
    
