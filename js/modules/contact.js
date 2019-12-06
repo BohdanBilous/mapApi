@@ -575,8 +575,6 @@ window.addEventListener("load", function () {
             closePersones();
             // animateScroll() ;
             return false;
-
-   
         });
         searchClose.addEventListener("click", () => closePersones());
 
