@@ -561,20 +561,29 @@ window.addEventListener("load", function () {
         // Button for close form
         formClose.addEventListener("click", () => closeForm());
         inputContact.addEventListener('click', () => {
+
+            function timeout(ms) {
+                return new Promise(res => setTimeout(res, ms));
+            }
+
+            async function fireEvents() {
+                await timeout(400);
+                inputContact.parentNode.parentNode.classList.add('active-mob-p');
+                inputContact.parentNode.classList.add('active-mob');
+            }
+
+
             var userAgent = window.navigator.userAgent;
 
             if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-                setTimeout(function () {
-                    window.scrollTo(0, 0);
-                    document.body.scrollTop = 0;
+                // window.scrollTo(0, 0);
+                // document.body.scrollTop = 0;
+                fireEvents().then(() => {
                     pageHeader.scrollIntoView({
                         alignToTop: true,
                         behavior: 'smooth'
                     });
-                    inputContact.parentNode.parentNode.classList.add('active-mob-p');
-                    inputContact.parentNode.classList.add('active-mob');
-          
-                }, 350);
+                });
             }
 
         });
