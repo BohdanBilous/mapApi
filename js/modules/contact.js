@@ -580,7 +580,7 @@ window.addEventListener("load", function() {
         //     alignToTop:true,
         //     behavior: 'smooth' 
         //   });
-          animateScroll(document.scrollingElement || document.documentElement, "scrollTop", "", 0, 0, 500, true,e);
+
         // setTimeout(function(){
         //     pageHeader.scrollIntoView({ 
         //         alignToTop:true,
@@ -588,6 +588,7 @@ window.addEventListener("load", function() {
         //       });
         // },150)
         closePersones();
+        return false;
     });
     searchClose.addEventListener("click", () => closePersones());
 

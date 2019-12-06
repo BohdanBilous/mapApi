@@ -652,9 +652,12 @@ div.searchable {
         min-height: 100vh;
         height: auto;
         overflow: initial;
-
         #map {
             height: 100vh
+        }
+        &.active-mob-p-d{
+          max-height: 100vh;
+          overflow: hidden;      
         }
     }
 
@@ -702,6 +705,7 @@ div.searchable {
             top: 15vh;
             // max-height: 85vh;
             // min-height: 70vh;
+         
         }
         &.active-mob {
             // height: 50vh;
