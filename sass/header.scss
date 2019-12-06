@@ -455,6 +455,7 @@
 
 .menu-open {
     overflow: hidden;
+    touch-action: none;
     
     body {
         overflow: hidden;
