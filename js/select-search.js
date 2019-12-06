@@ -27,7 +27,7 @@ export class selectSearch {
         input_val = container.querySelector("input").value.toUpperCase();
         li = container.querySelectorAll("ul li");
         li.forEach(element => {
-            if (element.innerHTML.toUpperCase().indexOf(input_val) > -1) {
+            if (element.querySelector('span').innerHTML.toUpperCase().indexOf(input_val) > -1) {
                 element.classList.remove('not-active');
                 element.classList.add('active');
             } else {

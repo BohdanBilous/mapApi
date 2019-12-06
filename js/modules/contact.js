@@ -584,11 +584,9 @@ window.addEventListener("load", function () {
                 }), 500);
             }
             var userAgent = window.navigator.userAgent;
-            // if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
-            // window.scrollTo(0, 0);
-            // document.body.scrollTop = 0;
-            fireEvents().then(second);
-            // }
+            if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
+                fireEvents().then(second);
+            }
         });
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();
