@@ -562,31 +562,29 @@ window.addEventListener("load", function () {
         formClose.addEventListener("click", () => closeForm());
         inputContact.addEventListener('click', () => {
 
-            function timeout(ms) {
-                return new Promise(res => setTimeout(res, ms));
-            }
-
-            async function fireEvents() {
-                inputContact.parentNode.parentNode.classList.add('active-mob-p');
-                inputContact.parentNode.classList.add('active-mob');
-                await timeout(400);
-
-            }
-
+            function fireEvents() {
+                return new Promise(function(resolve, reject) {
+                  setTimeout((function() {
+                    inputContact.parentNode.parentNode.classList.add('active-mob-p');
+                    inputContact.parentNode.classList.add('active-mob');
+                 }), 400);
+             });
+             }
+             function second() {
+                pageHeader.scrollIntoView({
+                    alignToTop: true,
+                    behavior: 'smooth' 
+                });
+             }
+        
+     
 
             var userAgent = window.navigator.userAgent;
-
             if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
                 // window.scrollTo(0, 0);
                 // document.body.scrollTop = 0;
-                fireEvents().then(() => {
-                    pageHeader.scrollIntoView({
-                        alignToTop: true,
-                        behavior: 'smooth'
-                    });
-                });
+                fireEvents().then(second);
             }
-
         });
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();
