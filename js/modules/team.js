@@ -5,7 +5,9 @@ import {
   html,
   exists,
   scrollFromScreen,
-  loadContent
+  loadContent,
+  tablet,
+  disableBodyScroll
 } from "../generic-helpers";
 
 window.addEventListener("load", function() {
@@ -29,20 +31,21 @@ window.addEventListener("load", function() {
       teamMemberId = teamMember.getAttribute("id");
       html.classList.add("popup-open");
       html.classList.remove("popup-close");
-
+      if (tablet) disableBodyScroll(true, ".popup-side");
       loadPopupInfo(teamMemberId);
     });
   });
 
-  const closePopup = ()=>{
+  const closePopup = () => {
     html.classList.remove("popup-open");
     html.classList.add("popup-close");
-  }
+    if (tablet) disableBodyScroll(false, ".popup-side");
+  };
+
   popupClose.addEventListener("click", () => {
     closePopup();
   });
   popupBg.addEventListener("click", () => {
     closePopup();
   });
-
 });
