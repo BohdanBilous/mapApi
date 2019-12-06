@@ -24,17 +24,17 @@ document.documentElement.className = document.documentElement.className.replace(
 
 // For IE 11 ONLoad not work corectly
 document.querySelector('.logo').innerHTML= detectIE();
-// if (detectIE() == "11") {
-//   (function () {
-//     if (window.localStorage) {
-//       if (!localStorage.getItem('firstLoad')) {
-//         localStorage['firstLoad'] = true;
-//         window.location.reload();
-//       } else
-//         localStorage.removeItem('firstLoad');
-//     }
-//   })();
-// }
+if (detectIE() === "11") {
+  (function () {
+    if (window.localStorage) {
+      if (!localStorage.getItem('firstLoad')) {
+        localStorage['firstLoad'] = true;
+        window.location.reload();
+      } else
+        localStorage.removeItem('firstLoad');
+    }
+  })();
+}
 
 window.addEventListener("load", function() {
   /* ------------------
