@@ -464,6 +464,10 @@
         overflow: hidden;
         touch-action: none;
         overscroll-behavior: none;
+
+        @include tablet {
+            position: fixed;
+        }
     }
 
     .menu-wrap {
