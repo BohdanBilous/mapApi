@@ -575,10 +575,13 @@ window.addEventListener("load", function () {
 
             if (userAgent.match(/iPad/i) || userAgent.match(/iPhone/i)) {
                 contactInput.parentNode.parentNode.parentNode.classList.remove('active-mob-p');
+                contactInput.parentNode.classList.add('active-mob');
+                window.scrollTo(0, 0);
+                document.body.scrollTop = 0;
                 setTimeout(function () {
-                    window.scrollTo(0, 0);
-                    document.body.scrollTop = 0;
+           
                     contactInput.parentNode.parentNode.parentNode.classList.add('active-mob-p');
+                    contactInput.parentNode.classList.add('active-mob');
                     // pageHeader.scrollIntoView({
                     //     alignToTop: true,
                     //     behavior: 'smooth'
