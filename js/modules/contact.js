@@ -559,13 +559,17 @@ window.addEventListener("load", function () {
     const clickHandle = () => {
         // Button for close form
         formClose.addEventListener("click", () => closeForm());
-        contactInput.addEventListener("click", (e) => {
+        contactInput.addEventListener("blur", (e) => {
             e.preventDefault();
-            pageHeader.scrollIntoView({ 
-                alignToTop:true,
-                behavior: 'smooth' 
-              });
-
+            // pageHeader.scrollIntoView({ 
+            //     alignToTop:true,
+            //     behavior: 'smooth' 
+            //   });
+              setTimeout(function() {
+                if (!document.activeElement.getAttribute('type')=== 'text') {
+                  window.scrollTo(0,0);
+                }
+              }, 0);
             // setTimeout(function(){
             //     pageHeader.scrollIntoView({ 
             //         alignToTop:true,

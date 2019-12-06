@@ -701,9 +701,10 @@ div.searchable {
 
         &.active-mob-p {
             position: fixed;
-            max-height: 75vh;
-            min-height: 70vh;
-            top: 30vh;
+            max-height: 82vh;
+            height: 82vh;
+            min-height: 82vh;
+            top: 18vh;
             bottom: auto;
         }
 
