@@ -5,6 +5,7 @@
 
 .contact-main {
     overflow: hidden;
+    touch-action: auto !important;
 }
 
 .contact-back-container {
@@ -656,6 +657,8 @@ div.searchable {
         #map {
             height: 100vh
         }
+
+
     }
 
 
@@ -678,34 +681,55 @@ div.searchable {
         background-color: #f5f5f5;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+        // padding-bottom: 40px;
+        transition: max-height 300ms ease;
 
         @supports (-webkit-overflow-scrolling: touch) {
-            padding-bottom: 20px;
+            padding-bottom: 30px;
         }
 
         @include iphoneX {
-            padding-bottom: calc(55px + env(safe-area-inset-bottom));
+            padding-bottom: calc(65px + env(safe-area-inset-bottom));
         }
 
         @include iphoneXS {
-            padding-bottom: calc(55px + env(safe-area-inset-bottom));
+            padding-bottom: calc(65px + env(safe-area-inset-bottom));
         }
 
         @include iphoneXMax {
-            padding-bottom: calc(55px + env(safe-area-inset-bottom));
+            padding-bottom: calc(65px + env(safe-area-inset-bottom));
         }
 
         &.active-mob-p {
-            max-height: 85vh;
-            min-height: 70vh;
-        }
+            max-height: 82vh;
+            height: 82vh;
+            min-height: 82vh;
 
+        }
+       .active-mob {
+            .searcheble-list{
+                display: flex !important;
+            }
+        }
+        .searcheble-list {
+            display: none !important;
+        }
         .countrys-wrap {
             background-color: #f5f5f5;
 
             .searchable {
                 margin-right: 0;
+
+                .searcheble-list {
+           
+                    border-radius: 0;
+
+                }
             }
+        }
+
+        .countrys-wrap {
+            padding-bottom: 0;
         }
 
         .searchable {
@@ -731,10 +755,15 @@ div.searchable {
                 transition: padding 200ms ease;
             }
 
+            .searcheble-list {
+                // padding-top: 42px;
+            }
+
             ul {
                 background: none;
                 max-height: initial;
                 overflow: initial;
+                padding-bottom: 60px;
             }
 
             .notFound {
@@ -742,12 +771,7 @@ div.searchable {
             }
         }
 
-        &.active-mob {
-            height: 50vh;
-            overflow: scroll;
-            // transform: translateY(-50vh);
-        }
-
+   
         .contacts-list {
             position: static;
             display: none;
@@ -756,6 +780,7 @@ div.searchable {
             padding: 0 21px;
             height: auto;
             background-color: #f5f5f5;
+            // padding-top: 42px;
 
             &.active {
                 display: flex;
@@ -858,7 +883,7 @@ div.searchable {
             }
 
             .countrys-wrap {
-                padding-top: 40px;
+                padding-top: 0;
                 padding-bottom: 0;
             }
         }

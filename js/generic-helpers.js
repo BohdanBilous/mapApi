@@ -584,16 +584,21 @@ export const ssHashLink = links => {
 // Animate scroll
 
 export const animateScroll = () => {
-  let i = 0;
-  let id = setInterval(frame, 50);
+  // let i = 0;
+  // let id = setInterval(frame, 300);
 
-  function frame() {
-    if (i == 400) {
-      clearInterval(id);
-    } else {
-      i = i + 50;
-      window.scrollTo(0, 0);
-      console.log(i)
-    }
-  }
+  // function frame() {
+  //   if (i == 300) {
+  //     clearInterval(id);
+  //   } else {
+  //     i = i + 300;
+  //     window.scrollTo(0, 0);
+  //     console.log(i)
+  //   }
+  // }
+
+setTimeout(function(){
+  window.scrollTo(0, 0);
+},300);
+
 }
