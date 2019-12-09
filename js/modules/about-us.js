@@ -42,6 +42,7 @@ window.addEventListener("load", function () {
         } = props
         const playVideo = (e)=>{
             isInView(videoElement) ? videoElement.play() : videoElement.pause();
+            isInView(videoElement) ? document.querySelector('.ab-f').innerHTML = 'reched ' :  document.querySelector('.ab-f').innerHTML = 'not reched ' ;
         }
         videoElement.pause();
         if(window.innerWidth <= 768){
