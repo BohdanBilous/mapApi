@@ -8,42 +8,35 @@ import {
   exists,
   scrollFromScreen
 } from "../generic-helpers";
-import {
-  SolutionsInd
-} from "../solutions-ind";
-import {
-  SuperSlider
-} from "../super-slider";
-import {
-  CursorFader
-} from "../fader-cursor";
-import {
-  SectionScroll
-} from "../section-scroll";
-import {
-  ImageCursor
-} from "../image-cursor";
-import {
-  VideoLoad
-} from "../video-lazy-load";
-import {
-  MediaLoader
-} from "../media-loader";
+import { SolutionsInd } from "../solutions-ind";
+import { SuperSlider } from "../super-slider";
+import { CursorFader } from "../fader-cursor";
+import { SectionScroll } from "../section-scroll";
+import { ImageCursor } from "../image-cursor";
+import { VideoLoad } from "../video-lazy-load";
+import { MediaLoader } from "../media-loader";
 
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
   // Main Screen Height Tablet
   if (tablet && exists(".screen-main")) {
+    let lastOrientation = -1;
+
     const setScreenHeight = () => {
-      document.querySelector(
-        ".screen-main"
-      ).style.height = `${window.innerHeight}px`;
+      console.log(window.orientation, lastOrientation);
+      if (window.orientation != lastOrientation) {
+        console.log(window.innerHeight);
+        document.querySelector(
+          ".screen-main"
+        ).style.height = `${window.innerHeight}px`;
+        lastOrientation = window.orientation;
+      }
     };
 
     setScreenHeight();
 
-    // window.addEventListener("orientationchange", function() {
-    //   setScreenHeight();
-    // });
+    window.addEventListener("orientationchange", function() {
+      setTimeout(setScreenHeight, 200);
+    });
   }
 
   // Solutions
@@ -77,7 +70,7 @@ window.addEventListener("load", function () {
       let moveValue =
         left -
         ((mouseX - (parseInt(obj.offsetWidth) / 1 + left)) / containerWidth) *
-        speed;
+          speed;
 
       obj.style.cssText = "transform: translateX(" + moveValue + "px)";
     }

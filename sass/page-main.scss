@@ -10,7 +10,10 @@
 
     @include tablet {
         background-image: url(../images/screen-bg.jpg);
-        background-position: 50% -30px;
+        
+        @include port {
+            background-size: auto 100%;
+        }
     }
 
     @media screen and (max-width: 768px) and (orientation: portrait) {
