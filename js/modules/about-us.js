@@ -36,65 +36,62 @@ window.addEventListener("load", function () {
     new SuperSlider(`.fader-saving`, "fader");
     new SuperSlider(`.team-carosuel`, "carousel");
 
-    new VideoLoad(".recycling-video.bg-img", false, false, true, true, true, function (props) {
-        const {
-            videoElement
-        } = props
-        const playVideo = (e)=>{
-            isInView(videoElement) ? videoElement.play() : videoElement.pause();
-            isInView(videoElement) ? document.querySelector('.ab-f').innerHTML = 'reched ' :  document.querySelector('.ab-f').innerHTML = 'not reched ' ;
-        }
-        videoElement.pause();
-        if(window.innerWidth <= 768){
-            window.addEventListener('touchmove', (e)=>     isInView(videoElement) ? simulateClick(videoElement) : videoElement.pause());
-        }else{
-            window.addEventListener('scroll',  (e)=> playVideo(e));
-        }
-      
-        let simulateClick = function (elem) {
-            // Create our event (with options)
-            var evt = new MouseEvent('click', {
-                bubbles: true,
-                cancelable: true,
-                view: window
-            });
-            videoElement.play() 
-            // If cancelled, don't dispatch our event
-            var canceled = !elem.dispatchEvent(evt);
-        };
-    
-    });
+    // new VideoLoad(".recycling-video.bg-img", false, false, true, true, true, function (props) {
+    const videoElement = document.querySelector('.recycling-video video')
+    const playVideo = (e) => {
+        isInView(videoElement) ? videoElement.play() : videoElement.pause();
+    }
+    videoElement.pause();
+    if (window.innerWidth <= 768) {
+        window.addEventListener('touchmove', (e) => playVideo(e));
+    } else {
+        window.addEventListener('scroll', (e) => playVideo(e));
+    }
+
+    // let simulateClick = function (elem) {
+    //     // Create our event (with options)
+    //     var evt = new MouseEvent('click', {
+    //         bubbles: true,
+    //         cancelable: true,
+    //         view: window
+    //     });
+    //     videoElement.play() 
+    //     // If cancelled, don't dispatch our event
+    //     var canceled = !elem.dispatchEvent(evt);
+    // };
+
+    // });
 
     const teamMembers = document.querySelectorAll(".team-item");
     const popupClose = document.querySelector(".popup .btn-close");
     const popupBg = document.querySelector(".popup .popup-bg");
     const popupLoadBlock = document.querySelector(".popup .team-member-load");
     let teamMemberId;
-  
+
     let loadPopupInfo = () => {
-      loadContent(popupLoadBlock, `_load-team-info.html`);
-      // loadContent(popupLoadBlock, `_load-team-info-${teamMemberId}.html`);
+        loadContent(popupLoadBlock, `_load-team-info.html`);
+        // loadContent(popupLoadBlock, `_load-team-info-${teamMemberId}.html`);
     };
-  
+
     teamMembers.forEach(teamMember => {
-      teamMember.addEventListener("click", () => {
-        teamMemberId = teamMember.getAttribute("id");
-        html.classList.add("popup-open","popup-open-about");
-        html.classList.remove("popup-close");
-  
-        loadPopupInfo(teamMemberId);
-      });
+        teamMember.addEventListener("click", () => {
+            teamMemberId = teamMember.getAttribute("id");
+            html.classList.add("popup-open", "popup-open-about");
+            html.classList.remove("popup-close");
+
+            loadPopupInfo(teamMemberId);
+        });
     });
-  
-    const closePopup = ()=>{
-      html.classList.remove("popup-open","popup-open-about");
-      html.classList.add("popup-close");
+
+    const closePopup = () => {
+        html.classList.remove("popup-open", "popup-open-about");
+        html.classList.add("popup-close");
     }
     popupClose.addEventListener("click", () => {
-      closePopup();
+        closePopup();
     });
     popupBg.addEventListener("click", () => {
-      closePopup();
+        closePopup();
     });
 
 });

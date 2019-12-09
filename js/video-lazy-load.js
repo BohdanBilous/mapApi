@@ -47,7 +47,7 @@ export class VideoLoad {
     }
     if (this.controls) this.videoElement.controls = true;
     if (this.autoplay) this.videoElement.autoplay = true;
-    if (this.muted) this.videoElement.setAttribute("muted", "true");; 
+    if (this.muted) this.videoElement.addEventListener('canplay', () => this.muted = true);
     if (this.loop) this.videoElement.loop = true;
     this.videoElement.setAttribute("playsinline", "true");
   }
