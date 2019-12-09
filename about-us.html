@@ -569,8 +569,14 @@
         </div>
         <!-- VIDEO BLOCK -->
         <div class="recycling-video-wrap">
-            <div class="recycling-video " >
-                <video src="videos/AB_1.mp4"  loop muted playsinline poster="images/AB_1.jpg"></video>
+            <div class="recycling-video ">
+                <video src="videos/AB_1.mp4" autoplay playsinline muted loop poster="images/AB_1.jpg">
+                    <source src="videos/AB_1.mp4">
+                    <img class="only-mobile" src="images/gif_video.gif" alt="video">
+                </video>
+                <button type="button" class="play-button-wrap">
+                    <div class="play trans"></div>
+                </button>
             </div>
 
         </div>

@@ -246,6 +246,7 @@
         &>div {
             // transition: all 20ms linear;
             will-change: left, top;
+            z-index: 1;
         }
     }
 

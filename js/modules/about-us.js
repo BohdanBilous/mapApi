@@ -37,7 +37,9 @@ window.addEventListener("load", function () {
     new SuperSlider(`.team-carosuel`, "carousel");
 
     // new VideoLoad(".recycling-video.bg-img", false, false, true, true, true, function (props) {
-    const videoElement = document.querySelector('.recycling-video video')
+    const videoElement = document.querySelector('.recycling-video video');
+    const videoElementPlay = document.querySelector('.recycling-video .play-button-wrap')
+
     const playVideo = (e) => {
         isInView(videoElement) ? videoElement.play() : videoElement.pause();
     }
@@ -47,7 +49,10 @@ window.addEventListener("load", function () {
     } else {
         window.addEventListener('scroll', (e) => playVideo(e));
     }
-
+    videoElementPlay.addEventListener('click',function(){
+        this.classList.add('active')
+        videoElement.play()
+    });
     // let simulateClick = function (elem) {
     //     // Create our event (with options)
     //     var evt = new MouseEvent('click', {
@@ -55,11 +60,12 @@ window.addEventListener("load", function () {
     //         cancelable: true,
     //         view: window
     //     });
-    //     videoElement.play() 
+
     //     // If cancelled, don't dispatch our event
     //     var canceled = !elem.dispatchEvent(evt);
     // };
-
+    // simulateClick('')
+    videoElementPlay.click();
     // });
 
     const teamMembers = document.querySelectorAll(".team-item");
