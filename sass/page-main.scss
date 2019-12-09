@@ -10,6 +10,7 @@
 
     @include tablet {
         background-image: url(../images/screen-bg.jpg);
+        background-position: 50% -30px;
     }
 
     @media screen and (max-width: 768px) and (orientation: portrait) {
@@ -1034,8 +1035,6 @@ $animateDur: 0.30s;
             background-color: $colorBorder;
         }
 
-
-
         li {
             min-width: $dotsLiWidth;
             display: inline-block;
@@ -1123,6 +1122,13 @@ $animateDur: 0.30s;
 }
 
 @include tablet {
+
+    .mission-fader {
+        .slides {
+            height: 570px;
+        }
+    }
+
     .fader {
         display: block;
         padding-top: 40px;
@@ -1164,10 +1170,14 @@ $animateDur: 0.30s;
 }
 
 @media screen and (max-width: 800px) {
-    .fader {
-        .slides {
-            height: 400px;
+
+    .mission-fader {
+        .btn-contact-us {
+            margin-left: 230px;
         }
+    }
+
+    .fader {
 
         .slider-dots {
 
@@ -1192,9 +1202,9 @@ $animateDur: 0.30s;
             }
         }
 
-        .btn-contact-us {
-            margin-left: calc((#{$dotsLiWidth} - 100px) + (#{$dotsLiWidth} - 20px));
-        }
+        // .btn-contact-us {
+        //     margin-left: calc((#{$dotsLiWidth} - 100px) + (#{$dotsLiWidth} - 20px));
+        // }
     }
 }
 
@@ -1296,6 +1306,7 @@ $animateDur: 0.30s;
     -moz-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
+
     &::before,
     &::after {
         @extend .ps;
