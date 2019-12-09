@@ -49,7 +49,7 @@ export class VideoLoad {
     if (this.autoplay) this.videoElement.autoplay = true;
     if (this.muted) this.videoElement.muted = true;
     if (this.loop) this.videoElement.loop = true;
-    this.videoElement.setAttribute('webkit-playsinline', 'webkit-playsinline');
+    this.videoElement.setAttribute("playsinline", "");
   }
 
   addPoster() {
