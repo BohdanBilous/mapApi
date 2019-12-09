@@ -593,7 +593,7 @@ window.addEventListener("load", function () {
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();
             closePersones();
-    
+
             return false;
         });
         searchClose.addEventListener("click", () => closePersones());
@@ -619,12 +619,16 @@ window.addEventListener("load", function () {
         });
 
         //Toogle Popups
-        markersList.map(item =>
+        markersList.map(item => {
+            item.element.classList.remove('mainPopup')
             item.on("click", e => {
-                markersList.map(items => items.closePopup());
+                item.element.classList.add('mainPopup');
+                markersList.map(items => {
+                    items.closePopup()
+                });
                 item.openPopup();
             })
-        );
+        });
         countysList.forEach(item =>
             item.addEventListener("click", () => {
                 contactInput.parentNode.classList.remove("with-icon");
