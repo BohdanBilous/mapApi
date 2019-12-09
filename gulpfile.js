@@ -354,7 +354,7 @@ const buildProd = gulp.series(
   "sass",
   gulp.parallel("css", "workers", html, jsProd, "favicon", "vendor", "sw")
 );
-gulp.tas 
+gulp.task("build:prod", buildProd);
 
 const defaultTask = gulp.series(build, gulp.parallel("server", "watch"));
 gulp.task("default", defaultTask);
