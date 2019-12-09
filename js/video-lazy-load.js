@@ -40,10 +40,10 @@ export class VideoLoad {
   }
 
   videoSetAttr() {
-
     if (this.width <= 1150 && !this.loadMobile) {
       this.videoElement.autoplay = false;
       this.videoElement.load();
+
       return
     }
     if (this.controls) this.videoElement.controls = true;

@@ -40,7 +40,17 @@ window.addEventListener("load", function () {
         const {
             videoElement
         } = props
-        window.addEventListener('scroll', () => (isInView(videoElement)) ? videoElement.play() : videoElement.pause())
+        const playVideo = (e)=>{
+            isInView(videoElement) ? videoElement.play() : videoElement.pause();
+            console.log(e) 
+        }
+        if(window.innerWidth <= 768){
+            window.addEventListener('touchmove', (e)=> playVideo(e));
+        }else{
+            window.addEventListener('scroll',  (e)=> playVideo(e));
+        }
+      
+       
     });
 
     const teamMembers = document.querySelectorAll(".team-item");
