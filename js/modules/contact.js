@@ -461,6 +461,7 @@ window.addEventListener("load", function () {
                 } = list[i];
                 openForm(office);
                 item.classList.add("active");
+                item.parentNode.classList.add("off-scroll");
                 contactList.scroll(0, 0);
                 pageHeader.scrollIntoView();
             });
@@ -527,7 +528,7 @@ window.addEventListener("load", function () {
                 "select option"
             ).innerText;
         });
-
+        contactList.classList.remove('off-scroll');
         // contactInput.parentNode.classList.remove("with-icon");
         // contactInput.value = "";
     };
@@ -536,6 +537,7 @@ window.addEventListener("load", function () {
     const closePersones = () => {
         const contactList = document.querySelector(".contacts-list");
         contactList.classList.remove("active");
+        contactList.classList.remove('off-scroll');
     };
     // Remove all markers
     const deletePoints = () => {
@@ -590,25 +592,8 @@ window.addEventListener("load", function () {
         });
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();
-            // pageHeader.scrollIntoView({ 
-            //     alignToTop:true,
-            //     behavior: 'smooth' 
-            //   });
-            // console.log(contactInput.parentNode.parentNode.parentNode)
-            // contactInput.parentNode.parentNode.parentNode.classList.add('active-mob-p');
-            // pageHeader.scrollIntoView({
-            //     alignToTop: true,
-            //     behavior: 'smooth'
-            // });
-
-            // setTimeout(function(){
-            //     pageHeader.scrollIntoView({ 
-            //         alignToTop:true,
-            //         behavior: 'smooth' 
-            //       });
-            // },150)
             closePersones();
-            // animateScroll() ;
+    
             return false;
         });
         searchClose.addEventListener("click", () => closePersones());
