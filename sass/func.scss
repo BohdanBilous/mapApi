@@ -706,6 +706,7 @@ $dotsLiWidth: 250px;
 
 @mixin scrollbarVis {
     &::-webkit-scrollbar {
+        opacity: 1 !important;
         height: 4px;
     }
 
