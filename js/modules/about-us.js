@@ -60,11 +60,12 @@ window.addEventListener("load", function () {
     //         cancelable: true,
     //         view: window
     //     });
-    //     videoElement.play() 
+
     //     // If cancelled, don't dispatch our event
     //     var canceled = !elem.dispatchEvent(evt);
     // };
-
+    // simulateClick('')
+    videoElementPlay.click();
     // });
 
     const teamMembers = document.querySelectorAll(".team-item");
