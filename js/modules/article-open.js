@@ -2,7 +2,8 @@
 
 /* MODULE IMPORTS */
 import {
-  exists
+  exists,
+  desktop
 } from '../generic-helpers';
 import {
   SuperSlider
@@ -12,6 +13,7 @@ import {
   MediaLoader
 } from '../media-loader';
 
+import { ImageCursor } from "../image-cursor";
 
 window.addEventListener("load", function () {
 
@@ -54,5 +56,27 @@ window.addEventListener("load", function () {
 
   // Mission Fader
   let missinFader = new SuperSlider(".article-open-slider", "fader");
+
+  
+  // Events Cursor Image
+  if (desktop) {
+    const eventsTitles = document.querySelectorAll(
+      ".events-ttl-section"
+    );
+
+    eventsTitles.forEach(eventsTitle => {
+      let eventsWrapOffsetTop = document.querySelector(".events-table")
+        .offsetTop;
+      let eventsWrapOffsetLeft = document.querySelector(".events-table-cell-m")
+        .offsetLeft;
+
+      new ImageCursor(
+        eventsTitle,
+        ".events-img",
+        eventsWrapOffsetLeft,
+        eventsWrapOffsetTop + window.innerHeight
+      );
+    });
+  }
 
 });
