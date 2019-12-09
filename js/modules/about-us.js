@@ -41,17 +41,28 @@ window.addEventListener("load", function () {
             videoElement
         } = props
         const playVideo = (e)=>{
-            isInView(videoElement) ? videoElement.play() : videoElement.pause();
-            isInView(videoElement) ? document.querySelector('.ab-f').innerHTML = 'reched ' :  document.querySelector('.ab-f').innerHTML = 'not reched ' ;
+            // isInView(videoElement) ? videoElement.play() : videoElement.pause();
+            // isInView(videoElement) ? document.querySelector('.ab-f').innerHTML = 'reched ' :  document.querySelector('.ab-f').innerHTML = 'not reched ' ;
         }
         videoElement.pause();
         if(window.innerWidth <= 768){
-            window.addEventListener('touchmove', (e)=> playVideo(e));
+            window.addEventListener('touchmove', (e)=>     isInView(videoElement) ? simulateClick(videoElement) : videoElement.pause());
         }else{
             window.addEventListener('scroll',  (e)=> playVideo(e));
         }
       
-       
+        let simulateClick = function (elem) {
+            // Create our event (with options)
+            var evt = new MouseEvent('click', {
+                bubbles: true,
+                cancelable: true,
+                view: window
+            });
+            videoElement.play() 
+            // If cancelled, don't dispatch our event
+            var canceled = !elem.dispatchEvent(evt);
+        };
+    
     });
 
     const teamMembers = document.querySelectorAll(".team-item");
