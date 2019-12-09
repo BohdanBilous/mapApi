@@ -7,7 +7,7 @@ export class VideoLoad {
     videoWrapSelector,
     controls,
     autoplay = false,
-    muted,
+    muted = true,
     loop = true,
     loadMobile = true,
     callback = null,
@@ -17,7 +17,7 @@ export class VideoLoad {
     this.videoPoster = this.videoWrap.dataset.poster;
     this.controls = controls || false;
     this.autoplay = autoplay;
-    this.muted = muted || true;
+    this.muted = muted;
     this.loop = loop;
     this.loadMobile = loadMobile;
     this.videoElement = null;
@@ -40,7 +40,6 @@ export class VideoLoad {
   }
 
   videoSetAttr() {
-
     if (this.width <= 1150 && !this.loadMobile) {
       this.videoElement.autoplay = false;
       this.videoElement.load();
@@ -48,8 +47,9 @@ export class VideoLoad {
     }
     if (this.controls) this.videoElement.controls = true;
     if (this.autoplay) this.videoElement.autoplay = true;
-    if (this.muted) this.videoElement.muted = true;
+    if (this.muted) this.videoElement.addEventListener('canplay', () => this.muted = true);
     if (this.loop) this.videoElement.loop = true;
+    this.videoElement.setAttribute("playsinline", "true");
   }
 
   addPoster() {

@@ -538,23 +538,33 @@ export const scrollXHorizontal = (el, wrapper) => {
   });
 };
 // In View
-export const isInView = el => {
-  const scroll = window.scrollY || window.pageYOffset;
-  const boundsTop = el.getBoundingClientRect().top + scroll;
+// export const isInView = el => {
+//   const scroll = window.scrollY || window.pageYOffset;
+//   const boundsTop = el.getBoundingClientRect().top + scroll;
 
-  const viewport = {
-    top: scroll,
-    bottom: scroll + window.innerHeight
-  };
+//   const viewport = {
+//     top: scroll,
+//     bottom: scroll + window.innerHeight
+//   };
 
-  const bounds = {
-    top: boundsTop,
-    bottom: boundsTop + el.clientHeight
-  };
+//   const bounds = {
+//     top: boundsTop,
+//     bottom: boundsTop + el.clientHeight
+//   };
 
+//   return (
+//     (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
+//     (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
+//   );
+// };
+
+export const isInView = function (elem) {
+  var bounding = elem.getBoundingClientRect();
   return (
-    (bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom) ||
-    (bounds.top <= viewport.bottom && bounds.top >= viewport.top)
+      bounding.top >= 0 &&
+      bounding.left >= 0 &&
+      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
