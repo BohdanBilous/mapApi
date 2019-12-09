@@ -461,7 +461,7 @@ window.addEventListener("load", function () {
                 } = list[i];
                 openForm(office);
                 item.classList.add("active");
-                // contactList.scroll(0, 0);
+                contactList.scroll(0, 0);
                 pageHeader.scrollIntoView();
             });
         });

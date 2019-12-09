@@ -631,7 +631,11 @@ div.searchable {
     }
 
 }
-
+.form-active{
+    .contacts-list{
+        pointer-events: none;
+    }
+}
 @include laptop {
     .contact-form-container {
         padding-top: 110px;
@@ -900,11 +904,19 @@ div.searchable {
             }
         }
 
-        .contacts-list .contacts-item img {
-            width: 65px;
-            height: 65px;
-            min-width: 65px;
-            min-height: 65px;
+        .contacts-list{
+
+            &.active{
+                pointer-events: none;
+            }
+            .contacts-item {
+                img {
+                    width: 65px;
+                    height: 65px;
+                    min-width: 65px;
+                    min-height: 65px;
+                }
+            }
         }
 
         .contact-form-container {

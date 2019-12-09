@@ -531,6 +531,7 @@ export const scrollXHorizontal = (el, wrapper) => {
   let element = document.querySelector(el);
   let wrap = document.querySelector(wrapper);
   element.addEventListener("wheel", function(e) {
+    console.log(wrap)
     if (e.deltaY > 0) wrap.scrollLeft += 25;
     else wrap.scrollLeft -= 25;
   });
