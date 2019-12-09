@@ -1394,7 +1394,7 @@
     }
 
     .years-slider-fader {
-      padding-top: 198px;
+      padding-top: 138px;
 
       h3 {
         font-size: 27px;
@@ -1414,9 +1414,9 @@
     }
 
     .swipe-hint {
-      top: 170px;
+      top: auto;
       left: auto;
-      bottom: auto;
+      bottom: -30px;
       right: 50%;
       transform: translateX(50%);
     }
@@ -1470,7 +1470,7 @@
     }
 
     &>:nth-child(2) {
-      margin-bottom: 30px;
+      margin-bottom: 90px;
     }
 
     .layout-col-l:nth-last-child(2) {
