@@ -7,7 +7,7 @@ export class VideoLoad {
     videoWrapSelector,
     controls,
     autoplay = false,
-    muted,
+    muted = true,
     loop = true,
     loadMobile = true,
     callback = null,
@@ -17,7 +17,7 @@ export class VideoLoad {
     this.videoPoster = this.videoWrap.dataset.poster;
     this.controls = controls || false;
     this.autoplay = autoplay;
-    this.muted = muted || true;
+    this.muted = muted;
     this.loop = loop;
     this.loadMobile = loadMobile;
     this.videoElement = null;

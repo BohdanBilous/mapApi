@@ -36,13 +36,13 @@ window.addEventListener("load", function () {
     new SuperSlider(`.fader-saving`, "fader");
     new SuperSlider(`.team-carosuel`, "carousel");
 
-    new VideoLoad(".recycling-video.bg-img", false, false, null, false, true, function (props) {
+    new VideoLoad(".recycling-video.bg-img", false, false, true, true, true, function (props) {
         const {
             videoElement
         } = props
         const playVideo = (e)=>{
-            // isInView(videoElement) ? videoElement.play() : videoElement.pause();
-            // isInView(videoElement) ? document.querySelector('.ab-f').innerHTML = 'reched ' :  document.querySelector('.ab-f').innerHTML = 'not reched ' ;
+            isInView(videoElement) ? videoElement.play() : videoElement.pause();
+            isInView(videoElement) ? document.querySelector('.ab-f').innerHTML = 'reched ' :  document.querySelector('.ab-f').innerHTML = 'not reched ' ;
         }
         videoElement.pause();
         if(window.innerWidth <= 768){
