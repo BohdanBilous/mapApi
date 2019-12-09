@@ -41,10 +41,9 @@ window.addEventListener("load", function () {
             videoElement
         } = props
         const playVideo = (e)=>{
-            isInView(videoElement) ?            alert('fired') : videoElement.pause();
-
+            isInView(videoElement) ? videoElement.play() : videoElement.pause();
         }
-
+        videoElement.pause();
         if(window.innerWidth <= 768){
             window.addEventListener('touchmove', (e)=> playVideo(e));
         }else{
