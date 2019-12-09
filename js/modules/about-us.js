@@ -53,20 +53,7 @@ window.addEventListener("load", function () {
         this.classList.add('active')
         videoElement.play()
     });
-    // let simulateClick = function (elem) {
-    //     // Create our event (with options)
-    //     var evt = new MouseEvent('click', {
-    //         bubbles: true,
-    //         cancelable: true,
-    //         view: window
-    //     });
-
-    //     // If cancelled, don't dispatch our event
-    //     var canceled = !elem.dispatchEvent(evt);
-    // };
-    // simulateClick('')
     videoElementPlay.click();
-    // });
 
     const teamMembers = document.querySelectorAll(".team-item");
     const popupClose = document.querySelector(".popup .btn-close");

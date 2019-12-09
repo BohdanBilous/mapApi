@@ -242,7 +242,16 @@
         height: calc(100% - 118px);
         z-index: 0;
         touch-action: none;
+        .we-pp-wrapper, .we-pp-tip{
+            box-shadow: none !important;
+        }   
+             .we-pp{
+            bottom: 15px !important;
+        }
+.mainPopup{
+    z-index: 1000;
 
+}
         &>div {
             // transition: all 20ms linear;
             will-change: left, top;
