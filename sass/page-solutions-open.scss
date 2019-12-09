@@ -175,7 +175,7 @@
     cursor: pointer;
     transition: color 0.2s;
 
-    &:hover {
+    .no-touchevents &:hover {
         color: $colorGreen;
     }
 
@@ -2332,7 +2332,7 @@ $leftOffset: 270px;
 
         .global-s-row .global-rewiew-wrap {
             // @include hideScrollbar;
-            @include scrollbarVis;
+            @include scrollbarVis;  
             width: 100%;
             overflow-x: scroll;
 
@@ -2849,6 +2849,12 @@ $leftOffset: 270px;
     .solution-open-page.jars .prod-review-wrap .image {
         width: 440px;
         max-width: 90%;
+    }
+
+    .jars {
+        .disposal-photo {
+            margin: 0 auto;
+        }
     }
 }
 
