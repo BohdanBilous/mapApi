@@ -41,8 +41,8 @@ window.addEventListener("load", function () {
             videoElement
         } = props
         const playVideo = (e)=>{
-            isInView(videoElement) ? videoElement.play() : videoElement.pause();
-            alert('fired');
+            isInView(videoElement) ?            alert('fired') : videoElement.pause();
+
         }
 
         if(window.innerWidth <= 768){
