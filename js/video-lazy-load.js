@@ -43,13 +43,13 @@ export class VideoLoad {
     if (this.width <= 1150 && !this.loadMobile) {
       this.videoElement.autoplay = false;
       this.videoElement.load();
-
       return
     }
     if (this.controls) this.videoElement.controls = true;
     if (this.autoplay) this.videoElement.autoplay = true;
     if (this.muted) this.videoElement.muted = true;
     if (this.loop) this.videoElement.loop = true;
+    this.videoElement.setAttribute('webkit-playsinline', 'webkit-playsinline');
   }
 
   addPoster() {
