@@ -732,7 +732,12 @@
   position: relative;
   width: 100%;
   margin-bottom: 187px;
-
+img{
+  height:  100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
   video {
     width: 100%;
   }
