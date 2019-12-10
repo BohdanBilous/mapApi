@@ -445,6 +445,9 @@
 
         .link-l {
             @extend .text-g;
+            &:hover{
+                color: $colorGreen;
+            }
         }
 
         .social {
