@@ -298,8 +298,8 @@ const arrayOfCountrys = [{
         name: "australia",
         body: {
             countryBound: {
-                lat: -20.375527,
-                long: 129.414827,
+                lat: -33.856159,
+                long: 151.215256,
                 allatitude: 7000000
             },
             contactListItems: [{
@@ -309,9 +309,1103 @@ const arrayOfCountrys = [{
                 office: false
             }],
             countryPoints: [{
+                lat: -33.856159,
+                long: 151.215256,
+                pointText: "Australia"
+            }]
+        }
+    },
+    {
+        name: "albania",
+        body: {
+            countryBound: {
+                lat: 41.153332,
+                long: 20.168331,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 41.153332,
+                long: 20.168331,
+                pointText: "Albania"
+            }]
+        }
+    },
+
+
+    {
+        name: "argentina",
+        body: {
+            countryBound: {
+                lat: -38.416096,
+                long: -63.616673,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: -38.416096,
+                long: -63.616673,
+                pointText: "Argentina"
+            }]
+        }
+    },
+    {
+        name: "belgium",
+        body: {
+            countryBound: {
+                lat: 50.503887,
+                long: 4.469936,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 50.503887,
+                long: 4.469936,
+                pointText: "Belgium"
+            }]
+        }
+    },
+    {
+        name: "bosnia",
+        body: {
+            countryBound: {
+                lat: 43.858181,
+                long: 18.412340,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 43.858181,
+                long: 18.412340,
+                pointText: "Bosnia"
+            }]
+        }
+    },
+    {
+        name: "bulgaria",
+        body: {
+            countryBound: {
+                lat: 42.733883,
+                long: 25.485830,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 42.733883,
+                long: 25.485830,
+                pointText: "Bulgaria"
+            }]
+        }
+    },
+    {
+        name: "cee",
+        body: {
+            countryBound: {
+                lat: 42.955410,
+                long: -9.189750,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 42.955410,
+                long: -9.189750,
+                pointText: "Cee"
+            }]
+        }
+    },
+    {
+        name: "caledonia",
+        body: {
+            countryBound: {
+                lat: -22.262529,
+                long: 166.444275,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: -22.262529,
+                long: 166.444275,
+                pointText: "Caledonia"
+            }]
+        }
+    },
+    {
+        name: "caribbean",
+        body: {
+            countryBound: {
+                lat: 26.832090,
+                long: 33.943211,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 26.832090,
+                long: 33.943211,
+                pointText: "Caribbean"
+            }]
+        }
+    },
+    {
+        name: "chile",
+        body: {
+            countryBound: {
+                lat: -35.675148,
+                long: -71.542969,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: -35.675148,
+                long: -71.542969,
+                pointText: "Chile"
+            }]
+        }
+    },
+    {
+        name: "costarica",
+        body: {
+            countryBound: {
+                lat: 9.748917,
+                long: -83.753426,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 9.748917,
+                long: -83.753426,
+                pointText: "Costa rica"
+            }]
+        }
+    },
+    {
+        name: "croatia",
+        body: {
+            countryBound: {
+                lat: 45.099998,
+                long: 15.2,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 45.099998,
+                long: 15.2,
+                pointText: "Croatia"
+            }]
+        }
+    },
+    {
+        name: "denmark",
+        body: {
+            countryBound: {
+                lat: 56.263920,
+                long: 9.501785,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 56.263920,
+                long: 9.501785,
+                pointText: "Denmark"
+            }]
+        }
+    },
+    {
+        name: "estonia",
+        body: {
+            countryBound: {
+                lat: 58.595272,
+                long: 25.013607,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
                 lat: -20.375527,
                 long: 129.414827,
-                pointText: "Australia"
+                pointText: "Estonia"
+            }]
+        }
+    },
+    {
+        name: "finland",
+        body: {
+            countryBound: {
+                lat: 61.924110,
+                long: 25.748152,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 61.924110,
+                long: 25.748152,
+                pointText: "Finland"
+            }]
+        }
+    },
+    {
+        name: "france",
+        body: {
+            countryBound: {
+                lat: 46.227638,
+                long: 2.213749,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 46.227638,
+                long: 2.213749,
+                pointText: "France"
+            }]
+        }
+    },
+    {
+        name: "germany",
+        body: {
+            countryBound: {
+                lat: 51.165691,
+                long: 10.451526,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 51.165691,
+                long: 10.451526,
+                pointText: "Germany"
+            }]
+        }
+    },
+    {
+        name: "greece",
+        body: {
+            countryBound: {
+                lat: 39.074207,
+                long: 21.824312,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 39.074207,
+                long: 21.824312,
+                pointText: "Greece"
+            }]
+        }
+    },
+    {
+        name: "herzegovina",
+        body: {
+            countryBound: {
+                lat: 43.858181,
+                long: 18.412340,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 43.858181,
+                long: 18.412340,
+                pointText: "Herzegovina"
+            }]
+        }
+    },
+    {
+        name: "hungary",
+        body: {
+            countryBound: {
+                lat: 47.162495,
+                long: 19.503304,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 47.162495,
+                long: 19.503304,
+                pointText: "Hungary"
+            }]
+        }
+    },
+    {
+        name: "iceland",
+        body: {
+            countryBound: {
+                lat: 64.963051,
+                long: -19.020836,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 64.963051,
+                long: -19.020836,
+                pointText: "Iceland"
+            }]
+        }
+    },
+    {
+        name: "indonesia",
+        body: {
+            countryBound: {
+                lat: -0.789275,
+                long: 113.921326,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: -0.789275,
+                long: 113.921326,
+                pointText: "Indonesia"
+            }]
+        }
+    },
+    {
+        name: "ireland",
+        body: {
+            countryBound: {
+                lat: 53.412910,
+                long: -8.243890,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 53.412910,
+                long: -8.243890,
+                pointText: "Ireland"
+            }]
+        }
+    },
+    {
+        name: "japan",
+        body: {
+            countryBound: {
+                lat: 36.204823,
+                long: 138.252930,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 36.204823,
+                long: 138.252930,
+                pointText: "Japan"
+            }]
+        }
+    },
+    {
+        name: "korea",
+        body: {
+            countryBound: {
+                lat: 37.663998,
+                long: 127.978462,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 37.663998,
+                long: 127.978462,
+                pointText: "Korea"
+            }]
+        }
+    },
+    {
+        name: "kosovo",
+        body: {
+            countryBound: {
+                lat: 42.602634,
+                long: 20.902977,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 42.602634,
+                long: 20.902977,
+                pointText: "Kosovo"
+            }]
+        }
+    },
+    {
+        name: "latvia",
+        body: {
+            countryBound: {
+                lat: 56.879635,
+                long: 24.603189,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 56.879635,
+                long: 24.603189,
+                pointText: "Latvia"
+            }]
+        }
+    },
+    {
+        name: "lithuania",
+        body: {
+            countryBound: {
+                lat: 55.169437,
+                long: 23.881275,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 55.169437,
+                long: 23.881275,
+                pointText: "Lithuania"
+            }]
+        }
+    },
+    {
+        name: "luxembourg",
+        body: {
+            countryBound: {
+                lat: 49.815273,
+                long: 6.129583,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 49.815273,
+                long: 6.129583,
+                pointText: "Luxembourg"
+            }]
+        }
+    },
+    {
+        name: "macedonia",
+        body: {
+            countryBound: {
+                lat: 41.608635,
+                long: 21.745275,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 41.608635,
+                long: 21.745275,
+                pointText: "Macedonia"
+            }]
+        }
+    },
+    {
+        name: "malaysia",
+        body: {
+            countryBound: {
+                lat: 4.2105,
+                long: 101.9758,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 4.2105,
+                long: 101.9758,
+                pointText: "Malaysia"
+            }]
+        }
+    },
+    {
+        name: "mexico",
+        body: {
+            countryBound: {
+                lat: 19.400000,
+                long: -98.988892,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 19.400000,
+                long: -98.988892,
+                pointText: "Mexico"
+            }]
+        }
+    },
+    {
+        name: "moldavia",
+        body: {
+            countryBound: {
+                lat: 47.003670,
+                long: 28.907089,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 47.003670,
+                long: 28.907089,
+                pointText: "Moldavia"
+            }]
+        }
+    },
+    {
+        name: "montenegro",
+        body: {
+            countryBound: {
+                lat: 42.099998,
+                long: 19.1,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 42.099998,
+                long: 19.1,
+                pointText: "Montenegro"
+            }]
+        }
+    },
+    {
+        name: "netherlands",
+        body: {
+            countryBound: {
+                lat: 52.379189,
+                long: 4.899431,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 52.379189,
+                long: 4.899431,
+                pointText: "Netherlands"
+            }]
+        }
+    },
+    {
+        name: "norway",
+        body: {
+            countryBound: {
+                lat: 59.911491,
+                long: 10.757933,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 59.911491,
+                long: 10.757933,
+                pointText: "Norway"
+            }]
+        }
+    },
+    {
+        name: "paraguay",
+        body: {
+            countryBound: {
+                lat: -25.513475,
+                long: -54.615440,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: -25.513475,
+                long: -54.615440,
+                pointText: "Paraguay"
+            }]
+        }
+    },
+    {
+        name: "poland",
+        body: {
+            countryBound: {
+                lat: 52.237049,
+                long: 21.017532,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 52.237049,
+                long: 21.017532,
+                pointText: "Poland"
+            }]
+        }
+    },
+    {
+        name: "portugal",
+        body: {
+            countryBound: {
+                lat: 38.736946,
+                long: -9.142685,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 38.736946,
+                long: -9.142685,
+                pointText: "Portugal"
+            }]
+        }
+    },
+    {
+        name: "romania",
+        body: {
+            countryBound: {
+                lat: 44.439663,
+                long: 26.096306,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 44.439663,
+                long: 26.096306,
+                pointText: "Romania"
+            }]
+        }
+    },
+    {
+        name: "serbia",
+        body: {
+            countryBound: {
+                lat: 44.787197,
+                long: 20.457273,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 44.787197,
+                long: 20.457273,
+                pointText: "Serbia"
+            }]
+        }
+    },
+    {
+        name: "serbia",
+        body: {
+            countryBound: {
+                lat: 44.787197,
+                long: 20.457273,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 44.787197,
+                long: 20.457273,
+                pointText: "Serbia"
+            }]
+        }
+    },
+    {
+        name: "singapore",
+        body: {
+            countryBound: {
+                lat: 1.290270,
+                long: 103.851959,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 1.290270,
+                long: 103.851959,
+                pointText: "Singapore"
+            }]
+        }
+    },
+    {
+        name: "slovakia",
+        body: {
+            countryBound: {
+                lat: 48.148598,
+                long: 17.107748,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 48.148598,
+                long: 17.107748,
+                pointText: "Slovakia"
+            }]
+        }
+    },
+    {
+        name: "slovenia",
+        body: {
+            countryBound: {
+                lat: 46.056946,
+                long: 14.505751,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 46.056946,
+                long: 14.505751,
+                pointText: "Slovenia"
+            }]
+        }
+    },
+    {
+        name: "spain",
+        body: {
+            countryBound: {
+                lat: 40.416775,
+                long: -3.703790,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 40.416775,
+                long: -3.703790,
+                pointText: "Spain"
+            }]
+        }
+    },
+    {
+        name: "switzerland",
+        body: {
+            countryBound: {
+                lat: 46.204391,
+                long: 6.143158,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 46.204391,
+                long: 6.143158,
+                pointText: "Switzerland"
+            }]
+        }
+    },
+    {
+        name: "thailand",
+        body: {
+            countryBound: {
+                lat: 13.736717,
+                long: 100.523186,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 13.736717,
+                long: 100.523186,
+                pointText: "Thailand"
+            }]
+        }
+    },
+    {
+        name: "turkey",
+        body: {
+            countryBound: {
+                lat: 41.015137,
+                long: 28.979530,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 41.015137,
+                long: 28.979530,
+                pointText: "Turkey"
+            }]
+        }
+    },
+    {
+        name: "uk",
+        body: {
+            countryBound: {
+                lat: 51.509865,
+                long: -0.118092,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 51.509865,
+                long: -0.118092,
+                pointText: "Uk"
+            }]
+        }
+    },
+    {
+        name: "ukraine",
+        body: {
+            countryBound: {
+                lat: 50.446945,
+                long: 30.539722,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: 50.446945,
+                long: 30.539722,
+                pointText: "Ukraine"
+            }]
+        }
+    },
+    {
+        name: "uruguay",
+        body: {
+            countryBound: {
+                lat: -34.901112,
+                long: -56.164532,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: -34.901112,
+                long: -56.164532,
+                pointText: "Uruguay"
+            }]
+        }
+    },
+    {
+        name: "newzealand",
+        body: {
+            countryBound: {
+                lat: -36.848461,
+                long: 174.763336,
+                allatitude: 7000000
+            },
+            contactListItems: [{
+                img: "./images/av-1.png",
+                topText: "Maneger",
+                bottomText: "Troy Pixley",
+                office: false
+            }],
+            countryPoints: [{
+                lat: -36.848461,
+                long: 174.763336,
+                pointText: "New zealand"
             }]
         }
     }
@@ -378,10 +1472,10 @@ window.addEventListener("load", function () {
             minAltitude: 100000,
             maxAltitude: 8000000,
             dragging: true,
-            tilting: true,
+            tilting: false,
             zooming: true,
-            scrollWheelZoom: true
-            // unconstrainedRotation:true
+            scrollWheelZoom: true,
+            unconstrainedRotation:false
         });
         map.setTilt(15);
         WE.tileLayer(
