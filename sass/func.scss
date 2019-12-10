@@ -708,6 +708,7 @@ $dotsLiWidth: 250px;
     -webkit-overflow-scrolling: touch;
 
     &::-webkit-scrollbar {
+        -webkit-appearance: none;
         opacity: 1 !important;
         height: 4px;    
     }
