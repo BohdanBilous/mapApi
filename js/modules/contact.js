@@ -1753,5 +1753,5 @@ window.addEventListener("load", function () {
 
     init();
     clickHandle();
-    scrollXHorizontal(".contacts-list", ".scroll-x-block");
+    scrollXHorizontal(".scroll-x-block");
 });

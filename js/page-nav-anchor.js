@@ -12,7 +12,7 @@
 
 */
 
-import { desktop } from "../generic-helpers";
+import { desktop } from "./generic-helpers";
 
 export class PageNav {
   constructor(navWrap, block, callback, sticky, stickyHeight) {

@@ -526,17 +526,20 @@ export let loadContent = (blockForLoad, getFile) => {
 //   }
 // );
 
-export const scrollXHorizontal = (el, wrapper) => {
-  let element = document.querySelector(el);
-  let wrap = document.querySelector(wrapper);
-  element.addEventListener("wheel", function (e) {
-    if (wrap.classList.contains('off-scroll')) {
-      return
-    }
-    if (e.deltaY > 0) wrap.scrollLeft += 25;
-    else wrap.scrollLeft -= 25;
-  });
-};
+export const scrollXHorizontal = (wrap) => {
+  function scrollCustom(e) {
+    e = window.event || e;
+    let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+    document.querySelector(wrap).scrollLeft -= (delta * 40);
+    e.preventDefault();
+    console.log(delta)
+  }
+  document.querySelector(wrap).addEventListener("mousewheel", scrollCustom, false);
+  document.querySelector(wrap).addEventListener("DOMMouseScroll", scrollCustom, false);
+}
+
+
+
 // In View
 // export const isInView = el => {
 //   const scroll = window.scrollY || window.pageYOffset;
