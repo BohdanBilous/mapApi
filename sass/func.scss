@@ -705,9 +705,12 @@ $dotsLiWidth: 250px;
 }
 
 @mixin scrollbarVis {
+    -webkit-overflow-scrolling: touch;
+
     &::-webkit-scrollbar {
+        -webkit-appearance: none;
         opacity: 1 !important;
-        height: 4px;
+        height: 4px;    
     }
 
     &::-webkit-scrollbar-track {
