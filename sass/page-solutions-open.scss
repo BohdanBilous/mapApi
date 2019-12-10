@@ -1125,23 +1125,22 @@ $leftOffset: 270px;
         margin-right: -25px;
 
         // @include scrollbarVis;
-        -webkit-overflow-scrolling: touch;
     }
 
-    .tare-scroll-wrap::-webkit-scrollbar {
-        -webkit-overflow-scrolling: auto;
-        -webkit-appearance: none;
-        height: 4px;    
-    }
+    // .tare-scroll-wrap::-webkit-scrollbar {
+    //     -webkit-overflow-scrolling: auto;
+    //     -webkit-appearance: none;
+    //     height: 4px;    
+    // }
 
-    .tare-scroll-wrap::-webkit-scrollbar-track {
-        -webkit-overflow-scrolling: auto !important;
-    }
+    // .tare-scroll-wrap::-webkit-scrollbar-track {
+    //     -webkit-overflow-scrolling: auto !important;
+    // }
 
-    .tare-scroll-wrap::-webkit-scrollbar-thumb {
-        border-radius: 3px;
-        background-color: rgba(0, 0, 0, .3);
-    }
+    // .tare-scroll-wrap::-webkit-scrollbar-thumb {
+    //     border-radius: 3px;
+    //     background-color: rgba(0, 0, 0, .3);
+    // }
 
     .mobile-scroll-mode.tare-wrap {
         width: 1325px;
