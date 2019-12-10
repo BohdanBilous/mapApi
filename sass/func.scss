@@ -710,8 +710,13 @@ $dotsLiWidth: 250px;
         height: 4px;
     }
 
+    &::-webkit-scrollbar-track {
+        -webkit-overflow-scrolling: auto !important;
+    }
+
     &::-webkit-scrollbar-thumb {
         border-radius: 3px;
+        opacity: 1 !important;
         background-color: rgba(0, 0, 0, .3);
     }
 }
