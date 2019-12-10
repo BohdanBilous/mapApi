@@ -15,10 +15,18 @@ window.addEventListener("load", function() {
   if (exists(".media-stream--container") && exists(".cases-container")) {
     const titleWrap =
       document.querySelector(".media-stream--categories-ttl-sticky") || null;
-    let pageNav = new PageNav(
+
+    new PageNav(
       ".media-stream--container",
       ".cases-container",
-      changeCat
+      changeCat,
+      false,
+      false,
+      () => {
+        if (exists(".filter-sidebar")) {
+          document.querySelector(".filter-sidebar").classList.remove("open");
+        }
+      }
     );
 
     function changeCat(name, items) {

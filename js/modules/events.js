@@ -18,7 +18,14 @@ window.addEventListener("load", function() {
     new PageNav(
       ".media-stream--container",
       ".event-month-container",
-      changeMonth
+      changeMonth,
+      false,
+      false,
+      () => {
+        if (exists(".filter-sidebar")) {
+          document.querySelector(".filter-sidebar").classList.remove("open");
+        }
+      }
     );
 
     function changeMonth(name, items) {

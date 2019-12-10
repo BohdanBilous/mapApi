@@ -16,10 +16,17 @@ window.addEventListener("load", function() {
   if (exists(".media-stream--container")) {
     const titleWrap =
       document.querySelector(".media-stream--categories-ttl-sticky") || null;
-    let pageNav = new PageNav(
+    new PageNav(
       ".media-stream--container",
       ".media-stream--cat-section",
-      changeCat
+      changeCat,
+      false,
+      false,
+      () => {
+        if (exists(".filter-sidebar")) {
+          document.querySelector(".filter-sidebar").classList.remove("open");
+        }
+      }
     );
 
     function changeCat(name, items) {

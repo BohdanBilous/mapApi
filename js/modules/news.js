@@ -16,7 +16,18 @@ import { MediaLoader } from "../media-loader";
 window.addEventListener("load", function() {
   // Page Nav
   if (exists(".media-stream--container")) {
-    let pageNav = new PageNav(".media-stream--container", ".checkpoint");
+    new PageNav(
+      ".media-stream--container",
+      ".checkpoint",
+      null,
+      false,
+      false,
+      () => {
+        if (exists(".filter-sidebar")) {
+          document.querySelector(".filter-sidebar").classList.remove("open");
+        }
+      }
+    );
   }
 
   // Scroll From Screen
