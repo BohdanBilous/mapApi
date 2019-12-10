@@ -1,28 +1,21 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import {
-  exists,
-  desktop
-} from '../generic-helpers';
-import {
-  SuperSlider
-} from '../super-slider';
+import { exists, desktop, scrollFromScreen } from "../generic-helpers";
+import { SuperSlider } from "../super-slider";
 
-import {
-  MediaLoader
-} from '../media-loader';
+import { MediaLoader } from "../media-loader";
 
 import { ImageCursor } from "../image-cursor";
 
-window.addEventListener("load", function () {
-
+window.addEventListener("load", function() {
   // Lazy Loader Images
   if (exists(".lazy-img")) {
     const images = document.querySelectorAll(".lazy-img");
 
     images.forEach(image => {
-      const mediaQueryImages = [{
+      const mediaQueryImages = [
+        {
           media: "screen and (min-width: 768px)",
           src: image.dataset.src
         },
@@ -40,7 +33,8 @@ window.addEventListener("load", function () {
     const bgs = document.querySelectorAll(".lazy-bg");
 
     bgs.forEach(bg => {
-      const mediaQueryBackgrounds = [{
+      const mediaQueryBackgrounds = [
+        {
           media: "screen and (min-width: 768px)",
           src: bg.dataset.src
         },
@@ -55,14 +49,13 @@ window.addEventListener("load", function () {
   }
 
   // Mission Fader
-  let missinFader = new SuperSlider(".article-open-slider", "fader");
+  if (exists(".article-open-slider")) {
+    new SuperSlider(".article-open-slider", "fader");
+  }
 
-  
   // Events Cursor Image
   if (desktop) {
-    const eventsTitles = document.querySelectorAll(
-      ".events-ttl-section"
-    );
+    const eventsTitles = document.querySelectorAll(".events-ttl-section");
 
     eventsTitles.forEach(eventsTitle => {
       let eventsWrapOffsetTop = document.querySelector(".events-table")
@@ -79,4 +72,6 @@ window.addEventListener("load", function () {
     });
   }
 
+  // Scroll From Screen
+  if (exists(".hint-from-top")) scrollFromScreen(".screen-top");
 });
