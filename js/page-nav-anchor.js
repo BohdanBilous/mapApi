@@ -12,6 +12,8 @@
 
 */
 
+import { desktop } from "../generic-helpers";
+
 export class PageNav {
   constructor(navWrap, block, callback, sticky, stickyHeight) {
     this.navWrap = document.querySelector(navWrap);
@@ -59,9 +61,9 @@ export class PageNav {
   }
 
   stickyNav(stickyHeight) {
-    window.pageYOffset > stickyHeight ?
-      this.navWrap.classList.add("sticky") :
-      this.navWrap.classList.remove("sticky");
+    window.pageYOffset > stickyHeight
+      ? this.navWrap.classList.add("sticky")
+      : this.navWrap.classList.remove("sticky");
   }
 
   onScreenHandler() {
@@ -75,7 +77,8 @@ export class PageNav {
         let buttonNavName =
           buttonNav.querySelector("span").textContent ||
           buttonNav.querySelector("span").innerText;
-        this.changeActiveButton(buttonNav);
+
+        if (!desktop) this.changeActiveButton(buttonNav);
 
         if (buttonNav.querySelector(".items") != null) {
           itemsElement = buttonNav.querySelector(".items");
@@ -89,10 +92,10 @@ export class PageNav {
 
   onScreenDetect(element) {
     let scrollingElement =
-      document.scrollingElement || document.documentElement,
+        document.scrollingElement || document.documentElement,
       viewTop = scrollingElement.scrollTop,
       _top =
-      element.getBoundingClientRect().top + viewTop - window.innerHeight / 2;
+        element.getBoundingClientRect().top + viewTop - window.innerHeight / 2;
 
     return viewTop >= _top;
   }

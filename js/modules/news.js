@@ -2,9 +2,7 @@
 
 /* MODULE IMPORTS */
 import {
-  html,
   desktop,
-  mobile,
   exists,
   scrollFromScreen,
   tags,
@@ -38,7 +36,7 @@ window.addEventListener("load", function() {
   // Lazy Loader Images
   if (exists(".lazy-img")) {
     const images = document.querySelectorAll(".lazy-img");
-    
+
     images.forEach(image => {
       const mediaQueryImages = [
         { media: "screen and (min-width: 768px)", src: image.dataset.bg },
