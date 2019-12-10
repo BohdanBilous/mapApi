@@ -212,7 +212,7 @@ const arrayOfCountrys = [{
             countryBound: {
                 lat: 63.920473,
                 long: 78.801193,
-                allatitude: 7200000
+                allatitude: 8200000
             },
             contactListItems: [{
                     img: "./images/av-2.png",
@@ -1641,7 +1641,8 @@ window.addEventListener("load", function () {
 
     // Create Bounds add fly to that bound
     const addBounds = bounds => {
-        map.flyTo(bounds.lat, bounds.long, bounds.allatitude, 0, 10, 1000, 2);
+        map.flyTo(bounds.lat, bounds.long, bounds.allatitude,1 , 10, 10000, 2);
+        console.log(map)
     };
 
     // Create markers

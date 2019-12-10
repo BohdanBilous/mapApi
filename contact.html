@@ -5,441 +5,435 @@
 @@include('./partials/scripts.htm')
 
 <body class="contact-page">
-@@include('./partials/preloader.htm')
-@@include('./partials/header.htm', { "classes": "" })
-@@include('./partials/menu.htm', {
-"solution": "",
-"about": "",
-"news-act": "",
-"resources": "",
-"events": "",
-"cases": "",
-"careers": "",
-"sites": "",
-"contact": "active",
-"reviews": "",
-"team": "",
-"faq": ""
-})
-@@include('./partials/search.htm')
-<main class="main contact-main">
-    <div class="layout-row-content contact-back-container layout-row socket">
-        <div class="layout-col-l">
-            @@include('./partials/elements/button-link.htm', {
-            "text": "Back",
-            "href" : "javascript:history.back()",
-            "classes": "btn-back"
-            })
-        </div>
-    </div>
-    <div id="map"></div>
-    <div class="countrys">
-        <div class="countrys-wrap">
-            <ul class="countrys-list">
-                <li data-country="all" class=" addMarkers active">
-                    <img src="./images/wrld-ic.svg" alt=""> <span class="text">All</span>
-                </li>
-                <li data-country="canada" class="not_active">
-                    <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
-                </li>
-                <li data-country="usa" class="not_active">
-                    <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
-                </li>
-                <li data-country="brazil" class="not_active">
-                    <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
-                </li>
-                <li data-country="czech" class="not_active">
-                    <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
-                </li>
-                <li data-country="sweden" class="not_active">
-                    <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
-                </li>
-            </ul>
-
-            <div class="searchable">
-                <input type="text" placeholder="Search countries">
-                <div class="image-icon"></div>
-                <div class="searcheble-list">
-                    <div class="only-mobile only-tablet-mobile searchable-result">
-                        Result
-                    </div>
-                    <ul>
-                        <li data-country="all" class="active addMarkers">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">All</span>
-                        </li>
-                        <li data-country="canada">
-                            <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
-                        </li>
-                        <li data-country="usa">
-                            <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
-                        </li>
-                        <li data-country="brazil">
-                            <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
-                        </li>
-                        <li data-country="czech">
-                            <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
-                        </li>
-                        <li data-country="sweden">
-                            <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
-                        </li>
-                        <li data-country="russia">
-                            <img src="./images/fl-6.svg" alt=""> <span class="text">Russia</span>
-
-                        </li>
-                        <li data-country="china">
-                            <img src="./images/fl-7.svg" alt=""> <span class="text">China</span>
-
-                        </li>
-                        <li data-country="australia">
-                            <img src="./images/fl-8.svg" alt=""> <span class="text">Australia</span>
-                        </li>
-                        <li data-country="albania">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">Albania</span>
-                        </li>
-                        <li data-country="argentina">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">Argentina</span>
-                        </li>
-                        <li data-country="belgium">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">Belgium</span>
-                        </li>
-                        <li data-country="bosnia">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">Bosnia</span>
-                        </li>
-                        <li data-country="bulgaria">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">Bulgaria</span>
-                        </li>
-                        <li data-country="cee">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">CEE</span>
-                        </li>
-                        <li data-country="caledonia">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">Caledonia</span>
-                        </li>
-                        <li data-country="caribbean">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">Caribbean</span>
-                        </li>
-                        <li data-country="chile">
-                            <img src="./images/wrld-ic.svg" alt=""> <span class="text">Chile</span>
-                        </li>
-                        <li data-country="costarica">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Costa Rica</span>
-                        </li>
-                        <li data-country="croatia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Croatia</span>
-                        </li>
-                        <li data-country="denmark">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Denmark</span>
-                        </li>
-                        <li data-country="estonia">
-                            <img src="./images/wrld-ic.svg" alt="">
-
-                            <span class="text">Estonia</span>
-                        </li>
-                        <li data-country="finland">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Finland</span>
-                        </li>
-                        <li data-country="france">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">France</span>
-                        </li>
-                        <li data-country="germany">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Germany</span>
-                        </li>
-                        <li data-country="greece">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Greece</span>
-                        </li>
-                        <li data-country="herzegovina">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Herzegovina</span>
-                        </li>
-                        <li data-country="hungary">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Hungary</span>
-                        </li>
-                        <li data-country="iceland">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Iceland</span>
-                        </li>
-                        <li data-country="indonesia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Indonesia</span>
-                        </li>
-                        <li data-country="ireland">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Ireland</span>
-                        </li>
-                        <li data-country="japan">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Japan</span>
-                        </li>
-                        <li data-country="korea">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Korea</span>
-                        </li>
-                        <li data-country="kosovo">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Kosovo</span>
-                        </li>
-                        <li data-country="latvia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Latvia</span>
-                        </li>
-                        <li data-country="lithuania">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Lithuania</span>
-                        </li>
-                        <li data-country="luxembourg">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Luxembourg</span>
-                        </li>
-                        <li data-country="macedonia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Macedonia</span>
-                        </li>
-                        <li data-country="malaysia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Malaysia</span>
-                        </li>
-                        <li data-country="mexico">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Mexico</span>
-                        </li>
-                        <li data-country="moldavia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Moldavia</span>
-                        </li>
-                        <li data-country="montenegro">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Montenegro</span>
-                        </li>
-                        <li data-country="netherlands">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Netherlands</span>
-                        </li>
-                        <li data-country="norway">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Norway</span>
-                        </li>
-                        <li data-country="paraguay">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Paraguay</span>
-                        </li>
-                        <li data-country="poland">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Poland</span>
-                        </li>
-                        <li data-country="portugal">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Portugal</span>
-                        </li>
-                        <li data-country="romania">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Romania</span>
-                        </li>
-                        <li data-country="russia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Russia</span>
-                        </li>
-                        <li data-country="serbia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Serbia</span>
-                        </li>
-                        <li data-country="singapore">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Singapore</span>
-                        </li>
-                        <li data-country="slovakia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Slovakia</span>
-                        </li>
-                        <li data-country="slovenia">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Slovenia</span>
-                        </li>
-                        <li data-country="spain">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Spain</span>
-                        </li>
-                        <li data-country="sweden">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Sweden</span>
-                        </li>
-                        <li data-country="switzerland">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Switzerland</span>
-                        </li>
-                        <li data-country="thailand">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Thailand</span>
-                        </li>
-                        <li data-country="turkey">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Turkey</span>
-                        </li>
-                        <li data-country="uk">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">UK</span>
-                        </li>
-                        <li data-country="ukraine">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Ukraine</span>
-                        </li>
-                        <li data-country="uruguay">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">Uruguay</span>
-                        </li>
-                        <li data-country="newzealand">
-                            <img src="./images/wrld-ic.svg" alt="">
-                            <span class="text">New Zealand</span>
-                        </li>
-                    </ul>
-                    <div class="notFound">EMPTY</div>
-                </div>
-                <div class="searcheble-find active">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                        <path fill="#2a2a2a"
-                              d="M2.897 8.9a6.675 6.675 0 1 1 13.35 0 6.675 6.675 0 0 1-13.35 0zm15.575 0a8.9 8.9 0 1 0-3.442 7.031l5.611 5.612 1.574-1.573-5.612-5.612a8.862 8.862 0 0 0 1.87-5.458z"/>
-                    </svg>
-                </div>
-                <div class="searcheble-close">
-                    <span></span>
-                    <span></span>
-                </div>
+    @@include('./partials/preloader.htm')
+    @@include('./partials/header.htm', { "classes": "" })
+    @@include('./partials/menu.htm', {
+    "solution": "",
+    "about": "",
+    "news-act": "",
+    "resources": "",
+    "events": "",
+    "cases": "",
+    "careers": "",
+    "sites": "",
+    "contact": "active",
+    "reviews": "",
+    "team": "",
+    "faq": ""
+    })
+    @@include('./partials/search.htm')
+    <main class="main contact-main">
+        <div class="layout-row-content contact-back-container layout-row socket">
+            <div class="layout-col-l">
+                @@include('./partials/elements/button-link.htm', {
+                "text": "Back",
+                "href" : "javascript:history.back()",
+                "classes": "btn-back"
+                })
             </div>
-            <!-- <div class="buttons">
+        </div>
+        <div id="map"></div>
+        <div class="countrys">
+            <div class="countrys-wrap">
+                <ul class="countrys-list">
+                    <li data-country="all" class=" addMarkers active">
+                        <img src="./images/wrld-ic.svg" alt=""> <span class="text">All</span>
+                    </li>
+                    <li data-country="canada" class="not_active">
+                        <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
+                    </li>
+                    <li data-country="usa" class="not_active">
+                        <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
+                    </li>
+                    <li data-country="brazil" class="not_active">
+                        <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
+                    </li>
+                    <li data-country="czech" class="not_active">
+                        <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
+                    </li>
+                    <li data-country="sweden" class="not_active">
+                        <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
+                    </li>
+                </ul>
+
+                <div class="searchable">
+                    <input type="text" placeholder="Search countries">
+                    <div class="image-icon"></div>
+                    <div class="searcheble-list">
+                        <div class="only-mobile only-tablet-mobile searchable-result">
+                            Result
+                        </div>
+                        <ul>
+                            <li data-country="all" class="active addMarkers">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">All</span>
+                            </li>
+                            <li data-country="canada">
+                                <img src="./images/fl-1.svg" alt=""> <span class="text">Canada</span>
+                            </li>
+                            <li data-country="usa">
+                                <img src="./images/fl-2.svg" alt=""> <span class="text">USA</span>
+                            </li>
+                            <li data-country="brazil">
+                                <img src="./images/fl-3.svg" alt=""> <span class="text">Brazil</span>
+                            </li>
+                            <li data-country="czech">
+                                <img src="./images/fl-4.svg" alt=""> <span class="text">Czech Republic</span>
+                            </li>
+                            <li data-country="sweden">
+                                <img src="./images/fl-5.svg" alt=""> <span class="text">Sweden</span>
+                            </li>
+                            <li data-country="russia">
+                                <img src="./images/fl-6.svg" alt=""> <span class="text">Russia</span>
+
+                            </li>
+                            <li data-country="china">
+                                <img src="./images/fl-7.svg" alt=""> <span class="text">China</span>
+
+                            </li>
+                            <li data-country="australia">
+                                <img src="./images/fl-8.svg" alt=""> <span class="text">Australia</span>
+                            </li>
+                            <li data-country="albania">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">Albania</span>
+                            </li>
+                            <li data-country="argentina">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">Argentina</span>
+                            </li>
+                            <li data-country="belgium">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">Belgium</span>
+                            </li>
+                            <li data-country="bosnia">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">Bosnia</span>
+                            </li>
+                            <li data-country="bulgaria">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">Bulgaria</span>
+                            </li>
+                            <li data-country="cee">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">CEE</span>
+                            </li>
+                            <li data-country="caledonia">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">Caledonia</span>
+                            </li>
+                            <li data-country="caribbean">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">Caribbean</span>
+                            </li>
+                            <li data-country="chile">
+                                <img src="./images/wrld-ic.svg" alt=""> <span class="text">Chile</span>
+                            </li>
+                            <li data-country="costarica">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Costa Rica</span>
+                            </li>
+                            <li data-country="croatia">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Croatia</span>
+                            </li>
+                            <li data-country="denmark">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Denmark</span>
+                            </li>
+                            <li data-country="estonia">
+                                <img src="./images/wrld-ic.svg" alt="">
+
+                                <span class="text">Estonia</span>
+                            </li>
+                            <li data-country="finland">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Finland</span>
+                            </li>
+                            <li data-country="france">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">France</span>
+                            </li>
+                            <li data-country="germany">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Germany</span>
+                            </li>
+                            <li data-country="greece">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Greece</span>
+                            </li>
+                            <li data-country="herzegovina">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Herzegovina</span>
+                            </li>
+                            <li data-country="hungary">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Hungary</span>
+                            </li>
+                            <li data-country="iceland">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Iceland</span>
+                            </li>
+                            <li data-country="indonesia">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Indonesia</span>
+                            </li>
+                            <li data-country="ireland">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Ireland</span>
+                            </li>
+                            <li data-country="japan">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Japan</span>
+                            </li>
+                            <li data-country="korea">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Korea</span>
+                            </li>
+                            <li data-country="kosovo">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Kosovo</span>
+                            </li>
+                            <li data-country="latvia">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Latvia</span>
+                            </li>
+                            <li data-country="lithuania">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Lithuania</span>
+                            </li>
+                            <li data-country="luxembourg">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Luxembourg</span>
+                            </li>
+                            <li data-country="macedonia">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Macedonia</span>
+                            </li>
+                            <li data-country="malaysia">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Malaysia</span>
+                            </li>
+                            <li data-country="mexico">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Mexico</span>
+                            </li>
+                            <li data-country="moldavia">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Moldavia</span>
+                            </li>
+                            <li data-country="montenegro">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Montenegro</span>
+                            </li>
+                            <li data-country="netherlands">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Netherlands</span>
+                            </li>
+                            <li data-country="norway">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Norway</span>
+                            </li>
+                            <li data-country="paraguay">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Paraguay</span>
+                            </li>
+                            <li data-country="poland">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Poland</span>
+                            </li>
+                            <li data-country="portugal">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Portugal</span>
+                            </li>
+                            <li data-country="romania">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Romania</span>
+                            </li>
+                            <li data-country="serbia">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Serbia</span>
+                            </li>
+                            <li data-country="singapore">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Singapore</span>
+                            </li>
+                            <li data-country="slovakia">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Slovakia</span>
+                            </li>
+                            <li data-country="slovenia">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Slovenia</span>
+                            </li>
+                            <li data-country="spain">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Spain</span>
+                            </li>
+                            <li data-country="sweden">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Sweden</span>
+                            </li>
+                            <li data-country="switzerland">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Switzerland</span>
+                            </li>
+                            <li data-country="thailand">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Thailand</span>
+                            </li>
+                            <li data-country="turkey">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Turkey</span>
+                            </li>
+                            <li data-country="uk">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">UK</span>
+                            </li>
+                            <li data-country="ukraine">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Ukraine</span>
+                            </li>
+                            <li data-country="uruguay">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">Uruguay</span>
+                            </li>
+                            <li data-country="newzealand">
+                                <img src="./images/wrld-ic.svg" alt="">
+                                <span class="text">New Zealand</span>
+                            </li>
+                        </ul>
+                        <div class="notFound">EMPTY</div>
+                    </div>
+                    <div class="searcheble-find active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                            <path fill="#2a2a2a"
+                                d="M2.897 8.9a6.675 6.675 0 1 1 13.35 0 6.675 6.675 0 0 1-13.35 0zm15.575 0a8.9 8.9 0 1 0-3.442 7.031l5.611 5.612 1.574-1.573-5.612-5.612a8.862 8.862 0 0 0 1.87-5.458z" />
+                        </svg>
+                    </div>
+                    <div class="searcheble-close">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- <div class="buttons">
                 <button class="prev button-prev"></button>
                 <button class="next button-next"></button>
             </div> -->
-        </div>
+            </div>
 
-        <ul class="contacts-list scroll-x-block">
-            <li class="contacts-item">
-                <img src="./images/av-12.png" alt="">
-                <div class="text">
-                    <div class="top">
-                        USA (Mid—West)
-                        Territory Manager
+            <ul class="contacts-list scroll-x-block">
+                <li class="contacts-item">
+                    <img src="./images/av-12.png" alt="">
+                    <div class="text">
+                        <div class="top">
+                            USA (Mid—West)
+                            Territory Manager
+                        </div>
+                        <div class="bottom">
+                            David Thennes
+                        </div>
                     </div>
-                    <div class="bottom">
-                        David Thennes
+                </li>
+                <li class="contacts-item">
+                    <img src="./images/av-12.png" alt="">
+                    <div class="text">
+                        <div class="top">
+                            USA (Mid—West)
+                            Territory Manager
+                        </div>
+                        <div class="bottom">
+                            David Thennes
+                        </div>
                     </div>
-                </div>
-            </li>
-            <li class="contacts-item">
-                <img src="./images/av-12.png" alt="">
-                <div class="text">
-                    <div class="top">
-                        USA (Mid—West)
-                        Territory Manager
+                </li>
+                <li class="contacts-item">
+                    <img src="./images/av-12.png" alt="">
+                    <div class="text">
+                        <div class="top">
+                            USA (Mid—West)
+                            Territory Manager
+                        </div>
+                        <div class="bottom">
+                            David Thennes
+                        </div>
                     </div>
-                    <div class="bottom">
-                        David Thennes
-                    </div>
-                </div>
-            </li>
-            <li class="contacts-item">
-                <img src="./images/av-12.png" alt="">
-                <div class="text">
-                    <div class="top">
-                        USA (Mid—West)
-                        Territory Manager
-                    </div>
-                    <div class="bottom">
-                        David Thennes
-                    </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
 
-        <div class="layout-row-content contact-form-container layout-row socket">
-            <div class="btn-close"></div>
-            <div class="layout-col-l"></div>
-            <div class="layout-col-r">
-                <form action="">
-                    <div class="contact-form-left">
-                        <div class="input-line">
-                            <input autocomplete="none" placeholder="Company Name" type="text" required>
-                        </div>
-                        <div class="input-line">
-                            <input autocomplete="none" placeholder="Name" type="text" required>
-                        </div>
-                        <div class="input-line w-50">
-                            <input autocomplete="none" placeholder="Email" type="email" required>
-                        </div>
-                        <div class="input-line w-50">
-                            <input autocomplete="none" placeholder=" Phone" type="text" required>
-                        </div>
-                        <div class="input-line">
-                            <input autocomplete="none" placeholder="Country" type="text" required>
-                        </div>
-                        <div class="attach-file">
-                            <input type="file" name="file" id="file" class="inputfile" required/>
-                            <label for="file">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 11 14">
-                                    <path fill="#a4a4a4"
-                                          d="M9.943 11.64a.522.522 0 0 1-.52.52h-7.45a.522.522 0 0 1-.52-.52V2.443c0-.288.233-.521.52-.521h1.564v-.495a.522.522 0 0 1 1.042 0V5.1a.522.522 0 0 1-1.042 0V2.964H2.495V5.1c0 .862.7 1.563 1.563 1.563.862 0 1.563-.7 1.563-1.563V1.922h3.801c.287 0 .521.233.521.52zM5.522.88A1.566 1.566 0 0 0 4.058-.138c-.67 0-1.242.423-1.464 1.016h-.62C1.11.88.41 1.581.41 2.443v9.197c0 .862.701 1.563 1.563 1.563h7.45c.861 0 1.562-.701 1.562-1.563V2.443c0-.862-.701-1.564-1.563-1.564z"/>
-                                </svg>
-                                <span>Attach file</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="contact-form-right">
-                        <div class="input-line textarea">
-                            <!-- <div class="max-length">(max.476)</div> -->
-                            <textarea class="lines" placeholder="Question" cols="30" rows="10"></textarea>
-                        </div>
-                        <div class="select-form-wrap w-50">
-                            <div class="select-custom ">
-                                <select>
-                                    <option data-icon="images/ind-0.svg" value="0">How did you hear about us?
-                                    </option>
-                                    <option data-icon="images/ind-1.svg" value="Sales enquiry">Sales enquiry
-                                    </option>
-                                    <option data-icon="images/ind-2.svg" value="Technical Support">Technical Support
-                                    </option>
-                                    <option data-icon="images/ind-3.svg" value="Human Resources">Human Resources
-                                    </option>
-                                    <option data-icon="images/ind-4.svg" value="Other">Other</option>
-                                </select>
+            <div class="layout-row-content contact-form-container layout-row socket">
+                <div class="btn-close"></div>
+                <div class="layout-col-l"></div>
+                <div class="layout-col-r">
+                    <form action="">
+                        <div class="contact-form-left">
+                            <div class="input-line">
+                                <input autocomplete="none" placeholder="Company Name" type="text" required>
+                            </div>
+                            <div class="input-line">
+                                <input autocomplete="none" placeholder="Name" type="text" required>
+                            </div>
+                            <div class="input-line w-50">
+                                <input autocomplete="none" placeholder="Email" type="email" required>
+                            </div>
+                            <div class="input-line w-50">
+                                <input autocomplete="none" placeholder=" Phone" type="text" required>
+                            </div>
+                            <div class="input-line">
+                                <input autocomplete="none" placeholder="Country" type="text" required>
+                            </div>
+                            <div class="attach-file">
+                                <input type="file" name="file" id="file" class="inputfile" required />
+                                <label for="file">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14" viewBox="0 0 11 14">
+                                        <path fill="#a4a4a4"
+                                            d="M9.943 11.64a.522.522 0 0 1-.52.52h-7.45a.522.522 0 0 1-.52-.52V2.443c0-.288.233-.521.52-.521h1.564v-.495a.522.522 0 0 1 1.042 0V5.1a.522.522 0 0 1-1.042 0V2.964H2.495V5.1c0 .862.7 1.563 1.563 1.563.862 0 1.563-.7 1.563-1.563V1.922h3.801c.287 0 .521.233.521.52zM5.522.88A1.566 1.566 0 0 0 4.058-.138c-.67 0-1.242.423-1.464 1.016h-.62C1.11.88.41 1.581.41 2.443v9.197c0 .862.701 1.563 1.563 1.563h7.45c.861 0 1.562-.701 1.562-1.563V2.443c0-.862-.701-1.564-1.563-1.564z" />
+                                    </svg>
+                                    <span>Attach file</span>
+                                </label>
                             </div>
                         </div>
-                        <div class="select-form-wrap w-50 office-close">
-                            <div class="select-custom ">
-                                <select>
-                                    <option data-icon="images/ind-0.svg" value="Select Department">Select Department
-                                    </option>
-                                    <option data-icon="images/ind-1.svg" value="Sales enquiry">Sales enquiry
-                                    </option>
-                                    <option data-icon="images/ind-2.svg" value="Technical Support">Technical Support
-                                    </option>
-                                    <option data-icon="images/ind-3.svg" value="Human Resources">Human Resources
-                                    </option>
-                                    <option data-icon="images/ind-4.svg" value="Other">Other</option>
-                                </select>
+                        <div class="contact-form-right">
+                            <div class="input-line textarea">
+                                <!-- <div class="max-length">(max.476)</div> -->
+                                <textarea class="lines" placeholder="Question" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="select-form-wrap w-50">
+                                <div class="select-custom ">
+                                    <select>
+                                        <option data-icon="images/ind-0.svg" value="0">How did you hear about us?
+                                        </option>
+                                        <option data-icon="images/ind-1.svg" value="Sales enquiry">Web Search</option>
+                                        <option data-icon="images/ind-2.svg" value="Technical Support"> Recommendation</option>
+                                        <option data-icon="images/ind-3.svg" value="Human Resources"> Social Media</option>
+                                        <option data-icon="images/ind-4.svg" value="Other"> Trade Show</option>
+                                        <option data-icon="images/ind-4.svg" value="Other"> Other (specify)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="select-form-wrap w-50 office-close">
+                                <div class="select-custom ">
+                                    <select>
+                                        <option data-icon="images/ind-0.svg" value="Select Department">Select Department
+                                        </option>
+                                        <option data-icon="images/ind-1.svg" value="Sales enquiry">Sales enquiry
+                                        </option>
+                                        <option data-icon="images/ind-2.svg" value="Technical Support">Technical Support
+                                        </option>
+                                        <option data-icon="images/ind-3.svg" value="Human Resources">Human Resources
+                                        </option>
+                                        <option data-icon="images/ind-4.svg" value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="submit-wrap">
+                                @@include('./partials/elements/button.htm', {
+                                "text": "Send",
+                                "submit" : "true",
+                                "classes": ""
+                                })
                             </div>
                         </div>
-                        <div class="submit-wrap">
-                            @@include('./partials/elements/button.htm', {
-                            "text": "Send",
-                            "submit" : "true",
-                            "classes": ""
-                            })
-                        </div>
-                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
-    <div class="contact-help">
-        <span>Country</span>
-        <span>Contact </span>
-    </div>
-</main>
+        <div class="contact-help">
+            <span>Country</span>
+            <span>Contact </span>
+        </div>
+    </main>
 </body>
 
 <script>
