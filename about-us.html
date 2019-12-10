@@ -482,11 +482,12 @@
                             <button class="prev button-prev"></button>
                             <button class="next button-next"></button>
                         </div>
-                        @@include('./partials/elements/button-link-target.htm', {
-                        "text": "Open PDF",
-                        "href" : "./images/pdf.pdf",
-                        "classes": "btn-g btn-arrow-a"
+                        @@include('./partials/elements/button.htm', {
+                        "text": "Open pdf",
+                        "submit" : "true",
+                        "classes": "btn-g btn-arrow-a openAboutPdf"
                         })
+
                     </div>
                     <div class="slides">
                         <div class="slide active">
@@ -736,6 +737,8 @@
         </footer>
     </main>
     @@include('./partials/_team-popup.htm', { "classes": "" })
+    @@include('./partials/_about-us-popup.htm', { "classes": "" })
+
 </body>
 
 <script>
