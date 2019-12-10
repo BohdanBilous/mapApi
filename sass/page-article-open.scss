@@ -681,10 +681,16 @@
     .events-img{
         transform: translate(30%,-50%);
     }
+    &:hover{
+        h4{
+            color: $colorGreen;
+        }
+    }
 }
                 .ttl-4 {
                     margin-bottom: 18px;
                     color: #333333;
+                    transition: color 350ms ease;
                 }
 
                 .tags-list {
