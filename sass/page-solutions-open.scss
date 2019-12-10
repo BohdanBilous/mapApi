@@ -1125,9 +1125,11 @@ $leftOffset: 270px;
         margin-right: -25px;
 
         // @include scrollbarVis;
+        -webkit-overflow-scrolling: touch;
     }
 
     .tare-scroll-wrap::-webkit-scrollbar {
+        -webkit-overflow-scrolling: auto;
         -webkit-appearance: none;
         height: 4px;    
     }
