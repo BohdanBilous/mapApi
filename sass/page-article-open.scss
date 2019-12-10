@@ -206,8 +206,9 @@
     @include ie10 {
         overflow: hidden;
     }
+
     .article-open-header {
-            overflow: hidden;
+        overflow: hidden;
     }
 }
 
@@ -676,18 +677,23 @@
                     margin-bottom: 31px;
                     font-weight: 500;
                 }
-.events-ttl-section{
-    width: fit-content;
-    .events-img{
-        transform: translate(30%,-50%);
-    }
-    &:hover{
-        h4{
-            color: $colorGreen;
-        }
-    }
-}
+
+                .events-ttl-section {
+                    width: fit-content;
+
+                    .events-img {
+                        transform: translate(30%, -50%);
+                    }
+
+                    &:hover {
+                        a {
+                            color: $colorGreen; 
+                        }
+                    }
+                }
+
                 .ttl-4 {
+                    display: block;
                     margin-bottom: 18px;
                     color: #333333;
                     transition: color 350ms ease;
@@ -870,7 +876,8 @@
 
         .cases-container {
             flex-wrap: wrap;
-margin-bottom: 110px;
+            margin-bottom: 110px;
+
             &>a.case-item {
                 width: 100%;
                 margin-right: 0;
@@ -989,7 +996,7 @@ margin-bottom: 110px;
         .ml-layout-video {
             // width: 100%;
             max-width: 100%;
-            width: fit-content  ;
+            width: fit-content;
 
         }
 
