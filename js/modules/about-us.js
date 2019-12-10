@@ -56,8 +56,8 @@ window.addEventListener("load", function () {
     videoElementPlay.click();
 
     const teamMembers = document.querySelectorAll(".team-item");
-    const popupClose = document.querySelector(".popup .btn-close");
-    const popupBg = document.querySelector(".popup .popup-bg");
+    const popupClose = document.querySelectorAll(".popup .btn-close");
+    const popupBg = document.querySelectorAll(".popup .popup-bg");
     const popupLoadBlock = document.querySelector(".popup .team-member-load");
     let teamMemberId;
 
@@ -71,20 +71,25 @@ window.addEventListener("load", function () {
             teamMemberId = teamMember.getAttribute("id");
             html.classList.add("popup-open", "popup-open-about");
             html.classList.remove("popup-close");
-
             loadPopupInfo(teamMemberId);
         });
     });
 
+    const openAboutPdf = document.querySelector('.openAboutPdf');
+    openAboutPdf.addEventListener("click", () => {
+        html.classList.add("popup-open", "popup-open-abouu-us");
+        html.classList.remove("popup-close");
+    });
     const closePopup = () => {
-        html.classList.remove("popup-open", "popup-open-about");
+        html.classList.remove("popup-open", "popup-open-about", "popup-open-abouu-us");
         html.classList.add("popup-close");
+
     }
-    popupClose.addEventListener("click", () => {
+    popupClose.forEach(item => item.addEventListener("click", () => {
         closePopup();
-    });
-    popupBg.addEventListener("click", () => {
+    }));
+    popupBg.forEach(item => item.addEventListener("click", () => {
         closePopup();
-    });
+    }));
 
 });

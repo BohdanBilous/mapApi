@@ -4,8 +4,12 @@
         <div class="btn-close"></div>
 
         <div class="popup-content">
-                <embed src="./images/pdf.pdf" width="500" height="375" 
-                type="application/pdf">
+                <img src="./images/pdf.jpg"> 
+                @@include('elements/button-link-target.htm', {
+                    "text": "Open PDF",
+                    "href" : "./images/pdf.pdf",
+                    "classes": "btn-g btn-arrow-a"
+                    })
         </div>
     </div>
 </div>
