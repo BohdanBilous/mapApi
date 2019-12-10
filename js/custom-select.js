@@ -37,7 +37,6 @@ export function customSelect() {
 
                 s = this.parentNode.parentNode.parentNode.getElementsByTagName("select")[0];
                 h = this.parentNode.parentNode.previousSibling;
-
                 for (i = 0; i < s.length; i++) {
                     if (s.options[i].innerHTML == this.innerHTML) {
                         s.selectedIndex = i;
@@ -46,10 +45,11 @@ export function customSelect() {
                         h.innerHTML = this.innerHTML;
                         y = this.parentNode.getElementsByClassName("same-as-selected");
                         for (k = 0; k < y.length; k++) {
-                            y[k].classList.remove("same-as-selected");
+                            y[k].classList.remove("same-as-selected"); 
                         }
                         this.setAttribute("class", "select-item same-as-selected");
-
+                        this.setAttribute("class", "select-item same-as-selected");
+                      
                         break;
                     }
                 }
@@ -70,7 +70,10 @@ export function customSelect() {
             closeAllSelect(this);
             this.nextSibling.classList.toggle("select-hide");
             this.classList.toggle("select-arrow-active");
+
         });
+        console.log(b.scrollHeight)
+        b.style.height = b.scrollHeight + 20 + "px";
     }
 
     function closeAllSelect(elmnt) {
@@ -96,7 +99,7 @@ export function customSelect() {
 
     /* If the user clicks anywhere outside the select box,
     then close all select boxes: */
-    console.log(this)
+
     document.addEventListener("click", closeAllSelect);
 }
 
