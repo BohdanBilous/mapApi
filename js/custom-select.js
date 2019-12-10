@@ -61,6 +61,7 @@ export function customSelect() {
             scrollInner.appendChild(c);
             // c.prepend(icon);
         }
+        scrollInner.removeChild(scrollInner.childNodes[0]);
         x[i].appendChild(b);
         a.addEventListener("click", function (e) {
             /* When the select box is clicked, close any other select boxes,
@@ -95,6 +96,7 @@ export function customSelect() {
 
     /* If the user clicks anywhere outside the select box,
     then close all select boxes: */
+    console.log(this)
     document.addEventListener("click", closeAllSelect);
 }
 
