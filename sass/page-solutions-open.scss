@@ -1124,7 +1124,7 @@ $leftOffset: 270px;
         overflow-x: auto;
         margin-right: -25px;
 
-        // @include scrollbarVis;
+        @include scrollbarVis;
     }
 
     // .tare-scroll-wrap::-webkit-scrollbar {
