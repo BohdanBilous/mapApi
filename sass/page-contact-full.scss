@@ -242,16 +242,21 @@
         height: calc(100% - 118px);
         z-index: 0;
         touch-action: none;
-        .we-pp-wrapper, .we-pp-tip{
-            box-shadow: none !important;
-        }   
-             .we-pp{
-            bottom: 15px !important;
-        }
-.mainPopup{
-    z-index: 1000;
 
-}
+        .we-pp-wrapper,
+        .we-pp-tip {
+            box-shadow: none !important;
+        }
+
+        .we-pp {
+            bottom: 3px !important;
+        }
+
+        .mainPopup {
+            z-index: 1000;
+
+        }
+
         &>div {
             // transition: all 20ms linear;
             will-change: left, top;
@@ -493,8 +498,41 @@ div.searchable {
             }
 
             .attach-file {
+                position: relative;
+
                 input {
                     display: none;
+
+                }
+
+                .attach-close {
+                    cursor: pointer;
+                    position: absolute;
+                    pointer-events: none;
+                    opacity: 0;
+                    top: 16px;
+                    left: -25px;
+                    width: 31px;
+                    height: 31px;
+                    transform: translateY(-50%);
+                    transition: opacity 150 ease;
+
+                    span {
+                        width: 50%;
+                        height: 2px;
+                        position: absolute;
+                        background-color: #2a2a2a;
+                        top: calc(50% - 1px);
+                        left: 7.8px;
+
+                        &:first-child {
+                            transform: rotate(45deg);
+                        }
+
+                        &:last-child {
+                            transform: rotate(-45deg);
+                        }
+                    }
 
                 }
 
@@ -531,7 +569,15 @@ div.searchable {
                             fill: $colorGreen;
                         }
                     }
+
                 }
+
+                .inputfile:valid+label ~ .attach-close {
+                    pointer-events: unset;
+                    opacity: 1;
+
+                }
+
             }
         }
 
@@ -573,29 +619,60 @@ div.searchable {
 
                 .select-custom {
                     .select-selected {
+                        position: static;
                         background: none;
-                        border-bottom: 1px solid #cdcdcd;
+                        border-bottom: none;
                         border-radius: 0;
                         padding-left: 0;
+                        z-index: -1;
+                        visibility: visible;
 
                         &::after {
+                            top: 15px;
                             right: 0;
+                            transition: transform 300ms ease, color 300ms ease;
                         }
 
                         &.select-arrow-active {
                             border-bottom: none;
+
+                            &::before {
+                                top: 100%;
+                            }
+
+                            &::after {
+                                border-color: $colorGreen transparent transparent transparent;
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            left: 0;
+                            top: 29px;
+                            right: 0;
+                            height: 1px;
+                            background: #cdcdcd;
+                            transition: top 300ms ease;
                         }
                     }
+
 
                     .select-items {
                         position: relative;
                         background: none;
                         border-radius: 0;
-                        border-bottom: 1px solid #cdcdcd;
                         top: 0;
+                        transition: opacity 350ms ease, height 350ms ease;
+                        height: auto;
+                        padding: 15px 15px 15px 0;
 
                         .select-inner {
                             padding: 0;
+                            transition: opacity 350ms ease, transform 350ms ease;
+
+                            transform: translateX(0);
                         }
 
                         .select-item {
@@ -603,15 +680,45 @@ div.searchable {
                             font-family: $fontMain;
                             font-size: 14px;
                             font-weight: 400;
+                            margin-left: 30px;
                             transition: color 300ms ease;
                             border-bottom: 1px solid #cdcdcd;
                             margin-bottom: 16px;
+
+                            &.same-as-selected {
+                                color: $colorGreen;
+                                margin-left: 0;
+                                padding-left: 30px;
+
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    left: 4px;
+                                    width: 12px;
+                                    height: 9px;
+                                    background-size: contain;
+                                    top: 7px;
+                                    background: url(../images/checked.png);
+                                }
+                            }
 
                             &:hover {
                                 color: $colorGreen;
                             }
                         }
 
+                    }
+
+                    .select-items.select-hide {
+                        display: block;
+                        visibility: hidden;
+                        height: 0 !important;
+                        padding: 0;
+
+                        .select-inner {
+                            transform: translateX(-40px);
+
+                        }
                     }
                 }
 
@@ -641,11 +748,13 @@ div.searchable {
     }
 
 }
-.form-active{
-    .contacts-list{
+
+.form-active {
+    .contacts-list {
         pointer-events: none;
     }
 }
+
 @include laptop {
     .contact-form-container {
         padding-top: 110px;
@@ -731,7 +840,7 @@ div.searchable {
         }
 
         .searcheble-list {
-            transition: opacity 200ms  ease;
+            transition: opacity 200ms ease;
             display: none !important;
         }
 
@@ -914,11 +1023,12 @@ div.searchable {
             }
         }
 
-        .contacts-list{
+        .contacts-list {
 
-            &.active{
+            &.active {
                 pointer-events: none;
             }
+
             .contacts-item {
                 img {
                     width: 65px;

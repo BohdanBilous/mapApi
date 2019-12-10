@@ -1722,6 +1722,10 @@ window.addEventListener("load", function () {
                     items.closePopup()
                 });
                 item.openPopup();
+            });
+            item.element.querySelector('.we-pp-close').addEventListener('click',function(e){
+                e.stopPropagation(); 
+                item.closePopup();
             })
         });
         countysList.forEach(item =>
@@ -1744,10 +1748,16 @@ window.addEventListener("load", function () {
     //Change input file name
     inputFiles.forEach(input => {
         let label = input.querySelector("label"),
-            inputExist = input.querySelector("input");
+            inputExist = input.querySelector("input"),
+            removeData = input.querySelector('.attach-close');
         inputExist.addEventListener("change", function (e) {
             if (e.target.files[0])
                 label.querySelector("span").innerHTML = e.target.files[0].name;
+        });
+        removeData.addEventListener("click", function (e) {
+            e.stopPropagation();
+            inputExist.value = "";
+            label.querySelector("span").innerHTML = "Attach file";
         });
     });
 
