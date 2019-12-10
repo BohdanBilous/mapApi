@@ -709,7 +709,6 @@ $dotsLiWidth: 250px;
 
     &::-webkit-scrollbar {
         -webkit-appearance: none;
-        opacity: 1 !important;
         height: 4px;    
     }
 
@@ -719,7 +718,6 @@ $dotsLiWidth: 250px;
 
     &::-webkit-scrollbar-thumb {
         border-radius: 3px;
-        opacity: 1 !important;
         background-color: rgba(0, 0, 0, .3);
     }
 }
