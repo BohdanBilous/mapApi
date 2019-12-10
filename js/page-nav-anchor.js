@@ -15,13 +15,14 @@
 import { desktop } from "./generic-helpers";
 
 export class PageNav {
-  constructor(navWrap, block, callback, sticky, stickyHeight) {
+  constructor(navWrap, block, callback, sticky, stickyHeight, clickCallBack) {
     this.navWrap = document.querySelector(navWrap);
     this.sticky = sticky || false;
     this.stickyHeight = stickyHeight || null;
     this.block = document.querySelectorAll(block);
     this.stickyTopMargin = 0;
     this.callback = callback;
+    this.clickCallBack = clickCallBack;
 
     this.buttonClickHandler();
     this.onScreenHandler();
@@ -36,6 +37,7 @@ export class PageNav {
         let hash = target.getAttribute("data-hash");
         this.scrollToBlock(hash);
         this.changeActiveButton(target);
+        if (this.clickCallBack) this.clickCallBack();
       }
     });
   }
@@ -46,7 +48,7 @@ export class PageNav {
   }
 
   changeActiveButton(element) {
-    if (!element.classList.contains("active")) {
+    if (desktop && !element.classList.contains("active")) {
       this.navWrap.querySelector("li.active").classList.remove("active");
       element.classList.add("active");
     }
@@ -78,7 +80,7 @@ export class PageNav {
           buttonNav.querySelector("span").textContent ||
           buttonNav.querySelector("span").innerText;
 
-        if (!desktop) this.changeActiveButton(buttonNav);
+        if (desktop) this.changeActiveButton(buttonNav);
 
         if (buttonNav.querySelector(".items") != null) {
           itemsElement = buttonNav.querySelector(".items");

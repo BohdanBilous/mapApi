@@ -1,7 +1,8 @@
 /*jshint esversion: 6 */
 export const isMac = navigator.platform.match("Mac") !== null;
 export const isiPad = navigator.userAgent.match(/iPad/i) != null;
-export const isiOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+export const isiOS =
+  !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 export const isAndroid = /(android)/i.test(navigator.userAgent);
 export const isSafari = /^((?!chrome|android).)*safari/i.test(
   navigator.userAgent
@@ -15,7 +16,7 @@ export const html = document.querySelector("html");
 export const body = document.querySelector("body");
 
 // forEach for IE
-(function () {
+(function() {
   if (typeof NodeList.prototype.forEach !== "function") {
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
@@ -56,7 +57,7 @@ export function detectIE() {
 // Check Mobile Device
 export function mobilecheck() {
   let check = false;
-  (function (a) {
+  (function(a) {
     if (
       /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
         a
@@ -72,7 +73,7 @@ export function mobilecheck() {
 
 export function mobileAndTabletcheck() {
   let check = false;
-  (function (a) {
+  (function(a) {
     if (
       /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(
         a
@@ -133,7 +134,7 @@ export function debuggerPanel() {
  * Prepends new node before existing nodes
  * @param {HTMLElement} newChild new element to prepend
  */
-Node.prototype.prependChild = function (newChild) {
+Node.prototype.prependChild = function(newChild) {
   let _this = this;
 
   if (_this.hasChildNodes()) {
@@ -166,7 +167,7 @@ export function getVideo(video) {
   xhr.open("GET", videoSrc, true); // true <=> async req
   xhr.responseType = "blob";
 
-  xhr.onload = function () {
+  xhr.onload = function() {
     if (this.status === 200) {
       let videoDuration = video.duration;
       let videoBlob = this.response;
@@ -175,7 +176,7 @@ export function getVideo(video) {
     }
   };
 
-  xhr.onerror = function () {
+  xhr.onerror = function() {
     console.log("video: something went wrong");
   };
 
@@ -195,7 +196,7 @@ export function clearClassForChildren(
 ) {
   let children = parentElement.querySelectorAll(childSelector);
 
-  Array.prototype.forEach.call(children, function (child) {
+  Array.prototype.forEach.call(children, function(child) {
     child.classList.remove(classToRemove);
   });
 }
@@ -306,7 +307,7 @@ export function splitIntoLetters(innerText, letterCallback) {
   //takes in innerText of some element, gives out transformed text
   const letters = innerText.split("");
   letters.forEach(
-    function (letter) {
+    function(letter) {
       if (letterCallback) {
         letterCallback(letter);
       }
@@ -317,12 +318,12 @@ export function splitIntoLetters(innerText, letterCallback) {
 export function inputFocus(input) {
   let inputItems = document.querySelectorAll(input);
 
-  Array.prototype.forEach.call(inputItems, function (inputItem) {
+  Array.prototype.forEach.call(inputItems, function(inputItem) {
     let inputWrap = inputItem.parentNode;
-    inputItem.addEventListener("focus", function () {
+    inputItem.addEventListener("focus", function() {
       inputWrap.classList.add("focus");
     });
-    inputItem.addEventListener("blur", function () {
+    inputItem.addEventListener("blur", function() {
       if (inputItem.value == "") inputWrap.classList.remove("focus");
     });
   });
@@ -347,7 +348,7 @@ export function clearSessionStorage(arrItems) {
 
 export const videoToPic = (vidElm, picURL) => {
   if (mobile) {
-    setTimeout(function () {
+    setTimeout(function() {
       let url = vidElm.playing ? undefined : picURL;
 
       if (url) {
@@ -365,7 +366,7 @@ export const videoToPic = (vidElm, picURL) => {
 
 // Click Out
 export function clickOut(element, classElement, removeClass) {
-  document.addEventListener("click", function (e) {
+  document.addEventListener("click", function(e) {
     const closestElement = findParent(e.target, classElement);
     if (!closestElement) element.classList.remove(removeClass);
     e.stopPropagation();
@@ -393,7 +394,7 @@ export function getStyle(e, styleName) {
       .getComputedStyle(e, "")
       .getPropertyValue(styleName);
   } else if (e.currentStyle) {
-    styleName = styleName.replace(/\-(\w)/g, function (strMatch, p1) {
+    styleName = styleName.replace(/\-(\w)/g, function(strMatch, p1) {
       return p1.toUpperCase();
     });
     styleValue = e.currentStyle[styleName];
@@ -453,6 +454,10 @@ export let tags = () => {
 export function filterSidebarInit() {
   const filterSidebar = document.querySelector(".filter-sidebar");
 
+  if (!desktop) {
+    document.querySelector(".filter-item.active").classList.remove("active");
+  }
+
   if (exists(".btn-filter")) {
     document.querySelector(".btn-filter").addEventListener("click", () => {
       if (filterSidebar.classList.contains("open")) {
@@ -500,7 +505,7 @@ export function filterSidebarInit() {
 export let loadContent = (blockForLoad, getFile) => {
   let xhttp = new XMLHttpRequest();
 
-  xhttp.onreadystatechange = function () {
+  xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       blockForLoad.innerHTML = this.responseText;
     }
@@ -561,13 +566,15 @@ export const scrollXHorizontal = (wrap) => {
 //   );
 // };
 
-export const isInView = function (elem) {
+export const isInView = function(elem) {
   var bounding = elem.getBoundingClientRect();
   return (
-      bounding.top >= 0 &&
-      bounding.left >= 0 &&
-      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <=
+      (window.innerWidth || document.documentElement.clientWidth)
   );
 };
 
@@ -612,13 +619,13 @@ export const animateScroll = () => {
   //   }
   // }
 
-  setTimeout(function () {
+  setTimeout(function() {
     window.scrollTo(0, 0);
   }, 300);
 };
 
 // Disable Scroll
-export const disableBodyScroll = function () {
+export const disableBodyScroll = function() {
   var _selector = false,
     _element = false,
     _clientY;
@@ -627,11 +634,11 @@ export const disableBodyScroll = function () {
 
   if (!Element.prototype.matches)
     Element.prototype.matches =
-    Element.prototype.msMatchesSelector ||
-    Element.prototype.webkitMatchesSelector;
+      Element.prototype.msMatchesSelector ||
+      Element.prototype.webkitMatchesSelector;
 
   if (!Element.prototype.closest)
-    Element.prototype.closest = function (s) {
+    Element.prototype.closest = function(s) {
       var ancestor = this;
       if (!document.documentElement.contains(el)) return null;
       do {
@@ -641,20 +648,20 @@ export const disableBodyScroll = function () {
       return el;
     };
 
-  var preventBodyScroll = function (event) {
+  var preventBodyScroll = function(event) {
     if (false === _element || !event.target.closest(_selector)) {
       event.preventDefault();
     }
   };
 
-  var captureClientY = function (event) {
+  var captureClientY = function(event) {
     // only respond to a single touch
     if (event.targetTouches.length === 1) {
       _clientY = event.targetTouches[0].clientY;
     }
   };
 
-  var preventOverscroll = function (event) {
+  var preventOverscroll = function(event) {
     if (event.targetTouches.length !== 1) {
       return;
     }
@@ -673,7 +680,7 @@ export const disableBodyScroll = function () {
     }
   };
 
-  return function (allow, selector) {
+  return function(allow, selector) {
     if (typeof selector !== "undefined") {
       _selector = selector;
       _element = document.querySelector(selector);

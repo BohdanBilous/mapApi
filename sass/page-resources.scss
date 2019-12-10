@@ -141,6 +141,10 @@
         &:nth-last-child(1),
         &:nth-last-child(2) {
             margin-bottom: 0;
+
+            @include tablet {
+                margin-bottom: 30px;
+            }
         }
 
         &--size {

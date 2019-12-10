@@ -16,7 +16,18 @@ import { MediaLoader } from "../media-loader";
 window.addEventListener("load", function() {
   // Page Nav
   if (exists(".media-stream--container") && exists(".media-stream--section")) {
-    new PageNav(".media-stream--container", ".media-stream--section");
+    new PageNav(
+      ".media-stream--container",
+      ".media-stream--section",
+      null,
+      false,
+      false,
+      () => {
+        if (exists(".filter-sidebar")) {
+          document.querySelector(".filter-sidebar").classList.remove("open");
+        }
+      }
+    );
   }
 
   // Scroll From Screen
