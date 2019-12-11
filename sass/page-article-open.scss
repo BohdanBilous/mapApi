@@ -384,10 +384,10 @@
             margin-bottom: 47px;
         }
 
-        a {
+        a.button-next {
             margin: 0 0 0 auto;
             display: block;
-            width: 170px;
+            // width: 170px;
         }
     }
 
@@ -402,7 +402,7 @@
         }
 
 
-        &>a.case-item {
+        & > a.case-item {
             width: calc(50% - 10px);
             margin-right: 10px;
             margin-bottom: 38px;
@@ -412,12 +412,11 @@
             }
         }
 
-        &>a.btn {
+        & > a.btn {
             width: min-content;
             margin: 0 0 0 auto;
         }
     }
-
 
     article {
 
@@ -878,12 +877,10 @@
             flex-wrap: wrap;
             margin-bottom: 110px;
 
-            &>a.case-item {
+            & > a.case-item {
                 width: 100%;
                 margin-right: 0;
             }
-
-
         }
 
         .events-container {
@@ -903,6 +900,7 @@
 
             a.btn {
                 margin-right: 25px;
+                margin-left: 25px;
             }
         }
 
@@ -922,7 +920,7 @@
             padding: 59px 0 73px;
 
             .next-arcticle-inner {
-                &>div {
+                & > div {
                     flex-direction: column;
                 }
 
@@ -1026,8 +1024,14 @@
         }
 
         .article-open-container {
-            .article-open-subscribe>* {
+            .article-open-subscribe > * {
                 width: 100%;
+            }
+
+            .events-container {
+                a.btn {
+                    width: calc(100% - 50px);
+                }
             }
 
             .article-open-article {
@@ -1066,7 +1070,7 @@
             }
 
             .next-arcticle .next-arcticle-inner {
-                &>* {
+                & > * {
                     width: 100%;
                 }
 
@@ -1080,7 +1084,6 @@
                 .slider-dots {
                     display: block;
                 }
-
             }
 
             .cases-container {
@@ -1098,17 +1101,13 @@
                     }
                 }
 
-                &>a.case-item {
+                & > a.case-item {
                     width: 100%;
                     margin-right: 0;
                 }
-
-
             }
         }
-
     }
-
 
     .article-open-header-main {
         .header-content {
