@@ -1678,12 +1678,13 @@ window.addEventListener("load", function () {
             closeForm();
             markersList.map(item => item.closePopup());
         });
-        document.querySelectorAll('.select-custom')[0].querySelector('select').addEventListener('change', function () {
-            console.log(this.value)
+        document.querySelector('.select-custom.aditional-question').querySelector('select').addEventListener('change', function () {
+            const additionalInput = document.querySelector('.additional-input');
             if (this.value == 'Other') {
-                document.querySelector('.additional-input').classList.add('active');
-            }else{
-                document.querySelector('.additional-input').classList.remove('active');
+                additionalInput.classList.add('active');
+            } else {
+                additionalInput.classList.remove('active');
+                additionalInput.querySelector('input').value = "";
             }
         })
 
@@ -1762,10 +1763,8 @@ window.addEventListener("load", function () {
         removeData.addEventListener("click", function (e) {
             e.stopPropagation();
             inputExist.value = "";
-            if (!/safari/i.test(navigator.userAgent)) {
-                inputExist.type = ''
-                inputExist.type = 'file'
-            }
+            inputExist.type = '';
+            inputExist.type = 'file';
             label.querySelector("span").innerHTML = "Attach file";
         });
     });
@@ -1774,4 +1773,9 @@ window.addEventListener("load", function () {
     clickHandle();
     dotsTrigger();
     scrollXHorizontal(".scroll-x-block");
+
+    if (navigator.userAgent.indexOf('Safari') != -1 && 
+    navigator.userAgent.indexOf('Chrome') == -1) {
+        document.body.className += " safari";
+    }
 });
