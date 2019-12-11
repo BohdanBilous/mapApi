@@ -48,7 +48,7 @@ const arrayOfCountrys = [{
         }
     },
     {
-        name: "usa",
+        name: "usa-florida",
         body: {
             countryBound: {
                 lat: 31.9686,
@@ -61,14 +61,49 @@ const arrayOfCountrys = [{
                     bottomText: "Chris McEwan",
                     email:'Chris.mcewan@petainer.com',
                     office: false
-                },
+                }
+            ],
+            countryPoints: [{
+                lat: 25.992076,
+                long: -80.299311,
+                    pointText: '<span data-pop-country="usa-florida">Florida</span>'
+                }
+            ]
+        }
+    },
+    {
+        name: "usa-north-east",
+        body: {
+            countryBound: {
+                lat: -23.548468, 
+                long: -46.631040,
+                allatitude: 6000000
+            },
+            contactListItems: [
                 {
                     img: "./images/av-2.png",
                     topText: "USA (North-East) Territory Manager",
                     bottomText: "Daniel Moss",
                     email:'Daniel.Moss@petainer.com',
                     office: false
-                },
+                }],
+            countryPoints: [  {
+                lat:40.716142,
+                long: -73.992048,
+                pointText: '<span data-pop-country="usa-north-east">USA (North-East)</span>'
+            }
+            ]
+        }
+    },
+    {
+        name: "usa-mid-west",
+        body: {
+            countryBound: {
+                lat: -23.548468, 
+                long: -46.631040,
+                allatitude: 6000000
+            },
+            contactListItems: [,
                 {
                     img: "./images/av-4.png",
                     topText: "USA (Mid-West)  Territory Manager",
@@ -76,65 +111,90 @@ const arrayOfCountrys = [{
                     email:'David.Thennes@petainer.com',
                     office: false
                 },
-                {
-                    img: "./images/ava-3.png",
-                    topText: "USA (South-East)  Territory Manager",
-                    bottomText: "Kelly Thompson",
-                    email:'Kelly.Thompson@petainer.com',
-                    office: false
-                },
-                {
-                    img: "./images/ava-4.png",
-                    topText: "USA (South) Sales and Marketing Specialist ",
-                    bottomText: "Tammy Duhaime",
-                    email:'Tammy.Duhaime@petainer.com',
-                    office: false
-                },
-                {
-                    img: "./images/ava-5.png",
-                    topText: "President - Americas",
-                    bottomText: "Chris McEwan",
-                    office: false
-                }
-            ],
-            countryPoints: [{
-                lat: 25.992076,
-                long: -80.299311,
-                    pointText: '<span data-pop-country="usa">Florida</span>'
-                },
-                {
-                    lat: 21.4691,
-                    long: -78.6569,
-                    pointText: '<span data-pop-country="usa">Caribbean</span>'
-                },
-                {
-                    lat:40.716142,
-                    long: -73.992048,
-                    pointText: '<span data-pop-country="usa">USA (North-East)</span>'
-                },
+                ],
+            countryPoints: [,
                 {
                     lat: 41.878236, 
                     long: -87.629799,
-                    pointText: '<span data-pop-country="usa">USA (Mid-West)</span>'
-                },
-                {
-                    lat: 30.331285,
-                    long: -81.667322,
-                    pointText: '<span data-pop-country="usa">USA (South-East)</span>'
-                },
-                {
-                    lat: 31.9686,
-                    long: -99.9018,
-                    pointText: '<span data-pop-country="usa">USA (South)"</span>'
-                },
-                {
-                    lat: 34.050888,
-                    long:  -118.237356,
-                    pointText: '<span data-pop-country="usa">USA (West)"</span>'
+                    pointText: '<span data-pop-country="usa-mid-west">USA (Mid-West)</span>'
                 }
             ]
         }
     },
+    {
+        name: "usa-south-east",
+        body: {
+            countryBound: {
+                lat: -23.548468, 
+                long: -46.631040,
+                allatitude: 6000000
+            },
+            contactListItems: [{
+                img: "./images/ava-3.png",
+                topText: "USA (South-East)  Territory Manager",
+                bottomText: "Kelly Thompson",
+                email:'Kelly.Thompson@petainer.com',
+                office: false
+            },
+            ],
+            countryPoints: [
+                {
+                    lat: 30.331285,
+                    long: -81.667322,
+                    pointText: '<span data-pop-country="usa-south-east">USA (South-East)</span>'
+                }
+                
+            ]
+        }
+    },
+    {
+        name: "usa-south",
+        body: {
+            countryBound: {
+                lat: -23.548468, 
+                long: -46.631040,
+                allatitude: 6000000
+            },
+            contactListItems: [{
+                img: "./images/ava-4.png",
+                topText: "USA (South) Sales and Marketing Specialist ",
+                bottomText: "Tammy Duhaime",
+                email:'Tammy.Duhaime@petainer.com',
+                office: false
+            }
+           ],
+            countryPoints: [{
+                lat: 31.9686,
+                long: -99.9018,
+                pointText: '<span data-pop-country="usa-south">USA (South)"</span>'
+            }
+            ]
+        }
+    },
+    {
+        name: "usa-west",
+        body: {
+            countryBound: {
+                lat: 34.050888,
+                long:  -118.237356,
+                allatitude: 6000000
+            },
+            contactListItems: [ {
+                img: "./images/ava-5.png",
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                office: false
+            }],
+            countryPoints: [
+                {
+                    lat: 34.050888,
+                    long:  -118.237356,
+                    pointText: '<span data-pop-country="usa-west">USA (West)"</span>'
+                }
+            ]
+        }
+    },
+    
     {
         name: "brazil",
         body: {
@@ -426,27 +486,6 @@ const arrayOfCountrys = [{
         }
     },
     {
-        name: "cee",
-        body: {
-            countryBound: {
-                lat: 42.955410,
-                long: -9.189750,
-                allatitude: 7000000
-            },
-            contactListItems: [{
-                img: "./images/av-1.png",
-                topText: "Maneger",
-                bottomText: "Troy Pixley",
-                office: false
-            }],
-            countryPoints: [{
-                lat: 42.955410,
-                long: -9.189750,
-                pointText: '<span data-pop-country="cee">Cee</span>'
-            }]
-        }
-    },
-    {
         name: "caledonia",
         body: {
             countryBound: {
@@ -464,7 +503,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -22.273250, 
                 long: 166.446583,
-                pointText: '<span data-pop-country="caledonia">Caledonia</span>'
+                pointText: '<span data-pop-country="caledonia">New Caledonia</span>'
             }]
         }
     },
@@ -1922,9 +1961,9 @@ const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email:'Ricardo.vieira@petainer.com',
+                topText: "Commercial Director Asia",
+                bottomText: "Mathieu Raphat",
+                email:'mathieu.raphat@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -2109,7 +2148,7 @@ window.addEventListener("load", function () {
                 contactListItems.map(item =>
                     appendHtml(
                         contactList,
-                        createPersones(item.img, item.topText, item.bottomText)
+                        createPersones(item.img, item.topText, item.bottomText,item.email)
                     )
                 );
             animatePersons(contactListItems);
@@ -2171,9 +2210,9 @@ window.addEventListener("load", function () {
     };
 
     // Templete for persones which get from arrayOfCountrys -> body -> contactListItems -> [0]
-    const createPersones = (img, top, bottom) => {
+    const createPersones = (img, top, bottom,email) => {
         return `
-                <li class="contacts-item">
+                <li class="contacts-item" data-email="${email}">
                 <img src="${img}" alt="">
                 <div class="text">
                     <div class="top">
