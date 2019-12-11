@@ -1678,7 +1678,14 @@ window.addEventListener("load", function () {
             closeForm();
             markersList.map(item => item.closePopup());
         });
-
+        document.querySelectorAll('.select-custom')[0].querySelector('select').addEventListener('change', function () {
+            console.log(this.value)
+            if (this.value == 'Other') {
+                document.querySelector('.additional-input').classList.add('active');
+            }else{
+                document.querySelector('.additional-input').classList.remove('active');
+            }
+        })
 
     };
     const dotsTrigger = () => {

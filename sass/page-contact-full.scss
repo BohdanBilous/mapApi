@@ -478,7 +478,23 @@ div.searchable {
         .input-line {
             margin-bottom: 28px;
         }
+        .input-line {
+            width: 100%;
 
+            input {
+                padding-bottom: 9px;
+                padding-bottom: 0;
+                padding-top: 3px;
+                line-height: 23px;
+            }
+        }
+        .additional-input{
+            margin-top: 28px;
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
         .contact-form-left {
             display: flex;
             justify-content: space-between;
@@ -486,16 +502,7 @@ div.searchable {
             width: 38%;
             align-content: flex-start;
 
-            .input-line {
-                width: 100%;
-
-                input {
-                    padding-bottom: 9px;
-                    padding-bottom: 0;
-                    padding-top: 3px;
-                    line-height: 23px;
-                }
-            }
+         
 
             .w-50 {
                 width: 49%;
