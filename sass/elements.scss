@@ -307,6 +307,20 @@
                 background-color: #a9d8d9;
             }
         }
+
+        &:hover {
+            i {
+                animation: showMore 0.7s forwards;
+
+                &:nth-child(2) {
+                    animation-delay: 0.22s;
+                }
+        
+                &:nth-child(3) {
+                    animation-delay: 0.44s;
+                }
+            }  
+        }
     }
 
     &.btn-add {
@@ -396,6 +410,15 @@
                 border-color: transparent $colorBg transparent transparent;
             }
         }
+    }
+}
+
+@keyframes showMore {
+    50% {
+        transform: translateY(-3px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
 

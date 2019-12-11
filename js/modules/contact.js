@@ -4,8 +4,7 @@
 import {
     exists,
     scrollXHorizontal,
-    detectIE,
-    animateScroll
+    detectIE
 } from "../generic-helpers";
 import {
     customSelect
@@ -14,10 +13,6 @@ import {
 import {
     selectSearch
 } from "../select-search";
-
-import {
-    selectSwitcher
-} from "../select-switch";
 
 const arrayOfCountrys = [{
         // List off all countrys
@@ -1388,7 +1383,6 @@ window.addEventListener("load", function () {
     const contactInput = document.querySelector(".countrys .searchable input");
     const searchClose = document.querySelector(".countrys .searcheble-close");
     const inputFiles = document.querySelectorAll(".attach-file");
-    let dotsInitial = [];
     let markersList = [];
     let map;
     if (detectIE() == "11") {
@@ -1705,8 +1699,6 @@ window.addEventListener("load", function () {
 
             });
         });
-
-
 
         countysList.forEach(item =>
             item.addEventListener("click", () => {
