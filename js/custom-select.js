@@ -1,4 +1,4 @@
-export function customSelect() {
+export function customSelect(height = false) {
 
     var x, i, j, selElmnt, a, b, c, scrollInner, icon, iconScr;
     /* Look for any elements with the class "custom-select": */
@@ -72,8 +72,7 @@ export function customSelect() {
             this.classList.toggle("select-arrow-active");
 
         });
-        console.log(b.scrollHeight)
-        b.style.height = b.scrollHeight + 20 + "px";
+        if(height)  b.style.height = b.scrollHeight + 20 + "px";
     }
 
     function closeAllSelect(elmnt) {

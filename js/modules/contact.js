@@ -40,7 +40,9 @@ const arrayOfCountrys = [{
                 // List of markers
                 lat: 43.65107,
                 long: -79.347015,
-                pointText: "Canada " // Text in marker popup
+                pointText: `
+                <span data-pop-country="canada">Canada</span>
+                ` // Text in marker popup
             }]
         }
     },
@@ -92,37 +94,37 @@ const arrayOfCountrys = [{
             countryPoints: [{
                     lat: 27.6648,
                     long: -81.5158,
-                    pointText: "Florida"
+                    pointText: '<span data-pop-country="usa">Florida</span>'
                 },
                 {
                     lat: 21.4691,
                     long: -78.6569,
-                    pointText: "Caribbean "
+                    pointText: '<span data-pop-country="usa">Caribbean</span>'
                 },
                 {
                     lat: 40.7128,
                     long: -74.006,
-                    pointText: "USA (North-East)"
+                    pointText: '<span data-pop-country="usa">USA (North-East)</span>'
                 },
                 {
                     lat: 42.3148,
                     long: -85.6024,
-                    pointText: "USA (Mid-West)"
+                    pointText: '<span data-pop-country="usa">USA (Mid-West)</span>'
                 },
                 {
                     lat: 40.4173,
                     long: -82.9071,
-                    pointText: "USA (South-East)"
+                    pointText: '<span data-pop-country="usa">USA (South-East)</span>'
                 },
                 {
                     lat: 31.9686,
                     long: -99.9018,
-                    pointText: "USA (South)"
+                    pointText: '<span data-pop-country="usa">USA (South)"</span>'
                 },
                 {
                     lat: 36.7783,
                     long: -119.4179,
-                    pointText: "USA (West)"
+                    pointText: '<span data-pop-country="usa">USA (West)"</span>'
                 }
             ]
         }
@@ -144,22 +146,22 @@ const arrayOfCountrys = [{
             countryPoints: [{
                     lat: -14.235004,
                     long: -51.9253,
-                    pointText: "Brazil"
+                    pointText: '<span data-pop-country="brazil">Brazil</span>'
                 },
                 {
                     lat: -34.920345,
                     long: -57.969559,
-                    pointText: "Argentina"
+                    pointText: '<span data-pop-country="brazil">Brazil</span>'
                 },
                 {
                     lat: -32.522778,
                     long: -55.765835,
-                    pointText: "Uruguay"
+                    pointText: '<span data-pop-country="brazil">Brazil</span>'
                 },
                 {
                     lat: -23.442503,
                     long: -58.443832,
-                    pointText: "Paraguay"
+                    pointText: '<span data-pop-country="brazil">Brazil</span>'
                 }
             ]
         }
@@ -181,7 +183,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 49.817493,
                 long: 15.472962,
-                pointText: "Czech Republic"
+                pointText: '<span data-pop-country="czechrepublic">Czech Republic</span>'
             }]
         }
     },
@@ -202,7 +204,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 59.297098,
                 long: 18.135426,
-                pointText: "Sweden"
+                pointText: '<span data-pop-country="sweden">Sweden</span>'
             }]
         }
     },
@@ -248,27 +250,27 @@ const arrayOfCountrys = [{
             countryPoints: [{
                     lat: 53.971234,
                     long: 36.794679,
-                    pointText: "Russia"
+                    pointText: '<span data-pop-country="russia">Russia</span>'
                 },
                 {
                     lat: 59.87929,
                     long: 30.444284,
-                    pointText: "Russia"
+                    pointText: '<span data-pop-country="russia">Russia</span>'
                 },
                 {
                     lat: 56.847658,
                     long: 35.897066,
-                    pointText: "Russia"
+                    pointText: '<span data-pop-country="russia">Russia</span>'
                 },
                 {
                     lat: 57.121705,
                     long: 37.69083,
-                    pointText: "Russia"
+                    pointText: '<span data-pop-country="russia">Russia</span>'
                 },
                 {
                     lat: 55.72823,
                     long: 37.64481,
-                    pointText: "Office"
+                    pointText: '<span data-pop-country="russia">Office</span>'
                 }
             ]
         }
@@ -290,7 +292,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 35.86166,
                 long: 104.195396,
-                pointText: "China"
+                pointText: '<span data-pop-country="china">China</span>'
             }]
         }
     },
@@ -311,7 +313,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -33.856159,
                 long: 151.215256,
-                pointText: "Australia"
+                pointText: '<span data-pop-country="australia">Australia</span>'
             }]
         }
     },
@@ -332,7 +334,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 41.153332,
                 long: 20.168331,
-                pointText: "Albania"
+                pointText: '<span data-pop-country="albania">Albania</span>'
             }]
         }
     },
@@ -355,7 +357,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -38.416096,
                 long: -63.616673,
-                pointText: "Argentina"
+                pointText: '<span data-pop-country="argentina">Argentina</span>'
             }]
         }
     },
@@ -376,7 +378,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 50.503887,
                 long: 4.469936,
-                pointText: "Belgium"
+                pointText: '<span data-pop-country="belgium">Belgium</span>'
             }]
         }
     },
@@ -397,7 +399,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 43.858181,
                 long: 18.412340,
-                pointText: "Bosnia"
+                pointText: '<span data-pop-country="bosnia">Bosnia</span>'
             }]
         }
     },
@@ -418,7 +420,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 42.733883,
                 long: 25.485830,
-                pointText: "Bulgaria"
+                pointText: '<span data-pop-country="bulgaria">Bulgaria</span>'
             }]
         }
     },
@@ -439,7 +441,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 42.955410,
                 long: -9.189750,
-                pointText: "Cee"
+                pointText: '<span data-pop-country="cee">Cee</span>'
             }]
         }
     },
@@ -460,28 +462,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -22.262529,
                 long: 166.444275,
-                pointText: "Caledonia"
-            }]
-        }
-    },
-    {
-        name: "caribbean",
-        body: {
-            countryBound: {
-                lat: 26.832090,
-                long: 33.943211,
-                allatitude: 7000000
-            },
-            contactListItems: [{
-                img: "./images/av-1.png",
-                topText: "Maneger",
-                bottomText: "Troy Pixley",
-                office: false
-            }],
-            countryPoints: [{
-                lat: 26.832090,
-                long: 33.943211,
-                pointText: "Caribbean"
+                pointText: '<span data-pop-country="caledonia">Caledonia</span>'
             }]
         }
     },
@@ -502,7 +483,8 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -35.675148,
                 long: -71.542969,
-                pointText: "Chile"
+                pointText: '<span data-pop-country="chile">Chile</span>'
+
             }]
         }
     },
@@ -523,7 +505,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 9.748917,
                 long: -83.753426,
-                pointText: "Costa rica"
+                pointText: '<span data-pop-country="costarica">Costa rica</span>'
             }]
         }
     },
@@ -544,7 +526,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 45.099998,
                 long: 15.2,
-                pointText: "Croatia"
+                pointText: '<span data-pop-country="croatia">Croatia</span>'
             }]
         }
     },
@@ -565,7 +547,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 56.263920,
                 long: 9.501785,
-                pointText: "Denmark"
+                pointText: '<span data-pop-country="denmark">Denmark</span>'
             }]
         }
     },
@@ -584,9 +566,9 @@ const arrayOfCountrys = [{
                 office: false
             }],
             countryPoints: [{
-                lat: -20.375527,
-                long: 129.414827,
-                pointText: "Estonia"
+                lat: 58.595272,
+                long: 25.013607,
+                pointText: '<span data-pop-country="estonia">Estonia</span>'
             }]
         }
     },
@@ -607,7 +589,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 61.924110,
                 long: 25.748152,
-                pointText: "Finland"
+                pointText: '<span data-pop-country="finland">Finland</span>'
             }]
         }
     },
@@ -628,7 +610,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 46.227638,
                 long: 2.213749,
-                pointText: "France"
+                pointText: '<span data-pop-country="france">France</span>'
             }]
         }
     },
@@ -649,7 +631,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 51.165691,
                 long: 10.451526,
-                pointText: "Germany"
+                pointText: '<span data-pop-country="germany">Germany</span>'
             }]
         }
     },
@@ -670,7 +652,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 39.074207,
                 long: 21.824312,
-                pointText: "Greece"
+                pointText: '<span data-pop-country="greece">Greece</span>'
             }]
         }
     },
@@ -691,7 +673,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 43.858181,
                 long: 18.412340,
-                pointText: "Herzegovina"
+                pointText: '<span data-pop-country="herzegovina">Herzegovina</span>'
             }]
         }
     },
@@ -712,7 +694,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 47.162495,
                 long: 19.503304,
-                pointText: "Hungary"
+                pointText: '<span data-pop-country="hungary">Hungary</span>'
             }]
         }
     },
@@ -733,7 +715,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 64.963051,
                 long: -19.020836,
-                pointText: "Iceland"
+                pointText: '<span data-pop-country="iceland">Iceland</span>'
             }]
         }
     },
@@ -754,7 +736,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -0.789275,
                 long: 113.921326,
-                pointText: "Indonesia"
+                pointText: '<span data-pop-country="indonesia">Indonesia</span>'
             }]
         }
     },
@@ -775,7 +757,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 53.412910,
                 long: -8.243890,
-                pointText: "Ireland"
+                pointText: '<span data-pop-country="ireland">Ireland</span>'
             }]
         }
     },
@@ -796,7 +778,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 36.204823,
                 long: 138.252930,
-                pointText: "Japan"
+                pointText: '<span data-pop-country="japan">Japan</span>'
             }]
         }
     },
@@ -817,7 +799,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 37.663998,
                 long: 127.978462,
-                pointText: "Korea"
+                pointText: '<span data-pop-country="korea">Korea</span>'
             }]
         }
     },
@@ -838,7 +820,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 42.602634,
                 long: 20.902977,
-                pointText: "Kosovo"
+                pointText: '<span data-pop-country="kosovo">Kosovo</span>'
             }]
         }
     },
@@ -859,7 +841,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 56.879635,
                 long: 24.603189,
-                pointText: "Latvia"
+                pointText: '<span data-pop-country="latvia">Latvia</span>'
             }]
         }
     },
@@ -880,7 +862,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 55.169437,
                 long: 23.881275,
-                pointText: "Lithuania"
+                pointText: '<span data-pop-country="lithuania">Lithuania</span>'
             }]
         }
     },
@@ -901,7 +883,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 49.815273,
                 long: 6.129583,
-                pointText: "Luxembourg"
+                pointText: '<span data-pop-country="luxembourg">Luxembourg</span>'
             }]
         }
     },
@@ -922,7 +904,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 41.608635,
                 long: 21.745275,
-                pointText: "Macedonia"
+                pointText: '<span data-pop-country="macedonia">Macedonia</span>'
             }]
         }
     },
@@ -943,7 +925,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 4.2105,
                 long: 101.9758,
-                pointText: "Malaysia"
+                pointText: '<span data-pop-country="malaysia">Malaysia</span>'
             }]
         }
     },
@@ -964,7 +946,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 19.400000,
                 long: -98.988892,
-                pointText: "Mexico"
+                pointText: '<span data-pop-country="mexico">Mexico</span>'
             }]
         }
     },
@@ -985,7 +967,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 47.003670,
                 long: 28.907089,
-                pointText: "Moldavia"
+                pointText: '<span data-pop-country="moldavia">Moldavia</span>'
             }]
         }
     },
@@ -1006,7 +988,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 42.099998,
                 long: 19.1,
-                pointText: "Montenegro"
+                pointText: '<span data-pop-country="montenegro">Montenegro</span>'
             }]
         }
     },
@@ -1027,7 +1009,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 52.379189,
                 long: 4.899431,
-                pointText: "Netherlands"
+                pointText: '<span data-pop-country="netherlands">Netherlands</span>'
             }]
         }
     },
@@ -1048,7 +1030,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 59.911491,
                 long: 10.757933,
-                pointText: "Norway"
+                pointText: '<span data-pop-country="norway">Norway</span>'
             }]
         }
     },
@@ -1069,7 +1051,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -25.513475,
                 long: -54.615440,
-                pointText: "Paraguay"
+                pointText: '<span data-pop-country="paraguay">Paraguay</span>'
             }]
         }
     },
@@ -1090,7 +1072,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 52.237049,
                 long: 21.017532,
-                pointText: "Poland"
+                pointText: '<span data-pop-country="poland">Poland</span>'
             }]
         }
     },
@@ -1111,7 +1093,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 38.736946,
                 long: -9.142685,
-                pointText: "Portugal"
+                pointText: '<span data-pop-country="portugal">Portugal</span>'
             }]
         }
     },
@@ -1132,7 +1114,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 44.439663,
                 long: 26.096306,
-                pointText: "Romania"
+                pointText: '<span data-pop-country="romania">Romania</span>'
             }]
         }
     },
@@ -1153,28 +1135,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 44.787197,
                 long: 20.457273,
-                pointText: "Serbia"
-            }]
-        }
-    },
-    {
-        name: "serbia",
-        body: {
-            countryBound: {
-                lat: 44.787197,
-                long: 20.457273,
-                allatitude: 7000000
-            },
-            contactListItems: [{
-                img: "./images/av-1.png",
-                topText: "Maneger",
-                bottomText: "Troy Pixley",
-                office: false
-            }],
-            countryPoints: [{
-                lat: 44.787197,
-                long: 20.457273,
-                pointText: "Serbia"
+                pointText: '<span data-pop-country="serbia">Serbia</span>'
             }]
         }
     },
@@ -1195,7 +1156,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 1.290270,
                 long: 103.851959,
-                pointText: "Singapore"
+                pointText: '<span data-pop-country="singapore">Singapore</span>'
             }]
         }
     },
@@ -1216,7 +1177,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 48.148598,
                 long: 17.107748,
-                pointText: "Slovakia"
+                pointText: '<span data-pop-country="slovakia">Slovakia</span>'
             }]
         }
     },
@@ -1237,7 +1198,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 46.056946,
                 long: 14.505751,
-                pointText: "Slovenia"
+                pointText: '<span data-pop-country="slovenia">Slovenia</span>'
             }]
         }
     },
@@ -1258,7 +1219,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 40.416775,
                 long: -3.703790,
-                pointText: "Spain"
+                pointText: '<span data-pop-country="spain">Spain</span>'
             }]
         }
     },
@@ -1279,7 +1240,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 46.204391,
                 long: 6.143158,
-                pointText: "Switzerland"
+                pointText: '<span data-pop-country="switzerland">Switzerland</span>'
             }]
         }
     },
@@ -1300,7 +1261,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 13.736717,
                 long: 100.523186,
-                pointText: "Thailand"
+                pointText: '<span data-pop-country="thailand">Thailand</span>'
             }]
         }
     },
@@ -1321,7 +1282,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 41.015137,
                 long: 28.979530,
-                pointText: "Turkey"
+                pointText: '<span data-pop-country="turkey">Turkey</span>'
             }]
         }
     },
@@ -1342,7 +1303,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 51.509865,
                 long: -0.118092,
-                pointText: "Uk"
+                pointText: '<span data-pop-country="uk">UK</span>'
             }]
         }
     },
@@ -1363,7 +1324,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 50.446945,
                 long: 30.539722,
-                pointText: "Ukraine"
+                pointText: '<span data-pop-country="ukraine">Ukraine</span>'
             }]
         }
     },
@@ -1384,7 +1345,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -34.901112,
                 long: -56.164532,
-                pointText: "Uruguay"
+                pointText: '<span data-pop-country="uruguay">Uruguay</span>'
             }]
         }
     },
@@ -1405,7 +1366,7 @@ const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -36.848461,
                 long: 174.763336,
-                pointText: "New zealand"
+                pointText: '<span data-pop-country="newzealand">New zealand</span>'
             }]
         }
     }
@@ -1427,7 +1388,7 @@ window.addEventListener("load", function () {
     const contactInput = document.querySelector(".countrys .searchable input");
     const searchClose = document.querySelector(".countrys .searcheble-close");
     const inputFiles = document.querySelectorAll(".attach-file");
-    const countrys = document.querySelector(".countrys");
+    let dotsInitial = [];
     let markersList = [];
     let map;
     if (detectIE() == "11") {
@@ -1448,7 +1409,7 @@ window.addEventListener("load", function () {
     }
 
     if (exists(".select-custom")) {
-        customSelect();
+        customSelect(true);
     }
 
     //Only for Local test
@@ -1475,7 +1436,7 @@ window.addEventListener("load", function () {
             tilting: false,
             zooming: true,
             scrollWheelZoom: true,
-            unconstrainedRotation:false
+            unconstrainedRotation: false
         });
         map.setTilt(15);
         WE.tileLayer(
@@ -1499,51 +1460,71 @@ window.addEventListener("load", function () {
             const {
                 countryPoints
             } = item.body;
-            countryPoints &&
-                countryPoints.map(point =>
-                    addPoint(point.pointText, [point.lat, point.long])
-                );
+            countryPoints && countryPoints.map(point => {
+                addPoint(point.pointText, [point.lat, point.long])
+            });
         });
+        tooglPopUpList();
     };
 
     const animateToMap = () => {
         // countysFly - Wrapper for list of items in ".countrys-list"  and ".searcheble-list"
+
         countysFly.forEach((item, i) => {
-            const contactList = document.querySelector(".contacts-list");
             item.addEventListener("click", () => {
                 let countryName = item.getAttribute("data-country");
-                let arrayOfCountrysExist = arrayOfCountrys.find(
-                    obj => obj.name === countryName
-                );
-                if (arrayOfCountrysExist) {
-                    const {
-                        countryBound,
-                        countryPoints,
-                        contactListItems
-                    } = arrayOfCountrysExist.body;
-                    contactList.classList.remove("active");
-                    contactList.innerHTML = "";
-
-                    deletePoints();
-                    toogleActive(item);
-                    addBounds(countryBound);
-                    countryPoints &&
-                        countryPoints.map(point =>
-                            addPoint(point.pointText, [point.lat, point.long])
-                        );
-                    contactListItems &&
-                        contactListItems.map(item =>
-                            appendHtml(
-                                contactList,
-                                createPersones(item.img, item.topText, item.bottomText)
-                            )
-                        );
-                    animatePersons(contactListItems);
-                    closeForm();
-                }
+                mainFunc(item, countryName, item);
             });
         });
     };
+    const mainFunc = (item, countryName, toogle = null) => {
+        let arrayOfCountrysExist = arrayOfCountrys.find(
+            obj => obj.name === countryName
+        );
+        if (arrayOfCountrysExist) {
+            const {
+                countryBound,
+                countryPoints,
+                contactListItems
+            } = arrayOfCountrysExist.body;
+            contactList.classList.remove("active");
+            contactList.innerHTML = "";
+
+            toogle && deletePoints();
+            toogle && toogleActive(item);
+            addBounds(countryBound);
+            countryPoints &&
+                countryPoints.map(point =>
+                    addPoint(point.pointText, [point.lat, point.long])
+                );
+            contactListItems &&
+                contactListItems.map(item =>
+                    appendHtml(
+                        contactList,
+                        createPersones(item.img, item.topText, item.bottomText)
+                    )
+                );
+            animatePersons(contactListItems);
+            closeForm();
+
+            markersList.map(item => {
+                item.on("click", e => {
+                    markersList.map(item => item.element.classList.remove('mainPopup'));
+                    item.element.classList.add('mainPopup');
+                    markersList.map(items => {
+                        items.closePopup();
+                    });
+                    item.openPopup();
+                });
+                item.element.querySelector('.we-pp-close').addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    item.closePopup();
+                })
+            });
+
+        }
+    }
+
     const animatePersons = list => {
         const persone = document.querySelectorAll(".contacts-item");
         contactList.classList.remove("non_active");
@@ -1637,12 +1618,12 @@ window.addEventListener("load", function () {
     const deletePoints = () => {
         markersList.forEach(marker => map.removeMarker(marker));
         markersList = [];
+
     };
 
     // Create Bounds add fly to that bound
     const addBounds = bounds => {
-        map.flyTo(bounds.lat, bounds.long, bounds.allatitude,1 , 10, 10000, 2);
-        console.log(map)
+        map.flyTo(bounds.lat, bounds.long, bounds.allatitude, 1, 10, 10000, 2);
     };
 
     // Create markers
@@ -1688,24 +1669,9 @@ window.addEventListener("load", function () {
         contactInput.addEventListener("click", (e) => {
             e.preventDefault();
             closePersones();
-
             return false;
         });
         searchClose.addEventListener("click", () => closePersones());
-
-
-
-        // Button All countrys to started position
-        toStart.forEach(start => {
-            start.addEventListener("click", () => {
-                initialPoins();
-                closeForm();
-                getCountryPosition();
-                toogleActive(countysFly[0]);
-                contactHelp.classList.remove("active");
-                closePersones();
-            });
-        });
 
         //Close all opened Popups
         map.on("click", () => {
@@ -1713,28 +1679,59 @@ window.addEventListener("load", function () {
             markersList.map(item => item.closePopup());
         });
 
-        //Toogle Popups
-        markersList.map(item => {
-            item.element.classList.remove('mainPopup')
-            item.on("click", e => {
-                item.element.classList.add('mainPopup');
-                markersList.map(items => {
-                    items.closePopup()
-                });
-                item.openPopup();
+
+    };
+    const dotsTrigger = () => {
+        // Button All countrys to started position
+        toStart.forEach(start => {
+            start.addEventListener("click", () => {
+
+                initialPoins();
+                // console.log(dotsInitial)
+                // mainFunc('all', 'all');
+                getCountryPosition();
+                toogleActive(countysFly[0]);
+                contactHelp.classList.remove("active");
+
+                closePersones();
+                closeForm();
+
             });
-            item.element.querySelector('.we-pp-close').addEventListener('click',function(e){
-                e.stopPropagation(); 
-                item.closePopup();
-            })
         });
+
+
+
         countysList.forEach(item =>
             item.addEventListener("click", () => {
                 contactInput.parentNode.classList.remove("with-icon");
                 contactInput.value = "";
             })
         );
-    };
+    }
+
+    //Toogle Popups
+    const tooglPopUpList = () => {
+        markersList.map(item => {
+            item.on("click", e => {
+                markersList.map(item => item.element.classList.remove('mainPopup'));
+                let textMarker = item.element.querySelector('.we-pp-wrapper .we-pp-content').childNodes[0].getAttribute('data-pop-country');
+                textMarker = textMarker.toLowerCase();
+                // deletePoints();
+                mainFunc(textMarker, textMarker);
+                item.element.classList.add('mainPopup');
+                markersList.map(items => {
+                    items.closePopup();
+                });
+
+                item.openPopup();
+            });
+            item.element.querySelector('.we-pp-close').addEventListener('click', function (e) {
+                e.stopPropagation();
+                item.closePopup();
+            })
+        });
+    }
+
     // Toogle styles for countrys block
     const toogleActive = country => {
         let countrys = country.parentNode.childNodes;
@@ -1742,6 +1739,7 @@ window.addEventListener("load", function () {
             item.classList.add("not_active");
             item.classList.remove("active");
         });
+        // deletePoints();
         country.classList.remove("not_active");
         country.classList.add("active");
     };
@@ -1757,11 +1755,16 @@ window.addEventListener("load", function () {
         removeData.addEventListener("click", function (e) {
             e.stopPropagation();
             inputExist.value = "";
+            if (!/safari/i.test(navigator.userAgent)) {
+                inputExist.type = ''
+                inputExist.type = 'file'
+            }
             label.querySelector("span").innerHTML = "Attach file";
         });
     });
 
     init();
     clickHandle();
+    dotsTrigger();
     scrollXHorizontal(".scroll-x-block");
 });
