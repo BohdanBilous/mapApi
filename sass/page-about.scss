@@ -2,6 +2,7 @@
     About us 
    ========================= */
   .popup-open.popup-open-abouu-us{
+    overflow: unset;
     .team-popup{
       display: none;
     }
@@ -13,6 +14,7 @@
   } 
    .popup.about-popup {
      background: none;
+
     .popup-side{
       position: absolute;
      top: 50%;

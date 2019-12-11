@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 32 42">
+      <image width="32" height="42" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAqCAYAAADS4VmSAAAABHNCSVQICAgIfAhkiAAAAElJREFUWEft1TERACAQA0FeAibwgyrc4eZrkJFmo+Bmm9Sd643gSgABAgQIEIgLdHf2DQUQIECAAIG4wDg7+4YCCBAgQIBAWuADri9sSSbPGToAAAAASUVORK5CYII="/>
+    </pattern>
+  </defs>
+  <circle id="Hungary" cx="16" cy="16" r="16" fill="url(#pattern)"/>
+</svg>

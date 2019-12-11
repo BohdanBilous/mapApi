@@ -1,7 +1,11 @@
 /* =========================
     Contact 
    ========================= */
-
+body.safari{
+    .contact-form-container form .contact-form-right .textarea{
+        margin-bottom: 23px;
+    }
+}
 
 .contact-main {
     overflow: hidden;
@@ -291,10 +295,10 @@ div.searchable {
             position: absolute;
             left: 0;
             top: 0;
-            width: 33px;
-            height: 33px;
-            background-size: contain;
-            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            background-size: cover;
+            // border-radius: 50%;
         }
     }
 
@@ -521,13 +525,16 @@ div.searchable {
                     position: absolute;
                     pointer-events: none;
                     opacity: 0;
-                    top: 16px;
-                    right: -30px;
+                    top: 21px;
+                    right: -37px;
                     width: 31px;
                     height: 31px;
                     transform: translateY(-50%);
                     transition: opacity 150 ease;
-
+&::before,&::after{
+    height: 16px;
+    top: 4px;
+}
                     span {
                         width: 50%;
                         height: 2px;
