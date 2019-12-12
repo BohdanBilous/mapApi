@@ -2509,6 +2509,11 @@ $animateDur: 0.30s;
 
         a {
             text-decoration: underline;
+            text-underline-position: under;
+            transition: color 300ms ease;
+            &:hover{
+                color: $colorGreen;
+            }
         }
     }
 
