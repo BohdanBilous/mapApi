@@ -6,6 +6,12 @@
     @extend .flex-sb;
     padding-top: 12px;
 
+    &::after {
+        content: "";
+        display: block;
+        width: 32.7%;
+    }
+
     @include tablet {
         padding-top: 0;
         margin-top: -5px;
@@ -22,9 +28,23 @@
     .team-img {
         overflow: hidden;
         border-radius: 7px;
+        height: 550px;
+
+        @include macbook {
+            height: 420px;
+        }
+
+        @include tablet {
+            height: 320px;
+        }
+
+        @include mobile {
+            height: 290px;
+        }
 
         img {
             width: 100%;
+            height: 100%;
             display: block;
             object-fit: cover;
             transition: transform 0.3s;

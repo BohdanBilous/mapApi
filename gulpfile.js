@@ -145,7 +145,12 @@ function js() {
         commonJs(),
         babel({
           plugins: ["@babel/plugin-transform-arrow-functions"],
-          presets: [['@babel/preset-env', {targets: {browsers: ['last 2 versions', 'ie >= 7']}}]],
+          presets: [
+            [
+              "@babel/preset-env",
+              { targets: { browsers: ["last 2 versions", "ie >= 7"] } }
+            ]
+          ]
         })
       ]
     })
@@ -156,7 +161,7 @@ function js() {
         //name: 'scripts',
         sourcemap: true
       });
-    }); 
+    });
 }
 
 function jsProd() {
@@ -219,7 +224,13 @@ function jsProd() {
 
 gulp.task("images", function() {
   return gulp
-    .src(["images/**/*.gif", "images/**/*.jpg", "images/**/*.svg", "images/**/*.pdf", "images/**/*.webp"])
+    .src([
+      "images/**/*.gif",
+      "images/**/*.jpg",
+      "images/**/*.svg",
+      "images/**/*.pdf",
+      "images/**/*.webp"
+    ])
     .pipe(
       imagemin(
         [
@@ -312,6 +323,10 @@ gulp.task("vendor", function() {
   return gulp.src(["vendor/**/*"]).pipe(gulp.dest("dist/vendor"));
 });
 
+gulp.task("team-info", function() {
+  return gulp.src(["team-info/**/*"]).pipe(gulp.dest("dist/team-info"));
+});
+
 gulp.task("clean:cache", function() {
   return del(".sass-cache/**", {
     force: true
@@ -346,13 +361,31 @@ gulp.task("media", media);
 
 const build = gulp.series(
   "sass",
-  gulp.parallel("css", "workers", html, js, "favicon", "vendor", "sw")
+  gulp.parallel(
+    "css",
+    "workers",
+    html,
+    js,
+    "favicon",
+    "vendor",
+    "team-info",
+    "sw"
+  )
 );
 gulp.task("build", build);
 
 const buildProd = gulp.series(
   "sass",
-  gulp.parallel("css", "workers", html, jsProd, "favicon", "vendor", "sw")
+  gulp.parallel(
+    "css",
+    "workers",
+    html,
+    jsProd,
+    "favicon",
+    "vendor",
+    "team-info",
+    "sw"
+  )
 );
 gulp.task("build:prod", buildProd);
 
