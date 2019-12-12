@@ -58,7 +58,7 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-2.png",
-                topText: "USA (North-East) Territory Manager",
+                topText: "Territory Manager North-East",
                 bottomText: "Daniel Moss",
                 email: 'Daniel.Moss@petainer.com',
                 office: false
@@ -66,7 +66,7 @@ export const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 40.716142,
                 long: -73.992048,
-                pointText: '<span data-pop-country="usa-north-east">USA (North-East)</span>'
+                pointText: '<span data-pop-country="usa-north-east">US - North-East</span>'
             }]
         }
     },
@@ -81,8 +81,8 @@ export const arrayOfCountrys = [{
             contactListItems: [,
                 {
                     img: "./images/av-4.png",
-                    topText: "USA (Mid-West)  Territory Manager",
-                    bottomText: "David Thenness",
+                    topText: "Midwest Territory Manager",
+                    bottomText: "David Thennes",
                     email: 'David.Thennes@petainer.com',
                     office: false
                 },
@@ -91,7 +91,7 @@ export const arrayOfCountrys = [{
                 {
                     lat: 41.878236,
                     long: -87.629799,
-                    pointText: '<span data-pop-country="usa-mid-west">USA (Mid-West)</span>'
+                    pointText: '<span data-pop-country="usa-mid-west">US Midwest </span>'
                 }
             ]
         }
@@ -106,7 +106,7 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/ava-3.png",
-                topText: "USA (South-East)  Territory Manager",
+                topText: "Territory Manager Southeast",
                 bottomText: "Kelly Thompson",
                 email: 'Kelly.Thompson@petainer.com',
                 office: false
@@ -114,7 +114,7 @@ export const arrayOfCountrys = [{
             countryPoints: [{
                     lat: 30.331285,
                     long: -81.667322,
-                    pointText: '<span data-pop-country="usa-south-east">USA (South-East)</span>'
+                    pointText: '<span data-pop-country="usa-south-east">US South-East</span>'
                 }
 
             ]
@@ -130,7 +130,7 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/ava-4.png",
-                topText: "USA (South) Sales and Marketing Specialist ",
+                topText: "Sales and Marketing Specialist",
                 bottomText: "Tammy Duhaime",
                 email: 'Tammy.Duhaime@petainer.com',
                 office: false
@@ -138,7 +138,7 @@ export const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 29.758482,
                 long: -95.366993,
-                pointText: '<span data-pop-country="usa-south">USA (South)</span>'
+                pointText: '<span data-pop-country="usa-south">US South</span>'
             }]
         }
     },
@@ -159,7 +159,7 @@ export const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 34.050888,
                 long: -118.237356,
-                pointText: '<span data-pop-country="usa-west">USA (West)</span>'
+                pointText: '<span data-pop-country="usa-west">US West </span>'
             }]
         }
     },
@@ -530,7 +530,7 @@ export const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 9.929525,
                 long: -84.088111,
-                pointText: '<span data-pop-country="costarica">Costa rica</span>'
+                pointText: '<span data-pop-country="costarica">Costa Rica</span>'
             }]
         }
     },
@@ -1482,9 +1482,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1504,9 +1504,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1526,9 +1526,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1548,9 +1548,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1570,9 +1570,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1592,9 +1592,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1614,9 +1614,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1636,9 +1636,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1658,9 +1658,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1680,9 +1680,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1702,9 +1702,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
@@ -1724,9 +1724,9 @@ export const arrayOfCountrys = [{
             },
             contactListItems: [{
                 img: "./images/av-1.png",
-                topText: "General Manager Brazil",
-                bottomText: "Ricardo Vieira",
-                email: 'Ricardo.vieira@petainer.com',
+                topText: "President - Americas",
+                bottomText: "Chris McEwan",
+                email: 'Chris.mcewan@petainer.com',
                 office: false
             }],
             countryPoints: [{
