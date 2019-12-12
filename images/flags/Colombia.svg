@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-  <defs>
-    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 400 267">
-      <image width="400" height="267" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAELBAMAAAAFMM1/AAAAGFBMVEX80RYAOJPOESYALpt+hVWZG0LYDyH/2w52TAVJAAAAzElEQVR42u3PgRCAABAAwVdIIYUUUkghhfTTuPnZNdgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgK2+JeZeYq4l5lhCpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakZp4l5l1iziVEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqRGpEakRqfjBGaobxfTVcAAAAAElFTkSuQmCC"/>
-    </pattern>
-  </defs>
-  <circle id="Colombia" cx="16" cy="16" r="16" fill="url(#pattern)"/>
-</svg>
