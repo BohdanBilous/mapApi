@@ -2498,19 +2498,21 @@ $animateDur: 0.30s;
         justify-content: space-between;
         align-items: center;
         padding-left: 7.5%;
+        max-width: 100%;
     }
 
     p {
         width: 340px;
         max-width: 100%;
-        color: rgba(#2a2a2a, 0.8);
+        color:#595A5A;
         text-align: left;
         margin-bottom: 0;
-
+        line-height: 18px;
         a {
             text-decoration: underline;
             text-underline-position: under;
             transition: color 300ms ease;
+            color: inherit;
             &:hover{
                 color: $colorGreen;
             }
@@ -2555,6 +2557,7 @@ $animateDur: 0.30s;
     @include tablet {
         width: 100vw;
         max-width: 100%;
+        padding: 61px 0 52px;
     }
 
     @include mobile {
