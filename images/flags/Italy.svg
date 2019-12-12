@@ -1,8 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
   <defs>
-    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 42 32">
-      <image width="42" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAgCAYAAABkWOo9AAAABHNCSVQICAgIfAhkiAAAAG1JREFUWEftlrENwCAQxI49WCKjsEjWYBGWYpDUpI90xX0ZmR4JnWyZpjmOCue5V+GWtPtVutd4qNmNRR1QMGqWQSaHDDIhU9gnZEKmEBlRJsoUMkOZKFOIDGWiTCEylMkNhkzIhEyfBX7/KXkBZ9qgoZFownEAAAAASUVORK5CYII="/>
-    </pattern>
+    <clipPath id="clip-path">
+      <circle id="Italy" cx="16" cy="16" r="16" transform="translate(1277 324)" fill="#fff"/>
+    </clipPath>
   </defs>
-  <circle id="Italy" cx="16" cy="16" r="16" fill="url(#pattern)"/>
+  <g id="Italy-2" data-name="Italy" transform="translate(-1277 -324)" clip-path="url(#clip-path)">
+    <g id="Flag_of_Italy" transform="translate(1269 323.518)">
+      <rect id="Rectangle_29" data-name="Rectangle 29" width="16.241" height="32.482" fill="#009246"/>
+      <rect id="Rectangle_30" data-name="Rectangle 30" width="16.241" height="32.482" transform="translate(16.241)" fill="#fff"/>
+      <rect id="Rectangle_31" data-name="Rectangle 31" width="16.241" height="32.482" transform="translate(32.482)" fill="#ce2b37"/>
+    </g>
+  </g>
 </svg>

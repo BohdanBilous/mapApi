@@ -1,8 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
   <defs>
-    <pattern id="pattern" width="1" height="1" viewBox="0 7 32 32">
-      <image preserveAspectRatio="xMidYMid slice" width="32" height="46" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAuCAYAAABJcBuEAAAABHNCSVQICAgIfAhkiAAAAEhJREFUWEft1TERACAQA0HeAiKQhxyk4eRrkJFmo+Bmm1R3vxFcCSBAgAABAgTG2dk7FkCAAAECBAjcNbN3LIAAAQIECBBIC3zI83kufl6qvwAAAABJRU5ErkJggg=="/>
-    </pattern>
+    <clipPath id="clip-path">
+      <circle id="Bulgaria" cx="16" cy="16" r="16" transform="translate(317 454)" fill="#fff"/>
+    </clipPath>
   </defs>
-  <circle id="Bulgaria" cx="16" cy="16" r="16" fill="url(#pattern)"/>
+  <g id="Bulgaria-2" data-name="Bulgaria" transform="translate(-317 -454)" clip-path="url(#clip-path)">
+    <g id="Flag_of_Bulgaria" transform="translate(306.333 454)">
+      <rect id="Rectangle_36" data-name="Rectangle 36" width="53.333" height="32" fill="#fff"/>
+      <rect id="Rectangle_37" data-name="Rectangle 37" width="53.333" height="21.333" transform="translate(0 10.667)" fill="#00966e"/>
+      <rect id="Rectangle_38" data-name="Rectangle 38" width="53.333" height="10.667" transform="translate(0 21.333)" fill="#d62612"/>
+    </g>
+  </g>
 </svg>

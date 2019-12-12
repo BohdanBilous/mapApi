@@ -1,8 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
   <defs>
-    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 400 200">
-      <image width="400" height="200" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADIBAMAAAA0O6rRAAAAD1BMVEWeMDn////48PGlP0ecLDWpY2OWAAAAeUlEQVR42u3aQRHDABDEsKNQCqFQCuGPKTQ8OxID/30AAAAAAAAAAAAAAAAAAAAb3hH3H3HPiPuNEFIjpEZIjZAaITVCaoTUCKkRUiOkRkiNkBohNUJqhNQIqRFSI6RmJ+QZsTMMvCMOAAAAAAAAAAAAAAAAAABgwgf6b+ffaqQ71AAAAABJRU5ErkJggg=="/>
-    </pattern>
+    <clipPath id="clip-path">
+      <circle id="Latvia" cx="16" cy="16" r="16" transform="translate(637 454)" fill="#fff"/>
+    </clipPath>
   </defs>
-  <circle id="Latvia" cx="16" cy="16" r="16" fill="url(#pattern)"/>
+  <g id="Latvia-2" data-name="Latvia" transform="translate(-637 -454)" clip-path="url(#clip-path)">
+    <g id="Flag_of_Latvia" transform="translate(621 454)">
+      <path id="Path_442" data-name="Path 442" d="M0,0H64V32H0" fill="#9e3039"/>
+      <path id="Path_443" data-name="Path 443" d="M0,6.4H64v6.4H0" transform="translate(0 6.4)" fill="#fff"/>
+    </g>
+  </g>
 </svg>

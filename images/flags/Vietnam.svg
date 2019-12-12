@@ -1,8 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
   <defs>
-    <pattern id="pattern" width="1" height="1" viewBox="7.159 0 32 32">
-      <image preserveAspectRatio="xMidYMid slice" width="47.94" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAELCAMAAADAwCB+AAAAclBMVEXaJR3//wDaIx3ZHR72xwfYGh7YFx/ZIB3dNBvcLRz++AH86QP//ADePBrtkw764QTgQhnhShjncBPrhBDxpwzpeRL40Ab97wLkXRbztgr3zAfvnQ352AXjVRfyrwviURfsjA/lZRX1xAj+9AHmahP0vAk/hX+EAAAEv0lEQVR42uzc23IiIRSF4d4goLanUdtDq3E08f1fcRIzKSqTaFCbhqr5vwfwhmLRS6hdAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPjPOVUgI27fZUVyotcrXSAbbiIjWyAbppIFp0hGzEkGOzIrG667FNmQWdkwLyKyLcisXJi5iAx+kVmZcMOlvJqRWZkwU3nTYYdkwjzJm/6EFcmC6pXyhm6YCbOSdzXdMAt2I+/6E1cguXNivavIrAyYg3w4mQLJ2bl8WA7JrORUbyxndMM86J14R813Vmp2JN4zmZWaKrYi3pRjPR3fCr01C5KOb4Ve2SWz0vGJ5VVskaT0r4GQWRmxv+WzJZmVklK1/OPAFknHt0JvzoKk4xPLG/co68kotZAzumEe3KQvXzyxIMnYmXxVklnJ6KN8Y8UWiSW8FXo88m1DeGLxyDcd5TpyRjfMgxs+y7fmZFYSZipndMNMmLVcsOeRb2NUMN8KvxjZ4N9hL/1A6VC2kksW2uhA7KWrVHe+6AQ6lnLJoO4EqusD9yfXuMlR2vQ8I7Su067qS2s6Q8t6/EDZ3ULaMRgVHCEBTDGXNoxXbI8wzkyXEt2pS6EPpezkJHH1K754b6HVZiARLXbE1c1n+1ii2RT8IXwzO1xLHMupoQ3eQZtZXyI4Uj7upMx+K03rUz4eYHobaVbJaf4QZ6pSGrQecpo/Rtlh3VxczQxx9TBdjAbSiO2euGqCs6tSGrDpEVcNMd21PKqsKB/N0frRW5Ka8vEqm1sSbj7+yuSWhJuPGJyelnKXdZfTPAZlh8d74orT/JPUlWSxN8RVNOrmSvLEzUdc5qZbkvKFuIrN7iRch6+r6OxGAjA4Nj4/YjEAg2PbYg4SgMGxrbFzCcDg2MuSJBaDY9uidxKAwbGtsSMJwODY+PyIxasYDtQuvZLrGA70gySJxeDYy5InFoNj4/DjfwIwOLYtdiYBGBzbFuVquYrhQH/aubud1IEoCsCZqdOCGGuVAx7iwRLg/V/xJCRk0FADOiVefN8DcMHPpjsza91W9R4G3YcjxbE3U/dhyN3Ty31QDnRbsVkMZj5iqrtFGLDzExnFYP3P7HDtKk3ndsObGqr/WU/SMd4+C0Fx7FXKl8Ju+6rK8fZVOOfVPdJs5K1w0dXx9OJW/6A4dnzDW+H8U+Yj1ptWcexNxDMTa/acmjNZEmXXoxouhV095XGVVfHlXnHseIZLYftYDdw3fV+Ej1ozKxupFLbd1XE43r5WHDtgrK3w75dtV03aLcOpRzOrsPTnY+C8+forH+vuLpxYNGZWWWkfssUFgfMUH0P28M/MKqqZnIyg9UWB85g2rd1wLGkXjpYXZz7qydpuOJJ8pfeuq+Pl8fZ+e5xZnZlVdCtcHgPnsboqAte9ueSbFd8K200dr23lmIeDlU7xgtI6n3x8owTYblhYnM4OJx/N9e9pPiXpzaxi0msIoc3/5leqDivJym5YNOg5/0E/RpN2rQBoOc10uf1h1W492XvOKiY9v+Vx9U1N0+89ZxUSu2lVoAS4m/hACmni73kVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Lf7DxrOOFkCUJnaAAAAAElFTkSuQmCC"/>
-    </pattern>
+    <clipPath id="clip-path">
+      <circle id="Vietnam" cx="16" cy="16" r="16" transform="translate(957 1231)" fill="#fff"/>
+    </clipPath>
   </defs>
-  <circle id="Vietnam" cx="16" cy="16" r="16" fill="url(#pattern)"/>
+  <g id="Vietnam-2" data-name="Vietnam" transform="translate(-957 -1231)" clip-path="url(#clip-path)">
+    <g id="Flag_of_Vietnam" transform="translate(949 1231)">
+      <rect id="Rectangle_87" data-name="Rectangle 87" width="48" height="32" fill="#da251d"/>
+      <path id="Path_1145" data-name="Path 1145" d="M19.045,4.267,13.4,21.627l14.784-10.72H9.909l14.784,10.72Z" transform="translate(4.955 2.133)" fill="#ff0"/>
+    </g>
+  </g>
 </svg>

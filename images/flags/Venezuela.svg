@@ -1,8 +1,236 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
   <defs>
-    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 400 267">
-      <image width="400" height="267" xlink:href="data:image/png;base64,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"/>
-    </pattern>
+    <clipPath id="clip-path">
+      <circle id="Venezuela" cx="16" cy="16" r="16" transform="translate(1117 2137)" fill="#fff"/>
+    </clipPath>
   </defs>
-  <circle id="Venezuela" cx="16" cy="16" r="16" fill="url(#pattern)"/>
+  <g id="Venezuela-2" data-name="Venezuela" transform="translate(-1117 -2137)" clip-path="url(#clip-path)">
+    <g id="Flag_of_Venezuela" transform="translate(1109 2137)">
+      <path id="Path_5562" data-name="Path 5562" d="M0,0H48V32H0Z" fill="#cf142b"/>
+      <path id="Path_5563" data-name="Path 5563" d="M0,0H48V21.333H0Z" fill="#00247d"/>
+      <path id="Path_5564" data-name="Path 5564" d="M0,0H48V10.667H0Z" fill="#fc0"/>
+      <g id="Group_721" data-name="Group 721" transform="translate(13.054 8.374)">
+        <g id="s4" transform="translate(10.623 2.968)">
+          <g id="s2" transform="translate(0 0)">
+            <g id="Group_682" data-name="Group 682" transform="translate(0.572 0) rotate(10)">
+              <g id="f" transform="translate(0.914 0)">
+                <g id="t">
+                  <path id="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5565" data-name="Path 5565" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_678" data-name="Group 678" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-2" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5566" data-name="Path 5566" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+              <g id="Group_679" data-name="Group 679" transform="translate(0.171 1.645) rotate(-72)">
+                <path id="o-3" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                <path id="Path_5567" data-name="Path 5567" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+              </g>
+              <g id="Group_681" data-name="Group 681" transform="matrix(-0.809, 0.588, -0.588, -0.809, 3.074, 1.965)">
+                <g id="t-2" data-name="t" transform="translate(0 0)">
+                  <path id="o-4" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5568" data-name="Path 5568" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_680" data-name="Group 680" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-5" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5569" data-name="Path 5569" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+            <g id="Group_687" data-name="Group 687" transform="matrix(0.866, 0.5, -0.5, 0.866, 4.339, 0.752)">
+              <g id="f-2" data-name="f" transform="translate(0.914 0)">
+                <g id="t-3" data-name="t" transform="translate(0)">
+                  <path id="o-6" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5570" data-name="Path 5570" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_683" data-name="Group 683" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-7" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5571" data-name="Path 5571" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+              <g id="Group_684" data-name="Group 684" transform="translate(0.171 1.645) rotate(-72)">
+                <path id="o-8" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                <path id="Path_5572" data-name="Path 5572" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+              </g>
+              <g id="Group_686" data-name="Group 686" transform="matrix(-0.809, 0.588, -0.588, -0.809, 3.074, 1.965)">
+                <g id="t-4" data-name="t" transform="translate(0 0)">
+                  <path id="o-9" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5573" data-name="Path 5573" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_685" data-name="Group 685" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-10" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5574" data-name="Path 5574" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="Group_698" data-name="Group 698" transform="matrix(0.766, 0.643, -0.643, 0.766, 7.184, 2.38)">
+            <g id="Group_692" data-name="Group 692" transform="translate(0.572 0) rotate(10)">
+              <g id="f-3" data-name="f" transform="translate(0.914 0)">
+                <g id="t-5" data-name="t" transform="translate(0)">
+                  <path id="o-11" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5575" data-name="Path 5575" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_688" data-name="Group 688" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-12" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5576" data-name="Path 5576" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+              <g id="Group_689" data-name="Group 689" transform="translate(0.171 1.645) rotate(-72)">
+                <path id="o-13" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                <path id="Path_5577" data-name="Path 5577" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+              </g>
+              <g id="Group_691" data-name="Group 691" transform="matrix(-0.809, 0.588, -0.588, -0.809, 3.074, 1.965)">
+                <g id="t-6" data-name="t" transform="translate(0 0)">
+                  <path id="o-14" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5578" data-name="Path 5578" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_690" data-name="Group 690" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-15" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5579" data-name="Path 5579" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+            <g id="Group_697" data-name="Group 697" transform="matrix(0.866, 0.5, -0.5, 0.866, 4.339, 0.752)">
+              <g id="f-4" data-name="f" transform="translate(0.914 0)">
+                <g id="t-7" data-name="t" transform="translate(0)">
+                  <path id="o-16" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5580" data-name="Path 5580" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_693" data-name="Group 693" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-17" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5581" data-name="Path 5581" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+              <g id="Group_694" data-name="Group 694" transform="translate(0.171 1.645) rotate(-72)">
+                <path id="o-18" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                <path id="Path_5582" data-name="Path 5582" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+              </g>
+              <g id="Group_696" data-name="Group 696" transform="matrix(-0.809, 0.588, -0.588, -0.809, 3.074, 1.965)">
+                <g id="t-8" data-name="t" transform="translate(0 0)">
+                  <path id="o-19" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5583" data-name="Path 5583" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_695" data-name="Group 695" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-20" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5584" data-name="Path 5584" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Group_720" data-name="Group 720" transform="translate(0 12.424) rotate(-80)">
+          <g id="s2-2" data-name="s2" transform="translate(0 0)">
+            <g id="Group_703" data-name="Group 703" transform="translate(0.572 0) rotate(10)">
+              <g id="f-5" data-name="f" transform="translate(0.914 0)">
+                <g id="t-9" data-name="t" transform="translate(0)">
+                  <path id="o-21" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5585" data-name="Path 5585" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_699" data-name="Group 699" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-22" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5586" data-name="Path 5586" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+              <g id="Group_700" data-name="Group 700" transform="translate(0.171 1.645) rotate(-72)">
+                <path id="o-23" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                <path id="Path_5587" data-name="Path 5587" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+              </g>
+              <g id="Group_702" data-name="Group 702" transform="matrix(-0.809, 0.588, -0.588, -0.809, 3.074, 1.965)">
+                <g id="t-10" data-name="t" transform="translate(0 0)">
+                  <path id="o-24" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5588" data-name="Path 5588" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_701" data-name="Group 701" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-25" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5589" data-name="Path 5589" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+            <g id="Group_708" data-name="Group 708" transform="matrix(0.866, 0.5, -0.5, 0.866, 4.339, 0.752)">
+              <g id="f-6" data-name="f" transform="translate(0.914 0)">
+                <g id="t-11" data-name="t">
+                  <path id="o-26" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5590" data-name="Path 5590" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_704" data-name="Group 704" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-27" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5591" data-name="Path 5591" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+              <g id="Group_705" data-name="Group 705" transform="translate(0.171 1.645) rotate(-72)">
+                <path id="o-28" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                <path id="Path_5592" data-name="Path 5592" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+              </g>
+              <g id="Group_707" data-name="Group 707" transform="matrix(-0.809, 0.588, -0.588, -0.809, 3.074, 1.965)">
+                <g id="t-12" data-name="t" transform="translate(0 0)">
+                  <path id="o-29" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5593" data-name="Path 5593" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_706" data-name="Group 706" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-30" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5594" data-name="Path 5594" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="Group_719" data-name="Group 719" transform="matrix(0.766, 0.643, -0.643, 0.766, 7.184, 2.38)">
+            <g id="Group_713" data-name="Group 713" transform="translate(0.572 0) rotate(10)">
+              <g id="f-7" data-name="f" transform="translate(0.914 0)">
+                <g id="t-13" data-name="t" transform="translate(0)">
+                  <path id="o-31" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5595" data-name="Path 5595" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_709" data-name="Group 709" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-32" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5596" data-name="Path 5596" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+              <g id="Group_710" data-name="Group 710" transform="translate(0.171 1.645) rotate(-72)">
+                <path id="o-33" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                <path id="Path_5597" data-name="Path 5597" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+              </g>
+              <g id="Group_712" data-name="Group 712" transform="matrix(-0.809, 0.588, -0.588, -0.809, 3.074, 1.965)">
+                <g id="t-14" data-name="t" transform="translate(0 0)">
+                  <path id="o-34" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5598" data-name="Path 5598" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_711" data-name="Group 711" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-35" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761) rotate(18)" fill="#fff"/>
+                  <path id="Path_5599" data-name="Path 5599" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+            <g id="Group_718" data-name="Group 718" transform="matrix(0.866, 0.5, -0.5, 0.866, 4.339, 0.752)">
+              <g id="f-8" data-name="f" transform="translate(0.914 0)">
+                <g id="t-15" data-name="t">
+                  <path id="o-36" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5600" data-name="Path 5600" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_714" data-name="Group 714" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-37" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5601" data-name="Path 5601" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+              <g id="Group_715" data-name="Group 715" transform="translate(0.171 1.645) rotate(-72)">
+                <path id="o-38" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                <path id="Path_5602" data-name="Path 5602" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+              </g>
+              <g id="Group_717" data-name="Group 717" transform="matrix(-0.809, 0.588, -0.588, -0.809, 3.074, 1.965)">
+                <g id="t-16" data-name="t" transform="translate(0 0)">
+                  <path id="o-39" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5603" data-name="Path 5603" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+                <g id="Group_716" data-name="Group 716" transform="translate(1.794 0.198) rotate(72)">
+                  <path id="o-40" data-name="o" d="M0,0V1.333H.8Z" transform="translate(0.761 0) rotate(18)" fill="#fff"/>
+                  <path id="Path_5604" data-name="Path 5604" d="M0,1.333V0H.8Z" transform="translate(1.173 1.268) rotate(162)" fill="#fff"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
 </svg>

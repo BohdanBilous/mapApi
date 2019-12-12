@@ -1,8 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
   <defs>
-    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 32 42">
-      <image width="32" height="42" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAqCAYAAADS4VmSAAAABHNCSVQICAgIfAhkiAAAAENJREFUWEft1TERADAMAzGHcoGWTeYWhhcZwZ8WT859KW4EECBAgACBvkBSfkMBBAgQIECgLbC73TcUQIAAAQIE2gIfIjpjs2ufmuUAAAAASUVORK5CYII="/>
-    </pattern>
+    <clipPath id="clip-path">
+      <circle id="Estonia" cx="16" cy="16" r="16" transform="translate(797 454)" fill="#fff"/>
+    </clipPath>
   </defs>
-  <circle id="Estonia" cx="16" cy="16" r="16" fill="url(#pattern)"/>
+  <g id="Estonia-2" data-name="Estonia" transform="translate(-797 -454)" clip-path="url(#clip-path)">
+    <g id="Flag_of_Estonia" transform="translate(787.857 454)">
+      <rect id="Rectangle_41" data-name="Rectangle 41" width="50.286" height="32" fill="#fff"/>
+      <rect id="Rectangle_42" data-name="Rectangle 42" width="50.286" height="21.333"/>
+      <rect id="Rectangle_43" data-name="Rectangle 43" width="50.286" height="10.667" fill="#0072ce"/>
+    </g>
+  </g>
 </svg>

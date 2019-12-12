@@ -1,8 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
   <defs>
-    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 32 42">
-      <image width="32" height="42" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAqCAYAAADS4VmSAAAABHNCSVQICAgIfAhkiAAAAElJREFUWEft1TERACAQA0FeAibwgyrc4eZrkJFmo+Bmm9Sd643gSgABAgQIEIgLdHf2DQUQIECAAIG4wDg7+4YCCBAgQIBAWuADri9sSSbPGToAAAAASUVORK5CYII="/>
-    </pattern>
+    <clipPath id="clip-path">
+      <circle id="Hungary" cx="16" cy="16" r="16" transform="translate(397 585)" fill="#fff"/>
+    </clipPath>
   </defs>
-  <circle id="Hungary" cx="16" cy="16" r="16" fill="url(#pattern)"/>
+  <g id="Hungary-2" data-name="Hungary" transform="translate(-397 -585)" clip-path="url(#clip-path)">
+    <g id="Flag_of_Hungary" transform="translate(381 585)">
+      <rect id="Rectangle_57" data-name="Rectangle 57" width="64" height="32" fill="#436f4d"/>
+      <rect id="Rectangle_58" data-name="Rectangle 58" width="64" height="21" fill="#fff"/>
+      <rect id="Rectangle_59" data-name="Rectangle 59" width="64" height="11" fill="#cd2a3e"/>
+    </g>
+  </g>
 </svg>
