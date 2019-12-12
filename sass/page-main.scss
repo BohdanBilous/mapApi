@@ -2482,7 +2482,7 @@ $animateDur: 0.30s;
 .cookies {
     position: fixed;
     z-index: 999;
-    background-color: #e6e6e6;
+    background-color: #ffffff;
     border-radius: 10px 10px 0 0;
     padding: 46px 0 41px;
     bottom: 0;
@@ -2515,13 +2515,14 @@ $animateDur: 0.30s;
             color: inherit;
             &:hover{
                 color: $colorGreen;
+                text-decoration: none;
             }
         }
     }
 
     .buttons {
         button {
-            position: static;
+            position: relative;
             line-height: 1;
             text-align: center;
             min-width: 116px;
