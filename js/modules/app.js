@@ -14,9 +14,7 @@ import {
   disableBodyScroll,
   detectIE
 } from "../generic-helpers";
-import {
-  MediaLoader
-} from "../media-loader";
+import { MediaLoader } from "../media-loader";
 console.log("== Begin executing app.js ==");
 
 document.documentElement.className = document.documentElement.className.replace(
@@ -36,17 +34,16 @@ if (detectIE() == "11") {
   })();
 }
 
-
-window.addEventListener("load", function () {
-  const aceptCookie = document.querySelector('.cookies');
-  aceptCookie.querySelector('button').addEventListener('click', () => {
-    localStorage['cookie'] = true;
-    if (localStorage.getItem('cookie')) {
-      aceptCookie.classList.add('cookies-acept');
+window.addEventListener("load", function() {
+  const aceptCookie = document.querySelector(".cookies");
+  aceptCookie.querySelector("button").addEventListener("click", () => {
+    sessionStorage["cookie"] = true;
+    if (sessionStorage.getItem("cookie")) {
+      aceptCookie.classList.add("cookies-acept");
     }
-  })
-  if (localStorage.getItem('cookie')) {
-    aceptCookie.classList.add('cookies-acept');
+  });
+  if (sessionStorage.getItem("cookie")) {
+    aceptCookie.classList.add("cookies-acept");
   }
   /* ------------------
       Header
@@ -76,9 +73,9 @@ window.addEventListener("load", function () {
         .querySelector(".drop-down-sel")
         .addEventListener("click", e => {
           e.stopPropagation();
-          dropDownElement.classList.contains("open") ?
-            dropDownElement.classList.remove("open") :
-            dropDownElement.classList.add("open");
+          dropDownElement.classList.contains("open")
+            ? dropDownElement.classList.remove("open")
+            : dropDownElement.classList.add("open");
           if (dropDownElement.classList.contains("open")) {
             window.addEventListener("click", () => {
               dropDownElement.classList.remove("open");
@@ -169,9 +166,9 @@ window.addEventListener("load", function () {
   });
   inputSearch.addEventListener("input", () => {
     let hiddenElement = document.querySelector(".hidden-width");
-    inputSearch.value.length === 0 ?
-      clearInput.classList.add("hide") :
-      clearInput.classList.remove("hide");
+    inputSearch.value.length === 0
+      ? clearInput.classList.add("hide")
+      : clearInput.classList.remove("hide");
     let valyeInput = inputSearch.value.replace(/\s/g, "|");
     hiddenElement.innerHTML = valyeInput;
     let hiddenElementWidth = hiddenElement.offsetWidth;
@@ -224,7 +221,7 @@ window.addEventListener("load", function () {
 });
 
 Object.defineProperty(HTMLMediaElement.prototype, "playing", {
-  get: function () {
+  get: function() {
     return this.currentTime > 0 && !this.paused;
   }
 });
