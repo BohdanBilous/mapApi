@@ -424,7 +424,7 @@ export const arrayOfCountrys = [{
         }
     },
     {
-        name: "bosnia",
+        name: "bosniaandherzegovina",
         body: {
             countryBound: {
                 lat: 43.856084,
@@ -441,7 +441,7 @@ export const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 43.856084,
                 long: 18.412172,
-                pointText: '<span data-pop-country="bosnia">Bosnia</span>'
+                pointText: '<span data-pop-country="bosniaandherzegovina">Bosnia and Herzegovina</span>'
             }]
         }
     },
@@ -1380,7 +1380,7 @@ export const arrayOfCountrys = [{
             countryPoints: [{
                 lat: 51.526236,
                 long: -0.128970,
-                pointText: '<span data-pop-country="uk">UK</span>'
+                pointText: '<span data-pop-country="uk">United Kingdom</span>'
             }]
         }
     },
