@@ -417,7 +417,7 @@
     .photo {
         overflow: hidden;
         margin: auto -105px 0 -65px;
-        max-height: 345px;
+        height: 345px;
 
         @include macbook {
             margin-right: -75px;
@@ -430,7 +430,9 @@
 
         img {
             width: 100%;
+            height: 100%;
             object-fit: cover;
+            object-position: center -50px;
         }
     }
 

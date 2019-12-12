@@ -21,9 +21,8 @@ window.addEventListener("load", function() {
   const popupLoadBlock = document.querySelector(".popup .team-member-load");
   let teamMemberId;
 
-  let loadPopupInfo = () => {
-    loadContent(popupLoadBlock, `_load-team-info.html`);
-    // loadContent(popupLoadBlock, `_load-team-info-${teamMemberId}.html`);
+  let loadPopupInfo = id => {
+    loadContent(popupLoadBlock, `team-info/_load-team-info-${id}.html`);
   };
 
   teamMembers.forEach(teamMember => {
@@ -40,6 +39,7 @@ window.addEventListener("load", function() {
     html.classList.remove("popup-open");
     html.classList.add("popup-close");
     if (tablet) disableBodyScroll(false, ".popup-side");
+    popupLoadBlock.innerHTML = "";
   };
 
   popupClose.addEventListener("click", () => {
