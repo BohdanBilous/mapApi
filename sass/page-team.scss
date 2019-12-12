@@ -48,6 +48,10 @@
             display: block;
             object-fit: cover;
             transition: transform 0.3s;
+
+            @include ie10 {
+                height: auto;
+            }
         }
     }
 
