@@ -1446,7 +1446,7 @@ export const arrayOfCountrys = [{
             countryPoints: [{
                 lat: -41.287123,
                 long: 174.773521,
-                pointText: '<span data-pop-country="newzealand">New zealand</span>'
+                pointText: '<span data-pop-country="newzealand">New Zealand</span>'
             }]
         }
     },
