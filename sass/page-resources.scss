@@ -353,43 +353,43 @@
             }
 
             &:nth-child(2)::before {
-                background: url(../images/ind-1.svg);
-                background: url(../images/ind-1.svg);
-            }
-
-            &:nth-child(3)::before {
-                background: url(../images/ind-2-h.svg);
+                background: url(../images/ind-2.svg);
                 background: url(../images/ind-2.svg);
             }
 
-            &:nth-child(4)::before {
+            &:nth-child(3)::before {
                 background: url(../images/ind-3-h.svg);
                 background: url(../images/ind-3.svg);
             }
 
-            &:nth-child(5)::before {
+            &:nth-child(4)::before {
                 background: url(../images/ind-4-h.svg);
                 background: url(../images/ind-4.svg);
             }
 
-            &:nth-child(6)::before {
+            &:nth-child(5)::before {
                 background: url(../images/ind-5-h.svg);
                 background: url(../images/ind-5.svg);
             }
 
-            &:nth-child(7)::before {
+            &:nth-child(6)::before {
                 background: url(../images/ind-6-h.svg);
                 background: url(../images/ind-6.svg);
             }
 
-            &:nth-child(8)::before {
+            &:nth-child(7)::before {
                 background: url(../images/ind-7-h.svg);
                 background: url(../images/ind-7.svg);
             }
 
-            &:nth-child(9)::before {
+            &:nth-child(8)::before {
                 background: url(../images/ind-8-h.svg);
                 background: url(../images/ind-8.svg);
+            }
+
+            &:nth-child(9)::before {
+                background: url(../images/ind-9-h.svg);
+                background: url(../images/ind-9.svg);
             }
 
             &:nth-child(1)::after {
@@ -397,35 +397,35 @@
             }
 
             &:nth-child(2)::after {
-                background: url(../images/ind-1-h.svg);
-            }
-
-            &:nth-child(3)::after {
                 background: url(../images/ind-2-h.svg);
             }
 
-            &:nth-child(4)::after {
+            &:nth-child(3)::after {
                 background: url(../images/ind-3-h.svg);
             }
 
-            &:nth-child(5)::after {
+            &:nth-child(4)::after {
                 background: url(../images/ind-4-h.svg);
             }
 
-            &:nth-child(6)::after {
+            &:nth-child(5)::after {
                 background: url(../images/ind-5-h.svg);
             }
 
-            &:nth-child(7)::after {
+            &:nth-child(6)::after {
                 background: url(../images/ind-6-h.svg);
             }
 
-            &:nth-child(8)::after {
+            &:nth-child(7)::after {
                 background: url(../images/ind-7-h.svg);
             }
 
-            &:nth-child(9)::after {
+            &:nth-child(8)::after {
                 background: url(../images/ind-8-h.svg);
+            }
+
+            &:nth-child(9)::after {
+                background: url(../images/ind-9-h.svg);
             }
 
             .no-touchevents &:hover {
