@@ -958,7 +958,7 @@ $leftOffset: 270px;
     }
 
     .tech-spec-inner {
-        width: 300%;
+        width: calc(300% - 40px);
         padding-bottom: 25px;
     }
 }
