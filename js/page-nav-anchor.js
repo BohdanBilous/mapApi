@@ -24,6 +24,8 @@ export class PageNav {
     this.callback = callback;
     this.clickCallBack = clickCallBack;
 
+    console.log(this.block);
+
     this.buttonClickHandler();
     this.onScreenHandler();
     this.scrollingHandler();
@@ -100,5 +102,10 @@ export class PageNav {
         element.getBoundingClientRect().top + viewTop - window.innerHeight / 2;
 
     return viewTop >= _top;
+  }
+
+  update() {
+    console.log(this.block);
+    this.onScreenHandler();
   }
 }
