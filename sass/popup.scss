@@ -407,6 +407,12 @@
         .hint {
             color: $colorTextG;
         }
+        .link-l{
+            transition: color 300ms ease ;
+            &:hover{
+                color: $colorGreen;
+            }
+        }
     }
 }
 

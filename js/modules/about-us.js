@@ -62,7 +62,7 @@ window.addEventListener("load", function () {
     let teamMemberId;
 
     let loadPopupInfo = () => {
-        loadContent(popupLoadBlock, `_load-team-info.html`);
+        loadContent(popupLoadBlock, `./team-info/_load-team-info-member-1.html`);
         // loadContent(popupLoadBlock, `_load-team-info-${teamMemberId}.html`);
     };
 
