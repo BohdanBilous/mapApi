@@ -706,21 +706,40 @@ $dotsLiWidth: 250px;
 }
 
 @mixin scrollbarVis {
-    -webkit-overflow-scrolling: touch;
+    // -webkit-overflow-scrolling: touch;
 
-    &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        height: 4px;    
-    }
-&::-webkit-scrollbar:horizontal{
-    height: 4px;   
+//     &::-webkit-scrollbar {
+//         -webkit-appearance: none;
+//         height: 4px;    
+//     }
+// &::-webkit-scrollbar:horizontal{
+//     height: 4px;   
+// }
+//     &::-webkit-scrollbar-track { 
+//         -webkit-overflow-scrolling: auto !important;
+//     }
+
+//     &::-webkit-scrollbar-thumb {
+//         border-radius: 3px;
+//         background-color: rgba(0, 0, 0, .3);
+//     }
+
+&::-webkit-scrollbar {
+    -webkit-appearance: none;
 }
-    &::-webkit-scrollbar-track { 
-        -webkit-overflow-scrolling: auto !important;
-    }
 
-    &::-webkit-scrollbar-thumb {
-        border-radius: 3px;
-        background-color: rgba(0, 0, 0, .3);
-    }
+&::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+&::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+&::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: rgba(0, 0, 0, .5);
+}
+
 }
