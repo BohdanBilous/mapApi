@@ -70,10 +70,11 @@ export function customSelect(height = false) {
             closeAllSelect(this);
             this.nextSibling.classList.toggle("select-hide");
             this.classList.toggle("select-arrow-active");
-
+            if(height)  b.style.height = b.scrollHeight + 20 + "px";
         });
-        if(height)  b.style.height = b.scrollHeight + 20 + "px";
-    }
+
+
+        }
 
     function closeAllSelect(elmnt) {
         /* A function that will close all select boxes in the document,

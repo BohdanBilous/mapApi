@@ -616,9 +616,10 @@ $dotsLiWidth: 250px;
 
 .scroll-custom {
     &::-webkit-scrollbar {
+        -webkit-appearance: none;
         width: 3px;
     }
-
+   
     &::-webkit-scrollbar-track {
         -webkit-overflow-scrolling: auto !important;
         width: 3px;
