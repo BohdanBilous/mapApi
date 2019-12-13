@@ -17,7 +17,7 @@ window.addEventListener("load", function() {
   new ContentSwitcher("data-switch");
 
   // Filter Mobile
-  filterSidebarInit();
+  // filterSidebarInit();
 
   // Lazy Loader Images
   if (exists(".lazy-img")) {
@@ -63,7 +63,6 @@ window.addEventListener("load", function() {
     slideItems.innerHTML = `0${faderPar.slides.length}`;
 
     function change() {
-      console.log(slideCurrent);
       slideCurrent.innerHTML = `0${faderPar.slideIndex + 1}`;
     }
   }
