@@ -619,7 +619,7 @@ $dotsLiWidth: 250px;
         -webkit-appearance: none;
         width: 3px;
     }
-
+   
     &::-webkit-scrollbar-track {
         -webkit-overflow-scrolling: auto !important;
         width: 3px;
@@ -712,8 +712,10 @@ $dotsLiWidth: 250px;
         -webkit-appearance: none;
         height: 4px;    
     }
-
-    &::-webkit-scrollbar-track {
+&::-webkit-scrollbar:horizontal{
+    height: 4px;   
+}
+    &::-webkit-scrollbar-track { 
         -webkit-overflow-scrolling: auto !important;
     }
 
