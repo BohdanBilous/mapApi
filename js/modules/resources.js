@@ -49,11 +49,16 @@ window.addEventListener("load", function() {
 
     selectIndustries.addEventListener("change", () => {
       let index = selectIndustries.value;
-      let getFileName = `_res-content-${index}.html`;
       selectIndustriesIcon.src = `images/ind-${index}.svg`;
-
-      loadContent(blockForLoad, getFileName);
       changeFileList(index);
+
+      // temporarily
+      // let getFileName = `_res-content-${index}.html`;
+      loadContent(
+        document.querySelector("#getting-started"),
+        "_res-content-getting-started.html"
+      );
+      loadContent(document.querySelector("#usage"), "_res-content-usage.html");
     });
 
     let changeFileList = index => {
@@ -74,7 +79,7 @@ window.addEventListener("load", function() {
         ".media-stream--load-place .media-stream--cols"
       );
 
-      loadContent(loadPlace, "_load-more-resources.html");
+      loadContent(loadPlace, "_load-more-resources.html"); // temporarily
       button.parentNode.classList.add("hide");
     });
   });
