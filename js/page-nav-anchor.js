@@ -1,5 +1,4 @@
 /*
-
     HTML Button Navigations [active class name]:
     <li data-hash="ID" class="[active]">
 
@@ -7,7 +6,7 @@
     stickyHeight = height after which is fixed nav
 
     nav.sticky {
-        position: fixed;
+      position: fixed;
     }
 
 */
@@ -23,8 +22,6 @@ export class PageNav {
     this.stickyTopMargin = 0;
     this.callback = callback;
     this.clickCallBack = clickCallBack;
-
-    console.log(this.block);
 
     this.buttonClickHandler();
     this.onScreenHandler();
@@ -102,10 +99,5 @@ export class PageNav {
         element.getBoundingClientRect().top + viewTop - window.innerHeight / 2;
 
     return viewTop >= _top;
-  }
-
-  update() {
-    console.log(this.block);
-    this.onScreenHandler();
   }
 }

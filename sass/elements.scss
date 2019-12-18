@@ -1570,3 +1570,113 @@
 //     border: 2px solid red;
 // }
 
+
+// Points Navigation
+.point-nav {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.point-item {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: $colorText2;
+    transition: color 0.2s;
+    cursor: pointer;
+
+    &::after {
+        @extend .ps;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    &.current {
+        color: #fff;
+
+        &::after {
+            transition: background-color 0.2s, transform 0.3s;
+            transform: scale(1.08);
+            background-color: $colorGreen;
+        }
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:not(.current):hover {
+        color: $colorGreen;
+    }
+}
+
+.point-popup {
+    position: absolute;
+    padding: 38px 25px 25px 55px;
+    border-radius: 20px;
+    background-color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    &.open {
+        opacity: 1;
+    }
+
+    .ttl-5 {
+        color: $colorText2;
+        margin-bottom: 6px;
+    }
+
+    p {
+        margin-bottom: 13px;
+    }
+}
+
+.point-popup-content {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.point-desc {
+    display: flex;
+    margin-bottom: 19px;
+
+    &.center {
+        display: block;
+        text-align: center;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .img {
+        margin-bottom: 14px;
+    }
+
+    ul {
+        padding-left: 15px;
+
+        li {
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 15px;
+
+            span {
+                padding-left: 5px;
+                color: $colorGreen;
+            }
+        }
+    }
+}

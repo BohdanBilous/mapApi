@@ -45,7 +45,6 @@ window.addEventListener("load", function() {
       ".select-industries-icon img"
     );
     const selectIndustries = document.querySelector(".select-custom select");
-    const blockForLoad = document.getElementById("content-load");
 
     selectIndustries.addEventListener("change", () => {
       let index = selectIndustries.value;
@@ -53,12 +52,15 @@ window.addEventListener("load", function() {
       changeFileList(index);
 
       // temporarily
+
       // let getFileName = `_res-content-${index}.html`;
+      // const blockForLoad = document.getElementById("content-load");
       loadContent(
         document.querySelector("#getting-started"),
         "_res-content-getting-started.html"
       );
       loadContent(document.querySelector("#usage"), "_res-content-usage.html");
+      // end temporarily
     });
 
     let changeFileList = index => {

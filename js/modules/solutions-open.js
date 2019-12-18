@@ -11,6 +11,7 @@ import { MediaLoader } from "../media-loader";
 import { customSelect } from "../custom-select";
 import { SuperSlider } from "../super-slider";
 import { ContentSwitcher } from "../content-switcher";
+import { pointNav } from "../point-nav";
 
 window.addEventListener("load", function() {
   // Content Switcher
@@ -105,5 +106,30 @@ window.addEventListener("load", function() {
         typesParList[index].classList.add("show");
       });
     });
+  }
+
+  // Position Drop
+  if (exists(".drop-block-ttl")) {
+    const positionItem = document.querySelectorAll(".drop-block-ttl");
+
+    positionItem.forEach(item => {
+      item.addEventListener("click", () => {
+        const block = findParent(item, "drop-block");
+        const drop = block.querySelector(".drop-block-content");
+
+        if (block.classList.contains("open")) {
+          block.classList.remove("open");
+          drop.style.maxHeight = null;
+        } else {
+          block.classList.add("open");
+          drop.style.maxHeight = drop.scrollHeight + "px";
+        }
+      });
+    });
+  }
+
+  // Point Nav
+  if (exists(".point-popup")) {
+    new pointNav(".point-item", ".point-popup", ".point-popup-content");
   }
 });

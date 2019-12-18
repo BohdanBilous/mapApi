@@ -55,7 +55,7 @@ window.addEventListener("load", function() {
     // 3: Fixed Bottle
     new ScrollMagic.Scene({
       triggerElement: bottle,
-      duration: 700,
+      duration: 720,
       offset: 240
     })
       .setTween(bottle)
