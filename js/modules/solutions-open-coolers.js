@@ -74,7 +74,6 @@ window.addEventListener("load", function() {
       duration: 30,
       offset: 350
     })
-
       .setTween(tweenRotate)
       // .addIndicators({ name: "4: Rotate" })
       .addTo(controller);
