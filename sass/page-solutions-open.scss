@@ -3628,6 +3628,16 @@ $leftOffset: 270px;
 }
 
 @include mobile {
+    .bottle-preform.solution-open-page {
+        .prod-anim-wrap {
+            height: 1000px;
+
+            .object-image {
+                top: 320px;
+            }
+        }
+    }
+
     .sys-catagories .top.with-cols .text-items {
         display: block;
 
