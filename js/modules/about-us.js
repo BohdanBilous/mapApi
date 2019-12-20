@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import { html, isInView, loadContent } from "../generic-helpers";
+import { html, isInView, loadContent, exists } from "../generic-helpers";
 import { SuperSlider } from "../super-slider";
 import { MediaLoader } from "../media-loader";
 
@@ -45,6 +45,15 @@ window.addEventListener("load", function() {
     });
     videoElementPlay.click();
   });
+
+  // Lazy Background Loader
+  if (exists(".lazy-bg")) {
+    const bgs = document.querySelectorAll(".lazy-bg");
+
+    bgs.forEach(bg => {
+      new MediaLoader(bg, "background");
+    });
+  }
 
   // Team Popup Open
   const teamMembers = document.querySelectorAll(".team-item");

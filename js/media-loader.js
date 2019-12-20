@@ -51,7 +51,6 @@ export class MediaLoader {
   }
 
   initVideo(mediaQuerySrc) {
-    console.log(this.element);
     let videoSrc = mediaQuerySrc ? mediaQuerySrc : this.element.dataset.src;
 
     this.videoElement = document.createElement("video");
