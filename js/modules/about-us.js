@@ -8,8 +8,6 @@ import { MediaLoader } from "../media-loader";
 window.addEventListener("load", function() {
   // let pageNav = new PageNav(".media-stream--container", ".terms-ans");
 
-  //   new MediaLoader();
-
   new SuperSlider(`.about-us-fader`, "fader");
   new SuperSlider(`.years-slider-socket`, "fader", null, function(props) {
     const { slideIndex, sliderWrap, dots } = props;
@@ -24,26 +22,29 @@ window.addEventListener("load", function() {
   new SuperSlider(`.fader-saving`, "fader");
   new SuperSlider(`.team-carosuel`, "carousel");
 
-  // new VideoLoad(".recycling-video.bg-img", false, false, true, true, true, function (props) {
-  const videoElement = document.querySelector(".recycling-video video");
-  const videoElementPlay = document.querySelector(
-    ".recycling-video .play-button-wrap"
-  );
+  const videoControls = { autoplay: true, muted: true, loop: true };
+  const videoBlock = document.querySelector(".recycling-video");
+  new MediaLoader(videoBlock, "video", null, videoControls, () => {
+    const videoElement = document.querySelector(".recycling-video video");
+    const videoElementPlay = document.querySelector(
+      ".recycling-video .play-button-wrap"
+    );
 
-  const playVideo = e => {
-    isInView(videoElement) ? videoElement.play() : videoElement.pause();
-  };
-  videoElement.pause();
-  if (window.innerWidth <= 768) {
-    window.addEventListener("touchmove", e => playVideo(e));
-  } else {
-    window.addEventListener("scroll", e => playVideo(e));
-  }
-  videoElementPlay.addEventListener("click", function() {
-    this.classList.add("active");
-    videoElement.play();
+    const playVideo = e => {
+      isInView(videoElement) ? videoElement.play() : videoElement.pause();
+    };
+    videoElement.pause();
+    if (window.innerWidth <= 768) {
+      window.addEventListener("touchmove", e => playVideo(e));
+    } else {
+      window.addEventListener("scroll", e => playVideo(e));
+    }
+    videoElementPlay.addEventListener("click", function() {
+      this.classList.add("active");
+      videoElement.play();
+    });
+    videoElementPlay.click();
   });
-  videoElementPlay.click();
 
   // Team Popup Open
   const teamMembers = document.querySelectorAll(".team-item");
