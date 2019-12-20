@@ -45,15 +45,15 @@ window.addEventListener("load", function() {
   });
   videoElementPlay.click();
 
+  // Team Popup Open
   const teamMembers = document.querySelectorAll(".team-item");
   const popupClose = document.querySelectorAll(".popup .btn-close");
   const popupBg = document.querySelectorAll(".popup .popup-bg");
   const popupLoadBlock = document.querySelector(".popup .team-member-load");
   let teamMemberId;
 
-  let loadPopupInfo = () => {
-    loadContent(popupLoadBlock, `./team-info/_load-team-info-member-1.html`);
-    // loadContent(popupLoadBlock, `_load-team-info-${teamMemberId}.html`);
+  let loadPopupInfo = id => {
+    loadContent(popupLoadBlock, `team-info/_load-team-info-${id}.html`);
   };
 
   teamMembers.forEach(teamMember => {
