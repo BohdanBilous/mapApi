@@ -34,6 +34,14 @@ window.addEventListener("load", function() {
     });
   }
 
+  if (exists(".lazy-image")) {
+    const images = document.querySelectorAll(".lazy-image");
+
+    images.forEach(image => {
+      new MediaLoader(image, "image");
+    });
+  }
+
   // Spec
   if (exists(".spec-button")) {
     const specButton = document.querySelector(".spec-button");
