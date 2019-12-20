@@ -510,6 +510,7 @@ export let loadContent = (blockForLoad, getFile) => {
       blockForLoad.innerHTML = this.responseText;
     }
   };
+  console.log(getFile);
   xhttp.open("GET", getFile, true);
   xhttp.send();
 };
@@ -531,19 +532,21 @@ export let loadContent = (blockForLoad, getFile) => {
 //   }
 // );
 
-export const scrollXHorizontal = (wrap) => {
+export const scrollXHorizontal = wrap => {
   function scrollCustom(e) {
     e = window.event || e;
-    let delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    document.querySelector(wrap).scrollLeft -= (delta * 40);
+    let delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+    document.querySelector(wrap).scrollLeft -= delta * 40;
     e.preventDefault();
-    console.log(delta)
+    console.log(delta);
   }
-  document.querySelector(wrap).addEventListener("mousewheel", scrollCustom, false);
-  document.querySelector(wrap).addEventListener("DOMMouseScroll", scrollCustom, false);
-}
-
-
+  document
+    .querySelector(wrap)
+    .addEventListener("mousewheel", scrollCustom, false);
+  document
+    .querySelector(wrap)
+    .addEventListener("DOMMouseScroll", scrollCustom, false);
+};
 
 // In View
 // export const isInView = el => {
