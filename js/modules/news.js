@@ -58,16 +58,19 @@ window.addEventListener("load", function() {
     });
   }
 
+  if (exists(".lazy-image")) {
+    const images = document.querySelectorAll(".lazy-image");
+
+    images.forEach(image => {
+      new MediaLoader(image, "image");
+    });
+  }
+
   if (exists(".lazy-bg")) {
     const bgs = document.querySelectorAll(".lazy-bg");
 
     bgs.forEach(bg => {
-      const mediaQueryBackgrounds = [
-        { media: "screen and (min-width: 768px)", src: bg.dataset.bg },
-        { media: "screen and (max-width: 767px)", src: bg.dataset.bgmob }
-      ];
-
-      new MediaLoader(bg, "background", mediaQueryBackgrounds);
+      new MediaLoader(bg, "bg");
     });
   }
 
@@ -91,4 +94,20 @@ window.addEventListener("load", function() {
       );
     });
   }
+
+  // const setImages = type => {
+  //   if (exists(`.lazy-${type}`)) {
+  //     const elements = document.querySelectorAll(`.lazy-${type}`);
+
+  //     elements.forEach(element => {
+  //       new MediaLoader(element, type);
+  //     });
+  //   }
+  // };
+
+  // const typesArray = ["image", "bg"];
+
+  // typesArray.forEach(itm => {
+  //   setImages(itm);
+  // });
 });

@@ -44,7 +44,7 @@ window.addEventListener("load", function() {
         }
       ];
 
-      new MediaLoader(bg, "background", mediaQueryBackgrounds);
+      new MediaLoader(bg, "bg", mediaQueryBackgrounds);
     });
   }
 

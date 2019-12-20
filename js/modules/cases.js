@@ -45,7 +45,7 @@ window.addEventListener("load", function() {
       { media: "screen and (max-width: 767px)", src: topSection.dataset.bgmob }
     ];
 
-    new MediaLoader(topSection, "background", mediaQueryBackgrounds);
+    new MediaLoader(topSection, "bg", mediaQueryBackgrounds);
   }
 
   // Lazy Loader Images

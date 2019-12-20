@@ -127,7 +127,7 @@ window.addEventListener("load", function() {
     const bgs = document.querySelectorAll(".lazy-bg");
 
     bgs.forEach(bg => {
-      new MediaLoader(bg, "background");
+      new MediaLoader(bg, "bg");
     });
   }
 });

@@ -19,7 +19,7 @@ export class MediaLoader {
     this.callback = callback;
 
     if (!this.mediaQueryArray) {
-      if (this.mediaType === "background") this.setBackground();
+      if (this.mediaType === "bg") this.setBackground();
       if (this.mediaType === "image") this.setImage();
       if (this.mediaType === "video") this.initVideo();
     } else {
@@ -34,8 +34,7 @@ export class MediaLoader {
       if (window.matchMedia(this.mediaQueryArray[i].media).matches) {
         let src = this.mediaQueryArray[i].src;
 
-        if (this.mediaType === "background")
-          this.element.style.backgroundImage = src;
+        if (this.mediaType === "bg") this.element.style.backgroundImage = src;
         if (this.mediaType === "image") this.element.src = src;
         if (this.mediaType === "video") this.initVideo(src);
       }
