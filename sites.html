@@ -25,7 +25,7 @@
     <main class="main" class="">
         <!-- Top Screen -->
         <div class="screen screen-top screen-head sites-screen">
-            <div class="screen-bg" style="background-image: url(images/wind-farm-1747331.jpg)"></div>
+            <div class="screen-bg lazy-bg" data-src="url(images/wind-farm-1747331.jpg)"></div>
             <div class="screen-inner screen-inner--with-pad-btns socket layout-row align-right">
                 <div class="hint hint-from-top with-arrow-left">Discover Sites</div>
                 <div class="button-btm-right">
@@ -61,14 +61,14 @@
                             <ul>
                                 <li class="tab active" data-tab="site-fl-1">
                                     <div class="tab-inner">
-                                        <img src="./images/fl-1.svg" alt="">
+                                        <img class="lazy-image" data-src="./images/fl-1.svg" alt="">
                                         <span class="text">Canada</span>
                                     </div>
                                 </li>
                                 @@for (var i = 1; i < countryList.length; i++) { <li class="tab"
                                     data-tab="site-`+countryList[i].img+`">
                                     <div class="tab-inner">
-                                        <img src="./images/`+countryList[i].img+`.svg" alt="">
+                                        <img class="lazy-image" data-src="./images/`+countryList[i].img+`.svg" alt="">
                                         <span class="text">`+countryList[i].country+`</span>
                                     </div>
                                     </li>
@@ -88,11 +88,11 @@
             "site-fl-4","classes":"","img":"fl-4","name":"Czech Republic" })
             @@include('./partials/sites-blocks/_sites-tab-4.htm', { "id":
             "site-fl-5","classes":"","img":"fl-5","name":"Sweden <br> Lidköping"})
-            @@include('./partials/sites-blocks/_sites-tab-4.htm', { "id":
-            "site-fl-6","classes":"","img":"fl-6","name":"Russia" })
             @@include('./partials/sites-blocks/_sites-tab-5.htm', { "id":
-            "site-fl-7","classes":"","img":"fl-7","name":"China" })
+            "site-fl-6","classes":"","img":"fl-6","name":"Russia" })
             @@include('./partials/sites-blocks/_sites-tab-6.htm', { "id":
+            "site-fl-7","classes":"","img":"fl-7","name":"China" })
+            @@include('./partials/sites-blocks/_sites-tab-7.htm', { "id":
             "site-fl-8","classes":"","img":"fl-8","name":"Australia"
             })
         </div>
@@ -121,12 +121,12 @@
                             <div class="case-item-pos">Steamworks:</div>
                             <div class="case-item-name ttl-2"> Janet Flores</div>
                         </div>
-                        <img class="lazy-img media-img" data-bg="images/case-1.jpg" data-bgmob="images/case-1-mob.jpg"
+                        <img class="lazy-img media-img" data-src="images/case-1.jpg" data-srcmob="images/case-1-mob.jpg"
                             alt="image">
                     </div>
                     <div class="customers-item">
                         <div class="customers-logo-wrap">
-                            <img class="customers-logo" src="images/c-1.png">
+                            <img class="customers-logo lazy-image" data-src="images/c-1.png">
                         </div>
 
                         <div class="city">
@@ -147,13 +147,13 @@
                             <div class="case-item-pos">Chief Marketing Officer</div>
                             <div class="case-item-name ttl-2">Kevin Warren</div>
                         </div>
-                        <img class="lazy-img media-img" data-bg="images/case-2.jpg" data-bgmob="images/case-2-mob.jpg"
+                        <img class="lazy-img media-img" data-src="images/case-2.jpg" data-srcmob="images/case-2-mob.jpg"
                             alt="image">
                     </div>
 
                     <div class="customers-item">
                         <div class="customers-logo-wrap">
-                            <img class="customers-logo" src="images/c-2.png">
+                            <img class="customers-logo lazy-image" data-src="images/c-2.png">
                         </div>
 
                         <div class="city">
@@ -207,7 +207,6 @@
             </div>
         </footer>
     </main>
-
 </body>
 
 <script>

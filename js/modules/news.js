@@ -14,6 +14,50 @@ import { ImageCursor } from "../image-cursor";
 import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
+  // Lazy Loader Images
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+      let mediaQueris = null;
+
+      elements.forEach(element => {
+        if (lazyData.className === ".lazy-img") {
+          mediaQueris = [
+            {
+              media: "screen and (min-width: 768px)",
+              src: element.dataset.src
+            },
+            {
+              media: "screen and (max-width: 767px)",
+              src: element.dataset.srcmob
+            }
+          ];
+        }
+
+        new MediaLoader(element, lazyData.type, mediaQueris);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-img",
+      type: "image"
+    },
+    {
+      className: ".lazy-image",
+      type: "image"
+    },
+    {
+      className: ".lazy-bg",
+      type: "bg"
+    }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
+
   // Page Nav
   if (exists(".media-stream--container")) {
     new PageNav(
@@ -42,36 +86,6 @@ window.addEventListener("load", function() {
   // Parallax Scroll
   if (exists(".screen-head")) {
     new ParallaxScroll(".screen-head", ".screen-bg", 200);
-  }
-
-  // Lazy Loader Images
-  if (exists(".lazy-img")) {
-    const images = document.querySelectorAll(".lazy-img");
-
-    images.forEach(image => {
-      const mediaQueryImages = [
-        { media: "screen and (min-width: 768px)", src: image.dataset.bg },
-        { media: "screen and (max-width: 767px)", src: image.dataset.bgmob }
-      ];
-
-      new MediaLoader(image, "image", mediaQueryImages);
-    });
-  }
-
-  if (exists(".lazy-image")) {
-    const images = document.querySelectorAll(".lazy-image");
-
-    images.forEach(image => {
-      new MediaLoader(image, "image");
-    });
-  }
-
-  if (exists(".lazy-bg")) {
-    const bgs = document.querySelectorAll(".lazy-bg");
-
-    bgs.forEach(bg => {
-      new MediaLoader(bg, "bg");
-    });
   }
 
   // Events Cursor Image
