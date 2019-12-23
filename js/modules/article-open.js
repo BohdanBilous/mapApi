@@ -10,43 +10,51 @@ import { ImageCursor } from "../image-cursor";
 
 window.addEventListener("load", function() {
   // Lazy Loader Images
-  if (exists(".lazy-img")) {
-    const images = document.querySelectorAll(".lazy-img");
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+      let mediaQueris = null;
 
-    images.forEach(image => {
-      const mediaQueryImages = [
-        {
-          media: "screen and (min-width: 768px)",
-          src: image.dataset.src
-        },
-        {
-          media: "screen and (max-width: 767px)",
-          src: image.dataset.srcmob
+      elements.forEach(element => {
+        if (
+          lazyData.className === ".lazy-img" ||
+          lazyData.className === ".lazy-bg"
+        ) {
+          mediaQueris = [
+            {
+              media: "screen and (min-width: 768px)",
+              src: element.dataset.src
+            },
+            {
+              media: "screen and (max-width: 767px)",
+              src: element.dataset.srcmob
+            }
+          ];
         }
-      ];
 
-      new MediaLoader(image, "image", mediaQueryImages);
-    });
-  }
+        new MediaLoader(element, lazyData.type, mediaQueris);
+      });
+    }
+  };
 
-  if (exists(".lazy-bg")) {
-    const bgs = document.querySelectorAll(".lazy-bg");
+  let lazyData = [
+    {
+      className: ".lazy-img",
+      type: "image"
+    },
+    {
+      className: ".lazy-image",
+      type: "image"
+    },
+    {
+      className: ".lazy-bg",
+      type: "bg"
+    }
+  ];
 
-    bgs.forEach(bg => {
-      const mediaQueryBackgrounds = [
-        {
-          media: "screen and (min-width: 768px)",
-          src: bg.dataset.src
-        },
-        {
-          media: "screen and (max-width: 767px)",
-          src: bg.dataset.srcmob
-        }
-      ];
-
-      new MediaLoader(bg, "bg", mediaQueryBackgrounds);
-    });
-  }
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
 
   // Mission Fader
   if (exists(".article-open-slider")) {

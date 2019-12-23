@@ -10,8 +10,30 @@ import {
   animateSwitch
 } from "../generic-helpers";
 import { TabSwitcher } from "../tab-switcher";
+import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
+  // Lazy Loader Images
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+      elements.forEach(element => {
+        new MediaLoader(element, lazyData.type, mediaQueris);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-image",
+      type: "image"
+    }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
+
   // Tabs
   if (exists(".careers-tabs-container")) {
     new TabSwitcher(".careers-tabs-container");

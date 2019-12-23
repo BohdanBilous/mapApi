@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import { html, isInView, loadContent, setLazy } from "../generic-helpers";
+import { html, isInView, loadContent, exists } from "../generic-helpers";
 import { SuperSlider } from "../super-slider";
 import { MediaLoader } from "../media-loader";
 

@@ -11,6 +11,66 @@ import { PageNav } from "../page-nav-anchor";
 import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
+  // Lazy Loader Images
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+      let mediaQueries = null;
+
+      elements.forEach(element => {
+        if (
+          lazyData.className === ".lazy-img" ||
+          lazyData.className === ".event-section-main .section-bg"
+        ) {
+          mediaQueries = [
+            {
+              media: "screen and (min-width: 768px)",
+              src: element.dataset.src
+            },
+            {
+              media: "screen and (max-width: 767px)",
+              src: element.dataset.srcmob
+            }
+          ];
+        }
+
+        new MediaLoader(element, lazyData.type, mediaQueries);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-img",
+      type: "image"
+    },
+    {
+      className: ".lazy-image",
+      type: "image"
+    },
+    {
+      className: ".event-section-main .section-bg",
+      type: "bg"
+    }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
+
+  // Lazy Top Section Background
+  if (exists(".event-section-main")) {
+    const topSection = document.querySelector(
+      ".event-section-main .section-bg"
+    );
+    const mediaQueryBackgrounds = [
+      { media: "screen and (min-width: 768px)", src: topSection.dataset.bg },
+      { media: "screen and (max-width: 767px)", src: topSection.dataset.bgmob }
+    ];
+
+    new MediaLoader(topSection, "bg", mediaQueryBackgrounds);
+  }
+
   // Page Nav
   if (exists(".media-stream--container") && exists(".cases-container")) {
     const titleWrap =
@@ -33,33 +93,6 @@ window.addEventListener("load", function() {
       titleWrap.querySelector(".ttl").innerHTML = name;
       titleWrap.querySelector(".items").innerHTML = items;
     }
-  }
-
-  // Lazy Top Section Background
-  if (exists(".event-section-main")) {
-    const topSection = document.querySelector(
-      ".event-section-main .section-bg"
-    );
-    const mediaQueryBackgrounds = [
-      { media: "screen and (min-width: 768px)", src: topSection.dataset.bg },
-      { media: "screen and (max-width: 767px)", src: topSection.dataset.bgmob }
-    ];
-
-    new MediaLoader(topSection, "bg", mediaQueryBackgrounds);
-  }
-
-  // Lazy Loader Images
-  if (exists(".lazy-img")) {
-    const images = document.querySelectorAll(".lazy-img");
-
-    images.forEach(image => {
-      const mediaQueryImages = [
-        { media: "screen and (min-width: 768px)", src: image.dataset.src },
-        { media: "screen and (max-width: 767px)", src: image.dataset.srcmob }
-      ];
-
-      new MediaLoader(image, "image", mediaQueryImages);
-    });
   }
 
   // Scroll From Screen
