@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-
+import { exists } from "../generic-helpers";
 import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
