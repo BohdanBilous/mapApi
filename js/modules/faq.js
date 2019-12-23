@@ -2,18 +2,18 @@
 
 /* MODULE IMPORTS */
 import {
-  html,
-  desktop,
-  mobile,
-  exists,
-  findParent,
-  animateSwitch,
+  // html,
+  // desktop,
+  // mobile,
+  // exists,
+  // findParent,
+  // animateSwitch,
   filterSidebarInit
 } from "../generic-helpers";
 import { PageNav } from "../page-nav-anchor";
 
 window.addEventListener("load", function() {
-  let pageNav = new PageNav(".media-stream--container", ".fags-info");
+  new PageNav(".media-stream--container", ".fags-info");
 
   // Position Drop
   const faqQustions = document.querySelectorAll(".fag-question");

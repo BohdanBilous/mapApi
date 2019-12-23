@@ -4,8 +4,15 @@
 import { exists } from "../generic-helpers";
 import { SolutionsInd } from "../solutions-ind";
 import { SuperSlider } from "../super-slider";
+import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
+  // Lazy Loader Images
+  const images = document.querySelectorAll(".lazy-image");
+  images.forEach(image => {
+    new MediaLoader(image, "image");
+  });
+
   // Solution
   new SolutionsInd(true, 100);
 

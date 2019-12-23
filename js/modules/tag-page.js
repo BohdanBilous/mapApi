@@ -12,6 +12,46 @@ import { PageNav } from "../page-nav-anchor";
 import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
+  // Lazy Loader Images
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+      let mediaQueris = null;
+
+      elements.forEach(element => {
+        if (lazyData.className === ".event-section-main") {
+          mediaQueris = [
+            {
+              media: "screen and (min-width: 768px)",
+              src: element.dataset.src
+            },
+            {
+              media: "screen and (max-width: 767px)",
+              src: element.dataset.srcmob
+            }
+          ];
+        }
+
+        new MediaLoader(element, lazyData.type, mediaQueris);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-image",
+      type: "image"
+    },
+    {
+      className: ".event-section-main",
+      type: "bg"
+    }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
+
   // Page Nav
   if (exists(".media-stream--container")) {
     const titleWrap =
@@ -33,20 +73,6 @@ window.addEventListener("load", function() {
       titleWrap.querySelector(".ttl").innerHTML = name;
       titleWrap.querySelector(".items").innerHTML = items;
     }
-  }
-
-  // Lazy Background Loader
-  if (exists(".lazy-bg")) {
-    const bgs = document.querySelectorAll(".lazy-bg");
-
-    bgs.forEach(bg => {
-      const mediaQueryBackgrounds = [
-        { media: "screen and (min-width: 768px)", src: bg.dataset.bg },
-        { media: "screen and (max-width: 767px)", src: bg.dataset.bgmob }
-      ];
-
-      new MediaLoader(bg, "background", mediaQueryBackgrounds);
-    });
   }
 
   // Scroll From Screen

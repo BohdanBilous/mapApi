@@ -6,25 +6,9 @@ import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
   // Lazy Loader Images
-  const setLazy = lazyData => {
-    if (exists(lazyData.className)) {
-      const elements = document.querySelectorAll(lazyData.className);
-
-      elements.forEach(element => {
-        new MediaLoader(element, lazyData.type);
-      });
-    }
-  };
-
-  let lazyData = [
-    {
-      className: ".lazy-image",
-      type: "image"
-    }
-  ];
-
-  lazyData.forEach(lazyItem => {
-    setLazy(lazyItem);
+  const images = document.querySelectorAll(".lazy-image");
+  images.forEach(image => {
+    new MediaLoader(image, "image");
   });
 
   // const reviewsOpen = document.querySelectorAll(".reviews-opener");

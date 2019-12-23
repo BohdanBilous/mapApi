@@ -4,7 +4,7 @@
 import {
   exists,
   scrollFromScreen,
-  filterSidebarInit,
+  // filterSidebarInit,
   findParent
 } from "../generic-helpers";
 import { MediaLoader } from "../media-loader";
@@ -14,33 +14,51 @@ import { ContentSwitcher } from "../content-switcher";
 import { pointNav } from "../point-nav";
 
 window.addEventListener("load", function() {
+  // Lazy Loader Images
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+      let mediaQueris = null;
+
+      elements.forEach(element => {
+        if (lazyData.className === ".lazy-img") {
+          mediaQueris = [
+            {
+              media: "screen and (min-width: 768px)",
+              src: element.dataset.src
+            },
+            {
+              media: "screen and (max-width: 767px)",
+              src: element.dataset.srcmob
+            }
+          ];
+        }
+
+        new MediaLoader(element, lazyData.type, mediaQueris);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-img",
+      type: "image"
+    },
+    {
+      className: ".lazy-image",
+      type: "image"
+    }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
+
   // Content Switcher
   new ContentSwitcher("data-switch");
 
   // Filter Mobile
   // filterSidebarInit();
-
-  // Lazy Loader Images
-  if (exists(".lazy-img")) {
-    const images = document.querySelectorAll(".lazy-img");
-
-    images.forEach(image => {
-      const mediaQueryImages = [
-        { media: "screen and (min-width: 768px)", src: image.dataset.bg },
-        { media: "screen and (max-width: 767px)", src: image.dataset.bgmob }
-      ];
-
-      new MediaLoader(image, "image", mediaQueryImages);
-    });
-  }
-
-  if (exists(".lazy-image")) {
-    const images = document.querySelectorAll(".lazy-image");
-
-    images.forEach(image => {
-      new MediaLoader(image, "image");
-    });
-  }
 
   // Spec
   if (exists(".spec-button")) {

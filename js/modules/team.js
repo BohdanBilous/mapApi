@@ -10,7 +10,15 @@ import {
   disableBodyScroll
 } from "../generic-helpers";
 
+import { MediaLoader } from "../media-loader";
+
 window.addEventListener("load", function() {
+  // Lazy Loader Images
+  const images = document.querySelectorAll(".lazy-image");
+  images.forEach(image => {
+    new MediaLoader(image, "image");
+  });
+
   // Scroll From Screen
   if (exists(".hint-from-top")) scrollFromScreen(".title-top");
 

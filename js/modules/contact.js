@@ -8,24 +8,10 @@ import { arrayOfCountrys } from "../static-data";
 import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
-  const setLazy = lazyData => {
-    if (exists(lazyData.className)) {
-      const elements = document.querySelectorAll(lazyData.className);
-      elements.forEach(element => {
-        new MediaLoader(element, lazyData.type);
-      });
-    }
-  };
-
-  let lazyData = [
-    {
-      className: ".lazy-image",
-      type: "image"
-    }
-  ];
-
-  lazyData.forEach(lazyItem => {
-    setLazy(lazyItem);
+  // Lazy Loader Images
+  const images = document.querySelectorAll(".lazy-image");
+  images.forEach(image => {
+    new MediaLoader(image, "image");
   });
 
   //Variables

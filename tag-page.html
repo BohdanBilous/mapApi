@@ -79,7 +79,7 @@
                         <div class="media-stream--cols">
                             <article class="media-stream--article has-img">
                                 <div class="media-panel">
-                                    <img class="media-img" src="images/news-3.jpg" alt="#">
+                                    <img class="media-img lazy-image" data-src="images/news-3.jpg" alt="#">
                                     <div class="author-block">
                                         <div class="avatar"><img src="images/avatar.png" alt=""></div>
                                         <div class="author-name ttl-5">George Boyd</div>
@@ -109,7 +109,7 @@
 
                             <article class="media-stream--article has-img">
                                 <div class="media-panel">
-                                    <img class="media-img" src="images/news-5.jpg" alt="#">
+                                    <img class="media-img lazy-image" data-src="images/news-5.jpg" alt="#">
                                     <div class="author-block">
                                         <div class="avatar"><img src="images/avatar.png" alt=""></div>
                                         <div class="author-name ttl-5">George Boyd</div>
@@ -130,7 +130,7 @@
 
                             <article class="media-stream--article has-video">
                                 <div class="media-panel">
-                                    <img class="media-img" src="images/news-video-1.jpg" alt="#">
+                                    <img class="media-img lazy-image" data-src="images/news-video-1.jpg" alt="#">
                                     <div class="play-button-wrap">
                                         <div class="play trans"></div>
                                         <div class="text-b trans">2:21</div>
@@ -171,7 +171,7 @@
                                         </a>
                                     </h4>
                                     <div class="author-block">
-                                        <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                        <div class="avatar"><img class="lazy-image" data-src="images/avatar.png" alt=""></div>
                                         <div class="author-name ttl-5">George Boyd</div>
                                     </div>
                                     <div style="display: flex;" class="tags-list">
@@ -200,7 +200,7 @@
                                     <h4 class="ttl ttl-4"><a href="news-open.html">Petainer <br> launches new <br>
                                             Hybrid kegs.</a></h4>
                                     <div class="author-block">
-                                        <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                        <div class="avatar"><img class="lazy-image" data-src="images/avatar.png" alt=""></div>
                                         <div class="author-name ttl-5">George Boyd</div>
                                     </div>
                                     <div class="tags-list">
@@ -211,16 +211,19 @@
 
                             <article class="media-stream--article has-img">
                                 <div class="media-panel">
-                                    <img class="media-img" src="images/news-3.png" alt="#">
+                                    <img class="media-img lazy-image" data-src="images/news-3.png" alt="#">
                                     <div class="author-block">
-                                        <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                        <div class="avatar"><img class="lazy-image" data-src="images/avatar.png" alt=""></div>
                                         <div class="author-name ttl-5">George Boyd</div>
                                     </div>
                                 </div>
                                 <div class="media-content">
                                     <div class="date">17.05</div>
-                                    <h4 class="ttl ttl-4"><a href="news-open.html">How to increase revenue increase so
-                                            much?</a></h4>
+                                    <h4 class="ttl ttl-4">
+                                        <a href="news-open.html">How to increase revenue increase so
+                                            much?
+                                        </a>
+                                    </h4>
 
                                     <div class="tags-list">
                                         <a href="page-tag.html" class="tag">Petainer News</a>
@@ -269,9 +272,9 @@
                         <div class="media-stream--cols">
                             <article class="media-stream--article has-img">
                                 <div class="media-panel">
-                                    <img class="media-img" src="images/news-4.jpg" alt="#">
+                                    <img class="media-img lazy-image" data-src="images/news-4.jpg" alt="#">
                                     <div class="author-block">
-                                        <div class="avatar"><img src="images/avatar.png" alt=""></div>
+                                        <div class="avatar"><img class="lazy-image" data-src="images/avatar.png" alt=""></div>
                                         <div class="author-name ttl-5">George Boyd</div>
                                     </div>
                                 </div>
@@ -290,7 +293,7 @@
 
                             <article class="media-stream--article has-video">
                                 <div class="media-panel">
-                                    <img class="media-img" src="images/news-video-2.jpg" alt="#">
+                                    <img class="media-img lazy-image" data-src="images/news-video-2.jpg" alt="#">
                                     <div class="play-button-wrap">
                                         <div class="play trans"></div>
                                         <div class="text-b trans">2:21</div>
@@ -311,7 +314,7 @@
 
                             <article class="media-stream--article has-video">
                                 <div class="media-panel">
-                                    <img class="media-img" src="images/news-video-3.jpg" alt="#">
+                                    <img class="media-img lazy-image" data-src="images/news-video-3.jpg" alt="#">
                                     <div class="play-button-wrap">
                                         <div class="play trans"></div>
                                         <div class="text-b trans">2:21</div>
@@ -319,8 +322,11 @@
                                 </div>
                                 <div class="media-content">
                                     <div class="date">16.05</div>
-                                    <h4 class="ttl ttl-4"><a href="news-open.html">Petainer launches new <br>Hybrid
-                                            kegs.</a></h4>
+                                    <h4 class="ttl ttl-4">
+                                        <a href="news-open.html">Petainer launches new <br>Hybrid
+                                            kegs.
+                                        </a>
+                                    </h4>
 
                                     <div class="tags-list">
                                         <a href="page-tag.html" class="tag">Petainer News</a>
@@ -421,9 +427,9 @@
                     <div class="layout-col-l">
                         <h3 class="ttl-4">Becoming a customer</h3>
                         @@include('./partials/elements/button-link.htm', {
-                        "text": "Place an order",
-                        "href" : "/contact.html",
-                        "classes": "btn-g btn-arrow-a"
+                            "text": "Place an order",
+                            "href" : "/contact.html",
+                            "classes": "btn-g btn-arrow-a"
                         })
                     </div>
                     <div class="layout-col-r">
