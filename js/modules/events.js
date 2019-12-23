@@ -8,9 +8,37 @@ import {
   tags,
   filterSidebarInit
 } from "../generic-helpers";
+
+import { MediaLoader } from "../media-loader";
 import { PageNav } from "../page-nav-anchor";
 
 window.addEventListener("load", function() {
+  // Lazy Loader Images
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+
+      elements.forEach(element => {
+        new MediaLoader(element, lazyData.type);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-image",
+      type: "image"
+    },
+    {
+      className: ".lazy-bg",
+      type: "bg"
+    }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
+
   // Page Nav
   if (exists(".media-stream--container") && exists(".event-month-container")) {
     const titleWrap =
