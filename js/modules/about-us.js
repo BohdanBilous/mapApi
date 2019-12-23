@@ -1,11 +1,38 @@
 /*jshint esversion: 6 */
 
 /* MODULE IMPORTS */
-import { html, isInView, loadContent, exists } from "../generic-helpers";
+import { html, isInView, loadContent, setLazy } from "../generic-helpers";
 import { SuperSlider } from "../super-slider";
 import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
+  // Set Lazy Images
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+      let mediaQueris = null;
+
+      elements.forEach(element => {
+        new MediaLoader(element, lazyData.type, mediaQueris);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-image",
+      type: "image"
+    },
+    {
+      className: ".lazy-bg",
+      type: "bg"
+    }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
+
   // let pageNav = new PageNav(".media-stream--container", ".terms-ans");
 
   new SuperSlider(`.about-us-fader`, "fader");
@@ -45,15 +72,6 @@ window.addEventListener("load", function() {
     });
     videoElementPlay.click();
   });
-
-  // Lazy Background Loader
-  if (exists(".lazy-bg")) {
-    const bgs = document.querySelectorAll(".lazy-bg");
-
-    bgs.forEach(bg => {
-      new MediaLoader(bg, "bg");
-    });
-  }
 
   // Team Popup Open
   const teamMembers = document.querySelectorAll(".team-item");

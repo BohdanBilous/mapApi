@@ -1,6 +1,6 @@
 <div id="loader">
     <div class="loader">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443 188" width="443" height="188"
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443 188" width="443" height="188"
             class="play-animation-svg" preserveAspectRatio="xMidYMid meet"
             style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px);">
             <defs>
@@ -39,7 +39,7 @@
                     </g>
                 </g>
             </g>
-        </svg>
+        </svg> -->
     </div>
     <div class="text-wrap"></div>
 </div>
@@ -47,33 +47,20 @@
 <script>
     const preloader = document.querySelector("#loader .loader");
 
-    // let preloaderAnimate = lottie.loadAnimation({
-    //     container: preloader,
-    //     renderer: "svg",
-    //     loop: false,
-    //     autoplay: true,
-    //     // animationData: preloaderAnimation,
-    //     path: "./assets/preloader/preloader-animation.json",
-
-    //     rendererSettings: {
-    //         className: "play-animation-svg"
-    //     }
-    // });
-
     // window.addEventListener("visibleloaded", function(event) {
     // document.addEventListener("DOMContentLoaded", function(event) {
     window.addEventListener("load", function (event) {
         console.log('== Document loaded ==');
 
         var preloader = document.getElementById("loader");
-        var delay = 1300;
+        var delay = 0;
 
         // if (sessionStorage.getItem("loaded")) delay = 0;
 
         var hidePreloader = function () {
             console.log('preloader animation ended');
 
-            setTimeoutFunction("up", 1500, function () {
+            setTimeoutFunction("up", 200, function () {
                 firstLoad = false;
                 console.log('hide preloader');
 
@@ -114,9 +101,7 @@
             // });
         };
 
-
         setTimeoutFunction("finished", delay, hidePreloader);
-
 
         function setTimeoutFunction(className, duration, callback) {
             setTimeout(function () {

@@ -13,10 +13,53 @@ import { SuperSlider } from "../super-slider";
 import { CursorFader } from "../fader-cursor";
 import { SectionScroll } from "../section-scroll";
 import { ImageCursor } from "../image-cursor";
-import { VideoLoad } from "../video-lazy-load";
+// import { VideoLoad } from "../video-lazy-load";
 import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
+  // Lazy Load Video Screen
+  // new VideoLoad(".screen-main .bg-img", false, true, false, false, false);
+
+  // Lazy Loader Images
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+      let videoControls = null;
+
+      elements.forEach(element => {
+        if (lazyData.className === ".screen-main-video") {
+          videoControls = {
+            autoplay: true,
+            muted: true,
+            loop: false,
+            poster: element.dataset.poster,
+            playsinline: true
+          };
+        }
+        new MediaLoader(element, lazyData.type, null, videoControls);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-image",
+      type: "image"
+    },
+    {
+      className: ".lazy-bg",
+      type: "bg"
+    }
+    // {
+    //   className: ".screen-main-video",
+    //   type: "video"
+    // }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
+
   // Main Screen Height Tablet
   if (tablet && exists(".screen-main")) {
     let lastOrientation = -1;
@@ -110,24 +153,4 @@ window.addEventListener("load", function() {
 
   // Scroll From Screen
   if (exists(".hint-from-top")) scrollFromScreen(".screen-top");
-
-  new VideoLoad(".screen-main .bg-img", false, true, false, false, false);
-
-  // Lazy Loader Images
-  if (exists(".lazy-img")) {
-    const images = document.querySelectorAll(".lazy-img");
-
-    images.forEach(image => {
-      new MediaLoader(image, "image");
-    });
-  }
-
-  // Lazy Background Loader
-  if (exists(".lazy-bg")) {
-    const bgs = document.querySelectorAll(".lazy-bg");
-
-    bgs.forEach(bg => {
-      new MediaLoader(bg, "bg");
-    });
-  }
 });

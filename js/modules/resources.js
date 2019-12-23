@@ -8,12 +8,57 @@ import {
   scrollFromScreen,
   filterSidebarInit
 } from "../generic-helpers";
+
+import { MediaLoader } from "../media-loader";
 import { PageNav } from "../page-nav-anchor";
 import { ParallaxScroll } from "../parallax-scroll";
 import { customSelect } from "../custom-select";
-import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
+  // Lazy Loader Images
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+      let mediaQueris = null;
+
+      elements.forEach(element => {
+        if (lazyData.className === ".lazy-img") {
+          mediaQueris = [
+            {
+              media: "screen and (min-width: 768px)",
+              src: element.dataset.src
+            },
+            {
+              media: "screen and (max-width: 767px)",
+              src: element.dataset.srcmob
+            }
+          ];
+        }
+
+        new MediaLoader(element, lazyData.type, mediaQueris);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-img",
+      type: "image"
+    },
+    {
+      className: ".lazy-image",
+      type: "image"
+    },
+    {
+      className: ".lazy-bg",
+      type: "bg"
+    }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
+  });
+
   // Page Nav
   if (exists(".media-stream--container") && exists(".media-stream--section")) {
     new PageNav(
@@ -84,24 +129,6 @@ window.addEventListener("load", function() {
       loadContent(loadPlace, "_load-more-resources.html"); // temporarily
       button.parentNode.classList.add("hide");
     });
-  });
-
-  // Lazy Loader Images
-  const images = document.querySelectorAll(".lazy-img");
-
-  images.forEach(image => {
-    const mediaQueryImages = [
-      {
-        media: "screen and (min-width: 768px)",
-        src: image.dataset.src
-      },
-      {
-        media: "screen and (max-width: 767px)",
-        src: image.dataset.srcmob
-      }
-    ];
-
-    new MediaLoader(image, "image", mediaQueryImages);
   });
 
   // Filter Mobile

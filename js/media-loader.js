@@ -25,8 +25,6 @@ export class MediaLoader {
     } else {
       this.setMediaQuery();
     }
-
-    if (this.videoControls) this.setAttrVideo();
   }
 
   setMediaQuery() {
@@ -54,7 +52,10 @@ export class MediaLoader {
 
     this.videoElement = document.createElement("video");
     this.videoElement.setAttribute("src", videoSrc);
+    this.videoElement.autoplay = true;
+    if (this.videoControls) this.setAttrVideo();
     this.element.appendChild(this.videoElement);
+
     this.videoElement.load();
 
     if (this.callback) {
@@ -63,8 +64,19 @@ export class MediaLoader {
   }
 
   setAttrVideo() {
-    if (this.videoControls.autoplay) this.videoElement.autoplay = true;
-    if (this.videoControls.muted) this.videoElement.muted = true;
-    if (this.videoControls.loop) this.videoElement.loop = true;
+    // if (this.videoControls.autoplay)
+    //   this.videoElement.autoplay = this.videoControls.autoplay;
+    // if (this.videoControls.muted)
+    //   this.videoElement.muted = this.videoControls.muted;
+    // if (this.videoControls.loop)
+    //   this.videoElement.loop = this.videoControls.loop;
+    // if (this.videoControls.poster)
+    //   this.videoElement.poster = this.videoControls.poster;
+
+    for (let attr in this.videoControls) {
+      var attrName = attr;
+      console.log(this.videoControls.attrName);
+      this.videoElement.setAttribute(attr, `${this.videoControls.attrName}`);
+    }
   }
 }
