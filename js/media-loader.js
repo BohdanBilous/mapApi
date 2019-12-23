@@ -63,19 +63,8 @@ export class MediaLoader {
   }
 
   setAttrVideo() {
-    // if (this.videoControls.autoplay)
-    //   this.videoElement.autoplay = this.videoControls.autoplay;
-    // if (this.videoControls.muted)
-    //   this.videoElement.muted = this.videoControls.muted;
-    // if (this.videoControls.loop)
-    //   this.videoElement.loop = this.videoControls.loop;
-    // if (this.videoControls.poster)
-    //   this.videoElement.poster = this.videoControls.poster;
-
     for (let attr in this.videoControls) {
-      var attrName = attr;
-      console.log(this.videoControls.attrName);
-      this.videoElement.setAttribute(attrName, this.videoControls.attr);
+      this.videoElement.setAttribute(attr, this.videoControls[attr]);
     }
   }
 }

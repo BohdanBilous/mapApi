@@ -8,13 +8,14 @@ import {
   exists,
   scrollFromScreen
 } from "../generic-helpers";
+
+import { VideoLoad } from "../video-lazy-load";
+import { MediaLoader } from "../media-loader";
 import { SolutionsInd } from "../solutions-ind";
 import { SuperSlider } from "../super-slider";
 import { CursorFader } from "../fader-cursor";
 import { SectionScroll } from "../section-scroll";
 import { ImageCursor } from "../image-cursor";
-// import { VideoLoad } from "../video-lazy-load";
-import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
   // Lazy Load Video Screen
@@ -50,10 +51,6 @@ window.addEventListener("load", function() {
       className: ".lazy-bg",
       type: "bg"
     }
-    // {
-    //   className: ".screen-main-video",
-    //   type: "video"
-    // }
   ];
 
   lazyData.forEach(lazyItem => {
