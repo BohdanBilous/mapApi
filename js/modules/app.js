@@ -35,16 +35,16 @@ if (detectIE() == "11") {
 }
 
 window.addEventListener("load", function() {
-  const aceptCookie = document.querySelector(".cookies");
-  aceptCookie.querySelector("button").addEventListener("click", () => {
-    sessionStorage["cookie"] = true;
-    if (sessionStorage.getItem("cookie")) {
-      aceptCookie.classList.add("cookies-acept");
-    }
-  });
-  if (sessionStorage.getItem("cookie")) {
-    aceptCookie.classList.add("cookies-acept");
-  }
+  // const aceptCookie = document.querySelector(".cookies");
+  // aceptCookie.querySelector("button").addEventListener("click", () => {
+  //   sessionStorage["cookie"] = true;
+  //   if (sessionStorage.getItem("cookie")) {
+  //     aceptCookie.classList.add("cookies-acept");
+  //   }
+  // });
+  // if (sessionStorage.getItem("cookie")) {
+  //   aceptCookie.classList.add("cookies-acept");
+  // }
   /* ------------------
       Header
     --------------------- */

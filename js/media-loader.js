@@ -52,7 +52,6 @@ export class MediaLoader {
 
     this.videoElement = document.createElement("video");
     this.videoElement.setAttribute("src", videoSrc);
-    this.videoElement.autoplay = true;
     if (this.videoControls) this.setAttrVideo();
     this.element.appendChild(this.videoElement);
 
@@ -76,7 +75,7 @@ export class MediaLoader {
     for (let attr in this.videoControls) {
       var attrName = attr;
       console.log(this.videoControls.attrName);
-      this.videoElement.setAttribute(attr, `${this.videoControls.attrName}`);
+      this.videoElement.setAttribute(attrName, this.videoControls.attr);
     }
   }
 }
