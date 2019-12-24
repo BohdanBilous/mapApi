@@ -18,6 +18,9 @@ import { SectionScroll } from "../section-scroll";
 import { ImageCursor } from "../image-cursor";
 
 window.addEventListener("load", function() {
+  // Scrolling
+  let sectionScroll = new SectionScroll();
+
   // Lazy Load Video Screen
   // new VideoLoad(".screen-main .bg-img", false, true, false, false, false);
 
@@ -82,9 +85,6 @@ window.addEventListener("load", function() {
   // Solutions
   new SolutionsInd();
 
-  // Scrolling
-  let sectionScroll = new SectionScroll();
-
   // Mission Fader
   new SuperSlider(".mission-fader", "fader");
 
@@ -139,6 +139,7 @@ window.addEventListener("load", function() {
       let eventsWrapOffsetLeft = document.querySelector(
         ".events-wrap .layout-col-r"
       ).offsetLeft;
+
       new ImageCursor(
         eventsTitle,
         ".events-img",
