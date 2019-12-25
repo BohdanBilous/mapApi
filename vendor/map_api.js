@@ -85,7 +85,6 @@ mersenne-twister.js - https://gist.github.com/banksean/300494
    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-
 /**
  * @license
  *
@@ -110,7 +109,6 @@ mersenne-twister.js - https://gist.github.com/banksean/300494
  *   limitations under the License.
  *
  */
-
 /**
 @license
 sprintf.js from the php.js project - https://github.com/kvz/phpjs
