@@ -9,9 +9,29 @@ import { MediaLoader } from "../media-loader";
 
 window.addEventListener("load", function() {
   // Lazy Loader Images
-  const images = document.querySelectorAll(".lazy-image");
-  images.forEach(image => {
-    new MediaLoader(image, "image");
+  const setLazy = lazyData => {
+    if (exists(lazyData.className)) {
+      const elements = document.querySelectorAll(lazyData.className);
+
+      elements.forEach(element => {
+        new MediaLoader(element, lazyData.type);
+      });
+    }
+  };
+
+  let lazyData = [
+    {
+      className: ".lazy-image",
+      type: "image"
+    },
+    {
+      className: ".lazy-bg",
+      type: "bg"
+    }
+  ];
+
+  lazyData.forEach(lazyItem => {
+    setLazy(lazyItem);
   });
 
   //Variables

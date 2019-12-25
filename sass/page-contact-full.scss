@@ -355,7 +355,7 @@ div.searchable {
                 display: none;
             }
 
-            img {
+            img, .flag {
                 width: 32px;
                 height: 32px;
                 margin-right: 16px;
@@ -1156,4 +1156,340 @@ div.searchable {
         padding-bottom: 33px;
         border-bottom: 1px solid rgba(#707070, 0.2);
     }
+}
+
+[data-country="southafrica"] .flag {
+    background-position: -62px -10px;
+}
+
+[data-country="albania"] .flag {
+    background-position: -10px -10px;
+}
+
+[data-country="argentina"] .flag {
+    background-position: -10px -62px;
+}
+
+[data-country="australia"] .flag {
+    background-position: -62px -62px;
+}
+
+[data-country="austria"] .flag {
+    background-position: -114px -10px;
+}
+
+[data-country="belgium"] .flag {
+    background-position: -114px -16px;
+}
+
+[data-country="belize"] .flag {
+    background-position: -110px -114px;
+}
+
+[data-country="bolivia"] .flag {
+    background-position: -62px -114px;
+}
+
+[data-country="bosniaandherzegovina"] .flag {
+    background-position: -114px -114px;
+}
+
+[data-country="brazil"] .flag {
+    background-position: -166px -10px;
+}
+
+[data-country="bulgaria"] .flag  {
+    background-position: -166px -62px;
+}
+
+[data-country="cambodia"] .flag  {
+    background-position: -166px -114px;
+}
+
+[data-country="canada"] .flag  {
+    background-position: -10px -166px;
+}
+
+[data-country="caribbean"] .flag  {
+    background-position: -62px -166px;
+}
+
+[data-country="chile"] .flag  {
+    background-position: -114px -166px;
+}
+
+[data-country="china"] .flag  {
+    background-position: -166px -166px;
+}
+
+[data-country="colombia"] .flag  {
+    background-position: -218px -10px;
+}
+
+[data-country="costarica"] .flag  {
+    background-position: -218px -62px;
+}
+
+[data-country="croatia"] .flag  {
+    background-position: -218px -114px;
+}
+
+[data-country="czech"] .flag {
+    background-position: -218px -166px;
+}
+
+[data-country="denmark"] .flag  {
+    background-position: -10px -218px;
+}
+
+[data-country="ecuador"] .flag {
+    background-position: -62px -218px;
+}
+
+[data-country="elsalvador"] .flag {
+    background-position: -114px -218px;
+}
+
+[data-country="estonia"] .flag{
+    background-position: -166px -218px;
+}
+
+[data-country="finland"] .flag {
+    background-position: -218px -218px;
+}
+
+[data-country="usa-florida"] .flag {
+    background-position: -270px -10px;
+}
+
+[data-country="france"] .flag {
+    background-position: -270px -62px;
+}
+
+[data-country="germany"] .flag {
+    background-position: -270px -114px;
+}
+
+[data-country="greece"] .flag {
+    background-position: -270px -166px;
+}
+
+[data-country="guatemala"] .flag {
+    background-position: -270px -218px;
+}
+
+[data-country="guyana"] .flag {
+    background-position: -10px -270px;
+}
+
+[data-country="honduras"] .flag {
+    background-position: -62px -270px;
+}
+
+[data-country="hungary"] .flag {
+    background-position: -114px -270px;
+}
+
+[data-country="iceland"] .flag {
+    background-position: -166px -270px;
+}
+
+[data-country="india"] .flag {
+    background-position: -218px -270px;
+}
+
+[data-country="ireland"] .flag {
+    background-position: -322px -10px;
+}
+
+[data-country="indonesia"] .flag {
+    background-position: -270px -270px;
+}
+
+[data-country="italy"] .flag {
+    background-position: -322px -62px;
+}
+
+[data-country="japan"] .flag {
+    background-position: -322px -114px;
+}
+
+[data-country="korea"] .flag {
+    background-position: -322px -166px;
+}
+
+[data-country="kosovo"] .flag {
+    background-position: -322px -218px;
+}
+
+[data-country="laos"] .flag {
+    background-position: -322px -270px;
+}
+
+[data-country="latvia"] .flag {
+    background-position: -10px -322px;
+}
+
+[data-country="lithuania"] .flag {
+    background-position: -62px -322px;
+}
+
+[data-country="luxembourg"] .flag {
+    background-position: -114px -322px;
+}
+
+[data-country="malaysia"] .flag {
+    background-position: -166px -322px;
+}
+
+[data-country="mexico"] .flag {
+    background-position: -218px -322px;
+}
+
+[data-country="moldavia"] .flag {
+    background-position: -322px -322px;
+}
+
+[data-country="montenegro"] .flag {
+    background-position: -374px -10px;
+}
+
+[data-country="myanmar"] .flag {
+    background-position: -374px -62px;
+}
+
+[data-country="netherlands"] .flag {
+    background-position: -374px -114px;
+}
+
+[data-country="caledonia"] .flag {
+    background-position: -374px -166px;
+}
+
+[data-country="newzealand"] .flag {
+    background-position: -374px -218px;
+}
+
+[data-country="nicaragua"] .flag {
+    background-position: -374px -270px;
+}
+
+[data-country="macedonia"] .flag {
+    background-position: -10px -374px;
+}
+
+[data-country="usa-north-east"] .flag {
+    background-position: -374px -322px;
+}
+
+[data-country="norway"] .flag {
+    background-position: -62px -374px;
+}
+
+[data-country="panama"] .flag {
+    background-position: -114px -374px;
+}
+
+[data-country="paraguay"] .flag {
+    background-position: -166px -374px;
+}
+
+[data-country="poland"] .flag {
+    background-position: -218px -374px;
+}
+
+[data-country="portugal"] .flag {
+    background-position: -270px -374px;
+}
+
+[data-country="romania"] .flag {
+    background-position: -322px -374px;
+}
+
+[data-country="peru"] .flag {
+    background-position: -374px -374px;
+}
+
+[data-country="philippines"] .flag {
+    background-position: -426px -10px;
+}
+
+[data-country="russia"] .flag {
+    background-position: -426px -62px;
+}
+
+[data-country="serbia"] .flag {
+    background-position: -426px -114px;
+}
+
+[data-country="singapore"] .flag {
+    background-position: -426px -166px;
+}
+
+[data-country="slovakia"] .flag {
+    background-position: -426px -218px;
+}
+
+[data-country="usa-south-east"] .flag {
+    background-position: -426px -270px;
+}
+
+[data-country="spain"] .flag {
+    background-position: -426px -322px;
+}
+
+[data-country="srilanka"] .flag {
+    background-position: -478px -62px;
+}
+
+[data-country="sweden"] .flag {
+    background-position: -426px -374px;
+}
+
+[data-country="switzerland"] .flag {
+    background-position: -10px -426px;
+}
+
+[data-country="taiwan"] .flag {
+    background-position: -62px -426px;
+}
+
+[data-country="thailand"] .flag {
+    background-position: -114px -426px;
+}
+
+[data-country="uk"] .flag {
+    background-position: -166px -426px;
+}
+
+[data-country="turkey"] .flag {
+    background-position: -218px -426px;
+}
+
+[data-country="ukraine"] .flag {
+    background-position: -270px -426px;
+}
+
+[data-country="uruguay"] .flag {
+    background-position: -322px -426px;
+}
+
+[data-country="slovenia"] .flag {
+    background-position: -374px -426px;
+}
+
+[data-country="usa-west"] .flag {
+    background-position: -426px -426px;
+}
+
+[data-country="usa-south"] .flag {
+    background-position: -426px -426px;
+}
+
+[data-country="venezuela"] .flag {
+    background-position: -478px -114px;
+}
+
+[data-country="vietnam"] .flag {
+    background-position: -478px -166px;
 }
